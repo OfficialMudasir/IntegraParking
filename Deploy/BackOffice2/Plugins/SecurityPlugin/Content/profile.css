@@ -1,0 +1,29 @@
+﻿#divProfile input[type=text] {
+    width: 100%;
+}
+
+/*#divProfile > .editor-container:first-child {*/
+.editor-container-first {
+    margin-top: 40px;
+}
+
+#divProfileNotification {
+    text-align: center;
+}
+
+#divProfile .k-tooltip {
+    width: auto !important;
+    height: auto !important;
+}
+
+#divProfile .editor-label.sub {
+    width: 35% !important;
+    padding: 0;
+}
+#divProfile .editor-field.sub {
+    width: 90% !important;
+    padding: 0;
+}
+#divProfile .editor-field.sub2 {
+    margin-right: 0px !important;
+}

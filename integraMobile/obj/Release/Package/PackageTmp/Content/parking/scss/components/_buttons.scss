@@ -1,0 +1,41 @@
+.bk-btn-primary {
+  @include bk-btn-primary;
+}
+
+.bk-btn-secondary {
+  @include bk-btn-secondary;
+}
+
+.bk-btn-select {
+  @include bk-btn-select;
+  @include shadow;
+}
+
+.bk-btn-time-select {
+  @include bk-btn-time-select;
+  @include shadow;
+}
+
+.bk-btn-time-select-disabled {
+  @include bk-btn-select-disabled;
+  @include shadow;
+}
+
+
+//Overwrite hover and focus buttons for mobile
+.btn {
+  white-space: normal;
+  &:hover {
+    color:  $white;
+  }
+}
+
+.btn:focus, .navbar-toggler:focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem #0d6efd40;
+}
+
+
+.btn-paypal[type="submit"] {
+  background-color: var(--yellow);
+}

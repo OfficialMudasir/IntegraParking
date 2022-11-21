@@ -1,0 +1,102 @@
+.bk-card {
+    display: flex;
+    justify-content: space-between;
+    min-width: 0;
+    word-wrap: break-word;
+    background-clip: border-box;
+    border: $card-border-width solid $card-border-color;
+    @include border-radius($card-border-radius);
+    background-color: #F7F7F7;
+    @include shadow;
+    margin: 1rem 0;
+    padding: .4rem;
+    line-height: 40px;
+    .hr-bottom {
+        border-bottom: $card-border-width solid $card-border-color;
+    }
+
+    .bk-card-left-icons {
+        border-right: $card-border-width solid $card-border-color;
+        margin-right: 1rem;
+    }
+     
+    .bk-item-icon{
+        position: relative;
+        text-align: center;
+    }
+    
+    .bk-item-text{
+        flex-grow: 1;
+        position: relative;
+        padding-left: 1rem;
+    }
+    
+    .bk-card-item + .bk-item-divisor {
+        border-left: $card-border-width solid $card-border-color;
+    }
+}
+
+.bk-card-secondary {
+    min-width: 0;
+    word-wrap: break-word;
+    background-clip: border-box;
+    border: $card-border-width solid $card-border-color;
+    @include border-radius($card-border-radius);
+    padding: .4rem;
+    line-height: 40px;
+}
+
+
+
+.bk-card-grid {
+display: grid; 
+grid-template-columns: 1fr 1fr; 
+grid-template-rows: min-content auto auto; 
+gap: 0;
+line-height: 1.7;
+grid-template-areas: 
+    "title title"
+    "icons icons"
+    "content content";
+    .bk-card-grid-item-title {
+        grid-area: title; 
+        padding-left: .5rem;
+    }
+    .bk-card-grid-item-content {grid-area: content;
+        ol {
+            padding-left: 1rem;
+        }
+    }
+    .bk-card-grid-item-icons { 
+        grid-area: icons;
+        margin: .5rem 0;
+    }
+    @include media-breakpoint-up(sm) {
+            grid-template-columns: 1fr 1fr 2fr; 
+            grid-template-rows: 50px auto; 
+            grid-template-areas: 
+            "title title icons"
+            "content content content";
+        
+        .bk-card-grid-item-title {
+            grid-area: title;
+        }
+        .bk-card-grid-item-icons {
+            grid-area: icons;
+            text-align: right;
+        }
+      .bk-card-grid-item-content {grid-area: content;}
+    }
+    @include media-breakpoint-up(md) {
+        grid-template-columns: 2fr 2fr; 
+    }
+  }
+  
+.bk-card-btn {
+    &:hover {
+        background: #eee;
+        box-shadow: 2px 2px 11px #dedede;
+        cursor: pointer;
+    }
+}
+  

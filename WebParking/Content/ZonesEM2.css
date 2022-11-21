@@ -1,0 +1,192 @@
+﻿
+
+ul.k-treeview,
+ul.k-treeview li.k-item,
+.k-treeview .k-item 
+{
+    margin:0px;
+    padding:0px;
+   /**display:inline-block;*/
+}
+
+li.k-item
+{
+
+    margin: 0.5em;
+   /*opacity: 0.5;*/
+}
+
+li[data-expanded="false"].k-item,
+li[data-expanded="false"].k-item  .k-item
+{
+
+   /*opacity: 0.5;*/
+}
+
+
+li[data-expanded="true"].k-item,
+li[data-expanded="true"].k-item .k-item
+{
+   /*opacity: 1;*/
+}
+
+
+
+li#treeZones_tv_active {
+    /*opacity: 1;*/
+}
+
+
+li.k-item > div {
+    margin: 0.5em;
+    position:relative;
+}
+
+li.k-item .k-icon {
+    margin: 0px;
+    display: inline-block;
+    display: none;
+}
+
+
+li.k-item .k-icon {
+    margin: 0px;
+    display: inline-block;
+    /* display: none; */
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    margin: -16px 0px;
+    width:32px; height: 32px;
+    /*zoom: 4;*/
+}
+
+li.k-item .k-in {
+    display: inline-block;
+    border: none;
+    padding: 0.5em;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0px;
+    cursor:pointer;
+
+    border-radius: 0px;
+
+    background: #275680  url('EysaMobv2/btn-shadow.png') no-repeat 50% 50%;
+    background-size: 100% 100%;
+    color: #fafafa;
+}
+
+    li.k-item .k-in a,
+    li.k-item .k-in a:hover
+    {
+        color: #fafafa;
+        background-color: transparent;
+        text-decoration: none;
+        position: absolute;
+        top: 0px; bottom: 0px;
+        left: 0px; right: 0px;
+        padding-left: 1.5em;
+    }
+
+
+li.k-item .k-in.k-state-selected
+{
+    background-color: #2481bc;
+   /*  opacity:1 ;*/
+    box-shadow: none;
+}
+
+li.k-item .k-in.k-state-hover, 
+li.k-item .k-in.k-state-focused
+{
+    background-color: #3597d4;
+    /*opacity:1;*/
+    box-shadow: none;
+
+}
+
+.treeZone-template
+{
+    position:relative;
+}
+
+.treeZone-template-left,
+.treeZone-template-right
+{
+    display: inline-block;
+    vertical-align:text-bottom;
+}
+
+.treezone-group .treeZone-template-left
+{
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+    text-align: center;
+    font-size: 0.6em;
+
+    background: transparent url('EysaMobv2/zone-ico.svg') no-repeat 50% 50%;
+    background-size:auto 100%;
+}
+
+.treezone-child .treeZone-template-left
+{
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+    text-align: center;
+    font-size: 0.6em;
+
+    background: transparent url('EysaMobv2/location-ico.svg') no-repeat 50% 50%;
+    background-size:auto 100%;
+}
+
+.treeZone-template-left span
+{
+    display:none;
+}
+
+
+
+span.k-icon.k-plus 
+{
+    background:  transparent url('EysaMobv2/darrow-ico.svg') no-repeat 50% 50%;
+    background-size: auto 100%;
+}
+
+span.k-icon.k-minus 
+{
+    background:  transparent url('EysaMobv2/uarrow-ico.svg') no-repeat 50% 50%;
+    background-size: auto 100%;
+}
+
+
+
+/*****************************************************
+
+    MEDIA QUERIES
+
+*******************************************************/
+
+
+@media only screen  
+    /*and (min-width: 920px)*/
+  and (orientation: landscape) 
+{
+
+
+
+    li.k-item .k-icon 
+    {
+
+        margin: -8px 0px;
+        width: 16px; 
+        height: 16px;
+    }
+
+
+
+
+
+}

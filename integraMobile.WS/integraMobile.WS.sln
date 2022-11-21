@@ -1,0 +1,51 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30523.141
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "integraMobile.WS", "integraMobile.WS.csproj", "{731356CD-2E8A-40E9-8ADD-0C7AD4530DEF}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D61B49D2-71E7-4594-B4BF-7111445DD51C} = {D61B49D2-71E7-4594-B4BF-7111445DD51C}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "integraMobile.Domain", "..\integraMobile.Domain\integraMobile.Domain.csproj", "{D61B49D2-71E7-4594-B4BF-7111445DD51C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "integraMobile.Infrastructure", "..\integraMobile.Infrastructure\integraMobile.Infrastructure.csproj", "{1A917A7C-C1D1-4BC8-9434-9F37FADC0A6B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "integraMobile.ExternalWS", "..\integraMobile.ExternalWS\integraMobile.ExternalWS.csproj", "{CAF33ABE-7E51-4812-AE08-78DA84F2140B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestWSWithoutWSDL", "..\Test\TestWSWithoutWSDL\TestWSWithoutWSDL.csproj", "{559C6761-9357-4E92-9017-6721CDAED4E5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{731356CD-2E8A-40E9-8ADD-0C7AD4530DEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{731356CD-2E8A-40E9-8ADD-0C7AD4530DEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{731356CD-2E8A-40E9-8ADD-0C7AD4530DEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{731356CD-2E8A-40E9-8ADD-0C7AD4530DEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D61B49D2-71E7-4594-B4BF-7111445DD51C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D61B49D2-71E7-4594-B4BF-7111445DD51C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D61B49D2-71E7-4594-B4BF-7111445DD51C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D61B49D2-71E7-4594-B4BF-7111445DD51C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A917A7C-C1D1-4BC8-9434-9F37FADC0A6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A917A7C-C1D1-4BC8-9434-9F37FADC0A6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A917A7C-C1D1-4BC8-9434-9F37FADC0A6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A917A7C-C1D1-4BC8-9434-9F37FADC0A6B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CAF33ABE-7E51-4812-AE08-78DA84F2140B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CAF33ABE-7E51-4812-AE08-78DA84F2140B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CAF33ABE-7E51-4812-AE08-78DA84F2140B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CAF33ABE-7E51-4812-AE08-78DA84F2140B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{559C6761-9357-4E92-9017-6721CDAED4E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{559C6761-9357-4E92-9017-6721CDAED4E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{559C6761-9357-4E92-9017-6721CDAED4E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{559C6761-9357-4E92-9017-6721CDAED4E5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {68276266-EBCD-44BD-8C1B-8D74136F51FD}
+	EndGlobalSection
+EndGlobal

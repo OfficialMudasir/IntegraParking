@@ -1,0 +1,931 @@
+
+/****** Object:  Table [dbo].[CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS]    Script Date: 7/8/2021 1:51:03 AM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS](
+	[CUSPMR_ID] [numeric](18, 0) NOT NULL,
+	[CUSPMR_CUS_ID] [numeric](18, 0) NULL,
+	[CUSPMR_CUSPM_ID] [numeric](18, 0) NULL,
+	[CUSPMR_RCOUP_ID] [numeric](18, 0) NULL,
+	[CUSPMR_USR_ID] [numeric](18, 0) NULL,
+	[CUSPMR_MOSE_OS] [int] NOT NULL,
+	[CUSPMR_AMOUNT] [int] NOT NULL,
+	[CUSPMR_CUR_ID] [numeric](18, 0) NOT NULL,
+	[CUSPMR_DATE] [datetime] NULL,
+	[CUSPMR_UTC_DATE] [datetime] NULL,
+	[CUSPMR_DATE_UTC_OFFSET] [int] NOT NULL,
+	[CUSPMR_OP_REFERENCE] [varchar](50) NULL,
+	[CUSPMR_TRANSACTION_ID] [varchar](50) NOT NULL,
+	[CUSPMR_GATEWAY_DATE] [varchar](50) NOT NULL,
+	[CUSPMR_AUTH_CODE] [varchar](50) NULL,
+	[CUSPMR_AUTH_RESULT] [varchar](50) NULL,
+	[CUSPMR_SECOND_OP_REFERENCE] [varchar](50) NULL,
+	[CUSPMR_SECOND_TRANSACTION_ID] [varchar](50) NULL,
+	[CUSPMR_SECOND_GATEWAY_DATE] [varchar](50) NULL,
+	[CUSPMR_SECOND_AUTH_RESULT] [varchar](50) NULL,
+	[CUSPMR_CARD_HASH] [varchar](100) NULL,
+	[CUSPMR_CARD_REFERENCE] [varchar](100) NULL,
+	[CUSPMR_CARD_SCHEME] [varchar](50) NULL,
+	[CUSPMR_MASKED_CARD_NUMBER] [varchar](50) NULL,
+	[CUSPMR_CARD_EXPIRATION_DATE] [datetime] NULL,
+	[CUSPMR_PAYPAL_3T_TOKEN] [varchar](50) NULL,
+	[CUSPMR_PAYPAL_3T_PAYER_ID] [varchar](50) NULL,
+	[CUSPMR_PAYPAL_PREAPPROVED_PAY_KEY] [varchar](50) NULL,
+	[CUSPMR_TOTAL_AMOUNT_CHARGED] [numeric](18, 0) NOT NULL,
+	[CUSPMR_SUSCRIPTION_TYPE] [int] NOT NULL,
+	[CUSPMR_BALANCE_BEFORE] [int] NOT NULL,
+	[CUSPMR_TRANS_STATUS] [int] NOT NULL,
+	[CUSPMR_STATUS_DATE] [datetime] NOT NULL,
+	[CUSPMR_RETRIES_NUM] [int] NOT NULL,
+	[CUSPMR_CUSINV_ID] [numeric](18, 0) NULL,
+	[CUSPMR_INSERTION_UTC_DATE] [datetime] NULL,
+	[CUSPMR_LATITUDE] [numeric](18, 12) NULL,
+	[CUSPMR_LONGITUDE] [numeric](18, 12) NULL,
+	[CUSPMR_APP_VERSION] [varchar](20) NULL,
+	[CUSPMR_PERC_VAT1] [numeric](18, 5) NULL,
+	[CUSPMR_PERC_VAT2] [numeric](18, 5) NULL,
+	[CUSPMR_PARTIAL_VAT1] [numeric](18, 0) NULL,
+	[CUSPMR_PERC_FEE] [numeric](18, 5) NULL,
+	[CUSPMR_PERC_FEE_TOPPED] [numeric](18, 0) NULL,
+	[CUSPMR_PARTIAL_PERC_FEE] [numeric](18, 0) NULL,
+	[CUSPMR_FIXED_FEE] [numeric](18, 0) NULL,
+	[CUSPMR_PARTIAL_FIXED_FEE] [numeric](18, 0) NULL,
+	[CUSPMR_TYPE] [int] NOT NULL,
+	[CUSPMR_PAGATELIA_NEW_BALANCE] [int] NULL,
+	[CUSPMR_CREATION_TYPE] [int] NOT NULL,
+	[CUSPMR_PAYPAL_INTENT] [varchar](50) NULL,
+	[CUSPMR_PAYPAL_TRANSACTION_FEE_VALUE] [int] NULL,
+	[CUSPMR_PAYPAL_TRANSACTION_FEE_CURRENCY_ISOCODE] [varchar](10) NULL,
+	[CUSPMR_PAYPAL_TRANSACTION_URL] [varchar](250) NULL,
+	[CUSPMR_PAYPAL_TRANSACTION_REFUND_URL] [varchar](250) NULL,
+	[CUSPMR_INS_ID] [numeric](18, 0) NULL,
+	[CUSPMR_FDO_ID] [numeric](18, 0) NULL,
+	[CUSPMR_BACKOFFICE_USR] [varchar](256) NULL,
+	[CUSPMR_CPTGC_ID] [numeric](18, 0) NULL,
+	[CUSPMR_SRC_CUR_ID] [numeric](18, 0) NULL,
+	[CUSPMR_SRC_AMOUNT] [int] NULL,
+	[CUSPMR_SRC_CHANGE_APPLIED] [numeric](18, 6) NULL,
+	[CUSPMR_SRC_CHANGE_FEE_APPLIED] [numeric](18, 6) NULL,
+	[CUSPMR_CF_TRANSACTION_ID] [varchar](50) NULL,
+	[CUSPMR_SECOND_CF_TRANSACTION_ID] [varchar](50) NULL,
+	[CUSPMR_CASHPAY_EXPIRATION_DATE] [datetime] NULL,
+	[CUSPMR_CASHPAY_BARCODE] [varchar](255) NULL,
+	[CUSPMR_CASHPAY_REFERENCE] [varchar](255) NULL,
+	[CUSPMR_CASHPAY_PAYU_URL] [varchar](255) NULL,
+	[CUSPMR_REFUND_AMOUNT] [int] NULL,
+	[CUSPMR_REFUND_OPE_ID] [numeric](18, 0) NULL,
+	[CUSPMR_BALANCE_BONIFICATION_AMOUNT] [int] NOT NULL,
+	[CUSPMR_MONERIS_MD] [varchar](50) NULL,
+	[CUSPMR_MONERIS_CAVV] [varchar](50) NULL,
+	[CUSPMR_MONERIS_ECI] [varchar](20) NULL,
+	[CUSPMR_SOAPP_ID] [numeric](18, 0) NULL,
+	[CUSPMR_BSREDSYS_3DS_TRANS_ID] [varchar](50) NULL,
+	[CUSPMR_BSREDSYS_3DS_PROTOCOL_VERSION] [varchar](50) NULL,
+	[CUSPMR_BSREDSYS_3DS_NUM_INLINE_FORMS] [int] NULL,
+	[CUSPMR_BSREDSYS_3DS_FRICTIONLESS] [int] NULL,
+ CONSTRAINT [PK_CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS] PRIMARY KEY CLUSTERED 
+(
+	[CUSPMR_ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+ALTER TABLE [dbo].[CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS] ADD  CONSTRAINT [DF_CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS_TIPA_MOSE_OS]  DEFAULT ((5)) FOR [CUSPMR_MOSE_OS]
+GO
+
+ALTER TABLE [dbo].[CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS] ADD  CONSTRAINT [DF_CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS_CUSPMR_AMOUNT]  DEFAULT ((0)) FOR [CUSPMR_AMOUNT]
+GO
+
+ALTER TABLE [dbo].[CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS] ADD  CONSTRAINT [DF_CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS_CUSPMR_UTC_DATE]  DEFAULT (getutcdate()) FOR [CUSPMR_UTC_DATE]
+GO
+
+ALTER TABLE [dbo].[CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS] ADD  CONSTRAINT [DF_CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS_CUSMR_DATE_UTC_OFFSET]  DEFAULT ((0)) FOR [CUSPMR_DATE_UTC_OFFSET]
+GO
+
+ALTER TABLE [dbo].[CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS] ADD  CONSTRAINT [DF_CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS_CUSPMR_TOTAL_AMOUNT_CHARGED]  DEFAULT ((0)) FOR [CUSPMR_TOTAL_AMOUNT_CHARGED]
+GO
+
+ALTER TABLE [dbo].[CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS] ADD  CONSTRAINT [DF_CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS_CUSPMR_SUSCRIPTION_TYPE]  DEFAULT ((1)) FOR [CUSPMR_SUSCRIPTION_TYPE]
+GO
+
+ALTER TABLE [dbo].[CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS] ADD  CONSTRAINT [DF_CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS_TIPA_BALANCE_BEFORE]  DEFAULT ((0)) FOR [CUSPMR_BALANCE_BEFORE]
+GO
+
+ALTER TABLE [dbo].[CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS] ADD  CONSTRAINT [DF_CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS_CUSPMR_TRANS_STATUS]  DEFAULT ((4)) FOR [CUSPMR_TRANS_STATUS]
+GO
+
+ALTER TABLE [dbo].[CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS] ADD  CONSTRAINT [DF_CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS_CUSPMR_STATUS_DATE]  DEFAULT (getdate()) FOR [CUSPMR_STATUS_DATE]
+GO
+
+ALTER TABLE [dbo].[CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS] ADD  CONSTRAINT [DF_CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS_CUSPMR_RETRIES_NUM]  DEFAULT ((0)) FOR [CUSPMR_RETRIES_NUM]
+GO
+
+ALTER TABLE [dbo].[CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS] ADD  CONSTRAINT [DF_CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS_SECH_INSERTION_UTC_DATE]  DEFAULT (getdate()) FOR [CUSPMR_INSERTION_UTC_DATE]
+GO
+
+ALTER TABLE [dbo].[CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS] ADD  CONSTRAINT [DF_CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS_CUSPMR_TYPE]  DEFAULT ((0)) FOR [CUSPMR_TYPE]
+GO
+
+ALTER TABLE [dbo].[CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS] ADD  CONSTRAINT [DF_CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS_CUSPMR_BALANCE_BEFORE1]  DEFAULT ((0)) FOR [CUSPMR_PAGATELIA_NEW_BALANCE]
+GO
+
+ALTER TABLE [dbo].[CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS] ADD  CONSTRAINT [DF_CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS_CUSPMR_TYPE1]  DEFAULT ((0)) FOR [CUSPMR_CREATION_TYPE]
+GO
+
+ALTER TABLE [dbo].[CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS] ADD  CONSTRAINT [DF_CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS_OPE_CHANGE_APPLIED]  DEFAULT ((1)) FOR [CUSPMR_SRC_CHANGE_APPLIED]
+GO
+
+ALTER TABLE [dbo].[CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS] ADD  CONSTRAINT [DF_CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS_CUSPMR_AMOUNT1]  DEFAULT ((0)) FOR [CUSPMR_BALANCE_BONIFICATION_AMOUNT]
+GO
+
+ALTER TABLE [dbo].[CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS] ADD  CONSTRAINT [DF_CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS_CUSPMR_SOAPP_ID]  DEFAULT ((1)) FOR [CUSPMR_SOAPP_ID]
+GO
+
+ALTER TABLE [dbo].[CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS]  WITH CHECK ADD  CONSTRAINT [FK_CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS_CURRENCIES] FOREIGN KEY([CUSPMR_SRC_CUR_ID])
+REFERENCES [dbo].[CURRENCIES] ([CUR_ID])
+GO
+
+ALTER TABLE [dbo].[CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS] CHECK CONSTRAINT [FK_CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS_CURRENCIES]
+GO
+
+ALTER TABLE [dbo].[CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS]  WITH CHECK ADD  CONSTRAINT [FK_CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS_CURRENCIES_PAYMENT_TYPE_GATEWAY_CONFIG] FOREIGN KEY([CUSPMR_CPTGC_ID])
+REFERENCES [dbo].[CURRENCIES_PAYMENT_TYPE_GATEWAY_CONFIG] ([CPTGC_ID])
+GO
+
+ALTER TABLE [dbo].[CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS] CHECK CONSTRAINT [FK_CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS_CURRENCIES_PAYMENT_TYPE_GATEWAY_CONFIG]
+GO
+
+ALTER TABLE [dbo].[CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS]  WITH CHECK ADD  CONSTRAINT [FK_CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS_CUSTOMER_INVOICES] FOREIGN KEY([CUSPMR_CUSINV_ID])
+REFERENCES [dbo].[CUSTOMER_INVOICES] ([CUSINV_ID])
+GO
+
+ALTER TABLE [dbo].[CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS] CHECK CONSTRAINT [FK_CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS_CUSTOMER_INVOICES]
+GO
+
+ALTER TABLE [dbo].[CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS]  WITH CHECK ADD  CONSTRAINT [FK_CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS_CUSTOMER_PAYMENT_MEANS] FOREIGN KEY([CUSPMR_CUSPM_ID])
+REFERENCES [dbo].[CUSTOMER_PAYMENT_MEANS] ([CUSPM_ID])
+GO
+
+ALTER TABLE [dbo].[CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS] CHECK CONSTRAINT [FK_CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS_CUSTOMER_PAYMENT_MEANS]
+GO
+
+ALTER TABLE [dbo].[CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS]  WITH CHECK ADD  CONSTRAINT [FK_CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS_CUSTOMERS] FOREIGN KEY([CUSPMR_CUS_ID])
+REFERENCES [dbo].[CUSTOMERS] ([CUS_ID])
+GO
+
+ALTER TABLE [dbo].[CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS] CHECK CONSTRAINT [FK_CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS_CUSTOMERS]
+GO
+
+ALTER TABLE [dbo].[CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS]  WITH CHECK ADD  CONSTRAINT [FK_CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS_FINAN_DIST_OPERATORS] FOREIGN KEY([CUSPMR_FDO_ID])
+REFERENCES [dbo].[FINAN_DIST_OPERATORS] ([FDO_ID])
+GO
+
+ALTER TABLE [dbo].[CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS] CHECK CONSTRAINT [FK_CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS_FINAN_DIST_OPERATORS]
+GO
+
+ALTER TABLE [dbo].[CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS]  WITH CHECK ADD  CONSTRAINT [FK_CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS_HIS_OPERATIONS] FOREIGN KEY([CUSPMR_REFUND_OPE_ID])
+REFERENCES [dbo].[HIS_OPERATIONS] ([OPE_ID])
+GO
+
+ALTER TABLE [dbo].[CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS] CHECK CONSTRAINT [FK_CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS_HIS_OPERATIONS]
+GO
+
+ALTER TABLE [dbo].[CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS]  WITH CHECK ADD  CONSTRAINT [FK_CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS_INSTALLATIONS] FOREIGN KEY([CUSPMR_INS_ID])
+REFERENCES [dbo].[INSTALLATIONS] ([INS_ID])
+GO
+
+ALTER TABLE [dbo].[CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS] CHECK CONSTRAINT [FK_CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS_INSTALLATIONS]
+GO
+
+ALTER TABLE [dbo].[CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS]  WITH CHECK ADD  CONSTRAINT [FK_CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS_RECHARGE_COUPONS] FOREIGN KEY([CUSPMR_RCOUP_ID])
+REFERENCES [dbo].[RECHARGE_COUPONS] ([RCOUP_ID])
+GO
+
+ALTER TABLE [dbo].[CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS] CHECK CONSTRAINT [FK_CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS_RECHARGE_COUPONS]
+GO
+
+ALTER TABLE [dbo].[CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS]  WITH CHECK ADD  CONSTRAINT [FK_CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS_SOURCE_APPS] FOREIGN KEY([CUSPMR_SOAPP_ID])
+REFERENCES [dbo].[SOURCE_APPS] ([SOAPP_ID])
+GO
+
+ALTER TABLE [dbo].[CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS] CHECK CONSTRAINT [FK_CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS_SOURCE_APPS]
+GO
+
+ALTER TABLE [dbo].[CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS]  WITH CHECK ADD  CONSTRAINT [FK_CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS_USERS] FOREIGN KEY([CUSPMR_USR_ID])
+REFERENCES [dbo].[USERS] ([USR_ID])
+GO
+
+ALTER TABLE [dbo].[CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS] CHECK CONSTRAINT [FK_CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS_USERS]
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Identificator' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS', @level2type=N'COLUMN',@level2name=N'CUSPMR_ID'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Customer ID' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS', @level2type=N'COLUMN',@level2name=N'CUSPMR_CUS_ID'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Customer payment mean ID' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS', @level2type=N'COLUMN',@level2name=N'CUSPMR_CUSPM_ID'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Coupon ID in case of recharge with coupon' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS', @level2type=N'COLUMN',@level2name=N'CUSPMR_RCOUP_ID'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'User ID' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS', @level2type=N'COLUMN',@level2name=N'CUSPMR_USR_ID'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'1: Android; 2: Windows Phone; 3: iOS; 4:Blackberry; 5: Web' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS', @level2type=N'COLUMN',@level2name=N'CUSPMR_MOSE_OS'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Amount' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS', @level2type=N'COLUMN',@level2name=N'CUSPMR_AMOUNT'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Currency ID' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS', @level2type=N'COLUMN',@level2name=N'CUSPMR_CUR_ID'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Date' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS', @level2type=N'COLUMN',@level2name=N'CUSPMR_DATE'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'UTC Date' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS', @level2type=N'COLUMN',@level2name=N'CUSPMR_UTC_DATE'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'UTC offset' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS', @level2type=N'COLUMN',@level2name=N'CUSPMR_DATE_UTC_OFFSET'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Operation Reference' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS', @level2type=N'COLUMN',@level2name=N'CUSPMR_OP_REFERENCE'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Transaction ID' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS', @level2type=N'COLUMN',@level2name=N'CUSPMR_TRANSACTION_ID'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Credit call Date' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS', @level2type=N'COLUMN',@level2name=N'CUSPMR_GATEWAY_DATE'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Auth Code from Credit Call' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS', @level2type=N'COLUMN',@level2name=N'CUSPMR_AUTH_CODE'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Auth Result from Credit Call' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS', @level2type=N'COLUMN',@level2name=N'CUSPMR_AUTH_RESULT'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Op Reference' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS', @level2type=N'COLUMN',@level2name=N'CUSPMR_SECOND_OP_REFERENCE'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Secundary Transaction ID' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS', @level2type=N'COLUMN',@level2name=N'CUSPMR_SECOND_TRANSACTION_ID'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Confirmation Gateway Result' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS', @level2type=N'COLUMN',@level2name=N'CUSPMR_SECOND_GATEWAY_DATE'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Confirmation Result' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS', @level2type=N'COLUMN',@level2name=N'CUSPMR_SECOND_AUTH_RESULT'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Card Hash' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS', @level2type=N'COLUMN',@level2name=N'CUSPMR_CARD_HASH'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Card Reference' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS', @level2type=N'COLUMN',@level2name=N'CUSPMR_CARD_REFERENCE'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Card Scheme' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS', @level2type=N'COLUMN',@level2name=N'CUSPMR_CARD_SCHEME'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Card PAN' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS', @level2type=N'COLUMN',@level2name=N'CUSPMR_MASKED_CARD_NUMBER'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Card Expiration Date' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS', @level2type=N'COLUMN',@level2name=N'CUSPMR_CARD_EXPIRATION_DATE'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Paypal Token' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS', @level2type=N'COLUMN',@level2name=N'CUSPMR_PAYPAL_3T_TOKEN'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Paypal ID' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS', @level2type=N'COLUMN',@level2name=N'CUSPMR_PAYPAL_3T_PAYER_ID'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Paypal Key with preapproved payments' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS', @level2type=N'COLUMN',@level2name=N'CUSPMR_PAYPAL_PREAPPROVED_PAY_KEY'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Total amount charged' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS', @level2type=N'COLUMN',@level2name=N'CUSPMR_TOTAL_AMOUNT_CHARGED'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Suscription Type' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS', @level2type=N'COLUMN',@level2name=N'CUSPMR_SUSCRIPTION_TYPE'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Balance Before' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS', @level2type=N'COLUMN',@level2name=N'CUSPMR_BALANCE_BEFORE'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Transaction status' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS', @level2type=N'COLUMN',@level2name=N'CUSPMR_TRANS_STATUS'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Status Date' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS', @level2type=N'COLUMN',@level2name=N'CUSPMR_STATUS_DATE'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Retries to confirm' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS', @level2type=N'COLUMN',@level2name=N'CUSPMR_RETRIES_NUM'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Invoice who belongs to' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS', @level2type=N'COLUMN',@level2name=N'CUSPMR_CUSINV_ID'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Insertion UTC Date' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS', @level2type=N'COLUMN',@level2name=N'CUSPMR_INSERTION_UTC_DATE'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Latitude' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS', @level2type=N'COLUMN',@level2name=N'CUSPMR_LATITUDE'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Longitude' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS', @level2type=N'COLUMN',@level2name=N'CUSPMR_LONGITUDE'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'App version' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS', @level2type=N'COLUMN',@level2name=N'CUSPMR_APP_VERSION'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'VAT1' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS', @level2type=N'COLUMN',@level2name=N'CUSPMR_PERC_VAT1'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'VAT2' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS', @level2type=N'COLUMN',@level2name=N'CUSPMR_PERC_VAT2'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Partial VAT1' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS', @level2type=N'COLUMN',@level2name=N'CUSPMR_PARTIAL_VAT1'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Percentage Fee' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS', @level2type=N'COLUMN',@level2name=N'CUSPMR_PERC_FEE'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Topped Fee' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS', @level2type=N'COLUMN',@level2name=N'CUSPMR_PERC_FEE_TOPPED'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Partial Percentage Fee' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS', @level2type=N'COLUMN',@level2name=N'CUSPMR_PARTIAL_PERC_FEE'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Fixed Fee aplied' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS', @level2type=N'COLUMN',@level2name=N'CUSPMR_FIXED_FEE'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Partial Fixed Fee' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS', @level2type=N'COLUMN',@level2name=N'CUSPMR_PARTIAL_FIXED_FEE'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Payment = 0,
+         Coupon = 1,
+         BarCode = 2,
+         Pagatelia = 3,
+         Spotycoins = 4,
+         Paypal = 5,
+         Cash = 6,
+         Oxxo = 7' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS', @level2type=N'COLUMN',@level2name=N'CUSPMR_TYPE'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Pagatelia New Balance' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS', @level2type=N'COLUMN',@level2name=N'CUSPMR_PAGATELIA_NEW_BALANCE'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'0: Regular Recharge; 1:User creation recharge; 2; Change of credit card recharge' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS', @level2type=N'COLUMN',@level2name=N'CUSPMR_CREATION_TYPE'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Paypal Intent' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS', @level2type=N'COLUMN',@level2name=N'CUSPMR_PAYPAL_INTENT'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Paypal Transaction Fee Amount' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS', @level2type=N'COLUMN',@level2name=N'CUSPMR_PAYPAL_TRANSACTION_FEE_VALUE'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Paypal Transaction Fee Amount IsoCode' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS', @level2type=N'COLUMN',@level2name=N'CUSPMR_PAYPAL_TRANSACTION_FEE_CURRENCY_ISOCODE'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Paypal Transaction URL' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS', @level2type=N'COLUMN',@level2name=N'CUSPMR_PAYPAL_TRANSACTION_URL'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Paypal Transaction Refund URL' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS', @level2type=N'COLUMN',@level2name=N'CUSPMR_PAYPAL_TRANSACTION_REFUND_URL'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Installation ID' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS', @level2type=N'COLUMN',@level2name=N'CUSPMR_INS_ID'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Finantial operator id' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS', @level2type=N'COLUMN',@level2name=N'CUSPMR_FDO_ID'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Backoffice user in case of cash recharge' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS', @level2type=N'COLUMN',@level2name=N'CUSPMR_BACKOFFICE_USR'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Gateway Configuration id' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS', @level2type=N'COLUMN',@level2name=N'CUSPMR_CPTGC_ID'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Source Currency ID' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS', @level2type=N'COLUMN',@level2name=N'CUSPMR_SRC_CUR_ID'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Source Amount' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS', @level2type=N'COLUMN',@level2name=N'CUSPMR_SRC_AMOUNT'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Change applied' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS', @level2type=N'COLUMN',@level2name=N'CUSPMR_SRC_CHANGE_APPLIED'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Change Fee applied' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS', @level2type=N'COLUMN',@level2name=N'CUSPMR_SRC_CHANGE_FEE_APPLIED'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'CF Transaction ID' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS', @level2type=N'COLUMN',@level2name=N'CUSPMR_CF_TRANSACTION_ID'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'CF Secundary Transaction ID' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS', @level2type=N'COLUMN',@level2name=N'CUSPMR_SECOND_CF_TRANSACTION_ID'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Cash Pay Expiration Date' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS', @level2type=N'COLUMN',@level2name=N'CUSPMR_CASHPAY_EXPIRATION_DATE'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Cash Pay BarCode' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS', @level2type=N'COLUMN',@level2name=N'CUSPMR_CASHPAY_BARCODE'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Cash Pay Reference' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS', @level2type=N'COLUMN',@level2name=N'CUSPMR_CASHPAY_REFERENCE'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Cash Pay Payu URL' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS', @level2type=N'COLUMN',@level2name=N'CUSPMR_CASHPAY_PAYU_URL'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Bonified Amount in recharges' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS', @level2type=N'COLUMN',@level2name=N'CUSPMR_BALANCE_BONIFICATION_AMOUNT'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Moneris MPI MD' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS', @level2type=N'COLUMN',@level2name=N'CUSPMR_MONERIS_MD'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Moneris MPI CAVV' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS', @level2type=N'COLUMN',@level2name=N'CUSPMR_MONERIS_CAVV'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Moneris MPI ECI' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS', @level2type=N'COLUMN',@level2name=N'CUSPMR_MONERIS_ECI'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Source App Identifier' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS', @level2type=N'COLUMN',@level2name=N'CUSPMR_SOAPP_ID'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Redsys 3DS Transaction Identifier (MD/threeDSServerTransID)' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS', @level2type=N'COLUMN',@level2name=N'CUSPMR_BSREDSYS_3DS_TRANS_ID'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Redsys 3DS Protocol Version' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS', @level2type=N'COLUMN',@level2name=N'CUSPMR_BSREDSYS_3DS_PROTOCOL_VERSION'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Redsys 3DS Num Redirections Forms' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS', @level2type=N'COLUMN',@level2name=N'CUSPMR_BSREDSYS_3DS_NUM_INLINE_FORMS'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Redsys 3DS Is Frictionless?' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS', @level2type=N'COLUMN',@level2name=N'CUSPMR_BSREDSYS_3DS_FRICTIONLESS'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Table to store Customer Recharges using payments means' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS'
+GO
+
+
+CREATE NONCLUSTERED INDEX [_dta_index_CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS_5_1832393597__K8_K1_K9_K7_K36_K41_K11] ON [dbo].[CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS]
+(
+	[CUSPMR_CUR_ID] ASC,
+	[CUSPMR_ID] ASC,
+	[CUSPMR_DATE] ASC,
+	[CUSPMR_AMOUNT] ASC,
+	[CUSPMR_BALANCE_BEFORE] ASC,
+	[CUSPMR_INSERTION_UTC_DATE] ASC,
+	[CUSPMR_DATE_UTC_OFFSET] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+GO
+
+
+
+CREATE NONCLUSTERED INDEX [IND_CUSPMR_CUSINV_ID] ON [dbo].[CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS]
+(
+	[CUSPMR_CUSINV_ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+GO
+
+CREATE NONCLUSTERED INDEX [IND_CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS_CUSINV_VAT2] ON [dbo].[CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS]
+(
+	[CUSPMR_PERC_VAT2] ASC,
+	[CUSPMR_CUSINV_ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+GO
+
+
+CREATE NONCLUSTERED INDEX [IND_CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS_VIEW_OPT] ON [dbo].[CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS]
+(
+	[CUSPMR_CUR_ID] ASC,
+	[CUSPMR_TYPE] ASC,
+	[CUSPMR_TRANS_STATUS] ASC,
+	[CUSPMR_RCOUP_ID] ASC,
+	[CUSPMR_SUSCRIPTION_TYPE] ASC,
+	[CUSPMR_USR_ID] ASC,
+	[CUSPMR_ID] ASC
+)
+INCLUDE ( 	[CUSPMR_AMOUNT],
+	[CUSPMR_DATE],
+	[CUSPMR_UTC_DATE],
+	[CUSPMR_TOTAL_AMOUNT_CHARGED],
+	[CUSPMR_STATUS_DATE],
+	[CUSPMR_PERC_VAT2],
+	[CUSPMR_PARTIAL_VAT1],
+	[CUSPMR_PARTIAL_PERC_FEE],
+	[CUSPMR_PARTIAL_FIXED_FEE]) WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+GO
+
+
+INSERT INTO CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS
+SELECT *
+FROM CUSTOMER_PAYMENT_MEANS_RECHARGES WITH  (NOLOCK)
+GO
+
+
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TRIGGER [dbo].[TR_CUSTOMER_PAYMENT_MEANS_RECHARGES]
+   ON [dbo].[CUSTOMER_PAYMENT_MEANS_RECHARGES]
+   AFTER INSERT,UPDATE
+AS 
+BEGIN
+-- SET NOCOUNT ON added to prevent extra result sets from
+-- interfering with SELECT statements.
+SET NOCOUNT ON;
+
+DECLARE @CountInserted int
+DECLARE @CountDeleted int
+
+SELECT @CountInserted = COUNT(*) FROM Inserted
+SELECT @CountDeleted = COUNT(*) FROM Deleted
+
+IF @CountInserted > 0 AND @CountDeleted > 0
+BEGIN
+
+
+UPDATE CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS SET
+	   [CUSPMR_CUS_ID] = i.CUSPMR_CUS_ID
+      ,[CUSPMR_CUSPM_ID] = i.CUSPMR_CUSPM_ID
+      ,[CUSPMR_RCOUP_ID] = i.CUSPMR_RCOUP_ID
+      ,[CUSPMR_USR_ID] = i.CUSPMR_USR_ID
+      ,[CUSPMR_MOSE_OS] = i.CUSPMR_MOSE_OS
+      ,[CUSPMR_AMOUNT] = i.CUSPMR_AMOUNT
+      ,[CUSPMR_CUR_ID] = i.CUSPMR_CUR_ID
+      ,[CUSPMR_DATE] = i.CUSPMR_DATE
+      ,[CUSPMR_UTC_DATE] = i.CUSPMR_UTC_DATE
+      ,[CUSPMR_DATE_UTC_OFFSET] = i.CUSPMR_DATE_UTC_OFFSET
+      ,[CUSPMR_OP_REFERENCE] = i.CUSPMR_OP_REFERENCE
+      ,[CUSPMR_TRANSACTION_ID] = i.CUSPMR_TRANSACTION_ID
+      ,[CUSPMR_GATEWAY_DATE] = i.CUSPMR_GATEWAY_DATE
+      ,[CUSPMR_AUTH_CODE] = i.CUSPMR_AUTH_CODE
+      ,[CUSPMR_AUTH_RESULT] = i.CUSPMR_AUTH_RESULT
+      ,[CUSPMR_SECOND_OP_REFERENCE] = i.CUSPMR_SECOND_OP_REFERENCE
+      ,[CUSPMR_SECOND_TRANSACTION_ID] = i.CUSPMR_SECOND_TRANSACTION_ID
+      ,[CUSPMR_SECOND_GATEWAY_DATE] = i.CUSPMR_SECOND_GATEWAY_DATE
+      ,[CUSPMR_SECOND_AUTH_RESULT] = i.CUSPMR_SECOND_AUTH_RESULT
+      ,[CUSPMR_CARD_HASH] = i.CUSPMR_CARD_HASH
+      ,[CUSPMR_CARD_REFERENCE] = i.CUSPMR_CARD_REFERENCE
+      ,[CUSPMR_CARD_SCHEME] = i.CUSPMR_CARD_SCHEME
+      ,[CUSPMR_MASKED_CARD_NUMBER] = i.CUSPMR_MASKED_CARD_NUMBER
+      ,[CUSPMR_CARD_EXPIRATION_DATE] = i.CUSPMR_CARD_EXPIRATION_DATE
+      ,[CUSPMR_PAYPAL_3T_TOKEN] = i.CUSPMR_PAYPAL_3T_TOKEN
+      ,[CUSPMR_PAYPAL_3T_PAYER_ID] = i.CUSPMR_PAYPAL_3T_PAYER_ID
+      ,[CUSPMR_PAYPAL_PREAPPROVED_PAY_KEY] = i.CUSPMR_PAYPAL_PREAPPROVED_PAY_KEY
+      ,[CUSPMR_TOTAL_AMOUNT_CHARGED] = i.CUSPMR_TOTAL_AMOUNT_CHARGED
+      ,[CUSPMR_SUSCRIPTION_TYPE] = i.CUSPMR_SUSCRIPTION_TYPE
+      ,[CUSPMR_BALANCE_BEFORE] = i.CUSPMR_BALANCE_BEFORE
+      ,[CUSPMR_TRANS_STATUS] = i.CUSPMR_TRANS_STATUS
+      ,[CUSPMR_STATUS_DATE] = i.CUSPMR_STATUS_DATE
+      ,[CUSPMR_RETRIES_NUM] = i.CUSPMR_RETRIES_NUM
+      ,[CUSPMR_CUSINV_ID] = i.CUSPMR_CUSINV_ID
+      ,[CUSPMR_INSERTION_UTC_DATE] = i.CUSPMR_INSERTION_UTC_DATE
+      ,[CUSPMR_LATITUDE] = i.CUSPMR_LATITUDE
+      ,[CUSPMR_LONGITUDE] = i.CUSPMR_LONGITUDE
+      ,[CUSPMR_APP_VERSION] = i.CUSPMR_APP_VERSION
+      ,[CUSPMR_PERC_VAT1] = i.CUSPMR_PERC_VAT1
+      ,[CUSPMR_PERC_VAT2] = i.CUSPMR_PERC_VAT2
+      ,[CUSPMR_PARTIAL_VAT1] = i.CUSPMR_PARTIAL_VAT1
+      ,[CUSPMR_PERC_FEE] = i.CUSPMR_PERC_FEE
+      ,[CUSPMR_PERC_FEE_TOPPED] = i.CUSPMR_PERC_FEE_TOPPED
+      ,[CUSPMR_PARTIAL_PERC_FEE] = i.CUSPMR_PARTIAL_PERC_FEE
+      ,[CUSPMR_FIXED_FEE] = i.CUSPMR_FIXED_FEE
+      ,[CUSPMR_PARTIAL_FIXED_FEE] = i.CUSPMR_PARTIAL_FIXED_FEE
+      ,[CUSPMR_TYPE] = i.CUSPMR_TYPE
+      ,[CUSPMR_PAGATELIA_NEW_BALANCE] = i.CUSPMR_PAGATELIA_NEW_BALANCE
+      ,[CUSPMR_CREATION_TYPE] = i.CUSPMR_CREATION_TYPE
+      ,[CUSPMR_PAYPAL_INTENT] = i.CUSPMR_PAYPAL_INTENT
+      ,[CUSPMR_PAYPAL_TRANSACTION_FEE_VALUE] = i.CUSPMR_PAYPAL_TRANSACTION_FEE_VALUE
+      ,[CUSPMR_PAYPAL_TRANSACTION_FEE_CURRENCY_ISOCODE] = i.CUSPMR_PAYPAL_TRANSACTION_FEE_CURRENCY_ISOCODE
+      ,[CUSPMR_PAYPAL_TRANSACTION_URL] = i.CUSPMR_PAYPAL_TRANSACTION_URL
+      ,[CUSPMR_PAYPAL_TRANSACTION_REFUND_URL] = i.CUSPMR_PAYPAL_TRANSACTION_REFUND_URL
+      ,[CUSPMR_INS_ID] = i.CUSPMR_INS_ID
+      ,[CUSPMR_FDO_ID] = i.CUSPMR_FDO_ID
+      ,[CUSPMR_BACKOFFICE_USR] = i.CUSPMR_BACKOFFICE_USR
+      ,[CUSPMR_CPTGC_ID] = i.CUSPMR_CPTGC_ID
+      ,[CUSPMR_SRC_CUR_ID] = i.CUSPMR_SRC_CUR_ID
+      ,[CUSPMR_SRC_AMOUNT] = i.CUSPMR_SRC_AMOUNT
+      ,[CUSPMR_SRC_CHANGE_APPLIED] = i.CUSPMR_SRC_CHANGE_APPLIED
+      ,[CUSPMR_SRC_CHANGE_FEE_APPLIED] = i.CUSPMR_SRC_CHANGE_FEE_APPLIED
+      ,[CUSPMR_CF_TRANSACTION_ID] = i.CUSPMR_CF_TRANSACTION_ID
+      ,[CUSPMR_SECOND_CF_TRANSACTION_ID] = i.CUSPMR_SECOND_CF_TRANSACTION_ID
+      ,[CUSPMR_CASHPAY_EXPIRATION_DATE] = i.CUSPMR_CASHPAY_EXPIRATION_DATE
+      ,[CUSPMR_CASHPAY_BARCODE] = i.CUSPMR_CASHPAY_BARCODE
+      ,[CUSPMR_CASHPAY_REFERENCE] = i.CUSPMR_CASHPAY_REFERENCE
+      ,[CUSPMR_CASHPAY_PAYU_URL] = i.CUSPMR_CASHPAY_PAYU_URL
+      ,[CUSPMR_REFUND_AMOUNT] = i.CUSPMR_REFUND_AMOUNT
+      ,[CUSPMR_REFUND_OPE_ID] = i.CUSPMR_REFUND_OPE_ID
+      ,[CUSPMR_BALANCE_BONIFICATION_AMOUNT] = i.CUSPMR_BALANCE_BONIFICATION_AMOUNT
+      ,[CUSPMR_MONERIS_MD] = i.CUSPMR_MONERIS_MD
+      ,[CUSPMR_MONERIS_CAVV] = i.CUSPMR_MONERIS_CAVV
+      ,[CUSPMR_MONERIS_ECI] = i.CUSPMR_MONERIS_ECI
+      ,[CUSPMR_SOAPP_ID] = i.CUSPMR_SOAPP_ID
+      ,[CUSPMR_BSREDSYS_3DS_TRANS_ID] = i.CUSPMR_BSREDSYS_3DS_TRANS_ID
+      ,[CUSPMR_BSREDSYS_3DS_PROTOCOL_VERSION] = i.CUSPMR_BSREDSYS_3DS_PROTOCOL_VERSION
+      ,[CUSPMR_BSREDSYS_3DS_NUM_INLINE_FORMS] = i.CUSPMR_BSREDSYS_3DS_NUM_INLINE_FORMS
+      ,[CUSPMR_BSREDSYS_3DS_FRICTIONLESS] = i.CUSPMR_BSREDSYS_3DS_FRICTIONLESS
+
+  FROM CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS h INNER JOIN Deleted d on h.CUSPMR_ID=d.CUSPMR_ID JOIN Inserted i ON h.CUSPMR_ID = i.CUSPMR_ID
+		INNER JOIN CUSTOMER_PAYMENT_MEANS_RECHARGES on h.CUSPMR_ID = CUSTOMER_PAYMENT_MEANS_RECHARGES.CUSPMR_ID;
+
+   IF @@ERROR != 0
+ ROLLBACK TRAN
+
+
+END
+
+IF @CountInserted > 0
+BEGIN
+
+INSERT INTO [CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS]
+           ([CUSPMR_ID],
+			[CUSPMR_CUS_ID]
+           ,[CUSPMR_CUSPM_ID]
+           ,[CUSPMR_RCOUP_ID]
+           ,[CUSPMR_USR_ID]
+           ,[CUSPMR_MOSE_OS]
+           ,[CUSPMR_AMOUNT]
+           ,[CUSPMR_CUR_ID]
+           ,[CUSPMR_DATE]
+           ,[CUSPMR_UTC_DATE]
+           ,[CUSPMR_DATE_UTC_OFFSET]
+           ,[CUSPMR_OP_REFERENCE]
+           ,[CUSPMR_TRANSACTION_ID]
+           ,[CUSPMR_GATEWAY_DATE]
+           ,[CUSPMR_AUTH_CODE]
+           ,[CUSPMR_AUTH_RESULT]
+           ,[CUSPMR_SECOND_OP_REFERENCE]
+           ,[CUSPMR_SECOND_TRANSACTION_ID]
+           ,[CUSPMR_SECOND_GATEWAY_DATE]
+           ,[CUSPMR_SECOND_AUTH_RESULT]
+           ,[CUSPMR_CARD_HASH]
+           ,[CUSPMR_CARD_REFERENCE]
+           ,[CUSPMR_CARD_SCHEME]
+           ,[CUSPMR_MASKED_CARD_NUMBER]
+           ,[CUSPMR_CARD_EXPIRATION_DATE]
+           ,[CUSPMR_PAYPAL_3T_TOKEN]
+           ,[CUSPMR_PAYPAL_3T_PAYER_ID]
+           ,[CUSPMR_PAYPAL_PREAPPROVED_PAY_KEY]
+           ,[CUSPMR_TOTAL_AMOUNT_CHARGED]
+           ,[CUSPMR_SUSCRIPTION_TYPE]
+           ,[CUSPMR_BALANCE_BEFORE]
+           ,[CUSPMR_TRANS_STATUS]
+           ,[CUSPMR_STATUS_DATE]
+           ,[CUSPMR_RETRIES_NUM]
+           ,[CUSPMR_CUSINV_ID]
+           ,[CUSPMR_INSERTION_UTC_DATE]
+           ,[CUSPMR_LATITUDE]
+           ,[CUSPMR_LONGITUDE]
+           ,[CUSPMR_APP_VERSION]
+           ,[CUSPMR_PERC_VAT1]
+           ,[CUSPMR_PERC_VAT2]
+           ,[CUSPMR_PARTIAL_VAT1]
+           ,[CUSPMR_PERC_FEE]
+           ,[CUSPMR_PERC_FEE_TOPPED]
+           ,[CUSPMR_PARTIAL_PERC_FEE]
+           ,[CUSPMR_FIXED_FEE]
+           ,[CUSPMR_PARTIAL_FIXED_FEE]
+           ,[CUSPMR_TYPE]
+           ,[CUSPMR_PAGATELIA_NEW_BALANCE]
+           ,[CUSPMR_CREATION_TYPE]
+           ,[CUSPMR_PAYPAL_INTENT]
+           ,[CUSPMR_PAYPAL_TRANSACTION_FEE_VALUE]
+           ,[CUSPMR_PAYPAL_TRANSACTION_FEE_CURRENCY_ISOCODE]
+           ,[CUSPMR_PAYPAL_TRANSACTION_URL]
+           ,[CUSPMR_PAYPAL_TRANSACTION_REFUND_URL]
+           ,[CUSPMR_INS_ID]
+           ,[CUSPMR_FDO_ID]
+           ,[CUSPMR_BACKOFFICE_USR]
+           ,[CUSPMR_CPTGC_ID]
+           ,[CUSPMR_SRC_CUR_ID]
+           ,[CUSPMR_SRC_AMOUNT]
+           ,[CUSPMR_SRC_CHANGE_APPLIED]
+           ,[CUSPMR_SRC_CHANGE_FEE_APPLIED]
+           ,[CUSPMR_CF_TRANSACTION_ID]
+           ,[CUSPMR_SECOND_CF_TRANSACTION_ID]
+           ,[CUSPMR_CASHPAY_EXPIRATION_DATE]
+           ,[CUSPMR_CASHPAY_BARCODE]
+           ,[CUSPMR_CASHPAY_REFERENCE]
+           ,[CUSPMR_CASHPAY_PAYU_URL]
+           ,[CUSPMR_REFUND_AMOUNT]
+           ,[CUSPMR_REFUND_OPE_ID]
+           ,[CUSPMR_BALANCE_BONIFICATION_AMOUNT]
+           ,[CUSPMR_MONERIS_MD]
+           ,[CUSPMR_MONERIS_CAVV]
+           ,[CUSPMR_MONERIS_ECI]
+           ,[CUSPMR_SOAPP_ID]
+           ,[CUSPMR_BSREDSYS_3DS_TRANS_ID]
+           ,[CUSPMR_BSREDSYS_3DS_PROTOCOL_VERSION]
+           ,[CUSPMR_BSREDSYS_3DS_NUM_INLINE_FORMS]
+           ,[CUSPMR_BSREDSYS_3DS_FRICTIONLESS])
+    
+  SELECT   i.[CUSPMR_ID]
+		   ,i.[CUSPMR_CUS_ID]
+           ,i.[CUSPMR_CUSPM_ID]
+           ,i.[CUSPMR_RCOUP_ID]
+           ,i.[CUSPMR_USR_ID]
+           ,i.[CUSPMR_MOSE_OS]
+           ,i.[CUSPMR_AMOUNT]
+           ,i.[CUSPMR_CUR_ID]
+           ,i.[CUSPMR_DATE]
+           ,i.[CUSPMR_UTC_DATE]
+           ,i.[CUSPMR_DATE_UTC_OFFSET]
+           ,i.[CUSPMR_OP_REFERENCE]
+           ,i.[CUSPMR_TRANSACTION_ID]
+           ,i.[CUSPMR_GATEWAY_DATE]
+           ,i.[CUSPMR_AUTH_CODE]
+           ,i.[CUSPMR_AUTH_RESULT]
+           ,i.[CUSPMR_SECOND_OP_REFERENCE]
+           ,i.[CUSPMR_SECOND_TRANSACTION_ID]
+           ,i.[CUSPMR_SECOND_GATEWAY_DATE]
+           ,i.[CUSPMR_SECOND_AUTH_RESULT]
+           ,i.[CUSPMR_CARD_HASH]
+           ,i.[CUSPMR_CARD_REFERENCE]
+           ,i.[CUSPMR_CARD_SCHEME]
+           ,i.[CUSPMR_MASKED_CARD_NUMBER]
+           ,i.[CUSPMR_CARD_EXPIRATION_DATE]
+           ,i.[CUSPMR_PAYPAL_3T_TOKEN]
+           ,i.[CUSPMR_PAYPAL_3T_PAYER_ID]
+           ,i.[CUSPMR_PAYPAL_PREAPPROVED_PAY_KEY]
+           ,i.[CUSPMR_TOTAL_AMOUNT_CHARGED]
+           ,i.[CUSPMR_SUSCRIPTION_TYPE]
+           ,i.[CUSPMR_BALANCE_BEFORE]
+           ,i.[CUSPMR_TRANS_STATUS]
+           ,i.[CUSPMR_STATUS_DATE]
+           ,i.[CUSPMR_RETRIES_NUM]
+           ,i.[CUSPMR_CUSINV_ID]
+           ,i.[CUSPMR_INSERTION_UTC_DATE]
+           ,i.[CUSPMR_LATITUDE]
+           ,i.[CUSPMR_LONGITUDE]
+           ,i.[CUSPMR_APP_VERSION]
+           ,i.[CUSPMR_PERC_VAT1]
+           ,i.[CUSPMR_PERC_VAT2]
+           ,i.[CUSPMR_PARTIAL_VAT1]
+           ,i.[CUSPMR_PERC_FEE]
+           ,i.[CUSPMR_PERC_FEE_TOPPED]
+           ,i.[CUSPMR_PARTIAL_PERC_FEE]
+           ,i.[CUSPMR_FIXED_FEE]
+           ,i.[CUSPMR_PARTIAL_FIXED_FEE]
+           ,i.[CUSPMR_TYPE]
+           ,i.[CUSPMR_PAGATELIA_NEW_BALANCE]
+           ,i.[CUSPMR_CREATION_TYPE]
+           ,i.[CUSPMR_PAYPAL_INTENT]
+           ,i.[CUSPMR_PAYPAL_TRANSACTION_FEE_VALUE]
+           ,i.[CUSPMR_PAYPAL_TRANSACTION_FEE_CURRENCY_ISOCODE]
+           ,i.[CUSPMR_PAYPAL_TRANSACTION_URL]
+           ,i.[CUSPMR_PAYPAL_TRANSACTION_REFUND_URL]
+           ,i.[CUSPMR_INS_ID]
+           ,i.[CUSPMR_FDO_ID]
+           ,i.[CUSPMR_BACKOFFICE_USR]
+           ,i.[CUSPMR_CPTGC_ID]
+           ,i.[CUSPMR_SRC_CUR_ID]
+           ,i.[CUSPMR_SRC_AMOUNT]
+           ,i.[CUSPMR_SRC_CHANGE_APPLIED]
+           ,i.[CUSPMR_SRC_CHANGE_FEE_APPLIED]
+           ,i.[CUSPMR_CF_TRANSACTION_ID]
+           ,i.[CUSPMR_SECOND_CF_TRANSACTION_ID]
+           ,i.[CUSPMR_CASHPAY_EXPIRATION_DATE]
+           ,i.[CUSPMR_CASHPAY_BARCODE]
+           ,i.[CUSPMR_CASHPAY_REFERENCE]
+           ,i.[CUSPMR_CASHPAY_PAYU_URL]
+           ,i.[CUSPMR_REFUND_AMOUNT]
+           ,i.[CUSPMR_REFUND_OPE_ID]
+           ,i.[CUSPMR_BALANCE_BONIFICATION_AMOUNT]
+           ,i.[CUSPMR_MONERIS_MD]
+           ,i.[CUSPMR_MONERIS_CAVV]
+           ,i.[CUSPMR_MONERIS_ECI]
+           ,i.[CUSPMR_SOAPP_ID]
+           ,i.[CUSPMR_BSREDSYS_3DS_TRANS_ID]
+           ,i.[CUSPMR_BSREDSYS_3DS_PROTOCOL_VERSION]
+           ,i.[CUSPMR_BSREDSYS_3DS_NUM_INLINE_FORMS]
+           ,i.[CUSPMR_BSREDSYS_3DS_FRICTIONLESS]
+  FROM Inserted i
+		INNER JOIN CUSTOMER_PAYMENT_MEANS_RECHARGES ON i.CUSPMR_ID = CUSTOMER_PAYMENT_MEANS_RECHARGES.CUSPMR_ID
+  where i.CUSPMR_ID not in (select d.CUSPMR_ID from Deleted d);
+
+   IF @@ERROR != 0
+ ROLLBACK TRAN
+END
+
+END
+GO
+
+
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TRIGGER [dbo].[TR_DELETE_CUSTOMER_PAYMENT_MEANS_RECHARGES]
+   ON [dbo].[CUSTOMER_PAYMENT_MEANS_RECHARGES]
+   AFTER DELETE
+AS 
+BEGIN
+-- SET NOCOUNT ON added to prevent extra result sets from
+-- interfering with SELECT statements.
+SET NOCOUNT ON;
+
+DECLARE @CountInserted int
+DECLARE @CountDeleted int
+
+SELECT @CountInserted = COUNT(*) FROM Inserted
+SELECT @CountDeleted = COUNT(*) FROM Deleted
+
+IF @CountInserted = 0 AND @CountDeleted > 0
+BEGIN
+
+
+DELETE FROM CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS WHERE CUSPMR_ID IN (
+  SELECT d.CUSPMR_ID
+  FROM Deleted d
+  where d.CUSPMR_ID not in (select i.CUSPMR_ID from Inserted i));
+
+   IF @@ERROR != 0
+ ROLLBACK TRAN
+
+
+END
+
+END
+GO
+
+
+ALTER TABLE [dbo].[HIS_OPERATIONS]   DROP  CONSTRAINT [FK_HIS_OPERATIONS_CUSTOMER_PAYMENT_MEANS_RECHARGES]
+GO
+
+ALTER TABLE [dbo].[HIS_OPERATIONS]  WITH CHECK ADD  CONSTRAINT [FK_HIS_OPERATIONS_CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS] FOREIGN KEY([OPE_CUSPMR_ID])
+REFERENCES [dbo].[CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS] ([CUSPMR_ID])
+GO
+
+ALTER TABLE [dbo].[HIS_OPERATIONS] CHECK CONSTRAINT [FK_HIS_OPERATIONS_CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS]
+GO
+ALTER TABLE [dbo].[TICKET_PAYMENTS]  DROP  CONSTRAINT [FK_TICKET_PAYMENTS_CUSTOMER_PAYMENT_MEANS_RECHARGES]
+GO
+
+ALTER TABLE [dbo].[TICKET_PAYMENTS]  WITH CHECK ADD  CONSTRAINT [FK_TICKET_PAYMENTS_CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS] FOREIGN KEY([TIPA_CUSPMR_ID])
+REFERENCES [dbo].[CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS] ([CUSPMR_ID])
+GO
+
+ALTER TABLE [dbo].[TICKET_PAYMENTS] CHECK CONSTRAINT [FK_TICKET_PAYMENTS_CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS]
+GO
+
+ALTER TABLE [dbo].[TOLL_MOVEMENTS]  drop  CONSTRAINT [FK_TOLL_MOVEMENTS_CUSTOMER_PAYMENT_MEANS_RECHARGES]
+GO
+
+ALTER TABLE [dbo].[TOLL_MOVEMENTS]  WITH CHECK ADD  CONSTRAINT [FK_TOLL_MOVEMENTS_CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS] FOREIGN KEY([TOLM_CUSPMR_ID])
+REFERENCES [dbo].[CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS] ([CUSPMR_ID])
+GO
+
+ALTER TABLE [dbo].[TOLL_MOVEMENTS] CHECK CONSTRAINT [FK_TOLL_MOVEMENTS_CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS]
+GO
+
+ALTER TABLE [dbo].[OPERATIONS_OFFSTREET]  DROP  CONSTRAINT [FK_OPERATIONS_OFFSTREET_CUSTOMER_PAYMENT_MEANS_RECHARGES]
+GO
+
+ALTER TABLE [dbo].[OPERATIONS_OFFSTREET]  WITH CHECK ADD  CONSTRAINT [FK_OPERATIONS_OFFSTREET_CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS] FOREIGN KEY([OPEOFF_CUSPMR_ID])
+REFERENCES [dbo].[CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS] ([CUSPMR_ID])
+GO
+
+ALTER TABLE [dbo].[OPERATIONS_OFFSTREET] CHECK CONSTRAINT [FK_OPERATIONS_OFFSTREET_CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS]
+GO
+ALTER TABLE [dbo].[CAMPAIGN_USER_USE]  DROP  CONSTRAINT [FK_CAMPAIGN_USER_USE_CUSTOMER_PAYMENT_MEANS_RECHARGES] 
+GO
+
+ALTER TABLE [dbo].[CAMPAIGN_USER_USE]  WITH CHECK ADD  CONSTRAINT [FK_CAMPAIGN_USER_USE_CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS] FOREIGN KEY([CAUSS_CUSPMR_ID])
+REFERENCES [dbo].[CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS] ([CUSPMR_ID])
+GO
+
+ALTER TABLE [dbo].[CAMPAIGN_USER_USE] CHECK CONSTRAINT [FK_CAMPAIGN_USER_USE_CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS]
+GO
+
+ALTER TABLE [dbo].[OPERATIONS_ONLINE_NOANSWERED]  DROP  CONSTRAINT [FK_OPERATIONS_ONLINE_NOANSWERED_CUSTOMER_PAYMENT_MEANS_RECHARGES] 
+GO
+
+ALTER TABLE [dbo].[OPERATIONS_ONLINE_NOANSWERED]  WITH CHECK ADD  CONSTRAINT [FK_OPERATIONS_ONLINE_NOANSWERED_CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS] FOREIGN KEY([OPE_CUSPMR_ID])
+REFERENCES [dbo].[CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS] ([CUSPMR_ID])
+GO
+
+ALTER TABLE [dbo].[OPERATIONS_ONLINE_NOANSWERED] CHECK CONSTRAINT [FK_OPERATIONS_ONLINE_NOANSWERED_CUSTOMER_PAYMENT_MEANS_RECHARGES_HIS]
+GO
+
+DISABLE TRIGGER [TR_DELETE_CUSTOMER_PAYMENT_MEANS_RECHARGES] ON CUSTOMER_PAYMENT_MEANS_RECHARGES
+GO
+
+
+delete from CUSTOMER_PAYMENT_MEANS_RECHARGES
+where cuspmr_id<(SELECT min(OPE_CUSPMR_ID)
+  FROM [dbo].[OPERATIONS]
+  where ope_cuspmr_id is not null) 
+GO  
+
+ENABLE TRIGGER [TR_DELETE_CUSTOMER_PAYMENT_MEANS_RECHARGES] ON CUSTOMER_PAYMENT_MEANS_RECHARGES
+GO

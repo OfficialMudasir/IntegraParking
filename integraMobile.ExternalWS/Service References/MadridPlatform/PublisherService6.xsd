@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/PublisherService.TempoVigilancia.Contracts.Objects" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/PublisherService.TempoVigilancia.Contracts.Objects" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="TrfFine.TrafficFineRemStat">
+    <xs:annotation>
+      <xs:appinfo>
+        <ActualType Name="long" Namespace="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Undefined" />
+      <xs:enumeration value="NotRemmited">
+        <xs:annotation>
+          <xs:documentation>&lt;summary&gt;
+            The traffic fine was never included in any remittance
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Remmited">
+        <xs:annotation>
+          <xs:documentation>&lt;summary&gt;
+            The traffic fine has been included in a remittance
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ResultOk">
+        <xs:annotation>
+          <xs:documentation>&lt;summary&gt;
+            The remittance process has been successfully completed. Final state
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ResultError">
+        <xs:annotation>
+          <xs:documentation>&lt;summary&gt;
+            The remittance process has failed. Final state
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="RemittedNotToExport">
+        <xs:annotation>
+          <xs:documentation>&lt;summary&gt;
+            The traffic fine has been included in a remittance but won't be exported
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Exported">
+        <xs:annotation>
+          <xs:documentation>&lt;summary&gt;
+            The traffic fine has been included in a remittance and has been exported
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="PendingToValidate">
+        <xs:annotation>
+          <xs:documentation>&lt;summary&gt;
+            The traffic fine has been included in a remittance and has been exported
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="TrfFine.TrafficFineRemStat" nillable="true" type="tns:TrfFine.TrafficFineRemStat" />
+  <xs:simpleType name="TrfFine.TrafficFineState">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="tfCreated" />
+      <xs:enumeration value="tfIssued" />
+      <xs:enumeration value="tfAnulled" />
+      <xs:enumeration value="tfInvalidated" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="TrfFine.TrafficFineState" nillable="true" type="tns:TrfFine.TrafficFineState" />
+</xs:schema>

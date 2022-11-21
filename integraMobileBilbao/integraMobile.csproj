@@ -1,0 +1,583 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1884DCF6-0952-4BD9-B372-A0612B80E2C8}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>integraMobile</RootNamespace>
+    <AssemblyName>integraMobile</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Base_AP, Version=1.0.0.0, Culture=neutral, PublicKeyToken=110dec5a4839295c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Signed\Paypal\Base_AP.dll</HintPath>
+    </Reference>
+    <Reference Include="Base_Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=82c7225c37dd327b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Signed\Paypal\Base_Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Ionic.Zip">
+      <HintPath>packages\NPOI.1.2.5\lib\net40\Ionic.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.4.4.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\eysaMobile\packages\iTextSharp.5.4.4\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.xmlworker, Version=5.4.4.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\itextsharp.xmlworker.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.13.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\integraMobile\Paypal\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Mvc">
+      <HintPath>MvcContrib\Microsoft.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="MvcContrib, Version=2.0.96.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Signed\MvcContrib\MvcContrib.dll</HintPath>
+    </Reference>
+    <Reference Include="MvcContrib.FluentHtml, Version=2.0.96.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Signed\MvcContrib\MvcContrib.FluentHtml.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject">
+      <HintPath>Ninject\Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI">
+      <HintPath>packages\NPOI.1.2.5\lib\net40\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="Recaptcha">
+      <HintPath>reCAPTCHA\Recaptcha.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.Mvc.4.0.20710.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.Razor.2.0.20715.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\IECISAController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Infrastructure\CountryDropDownHelper.cs" />
+    <Compile Include="Infrastructure\LocalizedDisplayNameAttribute.cs" />
+    <Compile Include="Infrastructure\NinjectControllerFactory.cs" />
+    <Compile Include="Infrastructure\NoCacheAttribute.cs" />
+    <Compile Include="Infrastructure\Pager.cs" />
+    <Compile Include="Infrastructure\ReCaptchaHelper.cs" />
+    <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\IECISAModels.cs" />
+    <Compile Include="Models\PdfConvert.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.en-US.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.en-US.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.es-ES.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.es-ES.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ResourceExtension.cs" />
+    <Compile Include="Validation\ValidateCaptchaAttribute.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\wkhtmltopdf\wkhtmltoimage.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Data\wkhtmltopdf\wkhtmltopdf.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Data\wkhtmltopdf\wkhtmltox.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\CSS\jquery\custom-theme\images\ui-bg_flat_55_999999_40x100.png" />
+    <Content Include="Content\CSS\jquery\custom-theme\images\ui-bg_flat_75_aaaaaa_40x100.png" />
+    <Content Include="Content\CSS\jquery\custom-theme\images\ui-bg_glass_45_0078ae_1x400.png" />
+    <Content Include="Content\CSS\jquery\custom-theme\images\ui-bg_glass_55_4d5e60_1x400.png" />
+    <Content Include="Content\CSS\jquery\custom-theme\images\ui-bg_glass_75_79c9ec_1x400.png" />
+    <Content Include="Content\CSS\jquery\custom-theme\images\ui-bg_gloss-wave_45_e14f1c_500x100.png" />
+    <Content Include="Content\CSS\jquery\custom-theme\images\ui-bg_gloss-wave_50_6eac2c_500x100.png" />
+    <Content Include="Content\CSS\jquery\custom-theme\images\ui-bg_gloss-wave_75_2191c0_500x100.png" />
+    <Content Include="Content\CSS\jquery\custom-theme\images\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="Content\CSS\jquery\custom-theme\images\ui-icons_0078ae_256x240.png" />
+    <Content Include="Content\CSS\jquery\custom-theme\images\ui-icons_056b93_256x240.png" />
+    <Content Include="Content\CSS\jquery\custom-theme\images\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="Content\CSS\jquery\custom-theme\images\ui-icons_e0fdff_256x240.png" />
+    <Content Include="Content\CSS\jquery\custom-theme\images\ui-icons_f5e175_256x240.png" />
+    <Content Include="Content\CSS\jquery\custom-theme\images\ui-icons_f7a50d_256x240.png" />
+    <Content Include="Content\CSS\jquery\custom-theme\images\ui-icons_fcd113_256x240.png" />
+    <Content Include="Content\CSS\jquery\custom-theme\jquery-ui-1.9.2.custom.css" />
+    <Content Include="Content\CSS\jquery\custom-theme\jquery-ui-1.9.2.custom.min.css" />
+    <Content Include="Content\CSS\password_reset.css" />
+    <Content Include="Content\img\check-icon.png" />
+    <Content Include="Content\img\error-flat.png" />
+    <Content Include="Content\img\logo_Bilbao_160x80.png" />
+    <Content Include="Content\jquery\i18n\jquery-ui-i18n.js" />
+    <Content Include="Content\jquery\i18n\jquery.ui.datepicker-af.js" />
+    <Content Include="Content\jquery\i18n\jquery.ui.datepicker-ar-DZ.js" />
+    <Content Include="Content\jquery\i18n\jquery.ui.datepicker-ar.js" />
+    <Content Include="Content\jquery\i18n\jquery.ui.datepicker-az.js" />
+    <Content Include="Content\jquery\i18n\jquery.ui.datepicker-bg.js" />
+    <Content Include="Content\jquery\i18n\jquery.ui.datepicker-bs.js" />
+    <Content Include="Content\jquery\i18n\jquery.ui.datepicker-ca.js" />
+    <Content Include="Content\jquery\i18n\jquery.ui.datepicker-cs.js" />
+    <Content Include="Content\jquery\i18n\jquery.ui.datepicker-cy-GB.js" />
+    <Content Include="Content\jquery\i18n\jquery.ui.datepicker-da.js" />
+    <Content Include="Content\jquery\i18n\jquery.ui.datepicker-de.js" />
+    <Content Include="Content\jquery\i18n\jquery.ui.datepicker-el.js" />
+    <Content Include="Content\jquery\i18n\jquery.ui.datepicker-en-AU.js" />
+    <Content Include="Content\jquery\i18n\jquery.ui.datepicker-en-GB.js" />
+    <Content Include="Content\jquery\i18n\jquery.ui.datepicker-en-NZ.js" />
+    <Content Include="Content\jquery\i18n\jquery.ui.datepicker-en-US.js" />
+    <Content Include="Content\jquery\i18n\jquery.ui.datepicker-en.js" />
+    <Content Include="Content\jquery\i18n\jquery.ui.datepicker-eo.js" />
+    <Content Include="Content\jquery\i18n\jquery.ui.datepicker-es.js" />
+    <Content Include="Content\jquery\i18n\jquery.ui.datepicker-et.js" />
+    <Content Include="Content\jquery\i18n\jquery.ui.datepicker-eu.js" />
+    <Content Include="Content\jquery\i18n\jquery.ui.datepicker-fa.js" />
+    <Content Include="Content\jquery\i18n\jquery.ui.datepicker-fi.js" />
+    <Content Include="Content\jquery\i18n\jquery.ui.datepicker-fo.js" />
+    <Content Include="Content\jquery\i18n\jquery.ui.datepicker-fr-CH.js" />
+    <Content Include="Content\jquery\i18n\jquery.ui.datepicker-fr.js" />
+    <Content Include="Content\jquery\i18n\jquery.ui.datepicker-gl.js" />
+    <Content Include="Content\jquery\i18n\jquery.ui.datepicker-he.js" />
+    <Content Include="Content\jquery\i18n\jquery.ui.datepicker-hi.js" />
+    <Content Include="Content\jquery\i18n\jquery.ui.datepicker-hr.js" />
+    <Content Include="Content\jquery\i18n\jquery.ui.datepicker-hu.js" />
+    <Content Include="Content\jquery\i18n\jquery.ui.datepicker-hy.js" />
+    <Content Include="Content\jquery\i18n\jquery.ui.datepicker-id.js" />
+    <Content Include="Content\jquery\i18n\jquery.ui.datepicker-is.js" />
+    <Content Include="Content\jquery\i18n\jquery.ui.datepicker-it.js" />
+    <Content Include="Content\jquery\i18n\jquery.ui.datepicker-ja.js" />
+    <Content Include="Content\jquery\i18n\jquery.ui.datepicker-ka.js" />
+    <Content Include="Content\jquery\i18n\jquery.ui.datepicker-kk.js" />
+    <Content Include="Content\jquery\i18n\jquery.ui.datepicker-km.js" />
+    <Content Include="Content\jquery\i18n\jquery.ui.datepicker-ko.js" />
+    <Content Include="Content\jquery\i18n\jquery.ui.datepicker-lb.js" />
+    <Content Include="Content\jquery\i18n\jquery.ui.datepicker-lt.js" />
+    <Content Include="Content\jquery\i18n\jquery.ui.datepicker-lv.js" />
+    <Content Include="Content\jquery\i18n\jquery.ui.datepicker-mk.js" />
+    <Content Include="Content\jquery\i18n\jquery.ui.datepicker-ml.js" />
+    <Content Include="Content\jquery\i18n\jquery.ui.datepicker-ms.js" />
+    <Content Include="Content\jquery\i18n\jquery.ui.datepicker-nl-BE.js" />
+    <Content Include="Content\jquery\i18n\jquery.ui.datepicker-nl.js" />
+    <Content Include="Content\jquery\i18n\jquery.ui.datepicker-no.js" />
+    <Content Include="Content\jquery\i18n\jquery.ui.datepicker-pl.js" />
+    <Content Include="Content\jquery\i18n\jquery.ui.datepicker-pt-BR.js" />
+    <Content Include="Content\jquery\i18n\jquery.ui.datepicker-pt.js" />
+    <Content Include="Content\jquery\i18n\jquery.ui.datepicker-rm.js" />
+    <Content Include="Content\jquery\i18n\jquery.ui.datepicker-ro.js" />
+    <Content Include="Content\jquery\i18n\jquery.ui.datepicker-ru.js" />
+    <Content Include="Content\jquery\i18n\jquery.ui.datepicker-sk.js" />
+    <Content Include="Content\jquery\i18n\jquery.ui.datepicker-sl.js" />
+    <Content Include="Content\jquery\i18n\jquery.ui.datepicker-sq.js" />
+    <Content Include="Content\jquery\i18n\jquery.ui.datepicker-sr-SR.js" />
+    <Content Include="Content\jquery\i18n\jquery.ui.datepicker-sr.js" />
+    <Content Include="Content\jquery\i18n\jquery.ui.datepicker-sv.js" />
+    <Content Include="Content\jquery\i18n\jquery.ui.datepicker-ta.js" />
+    <Content Include="Content\jquery\i18n\jquery.ui.datepicker-th.js" />
+    <Content Include="Content\jquery\i18n\jquery.ui.datepicker-tj.js" />
+    <Content Include="Content\jquery\i18n\jquery.ui.datepicker-tr.js" />
+    <Content Include="Content\jquery\i18n\jquery.ui.datepicker-uk.js" />
+    <Content Include="Content\jquery\i18n\jquery.ui.datepicker-vi.js" />
+    <Content Include="Content\jquery\i18n\jquery.ui.datepicker-zh-CN.js" />
+    <Content Include="Content\jquery\i18n\jquery.ui.datepicker-zh-HK.js" />
+    <Content Include="Content\jquery\i18n\jquery.ui.datepicker-zh-TW.js" />
+    <Content Include="Content\jquery\jquery-1.8.3.js" />
+    <Content Include="Content\jquery\jquery-ui-1.9.2.custom.js" />
+    <Content Include="Content\jquery\jquery-ui-1.9.2.custom.min.js" />
+    <Content Include="Content\SpryAssets\SpryTabbedPanels.css" />
+    <Content Include="Content\SpryAssets\SpryTabbedPanels.js" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\jquery-ui.css" />
+    <Content Include="Content\themes\base\jquery.ui.accordion.css" />
+    <Content Include="Content\themes\base\jquery.ui.all.css" />
+    <Content Include="Content\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="Content\themes\base\jquery.ui.base.css" />
+    <Content Include="Content\themes\base\jquery.ui.button.css" />
+    <Content Include="Content\themes\base\jquery.ui.core.css" />
+    <Content Include="Content\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="Content\themes\base\jquery.ui.dialog.css" />
+    <Content Include="Content\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="Content\themes\base\jquery.ui.resizable.css" />
+    <Content Include="Content\themes\base\jquery.ui.selectable.css" />
+    <Content Include="Content\themes\base\jquery.ui.slider.css" />
+    <Content Include="Content\themes\base\jquery.ui.tabs.css" />
+    <Content Include="Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\minified\jquery-ui.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.accordion.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.autocomplete.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.button.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.core.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.datepicker.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.dialog.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.progressbar.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.resizable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.selectable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="integraMobile.pfx" />
+    <None Include="Properties\PublishProfiles\hbusque_laptop.pubxml" />
+    <None Include="Properties\PublishProfiles\kike-home.pubxml" />
+    <None Include="Properties\PublishProfiles\profile mvc4.pubxml" />
+    <None Include="Scripts\jquery-1.7.1.intellisense.js" />
+    <Content Include="ResourceExt\ca-ES\ConfirmParking_EmailBody.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ResourceExt\ca-ES\ConfirmParking_EmailBody_SpaceSection.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ResourceExt\ca-ES\ConfirmTicketPayment_EmailBody.html" />
+    <Content Include="ResourceExt\ca-ES\Confirm_EmailBody_Balance.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ResourceExt\ca-ES\Email_LayoutSubtotal.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ResourceExt\ca-ES\Email_LayoutTotal.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ResourceExt\ca-ES\Email_LayoutTotalBonus.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ResourceExt\ca-ES\footer_COU_AW.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ResourceExt\ca-ES\footer_COU_ES.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ResourceExt\ca-ES\footer_COU_MX.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ResourceExt\ca-ES\footer_CUR_EUR.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ResourceExt\ca-ES\footer_CUR_MXN.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ResourceExt\ca-ES\footer_CUR_USD.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ResourceExt\en-US\ConfirmParking_EmailBody.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ResourceExt\en-US\ConfirmParking_EmailBody_SpaceSection.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ResourceExt\en-US\ConfirmTicketPayment_EmailBody.html" />
+    <Content Include="ResourceExt\en-US\Confirm_EmailBody_Balance.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ResourceExt\en-US\Email_LayoutSubtotal.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ResourceExt\en-US\Email_LayoutTotal.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ResourceExt\en-US\Email_LayoutTotalBonus.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ResourceExt\en-US\footer_COU_AW.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ResourceExt\en-US\footer_COU_ES.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ResourceExt\en-US\footer_COU_MX.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ResourceExt\en-US\footer_CUR_EUR.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ResourceExt\en-US\footer_CUR_MXN.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ResourceExt\en-US\footer_CUR_USD.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ResourceExt\es-ES\ConfirmParking_EmailBody.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ResourceExt\es-ES\ConfirmParking_EmailBody_SpaceSection.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ResourceExt\es-ES\ConfirmTicketPayment_EmailBody.html" />
+    <Content Include="ResourceExt\es-ES\Confirm_EmailBody_Balance.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ResourceExt\es-ES\Email_LayoutSubtotal.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ResourceExt\es-ES\Email_LayoutTotal.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ResourceExt\es-ES\Email_LayoutTotalBonus.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ResourceExt\es-ES\footer_COU_AW.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ResourceExt\es-ES\footer_COU_ES.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ResourceExt\es-ES\footer_COU_MX.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ResourceExt\es-ES\footer_CUR_EUR.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ResourceExt\es-ES\footer_CUR_MXN.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ResourceExt\es-ES\footer_CUR_USD.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\jquery-1.7.1.js" />
+    <Content Include="Scripts\jquery-1.7.1.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery-ui-1.8.20.js" />
+    <Content Include="Scripts\jquery-ui-1.8.20.min.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\modernizr-2.5.3.js" />
+    <Content Include="Views\Account\Ticket.aspx" />
+    <Content Include="Views\Account\SecurityOperationActivateAccount.aspx" />
+    <Content Include="Views\Account\SecurityOperationActivateAccountSuccess.aspx" />
+    <Content Include="Views\Account\SecurityOperationForgotPassword.aspx" />
+    <Content Include="Views\Account\SecurityOperationForgotPasswordConfirmation.aspx" />
+    <Content Include="Views\Home\Index.aspx" />
+    <Content Include="Views\IECISA\iecisaAccept.aspx" />
+    <Content Include="Views\IECISA\iecisaCancel.aspx" />
+    <Content Include="Views\IECISA\iecisaRequest.aspx" />
+    <Content Include="Views\IECISA\iecisaResult.aspx" />
+    <Content Include="Views\Shared\CultureChooserUserControl.ascx" />
+    <Content Include="Views\Shared\Error.aspx" />
+    <Content Include="Views\Shared\LogOnUserControl.ascx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\MicrosoftAjax.js" />
+    <Content Include="Scripts\MicrosoftAjax.debug.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.debug.js" />
+    <Content Include="Scripts\MicrosoftMvcValidation.js" />
+    <Content Include="Scripts\MicrosoftMvcValidation.debug.js" />
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Shared\Account.Master" />
+    <Content Include="Views\Shared\Site.Master" />
+    <Content Include="Views\Shared\Home.Master" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.en-US.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.en-US.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.es-ES.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.es-ES.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.fr-CA.resx" />
+    <EmbeddedResource Include="Properties\Resources.ca-ES.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\integraMobile.Domain\integraMobile.Domain.csproj">
+      <Project>{d61b49d2-71e7-4594-b4bf-7111445dd51c}</Project>
+      <Name>integraMobile.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\integraMobile.Infrastructure\integraMobile.Infrastructure.csproj">
+      <Project>{1a917a7c-c1d1-4bc8-9434-9f37fadc0a6b}</Project>
+      <Name>integraMobile.Infrastructure</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>integraMobile.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>4091</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/integraMobileBilbao</IISUrl>
+          <OverrideIISAppRootUrl>True</OverrideIISAppRootUrl>
+          <IISAppRootUrl>http://localhost/integraMobileBilbao</IISAppRootUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

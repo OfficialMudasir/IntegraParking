@@ -1,0 +1,310 @@
+@font-face {
+  font-family: 'Blinkay';
+  src:  url('fonts/Blinkay.eot?u6jlck');
+  src:  url('fonts/Blinkay.eot?u6jlck#iefix') format('embedded-opentype'),
+    url('fonts/Blinkay.ttf?u6jlck') format('truetype'),
+    url('fonts/Blinkay.woff?u6jlck') format('woff'),
+    url('fonts/Blinkay.svg?u6jlck#Blinkay') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="bky-"], [class*=" bky-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'Blinkay' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.bky-QR:before {
+  content: "\e900";
+  color: #676767;
+}
+.bky-add:before {
+  content: "\e901";
+  color: #676767;
+}
+.bky-add-time:before {
+  content: "\e902";
+  color: #676767;
+}
+.bky-alternative:before {
+  content: "\e903";
+  color: #676767;
+}
+.bky-arrow:before {
+  content: "\e904";
+  color: #676767;
+}
+.bky-billing:before {
+  content: "\e905";
+  color: #676767;
+}
+.bky-calendar:before {
+  content: "\e906";
+  color: #676767;
+}
+.bky-cancel:before {
+  content: "\e907";
+  color: #676767;
+}
+.bky-car-add:before {
+  content: "\e908";
+  color: #676767;
+}
+.bky-car-delete:before {
+  content: "\e909";
+  color: #676767;
+}
+.bky-car-leave:before {
+  content: "\e90a";
+  color: #676767;
+}
+.bky-car-park:before {
+  content: "\e90b";
+  color: #676767;
+}
+.bky-car-select:before {
+  content: "\e90c";
+  color: #676767;
+}
+.bky-car-services:before {
+  content: "\e90d";
+  color: #676767;
+}
+.bky-card-add:before {
+  content: "\e90e";
+  color: #676767;
+}
+.bky-card-lock:before {
+  content: "\e90f";
+  color: #676767;
+}
+.bky-card-pay:before {
+  content: "\e910";
+  color: #676767;
+}
+.bky-card-refund:before {
+  content: "\e911";
+  color: #676767;
+}
+.bky-card-retrive:before {
+  content: "\e912";
+  color: #676767;
+}
+.bky-card-select:before {
+  content: "\e913";
+  color: #676767;
+}
+.bky-card-transaction:before {
+  content: "\e914";
+  color: #676767;
+}
+.bky-cards:before {
+  content: "\e915";
+  color: #676767;
+}
+.bky-config:before {
+  content: "\e916";
+  color: #676767;
+}
+.bky-delete:before {
+  content: "\e917";
+  color: #676767;
+}
+.bky-done:before {
+  content: "\e918";
+  color: #676767;
+}
+.bky-down:before {
+  content: "\e919";
+  color: #676767;
+}
+.bky-edit:before {
+  content: "\e91a";
+  color: #676767;
+}
+.bky-end-time:before {
+  content: "\e91b";
+  color: #676767;
+}
+.bky-fav:before {
+  content: "\e91c";
+  color: #676767;
+}
+.bky-fine:before {
+  content: "\e91d";
+  color: #676767;
+}
+.bky-folder:before {
+  content: "\e91e";
+  color: #676767;
+}
+.bky-help:before {
+  content: "\e91f";
+  color: #676767;
+}
+.bky-hide:before {
+  content: "\e920";
+  color: #676767;
+}
+.bky-info:before {
+  content: "\e921";
+  color: #676767;
+}
+.bky-ini-time:before {
+  content: "\e922";
+  color: #676767;
+}
+.bky-like:before {
+  content: "\e923";
+  color: #676767;
+}
+.bky-loaction:before {
+  content: "\e924";
+  color: #676767;
+}
+.bky-logout:before {
+  content: "\e925";
+  color: #676767;
+}
+.bky-mail-add:before {
+  content: "\e926";
+  color: #676767;
+}
+.bky-mail-ok:before {
+  content: "\e927";
+  color: #676767;
+}
+.bky-mail-send:before {
+  content: "\e928";
+  color: #676767;
+}
+.bky-map:before {
+  content: "\e929";
+  color: #676767;
+}
+.bky-minus:before {
+  content: "\e92a";
+  color: #676767;
+}
+.bky-notification:before {
+  content: "\e92b";
+  color: #676767;
+}
+.bky-ok:before {
+  content: "\e92c";
+  color: #676767;
+}
+.bky-operation:before {
+  content: "\e92d";
+  color: #676767;
+}
+.bky-operations-hist:before {
+  content: "\e92e";
+  color: #676767;
+}
+.bky-options:before {
+  content: "\e92f";
+  color: #676767;
+}
+.bky-park:before {
+  content: "\e930";
+  color: #676767;
+}
+.bky-password:before {
+  content: "\e931";
+  color: #676767;
+}
+.bky-payment:before {
+  content: "\e932";
+  color: #676767;
+}
+.bky-permit-buy:before {
+  content: "\e933";
+  color: #676767;
+}
+.bky-permit-operations:before {
+  content: "\e934";
+  color: #676767;
+}
+.bky-phone-actualize:before {
+  content: "\e935";
+  color: #676767;
+}
+.bky-phone-confirm:before {
+  content: "\e936";
+  color: #676767;
+}
+.bky-picture:before {
+  content: "\e937";
+  color: #676767;
+}
+.bky-plus:before {
+  content: "\e938";
+  color: #676767;
+}
+.bky-profile:before {
+  content: "\e939";
+  color: #676767;
+}
+.bky-promotions:before {
+  content: "\e93a";
+  color: #676767;
+}
+.bky-scan:before {
+  content: "\e93b";
+  color: #676767;
+}
+.bky-search:before {
+  content: "\e93c";
+  color: #676767;
+}
+.bky-sector:before {
+  content: "\e93d";
+  color: #676767;
+}
+.bky-show:before {
+  content: "\e93e";
+  color: #676767;
+}
+.bky-sort-arrows:before {
+  content: "\e93f";
+  color: #676767;
+}
+.bky-start:before {
+  content: "\e940";
+  color: #676767;
+}
+.bky-suscriptions:before {
+  content: "\e941";
+  color: #676767;
+}
+.bky-tarif:before {
+  content: "\e942";
+  color: #676767;
+}
+.bky-ticket:before {
+  content: "\e943";
+  color: #676767;
+}
+.bky-time:before {
+  content: "\e944";
+  color: #676767;
+}
+.bky-trash:before {
+  content: "\e945";
+  color: #676767;
+}
+.bky-up:before {
+  content: "\e946";
+  color: #676767;
+}

@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebParking", "WebParking.csproj", "{874D92EF-48D5-46FE-9958-08339519DA94}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "integraMobile.Infrastructure", "..\integraMobile.Infrastructure\integraMobile.Infrastructure.csproj", "{1A917A7C-C1D1-4BC8-9434-9F37FADC0A6B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{874D92EF-48D5-46FE-9958-08339519DA94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{874D92EF-48D5-46FE-9958-08339519DA94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{874D92EF-48D5-46FE-9958-08339519DA94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{874D92EF-48D5-46FE-9958-08339519DA94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A917A7C-C1D1-4BC8-9434-9F37FADC0A6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A917A7C-C1D1-4BC8-9434-9F37FADC0A6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A917A7C-C1D1-4BC8-9434-9F37FADC0A6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A917A7C-C1D1-4BC8-9434-9F37FADC0A6B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

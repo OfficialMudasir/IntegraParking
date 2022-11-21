@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="urn:server" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="urn:server" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="urn:server">
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <xsd:import namespace="http://schemas.xmlsoap.org/wsdl/" />
+      <xsd:complexType name="Person">
+        <xsd:all>
+          <xsd:element name="EsAnulableResult" type="xsd:int" />
+          <xsd:element name="Importe" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="NuevaAnulacionRequest">
+    <wsdl:part name="FechaOperacion" type="xsd:string" />
+    <wsdl:part name="Ticket" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="NuevaAnulacionResponse">
+    <wsdl:part name="return" type="xsd:Array" />
+  </wsdl:message>
+  <wsdl:portType name="serverPortType">
+    <wsdl:operation name="NuevaAnulacion">
+      <documentation>Check if exist the complaint number</documentation>
+      <wsdl:input message="tns:NuevaAnulacionRequest" />
+      <wsdl:output message="tns:NuevaAnulacionResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="serverBinding" type="tns:serverPortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <wsdl:operation name="NuevaAnulacion">
+      <soap:operation soapAction="urn:server#zbDevel" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:server" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:server" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="server">
+    <wsdl:port name="serverPort" binding="tns:serverBinding">
+      <soap:address location="http://212.36.64.88:82/zb_new/ws_anulaciones.php" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

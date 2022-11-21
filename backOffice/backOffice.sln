@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "backOffice", "backOffice.csproj", "{41A2FBA1-49C4-4D2F-93B0-601840C06588}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "integraMobile.Domain", "..\integraMobile.Domain\integraMobile.Domain.csproj", "{D61B49D2-71E7-4594-B4BF-7111445DD51C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "integraMobile.Infrastructure", "..\integraMobile.Infrastructure\integraMobile.Infrastructure.csproj", "{1A917A7C-C1D1-4BC8-9434-9F37FADC0A6B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{41A2FBA1-49C4-4D2F-93B0-601840C06588}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41A2FBA1-49C4-4D2F-93B0-601840C06588}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41A2FBA1-49C4-4D2F-93B0-601840C06588}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41A2FBA1-49C4-4D2F-93B0-601840C06588}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D61B49D2-71E7-4594-B4BF-7111445DD51C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D61B49D2-71E7-4594-B4BF-7111445DD51C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D61B49D2-71E7-4594-B4BF-7111445DD51C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D61B49D2-71E7-4594-B4BF-7111445DD51C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A917A7C-C1D1-4BC8-9434-9F37FADC0A6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A917A7C-C1D1-4BC8-9434-9F37FADC0A6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A917A7C-C1D1-4BC8-9434-9F37FADC0A6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A917A7C-C1D1-4BC8-9434-9F37FADC0A6B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

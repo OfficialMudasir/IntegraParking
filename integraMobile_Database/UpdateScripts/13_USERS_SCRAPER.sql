@@ -1,0 +1,9 @@
+CREATE TABLE [dbo].[USERS_SCRAPER](
+	[USER_ID] [numeric](18, 0) IDENTITY(1,1) NOT NULL,
+	[USER_EMAIL] [nvarchar](50) NOT NULL,
+	[USER_JSON] [nvarchar](max) NULL
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+
+GO
+
+

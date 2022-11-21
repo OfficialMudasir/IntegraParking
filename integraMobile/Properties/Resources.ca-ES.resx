@@ -1,0 +1,2635 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AccessForm" xml:space="preserve">
+    <value>Formulari d'accés</value>
+  </data>
+  <data name="Account_ChangeLanguage" xml:space="preserve">
+    <value>Canviar idioma</value>
+  </data>
+  <data name="Account_CurrentBalance" xml:space="preserve">
+    <value>Saldo actual</value>
+  </data>
+  <data name="Account_GetExcel" xml:space="preserve">
+    <value>Obtenir Excel</value>
+  </data>
+  <data name="Account_GetPDF" xml:space="preserve">
+    <value>Obtenir PDF</value>
+  </data>
+  <data name="Account_Hi" xml:space="preserve">
+    <value>Hola,</value>
+  </data>
+  <data name="Account_HisOperations" xml:space="preserve">
+    <value>Històric d'Operacions</value>
+  </data>
+  <data name="Account_Invoice_Amount" xml:space="preserve">
+    <value>Valor Recàrregues</value>
+  </data>
+  <data name="Account_Invoice_AmountOps" xml:space="preserve">
+    <value>Valor Operacions</value>
+  </data>
+  <data name="Account_Invoice_Date" xml:space="preserve">
+    <value>Data</value>
+  </data>
+  <data name="Account_Invoice_Down_Link" xml:space="preserve">
+    <value>Enllaç de descàrrega</value>
+  </data>
+  <data name="Account_Invoice_End_Date" xml:space="preserve">
+    <value>F.de Fi</value>
+  </data>
+  <data name="Account_Invoice_InvoiceNumber" xml:space="preserve">
+    <value>Número de factura</value>
+  </data>
+  <data name="Account_Invoice_PDF_Amount" xml:space="preserve">
+    <value>Import</value>
+  </data>
+  <data name="Account_Invoice_PDF_BaseAmount" xml:space="preserve">
+    <value>Base Imposable</value>
+  </data>
+  <data name="Account_Invoice_PDF_Date" xml:space="preserve">
+    <value>Data: </value>
+  </data>
+  <data name="Account_Invoice_PDF_Detail" xml:space="preserve">
+    <value>Concepte</value>
+  </data>
+  <data name="Account_Invoice_PDF_DNI_NIF" xml:space="preserve">
+    <value>DNI/NIF :</value>
+  </data>
+  <data name="Account_Invoice_PDF_InvoiceNumber" xml:space="preserve">
+    <value>Fra. Núm.:</value>
+  </data>
+  <data name="Account_Invoice_PDF_NIF" xml:space="preserve">
+    <value>NIF: </value>
+  </data>
+  <data name="Account_Invoice_PDF_Total" xml:space="preserve">
+    <value>TOTAL</value>
+  </data>
+  <data name="Account_Invoice_PDF_Units" xml:space="preserve">
+    <value>Unitats</value>
+  </data>
+  <data name="Account_Invoice_PDF_Unit_Amount" xml:space="preserve">
+    <value>Preu</value>
+  </data>
+  <data name="Account_Invoice_PDF_VAT" xml:space="preserve">
+    <value>I.V.A.</value>
+  </data>
+  <data name="Account_Invoice_Start_Date" xml:space="preserve">
+    <value>F.d'Inici</value>
+  </data>
+  <data name="Account_Logout" xml:space="preserve">
+    <value>Tancar Sessió</value>
+  </data>
+  <data name="Account_Logout_Button" xml:space="preserve">
+    <value>Log Out</value>
+  </data>
+  <data name="Account_Main_BttnBalanceAndRecharge" xml:space="preserve">
+    <value>Saldo i recàrregues</value>
+  </data>
+  <data name="Account_Main_BttnInvoices" xml:space="preserve">
+    <value>Facturació</value>
+  </data>
+  <data name="Account_Main_BttnOperations" xml:space="preserve">
+    <value>Operacions</value>
+  </data>
+  <data name="Account_Main_BttnUserData" xml:space="preserve">
+    <value>Dades usuari</value>
+  </data>
+  <data name="Account_Op_AdditionalUser" xml:space="preserve">
+    <value>Usuari Rel.</value>
+  </data>
+  <data name="Account_Op_Amount" xml:space="preserve">
+    <value>Valor</value>
+  </data>
+  <data name="Account_Op_AmountBONUS" xml:space="preserve">
+    <value>Bonificació</value>
+  </data>
+  <data name="Account_Op_AmountFEE" xml:space="preserve">
+    <value>Comissió</value>
+  </data>
+  <data name="Account_Op_AmountTotal" xml:space="preserve">
+    <value>Total</value>
+  </data>
+  <data name="Account_Op_AmountVAT" xml:space="preserve">
+    <value>IVA</value>
+  </data>
+  <data name="Account_Op_ChangeApplied" xml:space="preserve">
+    <value>Canvi</value>
+  </data>
+  <data name="Account_Op_Date" xml:space="preserve">
+    <value>Data</value>
+  </data>
+  <data name="Account_Op_Date_Time" xml:space="preserve">
+    <value>Hora</value>
+  </data>
+  <data name="Account_Op_Duration" xml:space="preserve">
+    <value>Duració</value>
+  </data>
+  <data name="Account_Op_End_Date" xml:space="preserve">
+    <value>F.de Fi</value>
+  </data>
+  <data name="Account_Op_End_Date_Time" xml:space="preserve">
+    <value>H. de Fi</value>
+  </data>
+  <data name="Account_Op_ExportPdf_Title" xml:space="preserve">
+    <value>Exportar dades a pdf</value>
+  </data>
+  <data name="Account_Op_ExportXls_Title" xml:space="preserve">
+    <value>Exportar dades a xls</value>
+  </data>
+  <data name="Account_Op_Export_PDFFilename" xml:space="preserve">
+    <value>Operacions</value>
+  </data>
+  <data name="Account_Op_Export_XLSFilename" xml:space="preserve">
+    <value>Operacions</value>
+  </data>
+  <data name="Account_Op_Filter" xml:space="preserve">
+    <value>Filtre</value>
+  </data>
+  <data name="Account_Op_Installation" xml:space="preserve">
+    <value>Instal·lació</value>
+  </data>
+  <data name="Account_Op_LicensePlate" xml:space="preserve">
+    <value>Matrícula</value>
+  </data>
+  <data name="Account_Op_Operation" xml:space="preserve">
+    <value>Tipus</value>
+  </data>
+  <data name="Account_Op_Source" xml:space="preserve">
+    <value>Origen Operació</value>
+  </data>
+  <data name="Account_Op_SourceIdent" xml:space="preserve">
+    <value>({0})</value>
+  </data>
+  <data name="Account_Op_SourceType" xml:space="preserve">
+    <value>{0} {1}</value>
+  </data>
+  <data name="Account_Op_SourceType_ExternalMobilePayment" xml:space="preserve">
+    <value>Pagament per mòbil extern</value>
+  </data>
+  <data name="Account_Op_SourceType_ExternalParkingMeter" xml:space="preserve">
+    <value>Parquímetre</value>
+  </data>
+  <data name="Account_Op_SourceType_InternMobilePayment" xml:space="preserve">
+    <value>Pagament per mòbil</value>
+  </data>
+  <data name="Account_Op_Start_Date" xml:space="preserve">
+    <value>F. d'Inici</value>
+  </data>
+  <data name="Account_Op_Start_Date_Time" xml:space="preserve">
+    <value>H. D'Inici</value>
+  </data>
+  <data name="Account_Op_Tariff" xml:space="preserve">
+    <value>Tarifa</value>
+  </data>
+  <data name="Account_Op_TicketData" xml:space="preserve">
+    <value>Dades denúncia</value>
+  </data>
+  <data name="Account_Op_TicketNumber" xml:space="preserve">
+    <value>Número de denúncia</value>
+  </data>
+  <data name="Account_Op_Type_BalanceReception" xml:space="preserve">
+    <value>Recepció Saldo</value>
+  </data>
+  <data name="Account_Op_Type_BalanceTransfer" xml:space="preserve">
+    <value>Transferència Saldo</value>
+  </data>
+  <data name="Account_Op_Type_Discount" xml:space="preserve">
+    <value>Descompte</value>
+  </data>
+  <data name="Account_Op_Type_Extension" xml:space="preserve">
+    <value>Ampliació</value>
+  </data>
+  <data name="Account_Op_Type_OffstreetEntry" xml:space="preserve">
+    <value>Entrada Aparcament</value>
+  </data>
+  <data name="Account_Op_Type_OffstreetExit" xml:space="preserve">
+    <value>Sortida Aparcament</value>
+  </data>
+  <data name="Account_Op_Type_OffstreetOverduePayment" xml:space="preserve">
+    <value>Prepagament Aparcament</value>
+  </data>
+  <data name="Account_Op_Type_Parking" xml:space="preserve">
+    <value>Aparcament</value>
+  </data>
+  <data name="Account_Op_Type_Recharge" xml:space="preserve">
+    <value>Recàrrega</value>
+  </data>
+  <data name="Account_Op_Type_Refund" xml:space="preserve">
+    <value>Desaparcament</value>
+  </data>
+  <data name="Account_Op_Type_ServiceCharge" xml:space="preserve">
+    <value>Càrrec de Serveis</value>
+  </data>
+  <data name="Account_Op_Type_TicketPayment" xml:space="preserve">
+    <value>Anul·lació de Denúncia</value>
+  </data>
+  <data name="Account_Op_Type_TollLock" xml:space="preserve">
+    <value>Bloqueig Saldo Peatge</value>
+  </data>
+  <data name="Account_Op_Type_TollPayment" xml:space="preserve">
+    <value>Pagament Peatge</value>
+  </data>
+  <data name="Account_Op_Type_TollUnlock" xml:space="preserve">
+    <value>Desbloqueig Saldo Peatge</value>
+  </data>
+  <data name="Account_Op_Zone" xml:space="preserve">
+    <value>Zona</value>
+  </data>
+  <data name="Account_Profile" xml:space="preserve">
+    <value>Perfil</value>
+  </data>
+  <data name="Account_RechargeButton_Cancel" xml:space="preserve">
+    <value>Cancel·lar Recàrrega</value>
+  </data>
+  <data name="Account_RechargeButton_Confirm" xml:space="preserve">
+    <value>Confirmar Recàrrega</value>
+  </data>
+  <data name="Account_RechargeButton_MainMenu" xml:space="preserve">
+    <value>Menú</value>
+  </data>
+  <data name="Account_RechargeButton_Recharge" xml:space="preserve">
+    <value>Recarregar</value>
+  </data>
+  <data name="Account_RechargeCancelTitle" xml:space="preserve">
+    <value>Recàrrega cancel·lada</value>
+  </data>
+  <data name="Account_RechargeCancel_1" xml:space="preserve">
+    <value>Ha cancel·lat la recàrrega.</value>
+  </data>
+  <data name="Account_RechargeCancel_2" xml:space="preserve">
+    <value>És necessari disposar de saldo per utilitzar l'aplicació de pagament per mòbil.</value>
+  </data>
+  <data name="Account_RechargeCancel_3" xml:space="preserve">
+    <value>Si us plau, procedeixi amb la recàrrega abans d'utilitzar l'aplicació.</value>
+  </data>
+  <data name="Account_RechargeCancel_4" xml:space="preserve">
+    <value>Ha de recarregar el seu saldo abans d'utilitzar el sistema.</value>
+  </data>
+  <data name="Account_RechargeCancel_5" xml:space="preserve">
+    <value>Si desitja estalviar temps i gaudir de tots els avantatges de l'aplicació, activi l'opció de recàrrega automàtica i configuri el seu mínim.</value>
+  </data>
+  <data name="Account_RechargeConfirmTitle" xml:space="preserve">
+    <value>Confirmació de la recàrrega</value>
+  </data>
+  <data name="Account_RechargeConfirm_1" xml:space="preserve">
+    <value>Ja gairebé hem acabat.</value>
+  </data>
+  <data name="Account_RechargeConfirm_2" xml:space="preserve">
+    <value>Si us plau, confirmi la seva recàrrega de</value>
+  </data>
+  <data name="Account_RechargeConfirm_3" xml:space="preserve">
+    <value>Ha de recarregar el seu saldo abans de començar a utilitzar el sistema.</value>
+  </data>
+  <data name="Account_RechargeConfirm_4" xml:space="preserve">
+    <value>Si desitja estalviar temps i gaudir de tots els avantatges de l'aplicació, activi l'opció de recàrrega automàtica i configuri el seu mínim.</value>
+  </data>
+  <data name="Account_RechargeFailureTitle" xml:space="preserve">
+    <value>Error a la recàrrega</value>
+  </data>
+  <data name="Account_RechargeFailure_1" xml:space="preserve">
+    <value>S'ha produït un error a la recàrrega.</value>
+  </data>
+  <data name="Account_RechargeFailure_2" xml:space="preserve">
+    <value>És necessari disposar de saldo per utilitzar l'aplicación de pagament per mòbil.</value>
+  </data>
+  <data name="Account_RechargeFailure_3" xml:space="preserve">
+    <value>Si us plau, provi de nou.</value>
+  </data>
+  <data name="Account_RechargeFailure_4" xml:space="preserve">
+    <value>Ha de recarregar el seu saldo abans d'utilitzar el sistema.</value>
+  </data>
+  <data name="Account_RechargeFailure_5" xml:space="preserve">
+    <value>Si desitja estalviar temps i gaudir de tots els avantatges de l'aplicació, activi l'opció de recàrrega automàtica i configuri el seu mínim.</value>
+  </data>
+  <data name="Account_RechargeMessage_1" xml:space="preserve">
+    <value>El seu saldo actual és insuficient.</value>
+  </data>
+  <data name="Account_RechargeMessage_2" xml:space="preserve">
+    <value>Ha de recarregar el seu saldo abans de seguir utilitzant el sistema.</value>
+  </data>
+  <data name="Account_RechargeMessage_3" xml:space="preserve">
+    <value>Si us plau, procedeixi amb la recàrrega abans d'utilitzar l'aplicació.</value>
+  </data>
+  <data name="Account_RechargeSuccessTitle" xml:space="preserve">
+    <value>Recàrrega finalitzada</value>
+  </data>
+  <data name="Account_RechargeSuccess_1" xml:space="preserve">
+    <value>La seva recàrrega s'ha realitzat correctament. El seu saldo actual és:</value>
+  </data>
+  <data name="Account_RechargeSuccess_2" xml:space="preserve">
+    <value>Ha de recarregar el seu saldo abans de començar a utilitzar el sistema.</value>
+  </data>
+  <data name="Account_RechargeSuccess_3" xml:space="preserve">
+    <value>Si desitja estalviar temps i gaudir de tots els avantatges de l'aplicació, activi l'opció de recàrrega automàtica i configuri el seu mínim.</value>
+  </data>
+  <data name="Account_RechargeValue" xml:space="preserve">
+    <value>{0} {1}</value>
+  </data>
+  <data name="Account_RechargeValueBase_Label" xml:space="preserve">
+    <value>Crèdit:</value>
+  </data>
+  <data name="Account_RechargeValueFEE_Label" xml:space="preserve">
+    <value>Comissió del Servei:</value>
+  </data>
+  <data name="Account_RechargeValueOrder_Label" xml:space="preserve">
+    <value>La seva comanda:</value>
+  </data>
+  <data name="Account_RechargeValueTotal_Label" xml:space="preserve">
+    <value>Total a pagar:</value>
+  </data>
+  <data name="Account_RechargeValueVAT_Label" xml:space="preserve">
+    <value>IVA ({0:#0.00}%):</value>
+  </data>
+  <data name="Account_RechargeValue_Label" xml:space="preserve">
+    <value>Crèdit:</value>
+  </data>
+  <data name="Account_Recharge_Billing_Address" xml:space="preserve">
+    <value>Direcció de facturació</value>
+  </data>
+  <data name="Account_Recharge_BuyCredit" xml:space="preserve">
+    <value>Recàrrega de saldo</value>
+  </data>
+  <data name="Account_Recharge_BuyNow" xml:space="preserve">
+    <value>RECARREGAR ARA</value>
+  </data>
+  <data name="Account_Recharge_ItemDescription" xml:space="preserve">
+    <value>Recàrrega de saldo</value>
+  </data>
+  <data name="Account_Recharge_PaymentsWithPreapproval" xml:space="preserve">
+    <value>Pagaments amb aprovació prèvia</value>
+  </data>
+  <data name="Account_Recharge_PaymentsWithPreaprovalTitle" xml:space="preserve">
+    <value>Subscripció de pagaments amb aprovació prèvia finalitzada</value>
+  </data>
+  <data name="Account_Recharge_PaymentsWithPreaproval_1" xml:space="preserve">
+    <value>La seva subscripció de pagaments amb aprovació prèvia s'ha realitzat correctament. El seu saldo actual és:</value>
+  </data>
+  <data name="Account_Recharge_PaymentsWithPreaproval_2" xml:space="preserve">
+    <value>Ha de recarregar el seu saldo abans de començar a utilitzar el sistema.</value>
+  </data>
+  <data name="Account_Recharge_SelectAnAmount" xml:space="preserve">
+    <value>Seleccioni una quantitat per recarregar</value>
+  </data>
+  <data name="Account_Register_PaymentMean" xml:space="preserve">
+    <value>Registre de mitjà de pagament</value>
+  </data>
+  <data name="Account_Register_PaymentMeanCancelled" xml:space="preserve">
+    <value>Registre de mitjà de pagament cancel·lat</value>
+  </data>
+  <data name="Account_Register_PaymentMeanError" xml:space="preserve">
+    <value>Registre de mitjà de pagament amb error</value>
+  </data>
+  <data name="Account_Register_PaymentMeanFinished" xml:space="preserve">
+    <value>EL SEU MÈTODE DE PAGAMENT S'HA DONAT D'ALTA SATISFACTORIAMENT</value>
+  </data>
+  <data name="Account_Register_PaymentMeanMessage" xml:space="preserve">
+    <value>S'ha carregat correctament la quantitat de {0} {1} per registrar el seu mitjà de pagament</value>
+  </data>
+  <data name="Account_Register_PaymentMeanMessageCancel" xml:space="preserve">
+    <value>S'ha cancel·lat l'operació de cobrament de la quantitat de {0} {1} per registrar el seu mitjà de pagament.</value>
+  </data>
+  <data name="Account_Register_PaymentMeanMessageError" xml:space="preserve">
+    <value>S'ha produït un error en l'operació de cobrament de la quantitat de {0} {1} per registrar el seu mitjà de pagament.</value>
+  </data>
+  <data name="Account_Register_PaymentMeanRetry" xml:space="preserve">
+    <value>Tornar a intentar</value>
+  </data>
+  <data name="Account_Register_PaymentMean_ChangeToPrepay" xml:space="preserve">
+    <value>Canviï a prepagament i podrà beneficiar-se dels avantatges</value>
+  </data>
+  <data name="Account_Reset" xml:space="preserve">
+    <value>Reiniciar</value>
+  </data>
+  <data name="Account_SearchMenu" xml:space="preserve">
+    <value>Cercar al Menú...</value>
+  </data>
+  <data name="Account_UserData_Plate_Succesfully_Added" xml:space="preserve">
+    <value>Matrícula afegida correctament. Desi els canvis per confirmar de manera definitiva.</value>
+  </data>
+  <data name="Activation_EmailBody" xml:space="preserve">
+    <value>FILESYSTEM</value>
+  </data>
+  <data name="Activation_EmailHeader" xml:space="preserve">
+    <value>Registre de Blinkay</value>
+  </data>
+  <data name="Activation_SMS" xml:space="preserve">
+    <value>Això és un missatge de Blinkay. El seu codi d'activació és {0}.</value>
+  </data>
+  <data name="Button_Back" xml:space="preserve">
+    <value>Anterior</value>
+  </data>
+  <data name="Button_Cancel" xml:space="preserve">
+    <value>Cancel·lar</value>
+  </data>
+  <data name="Button_Close" xml:space="preserve">
+    <value>Tancar</value>
+  </data>
+  <data name="Button_Confirm" xml:space="preserve">
+    <value>Confirmar</value>
+  </data>
+  <data name="Button_Logon" xml:space="preserve">
+    <value>Iniciar Sessió</value>
+  </data>
+  <data name="Button_Next" xml:space="preserve">
+    <value>Següent</value>
+  </data>
+  <data name="Button_ReInitRegistration" xml:space="preserve">
+    <value>Iniciar Registre</value>
+  </data>
+  <data name="Button_ResendSMS" xml:space="preserve">
+    <value>Reenviar SMS</value>
+  </data>
+  <data name="Button_RetrySend" xml:space="preserve">
+    <value>Tornar a enviar l'SMS</value>
+  </data>
+  <data name="Button_Send" xml:space="preserve">
+    <value>Enviar</value>
+  </data>
+  <data name="Button_Validate" xml:space="preserve">
+    <value>Validar</value>
+  </data>
+  <data name="ChangeEmailOrMobile_Remarks" xml:space="preserve">
+    <value>Després de prémer el botó de confirmar se li enviarà un correu electrònic amb un enllaç que haurà de seleccionar una vegada rebi l'SMS al seu telèfon mòbil amb un codi que haurà d'introducir a la pàgina.</value>
+  </data>
+  <data name="ChangeEmailOrTelephone_EmailBody" xml:space="preserve">
+    <value>FILESYSTEM</value>
+  </data>
+  <data name="ChangeEmailOrTelephone_EmailHeader" xml:space="preserve">
+    <value>Blinkay: Canvi de correu electrònic i/o Telèfon</value>
+  </data>
+  <data name="ChangeEmailOrTelephone_SMS" xml:space="preserve">
+    <value>Això és un missatge de Blinkay. El seu codi pel canvi de correu electrònic o número de telèfon és  {0}.</value>
+  </data>
+  <data name="ConfirmAutomaticRecharge_EmailHeader" xml:space="preserve">
+    <value>Blinkay: Recàrrega Automàtica realitzada</value>
+  </data>
+  <data name="ConfirmFinePayment_EmailHeader" xml:space="preserve">
+    <value>Blinkay: Ticket pagat</value>
+  </data>
+  <data name="ConfirmNoAutomaticRecharge_EmailHeader" xml:space="preserve">
+    <value>Blinkay: Recàrrega realitzada</value>
+  </data>
+  <data name="ConfirmRecharge_EmailBody" xml:space="preserve">
+    <value>FILESYSTEM</value>
+  </data>
+  <data name="Credit_Card" xml:space="preserve">
+    <value>Targeta de crèdit</value>
+  </data>
+  <data name="CustomerInscriptionModel_AlternativePhoneNumber" xml:space="preserve">
+    <value>Telèfon fixe</value>
+  </data>
+  <data name="CustomerInscriptionModel_AlternativePhoneNumberPrefix" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CustomerInscriptionModel_AutomaticRecharge" xml:space="preserve">
+    <value>Estalviï temps en el futur, Auto-recàrrega</value>
+  </data>
+  <data name="CustomerInscriptionModel_AutomaticRechargePaypalId" xml:space="preserve">
+    <value>Identificador de Paypal</value>
+  </data>
+  <data name="CustomerInscriptionModel_AutomaticRechargeQuantity" xml:space="preserve">
+    <value>Quantitat a Recarregar</value>
+  </data>
+  <data name="CustomerInscriptionModel_AutomaticRechargeWhenBelowQuantity" xml:space="preserve">
+    <value>Recarregarquan la quantitat sigui inferior a</value>
+  </data>
+  <data name="CustomerInscriptionModel_AutomaticRechargeWritePaypalID" xml:space="preserve">
+    <value>* escrigui el seu identificador de Paypal</value>
+  </data>
+  <data name="CustomerInscriptionModel_City" xml:space="preserve">
+    <value>Ciutat</value>
+  </data>
+  <data name="CustomerInscriptionModel_ConfirmPassword" xml:space="preserve">
+    <value>Repetir Contrasenya</value>
+  </data>
+  <data name="CustomerInscriptionModel_Country" xml:space="preserve">
+    <value>Selecciona el país on utilitzaràs Blinkay</value>
+  </data>
+  <data name="CustomerInscriptionModel_DocID" xml:space="preserve">
+    <value>DNI/Passaport</value>
+  </data>
+  <data name="CustomerInscriptionModel_DoorInStreetNumber" xml:space="preserve">
+    <value>Porta</value>
+  </data>
+  <data name="CustomerInscriptionModel_Email" xml:space="preserve">
+    <value>Correu electrònic</value>
+  </data>
+  <data name="CustomerInscriptionModel_EmailAndSMSReSent" xml:space="preserve">
+    <value>Correu electrònic i SMS d'activació reenviats correctament. Número de reintents {0}</value>
+  </data>
+  <data name="CustomerInscriptionModel_FirstSurname" xml:space="preserve">
+    <value>Primer Cognom</value>
+  </data>
+  <data name="CustomerInscriptionModel_LetterInStreetNumber" xml:space="preserve">
+    <value>Lletra</value>
+  </data>
+  <data name="CustomerInscriptionModel_LevelInStreetNumber" xml:space="preserve">
+    <value>Pis</value>
+  </data>
+  <data name="CustomerInscriptionModel_MainPhoneNumber" xml:space="preserve">
+    <value>Telèfon mòbil</value>
+  </data>
+  <data name="CustomerInscriptionModel_MainPhoneNumberPrefix" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CustomerInscriptionModel_Name" xml:space="preserve">
+    <value>Nom</value>
+  </data>
+  <data name="CustomerInscriptionModel_Password" xml:space="preserve">
+    <value>Contrasenya</value>
+  </data>
+  <data name="CustomerInscriptionModel_PaymentMean" xml:space="preserve">
+    <value>Forma de Pagament</value>
+  </data>
+  <data name="CustomerInscriptionModel_Plate" xml:space="preserve">
+    <value>Matrícula</value>
+  </data>
+  <data name="CustomerInscriptionModel_reCaptchaIdiom" xml:space="preserve">
+    <value>es</value>
+  </data>
+  <data name="CustomerInscriptionModel_Remark_ivr" xml:space="preserve">
+    <value>Només per la centraleta telefònica (opcional)</value>
+  </data>
+  <data name="CustomerInscriptionModel_SecondSurname" xml:space="preserve">
+    <value>Segon cognom</value>
+  </data>
+  <data name="CustomerInscriptionModel_SMSReSent" xml:space="preserve">
+    <value>SMS d'activació reenviat correctament. Número de reintents {0}</value>
+  </data>
+  <data name="CustomerInscriptionModel_StairInStreetNumber" xml:space="preserve">
+    <value>Escala</value>
+  </data>
+  <data name="CustomerInscriptionModel_State" xml:space="preserve">
+    <value>Província</value>
+  </data>
+  <data name="CustomerInscriptionModel_Step1EndIntroText1" xml:space="preserve">
+    <value>1) Revisi el seu SMS al mòbil &lt;b&gt;{0}&lt;/b&gt;, li hem enviat un codi numèric que haurà d'utilitzar a continuació.</value>
+  </data>
+  <data name="CustomerInscriptionModel_Step1EndIntroText2" xml:space="preserve">
+    <value>2) Revisi el seu correu electrònic &lt;b&gt;{0}&lt;/b&gt;, li hem enviat un enllaç per a continuar la seva alta com a usuari.</value>
+  </data>
+  <data name="CustomerInscriptionModel_Step1EndIntroText3" xml:space="preserve">
+    <value>Premi l'enllaç del correu, introdueixi el codi numèric i podrà continuar el procés d'alta a l'haver validat de forma segura la seva identitat.</value>
+  </data>
+  <data name="CustomerInscriptionModel_Step1EndIntroText4" xml:space="preserve">
+    <value>Si no rep el correu electrònic revisi la carpeta de SPAM del seu correu electrònic.</value>
+  </data>
+  <data name="CustomerInscriptionModel_Step1EndIntroText5" xml:space="preserve">
+    <value>Si no rep el correu electrònic o l'SMS passats uns minuts, premi el botó de reintentar.</value>
+  </data>
+  <data name="CustomerInscriptionModel_Step1IntroText1" xml:space="preserve">
+    <value>Amb el pagament remot podrà realitzar aparcaments del seu vehicle o ampliar-los, des de qualsevol punt de la nostra xarxa de serveis, i podrà abonar les operacions fàcilment amb la seva tarjeta de crèdit.</value>
+  </data>
+  <data name="CustomerInscriptionModel_Step1IntroText2" xml:space="preserve">
+    <value>Les dades de subscripció li permetran modificar les seves dades o donar-se de baixa quan ho desitgi.</value>
+  </data>
+  <data name="CustomerInscriptionModel_Step1IntroText3" xml:space="preserve">
+    <value>Tota la informació que ens facilita, estarà subjecta a la "Política de Protecció de Dades Personals" de la present pàgina web.</value>
+  </data>
+  <data name="CustomerInscriptionModel_Step1IntroText4" xml:space="preserve">
+    <value>Si us plau, ompli tots els camps per a poder beneficiar-se del servei remot de l'aparcament.</value>
+  </data>
+  <data name="CustomerInscriptionModel_Step1RememberUsernameEqualsEmail" xml:space="preserve">
+    <value>Recordi que el seu correu electrònic serà el seu nom d'usuari.</value>
+  </data>
+  <data name="CustomerInscriptionModel_Step2IntroText1" xml:space="preserve">
+    <value>Amb el pagament remot podrà realitzar aparcaments del seu vehicle o ampliar-los, des de qualsevol punt de la nostra xarxa de serveis, i podrà abonar les operacions fàcilment amb la seva tarjeta de crèdit.</value>
+  </data>
+  <data name="CustomerInscriptionModel_Step2IntroText2" xml:space="preserve">
+    <value>Les dades de subscripció li permetran modificar les seves dades o donar-se de baixa quan ho desitgi.</value>
+  </data>
+  <data name="CustomerInscriptionModel_Step2IntroText3" xml:space="preserve">
+    <value>Tota la informació que ens facilita, estarà subjecta a la "Política de Protecció de Dades Personals" de la present pàgina web.</value>
+  </data>
+  <data name="CustomerInscriptionModel_Step2IntroText4" xml:space="preserve">
+    <value>Si us plau, ompli tots els camps per a poder beneficiar-se del servei remot de l'aparcament.</value>
+  </data>
+  <data name="CustomerInscriptionModel_Step2SendSMS" xml:space="preserve">
+    <value>Si no ha rebut el missatge, premi "Reenviar SMS" i rrebrà un nou SMS al telèfon acabat en {0}.</value>
+  </data>
+  <data name="CustomerInscriptionModel_Step2WriteYourCode" xml:space="preserve">
+    <value>Introdueixi el codi:</value>
+  </data>
+  <data name="CustomerInscriptionModel_Step2WriteYourCode1" xml:space="preserve">
+    <value>Introdueixi el codi de {0} dígits rebuts per SMS al mòbil acabat en {1} per continuar amb el registre del seu compte (validesa del codi {2} min).</value>
+  </data>
+  <data name="CustomerInscriptionModel_Step3Address" xml:space="preserve">
+    <value>Raó Social</value>
+  </data>
+  <data name="CustomerInscriptionModel_Step4IHaveReadAndAccept" xml:space="preserve">
+    <value>He llegit i accepto els termes i</value>
+  </data>
+  <data name="CustomerInscriptionModel_Step4PreferredPlate" xml:space="preserve">
+    <value>Matrícula favorita</value>
+  </data>
+  <data name="CustomerInscriptionModel_Step4SecurityAdvice" xml:space="preserve">
+    <value>(Per motius de seguretat, li recomanem que utilitzi una contrasenyadiferent a la del seu correu electrònic).</value>
+  </data>
+  <data name="CustomerInscriptionModel_Step4UseConditions" xml:space="preserve">
+    <value>condicions d'ús</value>
+  </data>
+  <data name="CustomerInscriptionModel_Step4UserInformation" xml:space="preserve">
+    <value>Informació d'usuari</value>
+  </data>
+  <data name="CustomerInscriptionModel_StepBttnFinish" xml:space="preserve">
+    <value>Finalitzar</value>
+  </data>
+  <data name="CustomerInscriptionModel_StreetName" xml:space="preserve">
+    <value>Nom del carrer</value>
+  </data>
+  <data name="CustomerInscriptionModel_StreetNumber" xml:space="preserve">
+    <value>Número</value>
+  </data>
+  <data name="CustomerInscriptionModel_SuccessCreatingAccount_1" xml:space="preserve">
+    <value>Enhorabona, el seu compte de pagament per mòbil s'ha creat correctament. Ara ja pot accedir al seu nou compte i recarregar el seu saldo per començar a utilitzar el servei.</value>
+  </data>
+  <data name="CustomerInscriptionModel_SuccessCreatingAccount_3" xml:space="preserve">
+    <value>Li hem enviat un correu electrònic de confirmació a: &lt;a href="{0}"&gt; {0}&lt;/a&gt;, allà hi trobarà les seves dades d'accés, usuari i contrasenya.</value>
+  </data>
+  <data name="CustomerInscriptionModel_SuccessCreatingAccount_4" xml:space="preserve">
+    <value>Recordi els beneficis d'estar registrat:</value>
+  </data>
+  <data name="CustomerInscriptionModel_SuccessCreatingAccount_5" xml:space="preserve">
+    <value>Devolució del temps no consumit</value>
+  </data>
+  <data name="CustomerInscriptionModel_SuccessCreatingAccount_6" xml:space="preserve">
+    <value>Auto-recàrrega automàtica – estalvia temps.</value>
+  </data>
+  <data name="CustomerInscriptionModel_SuccessCreatingAccount_7" xml:space="preserve">
+    <value>Accés online a les seves operacions i facturació</value>
+  </data>
+  <data name="CustomerInscriptionModel_SuccessCreatingAccount_8" xml:space="preserve">
+    <value>Avisos pel temps caducat</value>
+  </data>
+  <data name="CustomerInscriptionModel_SuccessCreatingAccount_9" xml:space="preserve">
+    <value>Aparqui sense necessitat d'anar al parquímetre i pagui només pel temps aparcat</value>
+  </data>
+  <data name="CustomerInscriptionModel_SummaryWelcomeEmail_Body" xml:space="preserve">
+    <value>FILESYSTEM</value>
+  </data>
+  <data name="CustomerInscriptionModel_SummaryWelcomeEmail_Subject" xml:space="preserve">
+    <value>Benvingut a Blinkay</value>
+  </data>
+  <data name="CustomerInscriptionModel_Summary_Button_Login" xml:space="preserve">
+    <value>LOGIN</value>
+  </data>
+  <data name="CustomerInscriptionModel_SuscriptionType" xml:space="preserve">
+    <value>Tipus de Subscripció</value>
+  </data>
+  <data name="CustomerInscriptionModel_Username" xml:space="preserve">
+    <value>Nom d'usuari</value>
+  </data>
+  <data name="CustomerInscriptionModel_Welcome" xml:space="preserve">
+    <value>Li donem la benvinguda, &lt;strong&gt;{0}&lt;/strong&gt;</value>
+  </data>
+  <data name="CustomerInscriptionModel_WriteYourAlternativePhoneNumber" xml:space="preserve">
+    <value>escriu el teu telèfon fixe</value>
+  </data>
+  <data name="CustomerInscriptionModel_WriteYourCity" xml:space="preserve">
+    <value>* escrigui el nom de la seva ciutat</value>
+  </data>
+  <data name="CustomerInscriptionModel_WriteYourConfirmPassword" xml:space="preserve">
+    <value>* Repetir contrasenya</value>
+  </data>
+  <data name="CustomerInscriptionModel_WriteYourDocID" xml:space="preserve">
+    <value>* escrigui DNI/Passaport</value>
+  </data>
+  <data name="CustomerInscriptionModel_WriteYourDoorInStreetNumber" xml:space="preserve">
+    <value>porta</value>
+  </data>
+  <data name="CustomerInscriptionModel_WriteYourEmail" xml:space="preserve">
+    <value>* elteu@email.com</value>
+  </data>
+  <data name="CustomerInscriptionModel_WriteYourFirstSurname" xml:space="preserve">
+    <value>* escrigui el seu primer cognom</value>
+  </data>
+  <data name="CustomerInscriptionModel_WriteYourLetterInStreetNumber" xml:space="preserve">
+    <value>lletra</value>
+  </data>
+  <data name="CustomerInscriptionModel_WriteYourLevelInStreetNumber" xml:space="preserve">
+    <value>pis</value>
+  </data>
+  <data name="CustomerInscriptionModel_WriteYourMainPhoneNumber" xml:space="preserve">
+    <value>* escrigui el seu telèfon mòbil</value>
+  </data>
+  <data name="CustomerInscriptionModel_WriteYourName" xml:space="preserve">
+    <value>* escrigui el seu nom</value>
+  </data>
+  <data name="CustomerInscriptionModel_WriteYourPassword" xml:space="preserve">
+    <value>* Mín.- {0} Màx. {1} caràcters</value>
+  </data>
+  <data name="CustomerInscriptionModel_WriteYourPlate" xml:space="preserve">
+    <value>* matrícula del vehicle</value>
+  </data>
+  <data name="CustomerInscriptionModel_WriteYourSecondSurname" xml:space="preserve">
+    <value>escrigui el seu segon cognom</value>
+  </data>
+  <data name="CustomerInscriptionModel_WriteYourStairInStreetNumber" xml:space="preserve">
+    <value>escala</value>
+  </data>
+  <data name="CustomerInscriptionModel_WriteYourState" xml:space="preserve">
+    <value>* escrigui la seva província</value>
+  </data>
+  <data name="CustomerInscriptionModel_WriteYourStreetName" xml:space="preserve">
+    <value>* escrigui el nom del seu carrer</value>
+  </data>
+  <data name="CustomerInscriptionModel_WriteYourStreetNumber" xml:space="preserve">
+    <value>* número</value>
+  </data>
+  <data name="CustomerInscriptionModel_WriteYourUsername" xml:space="preserve">
+    <value>* Mín.- {0} Màx. {1} caràcters</value>
+  </data>
+  <data name="CustomerInscriptionModel_WriteYourZipCode" xml:space="preserve">
+    <value>* escrigui el seu codi postal</value>
+  </data>
+  <data name="CustomerInscriptionModel_ZipCode" xml:space="preserve">
+    <value>Codi Postal</value>
+  </data>
+  <data name="DefaultInstallationCode" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Email_LayoutSubtotal" xml:space="preserve">
+    <value>FILESYSTEM</value>
+  </data>
+  <data name="Email_LayoutTotal" xml:space="preserve">
+    <value>FILESYSTEM</value>
+  </data>
+  <data name="ErrMsg_ActivationCodeAlreadyUsed" xml:space="preserve">
+    <value>El codi de registre ja ha estat utilitzat</value>
+  </data>
+  <data name="ErrMsg_ActivationCodeExpired" xml:space="preserve">
+    <value>El codi d'activació ha expirat. Si us plau, torni a iniciar el procés de registre</value>
+  </data>
+  <data name="ErrMsg_ActivationCodeExpired_2" xml:space="preserve">
+    <value>El codi d'activació ha expirat.</value>
+  </data>
+  <data name="ErrMsg_ActivationURLIncorrect" xml:space="preserve">
+    <value>Enllaç d'activació no vàlid</value>
+  </data>
+  <data name="ErrMsg_DeleteUserMustBeAccepted" xml:space="preserve">
+    <value>Ha de marcar el chekbox d'acceptació</value>
+  </data>
+  <data name="ErrMsg_UseConditionsMustBeAccepted" xml:space="preserve">
+    <value>Ha d'acceptar les condicions d'ús per a continuar</value>
+  </data>
+  <data name="ErrMsg_UsernameAlreadyExist" xml:space="preserve">
+    <value>El nom d'usuari ja existeix. Esculli un altre nom.</value>
+  </data>
+  <data name="ErrMsg_ValidationCodeIsIncorrect" xml:space="preserve">
+    <value>El codi de validació és incorrecte.</value>
+  </data>
+  <data name="ErrMsg_ValidationCodeIsRequired" xml:space="preserve">
+    <value>El codi de validació és obligatori.</value>
+  </data>
+  <data name="ErrorsMsg_CaptchaNotValid" xml:space="preserve">
+    <value>Comprovació Captcha no passada</value>
+  </data>
+  <data name="ErrorsMsg_EmailsMustMatch" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ErrorsMsg_ErrorAddindInformationToDB" xml:space="preserve">
+    <value>Error afegint les dades a la base de dades</value>
+  </data>
+  <data name="ErrorsMsg_ErrorEmailAlreadyExist" xml:space="preserve">
+    <value>No es pot utilitzar el correu electrònic perquè ja existeix al sistema</value>
+  </data>
+  <data name="ErrorsMsg_ErrorNothingHasChanged" xml:space="preserve">
+    <value>No s'ha canviat cap dels valors</value>
+  </data>
+  <data name="ErrorsMsg_ErrorSendingActivation" xml:space="preserve">
+    <value>Error enviant l'activació</value>
+  </data>
+  <data name="ErrorsMsg_ErrorTelephoneAlreadyExist" xml:space="preserve">
+    <value>No es pot utilitzar el telèfon perquè ja existeix al sistema</value>
+  </data>
+  <data name="ErrorsMsg_GreaterThanZeroRequired" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ErrorsMsg_InvalidFormat" xml:space="preserve">
+    <value>El camp {0} no té un format correcte</value>
+  </data>
+  <data name="ErrorsMsg_InvalidLength" xml:space="preserve">
+    <value>La longitud màxima del camp {0} és {1}</value>
+  </data>
+  <data name="ErrorsMsg_InvalidLengthWithMinimum" xml:space="preserve">
+    <value>La longitud del camp {0} ha de ser com a mínim {2} i com a màxim {1}</value>
+  </data>
+  <data name="ErrorsMsg_InvalidPassword" xml:space="preserve">
+    <value>Contrasenya incorrecta</value>
+  </data>
+  <data name="ErrorsMsg_InvalidPaymentMeanType" xml:space="preserve">
+    <value>Mètode de pagament incorrecte</value>
+  </data>
+  <data name="ErrorsMsg_LengthMustBeAtLeast" xml:space="preserve">
+    <value>La longitud mínima del camp {0} és {1}</value>
+  </data>
+  <data name="ErrorsMsg_PasswordsMustMatch" xml:space="preserve">
+    <value>La contrasenya i la seva confirmació han de coincidir</value>
+  </data>
+  <data name="ErrorsMsg_PlateListCantbeEmpty" xml:space="preserve">
+    <value>La llista de matrícules no pot estar buida</value>
+  </data>
+  <data name="ErrorsMsg_RequiredField" xml:space="preserve">
+    <value>El camp {0} és obligatori</value>
+  </data>
+  <data name="ErrorsMsg_RequiredFieldPayPalID" xml:space="preserve">
+    <value>El camp Identificador de Paypal és obligatori</value>
+  </data>
+  <data name="ErrorsMsg_SummaryMessage" xml:space="preserve">
+    <value>Hi ha alguns errors. Si us plau, corregeix-los per a continuar.</value>
+  </data>
+  <data name="ErrorsMsg_UserNotExists" xml:space="preserve">
+    <value>No existeix cap usuari amb aquestes dades</value>
+  </data>
+  <data name="FineModel_ConfirmEmail" xml:space="preserve">
+    <value>*Confirme su e-mail:</value>
+  </data>
+  <data name="FineModel_Email" xml:space="preserve">
+    <value>*E-mail:</value>
+  </data>
+  <data name="FineModel_TicketNumber" xml:space="preserve">
+    <value>Número de ticket</value>
+  </data>
+  <data name="FineModel_WriteYourConfirmEmail" xml:space="preserve">
+    <value>* repita el e-mail</value>
+  </data>
+  <data name="FineModel_WriteYourEmail" xml:space="preserve">
+    <value>* escriba el e-mail</value>
+  </data>
+  <data name="Fine_Amount" xml:space="preserve">
+    <value>Importe</value>
+  </data>
+  <data name="Fine_City" xml:space="preserve">
+    <value>Ciudad</value>
+  </data>
+  <data name="Fine_FEE" xml:space="preserve">
+    <value>Cost del Servei</value>
+  </data>
+  <data name="Fine_Header" xml:space="preserve">
+    <value>Portal de Pagament de Denúncies</value>
+  </data>
+  <data name="Fine_PartialVAT1" xml:space="preserve">
+    <value>IVA</value>
+  </data>
+  <data name="Fine_PaymentButton" xml:space="preserve">
+    <value>Pagar ahora</value>
+  </data>
+  <data name="Fine_Plate" xml:space="preserve">
+    <value>Matrícula</value>
+  </data>
+  <data name="Fine_SearchAgain" xml:space="preserve">
+    <value>Buscar otro ticket</value>
+  </data>
+  <data name="Fine_SearchButton" xml:space="preserve">
+    <value>Buscar</value>
+  </data>
+  <data name="Fine_TicketNumber" xml:space="preserve">
+    <value>Número de ticket</value>
+  </data>
+  <data name="Fine_TicketPayment" xml:space="preserve">
+    <value>Pago de Ticket</value>
+  </data>
+  <data name="Fine_TicketPaymentFailureTitle" xml:space="preserve">
+    <value>Error en el pago</value>
+  </data>
+  <data name="Fine_TicketPaymentFailure_1" xml:space="preserve">
+    <value>Se ha producido un error en el pago</value>
+  </data>
+  <data name="Fine_TicketPaymentFailure_3" xml:space="preserve">
+    <value>Por favor, inténtelo de nuevo</value>
+  </data>
+  <data name="Fine_TicketPaymentSuccess" xml:space="preserve">
+    <value>Pago completado</value>
+  </data>
+  <data name="Fine_TicketPaymentSuccessTitle" xml:space="preserve">
+    <value>Pago finalizado</value>
+  </data>
+  <data name="Fine_TicketPaymentSuccess_1" xml:space="preserve">
+    <value>El pago se ha realizado correctamente</value>
+  </data>
+  <data name="Fine_TicketPayment_MainMenu" xml:space="preserve">
+    <value>Menú</value>
+  </data>
+  <data name="Fine_Title" xml:space="preserve">
+    <value>Pagar ticket</value>
+  </data>
+  <data name="Fine_Total" xml:space="preserve">
+    <value>Base</value>
+  </data>
+  <data name="ForgotPasswordEnd_Remark" xml:space="preserve">
+    <value>Se li ha enviat un correu electrònic amb un enllaç que haurà de prémer una vegada rebi un SMS al seu telèfon mòbil amb un codi que haurà d'introduir a la pàgina.</value>
+  </data>
+  <data name="ForgotPassword_EmailBody" xml:space="preserve">
+    <value>FILESYSTEM</value>
+  </data>
+  <data name="ForgotPassword_EmailHeader" xml:space="preserve">
+    <value>Blinkay: Recuperació de contrasenya</value>
+  </data>
+  <data name="ForgotPassword_Remarks" xml:space="preserve">
+    <value>Després de prémer el botó de confirmar s'enviarà un correu electrònic amb un enllaç que haurà de prémer una vegada rebi un SMS al seu telèfon mòbil amb un codi que haurà d'introduir a la pàgina.</value>
+  </data>
+  <data name="ForgotPassword_SMS" xml:space="preserve">
+    <value>Això és un missatge de Blinkay. El seu codi per a la recuperació de la contrasenya és  {0}.</value>
+  </data>
+  <data name="ForgotPassword_Title" xml:space="preserve">
+    <value>Recordatori Contrasenya</value>
+  </data>
+  <data name="Home_AddNewUser" xml:space="preserve">
+    <value>Alta Nou Usuari</value>
+  </data>
+  <data name="Home_BadUserNameOrPassword" xml:space="preserve">
+    <value>El nom d'usuari o la contrasenya són incorrectes.</value>
+  </data>
+  <data name="Home_BuyCoupons" xml:space="preserve">
+    <value>Comprar Cupons</value>
+  </data>
+  <data name="Home_Companies" xml:space="preserve">
+    <value>Empresa</value>
+  </data>
+  <data name="Home_ForgotPassword" xml:space="preserve">
+    <value>Has oblidat la teva contrasenya?</value>
+  </data>
+  <data name="Home_ForgotUsername" xml:space="preserve">
+    <value>Has oblidat el teu nom d'usuari?</value>
+  </data>
+  <data name="Home_GetUserDataError" xml:space="preserve">
+    <value>Error obtenint les dades de l'usuari.</value>
+  </data>
+  <data name="Home_Individuals" xml:space="preserve">
+    <value>Particular</value>
+  </data>
+  <data name="Home_Password" xml:space="preserve">
+    <value>Contrasenya</value>
+  </data>
+  <data name="Home_Service_Conditions" xml:space="preserve">
+    <value>Consulti les condicions del servei.</value>
+  </data>
+  <data name="Home_UserDeleteError" xml:space="preserve">
+    <value>Error borrant l'usuari</value>
+  </data>
+  <data name="Home_UserDeleteOK" xml:space="preserve">
+    <value>Usuari borrat correctament</value>
+  </data>
+  <data name="Home_Username" xml:space="preserve">
+    <value>Nom d'usuari o correu electrònic</value>
+  </data>
+  <data name="Home_WhyService" xml:space="preserve">
+    <value>Per què utilitzar Blinkay?</value>
+  </data>
+  <data name="IndividualsRegistration_Signup1" xml:space="preserve">
+    <value>Obriu el correu electrònic de validació al vostre dispositiu per continuar amb la subscripció.</value>
+  </data>
+  <data name="IndividualsRegistration_Signup_Check_Email" xml:space="preserve">
+    <value>Revisa el teu correo electrònic</value>
+  </data>
+  <data name="IndividualsRegistration_Signup_Check_Title" xml:space="preserve">
+    <value>Revisa el teu correo electrònic</value>
+  </data>
+  <data name="InvoiceRetailer_PDF_Amount" xml:space="preserve">
+    <value />
+  </data>
+  <data name="InvoiceRetailer_PDF_CouponsLine" xml:space="preserve">
+    <value />
+  </data>
+  <data name="InvoiceRetailer_PDF_Date" xml:space="preserve">
+    <value />
+  </data>
+  <data name="InvoiceRetailer_PDF_Detail" xml:space="preserve">
+    <value />
+  </data>
+  <data name="InvoiceRetailer_PDF_InvoiceNumber" xml:space="preserve">
+    <value />
+  </data>
+  <data name="InvoiceRetailer_PDF_NIF" xml:space="preserve">
+    <value />
+  </data>
+  <data name="InvoiceRetailer_PDF_QRAvailable" xml:space="preserve">
+    <value />
+  </data>
+  <data name="InvoiceRetailer_PDF_QRCode" xml:space="preserve">
+    <value />
+  </data>
+  <data name="InvoiceRetailer_PDF_Total" xml:space="preserve">
+    <value />
+  </data>
+  <data name="InvoiceRetailer_PDF_TotalAmount" xml:space="preserve">
+    <value />
+  </data>
+  <data name="InvoiceRetailer_PDF_TotalPayTypeFEE" xml:space="preserve">
+    <value />
+  </data>
+  <data name="InvoiceRetailer_PDF_TotalServiceFEE" xml:space="preserve">
+    <value />
+  </data>
+  <data name="InvoiceRetailer_PDF_Units" xml:space="preserve">
+    <value />
+  </data>
+  <data name="InvoiceRetailer_PDF_Unit_Amount" xml:space="preserve">
+    <value />
+  </data>
+  <data name="InvoiceRetailer_PDF_VAT" xml:space="preserve">
+    <value />
+  </data>
+  <data name="No_Registries_Found" xml:space="preserve">
+    <value>No s'han trobat registres</value>
+  </data>
+  <data name="Pager_First" xml:space="preserve">
+    <value>Primera</value>
+  </data>
+  <data name="Pager_Format" xml:space="preserve">
+    <value>Registre {0} - {1} de {2}</value>
+  </data>
+  <data name="Pager_Last" xml:space="preserve">
+    <value>Última</value>
+  </data>
+  <data name="Pager_Next" xml:space="preserve">
+    <value>Següent</value>
+  </data>
+  <data name="Pager_Previous" xml:space="preserve">
+    <value>Anterior</value>
+  </data>
+  <data name="Pager_SingleFormat" xml:space="preserve">
+    <value>Registre {0} de {1}</value>
+  </data>
+  <data name="Payu_Card_Choose_Franchise" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Payu_Card_CVC" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Payu_Card_Data" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Payu_Card_Exp_Date" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Payu_Card_Id" xml:space="preserve">
+    <value>Número d'identificació(INE, IFE)</value>
+  </data>
+  <data name="Payu_Card_Month_Format" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Payu_Card_Name" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Payu_Card_Number" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Payu_Card_Year_Format" xml:space="preserve">
+    <value />
+  </data>
+  <data name="PersonalData" xml:space="preserve">
+    <value>Dades personals</value>
+  </data>
+  <data name="RegistrationForm" xml:space="preserve">
+    <value>Formulari de subscripció</value>
+  </data>
+  <data name="RegistrationForm_Step1End_IdentityValidation_Step1" xml:space="preserve">
+    <value>Validació d'identitat - Pas 1</value>
+  </data>
+  <data name="RegistrationForm_Step1End_IdentityValidation_Step2" xml:space="preserve">
+    <value>Validació d'identitat - Pas 2</value>
+  </data>
+  <data name="RememberMeCheck" xml:space="preserve">
+    <value>Recorda'm</value>
+  </data>
+  <data name="ResetPasswordConfirmation_Message1" xml:space="preserve">
+    <value>Su contraseña se cambió correctamente.</value>
+  </data>
+  <data name="ResetPasswordConfirmation_Title" xml:space="preserve">
+    <value>Contraseña cambiada correctamente</value>
+  </data>
+  <data name="ResetPassword_ConfirmPassword" xml:space="preserve">
+    <value>Confirme la nueva contraseña:</value>
+  </data>
+  <data name="ResetPassword_Message1" xml:space="preserve">
+    <value>Para cambiar la contraseña de {0},debe introducir la nueva contraseña.</value>
+  </data>
+  <data name="ResetPassword_Message2" xml:space="preserve">
+    <value>Por favor, introduzca su nueva contraseña:</value>
+  </data>
+  <data name="ResetPassword_Password" xml:space="preserve">
+    <value>Nueva Contraseña:</value>
+  </data>
+  <data name="ResetPassword_Title" xml:space="preserve">
+    <value>Cambiar Contraseña</value>
+  </data>
+  <data name="ResetPassword_WriteYourConfirmPassword" xml:space="preserve">
+    <value>* Repita la contraseña</value>
+  </data>
+  <data name="ResetPassword_WriteYourPassword" xml:space="preserve">
+    <value>* Min.- {0} Max {1} caracteres</value>
+  </data>
+  <data name="Result_Error_Fine_Number_Already_Paid" xml:space="preserve">
+    <value>Este ticket ya ha sido pagado</value>
+  </data>
+  <data name="Result_Error_Fine_Number_Not_Found" xml:space="preserve">
+    <value>Ticket no encontrado</value>
+  </data>
+  <data name="Result_Error_Fine_Payment_Period_Expired" xml:space="preserve">
+    <value>El plazo para pagar este ticket ha expirado</value>
+  </data>
+  <data name="Result_Error_Fine_Type_Not_Payable" xml:space="preserve">
+    <value>Este ticket no está disponible para ser pagado</value>
+  </data>
+  <data name="RetailerCouponsModel_Address" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RetailerCouponsModel_ConfirmEmail" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RetailerCouponsModel_CouponAmount" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RetailerCouponsModel_Coupons" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RetailerCouponsModel_DocID" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RetailerCouponsModel_Email" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RetailerCouponsModel_Name" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RetailerCouponsModel_Total" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RetailerCouponsModel_TotalAmount" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RetailerCouponsModel_TotalPayTypeFEE" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RetailerCouponsModel_TotalServiceFEE" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RetailerCouponsModel_TotalVat" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RetailerCouponsModel_Vat" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RetailerCouponsModel_WriteYourAddress" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RetailerCouponsModel_WriteYourConfirmEmail" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RetailerCouponsModel_WriteYourDocID" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RetailerCouponsModel_WriteYourEmail" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RetailerCouponsModel_WriteYourName" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RetailerCoupons_BuyButton" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RetailerCoupons_BuyResume" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RetailerCoupons_Data" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RetailerCoupons_Details" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RetailerCoupons_Import" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RetailerCoupons_SubTitle" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RetailerCoupons_SubTitle2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RetailerCoupons_Title" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RetailerInvoice_Address" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RetailerInvoice_BuyResume" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RetailerInvoice_CompanyNIF" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RetailerInvoice_CouponAvailable" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RetailerInvoice_CouponCode" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RetailerInvoice_Date" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RetailerInvoice_DocId" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RetailerInvoice_Import" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RetailerInvoice_InvoiceNum" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RetailerInvoice_Name" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RetailerInvoice_NotificationEmail_Body" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RetailerInvoice_NotificationEmail_Subject" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RetailerInvoice_Print" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RetailerInvoice_Title" xml:space="preserve">
+    <value />
+  </data>
+  <data name="SecurityOperationChangeEmailOrTelephone_Confirmation" xml:space="preserve">
+    <value>Canvi de correu electrònic i/o telèfon - Confirmació</value>
+  </data>
+  <data name="SecurityOperationChangeEmailOrTelephone_ConfirmationText1" xml:space="preserve">
+    <value>El seu correu electrònic i/o telèfon s'han modificat correctament</value>
+  </data>
+  <data name="SecurityOperationChangeEmailOrTelephone_ConfirmationText2" xml:space="preserve">
+    <value>correu electrònic: </value>
+  </data>
+  <data name="SecurityOperationChangeEmailOrTelephone_ConfirmationText3" xml:space="preserve">
+    <value>Telèfon:</value>
+  </data>
+  <data name="SecurityOperationChangeEmailOrTelephone_IdentityValidation" xml:space="preserve">
+    <value>Canvi de correu electrònic i/o telèfon - Validació d'identitat</value>
+  </data>
+  <data name="SecurityOperationChangeEmailOrTelephone_Step2WriteYourCode" xml:space="preserve">
+    <value>Introdueixi codi:</value>
+  </data>
+  <data name="SecurityOperationChangeEmailOrTelephone_Step2WriteYourCode1" xml:space="preserve">
+    <value>Introdueixi el codi de {0}  dígits rebuts per SMS al mòbil acabat en {1}  per confirmar el canvi de correu electrònic i/o telèfon (validesa del codi {2} min).</value>
+  </data>
+  <data name="SecurityOperationForgotPassword_Confirmation" xml:space="preserve">
+    <value>Recordatori Contrasenya - Confirmació</value>
+  </data>
+  <data name="SecurityOperationForgotPassword_ConfirmationText1" xml:space="preserve">
+    <value>A continuació es mostra la seva contrasenya</value>
+  </data>
+  <data name="SecurityOperationForgotPassword_IdentityValidation" xml:space="preserve">
+    <value>Recordatori Contrasenya - Validació d'identitat</value>
+  </data>
+  <data name="SecurityOperationForgotPassword_Step2WriteYourCode1" xml:space="preserve">
+    <value>Introdueixi el codi de {0}  dígits rebuts per SMS al mòbil acabat en {1}  per obtenir la seva contrasenya (validesa del codi {2} min).</value>
+  </data>
+  <data name="SecurityOperationForgotPassword_Step2WriteYourCode2" xml:space="preserve">
+    <value>Introdueixi codi:</value>
+  </data>
+  <data name="SelectPayMethod_ChangeSuscriptionType" xml:space="preserve">
+    <value>Canviar Tipus de subscripció</value>
+  </data>
+  <data name="SelectPayMethod_CreditCard" xml:space="preserve">
+    <value>Targetes de crèdit o dèbit</value>
+  </data>
+  <data name="SelectPayMethod_IntroText1" xml:space="preserve">
+    <value>SI US PLAU, AFEGEIX UN MÈTODE DE PAGAMENT VALID</value>
+  </data>
+  <data name="SelectPayMethod_IntroText2" xml:space="preserve">
+    <value>Forma de pagament</value>
+  </data>
+  <data name="SelectPayMethod_IntroText3" xml:space="preserve">
+    <value>Auto-recàrrega</value>
+  </data>
+  <data name="SelectPayMethod_IntroText4" xml:space="preserve">
+    <value>Si desitja estalviar temps i gaudir de tots els avantatges de l'aplicació, activi l'opció de recèrrega automàtica i configuri el seu mínim.</value>
+  </data>
+  <data name="SelectPayMethod_Paypal" xml:space="preserve">
+    <value>Paypal</value>
+  </data>
+  <data name="SelectPayMethod_PerTransactionCheckBoxMessage" xml:space="preserve">
+    <value>Estic d'acord</value>
+  </data>
+  <data name="SelectPayMethod_PerTransactionCheckBox_Error" xml:space="preserve">
+    <value>Ha d'acceptar el cobrament per a continuar.</value>
+  </data>
+  <data name="SelectPayMethod_PerTransactionMessage" xml:space="preserve">
+    <value>Una vegada premi Següent es procedirà a carregar la quantitat de {0} {1} per donar d'alta el seu mitjà de pagament a la passarel·la de cobrament.</value>
+  </data>
+  <data name="SelectPayMethod_SubstituteCurrentCard" xml:space="preserve">
+    <value>Substituir la targeta actual ({0})</value>
+  </data>
+  <data name="SelectPayMethod_SuscriptionType" xml:space="preserve">
+    <value>Tipus de Subscripció:</value>
+  </data>
+  <data name="SelectPayMethod_SuscriptionType_PerTransaction" xml:space="preserve">
+    <value>Pagament per Transacció</value>
+  </data>
+  <data name="SelectPayMethod_SuscriptionType_Prepay" xml:space="preserve">
+    <value>Usuari de Prepagament</value>
+  </data>
+  <data name="SelectPayMethod_Sus_Option1" xml:space="preserve">
+    <value>Seleccioni "Canviar targeta actual":</value>
+  </data>
+  <data name="SelectPayMethod_Sus_Option2" xml:space="preserve">
+    <value>Esculli un mitjà de pagament:</value>
+  </data>
+  <data name="SelectPayMethod_Sus_Option3" xml:space="preserve">
+    <value>Aprofiti i activi la recàrrega automàtica:</value>
+  </data>
+  <data name="SelectPayMethod_Sus_Remark1" xml:space="preserve">
+    <value>Recordi que una vegada premi "Següent", si ha seleccionat "canviar targeta actual":</value>
+  </data>
+  <data name="SelectPayMethod_Sus_Remark2" xml:space="preserve">
+    <value>El seu saldo seguirà disponible amb el nou mitjà de pagament.</value>
+  </data>
+  <data name="SelectPayMethod_Sus_Remark3" xml:space="preserve">
+    <value>Haurà de recarregar el seu saldo per validar el seu nou mitjà de pagament.</value>
+  </data>
+  <data name="SelectPayMethod_Sus_Remark4" xml:space="preserve">
+    <value>1) Seleccionat un import que s'aplicarà al seu saldo.</value>
+  </data>
+  <data name="SelectPayMethod_Sus_Remark5" xml:space="preserve">
+    <value>2) Introduïnt les dades del nou mitjà de pagament.</value>
+  </data>
+  <data name="SelectPayMethod_Sus_Remark6" xml:space="preserve">
+    <value>Si no desitja canviar el seu mitjà de pagament actual, deseleccioni "Canviar targeta actual" en el pas 1.</value>
+  </data>
+  <data name="SelectSuscriptionType_IntroText1" xml:space="preserve">
+    <value>Usuari - Esculli ser un usuari de prepagament o pagar per transacció</value>
+  </data>
+  <data name="SelectSuscriptionType_IntroText2" xml:space="preserve">
+    <value>Usuari de prepagament</value>
+  </data>
+  <data name="SelectSuscriptionType_IntroText3" xml:space="preserve">
+    <value>Pagament per transacció</value>
+  </data>
+  <data name="SelectSuscriptionType_PerTransaction1" xml:space="preserve">
+    <value>Pagament per transacció</value>
+  </data>
+  <data name="SelectSuscriptionType_PerTransaction2" xml:space="preserve">
+    <value>Cada vegada que aparqui, ampliï o anu·li una denúncia se li cargarregarà l'import exacte a la seva targeta de crèdit.</value>
+  </data>
+  <data name="SelectSuscriptionType_PerTransaction3" xml:space="preserve">
+    <value>* Si canvia el seu mitjà de pagament, se li carregarà {0} {1} per verificar-ne la seva validesa.</value>
+  </data>
+  <data name="SelectSuscriptionType_Prepay1" xml:space="preserve">
+    <value>Moneder electrònic / Prepagament (i tots els seus avantatges)</value>
+  </data>
+  <data name="SelectSuscriptionType_Prepay2" xml:space="preserve">
+    <value>1) Aparca, amplia o anul·la denúncia.</value>
+  </data>
+  <data name="SelectSuscriptionType_Prepay3" xml:space="preserve">
+    <value>Et tornem {0} {1} per cada operació que realitzis.</value>
+  </data>
+  <data name="SelectSuscriptionType_Prepay4" xml:space="preserve">
+    <value>2) Et tornem el temps que no has consumit.</value>
+  </data>
+  <data name="SelectSuscriptionType_Prepay5" xml:space="preserve">
+    <value>No et preocupis si ets en una reunió.</value>
+  </data>
+  <data name="SelectSuscriptionType_Prepay6" xml:space="preserve">
+    <value>Gaudeix del teu temps d'oci sense estrés.</value>
+  </data>
+  <data name="SelectSuscriptionType_Prepay7" xml:space="preserve">
+    <value>Despreocupa't del teu aparcament, sigui el que sigui el que hagis de fer.</value>
+  </data>
+  <data name="ServiceName" xml:space="preserve">
+    <value>Servei de pagament remot de l'aparcament regulat</value>
+  </data>
+  <data name="SiteMaster_Contact" xml:space="preserve">
+    <value>Contactar</value>
+  </data>
+  <data name="SiteMaster_Home" xml:space="preserve">
+    <value>Inici</value>
+  </data>
+  <data name="UserData_ButtonCancel" xml:space="preserve">
+    <value>Cancel·lar Canvis</value>
+  </data>
+  <data name="UserData_ButtonConfirm" xml:space="preserve">
+    <value>Confirmar Canvis</value>
+  </data>
+  <data name="UserData_CancelAdd" xml:space="preserve">
+    <value>Cancel·lar</value>
+  </data>
+  <data name="UserData_ChangeEmailOrMobileEnd_Remark" xml:space="preserve">
+    <value>Se li ha enviat un correu electrònic amb un enllaç que haurà de prémer una vegada rebi un SMS al seu telèfon mòbil amb un codi que haurà d'introduir a la pàgina.</value>
+  </data>
+  <data name="UserData_ChangePaymentMean" xml:space="preserve">
+    <value>Canviar</value>
+  </data>
+  <data name="UserData_ChangeTelOrEmailTitle" xml:space="preserve">
+    <value>Canviar Telèfon mòbil i/o correu electrònic</value>
+  </data>
+  <data name="UserData_ConfirmAdd" xml:space="preserve">
+    <value>Afegir</value>
+  </data>
+  <data name="UserData_ConfirmNewPassword" xml:space="preserve">
+    <value>Repetir Nova Contrasenya</value>
+  </data>
+  <data name="UserData_CurrentPassword" xml:space="preserve">
+    <value>Contrasenya Actual</value>
+  </data>
+  <data name="UserData_DeleteUserEnd_Remark" xml:space="preserve">
+    <value>El seu compte ha estat borrat, totes les seves dades han sigut eliminades, el seu saldo ha expirat i ja no és possible recuperar el seu compte.</value>
+  </data>
+  <data name="UserData_DeleteUserRemark" xml:space="preserve">
+    <value>Si borra el seu comte, totes les seves dades s'eliminaran i no serà possible recuperar-ho.&lt;br/&gt;El seu contracte finalitzarà al borrar el seu compte i el seu crèdit expirarà.</value>
+  </data>
+  <data name="UserData_DeleteUserTitle" xml:space="preserve">
+    <value>Donar de baixa el compte d'usuari</value>
+  </data>
+  <data name="UserData_DeleteUser_IntroducePassword" xml:space="preserve">
+    <value>Introdueixi la seva contrasenya per acabar amb el procés de baixa</value>
+  </data>
+  <data name="UserData_DeleteUser_UnderstandDeletion" xml:space="preserve">
+    <value>He llegit i accepto</value>
+  </data>
+  <data name="UserData_InitProcedure" xml:space="preserve">
+    <value>Iniciar Procés</value>
+  </data>
+  <data name="UserData_InsertNewPlate" xml:space="preserve">
+    <value>Inserir nova matrícula</value>
+  </data>
+  <data name="UserData_NewPassword" xml:space="preserve">
+    <value>Nova Contrasenya</value>
+  </data>
+  <data name="UserData_PasswordRemark" xml:space="preserve">
+    <value>Ompli només els camps de la nova contrasenya si desitja canviar la contrasenya actual</value>
+  </data>
+  <data name="UserData_PayMeansRemark" xml:space="preserve">
+    <value>Canviar el mitjà de pagament pot significar haver de realitzar una recàrrega per ser efectiu</value>
+  </data>
+  <data name="UserData_PayMeansTitle" xml:space="preserve">
+    <value>Tipus de Mitjà de Pagament Actual</value>
+  </data>
+  <data name="UserData_Plates" xml:space="preserve">
+    <value>Matrícules</value>
+  </data>
+  <data name="UserData_PlatesRemark" xml:space="preserve">
+    <value>Per a guardar tots els canvis en les matrícules, ha de prémer el botó "Confirmar canvis"</value>
+  </data>
+  <data name="UserData_RemovePlate" xml:space="preserve">
+    <value>Eliminar Matrícula Seleccionada</value>
+  </data>
+  <data name="UserData_RemoveUserAccount" xml:space="preserve">
+    <value>Donar de baixa el compte d'usuari</value>
+  </data>
+  <data name="UserData_UserDataTittle" xml:space="preserve">
+    <value>Dades d'Usuari</value>
+  </data>
+  <data name="UserData_WriteYourConfirmPassword" xml:space="preserve">
+    <value>* Repeteixi la seva nova contrasenya</value>
+  </data>
+  <data name="UserData_WriteYourCurrentPassword" xml:space="preserve">
+    <value>* Escrigui la seva contrasenya actual</value>
+  </data>
+  <data name="RegistrationModel_Email" xml:space="preserve">
+    <value>Correu electrònic</value>
+  </data>
+  <data name="SignUp1_Emailmsg" xml:space="preserve">
+    <value>Quina és la teva adreça de correu electrònic?</value>
+  </data>
+  <data name="SignUp3_Passwmsg" xml:space="preserve">
+    <value>Crea la contrasenya del teu compte</value>
+  </data>
+  <data name="SignUp3_Passwtip" xml:space="preserve">
+    <value>Tecleja una combinació d'almenys cinc números, lletres i signes de puntuació (com ara ! i &amp;amp;).</value>
+  </data>
+  <data name="SignUp3_Passwtype" xml:space="preserve">
+    <value>Escriu la teva contrasenya</value>
+  </data>
+  <data name="SignUp1_Emailtype" xml:space="preserve">
+    <value>Tecleja la teva adreça de correu electrònic</value>
+  </data>
+  <data name="SignUp1_Emailtip" xml:space="preserve">
+    <value>Utilitzaràs la teva adreça de correu electrònic quan iniciïs la sessió, i si n'hi ha, hauràs de restablir la teva contrasenya.</value>
+  </data>
+  <data name="SignUp3_Option_Mandatory" xml:space="preserve">
+    <value>Lorem Ipsum</value>
+  </data>
+  <data name="urs_error_email_exists" xml:space="preserve">
+    <value>Ja existeix un compte Blinkay amb aquesta adreça de correu.</value>
+  </data>
+  <data name="signup4a_subscription_method" xml:space="preserve">
+    <value>Escull el tipus de subscripció</value>
+  </data>
+  <data name="signup4b_successful" xml:space="preserve">
+    <value>El teu compte s'ha creat correctament.</value>
+  </data>
+  <data name="signup4a_prepayment" xml:space="preserve">
+    <value>Prepagament</value>
+  </data>
+  <data name="signup4a_psm_transaction" xml:space="preserve">
+    <value>Pagament per Transacció</value>
+  </data>
+  <data name="signup4b_paymenth_msg" xml:space="preserve">
+    <value>Introdueix el teu mitjà de pagament</value>
+  </data>
+  <data name="signup4b_paymenth_opt1" xml:space="preserve">
+    <value>Targeta de crèdit</value>
+  </data>
+  <data name="signup4b_paymenth_opt2" xml:space="preserve">
+    <value>PayPal</value>
+  </data>
+  <data name="Account_Main_BttnPermits" xml:space="preserve">
+    <value>Compreu un abonament</value>
+  </data>
+  <data name="Permits_GetSubPayOptions_Exception" xml:space="preserve">
+    <value>Error de operación</value>
+  </data>
+  <data name="Permits_GetSubPayOptions_Title" xml:space="preserve">
+    <value>Opciones de pago</value>
+  </data>
+  <data name="Permits_Signup_Exception" xml:space="preserve">
+    <value>Error de operación</value>
+  </data>
+  <data name="Permits_Signup_Required" xml:space="preserve">
+    <value>Por favor, rellene todos los campos obligatorios</value>
+  </data>
+  <data name="Permits_Signup_Title" xml:space="preserve">
+    <value>Registro</value>
+  </data>
+  <data name="PermitsDataModel_CellNumber" xml:space="preserve">
+    <value>Telèfon mòbil</value>
+  </data>
+  <data name="PermitsDataModel_City" xml:space="preserve">
+    <value>Ciutat</value>
+  </data>
+  <data name="PermitsDataModel_Country" xml:space="preserve">
+    <value>País</value>
+  </data>
+  <data name="PermitsDataModel_CountryPrefix" xml:space="preserve">
+    <value>Prefix de país</value>
+  </data>
+  <data name="PermitsDataModel_Email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="PermitsDataModel_Password" xml:space="preserve">
+    <value>Clau</value>
+  </data>
+  <data name="PermitsDataModel_Plate" xml:space="preserve">
+    <value>Matrícula</value>
+  </data>
+  <data name="PermitsDataModel_Tariff" xml:space="preserve">
+    <value>Tarifa</value>
+  </data>
+  <data name="PermitsDataModel_TimeStep" xml:space="preserve">
+    <value>Hora inicial - Hora final - Import</value>
+  </data>
+  <data name="PermitsDataModel_User" xml:space="preserve">
+    <value>Email / Telèfon</value>
+  </data>
+  <data name="PermitsDataModel_Zone" xml:space="preserve">
+    <value>Zona</value>
+  </data>
+  <data name="Permits_AddSubscriptionType" xml:space="preserve">
+    <value>Afegir tipus de subscripció</value>
+  </data>
+  <data name="Permits_AddSubscriptionTypeAndPayMethod" xml:space="preserve">
+    <value>Tipus de subscripció</value>
+  </data>
+  <data name="Permits_Continue" xml:space="preserve">
+    <value>Continuar</value>
+  </data>
+  <data name="Permits_Error_cancelled_by_cardholder" xml:space="preserve">
+    <value>La transacció ha estat cancel·lada</value>
+  </data>
+  <data name="Permits_Error_CCProvider" xml:space="preserve">
+    <value>No s'ha especificat CCProvider per a aquest usuari</value>
+  </data>
+  <data name="Permits_Error_no_prepayment" xml:space="preserve">
+    <value>Actualmente no podemos gestionar aparcamientos para usuarios de prepago</value>
+  </data>
+  <data name="Permits_Error_No_User" xml:space="preserve">
+    <value>No se ha especificado ningún usuario</value>
+  </data>
+  <data name="Permits_Error_Request_Error_Code" xml:space="preserve">
+    <value>La transacció ha estat cancel·lada</value>
+  </data>
+  <data name="Permits_Error_Result_Error_ConfirmOperationAlreadyExecuting" xml:space="preserve">
+    <value>Confirmació en marxa</value>
+  </data>
+  <data name="Permits_Error_Result_Error_Discount_Not_Allowed" xml:space="preserve">
+    <value>Descompte no permès</value>
+  </data>
+  <data name="Permits_Error_Result_Error_Email_Already_Exist" xml:space="preserve">
+    <value>Ja existeix un compte Blinkay amb aquesta adreça de correu.</value>
+  </data>
+  <data name="Permits_Error_Result_Error_Expired_Ticket_ID" xml:space="preserve">
+    <value>Identificador de tiquet expirat</value>
+  </data>
+  <data name="Permits_Error_Result_Error_Extension_Is_Not_Possible" xml:space="preserve">
+    <value>La matrícula ja ha aparcat el màxim permès.</value>
+  </data>
+  <data name="Permits_Error_Result_Error_Fine_Number_Already_Paid" xml:space="preserve">
+    <value>Expedient ja pagat</value>
+  </data>
+  <data name="Permits_Error_Result_Error_Fine_Number_Not_Found" xml:space="preserve">
+    <value>Número d'expedient no trobat</value>
+  </data>
+  <data name="Permits_Error_Result_Error_Fine_Type_Is_Not_Payable" xml:space="preserve">
+    <value>Expedient trobat però no anul·lable.</value>
+  </data>
+  <data name="Permits_Error_Result_Error_Generic" xml:space="preserve">
+    <value>Ha ocurrido un error, por favor vuelva a intentarlo más tarde</value>
+  </data>
+  <data name="Permits_Error_Result_Error_InvalidAuthenticationHash" xml:space="preserve">
+    <value>Hash incorrecto</value>
+  </data>
+  <data name="Permits_Error_Result_Error_Invalid_Authentication" xml:space="preserve">
+    <value>Nom d'usuari/contrasenya incorrecte</value>
+  </data>
+  <data name="Permits_Error_Result_Error_Invalid_City" xml:space="preserve">
+    <value>Ciutat no disponible!</value>
+  </data>
+  <data name="Permits_Error_Result_Error_Invalid_Email_Number" xml:space="preserve">
+    <value>Email incorrecto</value>
+  </data>
+  <data name="Permits_Error_Result_Error_Invalid_Input_Parameter" xml:space="preserve">
+    <value>Paràmetre d'entrada no vàlid</value>
+  </data>
+  <data name="Permits_Error_Result_Error_Invalid_Ticket_ID" xml:space="preserve">
+    <value>Identificador de tiquet no vàlid.</value>
+  </data>
+  <data name="Permits_Error_Result_Error_Invalid_Transfer" xml:space="preserve">
+    <value>No està permès transferir-te saldo a tu mateix.</value>
+  </data>
+  <data name="Permits_Error_Result_Error_Invalid_User_Receiver_Email" xml:space="preserve">
+    <value>El correu electrònic del receptor no és vàlid.</value>
+  </data>
+  <data name="Permits_Error_Result_Error_Invalid_User_Receiver_Email_Disabled" xml:space="preserve">
+    <value>L'usuari receptor no està actiu.</value>
+  </data>
+  <data name="Permits_Error_Result_Error_Madrid_Platform" xml:space="preserve">
+    <value>S'ha produït un error durant la sol·licitud d'operació de la plataforma de l'Ajuntament de Madrid. Si us plau, torna-ho a intentar.</value>
+  </data>
+  <data name="Permits_Error_Result_Error_Maximum_Discounts_Reached" xml:space="preserve">
+    <value>offstreet_maximum_discounts_reached</value>
+  </data>
+  <data name="Permits_Error_Result_Error_Missing_Input_Parameter" xml:space="preserve">
+    <value>Falta un parámetro</value>
+  </data>
+  <data name="Permits_Error_Result_Error_Mobile_Phone_Already_Exist" xml:space="preserve">
+    <value>Número de mòbil ja existent.</value>
+  </data>
+  <data name="Permits_Error_Result_Error_Not_Enough_Balance" xml:space="preserve">
+    <value>Afegeix un targeta o saldo per pagar amb la aplicació</value>
+  </data>
+  <data name="Permits_Error_Result_Error_Not_Necessary_To_Pay" xml:space="preserve">
+    <value>No cal pagar l'aparcament</value>
+  </data>
+  <data name="Permits_Error_Result_Error_No_Parking_Required_Zero_Emissions" xml:space="preserve">
+    <value>Vehicle ZERO EMISSIONS. Pot estacionar a la Ciutat de Madrid en places del SER sense limitació temporal i sense abonament de taxa d'estacionament.</value>
+  </data>
+  <data name="Permits_Error_Result_Error_Operation_Alreadyclosed" xml:space="preserve">
+    <value>Operació ja tancada</value>
+  </data>
+  <data name="Permits_Error_Result_Error_Operation_Alreadyexists" xml:space="preserve">
+    <value>Operació ja existent</value>
+  </data>
+  <data name="Permits_Error_Result_Error_Operation_Expired" xml:space="preserve">
+    <value>Operació fora de temps. Si us plau, torna a iniciar el procés.</value>
+  </data>
+  <data name="Permits_Error_Result_Error_Operation_Notfound" xml:space="preserve">
+    <value>L'operació no existeix.</value>
+  </data>
+  <data name="Permits_Error_Result_Error_Pagatelia_User_Amount_Daily_Limit_Reached" xml:space="preserve">
+    <value>Límit diari de l'usuari assolit</value>
+  </data>
+  <data name="Permits_Error_Result_Error_Pagatelia_User_Balance_Not_Enough" xml:space="preserve">
+    <value>Saldo insuficient</value>
+  </data>
+  <data name="Permits_Error_Result_Error_ParkingMaximumTimeUsed" xml:space="preserve">
+    <value>S'ha utilitzat el temps màxim d'aparcament</value>
+  </data>
+  <data name="Permits_Error_Result_Error_Parking_Refused_Pollution_Episode" xml:space="preserve">
+    <value>Estacionament rebutjat per episodi de contaminació</value>
+  </data>
+  <data name="Permits_Error_Result_Error_Payment_Period_Has_Expired" xml:space="preserve">
+    <value>Expedient trobat però temps d'anul·lació excedit.</value>
+  </data>
+  <data name="Permits_Error_Result_Error_Plate_Has_Not_Waited_Enough" xml:space="preserve">
+    <value>La matrícula encara no pot tornar a aparcar.</value>
+  </data>
+  <data name="Permits_Error_Result_Error_Plate_In_Black_List" xml:space="preserve">
+    <value>La matrícula està en llista negra</value>
+  </data>
+  <data name="Permits_Error_Result_Error_Plate_No_Rights_Unparking" xml:space="preserve">
+    <value>La matrícula no té drets per deixar l'aparcament.</value>
+  </data>
+  <data name="Permits_Error_Result_Error_Recharge_Code_Already_Used" xml:space="preserve">
+    <value>Codi de recàrrega ja utilitzat.</value>
+  </data>
+  <data name="Permits_Error_Result_Error_Recharge_Expired_Code" xml:space="preserve">
+    <value>Codi de recàrrega expirat.</value>
+  </data>
+  <data name="Permits_Error_Result_Error_Recharge_Failed" xml:space="preserve">
+    <value>Ha fallado la recarga</value>
+  </data>
+  <data name="Permits_Error_Result_Error_Recharge_Invalid_Code" xml:space="preserve">
+    <value>Codi de recàrrega no vàlid.</value>
+  </data>
+  <data name="Permits_Error_Result_Error_Recharge_Invalid_Payment_Mean" xml:space="preserve">
+    <value>Mitjà de pagament no vàlid.</value>
+  </data>
+  <data name="Permits_Error_Result_Error_Recharge_Payment_Failed" xml:space="preserve">
+    <value>La recàrrega utilitzant el teu mitjà de pagament ha fallat.</value>
+  </data>
+  <data name="Permits_Error_Result_Error_Recharge_Payment_Not_Supported" xml:space="preserve">
+    <value>La teva forma de pagament no permet la recàrrega des del mòbil.</value>
+  </data>
+  <data name="Permits_Error_Result_Error_Register_New_Cell_Number_Exists" xml:space="preserve">
+    <value>Número de mòbil ja existent.</value>
+  </data>
+  <data name="Permits_Error_Result_Error_Register_New_Email_Already_Exists" xml:space="preserve">
+    <value>Ja existeix un compte Blinkay amb aquesta adreça de correu.</value>
+  </data>
+  <data name="Permits_Error_Result_Error_Register_New_Wrong_Cell_Number" xml:space="preserve">
+    <value>Número de mòbil no vàlid.</value>
+  </data>
+  <data name="Permits_Error_Result_Error_Register_New_Wrong_Code" xml:space="preserve">
+    <value>Codi incorrecte!</value>
+  </data>
+  <data name="Permits_Error_Result_Error_Register_New_Wrong_Cuntry_Code" xml:space="preserve">
+    <value>Codi de país no vàlid.</value>
+  </data>
+  <data name="Permits_Error_Result_Error_Register_New_Wrong_Email" xml:space="preserve">
+    <value>No hem pogut validar la teva adreça de correu electrònic. Si us plau, revisa si hi ha algun error abans d'intentar de nou.</value>
+  </data>
+  <data name="Permits_Error_Result_Error_Register_New_Wrong_Fname" xml:space="preserve">
+    <value>Nom no vàlid.</value>
+  </data>
+  <data name="Permits_Error_Result_Error_Register_New_Wrong_Lname" xml:space="preserve">
+    <value>Cognom no vàlid.</value>
+  </data>
+  <data name="Permits_Error_Result_Error_Resident_Parking_Exhausted" xml:space="preserve">
+    <value>S'ha esgotat el temps màxim permès com a resident.</value>
+  </data>
+  <data name="Permits_Error_Result_Error_Restricted_Tariff" xml:space="preserve">
+    <value>Tarifa d'ús restringit</value>
+  </data>
+  <data name="Permits_Error_Result_Error_Session_Expired" xml:space="preserve">
+    <value>Usuari no connectat o sessió expirada.</value>
+  </data>
+  <data name="Permits_Error_Result_Error_Tariffs_Not_Available" xml:space="preserve">
+    <value>Tarifes no disponibles</value>
+  </data>
+  <data name="Permits_Error_Result_Error_User_Not_Exist" xml:space="preserve">
+    <value>Nom d'usuari/contrasenya incorrecte</value>
+  </data>
+  <data name="Permits_Error_Session_Expired" xml:space="preserve">
+    <value>La seva sessió ha expirat</value>
+  </data>
+  <data name="Permits_Error_Transaction_canceled" xml:space="preserve">
+    <value>La transacció ha estat cancel·lada</value>
+  </data>
+  <data name="Permits_InsertNewPlate" xml:space="preserve">
+    <value>Insertar nueva matrícula</value>
+  </data>
+  <data name="Permits_Login" xml:space="preserve">
+    <value>Accedir</value>
+  </data>
+  <data name="Permits_Logout" xml:space="preserve">
+    <value>Cancel·lar</value>
+  </data>
+  <data name="Permits_Notice" xml:space="preserve">
+    <value>&lt;p&gt;&lt;strong&gt;Una petita quantitat serà retirada&lt;/strong&gt; de la seva targeta de crèdit amb l'objectiu de confirmar la informació. Després d'uns dies, el diners serà retornat.&lt;/p&gt; &lt;p&gt;Això pot trigar &lt;strong&gt;fins a cinc dies&lt;/strong&gt;&lt;/p&gt;</value>
+  </data>
+  <data name="Permits_Pay" xml:space="preserve">
+    <value>Pagar</value>
+  </data>
+  <data name="Permits_PayForPermit" xml:space="preserve">
+    <value>Comprar Abonament</value>
+  </data>
+  <data name="Permits_PaymentMethod" xml:space="preserve">
+    <value>Mètode de pagament</value>
+  </data>
+  <data name="Permits_PayPerTransaction" xml:space="preserve">
+    <value>Pagament per transacció</value>
+  </data>
+  <data name="Permits_Prepayment" xml:space="preserve">
+    <value>Prepagament</value>
+  </data>
+  <data name="Permits_Retry" xml:space="preserve">
+    <value>A provar</value>
+  </data>
+  <data name="Permits_SelectCity" xml:space="preserve">
+    <value>Seleccioneu ciutat...</value>
+  </data>
+  <data name="Permits_SelectPlate" xml:space="preserve">
+    <value>Seleccioneu matrícula...</value>
+  </data>
+  <data name="Permits_SelectTariff" xml:space="preserve">
+    <value>Seleccioneu tarifa...</value>
+  </data>
+  <data name="Permits_SelectTimeStep" xml:space="preserve">
+    <value>Seleccioneu hora final...</value>
+  </data>
+  <data name="Permits_SelectZone" xml:space="preserve">
+    <value>Seleccioneu zona...</value>
+  </data>
+  <data name="Permits_SignUp" xml:space="preserve">
+    <value>Registra't</value>
+  </data>
+  <data name="Permits_Skip" xml:space="preserve">
+    <value>Omet</value>
+  </data>
+  <data name="Permits_Start" xml:space="preserve">
+    <value>Menú</value>
+  </data>
+  <data name="Permits_Summary" xml:space="preserve">
+    <value>Pagament correcte</value>
+  </data>
+  <data name="Permits_Title" xml:space="preserve">
+    <value>Registra't</value>
+  </data>
+  <data name="Permits_Automatic_Renewal" xml:space="preserve">
+    <value>Renovació automàtica</value>
+  </data>
+  <data name="Permits_Notice2" xml:space="preserve">
+    <value>&lt;p&gt;Abans de poder comprar permisos, ha d'establir un &lt;strong&gt;mitjà de pagament&lt;/strong&gt; vàlid&lt;/p&gt;</value>
+  </data>
+  <data name="Permits_Error_Result_Error_PermitNotInRenewalPeriod" xml:space="preserve">
+    <value>L'abonament encara no es pot renovar</value>
+  </data>
+  <data name="Account_Main_BttnActivePermits" xml:space="preserve">
+    <value>Abonaments actius</value>
+  </data>
+  <data name="signup4b_paymenth_opt2_detail" xml:space="preserve">
+    <value>"Afegeix crèdit amb PayPal" després d'iniciar la sessió.</value>
+  </data>
+  <data name="signup4b_paymenth_opt3" xml:space="preserve">
+    <value>Fer-ho després</value>
+  </data>
+  <data name="urs_error_country_code" xml:space="preserve">
+    <value>Codi de país no vàlid.</value>
+  </data>
+  <data name="urs_error_email" xml:space="preserve">
+    <value>No hem pogut validar la teva adreça de correu electrònic. Si us plau, revisa si hi ha algun error abans d'intentar de nou.</value>
+  </data>
+  <data name="register" xml:space="preserve">
+    <value>Alta realitzada amb èxit</value>
+  </data>
+  <data name="Permits_Export_PDFFilename" xml:space="preserve">
+    <value>Permisos</value>
+  </data>
+  <data name="Permits_Export_XLSFilename" xml:space="preserve">
+    <value>Permisos</value>
+  </data>
+  <data name="signup2_title" xml:space="preserve">
+    <value>Revisa el teu correu electrònic</value>
+  </data>
+  <data name="Permits_Permit" xml:space="preserve">
+    <value>Abonament</value>
+  </data>
+  <data name="SignUp2_CountryLiteral" xml:space="preserve">
+    <value>Escull el país on utilitzaras Blinkay</value>
+  </data>
+  <data name="urech_add_new_card" xml:space="preserve">
+    <value>Afegir nova targeta</value>
+  </data>
+  <data name="usettings_payment_methods_modify_ccard" xml:space="preserve">
+    <value>Substitueix targeta de crèdit</value>
+  </data>
+  <data name="recharging_balance" xml:space="preserve">
+    <value>Recàrrega</value>
+  </data>
+  <data name="Permits_PlateNotFound" xml:space="preserve">
+    <value>No s'ha trobat la matrícula '#: value #'. Voleu afegir-la?</value>
+  </data>
+  <data name="Permits_Plate_01" xml:space="preserve">
+    <value>1ª</value>
+  </data>
+  <data name="Permits_Plate_02" xml:space="preserve">
+    <value>2ª</value>
+  </data>
+  <data name="Permits_Plate_03" xml:space="preserve">
+    <value>3ª</value>
+  </data>
+  <data name="Permits_Plate_04" xml:space="preserve">
+    <value>4ª</value>
+  </data>
+  <data name="Permits_Plate_05" xml:space="preserve">
+    <value>5ª</value>
+  </data>
+  <data name="Permits_Plate_06" xml:space="preserve">
+    <value>6ª</value>
+  </data>
+  <data name="Permits_Plate_07" xml:space="preserve">
+    <value>7ª</value>
+  </data>
+  <data name="Permits_Plate_08" xml:space="preserve">
+    <value>8ª</value>
+  </data>
+  <data name="Permits_Plate_09" xml:space="preserve">
+    <value>9ª</value>
+  </data>
+  <data name="Permits_Plate_10" xml:space="preserve">
+    <value>10ª</value>
+  </data>
+  <data name="Permits_PlateAlreadySelected" xml:space="preserve">
+    <value>Aquesta matrícula ja ha estat seleccionada</value>
+  </data>
+  <data name="Permits_Manage" xml:space="preserve">
+    <value>Administrar</value>
+  </data>
+  <data name="PermitsDataModel_Plates" xml:space="preserve">
+    <value>Matrículas</value>
+  </data>
+  <data name="Permits_Save" xml:space="preserve">
+    <value>Guardar</value>
+  </data>
+  <data name="Permits_Error_Result_Error_PermitAlreadyExist" xml:space="preserve">
+    <value>El permís ja existeix</value>
+  </data>
+  <data name="Permits_PlateNotFound2" xml:space="preserve">
+    <value>Escriviu seva matrícula</value>
+  </data>
+  <data name="PermitsDataModel_Month" xml:space="preserve">
+    <value>Mes</value>
+  </data>
+  <data name="Permits_Error_Result_Error_PermitMonthNotAllowed" xml:space="preserve">
+    <value>Mes no permès</value>
+  </data>
+  <data name="Permits_SelectMonth" xml:space="preserve">
+    <value>Seleccioneu mes...</value>
+  </data>
+  <data name="Permits_Error_Result_Error_OperationAlreadyclosed" xml:space="preserve">
+    <value>Operació ja tancada</value>
+  </data>
+  <data name="Permits_Error_Result_Error_OperationAlreadyexists" xml:space="preserve">
+    <value>Operació ja existent</value>
+  </data>
+  <data name="Permits_Error_Result_Error_OperationExpired" xml:space="preserve">
+    <value>Operació fora de temps. Si us plau, torna a iniciar el procés.</value>
+  </data>
+  <data name="Permits_Error_Result_Error_OperationNotfound" xml:space="preserve">
+    <value>L'operació no existeix.</value>
+  </data>
+  <data name="Permits_NumPermits" xml:space="preserve">
+    <value>Nombre d'abonaments a comprar</value>
+  </data>
+  <data name="Permits_SelectNumPermits" xml:space="preserve">
+    <value>Seleccioneu nombre d'abonaments a comprar</value>
+  </data>
+  <data name="Permits_OnlyOne" xml:space="preserve">
+    <value>Només un vehicle dels registrats per aquest permit pot utilitzar el permit per dia.</value>
+  </data>
+  <data name="Permits_Automatic_Renewal_Description" xml:space="preserve">
+    <value>Tots els abonaments caducaran a final de mes si la renovació automàtica està deshabilitada.</value>
+  </data>
+  <data name="FineModel_Plate" xml:space="preserve">
+    <value>Matrícula</value>
+  </data>
+  <data name="Fine_GetProof" xml:space="preserve">
+    <value>Recibir justificante de pago</value>
+  </data>
+  <data name="Fine_MailSent" xml:space="preserve">
+    <value>Comprobante enviado correctamente</value>
+  </data>
+  <data name="Fine_SendMail" xml:space="preserve">
+    <value>Enviar</value>
+  </data>
+  <data name="Result_Error_Fine_Number_Not_Found_For_Plate" xml:space="preserve">
+    <value>No hemos podido encontrar el número de expediente introducido asociado a la matrícula. Por favor revise los datos.</value>
+  </data>
+  <data name="Paysafe_CancelButton" xml:space="preserve">
+    <value>Cancel·lar</value>
+  </data>
+  <data name="Paysafe_CardCVC" xml:space="preserve">
+    <value>CVC</value>
+  </data>
+  <data name="Paysafe_CardCVC_Holder" xml:space="preserve">
+    <value>CVC</value>
+  </data>
+  <data name="Paysafe_CardExpDate" xml:space="preserve">
+    <value>Data Caducitat</value>
+  </data>
+  <data name="Paysafe_CardExpDate_Holder" xml:space="preserve">
+    <value>MM / AA</value>
+  </data>
+  <data name="Paysafe_CardNumber" xml:space="preserve">
+    <value>Número Targeta</value>
+  </data>
+  <data name="Paysafe_CardNumber_Holder" xml:space="preserve">
+    <value>Número targeta</value>
+  </data>
+  <data name="Paysafe_PayButton" xml:space="preserve">
+    <value>Acceptar</value>
+  </data>
+  <data name="Paysafe_PayButton_Processing" xml:space="preserve">
+    <value>Processant</value>
+  </data>
+  <data name="Paysafe_PaymentDetails" xml:space="preserve">
+    <value>Detalls del Pagament</value>
+  </data>
+  <data name="Paysafe_ZipCode" xml:space="preserve">
+    <value>Codi Postal</value>
+  </data>
+  <data name="Paysafe_ZipCode_Holder" xml:space="preserve">
+    <value>Codi postal</value>
+  </data>
+  <data name="Account_PoweredBy" xml:space="preserve">
+    <value>Powered by</value>
+  </data>
+  <data name="Account_TermsAndConditions" xml:space="preserve">
+    <value>Termes i condicions</value>
+  </data>
+  <data name="Fine_AcceptedPayments" xml:space="preserve">
+    <value>Formes de pagament acceptades:</value>
+  </data>
+  <data name="Fine_Agree" xml:space="preserve">
+    <value>Vous devez accepter avant de soumettre.</value>
+  </data>
+  <data name="Fine_AgreeText" xml:space="preserve">
+    <value>Estic d’acord i entenc els &lt;a id="TermsConditionsLink" href="#TermsConditionsDialog" data-toggle="modal" data-target="#TermsConditionsDialog" lang="ca"&gt;Termes i Condicions&lt;/a&gt; i la &lt;a href="#PrivacyPolicyDialog" id="PrivacyPolicyLink" data-toggle="modal" data-target="#PrivacyPolicyDialog" lang="ca"&gt;Política de Privacitat&lt;/a&gt; d'aquest lloc web.</value>
+  </data>
+  <data name="Fine_ClearForm" xml:space="preserve">
+    <value>Netejar el formulari</value>
+  </data>
+  <data name="Fine_ConfirmEmailTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Fine_EmailTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Fine_Fill" xml:space="preserve">
+    <value>Si us plau, ompli els següents camps amb la informació de la seva denúncia.</value>
+  </data>
+  <data name="Fine_NonRefundable" xml:space="preserve">
+    <value>Has seleccionat la següent denúncia per pagar. &lt;br&gt;Tots els pagaments fets a través d'aquest lloc són &lt;strong class="text-uppercase"&gt;no refundables&lt;/strong&gt;.</value>
+  </data>
+  <data name="Fine_Payment" xml:space="preserve">
+    <value>Pagament</value>
+  </data>
+  <data name="Fine_PaymentDone" xml:space="preserve">
+    <value>Pagament realitzat</value>
+  </data>
+  <data name="Fine_PCI" xml:space="preserve">
+    <value>Certificat de seguretat PCI</value>
+  </data>
+  <data name="Fine_PlatePlaceholder" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Fine_PlateTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Fine_SearchParameters" xml:space="preserve">
+    <value>Paràmetres de cerca</value>
+  </data>
+  <data name="Fine_TicketNumberPlaceholder" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Fine_TicketNumberTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="SiteMaster_Privacy" xml:space="preserve">
+    <value>Política de privacitat</value>
+  </data>
+  <data name="Fine_PayWith" xml:space="preserve">
+    <value>Pagar amb</value>
+  </data>
+  <data name="Fine_PayWithCreditCard" xml:space="preserve">
+    <value>Pagar amb targeta de crèdit</value>
+  </data>
+  <data name="Fine_TicketPaymentFailureText" xml:space="preserve">
+    <value>El vostre banc ha denegat el nostre intent d'autoritzar la vostra targeta.</value>
+  </data>
+  <data name="Fine_TicketPaymentOK" xml:space="preserve">
+    <value>Heu completat correctament el vostre pagament online.</value>
+  </data>
+  <data name="Fine_ProvideInfo" xml:space="preserve">
+    <value>Si voleu contactar amb nosaltres pel que fa al vostre pagament, prepareu-vos la informació anterior.</value>
+  </data>
+  <data name="Fine_Close" xml:space="preserve">
+    <value>Tancar</value>
+  </data>
+  <data name="FineModel_ValidEmail" xml:space="preserve">
+    <value>Introduïu un e-mail vàlid</value>
+  </data>
+  <data name="Fine_GetProofPre" xml:space="preserve">
+    <value>Rebre justificant</value>
+  </data>
+  <data name="ConfirmTicketPaymentNonUser_EmailBody" xml:space="preserve">
+    <value>FILESYSTEM</value>
+  </data>
+  <data name="UserData_Billing" xml:space="preserve">
+    <value>Dades de facturació</value>
+  </data>
+  <data name="UserData_ChangePassword" xml:space="preserve">
+    <value>Canviar contrasenya</value>
+  </data>
+  <data name="UserData_MyPlates" xml:space="preserve">
+    <value>Els meus matrícules</value>
+  </data>
+  <data name="Parking_AddPlate" xml:space="preserve">
+    <value>Afegir una matrícula</value>
+  </data>
+  <data name="Parking_AddPlate_NewPlate" xml:space="preserve">
+    <value>Nova matrícula</value>
+  </data>
+  <data name="Parking_EditPlate" xml:space="preserve">
+    <value>Edita matrícula</value>
+  </data>
+  <data name="Parking_EditPlate_AddPlate" xml:space="preserve">
+    <value>Afegir matrícula</value>
+  </data>
+  <data name="Parking_EditPlate_AddVehicle" xml:space="preserve">
+    <value>Afegir vehicle</value>
+  </data>
+  <data name="Parking_EditPlate_Plate" xml:space="preserve">
+    <value>Matrícula</value>
+  </data>
+  <data name="Parking_EditPlate_Tip" xml:space="preserve">
+    <value>Pots afegir tots els cotxes que vulguis, organitzar-los i tenir-los sempre a mà.</value>
+  </data>
+  <data name="Parking_Error_NoRates" xml:space="preserve">
+    <value>No hi ha tarifes</value>
+  </data>
+  <data name="Parking_Error_NoRates_Description" xml:space="preserve">
+    <value>No hi ha cap tarifa disponible en aquesta zona</value>
+  </data>
+  <data name="Parking_Error_PlateAlreadyExists" xml:space="preserve">
+    <value>La matrícula ja existeix</value>
+  </data>
+  <data name="Parking_Error_PlateNotFound" xml:space="preserve">
+    <value>No s'ha trobat la matrícula</value>
+  </data>
+  <data name="Parking_PayParking" xml:space="preserve">
+    <value>Pagar Parquímetre</value>
+  </data>
+  <data name="Parking_Plates" xml:space="preserve">
+    <value>Matrícules</value>
+  </data>
+  <data name="Parking_Plates_AddPlate" xml:space="preserve">
+    <value>Afegir matrícula</value>
+  </data>
+  <data name="Parking_Plates_DeletePlate" xml:space="preserve">
+    <value>Voleu suprimir la matrícula</value>
+  </data>
+  <data name="Parking_Plates_SelectPlate" xml:space="preserve">
+    <value>Seleccionar matrícula</value>
+  </data>
+  <data name="Parking_Rates_SelectRate" xml:space="preserve">
+    <value>Selecciona tarifa</value>
+  </data>
+  <data name="Parking_SelectRate" xml:space="preserve">
+    <value>Seleccioneu tarifa</value>
+  </data>
+  <data name="Parking_Error_PlateNotValid" xml:space="preserve">
+    <value>Proporcioneu un número de matrícula vàlid</value>
+  </data>
+  <data name="Parking_Amount_ParkingRate" xml:space="preserve">
+    <value>Estacionament (Tarifa + IVA)</value>
+  </data>
+  <data name="Parking_Amount_ParkingSessionWillExpire" xml:space="preserve">
+    <value>El teu aparcament finalitzarà</value>
+  </data>
+  <data name="Parking_Amount_PressButtons" xml:space="preserve">
+    <value>Prem els botons per triar l'hora &lt;br&gt;a la teva sessió d'aparcament.</value>
+  </data>
+  <data name="Parking_Amount_Reset" xml:space="preserve">
+    <value>Reiniciar</value>
+  </data>
+  <data name="Parking_Amount_SelectTime" xml:space="preserve">
+    <value>Selecciona temps</value>
+  </data>
+  <data name="Parking_Amount_ServiceFee" xml:space="preserve">
+    <value>Cost servei</value>
+  </data>
+  <data name="Parking_SelectAmount" xml:space="preserve">
+    <value>Selecció d'import</value>
+  </data>
+  <data name="Parking_Amount_In_X_days" xml:space="preserve">
+    <value>En {0} dies</value>
+  </data>
+  <data name="Parking_Amount_Today" xml:space="preserve">
+    <value>Avui</value>
+  </data>
+  <data name="Parking_Amount_Tomorrow" xml:space="preserve">
+    <value>Demà</value>
+  </data>
+  <data name="Parking_Day" xml:space="preserve">
+    <value>dia</value>
+  </data>
+  <data name="Parking_Days" xml:space="preserve">
+    <value>dies</value>
+  </data>
+  <data name="Parking_Hour" xml:space="preserve">
+    <value>hora</value>
+  </data>
+  <data name="Parking_Hours" xml:space="preserve">
+    <value>hores</value>
+  </data>
+  <data name="Parking_Minute" xml:space="preserve">
+    <value>minut</value>
+  </data>
+  <data name="Parking_Minutes" xml:space="preserve">
+    <value>minuts</value>
+  </data>
+  <data name="Parking_PaidTime" xml:space="preserve">
+    <value>Temps pagat</value>
+  </data>
+  <data name="Parking_SaveScreenshot" xml:space="preserve">
+    <value>Desa la captura de pantalla</value>
+  </data>
+  <data name="Parking_SendByEmail" xml:space="preserve">
+    <value>Enviar per email</value>
+  </data>
+  <data name="Parking_DebitCreditCard" xml:space="preserve">
+    <value>Targeta de dèbit o crèdit</value>
+  </data>
+  <data name="Parking_Confirm" xml:space="preserve">
+    <value>Confirma</value>
+  </data>
+  <data name="Parking_ParkingSessionRegistered" xml:space="preserve">
+    <value>La sessió d’aparcament ha estat registrada.</value>
+  </data>
+  <data name="Parking_Pay" xml:space="preserve">
+    <value>Paga</value>
+  </data>
+  <data name="Parking_RemainingFreeParking" xml:space="preserve">
+    <value>Queda aparcament gratuït avui:</value>
+  </data>
+  <data name="Parking_YouDontNeedReceipt" xml:space="preserve">
+    <value>NO necessiteu mostrar cap rebut al vostre vehicle.</value>
+  </data>
+  <data name="Parking_CheckYourInbox" xml:space="preserve">
+    <value>Consulteu la safata d’entrada per veure el rebut.</value>
+  </data>
+  <data name="Parking_EmailPlaceholder" xml:space="preserve">
+    <value>nom@email.com</value>
+  </data>
+  <data name="Parking_EmailSentCorrectly" xml:space="preserve">
+    <value>El correu electrònic s’ha enviat correctament.</value>
+  </data>
+  <data name="Parking_EnterEmailAddress" xml:space="preserve">
+    <value>Quin és el seu email?</value>
+  </data>
+  <data name="Parking_Send" xml:space="preserve">
+    <value>Enviar</value>
+  </data>
+  <data name="Permits_Error_Result_Error_Invalid_Email_Address" xml:space="preserve">
+    <value>Adressa de correu invàlida</value>
+  </data>
+  <data name="Parking_PaymentMethods" xml:space="preserve">
+    <value>Mètodes de Pagament</value>
+  </data>
+  <data name="Parking_NoTariffsAvailable" xml:space="preserve">
+    <value>La tarifa no està disponible ni és aplicable durant aquestes hores</value>
+  </data>
+  <data name="Parking_UnknownLocation" xml:space="preserve">
+    <value>Ubicació desconeguda</value>
+  </data>
+  <data name="Parking_PayAsARegularParker" xml:space="preserve">
+    <value>Com aparcador habitual, obté tots aquests beneficis:</value>
+  </data>
+  <data name="Parking_PayAsARegularParker_LI1" xml:space="preserve">
+    <value>Pagui de forma ràpida i segura a través del seu smartphone.</value>
+  </data>
+  <data name="Parking_PayAsARegularParker_LI2" xml:space="preserve">
+    <value>Rebi alertes quan la seva sessió d'estacionament estigui a punt de finalitzar.</value>
+  </data>
+  <data name="Parking_PayAsARegularParker_LI3" xml:space="preserve">
+    <value>Afegiu temps a la seva sessió d'estacionament directament amb el seu telèfon.</value>
+  </data>
+  <data name="Parking_PayAsARegularParker_LI4" xml:space="preserve">
+    <value>Accés als seus rebuts o factures d'estacionament.</value>
+  </data>
+  <data name="Parking_PayAsOccasionalParker" xml:space="preserve">
+    <value>Com aparcador ocasional:</value>
+  </data>
+  <data name="Parking_PayAsOccasionalParker_P1" xml:space="preserve">
+    <value>Pagui de forma ràpida i segura a través del seu smartphone.</value>
+  </data>
+  <data name="Parking_PayAsOccasionalParker_P2" xml:space="preserve">
+    <value>No cal registrar-se: només ingressi la matrícula del seu vehicle i triï un mètode de pagament vàlid.</value>
+  </data>
+  <data name="Parking_PayDownloadBlinkayApp" xml:space="preserve">
+    <value>Descarregar Blinkay.app</value>
+  </data>
+  <data name="Parking_PayWithoutRegistration" xml:space="preserve">
+    <value>Pagar sense registre</value>
+  </data>
+  <data name="Parking_ChooseEndTime" xml:space="preserve">
+    <value>Trieu l'hora de finalització de la sessió d'aparcament</value>
+  </data>
+  <data name="Parking_Total" xml:space="preserve">
+    <value>Total</value>
+  </data>
+  <data name="RecaptchaFail" xml:space="preserve">
+    <value>S'ha produït un error en verificar reCAPTCHA. Torneu-ho a provar</value>
+  </data>
+  <data name="MercadoPago_Cancel" xml:space="preserve">
+    <value>Cancel·lar</value>
+  </data>
+  <data name="MercadoPago_Card_Data" xml:space="preserve">
+    <value>Dades de la targeta</value>
+  </data>
+  <data name="MercadoPago_Card_Expiration_Date" xml:space="preserve">
+    <value>Data de caducitat (MM/AAAA)</value>
+  </data>
+  <data name="MercadoPago_Card_Holder_Email" xml:space="preserve">
+    <value>E-mail</value>
+  </data>
+  <data name="MercadoPago_Card_Holder_Name" xml:space="preserve">
+    <value>Titular de la targeta</value>
+  </data>
+  <data name="MercadoPago_Card_Number" xml:space="preserve">
+    <value>Número de targeta</value>
+  </data>
+  <data name="MercadoPago_Card_Security_Code" xml:space="preserve">
+    <value>Codi de seguretat</value>
+  </data>
+  <data name="MercadoPago_Confirm" xml:space="preserve">
+    <value>Confirmeu</value>
+  </data>
+  <data name="MercadoPago_CVV" xml:space="preserve">
+    <value>Codi de seguretat</value>
+  </data>
+  <data name="MercadoPago_CVV_Request_Title" xml:space="preserve">
+    <value>MercadoPago : Codi de seguretat</value>
+  </data>
+  <data name="MercadoPago_Identification_Number" xml:space="preserve">
+    <value>Número d'identificació</value>
+  </data>
+  <data name="MercadoPago_Identification_Type" xml:space="preserve">
+    <value>Tipus d'identificació</value>
+  </data>
+  <data name="MercadoPago_Installments" xml:space="preserve">
+    <value>Quotes</value>
+  </data>
+  <data name="MercadoPago_Issuer" xml:space="preserve">
+    <value>Banc emissor</value>
+  </data>
+  <data name="MercadoPago_Loading" xml:space="preserve">
+    <value>Carregant...</value>
+  </data>
+  <data name="MercadoPago_Pay" xml:space="preserve">
+    <value>Pagar</value>
+  </data>
+  <data name="MercadoPago_Request_Title" xml:space="preserve">
+    <value>MercadoPago : Dades de la targeta</value>
+  </data>
+  <data name="Appeal_Welcome" xml:space="preserve">
+    <value>Benvingut</value>
+  </data>
+  <data name="Appeal_TheInformationThatYouSubmit" xml:space="preserve">
+    <value>La información que usted presente en relación con este proceso será revisada remotamente por un Juez del Tribunal de Estacionamiento en una fecha posterior. Tenga en cuenta que no tendrá la oportunidad de interactuar directamente, ya sea por video, chat en línea o similares, con el Juez del Tribunal de Estacionamiento a través de este proceso. Si desea relacionarse directamente con el Juez del Tribunal del Aparcamiento, se recomienda que llame (412) 560-7222 para programar un en la persona que oye en el Tribunal del Aparcamiento.
+</value>
+  </data>
+  <data name="Appeal_PleaseEnterInTheInformation" xml:space="preserve">
+    <value>Introduzca la información exactamente como aparece en el ticket. No incluya espacios ni caracteres especiales (como un guión). Además, tenga en cuenta que las actualizaciones de este sitio web pueden hacer que los enlaces y marcadores guardados en esta página web no sean válidos.
+</value>
+  </data>
+  <data name="Appeal_ImmediatelyUponYourSubmission" xml:space="preserve">
+    <value>Inmediatamente después de su envío recibirá confirmación por correo electrónico de que su solicitud de audiencia en línea fue recibida.
+</value>
+  </data>
+  <data name="Appeal_IfThisNoticeIsNotReceived" xml:space="preserve">
+    <value>Si este aviso no se recibe por favor llame 412-560-7222</value>
+  </data>
+  <data name="Details_TicketDetail" xml:space="preserve">
+    <value>Detall del tiquet</value>
+  </data>
+  <data name="Details_Ticketnumber" xml:space="preserve">
+    <value>Bitllet(s)</value>
+  </data>
+  <data name="Details_Personalinformation" xml:space="preserve">
+    <value>Informació personal</value>
+  </data>
+  <data name="Details_Payment" xml:space="preserve">
+    <value>Pagament</value>
+  </data>
+  <data name="PersonalInformation_ContestTicket" xml:space="preserve">
+    <value>Entrada del concurs</value>
+  </data>
+  <data name="PersonalInformation_ContestTicket_Note" xml:space="preserve">
+    <value>Els elements marcats amb un asterisc (*) són obligatoris. &lt;br&gt;
+La informació enviada aquí serà a distància per un jutge del Jutjat d'Aparcament amb el propòsit de prendre una decisió respecte al bitllet.</value>
+  </data>
+  <data name="PersonalInformation_PersonalInformation" xml:space="preserve">
+    <value>Informació personal</value>
+  </data>
+  <data name="PersonalInformation_PersonalInformation_Note" xml:space="preserve">
+    <value>El procés de notificació per correu electrònic del Pittsburg Parking Court és opcional i voluntari. Un titular d'entrades té l'opció de rebre una notificació d'adjudicació o bé (a) a través d'un centre comercial de primera classe,</value>
+  </data>
+  <data name="PersonalInformation_FirstName" xml:space="preserve">
+    <value>Nom*</value>
+  </data>
+  <data name="PersonalInformation_LastName" xml:space="preserve">
+    <value>Cognom*</value>
+  </data>
+  <data name="PersonalInformation_Address" xml:space="preserve">
+    <value>Adreça*</value>
+  </data>
+  <data name="PersonalInformation_Email" xml:space="preserve">
+    <value>Correu electrònic*</value>
+  </data>
+  <data name="PersonalInformation_EmailConfirmation" xml:space="preserve">
+    <value>Correu electrònic de confirmació* </value>
+  </data>
+  <data name="PersonalInformation_Note" xml:space="preserve">
+    <value>Notificació de l'adjudicació</value>
+  </data>
+  <data name="PersonalInformation_Cb1" xml:space="preserve">
+    <value>Correu de primera classe</value>
+  </data>
+  <data name="PersonalInformation_Cb2" xml:space="preserve">
+    <value>Transmissió electrònica-Correu electrònic</value>
+  </data>
+  <data name="Page_OtherTickets" xml:space="preserve">
+    <value>Altres entrades</value>
+  </data>
+  <data name="Page_PayNow_Buttontxt" xml:space="preserve">
+    <value>Paga</value>
+  </data>
+  <data name="Page_Contest_Buttontxt" xml:space="preserve">
+    <value>Concurs</value>
+  </data>
+  <data name="PersonalInformation_BackToTickets_Buttontxt" xml:space="preserve">
+    <value>Torna a les entrades</value>
+  </data>
+  <data name="PersonalInformation_Continue_Buttontxt" xml:space="preserve">
+    <value>Continua</value>
+  </data>
+  <data name="_Ticket" xml:space="preserve">
+    <value>Bitllet</value>
+  </data>
+  <data name="PersonalInformation_PleaseStateYourCase" xml:space="preserve">
+    <value>Si us plau, indiqueu el vostre cas</value>
+  </data>
+  <data name="PersonalInformation_PleaseStateYourCase_Note" xml:space="preserve">
+    <value>Expliqueu breument els fets rellevants que justifiquen la vostra sol·licitud d'acomiadament del bitllet. podeu adjuntar qualsevol prova, fotografies o informació necessària per donar suport a la vostra posició. (límit de 2000 caràcters)</value>
+  </data>
+  <data name="PersonalInformation_Reason" xml:space="preserve">
+    <value>Motiu*</value>
+  </data>
+  <data name="PersonalInformation_Description" xml:space="preserve">
+    <value>Descripció*</value>
+  </data>
+  <data name="PersonalInformation_UploadTheFiles" xml:space="preserve">
+    <value>Carregueu els fitxers per proporcionar una prova</value>
+  </data>
+  <data name="PersonalInformation_Note2" xml:space="preserve">
+    <value>Nota: només es permet l'extensió de fitxer GIF, JPG, BMP,TIF, DDC,WAV i la mida total del fitxer carregat ha de ser inferior a 10 MB</value>
+  </data>
+  <data name="PersonalInformation_Submit" xml:space="preserve">
+    <value>Presentar</value>
+  </data>
+  <data name="SaveAppealInformation_TheContestHasBeen" xml:space="preserve">
+    <value>El concurs s'ha presentat amb èxit</value>
+  </data>
+  <data name="SaveAppealInformation_YouWillRecieve" xml:space="preserve">
+    <value>En pocs dies rebràs una resposta a la teva sol·licitud.</value>
+  </data>
+  <data name="SaveAppealInformation_TheContestHasNot" xml:space="preserve">
+    <value>El concurs no s'ha presentat correctament,</value>
+  </data>
+  <data name="SaveAppealInformation_PleaseTryAgain" xml:space="preserve">
+    <value>siusplau torna-ho a provar.</value>
+  </data>
+  <data name="SaveAppealInformation_SearchAnotherTicket" xml:space="preserve">
+    <value>Cerca un altre bitllet</value>
+  </data>
+  <data name="SaveAppealInformation_BackToTheTickets" xml:space="preserve">
+    <value>Tornem a les entrades</value>
+  </data>
+  <data name="Appeal_EachContestedTicketMust" xml:space="preserve">
+    <value>Cada entrada impugnada s'ha de presentar individualment</value>
+  </data>
+  <data name="Details_EnteredTicketIsNotAvailable" xml:space="preserve">
+    <value>El bitllet introduït no està disponible o ja està disputat !!!</value>
+  </data>
+  <data name="Details_NoOtherTicketAreAvailable" xml:space="preserve">
+    <value>No hi ha cap altra entrada disponible !!!</value>
+  </data>
+  <data name="PersonalInformation_SelectOne" xml:space="preserve">
+    <value>(Tria una)</value>
+  </data>
+  <data name="Details_PaySelected" xml:space="preserve">
+    <value>Paga seleccionada</value>
+  </data>
+  <data name="Details_State_Case" xml:space="preserve">
+    <value>Exposa el cas</value>
+  </data>
+</root>

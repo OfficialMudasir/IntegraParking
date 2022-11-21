@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.DiscoveryDocumentReference" url="https://www.pagatelia.com/apipayments/ApiPayment.svc?disco" filename="ApiPayment.disco" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="https://www.pagatelia.com/apipayments/ApiPayment.svc?wsdl" filename="ApiPayment.wsdl" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="https://www.pagatelia.com/apipayments/ApiPayment.svc?xsd=xsd2" filename="ApiPayment.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="https://www.pagatelia.com/apipayments/ApiPayment.svc?xsd=xsd3" filename="ApiPayment0.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="https://www.pagatelia.com/apipayments/ApiPayment.svc?xsd=xsd0" filename="ApiPayment1.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="https://www.pagatelia.com/apipayments/ApiPayment.svc?xsd=xsd1" filename="ApiPayment2.xsd" />
+  </Results>
+</DiscoveryClientResultsFile>

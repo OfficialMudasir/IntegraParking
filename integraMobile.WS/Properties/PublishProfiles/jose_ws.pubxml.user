@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <LastUsedBuildConfiguration>Release</LastUsedBuildConfiguration>
+    <LastUsedPlatform>Any CPU</LastUsedPlatform>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\visualstudio\src\02_SRC\02_Server\PayByPhoneWeb\Deploy\integraMobileWS</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/Base_AP.dll">
+      <publishTime>01/23/2014 11:36:32</publishTime>
+    </File>
+    <File Include="bin/Base_Common.dll">
+      <publishTime>01/23/2014 11:36:32</publishTime>
+    </File>
+    <File Include="bin/CardEaseXMLClient.dll">
+      <publishTime>01/23/2014 11:36:32</publishTime>
+    </File>
+    <File Include="bin/CH.Crc32.dll">
+      <publishTime>01/23/2014 11:36:28</publishTime>
+    </File>
+    <File Include="bin/en-US/integraMobile.WS.resources.dll">
+      <publishTime>01/30/2014 08:53:25</publishTime>
+    </File>
+    <File Include="bin/es-ES/integraMobile.WS.resources.dll">
+      <publishTime>01/30/2014 08:53:26</publishTime>
+    </File>
+    <File Include="bin/fr-CA/integraMobile.WS.resources.dll">
+      <publishTime>01/30/2014 08:53:26</publishTime>
+    </File>
+    <File Include="bin/fr-FR/integraMobile.WS.resources.dll">
+      <publishTime>11/11/2013 14:13:31</publishTime>
+    </File>
+    <File Include="bin/Gma.QrCodeNet.Encoding.dll">
+      <publishTime>01/23/2014 11:36:28</publishTime>
+    </File>
+    <File Include="bin/integraMobile.Domain.dll">
+      <publishTime>01/27/2014 14:11:49</publishTime>
+    </File>
+    <File Include="bin/integraMobile.Domain.XmlSerializers.dll">
+      <publishTime>01/27/2014 14:11:49</publishTime>
+    </File>
+    <File Include="bin/integraMobile.ExternalWS.dll">
+      <publishTime>01/27/2014 14:11:50</publishTime>
+    </File>
+    <File Include="bin/integraMobile.ExternalWS.XmlSerializers.dll">
+      <publishTime>01/27/2014 14:11:50</publishTime>
+    </File>
+    <File Include="bin/integraMobile.Infrastructure.dll">
+      <publishTime>01/27/2014 14:11:47</publishTime>
+    </File>
+    <File Include="bin/integraMobile.Infrastructure.XmlSerializers.dll">
+      <publishTime>01/27/2014 14:11:47</publishTime>
+    </File>
+    <File Include="bin/integraMobile.WS.dll">
+      <publishTime>01/30/2014 08:53:25</publishTime>
+    </File>
+    <File Include="bin/integraMobile.WS.XmlSerializers.dll">
+      <publishTime>12/05/2013 12:35:31</publishTime>
+    </File>
+    <File Include="bin/itextsharp.dll">
+      <publishTime>01/23/2014 11:30:45</publishTime>
+    </File>
+    <File Include="bin/log4net.dll">
+      <publishTime>01/23/2014 11:29:15</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>01/23/2014 11:36:58</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>01/23/2014 11:36:44</publishTime>
+    </File>
+    <File Include="bin/Ninject.dll">
+      <publishTime>01/23/2014 11:36:55</publishTime>
+    </File>
+    <File Include="bin/Ninject.Web.Common.dll">
+      <publishTime>01/23/2014 11:36:51</publishTime>
+    </File>
+    <File Include="bin/Ninject.Web.dll">
+      <publishTime>01/23/2014 11:36:54</publishTime>
+    </File>
+    <File Include="bin/paypal_base.dll">
+      <publishTime>01/23/2014 11:29:15</publishTime>
+    </File>
+    <File Include="bin/WebActivator.dll">
+      <publishTime>01/23/2014 11:36:32</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>01/23/2014 11:36:45</publishTime>
+    </File>
+    <File Include="integraExternalServices.asmx">
+      <publishTime>01/23/2014 11:36:46</publishTime>
+    </File>
+    <File Include="integraMobile.WS.pfx">
+      <publishTime>01/23/2014 11:37:10</publishTime>
+    </File>
+    <File Include="integraMobileWS.asmx">
+      <publishTime>01/23/2014 11:36:46</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>01/23/2014 11:36:44</publishTime>
+    </File>
+    <File Include="Properties/Settings.settings">
+      <publishTime>06/17/2013 10:36:14</publishTime>
+    </File>
+    <File Include="Web References/EysaThirdPartyConfirmParkWS/Reference.map">
+      <publishTime>09/03/2013 11:55:58</publishTime>
+    </File>
+    <File Include="Web References/EysaThirdPartyConfirmParkWS/ticket.wsdl">
+      <publishTime>09/03/2013 11:55:58</publishTime>
+    </File>
+    <File Include="Web References/EysaThirdPartyFineWS/anulaciones.wsdl">
+      <publishTime>09/03/2013 11:41:26</publishTime>
+    </File>
+    <File Include="Web References/EysaThirdPartyFineWS/Reference.map">
+      <publishTime>09/03/2013 11:41:26</publishTime>
+    </File>
+    <File Include="Web References/EysaThirdPartyParkWS/Reference.map">
+      <publishTime>09/03/2013 11:55:59</publishTime>
+    </File>
+    <File Include="Web References/EysaThirdPartyParkWS/tarifas.wsdl">
+      <publishTime>09/03/2013 11:55:59</publishTime>
+    </File>
+    <File Include="Web References/gTechnaParkingConfirmWS/ParkingRightsListener.wsdl">
+      <publishTime>09/25/2013 18:17:39</publishTime>
+    </File>
+    <File Include="Web References/gTechnaParkingConfirmWS/Reference.map">
+      <publishTime>09/25/2013 18:17:39</publishTime>
+    </File>
+    <File Include="Web References/gTechnaThirdPartyFineWS/ticket_list_response1.datasource">
+      <publishTime>11/05/2013 09:54:20</publishTime>
+    </File>
+    <File Include="Web References/gTechnaThirdPartyFineWS/ticket_payment_response1.datasource">
+      <publishTime>11/05/2013 09:54:20</publishTime>
+    </File>
+    <File Include="Web References/gTechnaThirdPartyFineWS/ticket_status_response1.datasource">
+      <publishTime>11/05/2013 09:54:20</publishTime>
+    </File>
+    <File Include="Web References/gTechnaThirdPartyParkingConfirmWS/ParkingRightsListener.wsdl">
+      <publishTime>09/25/2013 18:17:39</publishTime>
+    </File>
+    <File Include="Web References/gTechnaThirdPartyParkingConfirmWS/Reference.map">
+      <publishTime>09/25/2013 18:17:39</publishTime>
+    </File>
+    <File Include="Web References/StandardParkingWS/Reference.map">
+      <publishTime>11/05/2013 10:22:14</publishTime>
+    </File>
+    <File Include="Web References/StandardParkingWS/TariffComputer.disco">
+      <publishTime>11/05/2013 10:22:14</publishTime>
+    </File>
+    <File Include="Web References/StandardParkingWS/TariffComputer.wsdl">
+      <publishTime>11/05/2013 10:22:14</publishTime>
+    </File>
+    <File Include="Web References/StandardThirdPartyFineWS/PayByPhoneListener.wsdl">
+      <publishTime>09/03/2013 11:41:26</publishTime>
+    </File>
+    <File Include="Web References/StandardThirdPartyFineWS/PayByPhoneOperationService.wsdl">
+      <publishTime>09/17/2013 11:54:24</publishTime>
+    </File>
+    <File Include="Web References/StandardThirdPartyFineWS/Reference.map">
+      <publishTime>09/17/2013 11:54:24</publishTime>
+    </File>
+    <File Include="Web References/StandardThirdPartyFineWS/ticket_list_response.datasource">
+      <publishTime>09/25/2013 19:46:51</publishTime>
+    </File>
+    <File Include="Web References/StandardThirdPartyFineWS/ticket_payment_response.datasource">
+      <publishTime>09/25/2013 19:46:51</publishTime>
+    </File>
+    <File Include="Web References/StandardThirdPartyFineWS/ticket_status_response.datasource">
+      <publishTime>09/25/2013 19:46:51</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>01/30/2014 08:53:28</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

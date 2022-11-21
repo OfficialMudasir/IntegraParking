@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:intf="http://webservice.sis.sermepa.es" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:impl="http://webservice.sis.sermepa.es" targetNamespace="http://webservice.sis.sermepa.es" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:intf="http://webservice.sis.sermepa.es" elementFormDefault="qualified" targetNamespace="http://webservice.sis.sermepa.es">
+      <xsd:element name="trataPeticion">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="datoEntrada" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="trataPeticionResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="trataPeticionReturn" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="trataPeticion3DES">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="datoEntrada" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="trataPeticionResponse3DES">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="trataPeticionReturn" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="consultaDCC">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="datoEntrada" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="consultaDCCResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="consultaDCCReturn" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="consultaBIN">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="datoEntrada" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="consultaBINResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="consultaBINReturn" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="consultaBINRequest">
+    <wsdl:part name="parameters" element="impl:consultaBIN" />
+  </wsdl:message>
+  <wsdl:message name="consultaDCCResponse">
+    <wsdl:part name="parameters" element="impl:consultaDCCResponse" />
+  </wsdl:message>
+  <wsdl:message name="consultaDCCRequest">
+    <wsdl:part name="parameters" element="impl:consultaDCC" />
+  </wsdl:message>
+  <wsdl:message name="trataPeticionResponse3DES">
+    <wsdl:part name="parameters" element="impl:trataPeticionResponse3DES" />
+  </wsdl:message>
+  <wsdl:message name="trataPeticionRequest">
+    <wsdl:part name="parameters" element="impl:trataPeticion" />
+  </wsdl:message>
+  <wsdl:message name="trataPeticionRequest3DES">
+    <wsdl:part name="parameters" element="impl:trataPeticion3DES" />
+  </wsdl:message>
+  <wsdl:message name="trataPeticionResponse">
+    <wsdl:part name="parameters" element="impl:trataPeticionResponse" />
+  </wsdl:message>
+  <wsdl:message name="consultaBINResponse">
+    <wsdl:part name="parameters" element="impl:consultaBINResponse" />
+  </wsdl:message>
+  <wsdl:portType name="SerClsWSEntrada">
+    <wsdl:operation name="trataPeticion">
+      <wsdl:input name="trataPeticionRequest" message="impl:trataPeticionRequest" />
+      <wsdl:output name="trataPeticionResponse" message="impl:trataPeticionResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="trataPeticion3DES">
+      <wsdl:input name="trataPeticionRequest3DES" message="impl:trataPeticionRequest3DES" />
+      <wsdl:output name="trataPeticionResponse3DES" message="impl:trataPeticionResponse3DES" />
+    </wsdl:operation>
+    <wsdl:operation name="consultaDCC">
+      <wsdl:input name="consultaDCCRequest" message="impl:consultaDCCRequest" />
+      <wsdl:output name="consultaDCCResponse" message="impl:consultaDCCResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="consultaBIN">
+      <wsdl:input name="consultaBINRequest" message="impl:consultaBINRequest" />
+      <wsdl:output name="consultaBINResponse" message="impl:consultaBINResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SerClsWSEntradaSoapBinding" type="impl:SerClsWSEntrada">
+    <wsdlsoap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="trataPeticion">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="trataPeticionRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="trataPeticionResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="trataPeticion3DES">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="trataPeticionRequest3DES">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="trataPeticionResponse3DES">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultaDCC">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="consultaDCCRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="consultaDCCResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultaBIN">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="consultaBINRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="consultaBINResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SerClsWSEntradaService">
+    <wsdl:port name="SerClsWSEntrada" binding="impl:SerClsWSEntradaSoapBinding">
+      <wsdlsoap:address location="https://sis-t.redsys.es:25443/sis/services/SerClsWSEntrada" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

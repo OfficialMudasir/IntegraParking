@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:intf="http://192.168.3.91:8080/officercc-spaq/services/ParkingRightsListener" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:impl="http://192.168.3.91:8080/officercc-spaq/services/ParkingRightsListener" targetNamespace="http://192.168.3.91:8080/officercc-spaq/services/ParkingRightsListener" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types />
+  <wsdl:message name="heartBeatRequest">
+    <wsdl:part name="PRPID" type="soapenc:string" />
+    <wsdl:part name="PRPCallDateTime" type="xsd:dateTime" />
+    <wsdl:part name="PRPSequence" type="soapenc:string" />
+  </wsdl:message>
+  <wsdl:message name="updateParkingRightsResponse">
+    <wsdl:part name="updateParkingRightsReturn" type="soapenc:string" />
+  </wsdl:message>
+  <wsdl:message name="updateSpaceStatusRequest">
+    <wsdl:part name="spaceNo" type="soapenc:string" />
+    <wsdl:part name="spaceStatusCode" type="soapenc:string" />
+    <wsdl:part name="PRPId" type="soapenc:string" />
+    <wsdl:part name="PRPTransactionId" type="soapenc:string" />
+    <wsdl:part name="PRPCallDateTime" type="xsd:dateTime" />
+    <wsdl:part name="parkingStartDateTime" type="xsd:dateTime" />
+    <wsdl:part name="parkingEndDateTime" type="xsd:dateTime" />
+    <wsdl:part name="gracePeriod" type="xsd:int" />
+    <wsdl:part name="terminalNo" type="soapenc:string" />
+    <wsdl:part name="test" type="xsd:boolean" />
+  </wsdl:message>
+  <wsdl:message name="updateSpaceStatusResponse">
+    <wsdl:part name="updateSpaceStatusReturn" type="soapenc:string" />
+  </wsdl:message>
+  <wsdl:message name="heartBeatResponse">
+    <wsdl:part name="heartBeatReturn" type="soapenc:string" />
+  </wsdl:message>
+  <wsdl:message name="updateParkingRightsRequest">
+    <wsdl:part name="licencePlate" type="soapenc:string" />
+    <wsdl:part name="spaceNo" type="soapenc:string" />
+    <wsdl:part name="PRPId" type="soapenc:string" />
+    <wsdl:part name="PRPTransactionId" type="soapenc:string" />
+    <wsdl:part name="PRPCallDateTime" type="xsd:dateTime" />
+    <wsdl:part name="parkingStartDateTime" type="xsd:dateTime" />
+    <wsdl:part name="parkingEndDateTime" type="xsd:dateTime" />
+    <wsdl:part name="amount" type="soapenc:decimal" />
+    <wsdl:part name="currency" type="soapenc:string" />
+    <wsdl:part name="gracePeriod" type="xsd:int" />
+    <wsdl:part name="terminalNo" type="soapenc:string" />
+    <wsdl:part name="zoneNo" type="soapenc:string" />
+    <wsdl:part name="permitNo" type="soapenc:string" />
+    <wsdl:part name="permitType" type="soapenc:string" />
+    <wsdl:part name="handicap" type="soapenc:boolean" />
+    <wsdl:part name="licencePlateState" type="soapenc:string" />
+    <wsdl:part name="vehicleMake" type="soapenc:string" />
+    <wsdl:part name="vehicleModel" type="soapenc:string" />
+    <wsdl:part name="vehicleColor" type="soapenc:string" />
+    <wsdl:part name="note" type="soapenc:string" />
+    <wsdl:part name="test" type="xsd:boolean" />
+  </wsdl:message>
+  <wsdl:portType name="MESParkingRightsSOAPFacade">
+    <wsdl:operation name="heartBeat" parameterOrder="PRPID PRPCallDateTime PRPSequence">
+      <wsdl:input name="heartBeatRequest" message="impl:heartBeatRequest" />
+      <wsdl:output name="heartBeatResponse" message="impl:heartBeatResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="updateSpaceStatus" parameterOrder="spaceNo spaceStatusCode PRPId PRPTransactionId PRPCallDateTime parkingStartDateTime parkingEndDateTime gracePeriod terminalNo test">
+      <wsdl:input name="updateSpaceStatusRequest" message="impl:updateSpaceStatusRequest" />
+      <wsdl:output name="updateSpaceStatusResponse" message="impl:updateSpaceStatusResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="updateParkingRights" parameterOrder="licencePlate spaceNo PRPId PRPTransactionId PRPCallDateTime parkingStartDateTime parkingEndDateTime amount currency gracePeriod terminalNo zoneNo permitNo permitType handicap licencePlateState vehicleMake vehicleModel vehicleColor note test">
+      <wsdl:input name="updateParkingRightsRequest" message="impl:updateParkingRightsRequest" />
+      <wsdl:output name="updateParkingRightsResponse" message="impl:updateParkingRightsResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ParkingRightsListenerSoapBinding" type="impl:MESParkingRightsSOAPFacade">
+    <wsdlsoap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <wsdl:operation name="heartBeat">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="heartBeatRequest">
+        <wsdlsoap:body use="encoded" namespace="http://parkingRights.mes.cc.gti.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="heartBeatResponse">
+        <wsdlsoap:body use="encoded" namespace="http://192.168.3.91:8080/officercc-spaq/services/ParkingRightsListener" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateSpaceStatus">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="updateSpaceStatusRequest">
+        <wsdlsoap:body use="encoded" namespace="http://parkingRights.mes.cc.gti.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="updateSpaceStatusResponse">
+        <wsdlsoap:body use="encoded" namespace="http://192.168.3.91:8080/officercc-spaq/services/ParkingRightsListener" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateParkingRights">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="updateParkingRightsRequest">
+        <wsdlsoap:body use="encoded" namespace="http://parkingRights.mes.cc.gti.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="updateParkingRightsResponse">
+        <wsdlsoap:body use="encoded" namespace="http://192.168.3.91:8080/officercc-spaq/services/ParkingRightsListener" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MESParkingRightsSOAPFacadeService">
+    <wsdl:port name="ParkingRightsListener" binding="impl:ParkingRightsListenerSoapBinding">
+      <wsdlsoap:address location="http://192.168.3.91:8080/officercc-spaq/services/ParkingRightsListener" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

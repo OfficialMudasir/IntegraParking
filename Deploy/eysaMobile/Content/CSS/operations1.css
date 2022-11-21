@@ -1,0 +1,127 @@
+#operationsbody {
+background-color:#FFF;
+-width:100%;
+min-width:700px;
+}
+
+#operationspage {
+	background-color:#FFF;
+	width:90%;
+	margin:5%;
+	position:absolute;
+	top:0px;
+	margin-top:0;
+	margin-bottom:25px;
+	padding:0%;
+	clear: both;
+	background: #FFF url(../img/logo-sombra.jpg) no-repeat top left;	
+}
+
+
+#operationsheader
+{
+-background: url(../img/logo-sombra.jpg) no-repeat top left;
+width: 100%;
+float: left;
+margin: 0px;
+padding: 0px;
+height: 120px;
+position:relative;
+-border-bottom: #CCC 1px solid; 
+padding-bottom:20px;
+margin-bottom:40px;
+}
+
+.language-selector-in-operations-page /* */
+{
+left:205px;
+position:absolute;
+float:left;
+width:auto;
+display:inline;
+text-align:left;
+}
+
+.title-in-operations-page
+{
+float:left;
+width:auto;
+display:inline;
+text-align:left;
+text-indent: 310px;
+margin-top:30px;
+}
+
+.title-in-operations-page h1 {
+	font-family:'Source Sans Pro', Arial;
+	font-size:xx-large;
+	color:#007dc5;
+	margin-bottom: 0px;
+	overflow:hidden;
+	white-space: nowrap;
+}
+
+
+.title-in-operations-page h2 {
+	font-family:'Source Sans Pro', Arial;
+	font-size:x-large;
+	color:#007dc5;
+	margin-bottom: 0px;
+	margin-top: 0;
+	overflow:hidden;
+}
+
+.operationsfiltercontainer {width:100%; min-width:960px; width:960px; display:block; float:left; clear:both;}
+
+.operationsfilterfield 
+{
+width:100px;
+color: #33CCFF;
+font-weight:bold;
+float:left;
+clear:none;
+padding:0;
+padding-right:10px;
+-white-space: nowrap;
+-overflow:hidden; 
+}
+
+
+.operationsfilterfield2
+{
+
+color: #33CCFF;
+font-weight:bold;
+padding:0px;
+margin:0px;
+white-space: nowrap;
+-overflow:hidden; 
+float:right;
+clear:right;
+}
+
+
+
+.operationsfilterfield input { float:left; }
+.operationsfilterfield2 input { float:right; display:inline; margin:0; padding:0}
+
+.datagrid {clear:both; display: block;}
+.datagrid table { border-collapse: collapse; text-align: left; width: 100%} 
+.datagrid {font: normal 12px/150% 'Source Sans Pro', Arial; background: #fff; overflow: hidden; }
+.datagrid table td, .datagrid table th { padding: 2px 2px; }
+.datagrid table thead th {background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #FFFFFF), color-stop(1, #D6D6D6) );background:-moz-linear-gradient( center top, #FFFFFF 5%, #D6D6D6 100% );filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFF', endColorstr='#D6D6D6');background-color:#FFFFFF; color:#00BBFD; font-size: 14px; font-weight: bold; border-left: 1px solid #A3A3A3; } 
+.datagrid table thead th:first-child { border: none; }
+.datagrid table tbody td { color: #383838; border-left: 0px;font-size: 12px;font-weight: normal; }
+.datagrid table tbody .alt td { background: #EBEBEB; color: #383838; }
+.datagrid table tbody td:first-child { border-left: none; }
+.datagrid table tbody tr:last-child td { border-bottom: none; }
+.datagrid table tfoot td div { border-top: 1px solid #8C8C8C;background: #7D7D7D;} 
+.datagrid table tfoot td { padding: 0; font-size: 14px } 
+.datagrid table tfoot td div{ padding: 2px; }
+.datagrid table tfoot td ul { margin: 0; padding:0; list-style: none; text-align: right; }
+.datagrid table tfoot  li { display: inline; }
+.datagrid table tfoot li a { text-decoration: none; display: inline-block;  padding: 2px 8px; margin: 1px;color: #ECECEC;background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #7D7D7D), color-stop(1, #7D7D7D) );background:-moz-linear-gradient( center top, #7D7D7D 5%, #7D7D7D 100% );filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#7D7D7D', endColorstr='#7D7D7D');background-color:#7D7D7D; }
+.datagrid table tfoot ul.active, 
+.datagrid table tfoot ul a:hover { text-decoration: none;border-color: #7D7D7D; color: #F5F5F5; background: none; background-color:#8C8C8C;}
+
+

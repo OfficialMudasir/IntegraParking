@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="DBBench" namespace="DBBench.Mysql" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="MyTestTable" table="my_test_table" schema="testdb">
+    <id name="MyId" type="Int32">
+      <column name="my_id" not-null="true" sql-type="INT" unique="true" />
+      <generator class="identity" />
+    </id>
+    <property name="MyStringField" type="String">
+      <column name="my_string_field" not-null="false" length="4000" sql-type="VARCHAR(4000)" />
+    </property>
+  </class>
+</hibernate-mapping>

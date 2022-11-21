@@ -1,0 +1,1796 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://www.parkaregroup.com/PublisherService/1.0" elementFormDefault="qualified" targetNamespace="http://www.parkaregroup.com/PublisherService/1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://217.124.242.5/PublisherService/PublisherService.svc?xsd=xsd2" namespace="http://www.parkaregroup.com/PublisherService/1.2" />
+  <xs:element name="startSession">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="language" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="startSessionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="startSessionResult" nillable="true" type="tns:AuthLoginResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="AuthLoginResponse">
+    <xs:annotation>
+      <xs:appinfo />
+      <xs:documentation>&lt;summary&gt;
+            Response to the startSession request
+            &lt;/summary&gt;
+            &lt;summary&gt;
+            Response to the startSession request
+            &lt;/summary&gt;</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:PublisherResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Result" nillable="true" type="tns:AuthSession">
+            <xs:annotation>
+              <xs:appinfo />
+              <xs:documentation>&lt;summary&gt;
+            Session object returned from the startSession request.
+            &lt;remarks&gt;To be supplied on any subsequent communication&lt;/remarks&gt;
+            &lt;/summary&gt;</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AuthLoginResponse" nillable="true" type="tns:AuthLoginResponse" />
+  <xs:complexType name="PublisherResponse">
+    <xs:sequence>
+      <xs:element name="Status" type="tns:PublisherResponse.PublisherStatus">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Response code for the requested service 
+            &lt;see cref="T:PublisherStatus" /&gt;
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element xmlns:q1="http://www.parkaregroup.com/PublisherService/1.2" minOccurs="0" name="authError" nillable="true" type="q1:PublisherResponse.AuthError">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="errorDetails" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+          <xs:documentation>&lt;summary&gt;
+            Detailed explanation of the error
+            &lt;remarks&gt;OPTIONAL, only when errors occurred&lt;/remarks&gt;
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PublisherResponse" nillable="true" type="tns:PublisherResponse" />
+  <xs:simpleType name="PublisherResponse.PublisherStatus">
+    <xs:annotation>
+      <xs:appinfo />
+      <xs:documentation>&lt;summary&gt;
+            Status code associated to the response
+            &lt;/summary&gt;</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="OK">
+        <xs:annotation>
+          <xs:documentation>&lt;summary&gt;
+            No errors occurred; request successfully processed and at least one result was found
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ZERO_RESULTS">
+        <xs:annotation>
+          <xs:documentation>&lt;summary&gt;
+            No errors occurred; request successfully processed but no results found
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ACCESS_DENIED">
+        <xs:annotation>
+          <xs:documentation>&lt;summary&gt;
+            Access denied, due to lack of credentials
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="REQUEST_DENIED">
+        <xs:annotation>
+          <xs:documentation>&lt;summary&gt;
+            Request denied, probably due to insufficient privileges
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="INVALID_REQUEST">
+        <xs:annotation>
+          <xs:documentation>&lt;summary&gt;
+            Generally indicates that a parameter is missing or inappropriate
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="UNEXPECTED_ERROR">
+        <xs:annotation>
+          <xs:documentation>&lt;summary&gt;
+            Generally indicates an unexpected error during the request processing
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PublisherResponse.PublisherStatus" nillable="true" type="tns:PublisherResponse.PublisherStatus" />
+  <xs:complexType name="AuthSession">
+    <xs:annotation>
+      <xs:appinfo />
+      <xs:documentation>&lt;summary&gt;
+            Session object returned from the startSession call.
+            &lt;remarks&gt;To be supplied on any subsequent communication&lt;/remarks&gt;
+            &lt;/summary&gt;</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="sessionId" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Assigned session identifier from the startSession call. 
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="userName" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            User name logged in associated to the session identifier
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AuthSession" nillable="true" type="tns:AuthSession" />
+  <xs:element name="endSession">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="authSession" nillable="true" type="tns:AuthSession" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="endSessionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="endSessionResult" nillable="true" type="tns:AuthLogoutResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="AuthLogoutResponse">
+    <xs:annotation>
+      <xs:appinfo />
+      <xs:documentation>&lt;summary&gt;
+            Response to the endSession request
+            &lt;/summary&gt;
+            &lt;summary&gt;
+            Response to the endSession request
+            &lt;/summary&gt;</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:PublisherResponse">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AuthLogoutResponse" nillable="true" type="tns:AuthLogoutResponse" />
+  <xs:element name="GetHistAvailableSelection">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="authSession" nillable="true" type="tns:AuthSession" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetHistAvailableSelectionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetHistAvailableSelectionResult" nillable="true" type="tns:HistAvailableSelectionResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="HistAvailableSelectionResponse">
+    <xs:annotation>
+      <xs:appinfo />
+      <xs:documentation>&lt;summary&gt;
+            Response to the GetHistAvailableSelection request
+            &lt;see cref="T:HistAvailableSelection" /&gt;
+            &lt;/summary&gt;</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:PublisherResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Result" nillable="true" type="tns:HistAvailableSelection">
+            <xs:annotation>
+              <xs:appinfo />
+              <xs:documentation>&lt;summary&gt;
+            Response to the historical available selection request
+            &lt;see cref="T:HistAvailableSelection" /&gt;
+            &lt;/summary&gt;</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="HistAvailableSelectionResponse" nillable="true" type="tns:HistAvailableSelectionResponse" />
+  <xs:complexType name="HistAvailableSelection">
+    <xs:annotation>
+      <xs:appinfo />
+      <xs:documentation>&lt;summary&gt;
+            List of available systems, geographical zones, cities and machines
+            &lt;/summary&gt;</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="availableSystem" nillable="true" type="tns:HistSelectionSystem">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Available system definition.
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HistAvailableSelection" nillable="true" type="tns:HistAvailableSelection" />
+  <xs:complexType name="HistSelectionSystem">
+    <xs:annotation>
+      <xs:appinfo />
+      <xs:documentation>&lt;summary&gt;
+            Available system definition.
+            Includes list of its assigned available geographic zones
+            &lt;/summary&gt;</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:HistSelectionBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="collGeoZone" nillable="true" type="tns:ArrayOfHistSelectionGeoZone">
+            <xs:annotation>
+              <xs:appinfo />
+              <xs:documentation>&lt;summary&gt;
+            Collection of assigned available geographic zones definition
+            &lt;see cref="T:HistSelectionGeoZone" /&gt;
+            &lt;/summary&gt;</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="HistSelectionSystem" nillable="true" type="tns:HistSelectionSystem" />
+  <xs:complexType name="HistSelectionBase">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Entity code 
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Entity description
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Entity name
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HistSelectionBase" nillable="true" type="tns:HistSelectionBase" />
+  <xs:complexType name="HistSelectionCity">
+    <xs:annotation>
+      <xs:appinfo />
+      <xs:documentation>&lt;summary&gt;
+            Available city definition.
+            Includes list of its assigned available PD machines
+            &lt;/summary&gt;</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:HistSelectionBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="collMachine" nillable="true" type="tns:ArrayOfHistSelectionMachine">
+            <xs:annotation>
+              <xs:appinfo />
+              <xs:documentation>&lt;summary&gt;
+            Collection of assigned available PD machines definition
+            &lt;see cref="T:HistSelectionMachine" /&gt;
+            &lt;/summary&gt;</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="HistSelectionCity" nillable="true" type="tns:HistSelectionCity" />
+  <xs:complexType name="ArrayOfHistSelectionMachine">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="HistSelectionMachine" nillable="true" type="tns:HistSelectionMachine" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfHistSelectionMachine" nillable="true" type="tns:ArrayOfHistSelectionMachine" />
+  <xs:complexType name="HistSelectionMachine">
+    <xs:annotation>
+      <xs:appinfo />
+      <xs:documentation>&lt;summary&gt;
+            Available PD machine definition
+            &lt;/summary&gt;</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:HistSelectionBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="HistSelectionMachine" nillable="true" type="tns:HistSelectionMachine" />
+  <xs:complexType name="HistSelectionGeoZone">
+    <xs:annotation>
+      <xs:appinfo />
+      <xs:documentation>&lt;summary&gt;
+            Available geographic zone definition.
+            Includes list of its assigned available cities
+            &lt;/summary&gt;</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:HistSelectionBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ISO4217Currency" nillable="true" type="xs:string">
+            <xs:annotation>
+              <xs:appinfo />
+              <xs:documentation>&lt;summary&gt;
+            Default standard currency code referred to as the ISO 4217 code list
+            &lt;/summary&gt;</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="TimeZone" nillable="true" type="xs:string">
+            <xs:annotation>
+              <xs:appinfo />
+              <xs:documentation>&lt;summary&gt;
+            Time zone identifier as in IANA Time Zone Database (tz database).
+            &lt;remarks&gt;See http://en.wikipedia.org/wiki/List_of_tz_database_time_zones&lt;/remarks&gt;
+            &lt;/summary&gt;</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="collCity" nillable="true" type="tns:ArrayOfHistSelectionCity">
+            <xs:annotation>
+              <xs:appinfo />
+              <xs:documentation>&lt;summary&gt;
+            Collection of assigned available cities definition
+            &lt;see cref="T:HistSelectionCity" /&gt;
+            &lt;/summary&gt;</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="HistSelectionGeoZone" nillable="true" type="tns:HistSelectionGeoZone" />
+  <xs:complexType name="ArrayOfHistSelectionCity">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="HistSelectionCity" nillable="true" type="tns:HistSelectionCity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfHistSelectionCity" nillable="true" type="tns:ArrayOfHistSelectionCity" />
+  <xs:complexType name="ArrayOfHistSelectionGeoZone">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="HistSelectionGeoZone" nillable="true" type="tns:HistSelectionGeoZone" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfHistSelectionGeoZone" nillable="true" type="tns:ArrayOfHistSelectionGeoZone" />
+  <xs:element name="GetHistTransaction">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="authSession" nillable="true" type="tns:AuthSession" />
+        <xs:element minOccurs="0" name="histSelector" nillable="true" type="tns:HistTransactionFilter" />
+        <xs:element minOccurs="0" name="histInclude" nillable="true" type="tns:HistIncludeTransaction" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="HistTransactionFilter">
+    <xs:annotation>
+      <xs:appinfo />
+      <xs:documentation>&lt;summary&gt;
+            Transaction filtering object
+            &lt;/summary&gt;</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="HistFilter" nillable="true" type="tns:EntityFilterBase">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Historical data selection related to system, geographical zone, city and PD machines
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HistTransactionFilter" nillable="true" type="tns:HistTransactionFilter" />
+  <xs:complexType name="EntityFilterBase">
+    <xs:annotation>
+      <xs:appinfo />
+      <xs:documentation>&lt;summary&gt;
+            Abstract data selector.
+            Includes all necessary information to retrieve data from database
+            &lt;seealso cref="T:EntityFilterSystem" /&gt;
+            &lt;seealso cref="T:EntityFilterGeoZone" /&gt;
+            &lt;seealso cref="T:EntityFilterCity" /&gt;
+            &lt;seealso cref="T:EntityFilterMachine" /&gt;
+            &lt;remarks&gt;DO NOT USE. USE AN INHERITED CLASS INSTEAD&lt;/remarks&gt;
+            &lt;/summary&gt;</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CodSystem" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+          <xs:documentation>&lt;summary&gt;
+            System public identifier, usually a sequence of 4 digits (nnnn)
+            &lt;remarks&gt;A NULL value indicates user's default system selection&lt;/remarks&gt;
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="From" nillable="true" type="xs:dateTime">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+          <xs:documentation>&lt;summary&gt;
+            Initial date for the data selection.
+            A NULL value indicates selection from the beginning of stored data
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="FromId" nillable="true" type="xs:long">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="To" nillable="true" type="xs:dateTime">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+          <xs:documentation>&lt;summary&gt;
+            Final date for the data selection.
+            &lt;remarks&gt;A NULL value indicates selection until the most recent stored data&lt;/remarks&gt;
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EntityFilterBase" nillable="true" type="tns:EntityFilterBase" />
+  <xs:complexType name="EntityFilterMachine">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityFilterSystem">
+        <xs:sequence>
+          <xs:element name="CodMachine" nillable="true" type="xs:string">
+            <xs:annotation>
+              <xs:appinfo />
+              <xs:documentation>&lt;summary&gt;
+            Machine public identifier, usually a sequence of 4 digits (nnnn)
+            &lt;/summary&gt;</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityFilterMachine" nillable="true" type="tns:EntityFilterMachine" />
+  <xs:complexType name="EntityFilterSystem">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityFilterBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityFilterSystem" nillable="true" type="tns:EntityFilterSystem" />
+  <xs:complexType name="EntityFilterGeoZone">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityFilterSystem">
+        <xs:sequence>
+          <xs:element name="CodGeoZone" nillable="true" type="xs:string">
+            <xs:annotation>
+              <xs:appinfo />
+              <xs:documentation>&lt;summary&gt;
+            Geographic zone (of system) public identifier, usually a sequence of 2 digits (nn)
+            &lt;remarks&gt;To retrieve all geographic zones, set to NULL&lt;/remarks&gt;
+            &lt;/summary&gt;</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityFilterGeoZone" nillable="true" type="tns:EntityFilterGeoZone" />
+  <xs:complexType name="EntityFilterCity">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityFilterGeoZone">
+        <xs:sequence>
+          <xs:element name="CodCity" nillable="true" type="xs:string">
+            <xs:annotation>
+              <xs:appinfo />
+              <xs:documentation>&lt;summary&gt;
+            City public identifier, usually a sequence of 2 digits (nn)
+            &lt;/summary&gt;</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityFilterCity" nillable="true" type="tns:EntityFilterCity" />
+  <xs:complexType name="HistFilterSystem">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityFilterSystem">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="HistFilterSystem" nillable="true" type="tns:HistFilterSystem" />
+  <xs:complexType name="EntityFilterPhyZone">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityFilterCity">
+        <xs:sequence>
+          <xs:element name="CodPhyZone" nillable="true" type="xs:string">
+            <xs:annotation>
+              <xs:appinfo />
+              <xs:documentation>&lt;summary&gt;
+            COnfiguration zone identifier, usually a sequence of 2 digits (nn)
+            &lt;/summary&gt;</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityFilterPhyZone" nillable="true" type="tns:EntityFilterPhyZone" />
+  <xs:complexType name="EntityFilterCnfZone">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityFilterCity">
+        <xs:sequence>
+          <xs:element name="CodCnfZone" nillable="true" type="xs:string">
+            <xs:annotation>
+              <xs:appinfo />
+              <xs:documentation>&lt;summary&gt;
+            COnfiguration zone identifier, usually a sequence of 2 digits (nn)
+            &lt;/summary&gt;</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityFilterCnfZone" nillable="true" type="tns:EntityFilterCnfZone" />
+  <xs:complexType name="HistFilterCity">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityFilterCity">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="HistFilterCity" nillable="true" type="tns:HistFilterCity" />
+  <xs:complexType name="HistFilterGeoZone">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityFilterGeoZone">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="HistFilterGeoZone" nillable="true" type="tns:HistFilterGeoZone" />
+  <xs:complexType name="HistFilterMachine">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityFilterMachine">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="HistFilterMachine" nillable="true" type="tns:HistFilterMachine" />
+  <xs:complexType name="HistIncludeTransaction">
+    <xs:annotation>
+      <xs:appinfo />
+      <xs:documentation>&lt;summary&gt;
+            Transaction details selection for the GetHistTransaction request
+            &lt;seealso cref="T:TransactionService.HistTransaction" /&gt;
+            &lt;/summary&gt;</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:HistIncludeBase">
+        <xs:sequence>
+          <xs:element name="Detail_Card" type="xs:boolean">
+            <xs:annotation>
+              <xs:appinfo />
+              <xs:documentation>&lt;summary&gt;
+            Include card details in the transaction response
+            &lt;seealso cref="T:TransactionService.HistTransaction" /&gt;
+            &lt;seealso cref="T:TransactionService.HistTransactionCard" /&gt;
+            &lt;/summary&gt;</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="HistIncludeTransaction" nillable="true" type="tns:HistIncludeTransaction" />
+  <xs:complexType name="HistIncludeBase">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:element name="HistIncludeBase" nillable="true" type="tns:HistIncludeBase" />
+  <xs:complexType name="HistIncludeCollection">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:HistIncludeBase">
+        <xs:sequence>
+          <xs:element name="Detail_Coin" type="xs:boolean">
+            <xs:annotation>
+              <xs:appinfo />
+              <xs:documentation>&lt;summary&gt;
+            Include coin details in the collection response
+            &lt;seealso cref="T:CollectionService.HistCollectionCoin" /&gt;
+            &lt;/summary&gt;</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="Detail_Tariff" type="xs:boolean">
+            <xs:annotation>
+              <xs:appinfo />
+              <xs:documentation>&lt;summary&gt;
+            Include tariff details in the collection response
+            &lt;seealso cref="T:CollectionService.HistCollectionTariff" /&gt;
+            &lt;/summary&gt;</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="Detail_Trans" type="xs:boolean">
+            <xs:annotation>
+              <xs:appinfo />
+              <xs:documentation>&lt;summary&gt;
+            Include transaction details in the collection response
+            &lt;seealso cref="T:CollectionService.HistCollectionTransaction" /&gt;
+            &lt;/summary&gt;</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="HistIncludeCollection" nillable="true" type="tns:HistIncludeCollection" />
+  <xs:element name="GetHistTransactionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetHistTransactionResult" nillable="true" type="tns:HistTransactionResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="HistTransactionResponse">
+    <xs:annotation>
+      <xs:appinfo />
+      <xs:documentation>&lt;summary&gt;
+            Response to a GetHistTransaction request
+            &lt;see cref="T:HistTransaction" /&gt;
+            &lt;/summary&gt;</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:PublisherResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Result" nillable="true" type="tns:ArrayOfHistTransaction">
+            <xs:annotation>
+              <xs:appinfo />
+              <xs:documentation>&lt;summary&gt;
+            List of all money transactions according to the provided filter requirements
+            &lt;see cref="T:HistTransaction" /&gt;
+            &lt;list type="HistTransaction"&gt;&lt;/list&gt;
+            &lt;/summary&gt;</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="HistTransactionResponse" nillable="true" type="tns:HistTransactionResponse" />
+  <xs:complexType name="ArrayOfHistTransaction">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="HistTransaction" nillable="true" type="tns:HistTransaction" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfHistTransaction" nillable="true" type="tns:ArrayOfHistTransaction" />
+  <xs:complexType name="HistTransaction">
+    <xs:annotation>
+      <xs:appinfo />
+      <xs:documentation>&lt;summary&gt;
+            Data associated to a single transaction operation
+            &lt;see cref="T:HistTransactionCard" /&gt;
+            &lt;seealso cref="T:HistTransactionResponse" /&gt;
+            &lt;/summary&gt;</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="CodCity" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            City public identifier associated to the transaction
+            &lt;remarks&gt; Usually a sequence of 2 digits (nn) &lt;/remarks&gt;
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="CodGeoZone" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Geographical zone public identifier associated to the transaction
+            &lt;remarks&gt; Usually a sequence of 2 digits (nn) &lt;/remarks&gt;
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="CodMachine" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            PD machine public identifier origin of the transaction
+            &lt;remarks&gt; Usually a sequence of 4 digits (nnnn) &lt;/remarks&gt;
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="CodSystem" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            System public identifier associated to the transaction
+            &lt;remarks&gt; Usually a sequence of 4 digits (nnnn) &lt;/remarks&gt;
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Collection" type="xs:int">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            PD machine's collection identifier associated to the transaction operation
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="ExpirationTime" nillable="true" type="xs:dateTime">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            User allowed parking expiration timestamp
+            &lt;remarks&gt; [OPTIONAL] Local time, according to the city time zone &lt;/remarks&gt;
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="LocalTime" type="xs:dateTime">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Transaction local timestamp
+            &lt;remarks&gt; Local time, according to the city time zone &lt;/remarks&gt; 
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="PaidAmount" type="xs:decimal">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Total money amount spent in the transaction operation
+            &lt;remarks&gt; Currency unit according to geographic zone currency configuration &lt;/remarks&gt;
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="PaidCard" type="xs:decimal">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Total card amount spent in the transaction operation
+            &lt;remarks&gt; Currency unit according to geographic zone currency configuration &lt;/remarks&gt;
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="PaidCash" type="xs:decimal">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Total cash amount spent in the transaction operation
+            &lt;remarks&gt; Currency unit according to geographic zone currency configuration &lt;/remarks&gt;
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="PaidTime" type="xs:int">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            User allowed parking time purchased in the transaction operation
+            &lt;remarks&gt; Measured in minute units &lt;/remarks&gt;
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="PlateNum" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            User license plate number associated to the transaction operation
+            &lt;remarks&gt; [OPTIONAL] Pay-by-plate&lt;/remarks&gt;
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="SpaceNum" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Parking place number associated to the transaction operation
+            &lt;remarks&gt; [OPTIONAL] Pay-by-space&lt;/remarks&gt;
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Tariff" type="xs:int">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Tariff line associated to the transaction operation
+            &lt;remarks&gt; According to predefined available values &lt;/remarks&gt;
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="TicketNum" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Ticket/receipt number associated to the transaction operation
+            &lt;remarks&gt; [OPTIONAL] &lt;/remarks&gt;
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="TransType" type="xs:int">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Transaction type
+            &lt;seealso cref="T:HistDef.HistDefTransactionType" /&gt;
+            &lt;remarks&gt; According to predefined available values &lt;/remarks&gt; 
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="collCard" nillable="true" type="tns:ArrayOfHistTransactionCard">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary cref="T:HistTransactionCard"&gt;
+            Collection of involved cards (if any) in transaction
+            &lt;remarks&gt; [OPTIONAL] NULL when no card involved&lt;/remarks&gt;
+            &lt;list type="HistTransactionCard"&gt;&lt;/list&gt;
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HistTransaction" nillable="true" type="tns:HistTransaction" />
+  <xs:complexType name="ArrayOfHistTransactionCard">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="HistTransactionCard" nillable="true" type="tns:HistTransactionCard" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfHistTransactionCard" nillable="true" type="tns:ArrayOfHistTransactionCard" />
+  <xs:complexType name="HistTransactionCard">
+    <xs:annotation>
+      <xs:appinfo />
+      <xs:documentation>&lt;summary&gt;
+            Single money card operation associated to a transaction
+            &lt;/summary&gt;</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="CardType" type="xs:int">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Type of card involved in the transaction
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="FinalBalance" nillable="true" type="xs:decimal">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Amount of money available in the card after the transaction
+            &lt;remarks&gt;[OPTIONAL] Only for chip cards or online balance cards&lt;/remarks&gt;
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="PaidAmount" type="xs:decimal">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Amount of money spent in the transaction by the card
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HistTransactionCard" nillable="true" type="tns:HistTransactionCard" />
+  <xs:element name="GetHistDefTransactionType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="authSession" nillable="true" type="tns:AuthSession" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetHistDefTransactionTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetHistDefTransactionTypeResult" nillable="true" type="tns:HistDefTransactionTypeResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="HistDefTransactionTypeResponse">
+    <xs:annotation>
+      <xs:appinfo />
+      <xs:documentation>&lt;summary&gt;
+            Response to the GetHistDefTransactionType request
+            &lt;see cref="T:HistDef.HistDefTransactionType" /&gt;
+            &lt;/summary&gt;</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:PublisherResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Result" nillable="true" type="tns:ArrayOfHistDefTransactionType">
+            <xs:annotation>
+              <xs:appinfo />
+              <xs:documentation>&lt;summary&gt;
+            List supported transaction types (used in transactions)
+            &lt;see cref="T:HistDef.HistDefTransactionType" /&gt;
+            &lt;list type="HistDefTransactionType"&gt;&lt;/list&gt;
+            &lt;/summary&gt;</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="HistDefTransactionTypeResponse" nillable="true" type="tns:HistDefTransactionTypeResponse" />
+  <xs:complexType name="ArrayOfHistDefTransactionType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="HistDefTransactionType" nillable="true" type="tns:HistDefTransactionType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfHistDefTransactionType" nillable="true" type="tns:ArrayOfHistDefTransactionType" />
+  <xs:complexType name="HistDefTransactionType">
+    <xs:annotation>
+      <xs:appinfo />
+      <xs:documentation>&lt;summary&gt;
+            Transaction type definition
+            &lt;/summary&gt;</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:HistDefBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="HistDefTransactionType" nillable="true" type="tns:HistDefTransactionType" />
+  <xs:complexType name="HistDefBase">
+    <xs:sequence>
+      <xs:element name="Description" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Entity type description
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Id" type="xs:int">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Entity type identifier
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HistDefBase" nillable="true" type="tns:HistDefBase" />
+  <xs:complexType name="HistDefTransactionCardType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:HistDefBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="HistDefTransactionCardType" nillable="true" type="tns:HistDefTransactionCardType" />
+  <xs:complexType name="HistDefCollectionCoinType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:HistDefBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="HistDefCollectionCoinType" nillable="true" type="tns:HistDefCollectionCoinType" />
+  <xs:element name="GetHistDefTransactionCardType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="authSession" nillable="true" type="tns:AuthSession" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetHistDefTransactionCardTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetHistDefTransactionCardTypeResult" nillable="true" type="tns:HistDefTransactionCardTypeResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="HistDefTransactionCardTypeResponse">
+    <xs:annotation>
+      <xs:appinfo />
+      <xs:documentation>&lt;summary&gt;
+            Response to the GetHistDefTransactionCardType request
+            &lt;see cref="T:HistDef.HistDefTransactionCardType" /&gt;
+            &lt;/summary&gt;</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:PublisherResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Result" nillable="true" type="tns:ArrayOfHistDefTransactionCardType">
+            <xs:annotation>
+              <xs:appinfo />
+              <xs:documentation>&lt;summary&gt;
+            List of supported card types (used in transactions)
+            &lt;see cref="T:HistDef.HistDefTransactionCardType" /&gt;
+            &lt;list type="HistDefTransactionCardType"&gt;&lt;/list&gt;
+            &lt;/summary&gt;</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="HistDefTransactionCardTypeResponse" nillable="true" type="tns:HistDefTransactionCardTypeResponse" />
+  <xs:complexType name="ArrayOfHistDefTransactionCardType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="HistDefTransactionCardType" nillable="true" type="tns:HistDefTransactionCardType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfHistDefTransactionCardType" nillable="true" type="tns:ArrayOfHistDefTransactionCardType" />
+  <xs:element name="GetHistCollection">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="authSession" nillable="true" type="tns:AuthSession" />
+        <xs:element minOccurs="0" name="histSelector" nillable="true" type="tns:HistCollectionFilter" />
+        <xs:element minOccurs="0" name="histInclude" nillable="true" type="tns:HistIncludeCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="HistCollectionFilter">
+    <xs:annotation>
+      <xs:appinfo />
+      <xs:documentation>&lt;summary&gt;
+            Collection filtering object
+            &lt;/summary&gt;</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="HistFilter" nillable="true" type="tns:EntityFilterBase">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Historical data selection related to system, geographical zone, city and PD machines
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HistCollectionFilter" nillable="true" type="tns:HistCollectionFilter" />
+  <xs:element name="GetHistCollectionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetHistCollectionResult" nillable="true" type="tns:HistCollectionResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="HistCollectionResponse">
+    <xs:annotation>
+      <xs:appinfo />
+      <xs:documentation>&lt;summary&gt;
+            Response to the GetHistCollections request
+            &lt;see cref="T:HistCollection" /&gt;
+            &lt;/summary&gt;</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:PublisherResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Result" nillable="true" type="tns:ArrayOfHistCollection">
+            <xs:annotation>
+              <xs:appinfo />
+              <xs:documentation>&lt;summary&gt;
+            List of all collections performed on PD machines
+            &lt;see cref="T:HistCollection" /&gt;
+            &lt;list type="HistCollection"&gt;&lt;/list&gt;
+            &lt;/summary&gt;</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="HistCollectionResponse" nillable="true" type="tns:HistCollectionResponse" />
+  <xs:complexType name="ArrayOfHistCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="HistCollection" nillable="true" type="tns:HistCollection" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfHistCollection" nillable="true" type="tns:ArrayOfHistCollection" />
+  <xs:complexType name="HistCollection">
+    <xs:annotation>
+      <xs:appinfo />
+      <xs:documentation>&lt;summary&gt;
+            Amount of money in a PD machine associated to a collection operation
+            &lt;see cref="T:HistCollectionResponse" /&gt;
+            &lt;seealso cref="T:HistCollectionTransaction" /&gt;
+            &lt;seealso cref="T:HistCollectionTariff" /&gt;
+            &lt;seealso cref="T:HistCollectionCoin" /&gt;
+            &lt;/summary&gt;</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="AccAccumAmount" type="xs:decimal">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Accumulated accounting amount of collected money since the PD start-up
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="AccTotalAmount" type="xs:decimal">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Total accounting amount of money within this collection
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="BeginTime" nillable="true" type="xs:dateTime">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Local time stamp of the beginning of the collection
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="CodCity" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            City public identifier associated to the collection
+            &lt;remarks&gt; Usually a sequence of 2 digits (nn) &lt;/remarks&gt;
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="CodGeoZone" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Geographical zone public identifier associated to the collection
+            &lt;remarks&gt; Usually a sequence of 2 digits (nn) &lt;/remarks&gt;
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="CodMachine" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            PD machine public identifier origin of the collection
+            &lt;remarks&gt; Usually a sequence of 4 digits (nnnn) &lt;/remarks&gt;
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="CodSystem" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            System public identifier associated to the collection
+            &lt;remarks&gt; Usually a sequence of 4 digits (nnnn) &lt;/remarks&gt;
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="EndTime" type="xs:dateTime">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Local time stamp of the end of the collection
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ExpAccumAmount" type="xs:decimal">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Accumulated exploitation amount of collected money since the PD start-up
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ExpTotalAmount" type="xs:decimal">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Total exploitation amount of money within this collection
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Number" type="xs:int">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            PD machine collection sequence number
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="TraAccumAmount" type="xs:decimal">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Accumulated transaction amount of collected money since the PD start-up
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="TraTotalAmount" type="xs:decimal">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Total transaction amount of money within this collection
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="TransCard" type="xs:decimal">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Total card amount of money within this collection
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="TransCash" type="xs:decimal">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Total cash amount of money within this collection
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="TransCount" type="xs:int">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Total amount of transactions within this collection
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="collCoin" nillable="true" type="tns:ArrayOfHistCollectionCoin">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            List of coin operations summary details within this collection
+            &lt;see cref="T:HistCollectionCoin" /&gt;
+            &lt;list type="HistCollectionCoin"&gt;&lt;/list&gt;
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="collTariff" nillable="true" type="tns:ArrayOfHistCollectionTariff">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            List of tariff operations summary details within this collection
+            &lt;see cref="T:HistCollectionTariff" /&gt;
+            &lt;list type="HistCollectionTariff"&gt;&lt;/list&gt;
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="collTrans" nillable="true" type="tns:ArrayOfHistCollectionTransaction">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            List of transaction operations summary details within this collection
+            &lt;see cref="T:HistCollectionTransaction" /&gt;
+            &lt;list type="HistCollectionTransaction"&gt;&lt;/list&gt;
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HistCollection" nillable="true" type="tns:HistCollection" />
+  <xs:complexType name="ArrayOfHistCollectionCoin">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="HistCollectionCoin" nillable="true" type="tns:HistCollectionCoin" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfHistCollectionCoin" nillable="true" type="tns:ArrayOfHistCollectionCoin" />
+  <xs:complexType name="HistCollectionCoin">
+    <xs:annotation>
+      <xs:appinfo />
+      <xs:documentation>&lt;summary&gt;
+            Single coin sumary data in a collection operation
+            &lt;see cref="T:HistCollection" /&gt;
+            &lt;/summary&gt;</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Count" type="xs:int">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Total amount of coins of this kind within the collection
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Type" type="xs:int">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Coin type
+            &lt;seealso cref="T:HistDef.HistDefCollectionCoinType" /&gt;
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HistCollectionCoin" nillable="true" type="tns:HistCollectionCoin" />
+  <xs:complexType name="ArrayOfHistCollectionTariff">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="HistCollectionTariff" nillable="true" type="tns:HistCollectionTariff" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfHistCollectionTariff" nillable="true" type="tns:ArrayOfHistCollectionTariff" />
+  <xs:complexType name="HistCollectionTariff">
+    <xs:annotation>
+      <xs:appinfo />
+      <xs:documentation>&lt;summary&gt;
+            Single tariff summary data in a collection operation
+            &lt;see cref="T:HistCollection" /&gt;
+            &lt;/summary&gt;</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Amount" type="xs:decimal">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Total amount of money spent using this tariff within the collection
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Count" type="xs:int">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Total amount of transactions using this tariff within the collection
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Tariff" type="xs:int">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Tariff line
+            &lt;remarks&gt; According to predefined available values &lt;/remarks&gt;
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HistCollectionTariff" nillable="true" type="tns:HistCollectionTariff" />
+  <xs:complexType name="ArrayOfHistCollectionTransaction">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="HistCollectionTransaction" nillable="true" type="tns:HistCollectionTransaction" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfHistCollectionTransaction" nillable="true" type="tns:ArrayOfHistCollectionTransaction" />
+  <xs:complexType name="HistCollectionTransaction">
+    <xs:annotation>
+      <xs:appinfo />
+      <xs:documentation>&lt;summary&gt;
+            Single transaction summary data in a collection operation
+            &lt;see cref="T:HistCollection" /&gt;
+            &lt;/summary&gt;</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Count" type="xs:int">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Total amount of paid transactions of this kind within the collection
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="PaidCard" type="xs:decimal">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Total card amount spent in this transaction kind within the collection
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="PaidCash" type="xs:decimal">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Total cash amount spent in this transaction kind within the collection
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Type" type="xs:int">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Transaction type
+            &lt;seealso cref="T:HistDef.HistDefTransactionType" /&gt;
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HistCollectionTransaction" nillable="true" type="tns:HistCollectionTransaction" />
+  <xs:element name="GetHistDefCollectionCoinType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="authSession" nillable="true" type="tns:AuthSession" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetHistDefCollectionCoinTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetHistDefCollectionCoinTypeResult" nillable="true" type="tns:HistDefCollectionCoinTypeResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="HistDefCollectionCoinTypeResponse">
+    <xs:annotation>
+      <xs:appinfo />
+      <xs:documentation>&lt;summary&gt;
+            Response to the GetHistDefCollectionCoinType request
+            &lt;see cref="T:HistDef.HistDefCollectionCoinType" /&gt;
+            &lt;/summary&gt;</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:PublisherResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Result" nillable="true" type="tns:ArrayOfHistDefCollectionCoinType">
+            <xs:annotation>
+              <xs:appinfo />
+              <xs:documentation>&lt;summary&gt;
+            List of supported coin types (used in collection operations)
+            &lt;see cref="T:HistDef.HistDefCollectionCoinType" /&gt;
+            &lt;list type="HistDefCollectionCoinType"&gt;&lt;/list&gt;
+            &lt;/summary&gt;</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="HistDefCollectionCoinTypeResponse" nillable="true" type="tns:HistDefCollectionCoinTypeResponse" />
+  <xs:complexType name="ArrayOfHistDefCollectionCoinType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="HistDefCollectionCoinType" nillable="true" type="tns:HistDefCollectionCoinType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfHistDefCollectionCoinType" nillable="true" type="tns:ArrayOfHistDefCollectionCoinType" />
+  <xs:element name="EntityFilter_GetAvailableSelection">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="authSession" nillable="true" type="tns:AuthSession" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EntityFilter_GetAvailableSelectionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="EntityFilter_GetAvailableSelectionResult" nillable="true" type="tns:EntityAvailableSelectionResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="EntityAvailableSelectionResponse">
+    <xs:annotation>
+      <xs:appinfo />
+      <xs:documentation>&lt;summary&gt;
+            Response to the GetHistAvailableSelection request
+            &lt;see cref="T:EntityAvailableSelection" /&gt;
+            &lt;/summary&gt;</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:PublisherResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Result" nillable="true" type="tns:EntityAvailableSelection">
+            <xs:annotation>
+              <xs:appinfo />
+              <xs:documentation>&lt;summary&gt;
+            Response to the historical available selection request
+            &lt;see cref="T:EntityAvailableSelection" /&gt;
+            &lt;/summary&gt;</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityAvailableSelectionResponse" nillable="true" type="tns:EntityAvailableSelectionResponse" />
+  <xs:complexType name="EntityAvailableSelection">
+    <xs:annotation>
+      <xs:appinfo />
+      <xs:documentation>&lt;summary&gt;
+            List of available systems, geographical zones, cities and machines
+            &lt;/summary&gt;</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="collSystem" nillable="true" type="tns:ArrayOfEntitySelectionSystem">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Collection of assigned systems
+            &lt;see cref="T:EntitySelectionMachine" /&gt;
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EntityAvailableSelection" nillable="true" type="tns:EntityAvailableSelection" />
+  <xs:complexType name="ArrayOfEntitySelectionSystem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EntitySelectionSystem" nillable="true" type="tns:EntitySelectionSystem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEntitySelectionSystem" nillable="true" type="tns:ArrayOfEntitySelectionSystem" />
+  <xs:complexType name="EntitySelectionSystem">
+    <xs:annotation>
+      <xs:appinfo />
+      <xs:documentation>&lt;summary&gt;
+            Available system definition.
+            Includes list of its assigned available geographic zones
+            &lt;/summary&gt;</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntitySelectionBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="collGeoZone" nillable="true" type="tns:ArrayOfEntitySelectionGeoZone">
+            <xs:annotation>
+              <xs:appinfo />
+              <xs:documentation>&lt;summary&gt;
+            Collection of assigned available geographic zones definition
+            &lt;see cref="T:EntitySelectionGeoZone" /&gt;
+            &lt;/summary&gt;</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntitySelectionSystem" nillable="true" type="tns:EntitySelectionSystem" />
+  <xs:complexType name="EntitySelectionBase">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Entity code 
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Entity description
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Entity name
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EntitySelectionBase" nillable="true" type="tns:EntitySelectionBase" />
+  <xs:complexType name="EntitySelectionCity">
+    <xs:annotation>
+      <xs:appinfo />
+      <xs:documentation>&lt;summary&gt;
+            Available city definition.
+            Includes list of its assigned available PD machines
+            &lt;/summary&gt;</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntitySelectionBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="collCnfZone" nillable="true" type="tns:ArrayOfEntitySelectionCnfZone">
+            <xs:annotation>
+              <xs:appinfo />
+              <xs:documentation>&lt;summary&gt;
+            Collection of assigned available CnfZones definition
+            &lt;see cref="T:EntitySelectionMachine" /&gt;
+            &lt;/summary&gt;</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="collMachine" nillable="true" type="tns:ArrayOfEntitySelectionMachine">
+            <xs:annotation>
+              <xs:appinfo />
+              <xs:documentation>&lt;summary&gt;
+            Collection of assigned available PD machines definition
+            &lt;see cref="T:EntitySelectionMachine" /&gt;
+            &lt;/summary&gt;</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="collPhyZone" nillable="true" type="tns:ArrayOfEntitySelectionPhyZone">
+            <xs:annotation>
+              <xs:appinfo />
+              <xs:documentation>&lt;summary&gt;
+            Collection of assigned available PhyZones definition
+            &lt;see cref="T:EntitySelectionMachine" /&gt;
+            &lt;/summary&gt;</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntitySelectionCity" nillable="true" type="tns:EntitySelectionCity" />
+  <xs:complexType name="ArrayOfEntitySelectionCnfZone">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EntitySelectionCnfZone" nillable="true" type="tns:EntitySelectionCnfZone" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEntitySelectionCnfZone" nillable="true" type="tns:ArrayOfEntitySelectionCnfZone" />
+  <xs:complexType name="EntitySelectionCnfZone">
+    <xs:annotation>
+      <xs:appinfo />
+      <xs:documentation>&lt;summary&gt;
+            Available city definition.
+            Includes list of its assigned available PD machines
+            &lt;/summary&gt;</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntitySelectionBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="collMachine" nillable="true" type="tns:ArrayOfEntitySelectionMachine">
+            <xs:annotation>
+              <xs:appinfo />
+              <xs:documentation>&lt;summary&gt;
+            Collection of assigned available PD machines definition
+            &lt;see cref="T:EntitySelectionMachine" /&gt;
+            &lt;/summary&gt;</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntitySelectionCnfZone" nillable="true" type="tns:EntitySelectionCnfZone" />
+  <xs:complexType name="ArrayOfEntitySelectionMachine">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EntitySelectionMachine" nillable="true" type="tns:EntitySelectionMachine" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEntitySelectionMachine" nillable="true" type="tns:ArrayOfEntitySelectionMachine" />
+  <xs:complexType name="EntitySelectionMachine">
+    <xs:annotation>
+      <xs:appinfo />
+      <xs:documentation>&lt;summary&gt;
+            Available PD machine definition
+            &lt;/summary&gt;</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntitySelectionBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Alias" nillable="true" type="xs:string">
+            <xs:annotation>
+              <xs:appinfo />
+              <xs:documentation>&lt;summary&gt;
+            Alias.
+            &lt;/summary&gt;</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntitySelectionMachine" nillable="true" type="tns:EntitySelectionMachine" />
+  <xs:complexType name="EntitySelectionGeoZone">
+    <xs:annotation>
+      <xs:appinfo />
+      <xs:documentation>&lt;summary&gt;
+            Available geographic zone definition.
+            Includes list of its assigned available cities
+            &lt;/summary&gt;</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntitySelectionBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ISO4217Currency" nillable="true" type="xs:string">
+            <xs:annotation>
+              <xs:appinfo />
+              <xs:documentation>&lt;summary&gt;
+            Default standard currency code referred to as the ISO 4217 code list
+            &lt;/summary&gt;</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="TimeZone" nillable="true" type="xs:string">
+            <xs:annotation>
+              <xs:appinfo />
+              <xs:documentation>&lt;summary&gt;
+            Time zone identifier as in IANA Time Zone Database (tz database).
+            &lt;remarks&gt;See http://en.wikipedia.org/wiki/List_of_tz_database_time_zones&lt;/remarks&gt;
+            &lt;/summary&gt;</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="collCity" nillable="true" type="tns:ArrayOfEntitySelectionCity">
+            <xs:annotation>
+              <xs:appinfo />
+              <xs:documentation>&lt;summary&gt;
+            Collection of assigned available cities definition
+            &lt;see cref="T:EntitySelectionCity" /&gt;
+            &lt;/summary&gt;</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntitySelectionGeoZone" nillable="true" type="tns:EntitySelectionGeoZone" />
+  <xs:complexType name="ArrayOfEntitySelectionCity">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EntitySelectionCity" nillable="true" type="tns:EntitySelectionCity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEntitySelectionCity" nillable="true" type="tns:ArrayOfEntitySelectionCity" />
+  <xs:complexType name="ArrayOfEntitySelectionPhyZone">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EntitySelectionPhyZone" nillable="true" type="tns:EntitySelectionPhyZone" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEntitySelectionPhyZone" nillable="true" type="tns:ArrayOfEntitySelectionPhyZone" />
+  <xs:complexType name="EntitySelectionPhyZone">
+    <xs:annotation>
+      <xs:appinfo />
+      <xs:documentation>&lt;summary&gt;
+            Available city definition.
+            Includes list of its assigned available PD machines
+            &lt;/summary&gt;</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntitySelectionBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="collMachine" nillable="true" type="tns:ArrayOfEntitySelectionMachine">
+            <xs:annotation>
+              <xs:appinfo />
+              <xs:documentation>&lt;summary&gt;
+            Collection of assigned available PD machines definition
+            &lt;see cref="T:EntitySelectionMachine" /&gt;
+            &lt;/summary&gt;</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntitySelectionPhyZone" nillable="true" type="tns:EntitySelectionPhyZone" />
+  <xs:complexType name="ArrayOfEntitySelectionGeoZone">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EntitySelectionGeoZone" nillable="true" type="tns:EntitySelectionGeoZone" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEntitySelectionGeoZone" nillable="true" type="tns:ArrayOfEntitySelectionGeoZone" />
+</xs:schema>

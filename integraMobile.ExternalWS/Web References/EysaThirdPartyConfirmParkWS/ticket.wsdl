@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="rdPConfirmParkingOperation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="rdPConfirmParkingOperationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="rdPConfirmParkingOperationResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsolaSoapHeader" type="tns:ConsolaSoapHeader" />
+      <s:complexType name="ConsolaSoapHeader">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="IdContrata" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="LocalTime" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="NomUsuario" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NumSerie" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IdUsuario" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+        </s:sequence>
+        <s:anyAttribute />
+      </s:complexType>
+      <s:element name="rdPQueryUnParkingOperation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="rdPQueryUnParkingOperationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="rdPQueryUnParkingOperationResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="rdPConfirmUnParkingOperation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="rdPConfirmUnParkingOperationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="rdPConfirmUnParkingOperationResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="rdPConfirmParkingOperationSoapIn">
+    <wsdl:part name="parameters" element="tns:rdPConfirmParkingOperation" />
+  </wsdl:message>
+  <wsdl:message name="rdPConfirmParkingOperationSoapOut">
+    <wsdl:part name="parameters" element="tns:rdPConfirmParkingOperationResponse" />
+  </wsdl:message>
+  <wsdl:message name="rdPConfirmParkingOperationConsolaSoapHeader">
+    <wsdl:part name="ConsolaSoapHeader" element="tns:ConsolaSoapHeader" />
+  </wsdl:message>
+  <wsdl:message name="rdPQueryUnParkingOperationSoapIn">
+    <wsdl:part name="parameters" element="tns:rdPQueryUnParkingOperation" />
+  </wsdl:message>
+  <wsdl:message name="rdPQueryUnParkingOperationSoapOut">
+    <wsdl:part name="parameters" element="tns:rdPQueryUnParkingOperationResponse" />
+  </wsdl:message>
+  <wsdl:message name="rdPQueryUnParkingOperationConsolaSoapHeader">
+    <wsdl:part name="ConsolaSoapHeader" element="tns:ConsolaSoapHeader" />
+  </wsdl:message>
+  <wsdl:message name="rdPConfirmUnParkingOperationSoapIn">
+    <wsdl:part name="parameters" element="tns:rdPConfirmUnParkingOperation" />
+  </wsdl:message>
+  <wsdl:message name="rdPConfirmUnParkingOperationSoapOut">
+    <wsdl:part name="parameters" element="tns:rdPConfirmUnParkingOperationResponse" />
+  </wsdl:message>
+  <wsdl:message name="rdPConfirmUnParkingOperationConsolaSoapHeader">
+    <wsdl:part name="ConsolaSoapHeader" element="tns:ConsolaSoapHeader" />
+  </wsdl:message>
+  <wsdl:portType name="TicketSoap">
+    <wsdl:operation name="rdPConfirmParkingOperation">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Insercción de tickets y confirmación</wsdl:documentation>
+      <wsdl:input message="tns:rdPConfirmParkingOperationSoapIn" />
+      <wsdl:output message="tns:rdPConfirmParkingOperationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="rdPQueryUnParkingOperation">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Consulta Desaparcar ticket de una matrícula</wsdl:documentation>
+      <wsdl:input message="tns:rdPQueryUnParkingOperationSoapIn" />
+      <wsdl:output message="tns:rdPQueryUnParkingOperationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="rdPConfirmUnParkingOperation">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Confirmación Desaparcar ticket</wsdl:documentation>
+      <wsdl:input message="tns:rdPConfirmUnParkingOperationSoapIn" />
+      <wsdl:output message="tns:rdPConfirmUnParkingOperationSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="TicketSoap" type="tns:TicketSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="rdPConfirmParkingOperation">
+      <soap:operation soapAction="http://tempuri.org/rdPConfirmParkingOperation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:rdPConfirmParkingOperationConsolaSoapHeader" part="ConsolaSoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="rdPQueryUnParkingOperation">
+      <soap:operation soapAction="http://tempuri.org/rdPQueryUnParkingOperation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:rdPQueryUnParkingOperationConsolaSoapHeader" part="ConsolaSoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="rdPConfirmUnParkingOperation">
+      <soap:operation soapAction="http://tempuri.org/rdPConfirmUnParkingOperation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:rdPConfirmUnParkingOperationConsolaSoapHeader" part="ConsolaSoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="TicketSoap12" type="tns:TicketSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="rdPConfirmParkingOperation">
+      <soap12:operation soapAction="http://tempuri.org/rdPConfirmParkingOperation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:rdPConfirmParkingOperationConsolaSoapHeader" part="ConsolaSoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="rdPQueryUnParkingOperation">
+      <soap12:operation soapAction="http://tempuri.org/rdPQueryUnParkingOperation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:rdPQueryUnParkingOperationConsolaSoapHeader" part="ConsolaSoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="rdPConfirmUnParkingOperation">
+      <soap12:operation soapAction="http://tempuri.org/rdPConfirmUnParkingOperation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:rdPConfirmUnParkingOperationConsolaSoapHeader" part="ConsolaSoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Ticket">
+    <wsdl:port name="TicketSoap" binding="tns:TicketSoap">
+      <soap:address location="http://esixvyewb01t/parquimetrosWSVS2012/framework/ticket.asmx" />
+    </wsdl:port>
+    <wsdl:port name="TicketSoap12" binding="tns:TicketSoap12">
+      <soap12:address location="http://esixvyewb01t/parquimetrosWSVS2012/framework/ticket.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>D:\Proyectos\Integra\svn\dbPBP\01_trunk\02_SRC\02_Server\PayByPhoneWeb\Deploy\ZendeskSSO</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/Base_AP.dll">
+      <publishTime>12/05/2013 22:05:16</publishTime>
+    </File>
+    <File Include="bin/Base_Common.dll">
+      <publishTime>12/05/2013 22:05:16</publishTime>
+    </File>
+    <File Include="bin/CardEaseXMLClient.dll">
+      <publishTime>12/18/2015 20:32:09</publishTime>
+    </File>
+    <File Include="bin/CH.Crc32.dll">
+      <publishTime>05/12/2013 22:05:12</publishTime>
+    </File>
+    <File Include="bin/eSELECTplus_dotNet_API.dll">
+      <publishTime>06/16/2020 09:07:32</publishTime>
+    </File>
+    <File Include="bin/Gma.QrCodeNet.Encoding.dll">
+      <publishTime>05/12/2013 22:05:16</publishTime>
+    </File>
+    <File Include="bin/integraMobile.Domain.dll">
+      <publishTime>01/04/2022 19:51:38</publishTime>
+    </File>
+    <File Include="bin/integraMobile.Domain.dll.config">
+      <publishTime>06/16/2020 09:05:54</publishTime>
+    </File>
+    <File Include="bin/integraMobile.Domain.pdb">
+      <publishTime>01/04/2022 19:51:38</publishTime>
+    </File>
+    <File Include="bin/integraMobile.Domain.XmlSerializers.dll">
+      <publishTime>01/04/2022 19:51:39</publishTime>
+    </File>
+    <File Include="bin/integraMobile.Infrastructure.dll">
+      <publishTime>01/04/2022 15:41:19</publishTime>
+    </File>
+    <File Include="bin/integraMobile.Infrastructure.dll.config">
+      <publishTime>01/04/2022 15:41:19</publishTime>
+    </File>
+    <File Include="bin/integraMobile.Infrastructure.pdb">
+      <publishTime>01/04/2022 15:41:19</publishTime>
+    </File>
+    <File Include="bin/integraMobile.Infrastructure.XmlSerializers.dll">
+      <publishTime>01/04/2022 15:41:20</publishTime>
+    </File>
+    <File Include="bin/itextsharp.dll">
+      <publishTime>12/09/2021 20:38:38</publishTime>
+    </File>
+    <File Include="bin/JWT.dll">
+      <publishTime>06/21/2019 12:44:33</publishTime>
+    </File>
+    <File Include="bin/log4net.dll">
+      <publishTime>05/06/2014 21:36:59</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Bcl.AsyncInterfaces.dll">
+      <publishTime>08/30/2020 10:15:14</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>01/25/2016 21:06:15</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Services3.dll">
+      <publishTime>05/03/2018 11:24:50</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>09/29/2016 22:13:18</publishTime>
+    </File>
+    <File Include="bin/Ninject.dll">
+      <publishTime>01/25/2016 21:06:20</publishTime>
+    </File>
+    <File Include="bin/Ninject.Web.Common.dll">
+      <publishTime>01/25/2016 21:06:21</publishTime>
+    </File>
+    <File Include="bin/Ninject.Web.dll">
+      <publishTime>01/25/2016 21:06:15</publishTime>
+    </File>
+    <File Include="bin/PayPal.dll">
+      <publishTime>11/21/2019 11:03:25</publishTime>
+    </File>
+    <File Include="bin/paypal_base.dll">
+      <publishTime>09/04/2013 00:21:03</publishTime>
+    </File>
+    <File Include="bin/Stripe.net.dll">
+      <publishTime>12/22/2021 10:30:52</publishTime>
+    </File>
+    <File Include="bin/System.Runtime.CompilerServices.Unsafe.dll">
+      <publishTime>06/02/2020 17:18:04</publishTime>
+    </File>
+    <File Include="bin/System.Threading.Tasks.Extensions.dll">
+      <publishTime>08/30/2020 10:15:14</publishTime>
+    </File>
+    <File Include="bin/TransbankCerts/597020000547.pfx">
+      <publishTime>07/15/2016 18:33:25</publishTime>
+    </File>
+    <File Include="bin/TransbankCerts/tbk.pem">
+      <publishTime>05/23/2016 22:04:06</publishTime>
+    </File>
+    <File Include="bin/WebActivatorEx.dll">
+      <publishTime>01/25/2016 21:06:15</publishTime>
+    </File>
+    <File Include="bin/Webpay.Transbank.Library.dll">
+      <publishTime>01/16/2018 17:16:40</publishTime>
+    </File>
+    <File Include="bin/ZendeskSSO.dll">
+      <publishTime>01/04/2022 19:57:10</publishTime>
+    </File>
+    <File Include="bin/ZendeskSSO.pdb">
+      <publishTime>01/04/2022 19:57:10</publishTime>
+    </File>
+    <File Include="bin/ZendeskSSO.XmlSerializers.dll">
+      <publishTime>01/04/2022 19:57:11</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>01/25/2016 21:06:19</publishTime>
+    </File>
+    <File Include="SSO.aspx">
+      <publishTime>01/25/2016 21:06:25</publishTime>
+    </File>
+    <File Include="SSOMobile.aspx">
+      <publishTime>01/25/2016 21:06:20</publishTime>
+    </File>
+    <File Include="Test.aspx">
+      <publishTime>01/23/2016 10:32:27</publishTime>
+    </File>
+    <File Include="Web References/integraMobileWS/Reference.map">
+      <publishTime>01/04/2022 15:41:05</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>01/04/2022 17:45:16</publishTime>
+    </File>
+    <File Include="ZendeskSSO.pfx">
+      <publishTime>01/25/2016 21:06:19</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

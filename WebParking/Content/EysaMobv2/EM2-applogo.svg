@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="128px"
+	 height="128px" viewBox="0 0 128 128" enable-background="new 0 0 128 128" xml:space="preserve">
+<g id="Capa_1" display="none">
+	<g id="icon_x5F_tmpl.psb" display="inline">
+		
+			<image overflow="visible" width="1024" height="1024" id="icon_x5F_tmpl_1_" xlink:href="B8F0CA50.png"  transform="matrix(0.125 0 0 0.125 0 0)">
+		</image>
+	</g>
+	<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="0" y1="64" x2="128" y2="64">
+		<stop  offset="0" style="stop-color:#FFFFFF"/>
+		<stop  offset="1" style="stop-color:#000000"/>
+	</linearGradient>
+	<rect fill="url(#SVGID_1_)" width="128" height="128"/>
+</g>
+<g id="Capa_3" display="none">
+	<polygon display="inline" opacity="0.15" enable-background="new    " points="128,0 128,128 0,128 	"/>
+</g>
+<g id="Capa_2" display="none">
+	<g>
+		
+			<rect x="43" y="63" display="inline" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-miterlimit="10" width="41" height="30"/>
+		<path display="inline" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-miterlimit="10" d="M43.347,55.191
+			c0-11.432,8.895-20.666,20.327-20.666C75.105,34.525,84,43.826,84,55.258V76"/>
+	</g>
+	<g display="inline">
+		
+			<rect x="40.177" y="62.895" fill="none" stroke="#FFFFFF" stroke-width="4.5509" stroke-miterlimit="10" width="46.647" height="34.133"/>
+		<path fill="none" stroke="#FFFFFF" stroke-width="4.5509" stroke-miterlimit="10" d="M40.571,54.011
+			c0-13.006,10.12-23.513,23.127-23.513c13.006,0,23.126,10.582,23.126,23.588v23.599"/>
+	</g>
+</g>
+<g id="Capa_4">
+	<polygon fill="#2581BC" stroke="#FFFFFF" stroke-width="7" stroke-miterlimit="10" points="116.5,5.5 10.5,5.5 10.5,99.076 
+		10.5,119.057 30.439,100.5 116.5,100.5 	"/>
+	<g>
+		<polyline fill="#2581BC" points="110,10 15,10 15,114 		"/>
+		<g>
+			<defs>
+				<rect id="SVGID_2_" x="15" y="10" width="95" height="86"/>
+			</defs>
+			<use xlink:href="#SVGID_2_"  overflow="visible" fill="#2581BC"/>
+			<clipPath id="SVGID_3_">
+				<use xlink:href="#SVGID_2_"  overflow="visible"/>
+			</clipPath>
+			<polygon opacity="0.5" clip-path="url(#SVGID_3_)" fill="#2581BC" points="140.486,78.805 76.672,139.556 31,96.104 31,20.511 
+				94.813,35.354 			"/>
+		</g>
+		<path opacity="0.33" fill="#2581BC" d="M113.755,10C101.074,27,90.946,34.509,65.9,34.701C47.401,34.843,23,63.085,15,89.449V10
+			H113.755z"/>
+		<g>
+			<path fill="#FFFFFF" d="M93.512,44.408c0,4.869-1.11,9.218-3.329,13.049c-2.22,3.831-5.396,6.792-9.531,8.887
+				c-4.134,2.094-9.047,3.14-14.74,3.14H47.118v27.635H31.277V20.459h33.99c9.057,0,16.028,2.086,20.915,6.256
+				C91.068,30.886,93.512,36.783,93.512,44.408z M77.564,44.676c0-7.947-4.69-11.92-14.07-11.92H47.118v24.539h16.807
+				c4.368,0,7.733-1.083,10.095-3.249C76.382,51.881,77.564,48.757,77.564,44.676z"/>
+		</g>
+	</g>
+</g>
+</svg>

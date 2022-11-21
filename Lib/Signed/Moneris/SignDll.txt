@@ -1,0 +1,3 @@
+ildasm /all /out=eSELECTplus_dotNet_API.il eSELECTplus_dotNet_API.dll
+sn -k eSELECTplus_dotNet_API.snk
+ilasm /dll /key=eSELECTplus_dotNet_API.snk eSELECTplus_dotNet_API.il

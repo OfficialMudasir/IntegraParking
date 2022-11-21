@@ -1,0 +1,109 @@
+﻿.divFindProfiles {
+    width: 100%;
+    text-align: right;
+	right: 30px;
+	position: relative;
+	margin-bottom:10px;
+}
+
+.lvProfiles 
+{
+    text-align:left;
+    height: 90%;
+	overflow-y: auto;
+	min-height:350px;
+}
+.lvProfiles.k-widget {
+	border:none;
+}
+.lvProfilesAdd 
+{
+    text-align:left;    
+}
+/* estils del llistat de perfils desats per l'usuari */
+.liProfile 
+{
+    
+	height: 25px;
+	width: 195px;
+	float: left; 
+	left: 30px;
+	position: relative;
+	top: 30px;
+	padding: 5px 10px 0px 10px;
+	border-right: 1px solid #CCCCCC;
+	background:url(../../../Content/img/bg_linia_195px.gif) no-repeat bottom center;
+}
+/*per evitar border al 3er element de les vistes desades*/
+li:nth-of-type(3n) .liProfile {
+border: none;
+}
+
+.liProfileLeft 
+{
+    float: left;    
+}
+.liProfileRight 
+{
+    float: right;
+    text-align: right;
+}
+
+/* icones esborrar i editar perfils desats*/
+.liProfileRight .profileDelete {
+	background:url(images/delete_filter.gif) no-repeat 50% 50%;
+}
+.liProfileRight .profileFilter {
+	background:url(images/edit_filter.gif) no-repeat 50% 50%;
+}
+
+
+/*llistat perfils div*/
+#lvUnits_Profiles {border:none;}
+
+/*sense estil predefinit als comportaments*/
+.ProfileSelected
+{
+    background-color:#F3F3F3 !important;*/
+}
+.ProfileAlt
+{
+    /*background-color: #edeaea;*/
+}
+
+.imageProfilesList
+{
+	display:inline-block;
+	height: 16px;
+	width: 16px;
+	background: transparent url(images/icon_lib/128x128/stop.png) no-repeat 50% 50%;
+	background-size: contain;
+	border:none;	
+}
+
+.profileDefaulttrue {
+    background-image: Url(images/grid/default.png);
+}
+.profileDefaultfalse {
+    background-image: Url(images/grid/defaultDisabled.png);
+}
+
+.profilePublictrue {
+    background-image: Url(images/grid/public.png);
+    display: none;
+}
+.profilePublicfalse {
+    background-image: Url(images/grid/private.png);
+    display: none;
+}
+
+.profileSave {
+    background-image: Url(images/grid/save.png);
+    display: none;
+}
+.profileDelete {
+    background-image: Url(images/grid/delete.png);
+}
+.profileFilter {
+    background-image: Url(images/grid/filtersActive16.png);    
+}

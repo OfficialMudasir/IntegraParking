@@ -1,0 +1,9 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="TestExternalWebServices.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="TestExternalWebServices_com_eysamobile_www_integraExternalServices" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://www.eysamobile.com/integraMobileWS/integraExternalServices.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

@@ -1,0 +1,323 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6F4438DD-08BC-4388-AE59-7596D1359858}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ASPNET_SDK_Samples</RootNamespace>
+    <AssemblyName>ASPNET_SDK_Samples_AP</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <UseIISExpress>false</UseIISExpress>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\log4net.dll" />
+    <Content Include="Global.asax" />
+    <Content Include="logs\paypal_platform.log" />
+    <Content Include="Samples\APIError.aspx" />
+    <Content Include="Samples\Calls.aspx" />
+    <Content Include="Samples\CancelPreapproval.aspx" />
+    <Content Include="Samples\CancelPreapprovalReceipt.aspx" />
+    <Content Include="Samples\ConvertCurrencyReceipt.aspx" />
+    <Content Include="Samples\ExecutePaymentReceipt.aspx" />
+    <Content Include="Samples\ExecutePayment.aspx" />
+    <Content Include="Samples\GetPaymentOption.aspx" />
+    <Content Include="Samples\GetPaymentOptionReceipt.aspx" />
+    <Content Include="Samples\SetPaymentOptionsReceipt.aspx" />
+    <Content Include="Samples\PayCreateDetails.aspx" />
+    <Content Include="Samples\PayCreate.aspx" />
+    <Content Include="Samples\Default.aspx" />
+    <Content Include="Samples\GetPaymentDetails.aspx" />
+    <Content Include="Samples\GetPreapprovalDetails.aspx" />
+    <Content Include="Samples\PaymentDetails.aspx" />
+    <Content Include="Samples\PreapprovalDetails.aspx" />
+    <Content Include="Samples\Refund.aspx" />
+    <Content Include="Samples\RefundReceipt.aspx" />
+    <Content Include="Samples\sdk.css" />
+    <Content Include="Samples\SetConvertCurrency.aspx" />
+    <Content Include="Samples\SetPay.aspx" />
+    <Content Include="Samples\SetPayChained.aspx" />
+    <Content Include="Samples\SetPaymentOptions.aspx" />
+    <Content Include="Samples\SetPayParallel.aspx" />
+    <Content Include="Samples\SetPreapproval.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\APIError.aspx.cs">
+      <DependentUpon>APIError.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Samples\Calls.aspx.cs">
+      <DependentUpon>Calls.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Samples\CancelPreapproval.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>CancelPreapproval.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\CancelPreapprovalReceipt.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>CancelPreapprovalReceipt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\ConvertCurrencyReceipt.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>ConvertCurrencyReceipt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\ExecutePaymentReceipt.aspx.cs">
+      <DependentUpon>ExecutePaymentReceipt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Samples\ExecutePayment.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>ExecutePayment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\ExecutePayment.aspx.designer.cs">
+      <DependentUpon>ExecutePayment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\GetPaymentOption.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>GetPaymentOption.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\GetPaymentOption.aspx.designer.cs">
+      <DependentUpon>GetPaymentOption.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\GetPaymentOptionReceipt.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>GetPaymentOptionReceipt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\GetPaymentOptionReceipt.aspx.designer.cs">
+      <DependentUpon>GetPaymentOptionReceipt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\SetPaymentOptionsReceipt.aspx.cs">
+      <DependentUpon>SetPaymentOptionsReceipt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Samples\PayCreateDetails.aspx.cs">
+      <DependentUpon>PayCreateDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Samples\PayCreate.aspx.cs">
+      <DependentUpon>PayCreate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Samples\Default.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\GetPaymentDetails.aspx.cs">
+      <DependentUpon>GetPaymentDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Samples\GetPreapprovalDetails.aspx.cs">
+      <DependentUpon>GetPreapprovalDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Samples\PaymentDetails.aspx.cs">
+      <DependentUpon>PaymentDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Samples\PreapprovalDetails.aspx.cs">
+      <DependentUpon>PreapprovalDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Samples\Refund.aspx.cs">
+      <DependentUpon>Refund.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Samples\RefundReceipt.aspx.cs">
+      <DependentUpon>RefundReceipt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Samples\SetConvertCurrency.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>SetConvertCurrency.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\SetPay.aspx.cs">
+      <DependentUpon>SetPay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Samples\SetPayChained.aspx.cs">
+      <DependentUpon>SetPayChained.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Samples\SetPaymentOptions.aspx.cs">
+      <DependentUpon>SetPaymentOptions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Samples\SetPaymentOptions.aspx.designer.cs">
+      <DependentUpon>SetPaymentOptions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\SetPayParallel.aspx.cs">
+      <DependentUpon>SetPayParallel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Samples\SetPreapproval.aspx.cs">
+      <DependentUpon>SetPreapproval.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Samples\Utils\ClientInfoUtil.cs" />
+    <Compile Include="Samples\Utils\Constants.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Samples\APIError.aspx.resx">
+      <DependentUpon>APIError.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Samples\Calls.aspx.resx">
+      <DependentUpon>Calls.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Samples\ExecutePaymentReceipt.aspx.resx">
+      <DependentUpon>ExecutePaymentReceipt.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Samples\SetPaymentOptionsReceipt.aspx.resx">
+      <DependentUpon>SetPaymentOptionsReceipt.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Samples\PayCreateDetails.aspx.resx">
+      <DependentUpon>PayCreateDetails.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Samples\PayCreate.aspx.resx">
+      <DependentUpon>PayCreate.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Samples\GetPaymentDetails.aspx.resx">
+      <DependentUpon>GetPaymentDetails.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Samples\PaymentDetails.aspx.resx">
+      <DependentUpon>PaymentDetails.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Samples\PreapprovalDetails.aspx.resx">
+      <DependentUpon>PreapprovalDetails.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Samples\Refund.aspx.resx">
+      <DependentUpon>Refund.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Samples\RefundReceipt.aspx.resx">
+      <DependentUpon>RefundReceipt.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Samples\SetPay.aspx.resx">
+      <DependentUpon>SetPay.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Samples\SetPayChained.aspx.resx">
+      <DependentUpon>SetPayChained.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Samples\SetPayParallel.aspx.resx">
+      <DependentUpon>SetPayParallel.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Samples\SetPreapproval.aspx.resx">
+      <DependentUpon>SetPreapproval.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Base_AP\Base_AP.csproj">
+      <Project>{A60BA2AD-0E66-4A35-BA21-DA04C07CA964}</Project>
+      <Name>Base_AP</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\src\Base_Common\Base_Common.csproj">
+      <Project>{1F5FF00B-CE0F-40B8-9BC4-7B5ED2087266}</Project>
+      <Name>CommonBase</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="certs\sdk.p12" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>3935</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

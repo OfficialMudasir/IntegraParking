@@ -1,0 +1,3544 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="CheckService">
+        <s:complexType />
+      </s:element>
+      <s:element name="CheckServiceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CheckServiceResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckServiceJSON">
+        <s:complexType />
+      </s:element>
+      <s:element name="CheckServiceJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CheckServiceJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryAvailableTariffs">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryAvailableTariffsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryAvailableTariffsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryAvailableTariffsJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="jsonIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryAvailableTariffsJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryAvailableTariffsJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryParkingOperation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryParkingOperationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryParkingOperationResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryParkingOperationJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="jsonIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryParkingOperationJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryParkingOperationJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryParkingOperationWithTimeSteps">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryParkingOperationWithTimeStepsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryParkingOperationWithTimeStepsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryParkingOperationWithTimeStepsJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="jsonIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryParkingOperationWithTimeStepsJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryParkingOperationWithTimeStepsJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryParkingOperationWithAmountSteps">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryParkingOperationWithAmountStepsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryParkingOperationWithAmountStepsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryParkingOperationWithAmountStepsJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="jsonIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryParkingOperationWithAmountStepsJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryParkingOperationWithAmountStepsJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryUnParkingOperation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryUnParkingOperationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryUnParkingOperationResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryUnParkingOperationJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="jsonIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryUnParkingOperationJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryUnParkingOperationJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertExternalParkingOperationInstallationTime">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertExternalParkingOperationInstallationTimeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsertExternalParkingOperationInstallationTimeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertExternalParkingOperationInstallationTimeJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="jsonIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertExternalParkingOperationInstallationTimeJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsertExternalParkingOperationInstallationTimeJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertExternalParkingOperationUTCTime">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertExternalParkingOperationUTCTimeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsertExternalParkingOperationUTCTimeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertExternalParkingOperationUTCTimeJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="jsonIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertExternalParkingOperationUTCTimeJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsertExternalParkingOperationUTCTimeJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertExternalUnParkingOperationInstallationTime">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertExternalUnParkingOperationInstallationTimeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsertExternalUnParkingOperationInstallationTimeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertExternalUnParkingOperationInstallationTimeJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="jsonIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertExternalUnParkingOperationInstallationTimeJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsertExternalUnParkingOperationInstallationTimeJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertExternalUnParkingOperationUTCTime">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertExternalUnParkingOperationUTCTimeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsertExternalUnParkingOperationUTCTimeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertExternalUnParkingOperationUTCTimeJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="jsonIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertExternalUnParkingOperationUTCTimeJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsertExternalUnParkingOperationUTCTimeJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertExternalParkingOperationGtechna">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertExternalParkingOperationGtechnaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsertExternalParkingOperationGtechnaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertExternalParkingOperationGtechnaJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="jsonIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertExternalParkingOperationGtechnaJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsertExternalParkingOperationGtechnaJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertExternalPermitInstallationTime">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertExternalPermitInstallationTimeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsertExternalPermitInstallationTimeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertExternalPermitInstallationTimeJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="jsonIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertExternalPermitInstallationTimeJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsertExternalPermitInstallationTimeJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertExternalSystemOperationUTCTime">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertExternalSystemOperationUTCTimeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsertExternalSystemOperationUTCTimeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertExternalSystemOperationUTCTimeJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="jsonIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertExternalSystemOperationUTCTimeJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsertExternalSystemOperationUTCTimeJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertExternalSystemOperationInstallationTime">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertExternalSystemOperationInstallationTimeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsertExternalSystemOperationInstallationTimeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertExternalSystemOperationInstallationTimeJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="jsonIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertExternalSystemOperationInstallationTimeJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsertExternalSystemOperationInstallationTimeJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertExternalParkingOperationParkingmeter">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertExternalParkingOperationParkingmeterResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsertExternalParkingOperationParkingmeterResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertExternalParkingOperationParkingmeterJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="jsonIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertExternalParkingOperationParkingmeterJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsertExternalParkingOperationParkingmeterJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryPlateLastParkingOperation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryPlateLastParkingOperationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryPlateLastParkingOperationResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryPlateLastParkingOperationJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="jsonIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryPlateLastParkingOperationJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryPlateLastParkingOperationJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryGroupLastParkingOperations">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryGroupLastParkingOperationsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryGroupLastParkingOperationsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryGroupLastParkingOperationsJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="jsonIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryGroupLastParkingOperationsJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryGroupLastParkingOperationsJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryPlateHisOperations">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryPlateHisOperationsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryPlateHisOperationsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryPlateHisOperationsJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="jsonIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryPlateHisOperationsJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryPlateHisOperationsJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModifyOperationPlates">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModifyOperationPlatesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ModifyOperationPlatesResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModifyOperationPlatesJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="jsonIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModifyOperationPlatesJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ModifyOperationPlatesJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertExternalCameraOperationInstallationTime">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertExternalCameraOperationInstallationTimeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsertExternalCameraOperationInstallationTimeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertExternalCameraOperationInstallationTimeJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="jsonIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertExternalCameraOperationInstallationTimeJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsertExternalCameraOperationInstallationTimeJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertExternalCameraOperationUTCTime">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertExternalCameraOperationUTCTimeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsertExternalCameraOperationUTCTimeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertExternalCameraOperationUTCTimeJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="jsonIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertExternalCameraOperationUTCTimeJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsertExternalCameraOperationUTCTimeJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CancelParkingOperation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CancelParkingOperationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CancelParkingOperationResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CancelParkingOperationJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="jsonIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CancelParkingOperationJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CancelParkingOperationJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="CheckServiceSoapIn">
+    <wsdl:part name="parameters" element="tns:CheckService" />
+  </wsdl:message>
+  <wsdl:message name="CheckServiceSoapOut">
+    <wsdl:part name="parameters" element="tns:CheckServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="CheckServiceJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:CheckServiceJSON" />
+  </wsdl:message>
+  <wsdl:message name="CheckServiceJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:CheckServiceJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryAvailableTariffsSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryAvailableTariffs" />
+  </wsdl:message>
+  <wsdl:message name="QueryAvailableTariffsSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryAvailableTariffsResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryAvailableTariffsJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryAvailableTariffsJSON" />
+  </wsdl:message>
+  <wsdl:message name="QueryAvailableTariffsJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryAvailableTariffsJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryParkingOperationSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryParkingOperation" />
+  </wsdl:message>
+  <wsdl:message name="QueryParkingOperationSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryParkingOperationResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryParkingOperationJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryParkingOperationJSON" />
+  </wsdl:message>
+  <wsdl:message name="QueryParkingOperationJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryParkingOperationJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryParkingOperationWithTimeStepsSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryParkingOperationWithTimeSteps" />
+  </wsdl:message>
+  <wsdl:message name="QueryParkingOperationWithTimeStepsSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryParkingOperationWithTimeStepsResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryParkingOperationWithTimeStepsJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryParkingOperationWithTimeStepsJSON" />
+  </wsdl:message>
+  <wsdl:message name="QueryParkingOperationWithTimeStepsJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryParkingOperationWithTimeStepsJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryParkingOperationWithAmountStepsSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryParkingOperationWithAmountSteps" />
+  </wsdl:message>
+  <wsdl:message name="QueryParkingOperationWithAmountStepsSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryParkingOperationWithAmountStepsResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryParkingOperationWithAmountStepsJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryParkingOperationWithAmountStepsJSON" />
+  </wsdl:message>
+  <wsdl:message name="QueryParkingOperationWithAmountStepsJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryParkingOperationWithAmountStepsJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryUnParkingOperationSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryUnParkingOperation" />
+  </wsdl:message>
+  <wsdl:message name="QueryUnParkingOperationSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryUnParkingOperationResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryUnParkingOperationJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryUnParkingOperationJSON" />
+  </wsdl:message>
+  <wsdl:message name="QueryUnParkingOperationJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryUnParkingOperationJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalParkingOperationInstallationTimeSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertExternalParkingOperationInstallationTime" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalParkingOperationInstallationTimeSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertExternalParkingOperationInstallationTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalParkingOperationInstallationTimeJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertExternalParkingOperationInstallationTimeJSON" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalParkingOperationInstallationTimeJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertExternalParkingOperationInstallationTimeJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalParkingOperationUTCTimeSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertExternalParkingOperationUTCTime" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalParkingOperationUTCTimeSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertExternalParkingOperationUTCTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalParkingOperationUTCTimeJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertExternalParkingOperationUTCTimeJSON" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalParkingOperationUTCTimeJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertExternalParkingOperationUTCTimeJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalUnParkingOperationInstallationTimeSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertExternalUnParkingOperationInstallationTime" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalUnParkingOperationInstallationTimeSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertExternalUnParkingOperationInstallationTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalUnParkingOperationInstallationTimeJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertExternalUnParkingOperationInstallationTimeJSON" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalUnParkingOperationInstallationTimeJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertExternalUnParkingOperationInstallationTimeJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalUnParkingOperationUTCTimeSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertExternalUnParkingOperationUTCTime" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalUnParkingOperationUTCTimeSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertExternalUnParkingOperationUTCTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalUnParkingOperationUTCTimeJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertExternalUnParkingOperationUTCTimeJSON" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalUnParkingOperationUTCTimeJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertExternalUnParkingOperationUTCTimeJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalParkingOperationGtechnaSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertExternalParkingOperationGtechna" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalParkingOperationGtechnaSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertExternalParkingOperationGtechnaResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalParkingOperationGtechnaJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertExternalParkingOperationGtechnaJSON" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalParkingOperationGtechnaJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertExternalParkingOperationGtechnaJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalPermitInstallationTimeSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertExternalPermitInstallationTime" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalPermitInstallationTimeSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertExternalPermitInstallationTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalPermitInstallationTimeJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertExternalPermitInstallationTimeJSON" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalPermitInstallationTimeJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertExternalPermitInstallationTimeJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalSystemOperationUTCTimeSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertExternalSystemOperationUTCTime" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalSystemOperationUTCTimeSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertExternalSystemOperationUTCTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalSystemOperationUTCTimeJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertExternalSystemOperationUTCTimeJSON" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalSystemOperationUTCTimeJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertExternalSystemOperationUTCTimeJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalSystemOperationInstallationTimeSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertExternalSystemOperationInstallationTime" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalSystemOperationInstallationTimeSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertExternalSystemOperationInstallationTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalSystemOperationInstallationTimeJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertExternalSystemOperationInstallationTimeJSON" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalSystemOperationInstallationTimeJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertExternalSystemOperationInstallationTimeJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalParkingOperationParkingmeterSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertExternalParkingOperationParkingmeter" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalParkingOperationParkingmeterSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertExternalParkingOperationParkingmeterResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalParkingOperationParkingmeterJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertExternalParkingOperationParkingmeterJSON" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalParkingOperationParkingmeterJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertExternalParkingOperationParkingmeterJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryPlateLastParkingOperationSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryPlateLastParkingOperation" />
+  </wsdl:message>
+  <wsdl:message name="QueryPlateLastParkingOperationSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryPlateLastParkingOperationResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryPlateLastParkingOperationJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryPlateLastParkingOperationJSON" />
+  </wsdl:message>
+  <wsdl:message name="QueryPlateLastParkingOperationJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryPlateLastParkingOperationJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryGroupLastParkingOperationsSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryGroupLastParkingOperations" />
+  </wsdl:message>
+  <wsdl:message name="QueryGroupLastParkingOperationsSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryGroupLastParkingOperationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryGroupLastParkingOperationsJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryGroupLastParkingOperationsJSON" />
+  </wsdl:message>
+  <wsdl:message name="QueryGroupLastParkingOperationsJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryGroupLastParkingOperationsJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryPlateHisOperationsSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryPlateHisOperations" />
+  </wsdl:message>
+  <wsdl:message name="QueryPlateHisOperationsSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryPlateHisOperationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryPlateHisOperationsJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryPlateHisOperationsJSON" />
+  </wsdl:message>
+  <wsdl:message name="QueryPlateHisOperationsJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryPlateHisOperationsJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="ModifyOperationPlatesSoapIn">
+    <wsdl:part name="parameters" element="tns:ModifyOperationPlates" />
+  </wsdl:message>
+  <wsdl:message name="ModifyOperationPlatesSoapOut">
+    <wsdl:part name="parameters" element="tns:ModifyOperationPlatesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ModifyOperationPlatesJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:ModifyOperationPlatesJSON" />
+  </wsdl:message>
+  <wsdl:message name="ModifyOperationPlatesJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:ModifyOperationPlatesJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalCameraOperationInstallationTimeSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertExternalCameraOperationInstallationTime" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalCameraOperationInstallationTimeSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertExternalCameraOperationInstallationTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalCameraOperationInstallationTimeJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertExternalCameraOperationInstallationTimeJSON" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalCameraOperationInstallationTimeJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertExternalCameraOperationInstallationTimeJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalCameraOperationUTCTimeSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertExternalCameraOperationUTCTime" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalCameraOperationUTCTimeSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertExternalCameraOperationUTCTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalCameraOperationUTCTimeJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertExternalCameraOperationUTCTimeJSON" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalCameraOperationUTCTimeJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertExternalCameraOperationUTCTimeJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="CancelParkingOperationSoapIn">
+    <wsdl:part name="parameters" element="tns:CancelParkingOperation" />
+  </wsdl:message>
+  <wsdl:message name="CancelParkingOperationSoapOut">
+    <wsdl:part name="parameters" element="tns:CancelParkingOperationResponse" />
+  </wsdl:message>
+  <wsdl:message name="CancelParkingOperationJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:CancelParkingOperationJSON" />
+  </wsdl:message>
+  <wsdl:message name="CancelParkingOperationJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:CancelParkingOperationJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="CheckServiceHttpGetIn" />
+  <wsdl:message name="CheckServiceHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="CheckServiceJSONHttpGetIn" />
+  <wsdl:message name="CheckServiceJSONHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryAvailableTariffsHttpGetIn">
+    <wsdl:part name="xmlIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryAvailableTariffsHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryAvailableTariffsJSONHttpGetIn">
+    <wsdl:part name="jsonIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryAvailableTariffsJSONHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryParkingOperationHttpGetIn">
+    <wsdl:part name="xmlIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryParkingOperationHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryParkingOperationJSONHttpGetIn">
+    <wsdl:part name="jsonIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryParkingOperationJSONHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryParkingOperationWithTimeStepsHttpGetIn">
+    <wsdl:part name="xmlIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryParkingOperationWithTimeStepsHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryParkingOperationWithTimeStepsJSONHttpGetIn">
+    <wsdl:part name="jsonIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryParkingOperationWithTimeStepsJSONHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryParkingOperationWithAmountStepsHttpGetIn">
+    <wsdl:part name="xmlIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryParkingOperationWithAmountStepsHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryParkingOperationWithAmountStepsJSONHttpGetIn">
+    <wsdl:part name="jsonIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryParkingOperationWithAmountStepsJSONHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryUnParkingOperationHttpGetIn">
+    <wsdl:part name="xmlIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryUnParkingOperationHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryUnParkingOperationJSONHttpGetIn">
+    <wsdl:part name="jsonIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryUnParkingOperationJSONHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalParkingOperationInstallationTimeHttpGetIn">
+    <wsdl:part name="xmlIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalParkingOperationInstallationTimeHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalParkingOperationInstallationTimeJSONHttpGetIn">
+    <wsdl:part name="jsonIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalParkingOperationInstallationTimeJSONHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalParkingOperationUTCTimeHttpGetIn">
+    <wsdl:part name="xmlIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalParkingOperationUTCTimeHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalParkingOperationUTCTimeJSONHttpGetIn">
+    <wsdl:part name="jsonIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalParkingOperationUTCTimeJSONHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalUnParkingOperationInstallationTimeHttpGetIn">
+    <wsdl:part name="xmlIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalUnParkingOperationInstallationTimeHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalUnParkingOperationInstallationTimeJSONHttpGetIn">
+    <wsdl:part name="jsonIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalUnParkingOperationInstallationTimeJSONHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalUnParkingOperationUTCTimeHttpGetIn">
+    <wsdl:part name="xmlIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalUnParkingOperationUTCTimeHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalUnParkingOperationUTCTimeJSONHttpGetIn">
+    <wsdl:part name="jsonIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalUnParkingOperationUTCTimeJSONHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalParkingOperationGtechnaHttpGetIn">
+    <wsdl:part name="xmlIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalParkingOperationGtechnaHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalParkingOperationGtechnaJSONHttpGetIn">
+    <wsdl:part name="jsonIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalParkingOperationGtechnaJSONHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalPermitInstallationTimeHttpGetIn">
+    <wsdl:part name="xmlIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalPermitInstallationTimeHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalPermitInstallationTimeJSONHttpGetIn">
+    <wsdl:part name="jsonIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalPermitInstallationTimeJSONHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalSystemOperationUTCTimeHttpGetIn">
+    <wsdl:part name="xmlIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalSystemOperationUTCTimeHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalSystemOperationUTCTimeJSONHttpGetIn">
+    <wsdl:part name="jsonIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalSystemOperationUTCTimeJSONHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalSystemOperationInstallationTimeHttpGetIn">
+    <wsdl:part name="xmlIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalSystemOperationInstallationTimeHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalSystemOperationInstallationTimeJSONHttpGetIn">
+    <wsdl:part name="jsonIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalSystemOperationInstallationTimeJSONHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalParkingOperationParkingmeterHttpGetIn">
+    <wsdl:part name="xmlIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalParkingOperationParkingmeterHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalParkingOperationParkingmeterJSONHttpGetIn">
+    <wsdl:part name="jsonIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalParkingOperationParkingmeterJSONHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryPlateLastParkingOperationHttpGetIn">
+    <wsdl:part name="xmlIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryPlateLastParkingOperationHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryPlateLastParkingOperationJSONHttpGetIn">
+    <wsdl:part name="jsonIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryPlateLastParkingOperationJSONHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryGroupLastParkingOperationsHttpGetIn">
+    <wsdl:part name="xmlIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryGroupLastParkingOperationsHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryGroupLastParkingOperationsJSONHttpGetIn">
+    <wsdl:part name="jsonIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryGroupLastParkingOperationsJSONHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryPlateHisOperationsHttpGetIn">
+    <wsdl:part name="xmlIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryPlateHisOperationsHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryPlateHisOperationsJSONHttpGetIn">
+    <wsdl:part name="jsonIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryPlateHisOperationsJSONHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ModifyOperationPlatesHttpGetIn">
+    <wsdl:part name="xmlIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ModifyOperationPlatesHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ModifyOperationPlatesJSONHttpGetIn">
+    <wsdl:part name="jsonIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ModifyOperationPlatesJSONHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalCameraOperationInstallationTimeHttpGetIn">
+    <wsdl:part name="xmlIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalCameraOperationInstallationTimeHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalCameraOperationInstallationTimeJSONHttpGetIn">
+    <wsdl:part name="jsonIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalCameraOperationInstallationTimeJSONHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalCameraOperationUTCTimeHttpGetIn">
+    <wsdl:part name="xmlIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalCameraOperationUTCTimeHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalCameraOperationUTCTimeJSONHttpGetIn">
+    <wsdl:part name="jsonIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalCameraOperationUTCTimeJSONHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="CancelParkingOperationHttpGetIn">
+    <wsdl:part name="xmlIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CancelParkingOperationHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="CancelParkingOperationJSONHttpGetIn">
+    <wsdl:part name="jsonIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CancelParkingOperationJSONHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="CheckServiceHttpPostIn" />
+  <wsdl:message name="CheckServiceHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="CheckServiceJSONHttpPostIn" />
+  <wsdl:message name="CheckServiceJSONHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryAvailableTariffsHttpPostIn">
+    <wsdl:part name="xmlIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryAvailableTariffsHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryAvailableTariffsJSONHttpPostIn">
+    <wsdl:part name="jsonIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryAvailableTariffsJSONHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryParkingOperationHttpPostIn">
+    <wsdl:part name="xmlIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryParkingOperationHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryParkingOperationJSONHttpPostIn">
+    <wsdl:part name="jsonIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryParkingOperationJSONHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryParkingOperationWithTimeStepsHttpPostIn">
+    <wsdl:part name="xmlIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryParkingOperationWithTimeStepsHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryParkingOperationWithTimeStepsJSONHttpPostIn">
+    <wsdl:part name="jsonIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryParkingOperationWithTimeStepsJSONHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryParkingOperationWithAmountStepsHttpPostIn">
+    <wsdl:part name="xmlIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryParkingOperationWithAmountStepsHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryParkingOperationWithAmountStepsJSONHttpPostIn">
+    <wsdl:part name="jsonIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryParkingOperationWithAmountStepsJSONHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryUnParkingOperationHttpPostIn">
+    <wsdl:part name="xmlIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryUnParkingOperationHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryUnParkingOperationJSONHttpPostIn">
+    <wsdl:part name="jsonIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryUnParkingOperationJSONHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalParkingOperationInstallationTimeHttpPostIn">
+    <wsdl:part name="xmlIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalParkingOperationInstallationTimeHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalParkingOperationInstallationTimeJSONHttpPostIn">
+    <wsdl:part name="jsonIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalParkingOperationInstallationTimeJSONHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalParkingOperationUTCTimeHttpPostIn">
+    <wsdl:part name="xmlIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalParkingOperationUTCTimeHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalParkingOperationUTCTimeJSONHttpPostIn">
+    <wsdl:part name="jsonIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalParkingOperationUTCTimeJSONHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalUnParkingOperationInstallationTimeHttpPostIn">
+    <wsdl:part name="xmlIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalUnParkingOperationInstallationTimeHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalUnParkingOperationInstallationTimeJSONHttpPostIn">
+    <wsdl:part name="jsonIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalUnParkingOperationInstallationTimeJSONHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalUnParkingOperationUTCTimeHttpPostIn">
+    <wsdl:part name="xmlIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalUnParkingOperationUTCTimeHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalUnParkingOperationUTCTimeJSONHttpPostIn">
+    <wsdl:part name="jsonIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalUnParkingOperationUTCTimeJSONHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalParkingOperationGtechnaHttpPostIn">
+    <wsdl:part name="xmlIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalParkingOperationGtechnaHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalParkingOperationGtechnaJSONHttpPostIn">
+    <wsdl:part name="jsonIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalParkingOperationGtechnaJSONHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalPermitInstallationTimeHttpPostIn">
+    <wsdl:part name="xmlIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalPermitInstallationTimeHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalPermitInstallationTimeJSONHttpPostIn">
+    <wsdl:part name="jsonIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalPermitInstallationTimeJSONHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalSystemOperationUTCTimeHttpPostIn">
+    <wsdl:part name="xmlIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalSystemOperationUTCTimeHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalSystemOperationUTCTimeJSONHttpPostIn">
+    <wsdl:part name="jsonIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalSystemOperationUTCTimeJSONHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalSystemOperationInstallationTimeHttpPostIn">
+    <wsdl:part name="xmlIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalSystemOperationInstallationTimeHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalSystemOperationInstallationTimeJSONHttpPostIn">
+    <wsdl:part name="jsonIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalSystemOperationInstallationTimeJSONHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalParkingOperationParkingmeterHttpPostIn">
+    <wsdl:part name="xmlIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalParkingOperationParkingmeterHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalParkingOperationParkingmeterJSONHttpPostIn">
+    <wsdl:part name="jsonIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalParkingOperationParkingmeterJSONHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryPlateLastParkingOperationHttpPostIn">
+    <wsdl:part name="xmlIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryPlateLastParkingOperationHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryPlateLastParkingOperationJSONHttpPostIn">
+    <wsdl:part name="jsonIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryPlateLastParkingOperationJSONHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryGroupLastParkingOperationsHttpPostIn">
+    <wsdl:part name="xmlIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryGroupLastParkingOperationsHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryGroupLastParkingOperationsJSONHttpPostIn">
+    <wsdl:part name="jsonIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryGroupLastParkingOperationsJSONHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryPlateHisOperationsHttpPostIn">
+    <wsdl:part name="xmlIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryPlateHisOperationsHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryPlateHisOperationsJSONHttpPostIn">
+    <wsdl:part name="jsonIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryPlateHisOperationsJSONHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ModifyOperationPlatesHttpPostIn">
+    <wsdl:part name="xmlIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ModifyOperationPlatesHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ModifyOperationPlatesJSONHttpPostIn">
+    <wsdl:part name="jsonIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ModifyOperationPlatesJSONHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalCameraOperationInstallationTimeHttpPostIn">
+    <wsdl:part name="xmlIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalCameraOperationInstallationTimeHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalCameraOperationInstallationTimeJSONHttpPostIn">
+    <wsdl:part name="jsonIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalCameraOperationInstallationTimeJSONHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalCameraOperationUTCTimeHttpPostIn">
+    <wsdl:part name="xmlIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalCameraOperationUTCTimeHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalCameraOperationUTCTimeJSONHttpPostIn">
+    <wsdl:part name="jsonIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertExternalCameraOperationUTCTimeJSONHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="CancelParkingOperationHttpPostIn">
+    <wsdl:part name="xmlIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CancelParkingOperationHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="CancelParkingOperationJSONHttpPostIn">
+    <wsdl:part name="jsonIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CancelParkingOperationJSONHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:portType name="TariffComputerWSSoap">
+    <wsdl:operation name="CheckService">
+      <wsdl:input message="tns:CheckServiceSoapIn" />
+      <wsdl:output message="tns:CheckServiceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckServiceJSON">
+      <wsdl:input message="tns:CheckServiceJSONSoapIn" />
+      <wsdl:output message="tns:CheckServiceJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryAvailableTariffs">
+      <wsdl:input message="tns:QueryAvailableTariffsSoapIn" />
+      <wsdl:output message="tns:QueryAvailableTariffsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryAvailableTariffsJSON">
+      <wsdl:input message="tns:QueryAvailableTariffsJSONSoapIn" />
+      <wsdl:output message="tns:QueryAvailableTariffsJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryParkingOperation">
+      <wsdl:input message="tns:QueryParkingOperationSoapIn" />
+      <wsdl:output message="tns:QueryParkingOperationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryParkingOperationJSON">
+      <wsdl:input message="tns:QueryParkingOperationJSONSoapIn" />
+      <wsdl:output message="tns:QueryParkingOperationJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryParkingOperationWithTimeSteps">
+      <wsdl:input message="tns:QueryParkingOperationWithTimeStepsSoapIn" />
+      <wsdl:output message="tns:QueryParkingOperationWithTimeStepsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryParkingOperationWithTimeStepsJSON">
+      <wsdl:input message="tns:QueryParkingOperationWithTimeStepsJSONSoapIn" />
+      <wsdl:output message="tns:QueryParkingOperationWithTimeStepsJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryParkingOperationWithAmountSteps">
+      <wsdl:input message="tns:QueryParkingOperationWithAmountStepsSoapIn" />
+      <wsdl:output message="tns:QueryParkingOperationWithAmountStepsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryParkingOperationWithAmountStepsJSON">
+      <wsdl:input message="tns:QueryParkingOperationWithAmountStepsJSONSoapIn" />
+      <wsdl:output message="tns:QueryParkingOperationWithAmountStepsJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryUnParkingOperation">
+      <wsdl:input message="tns:QueryUnParkingOperationSoapIn" />
+      <wsdl:output message="tns:QueryUnParkingOperationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryUnParkingOperationJSON">
+      <wsdl:input message="tns:QueryUnParkingOperationJSONSoapIn" />
+      <wsdl:output message="tns:QueryUnParkingOperationJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalParkingOperationInstallationTime">
+      <wsdl:input message="tns:InsertExternalParkingOperationInstallationTimeSoapIn" />
+      <wsdl:output message="tns:InsertExternalParkingOperationInstallationTimeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalParkingOperationInstallationTimeJSON">
+      <wsdl:input message="tns:InsertExternalParkingOperationInstallationTimeJSONSoapIn" />
+      <wsdl:output message="tns:InsertExternalParkingOperationInstallationTimeJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalParkingOperationUTCTime">
+      <wsdl:input message="tns:InsertExternalParkingOperationUTCTimeSoapIn" />
+      <wsdl:output message="tns:InsertExternalParkingOperationUTCTimeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalParkingOperationUTCTimeJSON">
+      <wsdl:input message="tns:InsertExternalParkingOperationUTCTimeJSONSoapIn" />
+      <wsdl:output message="tns:InsertExternalParkingOperationUTCTimeJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalUnParkingOperationInstallationTime">
+      <wsdl:input message="tns:InsertExternalUnParkingOperationInstallationTimeSoapIn" />
+      <wsdl:output message="tns:InsertExternalUnParkingOperationInstallationTimeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalUnParkingOperationInstallationTimeJSON">
+      <wsdl:input message="tns:InsertExternalUnParkingOperationInstallationTimeJSONSoapIn" />
+      <wsdl:output message="tns:InsertExternalUnParkingOperationInstallationTimeJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalUnParkingOperationUTCTime">
+      <wsdl:input message="tns:InsertExternalUnParkingOperationUTCTimeSoapIn" />
+      <wsdl:output message="tns:InsertExternalUnParkingOperationUTCTimeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalUnParkingOperationUTCTimeJSON">
+      <wsdl:input message="tns:InsertExternalUnParkingOperationUTCTimeJSONSoapIn" />
+      <wsdl:output message="tns:InsertExternalUnParkingOperationUTCTimeJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalParkingOperationGtechna">
+      <wsdl:input message="tns:InsertExternalParkingOperationGtechnaSoapIn" />
+      <wsdl:output message="tns:InsertExternalParkingOperationGtechnaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalParkingOperationGtechnaJSON">
+      <wsdl:input message="tns:InsertExternalParkingOperationGtechnaJSONSoapIn" />
+      <wsdl:output message="tns:InsertExternalParkingOperationGtechnaJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalPermitInstallationTime">
+      <wsdl:input message="tns:InsertExternalPermitInstallationTimeSoapIn" />
+      <wsdl:output message="tns:InsertExternalPermitInstallationTimeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalPermitInstallationTimeJSON">
+      <wsdl:input message="tns:InsertExternalPermitInstallationTimeJSONSoapIn" />
+      <wsdl:output message="tns:InsertExternalPermitInstallationTimeJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalSystemOperationUTCTime">
+      <wsdl:input message="tns:InsertExternalSystemOperationUTCTimeSoapIn" />
+      <wsdl:output message="tns:InsertExternalSystemOperationUTCTimeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalSystemOperationUTCTimeJSON">
+      <wsdl:input message="tns:InsertExternalSystemOperationUTCTimeJSONSoapIn" />
+      <wsdl:output message="tns:InsertExternalSystemOperationUTCTimeJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalSystemOperationInstallationTime">
+      <wsdl:input message="tns:InsertExternalSystemOperationInstallationTimeSoapIn" />
+      <wsdl:output message="tns:InsertExternalSystemOperationInstallationTimeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalSystemOperationInstallationTimeJSON">
+      <wsdl:input message="tns:InsertExternalSystemOperationInstallationTimeJSONSoapIn" />
+      <wsdl:output message="tns:InsertExternalSystemOperationInstallationTimeJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalParkingOperationParkingmeter">
+      <wsdl:input message="tns:InsertExternalParkingOperationParkingmeterSoapIn" />
+      <wsdl:output message="tns:InsertExternalParkingOperationParkingmeterSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalParkingOperationParkingmeterJSON">
+      <wsdl:input message="tns:InsertExternalParkingOperationParkingmeterJSONSoapIn" />
+      <wsdl:output message="tns:InsertExternalParkingOperationParkingmeterJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryPlateLastParkingOperation">
+      <wsdl:input message="tns:QueryPlateLastParkingOperationSoapIn" />
+      <wsdl:output message="tns:QueryPlateLastParkingOperationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryPlateLastParkingOperationJSON">
+      <wsdl:input message="tns:QueryPlateLastParkingOperationJSONSoapIn" />
+      <wsdl:output message="tns:QueryPlateLastParkingOperationJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryGroupLastParkingOperations">
+      <wsdl:input message="tns:QueryGroupLastParkingOperationsSoapIn" />
+      <wsdl:output message="tns:QueryGroupLastParkingOperationsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryGroupLastParkingOperationsJSON">
+      <wsdl:input message="tns:QueryGroupLastParkingOperationsJSONSoapIn" />
+      <wsdl:output message="tns:QueryGroupLastParkingOperationsJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryPlateHisOperations">
+      <wsdl:input message="tns:QueryPlateHisOperationsSoapIn" />
+      <wsdl:output message="tns:QueryPlateHisOperationsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryPlateHisOperationsJSON">
+      <wsdl:input message="tns:QueryPlateHisOperationsJSONSoapIn" />
+      <wsdl:output message="tns:QueryPlateHisOperationsJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ModifyOperationPlates">
+      <wsdl:input message="tns:ModifyOperationPlatesSoapIn" />
+      <wsdl:output message="tns:ModifyOperationPlatesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ModifyOperationPlatesJSON">
+      <wsdl:input message="tns:ModifyOperationPlatesJSONSoapIn" />
+      <wsdl:output message="tns:ModifyOperationPlatesJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalCameraOperationInstallationTime">
+      <wsdl:input message="tns:InsertExternalCameraOperationInstallationTimeSoapIn" />
+      <wsdl:output message="tns:InsertExternalCameraOperationInstallationTimeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalCameraOperationInstallationTimeJSON">
+      <wsdl:input message="tns:InsertExternalCameraOperationInstallationTimeJSONSoapIn" />
+      <wsdl:output message="tns:InsertExternalCameraOperationInstallationTimeJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalCameraOperationUTCTime">
+      <wsdl:input message="tns:InsertExternalCameraOperationUTCTimeSoapIn" />
+      <wsdl:output message="tns:InsertExternalCameraOperationUTCTimeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalCameraOperationUTCTimeJSON">
+      <wsdl:input message="tns:InsertExternalCameraOperationUTCTimeJSONSoapIn" />
+      <wsdl:output message="tns:InsertExternalCameraOperationUTCTimeJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelParkingOperation">
+      <wsdl:input message="tns:CancelParkingOperationSoapIn" />
+      <wsdl:output message="tns:CancelParkingOperationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelParkingOperationJSON">
+      <wsdl:input message="tns:CancelParkingOperationJSONSoapIn" />
+      <wsdl:output message="tns:CancelParkingOperationJSONSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="TariffComputerWSHttpGet">
+    <wsdl:operation name="CheckService">
+      <wsdl:input message="tns:CheckServiceHttpGetIn" />
+      <wsdl:output message="tns:CheckServiceHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckServiceJSON">
+      <wsdl:input message="tns:CheckServiceJSONHttpGetIn" />
+      <wsdl:output message="tns:CheckServiceJSONHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryAvailableTariffs">
+      <wsdl:input message="tns:QueryAvailableTariffsHttpGetIn" />
+      <wsdl:output message="tns:QueryAvailableTariffsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryAvailableTariffsJSON">
+      <wsdl:input message="tns:QueryAvailableTariffsJSONHttpGetIn" />
+      <wsdl:output message="tns:QueryAvailableTariffsJSONHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryParkingOperation">
+      <wsdl:input message="tns:QueryParkingOperationHttpGetIn" />
+      <wsdl:output message="tns:QueryParkingOperationHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryParkingOperationJSON">
+      <wsdl:input message="tns:QueryParkingOperationJSONHttpGetIn" />
+      <wsdl:output message="tns:QueryParkingOperationJSONHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryParkingOperationWithTimeSteps">
+      <wsdl:input message="tns:QueryParkingOperationWithTimeStepsHttpGetIn" />
+      <wsdl:output message="tns:QueryParkingOperationWithTimeStepsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryParkingOperationWithTimeStepsJSON">
+      <wsdl:input message="tns:QueryParkingOperationWithTimeStepsJSONHttpGetIn" />
+      <wsdl:output message="tns:QueryParkingOperationWithTimeStepsJSONHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryParkingOperationWithAmountSteps">
+      <wsdl:input message="tns:QueryParkingOperationWithAmountStepsHttpGetIn" />
+      <wsdl:output message="tns:QueryParkingOperationWithAmountStepsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryParkingOperationWithAmountStepsJSON">
+      <wsdl:input message="tns:QueryParkingOperationWithAmountStepsJSONHttpGetIn" />
+      <wsdl:output message="tns:QueryParkingOperationWithAmountStepsJSONHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryUnParkingOperation">
+      <wsdl:input message="tns:QueryUnParkingOperationHttpGetIn" />
+      <wsdl:output message="tns:QueryUnParkingOperationHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryUnParkingOperationJSON">
+      <wsdl:input message="tns:QueryUnParkingOperationJSONHttpGetIn" />
+      <wsdl:output message="tns:QueryUnParkingOperationJSONHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalParkingOperationInstallationTime">
+      <wsdl:input message="tns:InsertExternalParkingOperationInstallationTimeHttpGetIn" />
+      <wsdl:output message="tns:InsertExternalParkingOperationInstallationTimeHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalParkingOperationInstallationTimeJSON">
+      <wsdl:input message="tns:InsertExternalParkingOperationInstallationTimeJSONHttpGetIn" />
+      <wsdl:output message="tns:InsertExternalParkingOperationInstallationTimeJSONHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalParkingOperationUTCTime">
+      <wsdl:input message="tns:InsertExternalParkingOperationUTCTimeHttpGetIn" />
+      <wsdl:output message="tns:InsertExternalParkingOperationUTCTimeHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalParkingOperationUTCTimeJSON">
+      <wsdl:input message="tns:InsertExternalParkingOperationUTCTimeJSONHttpGetIn" />
+      <wsdl:output message="tns:InsertExternalParkingOperationUTCTimeJSONHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalUnParkingOperationInstallationTime">
+      <wsdl:input message="tns:InsertExternalUnParkingOperationInstallationTimeHttpGetIn" />
+      <wsdl:output message="tns:InsertExternalUnParkingOperationInstallationTimeHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalUnParkingOperationInstallationTimeJSON">
+      <wsdl:input message="tns:InsertExternalUnParkingOperationInstallationTimeJSONHttpGetIn" />
+      <wsdl:output message="tns:InsertExternalUnParkingOperationInstallationTimeJSONHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalUnParkingOperationUTCTime">
+      <wsdl:input message="tns:InsertExternalUnParkingOperationUTCTimeHttpGetIn" />
+      <wsdl:output message="tns:InsertExternalUnParkingOperationUTCTimeHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalUnParkingOperationUTCTimeJSON">
+      <wsdl:input message="tns:InsertExternalUnParkingOperationUTCTimeJSONHttpGetIn" />
+      <wsdl:output message="tns:InsertExternalUnParkingOperationUTCTimeJSONHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalParkingOperationGtechna">
+      <wsdl:input message="tns:InsertExternalParkingOperationGtechnaHttpGetIn" />
+      <wsdl:output message="tns:InsertExternalParkingOperationGtechnaHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalParkingOperationGtechnaJSON">
+      <wsdl:input message="tns:InsertExternalParkingOperationGtechnaJSONHttpGetIn" />
+      <wsdl:output message="tns:InsertExternalParkingOperationGtechnaJSONHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalPermitInstallationTime">
+      <wsdl:input message="tns:InsertExternalPermitInstallationTimeHttpGetIn" />
+      <wsdl:output message="tns:InsertExternalPermitInstallationTimeHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalPermitInstallationTimeJSON">
+      <wsdl:input message="tns:InsertExternalPermitInstallationTimeJSONHttpGetIn" />
+      <wsdl:output message="tns:InsertExternalPermitInstallationTimeJSONHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalSystemOperationUTCTime">
+      <wsdl:input message="tns:InsertExternalSystemOperationUTCTimeHttpGetIn" />
+      <wsdl:output message="tns:InsertExternalSystemOperationUTCTimeHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalSystemOperationUTCTimeJSON">
+      <wsdl:input message="tns:InsertExternalSystemOperationUTCTimeJSONHttpGetIn" />
+      <wsdl:output message="tns:InsertExternalSystemOperationUTCTimeJSONHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalSystemOperationInstallationTime">
+      <wsdl:input message="tns:InsertExternalSystemOperationInstallationTimeHttpGetIn" />
+      <wsdl:output message="tns:InsertExternalSystemOperationInstallationTimeHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalSystemOperationInstallationTimeJSON">
+      <wsdl:input message="tns:InsertExternalSystemOperationInstallationTimeJSONHttpGetIn" />
+      <wsdl:output message="tns:InsertExternalSystemOperationInstallationTimeJSONHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalParkingOperationParkingmeter">
+      <wsdl:input message="tns:InsertExternalParkingOperationParkingmeterHttpGetIn" />
+      <wsdl:output message="tns:InsertExternalParkingOperationParkingmeterHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalParkingOperationParkingmeterJSON">
+      <wsdl:input message="tns:InsertExternalParkingOperationParkingmeterJSONHttpGetIn" />
+      <wsdl:output message="tns:InsertExternalParkingOperationParkingmeterJSONHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryPlateLastParkingOperation">
+      <wsdl:input message="tns:QueryPlateLastParkingOperationHttpGetIn" />
+      <wsdl:output message="tns:QueryPlateLastParkingOperationHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryPlateLastParkingOperationJSON">
+      <wsdl:input message="tns:QueryPlateLastParkingOperationJSONHttpGetIn" />
+      <wsdl:output message="tns:QueryPlateLastParkingOperationJSONHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryGroupLastParkingOperations">
+      <wsdl:input message="tns:QueryGroupLastParkingOperationsHttpGetIn" />
+      <wsdl:output message="tns:QueryGroupLastParkingOperationsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryGroupLastParkingOperationsJSON">
+      <wsdl:input message="tns:QueryGroupLastParkingOperationsJSONHttpGetIn" />
+      <wsdl:output message="tns:QueryGroupLastParkingOperationsJSONHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryPlateHisOperations">
+      <wsdl:input message="tns:QueryPlateHisOperationsHttpGetIn" />
+      <wsdl:output message="tns:QueryPlateHisOperationsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryPlateHisOperationsJSON">
+      <wsdl:input message="tns:QueryPlateHisOperationsJSONHttpGetIn" />
+      <wsdl:output message="tns:QueryPlateHisOperationsJSONHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ModifyOperationPlates">
+      <wsdl:input message="tns:ModifyOperationPlatesHttpGetIn" />
+      <wsdl:output message="tns:ModifyOperationPlatesHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ModifyOperationPlatesJSON">
+      <wsdl:input message="tns:ModifyOperationPlatesJSONHttpGetIn" />
+      <wsdl:output message="tns:ModifyOperationPlatesJSONHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalCameraOperationInstallationTime">
+      <wsdl:input message="tns:InsertExternalCameraOperationInstallationTimeHttpGetIn" />
+      <wsdl:output message="tns:InsertExternalCameraOperationInstallationTimeHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalCameraOperationInstallationTimeJSON">
+      <wsdl:input message="tns:InsertExternalCameraOperationInstallationTimeJSONHttpGetIn" />
+      <wsdl:output message="tns:InsertExternalCameraOperationInstallationTimeJSONHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalCameraOperationUTCTime">
+      <wsdl:input message="tns:InsertExternalCameraOperationUTCTimeHttpGetIn" />
+      <wsdl:output message="tns:InsertExternalCameraOperationUTCTimeHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalCameraOperationUTCTimeJSON">
+      <wsdl:input message="tns:InsertExternalCameraOperationUTCTimeJSONHttpGetIn" />
+      <wsdl:output message="tns:InsertExternalCameraOperationUTCTimeJSONHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelParkingOperation">
+      <wsdl:input message="tns:CancelParkingOperationHttpGetIn" />
+      <wsdl:output message="tns:CancelParkingOperationHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelParkingOperationJSON">
+      <wsdl:input message="tns:CancelParkingOperationJSONHttpGetIn" />
+      <wsdl:output message="tns:CancelParkingOperationJSONHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="TariffComputerWSHttpPost">
+    <wsdl:operation name="CheckService">
+      <wsdl:input message="tns:CheckServiceHttpPostIn" />
+      <wsdl:output message="tns:CheckServiceHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckServiceJSON">
+      <wsdl:input message="tns:CheckServiceJSONHttpPostIn" />
+      <wsdl:output message="tns:CheckServiceJSONHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryAvailableTariffs">
+      <wsdl:input message="tns:QueryAvailableTariffsHttpPostIn" />
+      <wsdl:output message="tns:QueryAvailableTariffsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryAvailableTariffsJSON">
+      <wsdl:input message="tns:QueryAvailableTariffsJSONHttpPostIn" />
+      <wsdl:output message="tns:QueryAvailableTariffsJSONHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryParkingOperation">
+      <wsdl:input message="tns:QueryParkingOperationHttpPostIn" />
+      <wsdl:output message="tns:QueryParkingOperationHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryParkingOperationJSON">
+      <wsdl:input message="tns:QueryParkingOperationJSONHttpPostIn" />
+      <wsdl:output message="tns:QueryParkingOperationJSONHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryParkingOperationWithTimeSteps">
+      <wsdl:input message="tns:QueryParkingOperationWithTimeStepsHttpPostIn" />
+      <wsdl:output message="tns:QueryParkingOperationWithTimeStepsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryParkingOperationWithTimeStepsJSON">
+      <wsdl:input message="tns:QueryParkingOperationWithTimeStepsJSONHttpPostIn" />
+      <wsdl:output message="tns:QueryParkingOperationWithTimeStepsJSONHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryParkingOperationWithAmountSteps">
+      <wsdl:input message="tns:QueryParkingOperationWithAmountStepsHttpPostIn" />
+      <wsdl:output message="tns:QueryParkingOperationWithAmountStepsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryParkingOperationWithAmountStepsJSON">
+      <wsdl:input message="tns:QueryParkingOperationWithAmountStepsJSONHttpPostIn" />
+      <wsdl:output message="tns:QueryParkingOperationWithAmountStepsJSONHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryUnParkingOperation">
+      <wsdl:input message="tns:QueryUnParkingOperationHttpPostIn" />
+      <wsdl:output message="tns:QueryUnParkingOperationHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryUnParkingOperationJSON">
+      <wsdl:input message="tns:QueryUnParkingOperationJSONHttpPostIn" />
+      <wsdl:output message="tns:QueryUnParkingOperationJSONHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalParkingOperationInstallationTime">
+      <wsdl:input message="tns:InsertExternalParkingOperationInstallationTimeHttpPostIn" />
+      <wsdl:output message="tns:InsertExternalParkingOperationInstallationTimeHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalParkingOperationInstallationTimeJSON">
+      <wsdl:input message="tns:InsertExternalParkingOperationInstallationTimeJSONHttpPostIn" />
+      <wsdl:output message="tns:InsertExternalParkingOperationInstallationTimeJSONHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalParkingOperationUTCTime">
+      <wsdl:input message="tns:InsertExternalParkingOperationUTCTimeHttpPostIn" />
+      <wsdl:output message="tns:InsertExternalParkingOperationUTCTimeHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalParkingOperationUTCTimeJSON">
+      <wsdl:input message="tns:InsertExternalParkingOperationUTCTimeJSONHttpPostIn" />
+      <wsdl:output message="tns:InsertExternalParkingOperationUTCTimeJSONHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalUnParkingOperationInstallationTime">
+      <wsdl:input message="tns:InsertExternalUnParkingOperationInstallationTimeHttpPostIn" />
+      <wsdl:output message="tns:InsertExternalUnParkingOperationInstallationTimeHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalUnParkingOperationInstallationTimeJSON">
+      <wsdl:input message="tns:InsertExternalUnParkingOperationInstallationTimeJSONHttpPostIn" />
+      <wsdl:output message="tns:InsertExternalUnParkingOperationInstallationTimeJSONHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalUnParkingOperationUTCTime">
+      <wsdl:input message="tns:InsertExternalUnParkingOperationUTCTimeHttpPostIn" />
+      <wsdl:output message="tns:InsertExternalUnParkingOperationUTCTimeHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalUnParkingOperationUTCTimeJSON">
+      <wsdl:input message="tns:InsertExternalUnParkingOperationUTCTimeJSONHttpPostIn" />
+      <wsdl:output message="tns:InsertExternalUnParkingOperationUTCTimeJSONHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalParkingOperationGtechna">
+      <wsdl:input message="tns:InsertExternalParkingOperationGtechnaHttpPostIn" />
+      <wsdl:output message="tns:InsertExternalParkingOperationGtechnaHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalParkingOperationGtechnaJSON">
+      <wsdl:input message="tns:InsertExternalParkingOperationGtechnaJSONHttpPostIn" />
+      <wsdl:output message="tns:InsertExternalParkingOperationGtechnaJSONHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalPermitInstallationTime">
+      <wsdl:input message="tns:InsertExternalPermitInstallationTimeHttpPostIn" />
+      <wsdl:output message="tns:InsertExternalPermitInstallationTimeHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalPermitInstallationTimeJSON">
+      <wsdl:input message="tns:InsertExternalPermitInstallationTimeJSONHttpPostIn" />
+      <wsdl:output message="tns:InsertExternalPermitInstallationTimeJSONHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalSystemOperationUTCTime">
+      <wsdl:input message="tns:InsertExternalSystemOperationUTCTimeHttpPostIn" />
+      <wsdl:output message="tns:InsertExternalSystemOperationUTCTimeHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalSystemOperationUTCTimeJSON">
+      <wsdl:input message="tns:InsertExternalSystemOperationUTCTimeJSONHttpPostIn" />
+      <wsdl:output message="tns:InsertExternalSystemOperationUTCTimeJSONHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalSystemOperationInstallationTime">
+      <wsdl:input message="tns:InsertExternalSystemOperationInstallationTimeHttpPostIn" />
+      <wsdl:output message="tns:InsertExternalSystemOperationInstallationTimeHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalSystemOperationInstallationTimeJSON">
+      <wsdl:input message="tns:InsertExternalSystemOperationInstallationTimeJSONHttpPostIn" />
+      <wsdl:output message="tns:InsertExternalSystemOperationInstallationTimeJSONHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalParkingOperationParkingmeter">
+      <wsdl:input message="tns:InsertExternalParkingOperationParkingmeterHttpPostIn" />
+      <wsdl:output message="tns:InsertExternalParkingOperationParkingmeterHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalParkingOperationParkingmeterJSON">
+      <wsdl:input message="tns:InsertExternalParkingOperationParkingmeterJSONHttpPostIn" />
+      <wsdl:output message="tns:InsertExternalParkingOperationParkingmeterJSONHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryPlateLastParkingOperation">
+      <wsdl:input message="tns:QueryPlateLastParkingOperationHttpPostIn" />
+      <wsdl:output message="tns:QueryPlateLastParkingOperationHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryPlateLastParkingOperationJSON">
+      <wsdl:input message="tns:QueryPlateLastParkingOperationJSONHttpPostIn" />
+      <wsdl:output message="tns:QueryPlateLastParkingOperationJSONHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryGroupLastParkingOperations">
+      <wsdl:input message="tns:QueryGroupLastParkingOperationsHttpPostIn" />
+      <wsdl:output message="tns:QueryGroupLastParkingOperationsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryGroupLastParkingOperationsJSON">
+      <wsdl:input message="tns:QueryGroupLastParkingOperationsJSONHttpPostIn" />
+      <wsdl:output message="tns:QueryGroupLastParkingOperationsJSONHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryPlateHisOperations">
+      <wsdl:input message="tns:QueryPlateHisOperationsHttpPostIn" />
+      <wsdl:output message="tns:QueryPlateHisOperationsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryPlateHisOperationsJSON">
+      <wsdl:input message="tns:QueryPlateHisOperationsJSONHttpPostIn" />
+      <wsdl:output message="tns:QueryPlateHisOperationsJSONHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ModifyOperationPlates">
+      <wsdl:input message="tns:ModifyOperationPlatesHttpPostIn" />
+      <wsdl:output message="tns:ModifyOperationPlatesHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ModifyOperationPlatesJSON">
+      <wsdl:input message="tns:ModifyOperationPlatesJSONHttpPostIn" />
+      <wsdl:output message="tns:ModifyOperationPlatesJSONHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalCameraOperationInstallationTime">
+      <wsdl:input message="tns:InsertExternalCameraOperationInstallationTimeHttpPostIn" />
+      <wsdl:output message="tns:InsertExternalCameraOperationInstallationTimeHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalCameraOperationInstallationTimeJSON">
+      <wsdl:input message="tns:InsertExternalCameraOperationInstallationTimeJSONHttpPostIn" />
+      <wsdl:output message="tns:InsertExternalCameraOperationInstallationTimeJSONHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalCameraOperationUTCTime">
+      <wsdl:input message="tns:InsertExternalCameraOperationUTCTimeHttpPostIn" />
+      <wsdl:output message="tns:InsertExternalCameraOperationUTCTimeHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalCameraOperationUTCTimeJSON">
+      <wsdl:input message="tns:InsertExternalCameraOperationUTCTimeJSONHttpPostIn" />
+      <wsdl:output message="tns:InsertExternalCameraOperationUTCTimeJSONHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelParkingOperation">
+      <wsdl:input message="tns:CancelParkingOperationHttpPostIn" />
+      <wsdl:output message="tns:CancelParkingOperationHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelParkingOperationJSON">
+      <wsdl:input message="tns:CancelParkingOperationJSONHttpPostIn" />
+      <wsdl:output message="tns:CancelParkingOperationJSONHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="TariffComputerWSSoap" type="tns:TariffComputerWSSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CheckService">
+      <soap:operation soapAction="http://tempuri.org/CheckService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckServiceJSON">
+      <soap:operation soapAction="http://tempuri.org/CheckServiceJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryAvailableTariffs">
+      <soap:operation soapAction="http://tempuri.org/QueryAvailableTariffs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryAvailableTariffsJSON">
+      <soap:operation soapAction="http://tempuri.org/QueryAvailableTariffsJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryParkingOperation">
+      <soap:operation soapAction="http://tempuri.org/QueryParkingOperation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryParkingOperationJSON">
+      <soap:operation soapAction="http://tempuri.org/QueryParkingOperationJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryParkingOperationWithTimeSteps">
+      <soap:operation soapAction="http://tempuri.org/QueryParkingOperationWithTimeSteps" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryParkingOperationWithTimeStepsJSON">
+      <soap:operation soapAction="http://tempuri.org/QueryParkingOperationWithTimeStepsJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryParkingOperationWithAmountSteps">
+      <soap:operation soapAction="http://tempuri.org/QueryParkingOperationWithAmountSteps" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryParkingOperationWithAmountStepsJSON">
+      <soap:operation soapAction="http://tempuri.org/QueryParkingOperationWithAmountStepsJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryUnParkingOperation">
+      <soap:operation soapAction="http://tempuri.org/QueryUnParkingOperation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryUnParkingOperationJSON">
+      <soap:operation soapAction="http://tempuri.org/QueryUnParkingOperationJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalParkingOperationInstallationTime">
+      <soap:operation soapAction="http://tempuri.org/InsertExternalParkingOperationInstallationTime" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalParkingOperationInstallationTimeJSON">
+      <soap:operation soapAction="http://tempuri.org/InsertExternalParkingOperationInstallationTimeJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalParkingOperationUTCTime">
+      <soap:operation soapAction="http://tempuri.org/InsertExternalParkingOperationUTCTime" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalParkingOperationUTCTimeJSON">
+      <soap:operation soapAction="http://tempuri.org/InsertExternalParkingOperationUTCTimeJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalUnParkingOperationInstallationTime">
+      <soap:operation soapAction="http://tempuri.org/InsertExternalUnParkingOperationInstallationTime" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalUnParkingOperationInstallationTimeJSON">
+      <soap:operation soapAction="http://tempuri.org/InsertExternalUnParkingOperationInstallationTimeJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalUnParkingOperationUTCTime">
+      <soap:operation soapAction="http://tempuri.org/InsertExternalUnParkingOperationUTCTime" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalUnParkingOperationUTCTimeJSON">
+      <soap:operation soapAction="http://tempuri.org/InsertExternalUnParkingOperationUTCTimeJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalParkingOperationGtechna">
+      <soap:operation soapAction="http://tempuri.org/InsertExternalParkingOperationGtechna" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalParkingOperationGtechnaJSON">
+      <soap:operation soapAction="http://tempuri.org/InsertExternalParkingOperationGtechnaJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalPermitInstallationTime">
+      <soap:operation soapAction="http://tempuri.org/InsertExternalPermitInstallationTime" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalPermitInstallationTimeJSON">
+      <soap:operation soapAction="http://tempuri.org/InsertExternalPermitInstallationTimeJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalSystemOperationUTCTime">
+      <soap:operation soapAction="http://tempuri.org/InsertExternalSystemOperationUTCTime" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalSystemOperationUTCTimeJSON">
+      <soap:operation soapAction="http://tempuri.org/InsertExternalSystemOperationUTCTimeJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalSystemOperationInstallationTime">
+      <soap:operation soapAction="http://tempuri.org/InsertExternalSystemOperationInstallationTime" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalSystemOperationInstallationTimeJSON">
+      <soap:operation soapAction="http://tempuri.org/InsertExternalSystemOperationInstallationTimeJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalParkingOperationParkingmeter">
+      <soap:operation soapAction="http://tempuri.org/InsertExternalParkingOperationParkingmeter" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalParkingOperationParkingmeterJSON">
+      <soap:operation soapAction="http://tempuri.org/InsertExternalParkingOperationParkingmeterJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryPlateLastParkingOperation">
+      <soap:operation soapAction="http://tempuri.org/QueryPlateLastParkingOperation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryPlateLastParkingOperationJSON">
+      <soap:operation soapAction="http://tempuri.org/QueryPlateLastParkingOperationJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryGroupLastParkingOperations">
+      <soap:operation soapAction="http://tempuri.org/QueryGroupLastParkingOperations" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryGroupLastParkingOperationsJSON">
+      <soap:operation soapAction="http://tempuri.org/QueryGroupLastParkingOperationsJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryPlateHisOperations">
+      <soap:operation soapAction="http://tempuri.org/QueryPlateHisOperations" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryPlateHisOperationsJSON">
+      <soap:operation soapAction="http://tempuri.org/QueryPlateHisOperationsJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyOperationPlates">
+      <soap:operation soapAction="http://tempuri.org/ModifyOperationPlates" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyOperationPlatesJSON">
+      <soap:operation soapAction="http://tempuri.org/ModifyOperationPlatesJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalCameraOperationInstallationTime">
+      <soap:operation soapAction="http://tempuri.org/InsertExternalCameraOperationInstallationTime" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalCameraOperationInstallationTimeJSON">
+      <soap:operation soapAction="http://tempuri.org/InsertExternalCameraOperationInstallationTimeJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalCameraOperationUTCTime">
+      <soap:operation soapAction="http://tempuri.org/InsertExternalCameraOperationUTCTime" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalCameraOperationUTCTimeJSON">
+      <soap:operation soapAction="http://tempuri.org/InsertExternalCameraOperationUTCTimeJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelParkingOperation">
+      <soap:operation soapAction="http://tempuri.org/CancelParkingOperation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelParkingOperationJSON">
+      <soap:operation soapAction="http://tempuri.org/CancelParkingOperationJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="TariffComputerWSSoap12" type="tns:TariffComputerWSSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CheckService">
+      <soap12:operation soapAction="http://tempuri.org/CheckService" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckServiceJSON">
+      <soap12:operation soapAction="http://tempuri.org/CheckServiceJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryAvailableTariffs">
+      <soap12:operation soapAction="http://tempuri.org/QueryAvailableTariffs" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryAvailableTariffsJSON">
+      <soap12:operation soapAction="http://tempuri.org/QueryAvailableTariffsJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryParkingOperation">
+      <soap12:operation soapAction="http://tempuri.org/QueryParkingOperation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryParkingOperationJSON">
+      <soap12:operation soapAction="http://tempuri.org/QueryParkingOperationJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryParkingOperationWithTimeSteps">
+      <soap12:operation soapAction="http://tempuri.org/QueryParkingOperationWithTimeSteps" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryParkingOperationWithTimeStepsJSON">
+      <soap12:operation soapAction="http://tempuri.org/QueryParkingOperationWithTimeStepsJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryParkingOperationWithAmountSteps">
+      <soap12:operation soapAction="http://tempuri.org/QueryParkingOperationWithAmountSteps" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryParkingOperationWithAmountStepsJSON">
+      <soap12:operation soapAction="http://tempuri.org/QueryParkingOperationWithAmountStepsJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryUnParkingOperation">
+      <soap12:operation soapAction="http://tempuri.org/QueryUnParkingOperation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryUnParkingOperationJSON">
+      <soap12:operation soapAction="http://tempuri.org/QueryUnParkingOperationJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalParkingOperationInstallationTime">
+      <soap12:operation soapAction="http://tempuri.org/InsertExternalParkingOperationInstallationTime" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalParkingOperationInstallationTimeJSON">
+      <soap12:operation soapAction="http://tempuri.org/InsertExternalParkingOperationInstallationTimeJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalParkingOperationUTCTime">
+      <soap12:operation soapAction="http://tempuri.org/InsertExternalParkingOperationUTCTime" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalParkingOperationUTCTimeJSON">
+      <soap12:operation soapAction="http://tempuri.org/InsertExternalParkingOperationUTCTimeJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalUnParkingOperationInstallationTime">
+      <soap12:operation soapAction="http://tempuri.org/InsertExternalUnParkingOperationInstallationTime" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalUnParkingOperationInstallationTimeJSON">
+      <soap12:operation soapAction="http://tempuri.org/InsertExternalUnParkingOperationInstallationTimeJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalUnParkingOperationUTCTime">
+      <soap12:operation soapAction="http://tempuri.org/InsertExternalUnParkingOperationUTCTime" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalUnParkingOperationUTCTimeJSON">
+      <soap12:operation soapAction="http://tempuri.org/InsertExternalUnParkingOperationUTCTimeJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalParkingOperationGtechna">
+      <soap12:operation soapAction="http://tempuri.org/InsertExternalParkingOperationGtechna" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalParkingOperationGtechnaJSON">
+      <soap12:operation soapAction="http://tempuri.org/InsertExternalParkingOperationGtechnaJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalPermitInstallationTime">
+      <soap12:operation soapAction="http://tempuri.org/InsertExternalPermitInstallationTime" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalPermitInstallationTimeJSON">
+      <soap12:operation soapAction="http://tempuri.org/InsertExternalPermitInstallationTimeJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalSystemOperationUTCTime">
+      <soap12:operation soapAction="http://tempuri.org/InsertExternalSystemOperationUTCTime" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalSystemOperationUTCTimeJSON">
+      <soap12:operation soapAction="http://tempuri.org/InsertExternalSystemOperationUTCTimeJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalSystemOperationInstallationTime">
+      <soap12:operation soapAction="http://tempuri.org/InsertExternalSystemOperationInstallationTime" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalSystemOperationInstallationTimeJSON">
+      <soap12:operation soapAction="http://tempuri.org/InsertExternalSystemOperationInstallationTimeJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalParkingOperationParkingmeter">
+      <soap12:operation soapAction="http://tempuri.org/InsertExternalParkingOperationParkingmeter" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalParkingOperationParkingmeterJSON">
+      <soap12:operation soapAction="http://tempuri.org/InsertExternalParkingOperationParkingmeterJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryPlateLastParkingOperation">
+      <soap12:operation soapAction="http://tempuri.org/QueryPlateLastParkingOperation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryPlateLastParkingOperationJSON">
+      <soap12:operation soapAction="http://tempuri.org/QueryPlateLastParkingOperationJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryGroupLastParkingOperations">
+      <soap12:operation soapAction="http://tempuri.org/QueryGroupLastParkingOperations" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryGroupLastParkingOperationsJSON">
+      <soap12:operation soapAction="http://tempuri.org/QueryGroupLastParkingOperationsJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryPlateHisOperations">
+      <soap12:operation soapAction="http://tempuri.org/QueryPlateHisOperations" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryPlateHisOperationsJSON">
+      <soap12:operation soapAction="http://tempuri.org/QueryPlateHisOperationsJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyOperationPlates">
+      <soap12:operation soapAction="http://tempuri.org/ModifyOperationPlates" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyOperationPlatesJSON">
+      <soap12:operation soapAction="http://tempuri.org/ModifyOperationPlatesJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalCameraOperationInstallationTime">
+      <soap12:operation soapAction="http://tempuri.org/InsertExternalCameraOperationInstallationTime" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalCameraOperationInstallationTimeJSON">
+      <soap12:operation soapAction="http://tempuri.org/InsertExternalCameraOperationInstallationTimeJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalCameraOperationUTCTime">
+      <soap12:operation soapAction="http://tempuri.org/InsertExternalCameraOperationUTCTime" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalCameraOperationUTCTimeJSON">
+      <soap12:operation soapAction="http://tempuri.org/InsertExternalCameraOperationUTCTimeJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelParkingOperation">
+      <soap12:operation soapAction="http://tempuri.org/CancelParkingOperation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelParkingOperationJSON">
+      <soap12:operation soapAction="http://tempuri.org/CancelParkingOperationJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="TariffComputerWSHttpGet" type="tns:TariffComputerWSHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="CheckService">
+      <http:operation location="/CheckService" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckServiceJSON">
+      <http:operation location="/CheckServiceJSON" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryAvailableTariffs">
+      <http:operation location="/QueryAvailableTariffs" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryAvailableTariffsJSON">
+      <http:operation location="/QueryAvailableTariffsJSON" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryParkingOperation">
+      <http:operation location="/QueryParkingOperation" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryParkingOperationJSON">
+      <http:operation location="/QueryParkingOperationJSON" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryParkingOperationWithTimeSteps">
+      <http:operation location="/QueryParkingOperationWithTimeSteps" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryParkingOperationWithTimeStepsJSON">
+      <http:operation location="/QueryParkingOperationWithTimeStepsJSON" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryParkingOperationWithAmountSteps">
+      <http:operation location="/QueryParkingOperationWithAmountSteps" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryParkingOperationWithAmountStepsJSON">
+      <http:operation location="/QueryParkingOperationWithAmountStepsJSON" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryUnParkingOperation">
+      <http:operation location="/QueryUnParkingOperation" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryUnParkingOperationJSON">
+      <http:operation location="/QueryUnParkingOperationJSON" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalParkingOperationInstallationTime">
+      <http:operation location="/InsertExternalParkingOperationInstallationTime" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalParkingOperationInstallationTimeJSON">
+      <http:operation location="/InsertExternalParkingOperationInstallationTimeJSON" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalParkingOperationUTCTime">
+      <http:operation location="/InsertExternalParkingOperationUTCTime" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalParkingOperationUTCTimeJSON">
+      <http:operation location="/InsertExternalParkingOperationUTCTimeJSON" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalUnParkingOperationInstallationTime">
+      <http:operation location="/InsertExternalUnParkingOperationInstallationTime" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalUnParkingOperationInstallationTimeJSON">
+      <http:operation location="/InsertExternalUnParkingOperationInstallationTimeJSON" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalUnParkingOperationUTCTime">
+      <http:operation location="/InsertExternalUnParkingOperationUTCTime" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalUnParkingOperationUTCTimeJSON">
+      <http:operation location="/InsertExternalUnParkingOperationUTCTimeJSON" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalParkingOperationGtechna">
+      <http:operation location="/InsertExternalParkingOperationGtechna" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalParkingOperationGtechnaJSON">
+      <http:operation location="/InsertExternalParkingOperationGtechnaJSON" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalPermitInstallationTime">
+      <http:operation location="/InsertExternalPermitInstallationTime" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalPermitInstallationTimeJSON">
+      <http:operation location="/InsertExternalPermitInstallationTimeJSON" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalSystemOperationUTCTime">
+      <http:operation location="/InsertExternalSystemOperationUTCTime" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalSystemOperationUTCTimeJSON">
+      <http:operation location="/InsertExternalSystemOperationUTCTimeJSON" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalSystemOperationInstallationTime">
+      <http:operation location="/InsertExternalSystemOperationInstallationTime" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalSystemOperationInstallationTimeJSON">
+      <http:operation location="/InsertExternalSystemOperationInstallationTimeJSON" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalParkingOperationParkingmeter">
+      <http:operation location="/InsertExternalParkingOperationParkingmeter" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalParkingOperationParkingmeterJSON">
+      <http:operation location="/InsertExternalParkingOperationParkingmeterJSON" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryPlateLastParkingOperation">
+      <http:operation location="/QueryPlateLastParkingOperation" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryPlateLastParkingOperationJSON">
+      <http:operation location="/QueryPlateLastParkingOperationJSON" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryGroupLastParkingOperations">
+      <http:operation location="/QueryGroupLastParkingOperations" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryGroupLastParkingOperationsJSON">
+      <http:operation location="/QueryGroupLastParkingOperationsJSON" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryPlateHisOperations">
+      <http:operation location="/QueryPlateHisOperations" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryPlateHisOperationsJSON">
+      <http:operation location="/QueryPlateHisOperationsJSON" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyOperationPlates">
+      <http:operation location="/ModifyOperationPlates" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyOperationPlatesJSON">
+      <http:operation location="/ModifyOperationPlatesJSON" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalCameraOperationInstallationTime">
+      <http:operation location="/InsertExternalCameraOperationInstallationTime" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalCameraOperationInstallationTimeJSON">
+      <http:operation location="/InsertExternalCameraOperationInstallationTimeJSON" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalCameraOperationUTCTime">
+      <http:operation location="/InsertExternalCameraOperationUTCTime" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalCameraOperationUTCTimeJSON">
+      <http:operation location="/InsertExternalCameraOperationUTCTimeJSON" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelParkingOperation">
+      <http:operation location="/CancelParkingOperation" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelParkingOperationJSON">
+      <http:operation location="/CancelParkingOperationJSON" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="TariffComputerWSHttpPost" type="tns:TariffComputerWSHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="CheckService">
+      <http:operation location="/CheckService" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckServiceJSON">
+      <http:operation location="/CheckServiceJSON" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryAvailableTariffs">
+      <http:operation location="/QueryAvailableTariffs" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryAvailableTariffsJSON">
+      <http:operation location="/QueryAvailableTariffsJSON" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryParkingOperation">
+      <http:operation location="/QueryParkingOperation" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryParkingOperationJSON">
+      <http:operation location="/QueryParkingOperationJSON" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryParkingOperationWithTimeSteps">
+      <http:operation location="/QueryParkingOperationWithTimeSteps" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryParkingOperationWithTimeStepsJSON">
+      <http:operation location="/QueryParkingOperationWithTimeStepsJSON" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryParkingOperationWithAmountSteps">
+      <http:operation location="/QueryParkingOperationWithAmountSteps" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryParkingOperationWithAmountStepsJSON">
+      <http:operation location="/QueryParkingOperationWithAmountStepsJSON" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryUnParkingOperation">
+      <http:operation location="/QueryUnParkingOperation" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryUnParkingOperationJSON">
+      <http:operation location="/QueryUnParkingOperationJSON" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalParkingOperationInstallationTime">
+      <http:operation location="/InsertExternalParkingOperationInstallationTime" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalParkingOperationInstallationTimeJSON">
+      <http:operation location="/InsertExternalParkingOperationInstallationTimeJSON" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalParkingOperationUTCTime">
+      <http:operation location="/InsertExternalParkingOperationUTCTime" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalParkingOperationUTCTimeJSON">
+      <http:operation location="/InsertExternalParkingOperationUTCTimeJSON" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalUnParkingOperationInstallationTime">
+      <http:operation location="/InsertExternalUnParkingOperationInstallationTime" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalUnParkingOperationInstallationTimeJSON">
+      <http:operation location="/InsertExternalUnParkingOperationInstallationTimeJSON" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalUnParkingOperationUTCTime">
+      <http:operation location="/InsertExternalUnParkingOperationUTCTime" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalUnParkingOperationUTCTimeJSON">
+      <http:operation location="/InsertExternalUnParkingOperationUTCTimeJSON" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalParkingOperationGtechna">
+      <http:operation location="/InsertExternalParkingOperationGtechna" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalParkingOperationGtechnaJSON">
+      <http:operation location="/InsertExternalParkingOperationGtechnaJSON" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalPermitInstallationTime">
+      <http:operation location="/InsertExternalPermitInstallationTime" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalPermitInstallationTimeJSON">
+      <http:operation location="/InsertExternalPermitInstallationTimeJSON" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalSystemOperationUTCTime">
+      <http:operation location="/InsertExternalSystemOperationUTCTime" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalSystemOperationUTCTimeJSON">
+      <http:operation location="/InsertExternalSystemOperationUTCTimeJSON" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalSystemOperationInstallationTime">
+      <http:operation location="/InsertExternalSystemOperationInstallationTime" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalSystemOperationInstallationTimeJSON">
+      <http:operation location="/InsertExternalSystemOperationInstallationTimeJSON" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalParkingOperationParkingmeter">
+      <http:operation location="/InsertExternalParkingOperationParkingmeter" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalParkingOperationParkingmeterJSON">
+      <http:operation location="/InsertExternalParkingOperationParkingmeterJSON" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryPlateLastParkingOperation">
+      <http:operation location="/QueryPlateLastParkingOperation" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryPlateLastParkingOperationJSON">
+      <http:operation location="/QueryPlateLastParkingOperationJSON" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryGroupLastParkingOperations">
+      <http:operation location="/QueryGroupLastParkingOperations" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryGroupLastParkingOperationsJSON">
+      <http:operation location="/QueryGroupLastParkingOperationsJSON" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryPlateHisOperations">
+      <http:operation location="/QueryPlateHisOperations" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryPlateHisOperationsJSON">
+      <http:operation location="/QueryPlateHisOperationsJSON" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyOperationPlates">
+      <http:operation location="/ModifyOperationPlates" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyOperationPlatesJSON">
+      <http:operation location="/ModifyOperationPlatesJSON" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalCameraOperationInstallationTime">
+      <http:operation location="/InsertExternalCameraOperationInstallationTime" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalCameraOperationInstallationTimeJSON">
+      <http:operation location="/InsertExternalCameraOperationInstallationTimeJSON" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalCameraOperationUTCTime">
+      <http:operation location="/InsertExternalCameraOperationUTCTime" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertExternalCameraOperationUTCTimeJSON">
+      <http:operation location="/InsertExternalCameraOperationUTCTimeJSON" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelParkingOperation">
+      <http:operation location="/CancelParkingOperation" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelParkingOperationJSON">
+      <http:operation location="/CancelParkingOperationJSON" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TariffComputerWS">
+    <wsdl:port name="TariffComputerWSSoap" binding="tns:TariffComputerWSSoap">
+      <soap:address location="http://localhost/TariffComputer.WS/TariffComputer.asmx" />
+    </wsdl:port>
+    <wsdl:port name="TariffComputerWSSoap12" binding="tns:TariffComputerWSSoap12">
+      <soap12:address location="http://localhost/TariffComputer.WS/TariffComputer.asmx" />
+    </wsdl:port>
+    <wsdl:port name="TariffComputerWSHttpGet" binding="tns:TariffComputerWSHttpGet">
+      <http:address location="http://localhost/TariffComputer.WS/TariffComputer.asmx" />
+    </wsdl:port>
+    <wsdl:port name="TariffComputerWSHttpPost" binding="tns:TariffComputerWSHttpPost">
+      <http:address location="http://localhost/TariffComputer.WS/TariffComputer.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

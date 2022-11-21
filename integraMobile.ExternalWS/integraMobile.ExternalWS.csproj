@@ -1,0 +1,711 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CAF33ABE-7E51-4812-AE08-78DA84F2140B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>integraMobile.ExternalWS</RootNamespace>
+    <AssemblyName>integraMobile.ExternalWS</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\integraMobile\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>integraMobile.ExternalWS.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\integraMobile\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject, Version=3.3.4.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\integraMobile.WS\packages\Ninject.3.3.4\lib\net45\Ninject.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Ninject.cs" />
+    <Compile Include="Notifications.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\MadridPlatform\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="ThirdPartyBase.cs" />
+    <Compile Include="ThirdPartyFine.cs" />
+    <Compile Include="ThirdPartyGeo.cs" />
+    <Compile Include="ThirdPartyLogin.cs" />
+    <Compile Include="ThirdPartyOffstreet.cs" />
+    <Compile Include="ThirdPartyOperation.cs" />
+    <Compile Include="ThirdPartyPagatelia.cs" />
+    <Compile Include="ThirdPartyStreetSection.cs" />
+    <Compile Include="ThirdPartyUser.cs" />
+    <Compile Include="Web References\BilbaoParkWsIntegraExternalService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\EysaThirdPartyConfirmParkWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\EysaThirdPartyFineWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\EysaThirdPartyParkWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\gTechnaThirdPartyFineWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\gTechnaThirdPartyParkingConfirmWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\integraMobileWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\MeyparThirdPartyOffstreetWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\MifasWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\PagateliaWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\PIC_WS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\SantBoiThirdPartyFineWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\StandardParkingWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\ValorizaWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="WS\Data\WSCities.cs" />
+    <Compile Include="WS\Data\WSExtensions.cs" />
+    <Compile Include="WS\Data\WSQueryParkingOperation.cs" />
+    <Compile Include="WS\Data\WSUserPlates.cs" />
+    <Compile Include="WS\Data\WSUserPreferences.cs" />
+    <Compile Include="WS\Data\WSZoneTar.cs" />
+    <Compile Include="WS\Data\ZoneTreeViewItem.cs" />
+    <Compile Include="WS\WSBase.cs" />
+    <Compile Include="WS\WSintegraMobile.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="integraMobile.ExternalWS.pfx" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\MadridPlatform\integraMobile.ExternalWS.MadridPlatform.AlarmCurrentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MadridPlatform\integraMobile.ExternalWS.MadridPlatform.AnulationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MadridPlatform\integraMobile.ExternalWS.MadridPlatform.AuthLoginResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MadridPlatform\integraMobile.ExternalWS.MadridPlatform.AuthLogoutResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MadridPlatform\integraMobile.ExternalWS.MadridPlatform.endSessionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MadridPlatform\integraMobile.ExternalWS.MadridPlatform.EntityAvailableSelectionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MadridPlatform\integraMobile.ExternalWS.MadridPlatform.EntityFilter_GetAvailableSelectionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MadridPlatform\integraMobile.ExternalWS.MadridPlatform.FineAnullationAuthResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MadridPlatform\integraMobile.ExternalWS.MadridPlatform.GetAllTfnResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MadridPlatform\integraMobile.ExternalWS.MadridPlatform.GetCurrentAlarmResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MadridPlatform\integraMobile.ExternalWS.MadridPlatform.GetFineAnullationAuthorizationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MadridPlatform\integraMobile.ExternalWS.MadridPlatform.GetHistAvailableSelectionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MadridPlatform\integraMobile.ExternalWS.MadridPlatform.GetHistCollectionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MadridPlatform\integraMobile.ExternalWS.MadridPlatform.GetHistDefCollectionCoinTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MadridPlatform\integraMobile.ExternalWS.MadridPlatform.GetHistDefTransactionCardTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MadridPlatform\integraMobile.ExternalWS.MadridPlatform.GetHistDefTransactionTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MadridPlatform\integraMobile.ExternalWS.MadridPlatform.GetHistTransactionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MadridPlatform\integraMobile.ExternalWS.MadridPlatform.GetInitialValCodeStatResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MadridPlatform\integraMobile.ExternalWS.MadridPlatform.GetParkingAuthorizationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MadridPlatform\integraMobile.ExternalWS.MadridPlatform.GetParkingOccupancyResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MadridPlatform\integraMobile.ExternalWS.MadridPlatform.GetPlateValCodeStatResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MadridPlatform\integraMobile.ExternalWS.MadridPlatform.GetRightsListFromParamsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MadridPlatform\integraMobile.ExternalWS.MadridPlatform.GetRightsListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MadridPlatform\integraMobile.ExternalWS.MadridPlatform.GetRightsListUpdateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MadridPlatform\integraMobile.ExternalWS.MadridPlatform.GetRightsMovementsByIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MadridPlatform\integraMobile.ExternalWS.MadridPlatform.GetTariffCongestionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MadridPlatform\integraMobile.ExternalWS.MadridPlatform.GetTfnAllDayResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MadridPlatform\integraMobile.ExternalWS.MadridPlatform.GetTfnAnulationsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MadridPlatform\integraMobile.ExternalWS.MadridPlatform.GetTfnInvalidationsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MadridPlatform\integraMobile.ExternalWS.MadridPlatform.GetTfnResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MadridPlatform\integraMobile.ExternalWS.MadridPlatform.GetTfnValidInfractionsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MadridPlatform\integraMobile.ExternalWS.MadridPlatform.GetTfnValidInvalidationsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MadridPlatform\integraMobile.ExternalWS.MadridPlatform.GetUpdateValCodeStatResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MadridPlatform\integraMobile.ExternalWS.MadridPlatform.GetValCodeHistResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MadridPlatform\integraMobile.ExternalWS.MadridPlatform.HistAvailableSelectionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MadridPlatform\integraMobile.ExternalWS.MadridPlatform.HistCollectionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MadridPlatform\integraMobile.ExternalWS.MadridPlatform.HistDefCollectionCoinTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MadridPlatform\integraMobile.ExternalWS.MadridPlatform.HistDefTransactionCardTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MadridPlatform\integraMobile.ExternalWS.MadridPlatform.HistDefTransactionTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MadridPlatform\integraMobile.ExternalWS.MadridPlatform.HistTransactionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MadridPlatform\integraMobile.ExternalWS.MadridPlatform.InfractionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MadridPlatform\integraMobile.ExternalWS.MadridPlatform.InvalidationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MadridPlatform\integraMobile.ExternalWS.MadridPlatform.ParkingOccupancyResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MadridPlatform\integraMobile.ExternalWS.MadridPlatform.PayTransactionAuthResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MadridPlatform\integraMobile.ExternalWS.MadridPlatform.PayTransactionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MadridPlatform\integraMobile.ExternalWS.MadridPlatform.PhotosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MadridPlatform\integraMobile.ExternalWS.MadridPlatform.SetFineAnullationTransactionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MadridPlatform\integraMobile.ExternalWS.MadridPlatform.SetParkingTransactionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MadridPlatform\integraMobile.ExternalWS.MadridPlatform.SetTfnInvalidationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MadridPlatform\integraMobile.ExternalWS.MadridPlatform.SetTfnNewResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MadridPlatform\integraMobile.ExternalWS.MadridPlatform.SetTfnUndoInvalidationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MadridPlatform\integraMobile.ExternalWS.MadridPlatform.startSessionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MadridPlatform\integraMobile.ExternalWS.MadridPlatform.TariffCongestionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MadridPlatform\integraMobile.ExternalWS.MadridPlatform.TrafficFineResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MadridPlatform\integraMobile.ExternalWS.MadridPlatform.UpdateTfnWithXMLResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MadridPlatform\integraMobile.ExternalWS.MadridPlatform.ValCodeStatResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MadridPlatform\integraMobile.ExternalWS.MadridPlatform.ValRightMovementResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MadridPlatform\integraMobile.ExternalWS.MadridPlatform.ValRightsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MadridPlatform\PublisherService.wsdl" />
+    <None Include="Service References\MadridPlatform\PublisherService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MadridPlatform\PublisherService1.wsdl" />
+    <None Include="Service References\MadridPlatform\PublisherService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MadridPlatform\PublisherService10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MadridPlatform\PublisherService2.wsdl" />
+    <None Include="Service References\MadridPlatform\PublisherService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MadridPlatform\PublisherService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MadridPlatform\PublisherService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MadridPlatform\PublisherService5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MadridPlatform\PublisherService6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MadridPlatform\PublisherService7.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MadridPlatform\PublisherService8.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MadridPlatform\PublisherService9.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\BilbaoParkWsIntegraExternalService\integraExternalServices.wsdl" />
+    <None Include="Web References\BilbaoParkWsIntegraExternalService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\EysaThirdPartyConfirmParkWS\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\EysaThirdPartyConfirmParkWS\ticket.wsdl" />
+    <None Include="Web References\EysaThirdPartyFineWS\anulaciones.wsdl" />
+    <None Include="Web References\EysaThirdPartyFineWS\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\EysaThirdPartyParkWS\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\EysaThirdPartyParkWS\tarifas.wsdl" />
+    <None Include="Web References\gTechnaThirdPartyFineWS\PayByPhoneOperationService.wsdl" />
+    <None Include="Web References\gTechnaThirdPartyFineWS\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\gTechnaThirdPartyFineWS\ticket_list_response1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\gTechnaThirdPartyFineWS\ticket_payment_response1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\gTechnaThirdPartyFineWS\ticket_status_response1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\gTechnaThirdPartyParkingConfirmWS\ParkingRightsListener.wsdl" />
+    <None Include="Web References\gTechnaThirdPartyParkingConfirmWS\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\integraMobileWS\integraMobileWS.wsdl" />
+    <None Include="Web References\integraMobileWS\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\MeyparThirdPartyOffstreetWS\InterfazPublicaWebService.wsdl" />
+    <None Include="Web References\MeyparThirdPartyOffstreetWS\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\MifasWS\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\MifasWS\webservice_anulaciones.wsdl" />
+    <None Include="Web References\PagateliaWS\ApiPayment.wsdl" />
+    <None Include="Web References\PagateliaWS\ApiPayment.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\PagateliaWS\ApiPayment0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\PagateliaWS\ApiPayment1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\PagateliaWS\ApiPayment2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\PagateliaWS\DoLoginResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PagateliaWS\DoRechargeResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PagateliaWS\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\PIC_WS\PIC_WS.wsdl" />
+    <None Include="Web References\PIC_WS\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\SantBoiThirdPartyFineWS\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\SantBoiThirdPartyFineWS\ws_anulaciones.wsdl" />
+    <None Include="Web References\StandardParkingWS\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\StandardParkingWS\TariffComputer.wsdl" />
+    <None Include="Web References\ValorizaWS\PagoPorMovil.wsdl" />
+    <None Include="Web References\ValorizaWS\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://localhost/TariffComputer.WS/TariffComputer.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\StandardParkingWS\</RelPath>
+      <UpdateFromURL>http://localhost/TariffComputer.WS/TariffComputer.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>integraMobile_ExternalWS_StandardParkingWS_TariffComputerWS</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="C:\work\dev\IntegraMobile\ExternalWS\EysaThirdPartyParkWS\tarifas.wsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\EysaThirdPartyParkWS\</RelPath>
+      <UpdateFromURL>C:\work\dev\IntegraMobile\ExternalWS\EysaThirdPartyParkWS\tarifas.wsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>integraMobile_ExternalWS_EysaThirdPartyParkWS_Tarifas</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://212.36.64.88:82/zb_new/ws_anulaciones.php%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\SantBoiThirdPartyFineWS\</RelPath>
+      <UpdateFromURL>http://212.36.64.88:82/zb_new/ws_anulaciones.php%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>integraMobile_ExternalWS_SantBoiThirdPartyFineWS_server</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://80.28.251.76:2424/InterfazPublicaWS/InterfazPublicaWebService.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\MeyparThirdPartyOffstreetWS\</RelPath>
+      <UpdateFromURL>http://80.28.251.76:2424/InterfazPublicaWS/InterfazPublicaWebService.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>integraMobile_ExternalWS_MeyparThirdPartyOffstreetWS_InterfazPublicaWebService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost/TariffComputer.WS/PIC_WS.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\PIC_WS\</RelPath>
+      <UpdateFromURL>http://localhost/TariffComputer.WS/PIC_WS.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>integraMobile_ExternalWS_PIC_WS_PIC_WS</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://www.gesblue.com/app/v2/webservice_anulaciones.php%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\MifasWS\</RelPath>
+      <UpdateFromURL>http://www.gesblue.com/app/v2/webservice_anulaciones.php%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>integraMobile_ExternalWS_MifasWS_anulaciones</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://mp.sacyr.com/PagoxMovil/PagoPorMovil.asmx%3fWSDL">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\ValorizaWS\</RelPath>
+      <UpdateFromURL>https://mp.sacyr.com/PagoxMovil/PagoPorMovil.asmx%3fWSDL</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>integraMobile_ExternalWS_ValorizaWS_Service1</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://ws-eur.iparkme.com/dev/bilbaoparkws/integraExternalServices.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\BilbaoParkWsIntegraExternalService\</RelPath>
+      <UpdateFromURL>https://ws-eur.iparkme.com/dev/bilbaoparkws/integraExternalServices.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>integraMobile_ExternalWS_BilbaoParkWsIntegraExternalService_integraExternalServices</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://ws.iparkme.com/Dev/integraMobileWS/integraMobileWS.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\integraMobileWS\</RelPath>
+      <UpdateFromURL>https://ws.iparkme.com/Dev/integraMobileWS/integraMobileWS.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>integraMobile_ExternalWS_integraMobileWS_integraMobileWS</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://www.pagatelia.com/apipayments/ApiPayment.svc">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\PagateliaWS\</RelPath>
+      <UpdateFromURL>https://www.pagatelia.com/apipayments/ApiPayment.svc</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>integraMobile_ExternalWS_PagateliaWS_ApiPayment</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://eysaippre.eysanet.com/parquimetrosWSVS2012/framework/ticket.asmx%3fWSDL">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\EysaThirdPartyConfirmParkWS\</RelPath>
+      <UpdateFromURL>https://eysaippre.eysanet.com/parquimetrosWSVS2012/framework/ticket.asmx%3fWSDL</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>integraMobile_ExternalWS_EysaThirdPartyConfirmParkWS_Ticket</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="C:\work\dev\BackOffice - integraMobile\ExternalWS\EysaThirdPartyFineWS\anulaciones.wsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\EysaThirdPartyFineWS\</RelPath>
+      <UpdateFromURL>C:\work\dev\BackOffice - integraMobile\ExternalWS\EysaThirdPartyFineWS\anulaciones.wsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>integraMobile_ExternalWS_EysaThirdPartyFineWS_Anulaciones</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="C:\work\dev\BackOffice - integraMobile\ExternalWS\gTechnaThirdPartyFineWS\PayByPhoneOperationService.wsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\gTechnaThirdPartyFineWS\</RelPath>
+      <UpdateFromURL>C:\work\dev\BackOffice - integraMobile\ExternalWS\gTechnaThirdPartyFineWS\PayByPhoneOperationService.wsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>integraMobile_ExternalWS_gTechnaThirdPartyFineWS_PayByPhoneOperationService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="C:\work\dev\BackOffice - integraMobile\ExternalWS\gTechnaThirdPartyParkingConfirmWS\ParkingRightsListener.wsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\gTechnaThirdPartyParkingConfirmWS\</RelPath>
+      <UpdateFromURL>C:\work\dev\BackOffice - integraMobile\ExternalWS\gTechnaThirdPartyParkingConfirmWS\ParkingRightsListener.wsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>integraMobile_ExternalWS_gTechnaThirdPartyParkingConfirmWS_MESParkingRightsSOAPFacadeService</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\integraMobile.Domain\integraMobile.Domain.csproj">
+      <Project>{d61b49d2-71e7-4594-b4bf-7111445dd51c}</Project>
+      <Name>integraMobile.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\integraMobile.Infrastructure\integraMobile.Infrastructure.csproj">
+      <Project>{1a917a7c-c1d1-4bc8-9434-9f37fadc0a6b}</Project>
+      <Name>integraMobile.Infrastructure</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\MeyparThirdPartyOffstreetWS\InterfazPublicaWebService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\PagateliaWS\ApiPayment.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\MadridPlatform\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MadridPlatform\PublisherService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MadridPlatform\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MadridPlatform\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MadridPlatform\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\integraMobileWS\integraMobileWS.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\PIC_WS\PIC_WS.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\BilbaoParkWsIntegraExternalService\integraExternalServices.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\StandardParkingWS\TariffComputer.disco" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

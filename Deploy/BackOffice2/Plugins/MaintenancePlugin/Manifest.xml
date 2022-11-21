@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Bundle xmlns="urn:uiosp-bundle-manifest-2.0" Name="MaintenancePlugin" SymbolicName="MaintenancePlugin" Version="1.0.0.0" InitializedState="Active">
+  <Activator Type="MaintenancePlugin.Activator" Policy="Immediate" />
+  <Runtime>
+    <Assembly Path="bin\MaintenancePlugin.dll" Share="false" />
+  </Runtime>
+
+  <!--<Extension Point="MainMenu">
+      <Item id="mnuTest" url="~/Test/Index?plugin=MaintenancePlugin" text="MaintenancePlugin" order="2" priority="1" image="Content/images/invoices.png" class="" role="">
+        <Resources>
+          <Text locale="en-US" text="MaintenancePlugin"></Text>
+          <Text locale="es-ES" text="MaintenancePlugin"></Text>          
+        </Resources>
+        <SubItems>
+          <Item id="mnuTestSub1" url="~/Test/Index2?plugin=MaintenancePlugin" text="Test2" order="2" image="Content/images/users.png" class="" role="">
+            <Resources>
+              <Text locale="en-US" text="Test2 EN"></Text>
+              <Text locale="es-ES" text="Test2 ES"></Text>
+            </Resources>
+          </Item>
+          <Item id="mnuTestMF" url="~/Maintenance/Maintenance?plugin=MaintenancePlugin&amp;modelName=MaintenanceFields" text="Maintenance Fields" order="3" image="Content/images/users.png" class="" role="">
+            <Resources>
+              <Text locale="en-US" text="Maintenance Fields"></Text>
+              <Text locale="es-ES" text="Campos Mantenimiento"></Text>
+            </Resources>
+          </Item>
+          <Item id="mnuTestOperations" url="~/Maintenance/Maintenance?plugin=MaintenancePlugin&amp;modelName=Operations" text="Operations" order="4" image="Content/images/users.png" class="" role="">
+            <Resources>
+              <Text locale="en-US" text="Operations"></Text>
+              <Text locale="es-ES" text="Operaciones"></Text>
+            </Resources>
+          </Item>
+          <Item id="mnuTestM" url="~/Maintenance/Maintenance?plugin=MaintenancePlugin&amp;modelName=Maintenances" text="Maintenance" order="6" image="Content/images/users.png" class="" role="">
+            <Resources>
+              <Text locale="en-US" text="Maintenances"></Text>
+              <Text locale="es-ES" text="Mantenimientos"></Text>
+            </Resources>
+          </Item>
+          <Item id="mnuTestU" url="~/Maintenance/Maintenance?plugin=MaintenancePlugin&amp;modelName=Units" text="Units" order="5" image="Content/images/users.png" class="" role="UNITS_READ">
+            <Resources>
+              <Text locale="en-US" text="Units"></Text>
+              <Text locale="es-ES" text="Unidades"></Text>
+            </Resources>
+          </Item>
+          <Item id="mnuTestTree" url="~/Test/Tree?plugin=MaintenancePlugin" text="Tree" order="7" image="Content/images/users.png" class="">
+            <Resources>
+              <Text locale="en-US" text="Tree"></Text>
+              <Text locale="es-ES" text="Árbol"></Text>
+            </Resources>
+          </Item>
+          <Item id="mnuTestSubMenu" url="#" text="SubMenu" order="8" image="Content/images/users.png" class="">
+            <Resources>
+              <Text locale="en-US" text="Level 1"></Text>
+              <Text locale="es-ES" text="Nivel 1"></Text>
+            </Resources>
+            <SubItems>
+              <Item id="mnuTestSubMenu1" url="~/Maintenance/Maintenance?plugin=MaintenancePlugin&amp;modelName=MaintenanceFields" text="SubMenu1" order="1" image="Content/images/users.png" class="">
+                <Resources>
+                  <Text locale="en-US" text="Fields"></Text>
+                  <Text locale="es-ES" text="Campos"></Text>
+                </Resources>
+                <SubItems>
+                  <Item id="mnuTestSubMenu2" url="~/Maintenance/Maintenance?plugin=MaintenancePlugin&amp;modelName=Maintenances" text="SubMenu2" order="1" image="Content/images/users.png" class="">
+                    <Resources>
+                      <Text locale="en-US" text="Maintenances"></Text>
+                      <Text locale="es-ES" text="Mantenimientos"></Text>
+                    </Resources>
+                  </Item>
+                </SubItems>
+              </Item>
+              </SubItems>
+          </Item>
+        </SubItems>
+      </Item>
+  </Extension>-->
+</Bundle>

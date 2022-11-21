@@ -1,0 +1,319 @@
+﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+<%@ Import Namespace="System.Globalization" %>
+<%@ Import Namespace="integraMobile.Domain" %>
+
+<!DOCTYPE html>
+<html>
+
+<head runat="server">
+    <meta charset="utf-8">
+    <title><asp:ContentPlaceHolder ID="TitleContent" runat="server" /></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="~/Content/css/style.css">
+    <link rel="stylesheet" href="~/Content/css/loader-style.css">
+    <link rel="stylesheet" href="~/Content/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/Content/css/extra-pages.css">
+
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server" />
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+        <script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+    <!-- Fav and touch icons -->
+    <link rel="shortcut icon" href="~/Content/ico/favicon.ico">
+</head>
+
+<body>
+
+<% NumberFormatInfo provider = new NumberFormatInfo(); provider.NumberDecimalSeparator = "."; %>
+
+    <div id="preloader">
+        <div id="status">&nbsp;</div>
+    </div>
+
+    <nav role="navigation" class="navbar navbar-static-top">
+        <div class="container-fluid">
+
+            <div class="navbar-header">
+                <button data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" class="navbar-toggle" type="button">
+                    <span class="entypo-menu"></span>
+                </button>
+
+                <div id="logo-mobile" class="visible-xs">
+                    <a href="<%= Url.Action("Main", "Account") %>"><img src="<%= Url.Content("~/Content/img/logo.svg") %>" alt="Integra - Parking Solutions"></a>
+                </div>
+
+            </div>
+
+            <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse">
+
+
+                <ul style="margin-right:0;" class="nav navbar-nav navbar-right">
+                    <li>
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                            <%=Resources.Account_Hi%> <%=ViewData["UserNameAndSurname"]%>! <b class="caret"></b>
+                        </a>
+                        <ul style="margin-top:14px;" role="menu" class="dropdown-setting dropdown-menu">
+                            <li>
+                                <a href="<%= Url.Action("LogOff", "Account") %>">
+                                    <span class="entypo-logout"></span>&#160;&#160;<%=Resources.Account_Logout%></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                            <span class="entypo-globe"></span>&#160;&#160;<%=Resources.Account_ChangeLanguage%>  <b class="caret"></b></a>
+                        <ul role="menu" class="dropdown-setting dropdown-menu">
+                            <% Html.RenderPartial("CultureChooserUserControl"); %>
+                        </ul>
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    <div id="skin-select">
+        <div id="logo">
+            <a href="<%= Url.Action("Main", "Account") %>"><img src="<%= Url.Content("~/Content/img/logo.svg") %>" alt="Integra - Parking Solutions"></a>
+        </div>
+
+        <a id="toggle">
+            <span class="entypo-menu"></span>
+        </a>
+        <div class="dark">
+            <form action="#">
+                <span>
+                    <input type="text" name="search" value="" class="search rounded id_search" placeholder="<%=Resources.Account_SearchMenu%>" autofocus />
+                </span>
+            </form>
+        </div>
+
+        <div class="search-hover">
+            <form id="demo-2">
+                <input type="search" placeholder="Search Menu..." class="id_search">
+            </form>
+        </div>
+
+        <div class="skin-part">
+            <div id="tree-wrap">
+                <div class="side-bar">
+                    <ul class="topnav menu-left-nest">
+                        <li>
+                            <a href="#" style="border-left:0px solid!important;" class="title-menu-left">
+                                <span><%=Resources.Account_Main_BttnUserData%></span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="tooltip-tip2 ajax-load" href="<%= Url.Action("UserData", "Account") %>" title="<%=Resources.PersonalData %>">
+                                <i class="entypo-vcard"></i>
+                                <span><%=Resources.PersonalData %></span>
+                            </a>
+                        </li>
+<%
+    if (Session["SuscriptionTypeConf"] == null)
+    {
+        Session["SuscriptionTypeConf"] = string.Empty;
+    }
+    if (string.IsNullOrEmpty(Session["SuscriptionTypeConf"].ToString())) {  %>						
+                        <li>
+                            <a class="tooltip-tip2 ajax-load" href="<%= Url.Action("SelectSuscriptionTypeINT", "Account") %>" title="<%=Resources.SelectPayMethod_ChangeSuscriptionType %>">
+                                <i class="icon icon-document-edit"></i>
+                                <span><%=Resources.SelectPayMethod_ChangeSuscriptionType %></span>
+                            </a>
+                        </li>
+<%} %>						
+                        <li>
+                            <a class="tooltip-tip2 ajax-load" href="<%= Url.Action("ChangeEmailOrMobile", "Account") %>" title="<%=Resources.UserData_ChangeTelOrEmailTitle %>">
+                                <i class="icon icon-mobile-portrait"></i>
+                                <span><%=Resources.UserData_ChangeTelOrEmailTitle %></span>
+                            </a>
+                        </li>
+<%
+    
+    USER oUser = (USER)ViewData["oUser"];
+    if (oUser != null)
+    {
+        if (oUser.CUSTOMER_PAYMENT_MEAN != null)
+        {
+            if ((oUser.CUSTOMER_PAYMENT_MEAN.CUSPM_ENABLED == 1) && (oUser.CUSTOMER_PAYMENT_MEAN.CUSPM_VALID == 1))
+            {
+                // User has payment method
+            %>
+                            <li>
+                                <a class="tooltip-tip2 ajax-load" href="<%= Url.Action("SelectPayMethod", "Account", new { bForceChange = "True" })%>" title="<%=Resources.usettings_payment_methods_modify_ccard %>">
+                                    <i class="entypo-credit-card"></i>
+                                    <span><%=Resources.usettings_payment_methods_modify_ccard %></span>
+                                </a>
+                            </li>
+            <%
+                if ((oUser.USR_SUSCRIPTION_TYPE.Value == (int)PaymentSuscryptionType.pstPrepay)/* && (oUser.USR_BALANCE <= 0)*/)
+                { 
+            %>
+                            <li>
+                                <a class="tooltip-tip2 ajax-load" href="<%= Url.Action("SelectPayMethod", "Account", new { bForceChange = "False" })%>" title="<%=Resources.recharging_balance %>">
+                                    <i class="entypo-credit-card"></i>
+                                    <span><%=Resources.recharging_balance %></span>
+                                </a>
+                            </li>
+            <%            
+                }
+            }
+            else
+            {
+                // User has no payment method
+    %>
+                            <li>
+                                <a class="tooltip-tip2 ajax-load" href="<%= Url.Action("SelectPayMethod", "Account", new { bForceChange = "True" })%>" title="<%=Resources.urech_add_new_card /* Resources.UserData_PayMeansTitle */%>">
+                                    <i class="entypo-credit-card"></i>
+                                    <span><%=Resources.urech_add_new_card /* Resources.UserData_PayMeansTitle */ %></span>
+                                </a>
+                            </li>
+                        
+    <%
+            }
+        }
+        else 
+        {
+            // User has no payment method
+    %>
+                            <li>
+                                <a class="tooltip-tip2 ajax-load" href="<%= Url.Action("SelectPayMethod", "Account", new { bForceChange = "True" })%>" title="<%=Resources.urech_add_new_card /* Resources.UserData_PayMeansTitle */%>">
+                                    <i class="entypo-credit-card"></i>
+                                    <span><%=Resources.urech_add_new_card /* Resources.UserData_PayMeansTitle */ %></span>
+                                </a>
+                            </li>
+                        
+    <%
+        }
+    }
+    %>
+                        <li>
+                            <a class="tooltip-tip2 ajax-load" href="<%= Url.Action("DeleteUser", "Account") %>" title="<%=Resources.UserData_RemoveUserAccount %>">
+                                <i class="entypo-cancel-circled"></i>
+                                <span><%=Resources.UserData_RemoveUserAccount %></span>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="topnav menu-left-nest">
+                        <li>
+                            <a href="#" style="border-left:0px solid!important;" class="title-menu-left">
+                                <span><%=Resources.Account_Main_BttnOperations%></span>
+                            </a>
+                        </li>
+  <%if (Convert.ToInt32(ViewData["SuscriptionTypeGeneral"])==(int)PaymentSuscryptionType.pstPrepay) { %>						
+                        <li>
+                            <a class="tooltip-tip ajax-load" href="<%= Url.Action("RechargeINT", "Account") %>" title="<%=Resources.Account_Main_BttnBalanceAndRecharge%>">
+                                <i class="fontawesome-shopping-cart"></i>
+                                <span><%=Resources.Account_Main_BttnBalanceAndRecharge%></span>
+                            </a>
+                        </li>
+  <% } %>						
+                        <li>
+                            <a class="tooltip-tip2 ajax-load" href="<%= Url.Action("Main", "Account") %>" title="<%=Resources.Account_HisOperations%>">
+                                <i class="fontawesome-time"></i>
+                                <span><%=Resources.Account_HisOperations%></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="tooltip-tip2 ajax-load" href="<%= Url.Action("Invoices", "Account") %>" title="<%=Resources.Account_Main_BttnInvoices%>">
+                                <i class="fontawesome-file"></i>
+                                <span><%=Resources.Account_Main_BttnInvoices%></span>
+                            </a>
+                        </li>
+
+
+
+                        <%
+                            // HIDE PERMITS OPTIONS  
+                            bool bTariffPermit =false;
+                            if (ViewData["bTariffPermit"] != null)
+                            {
+                                bTariffPermit = (bool)ViewData["bTariffPermit"];
+                            }
+							if (bTariffPermit)
+							{
+						%>
+                        <li>
+                            <a class="tooltip-tip2 ajax-load" href="<%= Url.Action("PayForPermit", "Permits") %>" title="<%=Resources.Account_Main_BttnPermits%>">
+                                <i class="fontawesome-shopping-cart"></i>
+                                <span><%=Resources.Account_Main_BttnPermits%></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="tooltip-tip2 ajax-load" href="<%= Url.Action("ActivePermits", "Permits") %>" title="<%=Resources.Account_Main_BttnActivePermits%>">
+                                <i class="fontawesome-check"></i>
+                                <span><%=Resources.Account_Main_BttnActivePermits%></span>
+                            </a>
+                        </li>
+                        <%
+                        } // END :: Permits Operations
+                        %>
+
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="wrap-fluid">
+        <div class="container-fluid paper-wrap bevel tlbr">
+
+        <div class="row">
+            <div id="paper-top">
+                <div class="col-md-8 col-sm-6">
+                    <h2 class="tittle-content-header">
+                        <asp:ContentPlaceHolder ID="MainContentTitle" runat="server" />
+                    </h2>
+
+                </div>
+                <% 
+                    if (oUser!=null)
+                    { 
+                        if ((oUser.USR_SUSCRIPTION_TYPE.Value == (int)PaymentSuscryptionType.pstPrepay)||(oUser.USR_BALANCE>0))
+                        {                                                                                  
+                %>
+                <div class="col-md-4 col-sm-6">
+                    <div class="devider-vertical visible-lg"></div>
+                    <%=Resources.Account_CurrentBalance%>: <b class="text-success"><%=string.Format(provider, "{0:0.00} {1}", Convert.ToDouble(oUser.USR_BALANCE)/100.0,ViewData["CurrencyISOCode"]) %></b>
+                </div>
+                <% 
+                        }
+                    } 
+                %>
+            </div>
+        </div>
+
+            <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+
+            <div class="footer-space"></div>
+            <div id="footer">
+                <div class="copyright">
+                    &copy; Integra, <%= DateTime.Now.Year.ToString() %>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script type="text/javascript" src="<%= Url.Content("~/Content/js/preloader.js") %>"></script>
+    <script type="text/javascript" src="<%= Url.Content("~/Content/js/bootstrap.min.js") %>"></script>
+    <script type="text/javascript" src="<%= Url.Content("~/Content/js/app.js") %>"></script>
+    <script type="text/javascript" src="<%= Url.Content("~/Content/js/load.js") %>"></script>
+    <script type="text/javascript" src="<%= Url.Content("~/Content/js/skin-select/jquery.cookie.js") %>"></script>
+    <script type="text/javascript" src="<%= Url.Content("~/Content/js/skin-select/skin-select.js") %>"></script>
+    <script type="text/javascript" src="<%= Url.Content("~/Content/js/main.js") %>"></script>
+
+    <% Html.RenderPartial("GoogleAnalytics"); %>
+
+
+</body>
+</html>

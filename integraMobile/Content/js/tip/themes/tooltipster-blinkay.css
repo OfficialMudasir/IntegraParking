@@ -1,0 +1,19 @@
+.tooltipster-blinkay {
+	box-shadow: 0px 0px 14px rgba(0,0,0,0.3);
+    
+	border-radius: 0px;
+	background: #04D293;/* #252d3b */
+	background: var(--success);
+    color: #fafafa;
+    color: var(--light);
+
+}
+.tooltipster-blinkay .tooltipster-content {
+	font-family: 'saira', sans-serif;
+	font-family: var(--font-family-blinkay);
+    font-size: 10pt;
+    font-weight: lighter;
+	line-height: 16px;
+	padding: 16px 16px;
+
+}

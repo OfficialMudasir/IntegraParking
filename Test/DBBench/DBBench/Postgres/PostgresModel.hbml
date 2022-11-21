@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping schema="test" assembly="DBBench" namespace="DBBench.Postgres" p1:Guid="70d17588-c27f-4dd4-bfbb-2dfc7db492fb" xmlns:p1="http://devart.com/schemas/EntityDeveloper/1.0" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="PgTestTable" table="test_table" p1:Guid="393266d8-c8dd-4ba0-9d84-22eefb7a2831">
+    <id name="PgId" type="Int32" p1:ValidateRequired="true" p1:Guid="f4f63be4-8b65-4bac-a58a-a5769b60421c">
+      <column name="id" not-null="true" sql-type="int4" p1:unicode="false" />
+      <generator class="sequence">
+        <param name="sequence">test_table_id_seq</param>
+      </generator>
+    </id>
+    <property name="PgStringField" type="String" p1:ValidateMaxLength="4096" p1:ValidateRequired="true" p1:Guid="82a90b37-2d9f-47b6-b0a8-acc88eeffd09">
+      <column name="string_field" not-null="true" length="4096" sql-type="varchar" p1:unicode="true" />
+    </property>
+  </class>
+</hibernate-mapping>

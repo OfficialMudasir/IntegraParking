@@ -1,0 +1,145 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Telerik.Reporting.Cache.StackExchangeRedis</name>
+    </assembly>
+    <members>
+        <member name="T:Telerik.Reporting.Cache.StackExchangeRedis.RedisStorage">
+            <summary>
+            <see cref="T:Telerik.Reporting.Cache.Interfaces.IStorage"/>
+            implementation using as storage Redis server
+            (<a href="http://redis.io/"/>).
+            </summary>
+            <remarks>
+            RedisStorage connects to Redis server using the 
+            StackExchange.Redis 
+            (<a href="https://github.com/StackExchange/StackExchange.Redis"/>)
+            client. Redis server provides built-in application locks mechanism
+            which RedisStorage implementation utilizes. This makes it
+            suitable for both single and multiple service instance deployment.
+            </remarks>
+        </member>
+        <member name="M:Telerik.Reporting.Cache.StackExchangeRedis.RedisStorage.#ctor(StackExchange.Redis.ConnectionMultiplexer)">
+            <summary>
+            Creates and initializes an instance of the RedisStorage.
+            </summary>
+            <param name="connection">
+            An object hiding the Redis connection details.
+            Should be reused (static/ shared) for each request.
+            <a href="https://github.com/StackExchange/StackExchange.Redis/blob/master/Docs/Basics.md"/>
+            </param>
+        </member>
+        <member name="M:Telerik.Reporting.Cache.StackExchangeRedis.RedisStorage.#ctor(StackExchange.Redis.ConnectionMultiplexer,System.String)">
+            <summary>
+            Creates and initializes an instance of the RedisStorage.
+            </summary>
+            <param name="connection">
+            An object hiding the Redis connection details.
+            Should be reused (static/ shared) for each request.
+            <a href="https://github.com/StackExchange/StackExchange.Redis/blob/master/Docs/Basics.md"/>
+            </param>
+            <param name="keysPrefix">
+            String prefix that should be applied on each key stored in the Redis database.
+            This allows shared usage of one Redis database.
+            </param>
+        </member>
+        <member name="M:Telerik.Reporting.Cache.StackExchangeRedis.RedisStorage.#ctor(StackExchange.Redis.ConnectionMultiplexer,System.String,System.Int32)">
+            <summary>
+            Creates and initializes an instance of the RedisStorage.
+            </summary>
+            <param name="connection">
+            An object hiding the Redis connection details.
+            Should be reused (static/ shared) for each request.
+            <a href="https://github.com/StackExchange/StackExchange.Redis/blob/master/Docs/Basics.md"/>
+            </param>
+            <param name="keysPrefix">
+            String prefix that should be applied on each key stored in the Redis database.
+            This allows shared usage of one Redis database.
+            </param>
+            <param name="databaseNumber">
+            Determines the number of the database that should be used.
+            </param>
+        </member>
+        <member name="M:Telerik.Reporting.Cache.StackExchangeRedis.RedisStorage.AcquireLock(System.String)">
+            <summary>
+            Acquires a lock on a named resource.
+            </summary>
+            <seealso cref="M:Telerik.Reporting.Cache.Interfaces.IStorage.AcquireLock(System.String)"/>
+        </member>
+        <member name="M:Telerik.Reporting.Cache.StackExchangeRedis.RedisStorage.Exists(System.String)">
+            <summary>
+            Retrieves a value indicating if a single value (string or byte array)
+            exists in the storage.
+            </summary>
+            <seealso cref="M:Telerik.Reporting.Cache.Interfaces.IStorage.Exists(System.String)"/>
+        </member>
+        <member name="M:Telerik.Reporting.Cache.StackExchangeRedis.RedisStorage.SetString(System.String,System.String)">
+            <summary>
+            Stores a string value under particular key.
+            </summary>
+            <seealso cref="M:Telerik.Reporting.Cache.Interfaces.IStorage.SetString(System.String,System.String)"/>
+        </member>
+        <member name="M:Telerik.Reporting.Cache.StackExchangeRedis.RedisStorage.SetBytes(System.String,System.Byte[])">
+            <summary>
+            Stores a byte array value under particular key.
+            </summary>
+            <seealso cref="M:Telerik.Reporting.Cache.Interfaces.IStorage.SetBytes(System.String,System.Byte[])"/>
+        </member>
+        <member name="M:Telerik.Reporting.Cache.StackExchangeRedis.RedisStorage.GetString(System.String)">
+            <summary>
+            Retrieves a string value stored under particular key.
+            </summary>
+            <seealso cref="M:Telerik.Reporting.Cache.Interfaces.IStorage.GetString(System.String)"/>
+        </member>
+        <member name="M:Telerik.Reporting.Cache.StackExchangeRedis.RedisStorage.GetBytes(System.String)">
+            <summary>
+            Retrieves a byte array value stored under particular key.
+            </summary>
+            <seealso cref="M:Telerik.Reporting.Cache.Interfaces.IStorage.GetBytes(System.String)"/>
+        </member>
+        <member name="M:Telerik.Reporting.Cache.StackExchangeRedis.RedisStorage.Delete(System.String)">
+            <summary>
+            Deletes a key with its value (string or byte array) from the storage.
+            </summary>
+            <seealso cref="M:Telerik.Reporting.Cache.Interfaces.IStorage.Delete(System.String)"/>
+        </member>
+        <member name="M:Telerik.Reporting.Cache.StackExchangeRedis.RedisStorage.ExistsInSet(System.String,System.String)">
+            <summary>
+            Retrieves a value indicating if a set of values 
+            exists in the storage.
+            </summary>
+            <seealso cref="M:Telerik.Reporting.Cache.Interfaces.IStorage.ExistsInSet(System.String,System.String)"/>
+        </member>
+        <member name="M:Telerik.Reporting.Cache.StackExchangeRedis.RedisStorage.GetCountInSet(System.String)">
+            <summary>
+            Retrieves the count of the values in a set value stored in the storage.
+            </summary>
+            <seealso cref="M:Telerik.Reporting.Cache.Interfaces.IStorage.GetCountInSet(System.String)"/>
+        </member>
+        <member name="M:Telerik.Reporting.Cache.StackExchangeRedis.RedisStorage.GetAllMembersInSet(System.String)">
+            <summary>
+            Retrieves all members in a set of string values.
+            </summary>
+            <seealso cref="M:Telerik.Reporting.Cache.Interfaces.IStorage.GetAllMembersInSet(System.String)"/>
+        </member>
+        <member name="M:Telerik.Reporting.Cache.StackExchangeRedis.RedisStorage.AddInSet(System.String,System.String)">
+            <summary>
+            Adds a single string value to a set of values denoted from the given key.
+            </summary>
+            <seealso cref="M:Telerik.Reporting.Cache.Interfaces.IStorage.AddInSet(System.String,System.String)"/>
+        </member>
+        <member name="M:Telerik.Reporting.Cache.StackExchangeRedis.RedisStorage.DeleteInSet(System.String,System.String)">
+            <summary>
+            Deletes a single string value from a set of values denoted from the given key.
+            </summary>
+            <seealso cref="M:Telerik.Reporting.Cache.Interfaces.IStorage.DeleteInSet(System.String,System.String)"/>
+        </member>
+        <member name="P:Telerik.Reporting.Cache.StackExchangeRedis.RedisStorage.LockTimeout">
+            <summary>
+            Gets or sets the acquired lock timeout in seconds. 
+            When expired, lock is released. 
+            Default timeout is 3 seconds.
+            </summary>
+        </member>
+    </members>
+</doc>

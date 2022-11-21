@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://10.100.254.101" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://10.100.254.101" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://10.100.254.101">
+      <s:element name="InsertarAnulacion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pass" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="municipio" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="idVSM" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertarAnulacionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsertarAnulacionResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SolicitudDenuncias">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pass" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="matricula" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="municipio" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SolicitudDenunciasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SolicitudDenunciasResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SolicitudDenunciasPorExpediente">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pass" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="expediente" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="municipio" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SolicitudDenunciasPorExpedienteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SolicitudDenunciasPorExpedienteResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SolicitudTicketCGS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="matricula" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="zona" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="municipio" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="idusuario" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="idruta" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SolicitudTicketCGSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SolicitudTicketCGSResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="InsertarAnulacionSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertarAnulacion" />
+  </wsdl:message>
+  <wsdl:message name="InsertarAnulacionSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertarAnulacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="SolicitudDenunciasSoapIn">
+    <wsdl:part name="parameters" element="tns:SolicitudDenuncias" />
+  </wsdl:message>
+  <wsdl:message name="SolicitudDenunciasSoapOut">
+    <wsdl:part name="parameters" element="tns:SolicitudDenunciasResponse" />
+  </wsdl:message>
+  <wsdl:message name="SolicitudDenunciasPorExpedienteSoapIn">
+    <wsdl:part name="parameters" element="tns:SolicitudDenunciasPorExpediente" />
+  </wsdl:message>
+  <wsdl:message name="SolicitudDenunciasPorExpedienteSoapOut">
+    <wsdl:part name="parameters" element="tns:SolicitudDenunciasPorExpedienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="SolicitudTicketCGSSoapIn">
+    <wsdl:part name="parameters" element="tns:SolicitudTicketCGS" />
+  </wsdl:message>
+  <wsdl:message name="SolicitudTicketCGSSoapOut">
+    <wsdl:part name="parameters" element="tns:SolicitudTicketCGSResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertarAnulacionHttpGetIn">
+    <wsdl:part name="usuario" type="s:string" />
+    <wsdl:part name="pass" type="s:string" />
+    <wsdl:part name="municipio" type="s:string" />
+    <wsdl:part name="idVSM" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertarAnulacionHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="SolicitudDenunciasHttpGetIn">
+    <wsdl:part name="usuario" type="s:string" />
+    <wsdl:part name="pass" type="s:string" />
+    <wsdl:part name="matricula" type="s:string" />
+    <wsdl:part name="municipio" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SolicitudDenunciasHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="SolicitudDenunciasPorExpedienteHttpGetIn">
+    <wsdl:part name="usuario" type="s:string" />
+    <wsdl:part name="pass" type="s:string" />
+    <wsdl:part name="expediente" type="s:string" />
+    <wsdl:part name="municipio" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SolicitudDenunciasPorExpedienteHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="SolicitudTicketCGSHttpGetIn">
+    <wsdl:part name="matricula" type="s:string" />
+    <wsdl:part name="zona" type="s:string" />
+    <wsdl:part name="municipio" type="s:string" />
+    <wsdl:part name="idusuario" type="s:string" />
+    <wsdl:part name="idruta" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SolicitudTicketCGSHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="InsertarAnulacionHttpPostIn">
+    <wsdl:part name="usuario" type="s:string" />
+    <wsdl:part name="pass" type="s:string" />
+    <wsdl:part name="municipio" type="s:string" />
+    <wsdl:part name="idVSM" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertarAnulacionHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="SolicitudDenunciasHttpPostIn">
+    <wsdl:part name="usuario" type="s:string" />
+    <wsdl:part name="pass" type="s:string" />
+    <wsdl:part name="matricula" type="s:string" />
+    <wsdl:part name="municipio" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SolicitudDenunciasHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="SolicitudDenunciasPorExpedienteHttpPostIn">
+    <wsdl:part name="usuario" type="s:string" />
+    <wsdl:part name="pass" type="s:string" />
+    <wsdl:part name="expediente" type="s:string" />
+    <wsdl:part name="municipio" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SolicitudDenunciasPorExpedienteHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="SolicitudTicketCGSHttpPostIn">
+    <wsdl:part name="matricula" type="s:string" />
+    <wsdl:part name="zona" type="s:string" />
+    <wsdl:part name="municipio" type="s:string" />
+    <wsdl:part name="idusuario" type="s:string" />
+    <wsdl:part name="idruta" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SolicitudTicketCGSHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:portType name="Service1Soap">
+    <wsdl:operation name="InsertarAnulacion">
+      <wsdl:input message="tns:InsertarAnulacionSoapIn" />
+      <wsdl:output message="tns:InsertarAnulacionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SolicitudDenuncias">
+      <wsdl:input message="tns:SolicitudDenunciasSoapIn" />
+      <wsdl:output message="tns:SolicitudDenunciasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SolicitudDenunciasPorExpediente">
+      <wsdl:input message="tns:SolicitudDenunciasPorExpedienteSoapIn" />
+      <wsdl:output message="tns:SolicitudDenunciasPorExpedienteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SolicitudTicketCGS">
+      <wsdl:input message="tns:SolicitudTicketCGSSoapIn" />
+      <wsdl:output message="tns:SolicitudTicketCGSSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="Service1HttpGet">
+    <wsdl:operation name="InsertarAnulacion">
+      <wsdl:input message="tns:InsertarAnulacionHttpGetIn" />
+      <wsdl:output message="tns:InsertarAnulacionHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SolicitudDenuncias">
+      <wsdl:input message="tns:SolicitudDenunciasHttpGetIn" />
+      <wsdl:output message="tns:SolicitudDenunciasHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SolicitudDenunciasPorExpediente">
+      <wsdl:input message="tns:SolicitudDenunciasPorExpedienteHttpGetIn" />
+      <wsdl:output message="tns:SolicitudDenunciasPorExpedienteHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SolicitudTicketCGS">
+      <wsdl:input message="tns:SolicitudTicketCGSHttpGetIn" />
+      <wsdl:output message="tns:SolicitudTicketCGSHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="Service1HttpPost">
+    <wsdl:operation name="InsertarAnulacion">
+      <wsdl:input message="tns:InsertarAnulacionHttpPostIn" />
+      <wsdl:output message="tns:InsertarAnulacionHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SolicitudDenuncias">
+      <wsdl:input message="tns:SolicitudDenunciasHttpPostIn" />
+      <wsdl:output message="tns:SolicitudDenunciasHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SolicitudDenunciasPorExpediente">
+      <wsdl:input message="tns:SolicitudDenunciasPorExpedienteHttpPostIn" />
+      <wsdl:output message="tns:SolicitudDenunciasPorExpedienteHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SolicitudTicketCGS">
+      <wsdl:input message="tns:SolicitudTicketCGSHttpPostIn" />
+      <wsdl:output message="tns:SolicitudTicketCGSHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="Service1Soap" type="tns:Service1Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="InsertarAnulacion">
+      <soap:operation soapAction="http://10.100.254.101/InsertarAnulacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SolicitudDenuncias">
+      <soap:operation soapAction="http://10.100.254.101/SolicitudDenuncias" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SolicitudDenunciasPorExpediente">
+      <soap:operation soapAction="http://10.100.254.101/SolicitudDenunciasPorExpediente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SolicitudTicketCGS">
+      <soap:operation soapAction="http://10.100.254.101/SolicitudTicketCGS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="Service1Soap12" type="tns:Service1Soap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="InsertarAnulacion">
+      <soap12:operation soapAction="http://10.100.254.101/InsertarAnulacion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SolicitudDenuncias">
+      <soap12:operation soapAction="http://10.100.254.101/SolicitudDenuncias" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SolicitudDenunciasPorExpediente">
+      <soap12:operation soapAction="http://10.100.254.101/SolicitudDenunciasPorExpediente" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SolicitudTicketCGS">
+      <soap12:operation soapAction="http://10.100.254.101/SolicitudTicketCGS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="Service1HttpGet" type="tns:Service1HttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="InsertarAnulacion">
+      <http:operation location="/InsertarAnulacion" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SolicitudDenuncias">
+      <http:operation location="/SolicitudDenuncias" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SolicitudDenunciasPorExpediente">
+      <http:operation location="/SolicitudDenunciasPorExpediente" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SolicitudTicketCGS">
+      <http:operation location="/SolicitudTicketCGS" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="Service1HttpPost" type="tns:Service1HttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="InsertarAnulacion">
+      <http:operation location="/InsertarAnulacion" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SolicitudDenuncias">
+      <http:operation location="/SolicitudDenuncias" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SolicitudDenunciasPorExpediente">
+      <http:operation location="/SolicitudDenunciasPorExpediente" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SolicitudTicketCGS">
+      <http:operation location="/SolicitudTicketCGS" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="Service1Soap" binding="tns:Service1Soap">
+      <soap:address location="http://mp.sacyr.com:8099/PagoxMovil/PagoPorMovil.asmx" />
+    </wsdl:port>
+    <wsdl:port name="Service1Soap12" binding="tns:Service1Soap12">
+      <soap12:address location="http://mp.sacyr.com:8099/PagoxMovil/PagoPorMovil.asmx" />
+    </wsdl:port>
+    <wsdl:port name="Service1HttpGet" binding="tns:Service1HttpGet">
+      <http:address location="http://mp.sacyr.com:8099/PagoxMovil/PagoPorMovil.asmx" />
+    </wsdl:port>
+    <wsdl:port name="Service1HttpPost" binding="tns:Service1HttpPost">
+      <http:address location="http://mp.sacyr.com:8099/PagoxMovil/PagoPorMovil.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

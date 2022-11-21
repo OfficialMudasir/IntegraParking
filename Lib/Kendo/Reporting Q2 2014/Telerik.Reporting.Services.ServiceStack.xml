@@ -1,0 +1,250 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Telerik.Reporting.Services.ServiceStack</name>
+    </assembly>
+    <members>
+        <member name="P:Telerik.Reporting.Services.ServiceStack.DocumentsArgs.DocumentId">
+            <summary>
+            Gets or sets a string representation of a report document reference
+            </summary>
+            <remarks>
+            The string representation should be of a <see cref="T:Telerik.Reporting.TypeReportSource"/> or of an <see cref="T:Telerik.Reporting.UriReportSource"/>.
+            The rest of the report sources types are not supported.
+            </remarks>
+        </member>
+        <member name="P:Telerik.Reporting.Services.ServiceStack.DocumentsArgs.Format">
+            <summary>
+            The rendering format of the created document
+            </summary>
+            <remarks>
+            See the full list of built-in formats in the help article
+            <conceptualLink target="935C2C81-69FB-4EE7-B104-C317A615D294">Rendering Extensions</conceptualLink>
+            </remarks>
+        </member>
+        <member name="P:Telerik.Reporting.Services.ServiceStack.DocumentsArgs.DeviceInfo">
+            <summary>
+            Device setting for the specified format
+            </summary>
+            <remarks>
+            More info on the device setting may be found in the help chapter
+            <conceptualLink target="7B7459C1-F91D-4220-BC72-68804CD6B554">Device Information Settings</conceptualLink>
+            </remarks>
+        </member>
+        <member name="P:Telerik.Reporting.Services.ServiceStack.DocumentInfoArgs.DocumentId">
+            <summary>
+            Gets or sets a string representation of a report document reference
+            </summary>
+            <remarks>
+            The string representation should be of a <see cref="T:Telerik.Reporting.TypeReportSource"/> or of an <see cref="T:Telerik.Reporting.UriReportSource"/>.
+            The rest of the report sources types are not supported.
+            </remarks>
+        </member>
+        <member name="P:Telerik.Reporting.Services.ServiceStack.ActionArgs.DocumentId">
+            <summary>
+            Gets or sets a string representation of a report document reference
+            </summary>
+            <remarks>
+            The string representation should be of a <see cref="T:Telerik.Reporting.TypeReportSource"/> or of an <see cref="T:Telerik.Reporting.UriReportSource"/>.
+            The rest of the report sources types are not supported.
+            </remarks>
+        </member>
+        <member name="M:Telerik.Reporting.Services.ServiceStack.DocumentsService.Post(Telerik.Reporting.Services.ServiceStack.DocumentsArgs)">
+            <summary>
+            Creates new document using specific format and format settings
+            </summary>
+            <param name="clientID">The clientID in which session the document is created</param>
+            <param name="instanceID">The report instance used for the document</param>
+            <param name="args">Arguments containing the document format and settings</param>
+        </member>
+        <member name="M:Telerik.Reporting.Services.ServiceStack.DocumentsService.Get(Telerik.Reporting.Services.ServiceStack.DocumentsArgs)">
+            <summary>
+            Gets the document for a single-stream document formats
+            </summary>
+            <param name="clientID">The client session ID which contains the document</param>
+            <param name="instanceID">The report instance used for the document</param>
+            <param name="documentID">The ID of the document</param>
+        </member>
+        <member name="M:Telerik.Reporting.Services.ServiceStack.DocumentsService.Delete(Telerik.Reporting.Services.ServiceStack.DocumentsArgs)">
+            <summary>
+            Deletes a report instance in a client session
+            </summary>
+            <param name="clientID">The clientID for which the instance is deleted</param>
+            <param name="instanceID">The instanceID that is deleted</param>
+        </member>
+        <member name="M:Telerik.Reporting.Services.ServiceStack.DocumentsService.Get(Telerik.Reporting.Services.ServiceStack.DocumentInfoArgs)">
+            <summary>
+            Gets info for a requested document
+            </summary>
+            <param name="clientID">The client session ID which contains the document</param>
+            <param name="instanceID">The report instance used for the document</param>
+            <param name="documentID">The ID of the document</param>
+        </member>
+        <member name="M:Telerik.Reporting.Services.ServiceStack.DocumentsService.Put(Telerik.Reporting.Services.ServiceStack.ActionArgs)">
+            <summary>
+            Executes an interactive action that should be applied on the server
+            </summary>
+            <param name="clientID">The client session ID which contains the document</param>
+            <param name="instanceID">The report instance used for the document</param>
+            <param name="documentID">The ID of the affected document</param>
+            <param name="actionID">The ID of the executed action</param>
+        </member>
+        <member name="T:Telerik.Reporting.Services.ServiceStack.ParametersArgs">
+            <summary>
+            Represents a report source passed to the ReportsControllerBase from its clients.
+            </summary>
+            <seealso cref="T:Telerik.Reporting.ReportSource"/>
+        </member>
+        <member name="P:Telerik.Reporting.Services.ServiceStack.ParametersArgs.Report">
+            <summary>
+            Gets or sets a string representation of a report document reference
+            </summary>
+            <remarks>
+            The string representation should be of a <see cref="T:Telerik.Reporting.TypeReportSource"/> or of an <see cref="T:Telerik.Reporting.UriReportSource"/>.
+            The rest of the report sources types are not supported.
+            </remarks>
+        </member>
+        <member name="P:Telerik.Reporting.Services.ServiceStack.ParametersArgs.ParameterValues">
+            <summary>
+            Gets or sets a dictionary representing name-value pairs of parameter name and value passed to the reporting engine.
+            </summary>
+        </member>
+        <member name="P:Telerik.Reporting.Services.ServiceStack.ReportInstnacesArgs.Report">
+            <summary>
+            Gets or sets a string representation of a report document reference
+            </summary>
+            <remarks>
+            The string representation should be of a <see cref="T:Telerik.Reporting.TypeReportSource"/> or of an <see cref="T:Telerik.Reporting.UriReportSource"/>.
+            The rest of the report sources types are not supported.
+            </remarks>
+        </member>
+        <member name="P:Telerik.Reporting.Services.ServiceStack.ReportInstnacesArgs.ParameterValues">
+            <summary>
+            Gets or sets a dictionary representing name-value pairs of parameter name and value passed to the reporting engine.
+            </summary>
+        </member>
+        <member name="M:Telerik.Reporting.Services.ServiceStack.ReportInstancesService.Post(Telerik.Reporting.Services.ServiceStack.ReportInstnacesArgs)">
+            <summary>
+            Creates a new report instance in a client session
+            </summary>
+            <param name="clientID">The clientID for which the instance is created</param>
+            <param name="reportSource">The report source which defines the report instance</param>
+        </member>
+        <member name="M:Telerik.Reporting.Services.ServiceStack.ReportInstancesService.Delete(Telerik.Reporting.Services.ServiceStack.ReportInstnacesArgs)">
+            <summary>
+            Deletes a report instance in a client session
+            </summary>
+            <param name="clientID">The clientID for which the instance is deleted</param>
+            <param name="instanceID">The instanceID that is deleted</param>
+        </member>
+        <member name="T:Telerik.Reporting.Services.ServiceStack.ReportFileResolver">
+            <summary>
+            Creates an <see cref="T:Telerik.Reporting.UriReportSource"/> instance from relative path to .trdx file
+            </summary>
+        </member>
+        <member name="T:Telerik.Reporting.Services.ServiceStack.ReportResolverBase">
+            <summary>
+            Base report resolver with fallback mechanism
+            </summary>
+        </member>
+        <member name="M:Telerik.Reporting.Services.ServiceStack.ReportResolverBase.AddFallbackResolver(Telerik.Reporting.Services.Engine.IReportResolver)">
+            <summary>
+            Adds fallback resolver that will be used if the current resolver does not succeed.
+            </summary>
+            <param name="fallbackResolver">The fallback resolver</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Reporting.Services.ServiceStack.ReportResolverBase.Telerik#Reporting#Services#Engine#IReportResolver#Resolve(System.String)">
+            <summary>
+            Creates a <see cref="T:Telerik.Reporting.ReportSource"/> based on its string representation.
+            </summary>
+            <param name="report">The string report representation to resolve</param>
+            <returns>The resulting report source</returns>
+        </member>
+        <member name="M:Telerik.Reporting.Services.ServiceStack.ReportResolverBase.ResolveReport(System.String)">
+            <summary>
+            Creates a <see cref="T:Telerik.Reporting.ReportSource"/> based on its string representation.
+            </summary>
+            <remarks>
+            Override this member in order to implement the core resolve functionality.
+            </remarks>
+            <param name="report">The string report representation to resolve</param>
+            <returns>The resulting report source</returns>
+        </member>
+        <member name="M:Telerik.Reporting.Services.ServiceStack.ReportFileResolver.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Reporting.Services.ServiceStack.ReportFileResolver"/> class. 
+            Relative paths will be resolved against the application root.
+            </summary>
+        </member>
+        <member name="M:Telerik.Reporting.Services.ServiceStack.ReportFileResolver.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Reporting.Services.ServiceStack.ReportFileResolver"/> class. 
+            </summary>
+            <param name="repositoryDirectory">Physical directory where .trdx reports are located. 
+            Used as path prefix when relative path is passed for resolving.</param>
+        </member>
+        <member name="M:Telerik.Reporting.Services.ServiceStack.ReportFileResolver.ResolveReport(System.String)">
+            <summary>
+            Creates a <see cref="T:Telerik.Reporting.UriReportSource"/> based on its string representation.
+            </summary>
+            <remarks>
+            Accepts relative and absolute paths
+            </remarks>
+            <param name="report">The string report representation to resolve</param>
+            <returns>The resulting report source</returns>
+        </member>
+        <member name="T:Telerik.Reporting.Services.ServiceStack.ReportTypeResolver">
+            <summary>
+            Resolves IReportDocument from report type name
+            </summary>
+        </member>
+        <member name="M:Telerik.Reporting.Services.ServiceStack.ReportTypeResolver.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Reporting.Services.ServiceStack.ReportTypeResolver"/> class.
+            </summary>
+        </member>
+        <member name="M:Telerik.Reporting.Services.ServiceStack.ReportTypeResolver.ResolveReport(System.String)">
+            <summary>
+            Creates a <see cref="T:Telerik.Reporting.TypeReportSource"/> from a report type name.
+            </summary>
+            <param name="report">Report type name</param>
+            <returns>The resulting report source</returns>
+        </member>
+        <member name="P:Telerik.Reporting.Services.ServiceStack.PagesArgs.DocumentId">
+            <summary>
+            Gets or sets a string representation of a report document reference
+            </summary>
+            <remarks>
+            The string representation should be of a <see cref="T:Telerik.Reporting.TypeReportSource"/> or of an <see cref="T:Telerik.Reporting.UriReportSource"/>.
+            The rest of the report sources types are not supported.
+            </remarks>
+        </member>
+        <member name="P:Telerik.Reporting.Services.ServiceStack.ResourcesArgs.DocumentId">
+            <summary>
+            Gets or sets a string representation of a report document reference
+            </summary>
+            <remarks>
+            The string representation should be of a <see cref="T:Telerik.Reporting.TypeReportSource"/> or of an <see cref="T:Telerik.Reporting.UriReportSource"/>.
+            The rest of the report sources types are not supported.
+            </remarks>
+        </member>
+        <member name="M:Telerik.Reporting.Services.ServiceStack.ResourcesService.Get(Telerik.Reporting.Services.ServiceStack.PagesArgs)">
+            <summary>
+            Creates new document using specific format and format settings
+            </summary>
+            <param name="clientID">The clientID in which session the document is created</param>
+            <param name="instanceID">The report instance used for the document</param>
+            <param name="args">Arguments containing the document format and settings</param>
+        </member>
+        <member name="M:Telerik.Reporting.Services.ServiceStack.ResourcesService.Get(Telerik.Reporting.Services.ServiceStack.ResourcesArgs)">
+            <summary>
+            Gets a resource part of a document in multi-stream document format
+            </summary>
+            <param name="clientID">The client session ID which contains the document</param>
+            <param name="instanceID">The report instance used for the document</param>
+            <param name="documentID">The ID of the document</param>
+            <param name="resourceID">The ID of the requested resource</param>
+        </member>
+    </members>
+</doc>

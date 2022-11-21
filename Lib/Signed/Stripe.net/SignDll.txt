@@ -1,0 +1,3 @@
+ildasm /all /out=Stripe.net.il Stripe.net.dll
+sn -k Stripe.net.snk
+ilasm /dll /key=Stripe.net.snk Stripe.net.il

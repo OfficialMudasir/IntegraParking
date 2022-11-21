@@ -1,0 +1,138 @@
+﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+
+<!DOCTYPE html>
+<script runat="server">
+
+    protected void Unnamed_Click(object sender, ImageClickEventArgs e)
+    {
+
+    }
+
+    protected void Unnamed_Command(object sender, CommandEventArgs e)
+    {
+
+    }
+</script>
+
+<html>
+    <head runat="server">
+        <title><asp:ContentPlaceHolder ID="TitleContent" runat="server" /></title>
+        <%-- TGA @ Disable mobile zoom --%>
+        <meta name="viewport" content="width=720, maximum-scale=1.0, user-scalable=no" />
+
+        <link href="../../Content/Site.css" rel="stylesheet" type="text/css" />
+    	<link href="<%= Url.Content("~/Content/kendo/2014.2.1008/kendo.common.min.css") %>" rel="stylesheet" type="text/css" />
+	<link href="<%= Url.Content("~/Content/kendo/2014.2.1008/kendo.mobile.all.min.css") %>" rel="stylesheet" type="text/css" />
+	<link href="<%= Url.Content("~/Content/kendo/2014.2.1008/kendo.dataviz.min.css") %>" rel="stylesheet" type="text/css" />
+	<link href="<%= Url.Content("~/Content/kendo/2014.2.1008/kendo.silver.min.css") %>" rel="stylesheet" type="text/css" />
+	<link href="<%= Url.Content("~/Content/kendo/2014.2.1008/kendo.dataviz.silver.min.css") %>" rel="stylesheet" type="text/css" />
+        <link href="../../Content/EysaMobv2.css" rel="stylesheet" type="text/css" />
+	<script src="<%= Url.Content("~/Scripts/kendo/2014.2.1008/jquery.min.js") %>"></script>
+	<script src="<%= Url.Content("~/Scripts/kendo/2014.2.1008/kendo.all.min.js") %>"></script>
+	<script src="<%= Url.Content("~/Scripts/kendo/2014.2.1008/kendo.aspnetmvc.min.js") %>"></script>
+	<script src="<%= Url.Content("~/Scripts/kendo.modernizr.custom.js") %>"></script>
+
+    <%
+        var culture = System.Threading.Thread.CurrentThread.CurrentCulture;
+    %>
+    <script src="<%= Url.Content("~/Scripts/kendo/2014.2.1008/cultures/kendo.culture." + culture + ".min.js") %>"></script>
+    
+    <%-- Set the current culture --%>
+    <script>
+        kendo.culture("<%= culture %>");
+    </script>
+
+    <style>
+
+    </style>
+    <!--[if gte IE 9]>
+        <style type="text/css">
+            .gradient {
+                filter: none;
+            }
+        </style>
+    <![endif]-->
+
+</head>
+    <body>
+        <div class="container-content gradient">
+
+        <%--
+            <header>
+            <div class="content-wrapper">
+                <!--<div class="float-left">
+                    <p class="site-title"><%: Html.ActionLink("your logo here", "Index", "Home") %></p>
+                </div>-->
+                <div class="float-right">
+                    <nav>
+                        <ul id="menu">
+                            <li><%= (this.Session["UserInfo"] != null ? ((WebParking.Models.UserInfo)this.Session["UserInfo"]).CityName : "")  %></li>
+                            <li><%= (this.Session["UserInfo"] != null ? (((WebParking.Models.UserInfo)this.Session["UserInfo"]).CityName != "" ? ((WebParking.Models.UserInfo)this.Session["UserInfo"]).FormatedAmount(((WebParking.Models.UserInfo)this.Session["UserInfo"]).Balance) : "") : "") %></li>
+                            <li id="liLogout"><%: Html.ActionLink("Logout", "Logout", "Park") %></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            </header>
+        --%>
+
+            <%-- TGA HEADER --%>
+
+
+            <div id="body">            
+                <asp:ContentPlaceHolder ID="FeaturedContent" runat="server" />            
+                <div class="loading" style="display:none;"></div>
+                <section class="main-content clear-fix">                
+                    <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+                
+                </section>
+
+            </div>
+            <footer class="plain">
+
+            <%-- TGA * APP FOOTER --%>
+                <nav class="navfooter">
+                    <ul id="menu">
+
+
+                    <li id="item-logout" class="item-icon"><a href="<%: Url.Action("Logout", "Park")%>"><img src="<%= Url.Content("~/Content/EysaMobv2/logout-ico.svg") %>" /></a></li>                    
+                 
+
+                    <!--<%/* <li id="liLogout"></%: Html.ActionLink("Logout", "Logout", "Park") %/></li> */%> -->
+                    <li>
+                        <a href="<%: Url.Action("Logout", "Park")%>">
+                        <%= (this.Session["UserInfo"] != null ? ((WebParking.Models.UserInfo)this.Session["UserInfo"]).CityName : "")  %>
+                        </a>
+                    </li>
+                    <li id="item-money" class="item-icon"><img src="<%= Url.Content("~/Content/EysaMobv2/ico_money.png") %>" /></li>
+                    <li><%= (this.Session["UserInfo"] != null ? (((WebParking.Models.UserInfo)this.Session["UserInfo"]).CityName != "" ? ((WebParking.Models.UserInfo)this.Session["UserInfo"]).FormatedAmount(((WebParking.Models.UserInfo)this.Session["UserInfo"]).Balance) : "") : "") %></li>
+                </ul>
+            </nav>
+            <h1 class="credits">&copy; <%: DateTime.Now.Year %> - Web Parking by EYSA Mobile v2</h1>
+
+            </footer>
+        </div>
+    </body>
+
+    <script>
+
+        $(document).ready(function () {
+
+            if (<%: (Session["UserInfo"] != null ? "true" : "false") %>)
+                $("#liLogout").show();
+            else
+                $("#liLogout").hide();
+
+
+            /* Default back function */
+            $("#backLinkBtn").click(function() {
+                event.preventDefault();
+                $('.loading').show();
+                history.back(1);
+
+            });
+        });
+
+    </script>
+
+</html>

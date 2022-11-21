@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="128px"
+	 height="128px" viewBox="0 0 128 128" enable-background="new 0 0 128 128" xml:space="preserve">
+<g id="Capa_1" display="none">
+	<g display="inline">
+		<rect fill="#47B39C" width="128" height="128"/>
+		<polygon opacity="0.2" fill="#47B39C" points="128,128 0.051,128 128,-0.187 128,-0.107 		"/>
+		<g>
+			<polyline opacity="0.2" points="106.636,60.426 128,87.131 128,97.22 51.024,97.394 21.178,67.695 			"/>
+			<g>
+				<rect x="21" y="60" fill="#FFFFFF" width="86" height="8"/>
+				<g>
+					<polygon fill="#FFFFFF" points="54.503,37.181 21.967,69.419 16.932,64.383 49.467,32.145 					"/>
+					<polygon fill="#FFFFFF" points="48.28,96.718 21.68,69.524 26.715,64.488 53.316,91.682 					"/>
+				</g>
+			</g>
+		</g>
+		<g display="none">
+			<polyline display="inline" opacity="0.2" points="106.636,91.285 128,117.991 128,128.08 51.024,128.254 21.178,98.556 			"/>
+			<polyline display="inline" opacity="0.2" points="106.636,60.426 128,87.131 128,97.22 51.024,97.394 21.178,67.695 			"/>
+			<polyline display="inline" opacity="0.2" points="106.636,30.752 128,57.458 128,67.547 51.024,67.721 21.178,38.022 			"/>
+			<rect x="21" y="31" display="inline" fill="#FFFFFF" width="86" height="7"/>
+			<rect x="21" y="60" display="inline" fill="#FFFFFF" width="86" height="8"/>
+			<rect x="21" y="91" display="inline" fill="#FFFFFF" width="86" height="7"/>
+		</g>
+	</g>
+</g>
+<g id="Capa_2" display="none">
+	<path display="inline" fill="#F2F2F2" d="M115,24H13C0.869,24-9,33.869-9,46v35c0,12.131,9.869,22,22,22h102
+		c12.131,0,22-9.869,22-22V46C137,33.869,127.131,24,115,24z M127,81c0,6.627-5.373,12-12,12H25V35H8.211
+		c1.468-0.64,3.085-1,4.789-1h102c6.627,0,12,5.373,12,12V81z"/>
+	<line display="inline" fill="none" stroke="#000000" stroke-width="8" stroke-miterlimit="10" x1="78" y1="65" x2="120" y2="65"/>
+</g>
+<g id="Capa_3">
+	<g>
+		<path fill="none" stroke="#FFFFFF" stroke-width="8" stroke-miterlimit="10" d="M109,75c0,9.941-8.059,18-18,18H36
+			c-9.941,0-18-8.059-18-18V54c0-9.941,8.059-18,18-18h55c9.941,0,18,8.059,18,18V75z"/>
+		<path fill="none" stroke="#FFFFFF" stroke-width="8" stroke-miterlimit="10" d="M109,75c0,9.941-8.059,18-18,18H36
+			c-9.941,0-18-8.059-18-18V54c0-9.941,8.059-18,18-18h55c9.941,0,18,8.059,18,18V75z"/>
+		<path fill="#FFFFFF" stroke="#FFFFFF" stroke-width="8" stroke-miterlimit="10" d="M36.5,81c-3.309,0-6.5-3.191-6.5-6.5v-21
+			c0-3.309,3.191-5.5,6.5-5.5H42v5.5v21V81H36.5z"/>
+	</g>
+</g>
+</svg>

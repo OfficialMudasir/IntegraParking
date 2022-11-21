@@ -1,0 +1,2561 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AccessForm" xml:space="preserve">
+    <value>Access Form</value>
+  </data>
+  <data name="Account_ChangeLanguage" xml:space="preserve">
+    <value>Change Language</value>
+  </data>
+  <data name="Account_CurrentBalance" xml:space="preserve">
+    <value>Current Balance</value>
+  </data>
+  <data name="Account_GetExcel" xml:space="preserve">
+    <value>Get Excel</value>
+  </data>
+  <data name="Account_GetPDF" xml:space="preserve">
+    <value>Get PDF</value>
+  </data>
+  <data name="Account_Hi" xml:space="preserve">
+    <value>Hi,</value>
+  </data>
+  <data name="Account_HisOperations" xml:space="preserve">
+    <value>Operations History</value>
+  </data>
+  <data name="Account_Invoice_Amount" xml:space="preserve">
+    <value>Recharges Amount</value>
+  </data>
+  <data name="Account_Invoice_AmountOps" xml:space="preserve">
+    <value>Operations Amount</value>
+  </data>
+  <data name="Account_Invoice_Date" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="Account_Invoice_Down_Link" xml:space="preserve">
+    <value>Download Link</value>
+  </data>
+  <data name="Account_Invoice_End_Date" xml:space="preserve">
+    <value>End Date</value>
+  </data>
+  <data name="Account_Invoice_InvoiceNumber" xml:space="preserve">
+    <value>Invoice No</value>
+  </data>
+  <data name="Account_Invoice_PDF_Amount" xml:space="preserve">
+    <value>Amount</value>
+  </data>
+  <data name="Account_Invoice_PDF_BaseAmount" xml:space="preserve">
+    <value>Taxable Amount</value>
+  </data>
+  <data name="Account_Invoice_PDF_Date" xml:space="preserve">
+    <value>Date:</value>
+  </data>
+  <data name="Account_Invoice_PDF_Detail" xml:space="preserve">
+    <value>Detail</value>
+  </data>
+  <data name="Account_Invoice_PDF_DNI_NIF" xml:space="preserve">
+    <value>TAX ID:</value>
+  </data>
+  <data name="Account_Invoice_PDF_InvoiceNumber" xml:space="preserve">
+    <value>Invoice no:</value>
+  </data>
+  <data name="Account_Invoice_PDF_NIF" xml:space="preserve">
+    <value>Tax ID:</value>
+  </data>
+  <data name="Account_Invoice_PDF_Total" xml:space="preserve">
+    <value>TOTAL:</value>
+  </data>
+  <data name="Account_Invoice_PDF_Units" xml:space="preserve">
+    <value>Units</value>
+  </data>
+  <data name="Account_Invoice_PDF_Unit_Amount" xml:space="preserve">
+    <value>Unit Amount</value>
+  </data>
+  <data name="Account_Invoice_PDF_VAT" xml:space="preserve">
+    <value>TAX</value>
+  </data>
+  <data name="Account_Invoice_Start_Date" xml:space="preserve">
+    <value>Start Date</value>
+  </data>
+  <data name="Account_Logout" xml:space="preserve">
+    <value>Logout</value>
+  </data>
+  <data name="Account_Logout_Button" xml:space="preserve">
+    <value>Log Out</value>
+  </data>
+  <data name="Account_Main_BttnBalanceAndRecharge" xml:space="preserve">
+    <value>Balance and Adding credit</value>
+  </data>
+  <data name="Account_Main_BttnInvoices" xml:space="preserve">
+    <value>Invoicing</value>
+  </data>
+  <data name="Account_Main_BttnOperations" xml:space="preserve">
+    <value>Operations </value>
+  </data>
+  <data name="Account_Main_BttnUserData" xml:space="preserve">
+    <value>User Information</value>
+  </data>
+  <data name="Account_Op_AdditionalUser" xml:space="preserve">
+    <value>Related User</value>
+  </data>
+  <data name="Account_Op_Amount" xml:space="preserve">
+    <value>Amount</value>
+  </data>
+  <data name="Account_Op_AmountBONUS" xml:space="preserve">
+    <value>Bonus</value>
+  </data>
+  <data name="Account_Op_AmountFEE" xml:space="preserve">
+    <value>Fee</value>
+  </data>
+  <data name="Account_Op_AmountTotal" xml:space="preserve">
+    <value>Total</value>
+  </data>
+  <data name="Account_Op_AmountVAT" xml:space="preserve">
+    <value>TAX</value>
+  </data>
+  <data name="Account_Op_ChangeApplied" xml:space="preserve">
+    <value>Change</value>
+  </data>
+  <data name="Account_Op_Date" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="Account_Op_Date_Time" xml:space="preserve">
+    <value>Time</value>
+  </data>
+  <data name="Account_Op_Duration" xml:space="preserve">
+    <value>Duration</value>
+  </data>
+  <data name="Account_Op_End_Date" xml:space="preserve">
+    <value>End Date</value>
+  </data>
+  <data name="Account_Op_End_Date_Time" xml:space="preserve">
+    <value>End Time</value>
+  </data>
+  <data name="Account_Op_ExportPdf_Title" xml:space="preserve">
+    <value>Export data to pdf format</value>
+  </data>
+  <data name="Account_Op_ExportXls_Title" xml:space="preserve">
+    <value>Export data to Excel format</value>
+  </data>
+  <data name="Account_Op_Export_PDFFilename" xml:space="preserve">
+    <value>Operations</value>
+  </data>
+  <data name="Account_Op_Export_XLSFilename" xml:space="preserve">
+    <value>Operations</value>
+  </data>
+  <data name="Account_Op_Filter" xml:space="preserve">
+    <value>Filter</value>
+  </data>
+  <data name="Account_Op_Installation" xml:space="preserve">
+    <value>Installation</value>
+  </data>
+  <data name="Account_Op_LicensePlate" xml:space="preserve">
+    <value>License Plate</value>
+  </data>
+  <data name="Account_Op_Operation" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="Account_Op_Source" xml:space="preserve">
+    <value>Operation Source</value>
+  </data>
+  <data name="Account_Op_SourceIdent" xml:space="preserve">
+    <value>({0})</value>
+  </data>
+  <data name="Account_Op_SourceType" xml:space="preserve">
+    <value>{0} {1}</value>
+  </data>
+  <data name="Account_Op_SourceType_ExternalMobilePayment" xml:space="preserve">
+    <value>External Mobile Payment</value>
+  </data>
+  <data name="Account_Op_SourceType_ExternalParkingMeter" xml:space="preserve">
+    <value>External Parking Meter</value>
+  </data>
+  <data name="Account_Op_SourceType_InternMobilePayment" xml:space="preserve">
+    <value>Internal Mobile Payment</value>
+  </data>
+  <data name="Account_Op_Start_Date" xml:space="preserve">
+    <value>Start Date</value>
+  </data>
+  <data name="Account_Op_Start_Date_Time" xml:space="preserve">
+    <value>Start Time</value>
+  </data>
+  <data name="Account_Op_Tariff" xml:space="preserve">
+    <value>Rate</value>
+  </data>
+  <data name="Account_Op_TicketData" xml:space="preserve">
+    <value>Ticket Details</value>
+  </data>
+  <data name="Account_Op_TicketNumber" xml:space="preserve">
+    <value>Ticket Number</value>
+  </data>
+  <data name="Account_Op_Type_BalanceReception" xml:space="preserve">
+    <value>Balance Reception</value>
+  </data>
+  <data name="Account_Op_Type_BalanceTransfer" xml:space="preserve">
+    <value>Balance Transfer</value>
+  </data>
+  <data name="Account_Op_Type_Discount" xml:space="preserve">
+    <value>Discount</value>
+  </data>
+  <data name="Account_Op_Type_Extension" xml:space="preserve">
+    <value>Extend time</value>
+  </data>
+  <data name="Account_Op_Type_OffstreetEntry" xml:space="preserve">
+    <value>Offstreet Entry</value>
+  </data>
+  <data name="Account_Op_Type_OffstreetExit" xml:space="preserve">
+    <value>Offstreet Exit</value>
+  </data>
+  <data name="Account_Op_Type_OffstreetOverduePayment" xml:space="preserve">
+    <value>Offstreet Overdue Payment</value>
+  </data>
+  <data name="Account_Op_Type_Parking" xml:space="preserve">
+    <value>Park</value>
+  </data>
+  <data name="Account_Op_Type_Recharge" xml:space="preserve">
+    <value>Add credit</value>
+  </data>
+  <data name="Account_Op_Type_Refund" xml:space="preserve">
+    <value>Complete parking</value>
+  </data>
+  <data name="Account_Op_Type_ServiceCharge" xml:space="preserve">
+    <value>Service Charge</value>
+  </data>
+  <data name="Account_Op_Type_TicketPayment" xml:space="preserve">
+    <value>Ticket Payment</value>
+  </data>
+  <data name="Account_Op_Type_TollLock" xml:space="preserve">
+    <value>Toll Balance Lock</value>
+  </data>
+  <data name="Account_Op_Type_TollPayment" xml:space="preserve">
+    <value>Toll Payment</value>
+  </data>
+  <data name="Account_Op_Type_TollUnlock" xml:space="preserve">
+    <value>Toll Balance Unlock</value>
+  </data>
+  <data name="Account_Op_Zone" xml:space="preserve">
+    <value>Zone</value>
+  </data>
+  <data name="Account_Profile" xml:space="preserve">
+    <value>Profile</value>
+  </data>
+  <data name="Account_RechargeButton_Cancel" xml:space="preserve">
+    <value>Cancel credit purchase</value>
+  </data>
+  <data name="Account_RechargeButton_Confirm" xml:space="preserve">
+    <value>Confirm credit purchase</value>
+  </data>
+  <data name="Account_RechargeButton_MainMenu" xml:space="preserve">
+    <value>Menu</value>
+  </data>
+  <data name="Account_RechargeButton_Recharge" xml:space="preserve">
+    <value>Buy more credit</value>
+  </data>
+  <data name="Account_RechargeCancelTitle" xml:space="preserve">
+    <value>Purchase cancelled</value>
+  </data>
+  <data name="Account_RechargeCancel_1" xml:space="preserve">
+    <value>The purchase has been cancelled.</value>
+  </data>
+  <data name="Account_RechargeCancel_2" xml:space="preserve">
+    <value>You must have a balance to use the Blinkay application.</value>
+  </data>
+  <data name="Account_RechargeCancel_3" xml:space="preserve">
+    <value>Please, proceed with the purchase of more credit before using the application. </value>
+  </data>
+  <data name="Account_RechargeCancel_4" xml:space="preserve">
+    <value>You must buy more credit before using the system. </value>
+  </data>
+  <data name="Account_RechargeCancel_5" xml:space="preserve">
+    <value>If you wish to save time and take full advantage of the application, activate the automatic recharge option and configure the minimum amount.  </value>
+  </data>
+  <data name="Account_RechargeConfirmTitle" xml:space="preserve">
+    <value>Credit purchase confirmation</value>
+  </data>
+  <data name="Account_RechargeConfirm_1" xml:space="preserve">
+    <value>We are almost finished.</value>
+  </data>
+  <data name="Account_RechargeConfirm_2" xml:space="preserve">
+    <value>Please confirm the credit of </value>
+  </data>
+  <data name="Account_RechargeConfirm_3" xml:space="preserve">
+    <value>You must buy more credit before using the system. </value>
+  </data>
+  <data name="Account_RechargeConfirm_4" xml:space="preserve">
+    <value>If you wish to save time and take full advantage of the application, activate the automatic recharge option and configure the minimum amount.  </value>
+  </data>
+  <data name="Account_RechargeFailureTitle" xml:space="preserve">
+    <value>Credit purchase error</value>
+  </data>
+  <data name="Account_RechargeFailure_1" xml:space="preserve">
+    <value>An error has ocurred during the purchase of credit. </value>
+  </data>
+  <data name="Account_RechargeFailure_2" xml:space="preserve">
+    <value>You must have a balance to use the pay by mobile application. </value>
+  </data>
+  <data name="Account_RechargeFailure_3" xml:space="preserve">
+    <value>Please try again. </value>
+  </data>
+  <data name="Account_RechargeFailure_4" xml:space="preserve">
+    <value>You must buy more credit before using the system. </value>
+  </data>
+  <data name="Account_RechargeFailure_5" xml:space="preserve">
+    <value>If you wish to save time and take full advantage of the application, activate the automatic recharge option and configure the minimum amount.  </value>
+  </data>
+  <data name="Account_RechargeMessage_1" xml:space="preserve">
+    <value>Your current balance is insufficient. </value>
+  </data>
+  <data name="Account_RechargeMessage_2" xml:space="preserve">
+    <value>You must buy more credit before you continue using the system. </value>
+  </data>
+  <data name="Account_RechargeMessage_3" xml:space="preserve">
+    <value>Please, proceed with the purchase of more credit before using the application. </value>
+  </data>
+  <data name="Account_RechargeSuccessTitle" xml:space="preserve">
+    <value>Credit completed</value>
+  </data>
+  <data name="Account_RechargeSuccess_1" xml:space="preserve">
+    <value>Your credit has been purchased successfully. Your current balance is: </value>
+  </data>
+  <data name="Account_RechargeSuccess_2" xml:space="preserve">
+    <value>You must buy more credit before using the system. </value>
+  </data>
+  <data name="Account_RechargeSuccess_3" xml:space="preserve">
+    <value>If you wish to save time and take full advantage of the application, activate the automatic recharge option and configure the minimum amount.  </value>
+  </data>
+  <data name="Account_RechargeValue" xml:space="preserve">
+    <value>{0} {1}</value>
+  </data>
+  <data name="Account_RechargeValueBase_Label" xml:space="preserve">
+    <value>Credit:</value>
+  </data>
+  <data name="Account_RechargeValueFEE_Label" xml:space="preserve">
+    <value>Service fee:</value>
+  </data>
+  <data name="Account_RechargeValueOrder_Label" xml:space="preserve">
+    <value>Your order:</value>
+  </data>
+  <data name="Account_RechargeValueTotal_Label" xml:space="preserve">
+    <value>Total to pay:</value>
+  </data>
+  <data name="Account_RechargeValueVAT_Label" xml:space="preserve">
+    <value>VAT ({0:#0.00}%):</value>
+  </data>
+  <data name="Account_RechargeValue_Label" xml:space="preserve">
+    <value>Credit:</value>
+  </data>
+  <data name="Account_Recharge_Billing_Address" xml:space="preserve">
+    <value>Billing Address</value>
+  </data>
+  <data name="Account_Recharge_BuyCredit" xml:space="preserve">
+    <value>Buy Credit</value>
+  </data>
+  <data name="Account_Recharge_BuyNow" xml:space="preserve">
+    <value>Buy Credit Now</value>
+  </data>
+  <data name="Account_Recharge_ItemDescription" xml:space="preserve">
+    <value>Buy Credit</value>
+  </data>
+  <data name="Account_Recharge_PaymentsWithPreapproval" xml:space="preserve">
+    <value>Pre-approved payments</value>
+  </data>
+  <data name="Account_Recharge_PaymentsWithPreaprovalTitle" xml:space="preserve">
+    <value>Subscription to pre-approved payments has been finalized. </value>
+  </data>
+  <data name="Account_Recharge_PaymentsWithPreaproval_1" xml:space="preserve">
+    <value>Your subscription to pre-approved payments has been completed successfully. Your current balance is: </value>
+  </data>
+  <data name="Account_Recharge_PaymentsWithPreaproval_2" xml:space="preserve">
+    <value>You must buy more credit before using the system. </value>
+  </data>
+  <data name="Account_Recharge_SelectAnAmount" xml:space="preserve">
+    <value>Select an amount to add</value>
+  </data>
+  <data name="Account_Register_PaymentMean" xml:space="preserve">
+    <value>Payment method registration</value>
+  </data>
+  <data name="Account_Register_PaymentMeanCancelled" xml:space="preserve">
+    <value>Registration of payment method canceled </value>
+  </data>
+  <data name="Account_Register_PaymentMeanError" xml:space="preserve">
+    <value>Error in registration of payment method </value>
+  </data>
+  <data name="Account_Register_PaymentMeanFinished" xml:space="preserve">
+    <value>YOUR PAYMENT METHOD HAS BEEN SUCCESFULLY SET UP</value>
+  </data>
+  <data name="Account_Register_PaymentMeanMessage" xml:space="preserve">
+    <value>The amount of  {0} {1} has been charged correctly in order to register your payment method.</value>
+  </data>
+  <data name="Account_Register_PaymentMeanMessageCancel" xml:space="preserve">
+    <value>The operation to charge the amount of {0} {1} in order to register your payment method has been cancelled.</value>
+  </data>
+  <data name="Account_Register_PaymentMeanMessageError" xml:space="preserve">
+    <value>An error occurred while attempting to charge the amount of {0} {1} in order to register your payment method. </value>
+  </data>
+  <data name="Account_Register_PaymentMeanRetry" xml:space="preserve">
+    <value>Retry </value>
+  </data>
+  <data name="Account_Register_PaymentMean_ChangeToPrepay" xml:space="preserve">
+    <value>Change to the prepay option and you will enjoy the benefits</value>
+  </data>
+  <data name="Account_Reset" xml:space="preserve">
+    <value>Reset</value>
+  </data>
+  <data name="Account_SearchMenu" xml:space="preserve">
+    <value>Search Menu...</value>
+  </data>
+  <data name="Account_UserData_Plate_Succesfully_Added" xml:space="preserve">
+    <value>Plate added sucessfully. Confirm changes to save it.</value>
+  </data>
+  <data name="Activation_EmailBody" xml:space="preserve">
+    <value>FILESYSTEM</value>
+  </data>
+  <data name="Activation_EmailHeader" xml:space="preserve">
+    <value>Blinkay registration</value>
+  </data>
+  <data name="Activation_SMS" xml:space="preserve">
+    <value>This is a message from Blinkay. Your activation code is {0}.</value>
+  </data>
+  <data name="Button_Back" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="Button_Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Button_Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="Button_Confirm" xml:space="preserve">
+    <value>Confirm</value>
+  </data>
+  <data name="Button_Logon" xml:space="preserve">
+    <value>Log On</value>
+  </data>
+  <data name="Button_Next" xml:space="preserve">
+    <value>Next</value>
+  </data>
+  <data name="Button_ReInitRegistration" xml:space="preserve">
+    <value>Begin registration</value>
+  </data>
+  <data name="Button_ResendSMS" xml:space="preserve">
+    <value>resend SMS</value>
+  </data>
+  <data name="Button_RetrySend" xml:space="preserve">
+    <value>Retry </value>
+  </data>
+  <data name="Button_Send" xml:space="preserve">
+    <value>Send</value>
+  </data>
+  <data name="Button_Validate" xml:space="preserve">
+    <value>validate</value>
+  </data>
+  <data name="ChangeEmailOrMobile_Remarks" xml:space="preserve">
+    <value>After pressing the button to confirm, an e-mail will be sent to your account containing a link. Once you receive an SMS on your mobile phone with a code, open the link and enter the code.</value>
+  </data>
+  <data name="ChangeEmailOrTelephone_EmailBody" xml:space="preserve">
+    <value>FILESYSTEM</value>
+  </data>
+  <data name="ChangeEmailOrTelephone_EmailHeader" xml:space="preserve">
+    <value>Blinkay: Change e-mail and/or phone number</value>
+  </data>
+  <data name="ChangeEmailOrTelephone_SMS" xml:space="preserve">
+    <value>This is a message from Blinkay. Your code to change your e-mail and/or phone number is {0}.</value>
+  </data>
+  <data name="ConfirmAutomaticRecharge_EmailHeader" xml:space="preserve">
+    <value>Blinkay: Credit Automatically Added</value>
+  </data>
+  <data name="ConfirmFinePayment_EmailHeader" xml:space="preserve">
+    <value>Blinkay: Ticket paid</value>
+  </data>
+  <data name="ConfirmNoAutomaticRecharge_EmailHeader" xml:space="preserve">
+    <value>Blinkay: Credit Added</value>
+  </data>
+  <data name="ConfirmRecharge_EmailBody" xml:space="preserve">
+    <value>FILESYSTEM</value>
+  </data>
+  <data name="CustomerInscriptionModel_AlternativePhoneNumber" xml:space="preserve">
+    <value>Home phone</value>
+  </data>
+  <data name="CustomerInscriptionModel_AlternativePhoneNumberPrefix" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CustomerInscriptionModel_AutomaticRecharge" xml:space="preserve">
+    <value>Save time in the future, Auto-Credit</value>
+  </data>
+  <data name="CustomerInscriptionModel_AutomaticRechargePaypalId" xml:space="preserve">
+    <value>PayPal ID</value>
+  </data>
+  <data name="CustomerInscriptionModel_AutomaticRechargeQuantity" xml:space="preserve">
+    <value>Amount to credit</value>
+  </data>
+  <data name="CustomerInscriptionModel_AutomaticRechargeWhenBelowQuantity" xml:space="preserve">
+    <value>Add credit when the amount is less than </value>
+  </data>
+  <data name="CustomerInscriptionModel_AutomaticRechargeWritePaypalID" xml:space="preserve">
+    <value>* write your PayPal ID</value>
+  </data>
+  <data name="CustomerInscriptionModel_City" xml:space="preserve">
+    <value>City</value>
+  </data>
+  <data name="CustomerInscriptionModel_ConfirmPassword" xml:space="preserve">
+    <value>Repeat Password</value>
+  </data>
+  <data name="CustomerInscriptionModel_Country" xml:space="preserve">
+    <value>Choose the country where you will use Blinkay</value>
+  </data>
+  <data name="CustomerInscriptionModel_DocID" xml:space="preserve">
+    <value>Driver's License Number</value>
+  </data>
+  <data name="CustomerInscriptionModel_DoorInStreetNumber" xml:space="preserve">
+    <value>Apartment #</value>
+  </data>
+  <data name="CustomerInscriptionModel_Email" xml:space="preserve">
+    <value>e-mail</value>
+  </data>
+  <data name="CustomerInscriptionModel_EmailAndSMSReSent" xml:space="preserve">
+    <value>The activation via email and SMS was a success. Number of retries {0}</value>
+  </data>
+  <data name="CustomerInscriptionModel_FirstSurname" xml:space="preserve">
+    <value>Last Name</value>
+  </data>
+  <data name="CustomerInscriptionModel_LetterInStreetNumber" xml:space="preserve">
+    <value>St. Letter</value>
+  </data>
+  <data name="CustomerInscriptionModel_LevelInStreetNumber" xml:space="preserve">
+    <value>Floor</value>
+  </data>
+  <data name="CustomerInscriptionModel_MainPhoneNumber" xml:space="preserve">
+    <value>Mobile Phone</value>
+  </data>
+  <data name="CustomerInscriptionModel_MainPhoneNumberPrefix" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CustomerInscriptionModel_Name" xml:space="preserve">
+    <value>First Name</value>
+  </data>
+  <data name="CustomerInscriptionModel_Password" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="CustomerInscriptionModel_PaymentMean" xml:space="preserve">
+    <value>Payment Method</value>
+  </data>
+  <data name="CustomerInscriptionModel_Plate" xml:space="preserve">
+    <value>License Plate</value>
+  </data>
+  <data name="CustomerInscriptionModel_reCaptchaIdiom" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="CustomerInscriptionModel_Remark_ivr" xml:space="preserve">
+    <value>Only for call center (optional)</value>
+  </data>
+  <data name="CustomerInscriptionModel_SecondSurname" xml:space="preserve">
+    <value>Middle Name</value>
+  </data>
+  <data name="CustomerInscriptionModel_SMSReSent" xml:space="preserve">
+    <value>The activation via SMS was a success. Number of retries {0}</value>
+  </data>
+  <data name="CustomerInscriptionModel_StairInStreetNumber" xml:space="preserve">
+    <value>Stair</value>
+  </data>
+  <data name="CustomerInscriptionModel_State" xml:space="preserve">
+    <value>State / Province</value>
+  </data>
+  <data name="CustomerInscriptionModel_Step1EndIntroText1" xml:space="preserve">
+    <value>1) Check your SMS on the phone &lt;b&gt;{0}&lt;/b&gt;, where we have sent a numeric code that will be needed shortly </value>
+  </data>
+  <data name="CustomerInscriptionModel_Step1EndIntroText2" xml:space="preserve">
+    <value>2) Check your e-mail &lt;b&gt;{0}&lt;/b&gt; where we have sent a link to continue signing up your new User. </value>
+  </data>
+  <data name="CustomerInscriptionModel_Step1EndIntroText3" xml:space="preserve">
+    <value>Click on the link, enter the numeric code, and you will be able to continue the process, having securely verified your identity. </value>
+  </data>
+  <data name="CustomerInscriptionModel_Step1EndIntroText4" xml:space="preserve">
+    <value>If you do not receive an e-mail, please check your SPAM.</value>
+  </data>
+  <data name="CustomerInscriptionModel_Step1EndIntroText5" xml:space="preserve">
+    <value>If you do not receive an e-mail or the SMS after a few minutes, press the retry button. </value>
+  </data>
+  <data name="CustomerInscriptionModel_Step1IntroText1" xml:space="preserve">
+    <value>With the mobile payment program you can manage the parking of your vehicle and extend your parking time, from any point in our network of services, as well as pay for various operations easily with your credit card.</value>
+  </data>
+  <data name="CustomerInscriptionModel_Step1IntroText2" xml:space="preserve">
+    <value>Once registered, you can modify your personal details or unsubscribe at any point.</value>
+  </data>
+  <data name="CustomerInscriptionModel_Step1IntroText3" xml:space="preserve">
+    <value>All of the information you provide is protected under the “Protection of Personal Information Policy”.</value>
+  </data>
+  <data name="CustomerInscriptionModel_Step1IntroText4" xml:space="preserve">
+    <value>Please fill out the personal details to enjoy the benefits of the mobile payment for regulated parking service.</value>
+  </data>
+  <data name="CustomerInscriptionModel_Step1RememberUsernameEqualsEmail" xml:space="preserve">
+    <value>Remember your username will be your e-mail</value>
+  </data>
+  <data name="CustomerInscriptionModel_Step2IntroText1" xml:space="preserve">
+    <value>With the remote payment program you can manage the parking of your vehicle and extend parking
+time, from any point in our network of services, as well as pay for various operations easily with your
+credit card.</value>
+  </data>
+  <data name="CustomerInscriptionModel_Step2IntroText2" xml:space="preserve">
+    <value>Once registered, you can modify your personal details or unsubscribe at any point.</value>
+  </data>
+  <data name="CustomerInscriptionModel_Step2IntroText3" xml:space="preserve">
+    <value>All of the information you provide is protected under the “Protection of Personal Information Policy”.</value>
+  </data>
+  <data name="CustomerInscriptionModel_Step2IntroText4" xml:space="preserve">
+    <value>Please fill out the personal details to enjoy the benefits of the remote payment for regulated parking
+service.</value>
+  </data>
+  <data name="CustomerInscriptionModel_Step2SendSMS" xml:space="preserve">
+    <value>If you have not received a message, press the button "Resend SMS" and you should receive a new SMS on the phone ending in {0}.</value>
+  </data>
+  <data name="CustomerInscriptionModel_Step2WriteYourCode" xml:space="preserve">
+    <value>Enter code: </value>
+  </data>
+  <data name="CustomerInscriptionModel_Step2WriteYourCode1" xml:space="preserve">
+    <value>Enter the code of {0}  digits received by SMS on the mobile device ending in {1} to continue with your registration (code valid for {2} min).</value>
+  </data>
+  <data name="CustomerInscriptionModel_Step3Address" xml:space="preserve">
+    <value>Company Name</value>
+  </data>
+  <data name="CustomerInscriptionModel_Step4IHaveReadAndAccept" xml:space="preserve">
+    <value>I have read and accept the terms and</value>
+  </data>
+  <data name="CustomerInscriptionModel_Step4PreferredPlate" xml:space="preserve">
+    <value>Preferred License Plate</value>
+  </data>
+  <data name="CustomerInscriptionModel_Step4SecurityAdvice" xml:space="preserve">
+    <value>(For security purposes, we recommend that you choose a different password than your e-mail.)</value>
+  </data>
+  <data name="CustomerInscriptionModel_Step4UseConditions" xml:space="preserve">
+    <value>Conditions</value>
+  </data>
+  <data name="CustomerInscriptionModel_Step4UserInformation" xml:space="preserve">
+    <value>User Information</value>
+  </data>
+  <data name="CustomerInscriptionModel_StepBttnFinish" xml:space="preserve">
+    <value>Complete</value>
+  </data>
+  <data name="CustomerInscriptionModel_StreetName" xml:space="preserve">
+    <value>Street Name</value>
+  </data>
+  <data name="CustomerInscriptionModel_StreetNumber" xml:space="preserve">
+    <value>St. Number</value>
+  </data>
+  <data name="CustomerInscriptionModel_SuccessCreatingAccount_1" xml:space="preserve">
+    <value>Congratulations! Your Blinkay account has been successfully created. Now you can login to your new account and purchase credit to begin using this service.</value>
+  </data>
+  <data name="CustomerInscriptionModel_SuccessCreatingAccount_3" xml:space="preserve">
+    <value>We have sent a confirmation e-mail to: &lt;a href="{0}"&gt; {0}&lt;/a&gt;, where you will find information for login, user details, and password. </value>
+  </data>
+  <data name="CustomerInscriptionModel_SuccessCreatingAccount_4" xml:space="preserve">
+    <value>Remember the benefits of being registered: </value>
+  </data>
+  <data name="CustomerInscriptionModel_SuccessCreatingAccount_5" xml:space="preserve">
+    <value> Refund of unused time</value>
+  </data>
+  <data name="CustomerInscriptionModel_SuccessCreatingAccount_6" xml:space="preserve">
+    <value>Automatically credit your balance-- save time.</value>
+  </data>
+  <data name="CustomerInscriptionModel_SuccessCreatingAccount_7" xml:space="preserve">
+    <value>Online access to your operations and invoices</value>
+  </data>
+  <data name="CustomerInscriptionModel_SuccessCreatingAccount_8" xml:space="preserve">
+    <value> Expired time warnings</value>
+  </data>
+  <data name="CustomerInscriptionModel_SuccessCreatingAccount_9" xml:space="preserve">
+    <value>Park without having to go to the meter, and pay only for the actual time parked.</value>
+  </data>
+  <data name="CustomerInscriptionModel_SummaryWelcomeEmail_Body" xml:space="preserve">
+    <value>FILESYSTEM</value>
+  </data>
+  <data name="CustomerInscriptionModel_SummaryWelcomeEmail_Subject" xml:space="preserve">
+    <value>Welcome to Blinkay</value>
+  </data>
+  <data name="CustomerInscriptionModel_Summary_Button_Login" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="CustomerInscriptionModel_SuscriptionType" xml:space="preserve">
+    <value>Subscription Type</value>
+  </data>
+  <data name="CustomerInscriptionModel_Username" xml:space="preserve">
+    <value>User Name</value>
+  </data>
+  <data name="CustomerInscriptionModel_Welcome" xml:space="preserve">
+    <value>Welcome, &lt;strong&gt;{0}&lt;/strong&gt;</value>
+  </data>
+  <data name="CustomerInscriptionModel_WriteYourAlternativePhoneNumber" xml:space="preserve">
+    <value>Write your home phone number</value>
+  </data>
+  <data name="CustomerInscriptionModel_WriteYourCity" xml:space="preserve">
+    <value>* Write the name of your city.</value>
+  </data>
+  <data name="CustomerInscriptionModel_WriteYourConfirmPassword" xml:space="preserve">
+    <value>* Repeat Password</value>
+  </data>
+  <data name="CustomerInscriptionModel_WriteYourDocID" xml:space="preserve">
+    <value>* Write your Driver's License Number</value>
+  </data>
+  <data name="CustomerInscriptionModel_WriteYourDoorInStreetNumber" xml:space="preserve">
+    <value>Apartment #</value>
+  </data>
+  <data name="CustomerInscriptionModel_WriteYourEmail" xml:space="preserve">
+    <value>* Write your e-mail</value>
+  </data>
+  <data name="CustomerInscriptionModel_WriteYourFirstSurname" xml:space="preserve">
+    <value>* Write your last name</value>
+  </data>
+  <data name="CustomerInscriptionModel_WriteYourLetterInStreetNumber" xml:space="preserve">
+    <value>letter</value>
+  </data>
+  <data name="CustomerInscriptionModel_WriteYourLevelInStreetNumber" xml:space="preserve">
+    <value>floor</value>
+  </data>
+  <data name="CustomerInscriptionModel_WriteYourMainPhoneNumber" xml:space="preserve">
+    <value>* Write your cell phone number</value>
+  </data>
+  <data name="CustomerInscriptionModel_WriteYourName" xml:space="preserve">
+    <value>* Write your first name</value>
+  </data>
+  <data name="CustomerInscriptionModel_WriteYourPassword" xml:space="preserve">
+    <value>* Min.- {0} Max {1} characteres</value>
+  </data>
+  <data name="CustomerInscriptionModel_WriteYourPlate" xml:space="preserve">
+    <value>* Vehicle License Plate</value>
+  </data>
+  <data name="CustomerInscriptionModel_WriteYourSecondSurname" xml:space="preserve">
+    <value>Write your middle name</value>
+  </data>
+  <data name="CustomerInscriptionModel_WriteYourStairInStreetNumber" xml:space="preserve">
+    <value>stair</value>
+  </data>
+  <data name="CustomerInscriptionModel_WriteYourState" xml:space="preserve">
+    <value>* Write your State.</value>
+  </data>
+  <data name="CustomerInscriptionModel_WriteYourStreetName" xml:space="preserve">
+    <value>* Write your Street Name</value>
+  </data>
+  <data name="CustomerInscriptionModel_WriteYourStreetNumber" xml:space="preserve">
+    <value>* Write your street number. </value>
+  </data>
+  <data name="CustomerInscriptionModel_WriteYourUsername" xml:space="preserve">
+    <value>* Min.- {0} Max {1} characteres</value>
+  </data>
+  <data name="CustomerInscriptionModel_WriteYourZipCode" xml:space="preserve">
+    <value>* Write your zip/postal code</value>
+  </data>
+  <data name="CustomerInscriptionModel_ZipCode" xml:space="preserve">
+    <value>Zip/Postal Code</value>
+  </data>
+  <data name="DefaultInstallationCode" xml:space="preserve">
+    <value>30003</value>
+  </data>
+  <data name="Email_LayoutSubtotal" xml:space="preserve">
+    <value>FILESYSTEM</value>
+  </data>
+  <data name="Email_LayoutTotal" xml:space="preserve">
+    <value>FILESYSTEM</value>
+  </data>
+  <data name="ErrMsg_ActivationCodeAlreadyUsed" xml:space="preserve">
+    <value>The registration code has already been used. </value>
+  </data>
+  <data name="ErrMsg_ActivationCodeExpired" xml:space="preserve">
+    <value>The activation code has expired. Please restart the registration process. </value>
+  </data>
+  <data name="ErrMsg_ActivationCodeExpired_2" xml:space="preserve">
+    <value>The activation code has expired</value>
+  </data>
+  <data name="ErrMsg_ActivationURLIncorrect" xml:space="preserve">
+    <value>Activation link is invalid.</value>
+  </data>
+  <data name="ErrMsg_DeleteUserMustBeAccepted" xml:space="preserve">
+    <value>You must check the box to accept</value>
+  </data>
+  <data name="ErrMsg_UseConditionsMustBeAccepted" xml:space="preserve">
+    <value>Use Conditions must be accepted</value>
+  </data>
+  <data name="ErrMsg_UsernameAlreadyExist" xml:space="preserve">
+    <value>This User Name already exists. Please choose another one. </value>
+  </data>
+  <data name="ErrMsg_ValidationCodeIsIncorrect" xml:space="preserve">
+    <value>The validation code is incorrect.</value>
+  </data>
+  <data name="ErrMsg_ValidationCodeIsRequired" xml:space="preserve">
+    <value>The validation code is required. </value>
+  </data>
+  <data name="ErrorsMsg_CaptchaNotValid" xml:space="preserve">
+    <value>Captcha not valid</value>
+  </data>
+  <data name="ErrorsMsg_EmailsMustMatch" xml:space="preserve">
+    <value>The email must match</value>
+  </data>
+  <data name="ErrorsMsg_ErrorAddindInformationToDB" xml:space="preserve">
+    <value>Error adding information to the database. </value>
+  </data>
+  <data name="ErrorsMsg_ErrorEmailAlreadyExist" xml:space="preserve">
+    <value>This e-mail cannot be used because it already exists in the system </value>
+  </data>
+  <data name="ErrorsMsg_ErrorNothingHasChanged" xml:space="preserve">
+    <value>Nothing has been changed</value>
+  </data>
+  <data name="ErrorsMsg_ErrorSendingActivation" xml:space="preserve">
+    <value>Error sending the activation</value>
+  </data>
+  <data name="ErrorsMsg_ErrorTelephoneAlreadyExist" xml:space="preserve">
+    <value>This telephone number cannot be used because it already exists in the system </value>
+  </data>
+  <data name="ErrorsMsg_GreaterThanZeroRequired" xml:space="preserve">
+    <value>The field '{0}' must be greater than zero.</value>
+  </data>
+  <data name="ErrorsMsg_InvalidFormat" xml:space="preserve">
+    <value>The {0} field is an invalid format </value>
+  </data>
+  <data name="ErrorsMsg_InvalidLength" xml:space="preserve">
+    <value>The maximum length of the {0} field is {1}</value>
+  </data>
+  <data name="ErrorsMsg_InvalidLengthWithMinimum" xml:space="preserve">
+    <value>The maximum length of the {0} field is {1}</value>
+  </data>
+  <data name="ErrorsMsg_InvalidPassword" xml:space="preserve">
+    <value>Invalid Password</value>
+  </data>
+  <data name="ErrorsMsg_InvalidPaymentMeanType" xml:space="preserve">
+    <value>Invalid payment method</value>
+  </data>
+  <data name="ErrorsMsg_LengthMustBeAtLeast" xml:space="preserve">
+    <value>The maximum length of the {0} field is {1}</value>
+  </data>
+  <data name="ErrorsMsg_PasswordsMustMatch" xml:space="preserve">
+    <value>The passwords must match</value>
+  </data>
+  <data name="ErrorsMsg_PlateListCantbeEmpty" xml:space="preserve">
+    <value>Plates List can't be empty</value>
+  </data>
+  <data name="ErrorsMsg_RequiredField" xml:space="preserve">
+    <value>The {0} field is required</value>
+  </data>
+  <data name="ErrorsMsg_RequiredFieldPayPalID" xml:space="preserve">
+    <value>The PayPal ID field is required. </value>
+  </data>
+  <data name="ErrorsMsg_SummaryMessage" xml:space="preserve">
+    <value>There are some errors. Please correct them to continue. </value>
+  </data>
+  <data name="ErrorsMsg_UserNotExists" xml:space="preserve">
+    <value>There is no user with this information</value>
+  </data>
+  <data name="FineModel_ConfirmEmail" xml:space="preserve">
+    <value>* Confirm your e-mail</value>
+  </data>
+  <data name="FineModel_Email" xml:space="preserve">
+    <value>*E-mail:</value>
+  </data>
+  <data name="FineModel_TicketNumber" xml:space="preserve">
+    <value>Ticket number</value>
+  </data>
+  <data name="FineModel_WriteYourConfirmEmail" xml:space="preserve">
+    <value>* Repeat your e-mail</value>
+  </data>
+  <data name="FineModel_WriteYourEmail" xml:space="preserve">
+    <value>* Input your e-mail</value>
+  </data>
+  <data name="Fine_Amount" xml:space="preserve">
+    <value>Amount</value>
+  </data>
+  <data name="Fine_City" xml:space="preserve">
+    <value>City</value>
+  </data>
+  <data name="Fine_FEE" xml:space="preserve">
+    <value>Service Cost</value>
+  </data>
+  <data name="Fine_Header" xml:space="preserve">
+    <value>Ticket Payment Portal</value>
+  </data>
+  <data name="Fine_PartialVAT1" xml:space="preserve">
+    <value>Tax</value>
+  </data>
+  <data name="Fine_PaymentButton" xml:space="preserve">
+    <value>Pay now</value>
+  </data>
+  <data name="Fine_Plate" xml:space="preserve">
+    <value>License Plate</value>
+  </data>
+  <data name="Fine_SearchAgain" xml:space="preserve">
+    <value>Search another ticket</value>
+  </data>
+  <data name="Fine_SearchButton" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="Fine_TicketNumber" xml:space="preserve">
+    <value>Ticket number</value>
+  </data>
+  <data name="Fine_TicketPayment" xml:space="preserve">
+    <value>Ticket payment</value>
+  </data>
+  <data name="Fine_TicketPaymentFailureTitle" xml:space="preserve">
+    <value>Payment error</value>
+  </data>
+  <data name="Fine_TicketPaymentFailure_1" xml:space="preserve">
+    <value>There was an error in the payment</value>
+  </data>
+  <data name="Fine_TicketPaymentFailure_3" xml:space="preserve">
+    <value>Please, try again</value>
+  </data>
+  <data name="Fine_TicketPaymentSuccess" xml:space="preserve">
+    <value>Payment succesful</value>
+  </data>
+  <data name="Fine_TicketPaymentSuccessTitle" xml:space="preserve">
+    <value>Payment done</value>
+  </data>
+  <data name="Fine_TicketPaymentSuccess_1" xml:space="preserve">
+    <value>The payment was done succesfully</value>
+  </data>
+  <data name="Fine_TicketPayment_MainMenu" xml:space="preserve">
+    <value>Menu</value>
+  </data>
+  <data name="Fine_Title" xml:space="preserve">
+    <value>Pay ticket</value>
+  </data>
+  <data name="Fine_Total" xml:space="preserve">
+    <value>Base</value>
+  </data>
+  <data name="ForgotPasswordEnd_Remark" xml:space="preserve">
+    <value>An e-mail has been sent to your account containing a link. Once you receive an SMS on your mobile phone with a code, open the link and enter the code. </value>
+  </data>
+  <data name="ForgotPassword_EmailBody" xml:space="preserve">
+    <value>FILESYSTEM</value>
+  </data>
+  <data name="ForgotPassword_EmailHeader" xml:space="preserve">
+    <value>Blinkay: Password Recovery</value>
+  </data>
+  <data name="ForgotPassword_Remarks" xml:space="preserve">
+    <value>After pressing the button to confirm, an e-mail will be sent to your account containing a link. Once you receive an SMS on your mobile phone with a code, open the link and enter the code. </value>
+  </data>
+  <data name="ForgotPassword_SMS" xml:space="preserve">
+    <value>This is a message from Blinkay. Your code to recover your password is {0}.</value>
+  </data>
+  <data name="ForgotPassword_Title" xml:space="preserve">
+    <value>Password Reminder</value>
+  </data>
+  <data name="Home_AddNewUser" xml:space="preserve">
+    <value>Add New User</value>
+  </data>
+  <data name="Home_BadUserNameOrPassword" xml:space="preserve">
+    <value> The User Name or password is incorrect. </value>
+  </data>
+  <data name="Home_BuyCoupons" xml:space="preserve">
+    <value>Buy Coupons</value>
+  </data>
+  <data name="Home_Companies" xml:space="preserve">
+    <value>Company Name</value>
+  </data>
+  <data name="Home_ForgotPassword" xml:space="preserve">
+    <value>Forgot your password?</value>
+  </data>
+  <data name="Home_ForgotUsername" xml:space="preserve">
+    <value>Forgot your User Name?</value>
+  </data>
+  <data name="Home_GetUserDataError" xml:space="preserve">
+    <value>Error retrieving user information.</value>
+  </data>
+  <data name="Home_Individuals" xml:space="preserve">
+    <value>Individual</value>
+  </data>
+  <data name="Home_Password" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="Home_Service_Conditions" xml:space="preserve">
+    <value>See service conditions.</value>
+  </data>
+  <data name="Home_UserDeleteError" xml:space="preserve">
+    <value>Error deleting the user</value>
+  </data>
+  <data name="Home_UserDeleteOK" xml:space="preserve">
+    <value>User deleted correctly </value>
+  </data>
+  <data name="Home_Username" xml:space="preserve">
+    <value>User Name or e-mail</value>
+  </data>
+  <data name="Home_WhyService" xml:space="preserve">
+    <value>Why use Blinkay?</value>
+  </data>
+  <data name="IndividualsRegistration_Signup1" xml:space="preserve">
+    <value>Open the validation email on your device to continue the signup.</value>
+  </data>
+  <data name="IndividualsRegistration_Signup_Check_Email" xml:space="preserve">
+    <value>Check your e-mail</value>
+  </data>
+  <data name="IndividualsRegistration_Signup_Check_Title" xml:space="preserve">
+    <value>Check your e-mail</value>
+  </data>
+  <data name="InvoiceRetailer_PDF_Amount" xml:space="preserve">
+    <value>Amount</value>
+  </data>
+  <data name="InvoiceRetailer_PDF_CouponsLine" xml:space="preserve">
+    <value>Discount</value>
+  </data>
+  <data name="InvoiceRetailer_PDF_Date" xml:space="preserve">
+    <value>Date:</value>
+  </data>
+  <data name="InvoiceRetailer_PDF_Detail" xml:space="preserve">
+    <value>Concept</value>
+  </data>
+  <data name="InvoiceRetailer_PDF_InvoiceNumber" xml:space="preserve">
+    <value>Invoice number:</value>
+  </data>
+  <data name="InvoiceRetailer_PDF_NIF" xml:space="preserve">
+    <value>Tax ID:</value>
+  </data>
+  <data name="InvoiceRetailer_PDF_QRAvailable" xml:space="preserve">
+    <value>Available</value>
+  </data>
+  <data name="InvoiceRetailer_PDF_QRCode" xml:space="preserve">
+    <value>Reload code: {0}</value>
+  </data>
+  <data name="InvoiceRetailer_PDF_Total" xml:space="preserve">
+    <value>Total:</value>
+  </data>
+  <data name="InvoiceRetailer_PDF_TotalAmount" xml:space="preserve">
+    <value>Fees to be issued:</value>
+  </data>
+  <data name="InvoiceRetailer_PDF_TotalPayTypeFEE" xml:space="preserve">
+    <value>Credit card commission:</value>
+  </data>
+  <data name="InvoiceRetailer_PDF_TotalServiceFEE" xml:space="preserve">
+    <value>Service commission:</value>
+  </data>
+  <data name="InvoiceRetailer_PDF_Units" xml:space="preserve">
+    <value>Units</value>
+  </data>
+  <data name="InvoiceRetailer_PDF_Unit_Amount" xml:space="preserve">
+    <value>Price</value>
+  </data>
+  <data name="InvoiceRetailer_PDF_VAT" xml:space="preserve">
+    <value>GST/PST {0}%:</value>
+  </data>
+  <data name="No_Registries_Found" xml:space="preserve">
+    <value>No records found</value>
+  </data>
+  <data name="Pager_First" xml:space="preserve">
+    <value>First </value>
+  </data>
+  <data name="Pager_Format" xml:space="preserve">
+    <value>Register {0} - {1} of {2}</value>
+  </data>
+  <data name="Pager_Last" xml:space="preserve">
+    <value>Last</value>
+  </data>
+  <data name="Pager_Next" xml:space="preserve">
+    <value>Next</value>
+  </data>
+  <data name="Pager_Previous" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="Pager_SingleFormat" xml:space="preserve">
+    <value>Register {0} of {1}</value>
+  </data>
+  <data name="PersonalData" xml:space="preserve">
+    <value>Personal Details</value>
+  </data>
+  <data name="RegistrationForm" xml:space="preserve">
+    <value>Registration Form</value>
+  </data>
+  <data name="RegistrationForm_Step1End_IdentityValidation_Step1" xml:space="preserve">
+    <value>Validation of identity - Step 1</value>
+  </data>
+  <data name="RegistrationForm_Step1End_IdentityValidation_Step2" xml:space="preserve">
+    <value>Validation of identity - Step 2</value>
+  </data>
+  <data name="RememberMeCheck" xml:space="preserve">
+    <value>Remember me</value>
+  </data>
+  <data name="ResetPasswordConfirmation_Message1" xml:space="preserve">
+    <value>Your password was successfully changed.</value>
+  </data>
+  <data name="ResetPasswordConfirmation_Title" xml:space="preserve">
+    <value>Password changed correctly</value>
+  </data>
+  <data name="ResetPassword_ConfirmPassword" xml:space="preserve">
+    <value>Confirm your new password:</value>
+  </data>
+  <data name="ResetPassword_Message1" xml:space="preserve">
+    <value>To change your password for {0}, please introduce your new password below</value>
+  </data>
+  <data name="ResetPassword_Message2" xml:space="preserve">
+    <value>Please, type your new password:</value>
+  </data>
+  <data name="ResetPassword_Password" xml:space="preserve">
+    <value>New password:</value>
+  </data>
+  <data name="ResetPassword_Title" xml:space="preserve">
+    <value>Change password</value>
+  </data>
+  <data name="ResetPassword_WriteYourConfirmPassword" xml:space="preserve">
+    <value>* Type again your password</value>
+  </data>
+  <data name="ResetPassword_WriteYourPassword" xml:space="preserve">
+    <value>* Min.- {0} Max {1} characters</value>
+  </data>
+  <data name="Result_Error_Fine_Number_Already_Paid" xml:space="preserve">
+    <value>This ticket has already been paid</value>
+  </data>
+  <data name="Result_Error_Fine_Number_Not_Found" xml:space="preserve">
+    <value>Ticket not found</value>
+  </data>
+  <data name="Result_Error_Fine_Payment_Period_Expired" xml:space="preserve">
+    <value>The deadline to pay this ticket has expired</value>
+  </data>
+  <data name="Result_Error_Fine_Type_Not_Payable" xml:space="preserve">
+    <value>This ticket is not available to be paid</value>
+  </data>
+  <data name="RetailerCouponsModel_Address" xml:space="preserve">
+    <value>*Address:</value>
+  </data>
+  <data name="RetailerCouponsModel_ConfirmEmail" xml:space="preserve">
+    <value>* Confirm your e-mail:</value>
+  </data>
+  <data name="RetailerCouponsModel_CouponAmount" xml:space="preserve">
+    <value>Unit amount per credit:</value>
+  </data>
+  <data name="RetailerCouponsModel_Coupons" xml:space="preserve">
+    <value>Number of installments to be issued:</value>
+  </data>
+  <data name="RetailerCouponsModel_DocID" xml:space="preserve">
+    <value>* GST/PST:</value>
+  </data>
+  <data name="RetailerCouponsModel_Email" xml:space="preserve">
+    <value>*E-mail:</value>
+  </data>
+  <data name="RetailerCouponsModel_Name" xml:space="preserve">
+    <value>*Company name:</value>
+  </data>
+  <data name="RetailerCouponsModel_Total" xml:space="preserve">
+    <value>Total:</value>
+  </data>
+  <data name="RetailerCouponsModel_TotalAmount" xml:space="preserve">
+    <value>Fees to be issued:</value>
+  </data>
+  <data name="RetailerCouponsModel_TotalPayTypeFEE" xml:space="preserve">
+    <value>Credit card commission:</value>
+  </data>
+  <data name="RetailerCouponsModel_TotalServiceFEE" xml:space="preserve">
+    <value>Service commission:</value>
+  </data>
+  <data name="RetailerCouponsModel_TotalVat" xml:space="preserve">
+    <value>GST/PST {0}%:</value>
+  </data>
+  <data name="RetailerCouponsModel_Vat" xml:space="preserve">
+    <value>GST/PST:</value>
+  </data>
+  <data name="RetailerCouponsModel_WriteYourAddress" xml:space="preserve">
+    <value>* write the address</value>
+  </data>
+  <data name="RetailerCouponsModel_WriteYourConfirmEmail" xml:space="preserve">
+    <value>* repeat the e-mail</value>
+  </data>
+  <data name="RetailerCouponsModel_WriteYourDocID" xml:space="preserve">
+    <value>* Write your ID / Passport</value>
+  </data>
+  <data name="RetailerCouponsModel_WriteYourEmail" xml:space="preserve">
+    <value>* write the e-mail</value>
+  </data>
+  <data name="RetailerCouponsModel_WriteYourName" xml:space="preserve">
+    <value>* write the name of the company</value>
+  </data>
+  <data name="RetailerCoupons_BuyButton" xml:space="preserve">
+    <value>Pay Fees</value>
+  </data>
+  <data name="RetailerCoupons_BuyResume" xml:space="preserve">
+    <value>Summary of purchase</value>
+  </data>
+  <data name="RetailerCoupons_Data" xml:space="preserve">
+    <value>Enterprise data</value>
+  </data>
+  <data name="RetailerCoupons_Details" xml:space="preserve">
+    <value>Fill in your tax information to receive by email, the invoice and a PDF with the QR codes that you can give to your clients, such as recharging your balance or paying for your parking in the blue zone.</value>
+  </data>
+  <data name="RetailerCoupons_Import" xml:space="preserve">
+    <value>Amount</value>
+  </data>
+  <data name="RetailerCoupons_SubTitle" xml:space="preserve">
+    <value>Payment service</value>
+  </data>
+  <data name="RetailerCoupons_SubTitle2" xml:space="preserve">
+    <value>Commercial Credit</value>
+  </data>
+  <data name="RetailerCoupons_Title" xml:space="preserve">
+    <value>Merchants payments</value>
+  </data>
+  <data name="RetailerInvoice_Address" xml:space="preserve">
+    <value>Address:</value>
+  </data>
+  <data name="RetailerInvoice_BuyResume" xml:space="preserve">
+    <value>Summary of purchase</value>
+  </data>
+  <data name="RetailerInvoice_CompanyNIF" xml:space="preserve">
+    <value>GST/PST:</value>
+  </data>
+  <data name="RetailerInvoice_CouponAvailable" xml:space="preserve">
+    <value>Available:</value>
+  </data>
+  <data name="RetailerInvoice_CouponCode" xml:space="preserve">
+    <value>Refill code:</value>
+  </data>
+  <data name="RetailerInvoice_Date" xml:space="preserve">
+    <value>Date:</value>
+  </data>
+  <data name="RetailerInvoice_DocId" xml:space="preserve">
+    <value>Tax ID:</value>
+  </data>
+  <data name="RetailerInvoice_Import" xml:space="preserve">
+    <value>Amount</value>
+  </data>
+  <data name="RetailerInvoice_InvoiceNum" xml:space="preserve">
+    <value>Invoice No:</value>
+  </data>
+  <data name="RetailerInvoice_Name" xml:space="preserve">
+    <value>Company:</value>
+  </data>
+  <data name="RetailerInvoice_NotificationEmail_Body" xml:space="preserve">
+    <value>Dear Blinkay Merchant, &lt;br&gt; &lt;br&gt;
+All the studies indicate that regulated parking helps a greater number of vehicles to rotate, and therefore more customers can access the highly-attended shopping areas. If your business is located in a regulated area, you are lucky that it means you probably have a large influx of citizens and potential customers. However, it is still true that local commerce has a big handicap regarding large stores, a pending task to be solved: the payment of the regulated area. &lt;br&gt; &lt;br&gt;
+We trust that this new service that we put at your disposal will help you get more new customers and strengthen the current ones. Do not doubt that the parking bonus is a great incentive for a customer to opt for their trade and not another area. The more you reward, the more customers you will have! &lt;br&gt; &lt;br&gt;
+Attached to this email we provide you with a PDF where you can obtain the bonus coupons for your customers. Each of these coupons has a unique code engraved with the amount that will be rewarded, and are for single use. Do not hesitate to contact our support team for more questions through www.blinkay.app. &lt;br&gt; &lt;br&gt;
+Thank you for trusting Blinkay, &lt;br&gt; &lt;br&gt;
+Cheers!</value>
+  </data>
+  <data name="RetailerInvoice_NotificationEmail_Subject" xml:space="preserve">
+    <value>Blinkay coupons, start to reward your customers!</value>
+  </data>
+  <data name="RetailerInvoice_Print" xml:space="preserve">
+    <value>To print</value>
+  </data>
+  <data name="RetailerInvoice_Title" xml:space="preserve">
+    <value>Invoice</value>
+  </data>
+  <data name="SecurityOperationChangeEmailOrTelephone_Confirmation" xml:space="preserve">
+    <value>Edit e-mail and/or phone number - Confirmation</value>
+  </data>
+  <data name="SecurityOperationChangeEmailOrTelephone_ConfirmationText1" xml:space="preserve">
+    <value>Your e-mail and/or phone number has been updated.</value>
+  </data>
+  <data name="SecurityOperationChangeEmailOrTelephone_ConfirmationText2" xml:space="preserve">
+    <value>e-mail: </value>
+  </data>
+  <data name="SecurityOperationChangeEmailOrTelephone_ConfirmationText3" xml:space="preserve">
+    <value>Phone number:</value>
+  </data>
+  <data name="SecurityOperationChangeEmailOrTelephone_IdentityValidation" xml:space="preserve">
+    <value>Edit e-mail and/or phone number - Identity Verification </value>
+  </data>
+  <data name="SecurityOperationChangeEmailOrTelephone_Step2WriteYourCode" xml:space="preserve">
+    <value>Enter code: </value>
+  </data>
+  <data name="SecurityOperationChangeEmailOrTelephone_Step2WriteYourCode1" xml:space="preserve">
+    <value>Enter the code containing {0}  digits received by SMS on the phone ending in {1}  to confirm the modification of e-mail and/or phone number (code valid for {2} min).</value>
+  </data>
+  <data name="SecurityOperationForgotPassword_Confirmation" xml:space="preserve">
+    <value>Password Reminder - Confirmation</value>
+  </data>
+  <data name="SecurityOperationForgotPassword_ConfirmationText1" xml:space="preserve">
+    <value>Your password will be displayed below</value>
+  </data>
+  <data name="SecurityOperationForgotPassword_IdentityValidation" xml:space="preserve">
+    <value>Password Reminder - Identity Verification </value>
+  </data>
+  <data name="SecurityOperationForgotPassword_Step2WriteYourCode1" xml:space="preserve">
+    <value>Enter the code containing {0}  digits received by SMS on the phone ending in {1}  to get your password (code valid for {2} min).</value>
+  </data>
+  <data name="SecurityOperationForgotPassword_Step2WriteYourCode2" xml:space="preserve">
+    <value>Enter code: </value>
+  </data>
+  <data name="SelectPayMethod_ChangeSuscriptionType" xml:space="preserve">
+    <value>Change subscription type</value>
+  </data>
+  <data name="SelectPayMethod_CreditCard" xml:space="preserve">
+    <value>Credit or Debit Cards</value>
+  </data>
+  <data name="SelectPayMethod_IntroText1" xml:space="preserve">
+    <value>PLEASE ADD  A VALID PAYMENT METHOD</value>
+  </data>
+  <data name="SelectPayMethod_IntroText2" xml:space="preserve">
+    <value>Payment Method</value>
+  </data>
+  <data name="SelectPayMethod_IntroText3" xml:space="preserve">
+    <value>Automatic purchase of credit</value>
+  </data>
+  <data name="SelectPayMethod_IntroText4" xml:space="preserve">
+    <value>If you wish to save time and take full advantage of the application, activate the automatic recharge option and configure the minimum amount.  </value>
+  </data>
+  <data name="SelectPayMethod_Paypal" xml:space="preserve">
+    <value>PayPal</value>
+  </data>
+  <data name="SelectPayMethod_PerTransactionCheckBoxMessage" xml:space="preserve">
+    <value>I accept</value>
+  </data>
+  <data name="SelectPayMethod_PerTransactionCheckBox_Error" xml:space="preserve">
+    <value>You must accept the charge to continue</value>
+  </data>
+  <data name="SelectPayMethod_PerTransactionMessage" xml:space="preserve">
+    <value>Once you press Next, the amount of {0} {1} will be charged to activate your payment method online. </value>
+  </data>
+  <data name="SelectPayMethod_SubstituteCurrentCard" xml:space="preserve">
+    <value>Substitute current card ({0})</value>
+  </data>
+  <data name="SelectPayMethod_SuscriptionType" xml:space="preserve">
+    <value>Subscription Type:</value>
+  </data>
+  <data name="SelectPayMethod_SuscriptionType_PerTransaction" xml:space="preserve">
+    <value>Payment by Transaction</value>
+  </data>
+  <data name="SelectPayMethod_SuscriptionType_Prepay" xml:space="preserve">
+    <value>Prepaid User</value>
+  </data>
+  <data name="SelectPayMethod_Sus_Option1" xml:space="preserve">
+    <value>Select "Change current credit/debit card":</value>
+  </data>
+  <data name="SelectPayMethod_Sus_Option2" xml:space="preserve">
+    <value>Choose a method of payment:</value>
+  </data>
+  <data name="SelectPayMethod_Sus_Option3" xml:space="preserve">
+    <value>Take advantage of the automatic recurring option and activate it now:</value>
+  </data>
+  <data name="SelectPayMethod_Sus_Remark1" xml:space="preserve">
+    <value>Remember that once you have pressed "next", if you have chosen "change current credit/debit card":</value>
+  </data>
+  <data name="SelectPayMethod_Sus_Remark2" xml:space="preserve">
+    <value>Your balance will still be available through your new method of payment.</value>
+  </data>
+  <data name="SelectPayMethod_Sus_Remark3" xml:space="preserve">
+    <value>You must add credit to your balance to verify your new method of payment by:</value>
+  </data>
+  <data name="SelectPayMethod_Sus_Remark4" xml:space="preserve">
+    <value>1) Selecting an amount that will be applied to your balance.</value>
+  </data>
+  <data name="SelectPayMethod_Sus_Remark5" xml:space="preserve">
+    <value>2) Entering the new payment method information.</value>
+  </data>
+  <data name="SelectPayMethod_Sus_Remark6" xml:space="preserve">
+    <value>If you do not wish to change your current method of payment, deselect "change current credit/debit card" in step 1.</value>
+  </data>
+  <data name="SelectSuscriptionType_IntroText1" xml:space="preserve">
+    <value>User- Choose prepaid or transaction </value>
+  </data>
+  <data name="SelectSuscriptionType_IntroText2" xml:space="preserve">
+    <value>Prepaid User</value>
+  </data>
+  <data name="SelectSuscriptionType_IntroText3" xml:space="preserve">
+    <value>Payment by Transaction</value>
+  </data>
+  <data name="SelectSuscriptionType_PerTransaction1" xml:space="preserve">
+    <value>Payment by Transaction</value>
+  </data>
+  <data name="SelectSuscriptionType_PerTransaction2" xml:space="preserve">
+    <value>Every time you park, extend time, or pay a fine, the exact amount will be charged to your credit card. </value>
+  </data>
+  <data name="SelectSuscriptionType_PerTransaction3" xml:space="preserve">
+    <value>* In every operation which you add/modify the payment method, the amount of  {0} {1} will be charged. </value>
+  </data>
+  <data name="SelectSuscriptionType_Prepay1" xml:space="preserve">
+    <value>Prepay (and all of it's advantages)</value>
+  </data>
+  <data name="SelectSuscriptionType_Prepay2" xml:space="preserve">
+    <value>1) Park, extend time, or pay for a fine. </value>
+  </data>
+  <data name="SelectSuscriptionType_Prepay3" xml:space="preserve">
+    <value>We refund you {0} {1} for each operation that you complete. </value>
+  </data>
+  <data name="SelectSuscriptionType_Prepay4" xml:space="preserve">
+    <value>2) We refund your unused time. </value>
+  </data>
+  <data name="SelectSuscriptionType_Prepay5" xml:space="preserve">
+    <value>Don't worry if you are in a meeting.</value>
+  </data>
+  <data name="SelectSuscriptionType_Prepay6" xml:space="preserve">
+    <value>Enjoy your spare time.</value>
+  </data>
+  <data name="SelectSuscriptionType_Prepay7" xml:space="preserve">
+    <value>Stop worrying about your parking time, no matter what you have to get done.</value>
+  </data>
+  <data name="ServiceName" xml:space="preserve">
+    <value>Blinkay Service for On-Street payment and permits</value>
+  </data>
+  <data name="SiteMaster_Contact" xml:space="preserve">
+    <value>Contact</value>
+  </data>
+  <data name="SiteMaster_Home" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="UserData_ButtonCancel" xml:space="preserve">
+    <value>Cancel Changes</value>
+  </data>
+  <data name="UserData_ButtonConfirm" xml:space="preserve">
+    <value>Confirm Changes</value>
+  </data>
+  <data name="UserData_CancelAdd" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="UserData_ChangeEmailOrMobileEnd_Remark" xml:space="preserve">
+    <value>An e-mail has been sent to your account containing a link. Once you receive an SMS on your mobile phone with a code, open the link and enter the code. </value>
+  </data>
+  <data name="UserData_ChangePaymentMean" xml:space="preserve">
+    <value>Change</value>
+  </data>
+  <data name="UserData_ChangeTelOrEmailTitle" xml:space="preserve">
+    <value>Change mobile phone and/or e-mail</value>
+  </data>
+  <data name="UserData_ConfirmAdd" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="UserData_ConfirmNewPassword" xml:space="preserve">
+    <value>Confirm New Password</value>
+  </data>
+  <data name="UserData_CurrentPassword" xml:space="preserve">
+    <value>Current Password</value>
+  </data>
+  <data name="UserData_DeleteUserEnd_Remark" xml:space="preserve">
+    <value>Your account has been deleted, all of your information has been deleted, your balance has expired, and it is no longer possible to recover your account. </value>
+  </data>
+  <data name="UserData_DeleteUserRemark" xml:space="preserve">
+    <value>If you delete your account, all of your information will be deleted and it will not be possible to recover your account.&lt;br/&gt;Your user agreement will end upon deleting your account and your balance will expire. </value>
+  </data>
+  <data name="UserData_DeleteUserTitle" xml:space="preserve">
+    <value>Delete User</value>
+  </data>
+  <data name="UserData_DeleteUser_IntroducePassword" xml:space="preserve">
+    <value>Enter your password to unsubscribe. </value>
+  </data>
+  <data name="UserData_DeleteUser_UnderstandDeletion" xml:space="preserve">
+    <value>I understand and I accept</value>
+  </data>
+  <data name="UserData_InitProcedure" xml:space="preserve">
+    <value>Start Procedure</value>
+  </data>
+  <data name="UserData_InsertNewPlate" xml:space="preserve">
+    <value>Insert New Plate</value>
+  </data>
+  <data name="UserData_NewPassword" xml:space="preserve">
+    <value>New Password</value>
+  </data>
+  <data name="UserData_PasswordRemark" xml:space="preserve">
+    <value>Only input in new password fields when changing the password</value>
+  </data>
+  <data name="UserData_PayMeansRemark" xml:space="preserve">
+    <value>Changing payment option may require a reload of credit for your e-wallet to be ready.</value>
+  </data>
+  <data name="UserData_PayMeansTitle" xml:space="preserve">
+    <value>Current Payment option</value>
+  </data>
+  <data name="UserData_Plates" xml:space="preserve">
+    <value>Plates</value>
+  </data>
+  <data name="UserData_PlatesRemark" xml:space="preserve">
+    <value>To Save plates changes "Save Changes" must be pressed</value>
+  </data>
+  <data name="UserData_RemovePlate" xml:space="preserve">
+    <value>Remove Selected Plate</value>
+  </data>
+  <data name="UserData_RemoveUserAccount" xml:space="preserve">
+    <value>Remove User Account</value>
+  </data>
+  <data name="UserData_UserDataTittle" xml:space="preserve">
+    <value>User Data</value>
+  </data>
+  <data name="UserData_WriteYourConfirmPassword" xml:space="preserve">
+    <value>* Repeat Your New Password</value>
+  </data>
+  <data name="UserData_WriteYourCurrentPassword" xml:space="preserve">
+    <value>* Input your current password</value>
+  </data>
+  <data name="Payu_Card_Choose_Franchise" xml:space="preserve">
+    <value>Choose your card type</value>
+  </data>
+  <data name="Payu_Card_CVC" xml:space="preserve">
+    <value>CVC</value>
+  </data>
+  <data name="Payu_Card_Data" xml:space="preserve">
+    <value>Card Data</value>
+  </data>
+  <data name="Payu_Card_Exp_Date" xml:space="preserve">
+    <value>Expiry Date (MM/YYYY)</value>
+  </data>
+  <data name="Payu_Card_Id" xml:space="preserve">
+    <value>Identification Number(INE, IFE)</value>
+  </data>
+  <data name="Payu_Card_Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="Payu_Card_Number" xml:space="preserve">
+    <value>Card Number</value>
+  </data>
+  <data name="Payu_Card_Month_Format" xml:space="preserve">
+    <value>MM</value>
+  </data>
+  <data name="Payu_Card_Year_Format" xml:space="preserve">
+    <value>YYYY</value>
+  </data>
+  <data name="Credit_Card" xml:space="preserve">
+    <value>Credit card</value>
+  </data>
+  <data name="RegistrationModel_Email" xml:space="preserve">
+    <value>e-mail</value>
+  </data>
+  <data name="SignUp1_Emailmsg" xml:space="preserve">
+    <value>What is your email address?</value>
+  </data>
+  <data name="SignUp3_Passwmsg" xml:space="preserve">
+    <value>Create your account password</value>
+  </data>
+  <data name="SignUp3_Passwtip" xml:space="preserve">
+    <value>Enter a combination of at least five numbers, letters, and punctuation marks (like ! and &amp;amp;).</value>
+  </data>
+  <data name="SignUp3_Passwtype" xml:space="preserve">
+    <value>Type your password</value>
+  </data>
+  <data name="SignUp1_Emailtype" xml:space="preserve">
+    <value>Type your email address</value>
+  </data>
+  <data name="SignUp1_Emailtip" xml:space="preserve">
+    <value>You will use your email address when you login and if you need to reset your password</value>
+  </data>
+  <data name="SignUp3_Option_Mandatory" xml:space="preserve">
+    <value>Before continue, you must check:</value>
+  </data>
+  <data name="urs_error_email_exists" xml:space="preserve">
+    <value>An Blinkay account already exists with this email address.</value>
+  </data>
+  <data name="signup4a_subscription_method" xml:space="preserve">
+    <value>Choose your membership type</value>
+  </data>
+  <data name="signup4b_successful" xml:space="preserve">
+    <value>Your account has been successfully created.</value>
+  </data>
+  <data name="signup4a_prepayment" xml:space="preserve">
+    <value>Pre-payment</value>
+  </data>
+  <data name="signup4a_psm_transaction" xml:space="preserve">
+    <value>Pay per transaction</value>
+  </data>
+  <data name="signup4b_paymenth_msg" xml:space="preserve">
+    <value>Set up your payment method</value>
+  </data>
+  <data name="signup4b_paymenth_opt1" xml:space="preserve">
+    <value>Credit or Debit Card</value>
+  </data>
+  <data name="signup4b_paymenth_opt2" xml:space="preserve">
+    <value>PayPal</value>
+  </data>
+  <data name="Account_Main_BttnActivePermits" xml:space="preserve">
+    <value>Active permits</value>
+  </data>
+  <data name="Account_Main_BttnPermits" xml:space="preserve">
+    <value>Buy a permit</value>
+  </data>
+  <data name="PermitsDataModel_CellNumber" xml:space="preserve">
+    <value>Mobile phone</value>
+  </data>
+  <data name="PermitsDataModel_City" xml:space="preserve">
+    <value>City</value>
+  </data>
+  <data name="PermitsDataModel_Country" xml:space="preserve">
+    <value>Country</value>
+  </data>
+  <data name="PermitsDataModel_CountryPrefix" xml:space="preserve">
+    <value>Country prefix</value>
+  </data>
+  <data name="PermitsDataModel_Email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="PermitsDataModel_Password" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="PermitsDataModel_Plate" xml:space="preserve">
+    <value>License plate</value>
+  </data>
+  <data name="PermitsDataModel_Tariff" xml:space="preserve">
+    <value>Rate</value>
+  </data>
+  <data name="PermitsDataModel_TimeStep" xml:space="preserve">
+    <value>Begin time - End time - Amount</value>
+  </data>
+  <data name="PermitsDataModel_User" xml:space="preserve">
+    <value>Email / Phone</value>
+  </data>
+  <data name="PermitsDataModel_Zone" xml:space="preserve">
+    <value>Lot zone</value>
+  </data>
+  <data name="Permits_AddSubscriptionType" xml:space="preserve">
+    <value>Add subscription type</value>
+  </data>
+  <data name="Permits_AddSubscriptionTypeAndPayMethod" xml:space="preserve">
+    <value>Subscription type</value>
+  </data>
+  <data name="Permits_Automatic_Renewal" xml:space="preserve">
+    <value>Automatic renewal</value>
+  </data>
+  <data name="Permits_Continue" xml:space="preserve">
+    <value>Continue</value>
+  </data>
+  <data name="Permits_Error_cancelled_by_cardholder" xml:space="preserve">
+    <value>Transaction cancelled</value>
+  </data>
+  <data name="Permits_Error_CCProvider" xml:space="preserve">
+    <value>CCProvider not set for this user</value>
+  </data>
+  <data name="Permits_Error_no_prepayment" xml:space="preserve">
+    <value>Currently we can't handle parkings for prepayment users</value>
+  </data>
+  <data name="Permits_Error_No_User" xml:space="preserve">
+    <value>No user specified</value>
+  </data>
+  <data name="Permits_Error_Request_Error_Code" xml:space="preserve">
+    <value>Transaction cancelled</value>
+  </data>
+  <data name="Permits_Error_Result_Error_ConfirmOperationAlreadyExecuting" xml:space="preserve">
+    <value>Confirmation in process</value>
+  </data>
+  <data name="Permits_Error_Result_Error_Discount_Not_Allowed" xml:space="preserve">
+    <value>Discount not allowed</value>
+  </data>
+  <data name="Permits_Error_Result_Error_Email_Already_Exist" xml:space="preserve">
+    <value>An Blinkay account already exists with this email address.</value>
+  </data>
+  <data name="Permits_Error_Result_Error_Expired_Ticket_ID" xml:space="preserve">
+    <value>Ticket identifier expired</value>
+  </data>
+  <data name="Permits_Error_Result_Error_Extension_Is_Not_Possible" xml:space="preserve">
+    <value>Maximum time reached for this plate</value>
+  </data>
+  <data name="Permits_Error_Result_Error_Fine_Number_Already_Paid" xml:space="preserve">
+    <value>Record already paid</value>
+  </data>
+  <data name="Permits_Error_Result_Error_Fine_Number_Not_Found" xml:space="preserve">
+    <value>Record number not found</value>
+  </data>
+  <data name="Permits_Error_Result_Error_Fine_Type_Is_Not_Payable" xml:space="preserve">
+    <value>Record found but not voidable</value>
+  </data>
+  <data name="Permits_Error_Result_Error_Generic" xml:space="preserve">
+    <value>Error, please try again later</value>
+  </data>
+  <data name="Permits_Error_Result_Error_InvalidAuthenticationHash" xml:space="preserve">
+    <value>Invalid authentication hash</value>
+  </data>
+  <data name="Permits_Error_Result_Error_Invalid_Authentication" xml:space="preserve">
+    <value>Wrong user name / password</value>
+  </data>
+  <data name="Permits_Error_Result_Error_Invalid_City" xml:space="preserve">
+    <value>Invalid City!</value>
+  </data>
+  <data name="Permits_Error_Result_Error_Invalid_Email_Number" xml:space="preserve">
+    <value>Invalid email</value>
+  </data>
+  <data name="Permits_Error_Result_Error_Invalid_Input_Parameter" xml:space="preserve">
+    <value>Invalid input parameter</value>
+  </data>
+  <data name="Permits_Error_Result_Error_Invalid_Ticket_ID" xml:space="preserve">
+    <value>Ticket identifier invalid</value>
+  </data>
+  <data name="Permits_Error_Result_Error_Invalid_Transfer" xml:space="preserve">
+    <value>You cannot send a transfer to yourself.</value>
+  </data>
+  <data name="Permits_Error_Result_Error_Invalid_User_Receiver_Email" xml:space="preserve">
+    <value>Invalid email for the recipient.</value>
+  </data>
+  <data name="Permits_Error_Result_Error_Invalid_User_Receiver_Email_Disabled" xml:space="preserve">
+    <value>Invalid user recipient (disabled)</value>
+  </data>
+  <data name="Permits_Error_Result_Error_Madrid_Platform" xml:space="preserve">
+    <value>An error ocurred in the request of an operation for Madrid City Council Platform. Please try again later.</value>
+  </data>
+  <data name="Permits_Error_Result_Error_Maximum_Discounts_Reached" xml:space="preserve">
+    <value>offstreet_maximum_discounts_reached</value>
+  </data>
+  <data name="Permits_Error_Result_Error_Missing_Input_Parameter" xml:space="preserve">
+    <value>Missing input parameter</value>
+  </data>
+  <data name="Permits_Error_Result_Error_Mobile_Phone_Already_Exist" xml:space="preserve">
+    <value>Mobile phone number already exists</value>
+  </data>
+  <data name="Permits_Error_Result_Error_Not_Enough_Balance" xml:space="preserve">
+    <value>Add a credit/debit card to start a parking session</value>
+  </data>
+  <data name="Permits_Error_Result_Error_Not_Necessary_To_Pay" xml:space="preserve">
+    <value>It is not necessary to pay for parking</value>
+  </data>
+  <data name="Permits_Error_Result_Error_No_Parking_Required_Zero_Emissions" xml:space="preserve">
+    <value>Zero emissions vehicle</value>
+  </data>
+  <data name="Permits_Error_Result_Error_Operation_Alreadyclosed" xml:space="preserve">
+    <value>Operation closed</value>
+  </data>
+  <data name="Permits_Error_Result_Error_Operation_Alreadyexists" xml:space="preserve">
+    <value>Existing Operation</value>
+  </data>
+  <data name="Permits_Error_Result_Error_Operation_Expired" xml:space="preserve">
+    <value>Operation expired. Please start the process again.</value>
+  </data>
+  <data name="Permits_Error_Result_Error_Operation_Notfound" xml:space="preserve">
+    <value>Operation not found</value>
+  </data>
+  <data name="Permits_Error_Result_Error_Pagatelia_User_Amount_Daily_Limit_Reached" xml:space="preserve">
+    <value>User daily limit has been reached</value>
+  </data>
+  <data name="Permits_Error_Result_Error_Pagatelia_User_Balance_Not_Enough" xml:space="preserve">
+    <value>Not enough balance</value>
+  </data>
+  <data name="Permits_Error_Result_Error_ParkingMaximumTimeUsed" xml:space="preserve">
+    <value>Parking maximum time used</value>
+  </data>
+  <data name="Permits_Error_Result_Error_Parking_Refused_Pollution_Episode" xml:space="preserve">
+    <value>Parking refused by pollution episode</value>
+  </data>
+  <data name="Permits_Error_Result_Error_Payment_Period_Has_Expired" xml:space="preserve">
+    <value>Record found but payment period has expired</value>
+  </data>
+  <data name="Permits_Error_Result_Error_PermitNotInRenewalPeriod" xml:space="preserve">
+    <value>The permit can not be renewed yet</value>
+  </data>
+  <data name="Permits_Error_Result_Error_Plate_Has_Not_Waited_Enough" xml:space="preserve">
+    <value>This license plate cannot park again yet.</value>
+  </data>
+  <data name="Permits_Error_Result_Error_Plate_In_Black_List" xml:space="preserve">
+    <value>Plate in black list</value>
+  </data>
+  <data name="Permits_Error_Result_Error_Plate_No_Rights_Unparking" xml:space="preserve">
+    <value>License plate not authorized to leave the parking space</value>
+  </data>
+  <data name="Permits_Error_Result_Error_Recharge_Code_Already_Used" xml:space="preserve">
+    <value>Recharge code already used</value>
+  </data>
+  <data name="Permits_Error_Result_Error_Recharge_Expired_Code" xml:space="preserve">
+    <value>Expired recharge code</value>
+  </data>
+  <data name="Permits_Error_Result_Error_Recharge_Failed" xml:space="preserve">
+    <value>Recharge failed</value>
+  </data>
+  <data name="Permits_Error_Result_Error_Recharge_Invalid_Code" xml:space="preserve">
+    <value>Invalid recharge code</value>
+  </data>
+  <data name="Permits_Error_Result_Error_Recharge_Invalid_Payment_Mean" xml:space="preserve">
+    <value>Payment method is not supported</value>
+  </data>
+  <data name="Permits_Error_Result_Error_Recharge_Payment_Failed" xml:space="preserve">
+    <value>Recharging through your payment method has failed (rejected by payment gateway)</value>
+  </data>
+  <data name="Permits_Error_Result_Error_Recharge_Payment_Not_Supported" xml:space="preserve">
+    <value>Your payment method does not support recharging from a cell phone.</value>
+  </data>
+  <data name="Permits_Error_Result_Error_Register_New_Cell_Number_Exists" xml:space="preserve">
+    <value>Mobile phone number already exists</value>
+  </data>
+  <data name="Permits_Error_Result_Error_Register_New_Email_Already_Exists" xml:space="preserve">
+    <value>An Blinkay account already exists with this email address.</value>
+  </data>
+  <data name="Permits_Error_Result_Error_Register_New_Wrong_Cell_Number" xml:space="preserve">
+    <value>Invalid mobile phone number</value>
+  </data>
+  <data name="Permits_Error_Result_Error_Register_New_Wrong_Code" xml:space="preserve">
+    <value>Wrong code!</value>
+  </data>
+  <data name="Permits_Error_Result_Error_Register_New_Wrong_Cuntry_Code" xml:space="preserve">
+    <value>Invalid Country Code</value>
+  </data>
+  <data name="Permits_Error_Result_Error_Register_New_Wrong_Email" xml:space="preserve">
+    <value>We were unable to validate your email address. Please, check for any errors before trying again.</value>
+  </data>
+  <data name="Permits_Error_Result_Error_Register_New_Wrong_Fname" xml:space="preserve">
+    <value>Invalid First Name</value>
+  </data>
+  <data name="Permits_Error_Result_Error_Register_New_Wrong_Lname" xml:space="preserve">
+    <value>Invalid Last Name</value>
+  </data>
+  <data name="Permits_Error_Result_Error_Resident_Parking_Exhausted" xml:space="preserve">
+    <value>Total time as resident has been exhausted</value>
+  </data>
+  <data name="Permits_Error_Result_Error_Restricted_Tariff" xml:space="preserve">
+    <value>Restricted use rate</value>
+  </data>
+  <data name="Permits_Error_Result_Error_Session_Expired" xml:space="preserve">
+    <value>User not logged in or your session has expired.</value>
+  </data>
+  <data name="Permits_Error_Result_Error_Tariffs_Not_Available" xml:space="preserve">
+    <value>Rate not available or applicable during these hours</value>
+  </data>
+  <data name="Permits_Error_Result_Error_User_Not_Exist" xml:space="preserve">
+    <value>Wrong user name / password</value>
+  </data>
+  <data name="Permits_Error_Session_Expired" xml:space="preserve">
+    <value>Your session has expired</value>
+  </data>
+  <data name="Permits_Error_Transaction_canceled" xml:space="preserve">
+    <value>Transaction cancelled</value>
+  </data>
+  <data name="Permits_GetSubPayOptions_Exception" xml:space="preserve">
+    <value>Operation error</value>
+  </data>
+  <data name="Permits_GetSubPayOptions_Title" xml:space="preserve">
+    <value>Payment options</value>
+  </data>
+  <data name="Permits_InsertNewPlate" xml:space="preserve">
+    <value>Insert new plate</value>
+  </data>
+  <data name="Permits_Login" xml:space="preserve">
+    <value>Log in</value>
+  </data>
+  <data name="Permits_Logout" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Permits_Notice" xml:space="preserve">
+    <value>&lt;p&gt;&lt;strong&gt;A small sum will be withheld&lt;/strong&gt; from your credit card for the verification process. In a few days, the money will be refunded.&lt;/p&gt;&lt;p&gt;This may take &lt;strong&gt;up to five days&lt;/strong&gt;&lt;/p&gt;</value>
+  </data>
+  <data name="Permits_Notice2" xml:space="preserve">
+    <value>&lt;p&gt;Before being able to buy permits, you have to set a valid &lt;strong&gt;payment method&lt;/strong&gt;&lt;/p&gt;</value>
+  </data>
+  <data name="Permits_Pay" xml:space="preserve">
+    <value>Pay</value>
+  </data>
+  <data name="Permits_PayForPermit" xml:space="preserve">
+    <value>Buy a permit</value>
+  </data>
+  <data name="Permits_PaymentMethod" xml:space="preserve">
+    <value>Payment method</value>
+  </data>
+  <data name="Permits_PayPerTransaction" xml:space="preserve">
+    <value>Pay per transaction</value>
+  </data>
+  <data name="Permits_Prepayment" xml:space="preserve">
+    <value>Prepayment</value>
+  </data>
+  <data name="Permits_Retry" xml:space="preserve">
+    <value>Retry</value>
+  </data>
+  <data name="Permits_SelectCity" xml:space="preserve">
+    <value>Select city...</value>
+  </data>
+  <data name="Permits_SelectPlate" xml:space="preserve">
+    <value>Select plate...</value>
+  </data>
+  <data name="Permits_SelectTariff" xml:space="preserve">
+    <value>Select rate...</value>
+  </data>
+  <data name="Permits_SelectTimeStep" xml:space="preserve">
+    <value>Select end time...</value>
+  </data>
+  <data name="Permits_SelectZone" xml:space="preserve">
+    <value>Select zone...</value>
+  </data>
+  <data name="Permits_SignUp" xml:space="preserve">
+    <value>Sign up</value>
+  </data>
+  <data name="Permits_Signup_Exception" xml:space="preserve">
+    <value>Operation error</value>
+  </data>
+  <data name="Permits_Signup_Required" xml:space="preserve">
+    <value>Please, fill all the required fields</value>
+  </data>
+  <data name="Permits_Signup_Title" xml:space="preserve">
+    <value>Register</value>
+  </data>
+  <data name="Permits_Skip" xml:space="preserve">
+    <value>Skip</value>
+  </data>
+  <data name="Permits_Start" xml:space="preserve">
+    <value>Menu</value>
+  </data>
+  <data name="Permits_Summary" xml:space="preserve">
+    <value>Payment successful</value>
+  </data>
+  <data name="Permits_Title" xml:space="preserve">
+    <value>Sign up</value>
+  </data>
+  <data name="signup4b_paymenth_opt2_detail" xml:space="preserve">
+    <value>"Add credit with PayPal" after logging in.</value>
+  </data>
+  <data name="signup4b_paymenth_opt3" xml:space="preserve">
+    <value>Do it later</value>
+  </data>
+  <data name="urs_error_email" xml:space="preserve">
+    <value>We were unable to validate your email address. Please, check for any errors before trying again.</value>
+  </data>
+  <data name="urs_error_country_code" xml:space="preserve">
+    <value>Invalid Country Code</value>
+  </data>
+  <data name="register" xml:space="preserve">
+    <value>Successful signup</value>
+  </data>
+  <data name="Permits_Export_PDFFilename" xml:space="preserve">
+    <value>Permits</value>
+  </data>
+  <data name="Permits_Export_XLSFilename" xml:space="preserve">
+    <value>Permits</value>
+  </data>
+  <data name="Permits_Permit" xml:space="preserve">
+    <value>Permit</value>
+  </data>
+  <data name="signup2_title" xml:space="preserve">
+    <value>Check your email</value>
+  </data>
+  <data name="SignUp2_CountryLiteral" xml:space="preserve">
+    <value>Choose the country where you will use Blinkay</value>
+  </data>
+  <data name="urech_add_new_card" xml:space="preserve">
+    <value>Add new card</value>
+  </data>
+  <data name="usettings_payment_methods_modify_ccard" xml:space="preserve">
+    <value>Replace Credit Card</value>
+  </data>
+  <data name="recharging_balance" xml:space="preserve">
+    <value>Add credit</value>
+  </data>
+  <data name="Permits_PlateNotFound" xml:space="preserve">
+    <value>License plate '#: value #' not found. Do you want to add it?</value>
+  </data>
+  <data name="Permits_Plate_01" xml:space="preserve">
+    <value>1st</value>
+  </data>
+  <data name="Permits_Plate_02" xml:space="preserve">
+    <value>2nd</value>
+  </data>
+  <data name="Permits_Plate_03" xml:space="preserve">
+    <value>3rd</value>
+  </data>
+  <data name="Permits_Plate_04" xml:space="preserve">
+    <value>4th</value>
+  </data>
+  <data name="Permits_Plate_05" xml:space="preserve">
+    <value>5th</value>
+  </data>
+  <data name="Permits_Plate_06" xml:space="preserve">
+    <value>6th</value>
+  </data>
+  <data name="Permits_Plate_07" xml:space="preserve">
+    <value>7th</value>
+  </data>
+  <data name="Permits_Plate_08" xml:space="preserve">
+    <value>8th</value>
+  </data>
+  <data name="Permits_Plate_09" xml:space="preserve">
+    <value>9th</value>
+  </data>
+  <data name="Permits_Plate_10" xml:space="preserve">
+    <value>10th</value>
+  </data>
+  <data name="Permits_PlateAlreadySelected" xml:space="preserve">
+    <value>This plate has been already selected</value>
+  </data>
+  <data name="Permits_Manage" xml:space="preserve">
+    <value>Manage</value>
+  </data>
+  <data name="PermitsDataModel_Plates" xml:space="preserve">
+    <value>License plates</value>
+  </data>
+  <data name="Permits_Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="Permits_Error_Result_Error_PermitAlreadyExist" xml:space="preserve">
+    <value>Permit already exists</value>
+  </data>
+  <data name="Permits_PlateNotFound2" xml:space="preserve">
+    <value>Enter your license plate</value>
+  </data>
+  <data name="PermitsDataModel_Month" xml:space="preserve">
+    <value>Month</value>
+  </data>
+  <data name="Permits_Error_Result_Error_PermitMonthNotAllowed" xml:space="preserve">
+    <value>Month not allowed</value>
+  </data>
+  <data name="Permits_SelectMonth" xml:space="preserve">
+    <value>Select month...</value>
+  </data>
+  <data name="Permits_Error_Result_Error_OperationAlreadyclosed" xml:space="preserve">
+    <value>Operation closed</value>
+  </data>
+  <data name="Permits_Error_Result_Error_OperationAlreadyexists" xml:space="preserve">
+    <value>Existing Operation</value>
+  </data>
+  <data name="Permits_Error_Result_Error_OperationExpired" xml:space="preserve">
+    <value>Operation expired. Please start the process again.</value>
+  </data>
+  <data name="Permits_Error_Result_Error_OperationNotfound" xml:space="preserve">
+    <value>Operation not found</value>
+  </data>
+  <data name="Permits_NumPermits" xml:space="preserve">
+    <value>Number of permits to buy</value>
+  </data>
+  <data name="Permits_SelectNumPermits" xml:space="preserve">
+    <value>Select number of permits to buy</value>
+  </data>
+  <data name="Permits_OnlyOne" xml:space="preserve">
+    <value>Only one of the vehicles registered for this permit will be is allowed to use the permit per day</value>
+  </data>
+  <data name="Permits_Automatic_Renewal_Description" xml:space="preserve">
+    <value>All permits will expire at the end of the month if automatic renewal is disabled</value>
+  </data>
+  <data name="FineModel_Plate" xml:space="preserve">
+    <value>License plate</value>
+  </data>
+  <data name="Fine_GetProof" xml:space="preserve">
+    <value>Receive confirmation of payment via email</value>
+  </data>
+  <data name="Fine_MailSent" xml:space="preserve">
+    <value>Confirmation sent via email</value>
+  </data>
+  <data name="Fine_SendMail" xml:space="preserve">
+    <value>Send by email</value>
+  </data>
+  <data name="Result_Error_Fine_Number_Not_Found_For_Plate" xml:space="preserve">
+    <value>We could not find the Ticket / Invoice number associated with the vehicle plate, please review your data.</value>
+  </data>
+  <data name="String1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Paysafe_CardCVC" xml:space="preserve">
+    <value>CVC</value>
+  </data>
+  <data name="Paysafe_CardCVC_Holder" xml:space="preserve">
+    <value>CVC</value>
+  </data>
+  <data name="Paysafe_CardExpDate" xml:space="preserve">
+    <value>Expiry Date</value>
+  </data>
+  <data name="Paysafe_CardExpDate_Holder" xml:space="preserve">
+    <value>MM / YY</value>
+  </data>
+  <data name="Paysafe_CardNumber" xml:space="preserve">
+    <value>Card Number</value>
+  </data>
+  <data name="Paysafe_CardNumber_Holder" xml:space="preserve">
+    <value>Card Number</value>
+  </data>
+  <data name="Paysafe_PayButton" xml:space="preserve">
+    <value>Pay</value>
+  </data>
+  <data name="Paysafe_PayButton_Processing" xml:space="preserve">
+    <value>Processing</value>
+  </data>
+  <data name="Paysafe_PaymentDetails" xml:space="preserve">
+    <value>Payment Details</value>
+  </data>
+  <data name="Paysafe_ZipCode" xml:space="preserve">
+    <value>Zip Code</value>
+  </data>
+  <data name="Paysafe_ZipCode_Holder" xml:space="preserve">
+    <value>Zip Code</value>
+  </data>
+  <data name="Paysafe_CancelButton" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Account_PoweredBy" xml:space="preserve">
+    <value>Powered by</value>
+  </data>
+  <data name="Account_TermsAndConditions" xml:space="preserve">
+    <value>Terms and Conditions</value>
+  </data>
+  <data name="Fine_AcceptedPayments" xml:space="preserve">
+    <value>Accepted forms of payment:</value>
+  </data>
+  <data name="Fine_Agree" xml:space="preserve">
+    <value>Vous devez accepter avant de soumettre.</value>
+  </data>
+  <data name="Fine_AgreeText" xml:space="preserve">
+    <value>I agree to and understand the &lt;a id="TermsConditionsLink" href="#TermsConditionsDialog" data-toggle="modal" data-target="#TermsConditionsDialog" lang="en"&gt;Terms and Conditions&lt;/a&gt; and the &lt;a href="#PrivacyPolicyDialog" id="PrivacyPolicyLink" data-toggle="modal" data-target="#PrivacyPolicyDialog" lang="en"&gt;Privacy Policy&lt;/a&gt; of this website.</value>
+  </data>
+  <data name="Fine_ClearForm" xml:space="preserve">
+    <value>Clear form</value>
+  </data>
+  <data name="Fine_ConfirmEmailTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Fine_EmailTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Fine_Fill" xml:space="preserve">
+    <value>Please fill in the field(s) below with your ticket information.</value>
+  </data>
+  <data name="Fine_NonRefundable" xml:space="preserve">
+    <value>Your have selected the following ticket for payment. &lt;br&gt;All payments made through this website are &lt;strong class="text-uppercase"&gt;non-refundable&lt;/strong&gt;.</value>
+  </data>
+  <data name="Fine_Payment" xml:space="preserve">
+    <value>Payment</value>
+  </data>
+  <data name="Fine_PaymentDone" xml:space="preserve">
+    <value>Payment done</value>
+  </data>
+  <data name="Fine_PCI" xml:space="preserve">
+    <value>PCI Security Certified</value>
+  </data>
+  <data name="Fine_PlatePlaceholder" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Fine_PlateTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Fine_SearchParameters" xml:space="preserve">
+    <value>Search Parameters</value>
+  </data>
+  <data name="Fine_TicketNumberPlaceholder" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Fine_TicketNumberTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="SiteMaster_Privacy" xml:space="preserve">
+    <value>Privacy policy</value>
+  </data>
+  <data name="Fine_PayWith" xml:space="preserve">
+    <value>Pay with</value>
+  </data>
+  <data name="Fine_PayWithCreditCard" xml:space="preserve">
+    <value>Pay with credit card</value>
+  </data>
+  <data name="Fine_TicketPaymentFailureText" xml:space="preserve">
+    <value>Your bank declined our attempt to authorize your card.</value>
+  </data>
+  <data name="Fine_TicketPaymentOK" xml:space="preserve">
+    <value>You have successfully completed your online ticket payment.</value>
+  </data>
+  <data name="Fine_ProvideInfo" xml:space="preserve">
+    <value>Should you wish to contact us concerning your payment, &lt;br&gt;please be prepared to provide us with the above information.</value>
+  </data>
+  <data name="Fine_Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="FineModel_ValidEmail" xml:space="preserve">
+    <value>name@domain.com</value>
+  </data>
+  <data name="Fine_GetProofPre" xml:space="preserve">
+    <value>Receive confirmation</value>
+  </data>
+  <data name="ConfirmTicketPaymentNonUser_EmailBody" xml:space="preserve">
+    <value>FILESYSTEM</value>
+  </data>
+  <data name="UserData_Billing" xml:space="preserve">
+    <value>Billing</value>
+  </data>
+  <data name="UserData_ChangePassword" xml:space="preserve">
+    <value>Change Password</value>
+  </data>
+  <data name="UserData_MyPlates" xml:space="preserve">
+    <value>My license plates</value>
+  </data>
+  <data name="Moneris_HT_AcceptedForms" xml:space="preserve">
+    <value>Accepted forms of payment:</value>
+  </data>
+  <data name="Moneris_HT_ButCancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Moneris_HT_ButRegisterCard" xml:space="preserve">
+    <value>Register Card</value>
+  </data>
+  <data name="Moneris_HT_CardNumber" xml:space="preserve">
+    <value>Card Number*:</value>
+  </data>
+  <data name="Moneris_HT_CVD" xml:space="preserve">
+    <value>Card Verification Code (CVD)*:</value>
+  </data>
+  <data name="Moneris_HT_Error" xml:space="preserve">
+    <value>Error!</value>
+  </data>
+  <data name="Moneris_HT_Error_Error_Generating_Token" xml:space="preserve">
+    <value>Error generating token</value>
+  </data>
+  <data name="Moneris_HT_Error_Invalid_Card_Number" xml:space="preserve">
+    <value>Card number is invalid</value>
+  </data>
+  <data name="Moneris_HT_Error_Invalid_CVD" xml:space="preserve">
+    <value>Invalid CVD (must be 3-4 digits)</value>
+  </data>
+  <data name="Moneris_HT_Error_Invalid_Date" xml:space="preserve">
+    <value>Invalid date (must be current/future month)</value>
+  </data>
+  <data name="Moneris_HT_Error_Invalid_Profile1" xml:space="preserve">
+    <value>Invalid Profile ID in tokenization request</value>
+  </data>
+  <data name="Moneris_HT_Error_Invalid_Profile2" xml:space="preserve">
+    <value>Invalid Profile ID, or source URL</value>
+  </data>
+  <data name="Moneris_HT_Error_Unknown" xml:space="preserve">
+    <value>Unknown Error</value>
+  </data>
+  <data name="Moneris_HT_ExpiryDate" xml:space="preserve">
+    <value>Expiry Date (MMYY)*:</value>
+  </data>
+  <data name="Moneris_HT_Text1" xml:space="preserve">
+    <value>Enter your card information:</value>
+  </data>
+  <data name="Moneris_HT_Text2" xml:space="preserve">
+    <value>After clicking "Register Card" do not go back or refresh page to avoid the process interruption.</value>
+  </data>
+  <data name="Parking_AddPlate" xml:space="preserve">
+    <value>Add plate</value>
+  </data>
+  <data name="Parking_AddPlate_NewPlate" xml:space="preserve">
+    <value>New plate</value>
+  </data>
+  <data name="Parking_EditPlate" xml:space="preserve">
+    <value>Edit plate</value>
+  </data>
+  <data name="Parking_EditPlate_AddPlate" xml:space="preserve">
+    <value>Add your vehicle licence plate</value>
+  </data>
+  <data name="Parking_EditPlate_AddVehicle" xml:space="preserve">
+    <value>Add vehicle</value>
+  </data>
+  <data name="Parking_EditPlate_Plate" xml:space="preserve">
+    <value>License plate</value>
+  </data>
+  <data name="Parking_EditPlate_Tip" xml:space="preserve">
+    <value>You can add as many vehicles as you want, organise them and always have them available.</value>
+  </data>
+  <data name="Parking_Error_NoRates" xml:space="preserve">
+    <value>No rates available</value>
+  </data>
+  <data name="Parking_Error_NoRates_Description" xml:space="preserve">
+    <value>There are no rates available for this area</value>
+  </data>
+  <data name="Parking_Error_PlateAlreadyExists" xml:space="preserve">
+    <value>Plate already exists</value>
+  </data>
+  <data name="Parking_Error_PlateNotFound" xml:space="preserve">
+    <value>Plate not found</value>
+  </data>
+  <data name="Parking_PayParking" xml:space="preserve">
+    <value>Pay Parking Meter</value>
+  </data>
+  <data name="Parking_Plates" xml:space="preserve">
+    <value>Plates</value>
+  </data>
+  <data name="Parking_Plates_AddPlate" xml:space="preserve">
+    <value>Add your vehicle licence plate</value>
+  </data>
+  <data name="Parking_Plates_DeletePlate" xml:space="preserve">
+    <value>Delete plate</value>
+  </data>
+  <data name="Parking_Plates_SelectPlate" xml:space="preserve">
+    <value>Select the vehicle licence plate that you are paying for or add a new one</value>
+  </data>
+  <data name="Parking_Rates_SelectRate" xml:space="preserve">
+    <value>Select parking rate</value>
+  </data>
+  <data name="Parking_SelectRate" xml:space="preserve">
+    <value>Select rate</value>
+  </data>
+  <data name="Parking_Error_PlateNotValid" xml:space="preserve">
+    <value>Please provide a valid plate number</value>
+  </data>
+  <data name="Parking_Amount_ParkingRate" xml:space="preserve">
+    <value>Parking Rate</value>
+  </data>
+  <data name="Parking_Amount_ParkingSessionWillExpire" xml:space="preserve">
+    <value>Your parking session will end</value>
+  </data>
+  <data name="Parking_Amount_PressButtons" xml:space="preserve">
+    <value>Press the buttons to choose the time &lt;br&gt;for your parking session</value>
+  </data>
+  <data name="Parking_Amount_Reset" xml:space="preserve">
+    <value>Reset</value>
+  </data>
+  <data name="Parking_Amount_SelectTime" xml:space="preserve">
+    <value>Select how long you want to park for</value>
+  </data>
+  <data name="Parking_Amount_ServiceFee" xml:space="preserve">
+    <value>HST</value>
+  </data>
+  <data name="Parking_SelectAmount" xml:space="preserve">
+    <value>Select amount</value>
+  </data>
+  <data name="Parking_Amount_In_X_days" xml:space="preserve">
+    <value>In {0} days</value>
+  </data>
+  <data name="Parking_Amount_Today" xml:space="preserve">
+    <value>Today</value>
+  </data>
+  <data name="Parking_Amount_Tomorrow" xml:space="preserve">
+    <value>Tomorrow</value>
+  </data>
+  <data name="Parking_Day" xml:space="preserve">
+    <value>day</value>
+  </data>
+  <data name="Parking_Days" xml:space="preserve">
+    <value>days</value>
+  </data>
+  <data name="Parking_Hour" xml:space="preserve">
+    <value>hour</value>
+  </data>
+  <data name="Parking_Hours" xml:space="preserve">
+    <value>hours</value>
+  </data>
+  <data name="Parking_Minute" xml:space="preserve">
+    <value>minute</value>
+  </data>
+  <data name="Parking_Minutes" xml:space="preserve">
+    <value>minutes</value>
+  </data>
+  <data name="Parking_PaidTime" xml:space="preserve">
+    <value>Paid time</value>
+  </data>
+  <data name="Parking_SaveScreenshot" xml:space="preserve">
+    <value>Save screenshot</value>
+  </data>
+  <data name="Parking_SendByEmail" xml:space="preserve">
+    <value>Send by email</value>
+  </data>
+  <data name="Parking_DebitCreditCard" xml:space="preserve">
+    <value>Debit or credit card</value>
+  </data>
+  <data name="Parking_Confirm" xml:space="preserve">
+    <value>Confirm</value>
+  </data>
+  <data name="Parking_ParkingSessionRegistered" xml:space="preserve">
+    <value>Your parking session has been registered.</value>
+  </data>
+  <data name="Parking_Pay" xml:space="preserve">
+    <value>Pay</value>
+  </data>
+  <data name="Parking_RemainingFreeParking" xml:space="preserve">
+    <value>Remaining free parking today:</value>
+  </data>
+  <data name="Parking_YouDontNeedReceipt" xml:space="preserve">
+    <value>You do NOT need to display a receipt in your vehicle.</value>
+  </data>
+  <data name="Parking_CheckYourInbox" xml:space="preserve">
+    <value>Check your inbox to see the receipt.</value>
+  </data>
+  <data name="Parking_EmailPlaceholder" xml:space="preserve">
+    <value>name@email.com</value>
+  </data>
+  <data name="Parking_EmailSentCorrectly" xml:space="preserve">
+    <value>The email was sent correctly.</value>
+  </data>
+  <data name="Parking_EnterEmailAddress" xml:space="preserve">
+    <value>What is your email address?</value>
+  </data>
+  <data name="Parking_Send" xml:space="preserve">
+    <value>Send</value>
+  </data>
+  <data name="Permits_Error_Result_Error_Invalid_Email_Address" xml:space="preserve">
+    <value>Invalid Email address</value>
+  </data>
+  <data name="Parking_PaymentMethods" xml:space="preserve">
+    <value>Payment Methods</value>
+  </data>
+  <data name="Parking_NoTariffsAvailable" xml:space="preserve">
+    <value>Rate not available or applicable during these hours</value>
+  </data>
+  <data name="Parking_UnknownLocation" xml:space="preserve">
+    <value>Unknown location</value>
+  </data>
+  <data name="Parking_PayAsARegularParker" xml:space="preserve">
+    <value>As a regular parker, you get all these benefits:</value>
+  </data>
+  <data name="Parking_PayAsARegularParker_LI1" xml:space="preserve">
+    <value>Pay quickly and securely through your smartphone.</value>
+  </data>
+  <data name="Parking_PayAsARegularParker_LI2" xml:space="preserve">
+    <value>Get alerts when your parking session is about to end.</value>
+  </data>
+  <data name="Parking_PayAsARegularParker_LI3" xml:space="preserve">
+    <value>Add time to your parking session directly with your phone.</value>
+  </data>
+  <data name="Parking_PayAsARegularParker_LI4" xml:space="preserve">
+    <value>Access to your parking receipts or invoices.</value>
+  </data>
+  <data name="Parking_PayAsOccasionalParker" xml:space="preserve">
+    <value>As an occasional parker:</value>
+  </data>
+  <data name="Parking_PayAsOccasionalParker_P1" xml:space="preserve">
+    <value>Pay quickly and securely through your smartphone.</value>
+  </data>
+  <data name="Parking_PayAsOccasionalParker_P2" xml:space="preserve">
+    <value>No registration required: just input your vehicle license plate and choose a valid payment method.</value>
+  </data>
+  <data name="Parking_PayDownloadBlinkayApp" xml:space="preserve">
+    <value>Download Blinkay.app</value>
+  </data>
+  <data name="Parking_PayWithoutRegistration" xml:space="preserve">
+    <value>Pay without registration</value>
+  </data>
+  <data name="Parking_ChooseEndTime" xml:space="preserve">
+    <value>Choose your parking session end time</value>
+  </data>
+  <data name="Parking_Total" xml:space="preserve">
+    <value>Total</value>
+  </data>
+  <data name="RecaptchaFail" xml:space="preserve">
+    <value>Error verifying reCAPTCHA, please try again</value>
+  </data>
+  <data name="MercadoPago_Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="MercadoPago_Card_Data" xml:space="preserve">
+    <value>Card data</value>
+  </data>
+  <data name="MercadoPago_Card_Expiration_Date" xml:space="preserve">
+    <value>Expiration date (MM/YYYY)</value>
+  </data>
+  <data name="MercadoPago_Card_Holder_Email" xml:space="preserve">
+    <value>E-mail</value>
+  </data>
+  <data name="MercadoPago_Card_Holder_Name" xml:space="preserve">
+    <value>Card holder name</value>
+  </data>
+  <data name="MercadoPago_Card_Number" xml:space="preserve">
+    <value>Card number</value>
+  </data>
+  <data name="MercadoPago_Card_Security_Code" xml:space="preserve">
+    <value>Security code</value>
+  </data>
+  <data name="MercadoPago_Confirm" xml:space="preserve">
+    <value>Confirm</value>
+  </data>
+  <data name="MercadoPago_CVV" xml:space="preserve">
+    <value>Security code</value>
+  </data>
+  <data name="MercadoPago_CVV_Request_Title" xml:space="preserve">
+    <value>MercadoPago : Security code</value>
+  </data>
+  <data name="MercadoPago_Identification_Number" xml:space="preserve">
+    <value>Identification number</value>
+  </data>
+  <data name="MercadoPago_Identification_Type" xml:space="preserve">
+    <value>Identification type</value>
+  </data>
+  <data name="MercadoPago_Installments" xml:space="preserve">
+    <value>Installments</value>
+  </data>
+  <data name="MercadoPago_Issuer" xml:space="preserve">
+    <value>Issuer</value>
+  </data>
+  <data name="MercadoPago_Loading" xml:space="preserve">
+    <value>Loading...</value>
+  </data>
+  <data name="MercadoPago_Pay" xml:space="preserve">
+    <value>Pay</value>
+  </data>
+  <data name="MercadoPago_Request_Title" xml:space="preserve">
+    <value>MercadoPago : Card data</value>
+  </data>
+  <data name="Appeal_Para_1" xml:space="preserve">
+    <value>The information that you submit in connection with this process will be remotely reviewed by a Parking Court Judge at a later date. Please note that you will not have the opportunity to directly interact, either by video, on-line chat or the like, with the Parking Court Judge via this process. If you desire to directly interact with the Parking Court Judge, it is recommended that you call (412) 560-7222 to schedule an in person hearing at the Parking Court.</value>
+  </data>
+  <data name="Appeal_Para_2" xml:space="preserve">
+    <value>Please enter in the information exactly as it appears on the ticket. Do not include any spaces or special characters (such as a hyphen). Also, please note that updates to this website may cause saved links and bookmarks to this webpage to be invalid.</value>
+  </data>
+  <data name="Details_PaySelected" xml:space="preserve">
+    <value>Pay Selected</value>
+  </data>
+</root>

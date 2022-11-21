@@ -1,0 +1,94 @@
+// Buttons
+@mixin bk-btn-primary($bk-btn-primary-color: var(--bs-white), $bk-btn-primary-bg: var(--primary), $border-radius: 5rem) {
+  background-color: $bk-btn-primary-bg;
+  border-radius: $border-radius;
+  color: $bk-btn-primary-color;
+  line-height: 1.5;
+  &:hover, &:focus {
+    background-color: darken($primary,10%);
+    border-color: darken($primary,10%);
+    color: $bk-btn-primary-color;
+  }
+}
+
+@mixin bk-btn-secondary($bk-btn-primary-color: var(--primary), $bk-btn-primary-bg: var(--bs-white), $border-radius: 5rem) {
+  background-color: $bk-btn-primary-bg;
+  border-radius: $border-radius;
+  border: 1px solid var(--primary);
+  color: $bk-btn-primary-color;
+  line-height: 1.5;
+  min-width: 180px;
+  &:hover, &:focus {
+    background-color: darken($primary,10%);
+    border-color: darken($primary,10%);
+    color: $bk-btn-primary-color;
+  }
+}
+
+@mixin bk-btn-select($bk-btn-primary-color: var(--grey-dark), $bk-btn-bg: var(--grey-light)) {
+  background-color:#fbfbfb;
+  color: var(--grey-dark);
+  line-height: 1.5;
+  height: 90px;
+  margin: 0 .7rem .7rem 0;
+  font-size: 16px;
+  line-height: 18px;
+  padding: 0 .5rem;
+  &:hover, &:focus {
+    background-color: darken($primary,10%);
+    border-color: darken($primary,10%);
+    color: $white;
+  }
+}
+
+@mixin bk-btn-time-select($bk-btn-primary-color: var(--primary), $bk-btn-bg: var(--grey-light)) {
+  background-color:#034ec729;
+  color: var(--primary);
+  line-height: 1.5;
+  margin: 0 .7rem .7rem 0;
+  font-size: 16px;
+  line-height: 18px;
+  padding: 3rem .5rem 1rem;
+  &:hover, &:focus {
+    background-color: darken($primary,10%);
+    border-color: darken($primary,10%);
+    color: $white;
+  }
+}
+
+@mixin bk-btn-select-disabled($bk-btn-primary-color: var(--grey-dark), $bk-btn-bg: var(--grey-light)) {
+  background-color: #F7F7F7;
+  color: var(--grey-dark);
+  line-height: 1.5;
+  margin: 0 .7rem .7rem 0;
+  font-size: 16px;
+  line-height: 18px;
+  padding: 3rem .5rem 1rem;
+  display: grid;
+  align-content: end;
+  cursor: default !important;
+  &:focus {
+    box-shadow: 2px 2px 4px #dedede !important;
+  }
+}
+
+// Borders
+@mixin border($direction, $width, $style, $color) {
+  border-#{$direction}: $width $style $color;
+}
+
+@mixin border-all($width, $style, $color) {
+  border: $width $style $color;
+}
+
+// Shadow
+@mixin shadow {
+	-webkit-box-shadow: 2px 2px 4px #dedede;
+	-moz-box-shadow: 2px 2px 4px #dedede;
+	box-shadow: 2px 2px 4px #dedede;
+}
+
+@mixin line-height($heightValue: 18 ){
+  line-height: $heightValue + px; //fallback for old browsers
+  line-height: (0.0625 * $heightValue) + rem;
+}

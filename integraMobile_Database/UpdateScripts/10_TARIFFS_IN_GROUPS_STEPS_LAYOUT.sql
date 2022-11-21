@@ -1,0 +1,144 @@
+/* To prevent any potential data loss issues, you should review this script in detail before running it outside the context of the database designer.*/
+BEGIN TRANSACTION
+SET QUOTED_IDENTIFIER ON
+SET ARITHABORT ON
+SET NUMERIC_ROUNDABORT OFF
+SET CONCAT_NULL_YIELDS_NULL ON
+SET ANSI_NULLS ON
+SET ANSI_PADDING ON
+SET ANSI_WARNINGS ON
+COMMIT
+BEGIN TRANSACTION
+GO
+ALTER TABLE dbo.TARIFFS_IN_GROUPS ADD
+	TARGR_STEP4_MIN int NULL,
+	TARGR_STEP4_LIT_ID numeric(18, 0) NULL,
+	TARGR_STEP4_ENABLED int NULL,
+	TARGR_STEP5_MIN int NULL,
+	TARGR_STEP5_LIT_ID numeric(18, 0) NULL,
+	TARGR_STEP5_ENABLED int NULL,
+	TARGR_STEP6_MIN int NULL,
+	TARGR_STEP6_LIT_ID numeric(18, 0) NULL,
+	TARGR_STEP6_ENABLED int NULL,
+	TARGR_STEP7_MIN int NULL,
+	TARGR_STEP7_LIT_ID numeric(18, 0) NULL,
+	TARGR_STEP7_ENABLED int NULL,
+	TARGR_STEP8_MIN int NULL,
+	TARGR_STEP8_LIT_ID numeric(18, 0) NULL,
+	TARGR_STEP8_ENABLED int NULL,
+	TARGR_STEP9_MIN int NULL,
+	TARGR_STEP9_LIT_ID numeric(18, 0) NULL,
+	TARGR_STEP9_ENABLED int NULL,
+	TARGR_STEP10_MIN int NULL,
+	TARGR_STEP10_LIT_ID numeric(18, 0) NULL,
+	TARGR_STEP10_ENABLED int NULL,
+	TARGR_LAYOUT int NULL
+GO
+DECLARE @v sql_variant 
+SET @v = N'Step 4 minutes'
+EXECUTE sp_addextendedproperty N'MS_Description', @v, N'SCHEMA', N'dbo', N'TABLE', N'TARIFFS_IN_GROUPS', N'COLUMN', N'TARGR_STEP4_MIN'
+GO
+DECLARE @v sql_variant 
+SET @v = N'Step 4 literal id'
+EXECUTE sp_addextendedproperty N'MS_Description', @v, N'SCHEMA', N'dbo', N'TABLE', N'TARIFFS_IN_GROUPS', N'COLUMN', N'TARGR_STEP4_LIT_ID'
+GO
+DECLARE @v sql_variant 
+SET @v = N'Step4 enabled'
+EXECUTE sp_addextendedproperty N'MS_Description', @v, N'SCHEMA', N'dbo', N'TABLE', N'TARIFFS_IN_GROUPS', N'COLUMN', N'TARGR_STEP4_ENABLED'
+GO
+DECLARE @v sql_variant 
+SET @v = N'Step 5 minutes'
+EXECUTE sp_addextendedproperty N'MS_Description', @v, N'SCHEMA', N'dbo', N'TABLE', N'TARIFFS_IN_GROUPS', N'COLUMN', N'TARGR_STEP5_MIN'
+GO
+DECLARE @v sql_variant 
+SET @v = N'Step 5 literal id'
+EXECUTE sp_addextendedproperty N'MS_Description', @v, N'SCHEMA', N'dbo', N'TABLE', N'TARIFFS_IN_GROUPS', N'COLUMN', N'TARGR_STEP5_LIT_ID'
+GO
+DECLARE @v sql_variant 
+SET @v = N'Step5 enabled'
+EXECUTE sp_addextendedproperty N'MS_Description', @v, N'SCHEMA', N'dbo', N'TABLE', N'TARIFFS_IN_GROUPS', N'COLUMN', N'TARGR_STEP5_ENABLED'
+GO
+DECLARE @v sql_variant 
+SET @v = N'Step 6 minutes'
+EXECUTE sp_addextendedproperty N'MS_Description', @v, N'SCHEMA', N'dbo', N'TABLE', N'TARIFFS_IN_GROUPS', N'COLUMN', N'TARGR_STEP6_MIN'
+GO
+DECLARE @v sql_variant 
+SET @v = N'Step 6 literal id'
+EXECUTE sp_addextendedproperty N'MS_Description', @v, N'SCHEMA', N'dbo', N'TABLE', N'TARIFFS_IN_GROUPS', N'COLUMN', N'TARGR_STEP6_LIT_ID'
+GO
+DECLARE @v sql_variant 
+SET @v = N'Step6 enabled'
+EXECUTE sp_addextendedproperty N'MS_Description', @v, N'SCHEMA', N'dbo', N'TABLE', N'TARIFFS_IN_GROUPS', N'COLUMN', N'TARGR_STEP6_ENABLED'
+GO
+DECLARE @v sql_variant 
+SET @v = N'Step 7 minutes'
+EXECUTE sp_addextendedproperty N'MS_Description', @v, N'SCHEMA', N'dbo', N'TABLE', N'TARIFFS_IN_GROUPS', N'COLUMN', N'TARGR_STEP7_MIN'
+GO
+DECLARE @v sql_variant 
+SET @v = N'Step 7 literal id'
+EXECUTE sp_addextendedproperty N'MS_Description', @v, N'SCHEMA', N'dbo', N'TABLE', N'TARIFFS_IN_GROUPS', N'COLUMN', N'TARGR_STEP7_LIT_ID'
+GO
+DECLARE @v sql_variant 
+SET @v = N'Step7 enabled'
+EXECUTE sp_addextendedproperty N'MS_Description', @v, N'SCHEMA', N'dbo', N'TABLE', N'TARIFFS_IN_GROUPS', N'COLUMN', N'TARGR_STEP7_ENABLED'
+GO
+DECLARE @v sql_variant 
+SET @v = N'Step 8 minutes'
+EXECUTE sp_addextendedproperty N'MS_Description', @v, N'SCHEMA', N'dbo', N'TABLE', N'TARIFFS_IN_GROUPS', N'COLUMN', N'TARGR_STEP8_MIN'
+GO
+DECLARE @v sql_variant 
+SET @v = N'Step 8 literal id'
+EXECUTE sp_addextendedproperty N'MS_Description', @v, N'SCHEMA', N'dbo', N'TABLE', N'TARIFFS_IN_GROUPS', N'COLUMN', N'TARGR_STEP8_LIT_ID'
+GO
+DECLARE @v sql_variant 
+SET @v = N'Step8 enabled'
+EXECUTE sp_addextendedproperty N'MS_Description', @v, N'SCHEMA', N'dbo', N'TABLE', N'TARIFFS_IN_GROUPS', N'COLUMN', N'TARGR_STEP8_ENABLED'
+GO
+DECLARE @v sql_variant 
+SET @v = N'Step 9 minutes'
+EXECUTE sp_addextendedproperty N'MS_Description', @v, N'SCHEMA', N'dbo', N'TABLE', N'TARIFFS_IN_GROUPS', N'COLUMN', N'TARGR_STEP9_MIN'
+GO
+DECLARE @v sql_variant 
+SET @v = N'Step 9 literal id'
+EXECUTE sp_addextendedproperty N'MS_Description', @v, N'SCHEMA', N'dbo', N'TABLE', N'TARIFFS_IN_GROUPS', N'COLUMN', N'TARGR_STEP9_LIT_ID'
+GO
+DECLARE @v sql_variant 
+SET @v = N'Step9 enabled'
+EXECUTE sp_addextendedproperty N'MS_Description', @v, N'SCHEMA', N'dbo', N'TABLE', N'TARIFFS_IN_GROUPS', N'COLUMN', N'TARGR_STEP9_ENABLED'
+GO
+DECLARE @v sql_variant 
+SET @v = N'Step 10 minutes'
+EXECUTE sp_addextendedproperty N'MS_Description', @v, N'SCHEMA', N'dbo', N'TABLE', N'TARIFFS_IN_GROUPS', N'COLUMN', N'TARGR_STEP10_MIN'
+GO
+DECLARE @v sql_variant 
+SET @v = N'Step 10 literal id'
+EXECUTE sp_addextendedproperty N'MS_Description', @v, N'SCHEMA', N'dbo', N'TABLE', N'TARIFFS_IN_GROUPS', N'COLUMN', N'TARGR_STEP10_LIT_ID'
+GO
+DECLARE @v sql_variant 
+SET @v = N'Step10 enabled'
+EXECUTE sp_addextendedproperty N'MS_Description', @v, N'SCHEMA', N'dbo', N'TABLE', N'TARIFFS_IN_GROUPS', N'COLUMN', N'TARGR_STEP10_ENABLED'
+GO
+ALTER TABLE dbo.TARIFFS_IN_GROUPS ADD CONSTRAINT
+	DF_TARIFFS_IN_GROUPS_TARGR_STEP3_ENABLED1 DEFAULT ((0)) FOR TARGR_STEP4_ENABLED
+GO
+ALTER TABLE dbo.TARIFFS_IN_GROUPS ADD CONSTRAINT
+	DF_TARIFFS_IN_GROUPS_TARGR_STEP4_ENABLED1 DEFAULT ((0)) FOR TARGR_STEP5_ENABLED
+GO
+ALTER TABLE dbo.TARIFFS_IN_GROUPS ADD CONSTRAINT
+	DF_TARIFFS_IN_GROUPS_TARGR_STEP4_ENABLED2 DEFAULT ((0)) FOR TARGR_STEP6_ENABLED
+GO
+ALTER TABLE dbo.TARIFFS_IN_GROUPS ADD CONSTRAINT
+	DF_TARIFFS_IN_GROUPS_TARGR_STEP4_ENABLED3 DEFAULT ((0)) FOR TARGR_STEP7_ENABLED
+GO
+ALTER TABLE dbo.TARIFFS_IN_GROUPS ADD CONSTRAINT
+	DF_TARIFFS_IN_GROUPS_TARGR_STEP4_ENABLED4 DEFAULT ((0)) FOR TARGR_STEP8_ENABLED
+GO
+ALTER TABLE dbo.TARIFFS_IN_GROUPS ADD CONSTRAINT
+	DF_TARIFFS_IN_GROUPS_TARGR_STEP4_ENABLED5 DEFAULT ((0)) FOR TARGR_STEP9_ENABLED
+GO
+ALTER TABLE dbo.TARIFFS_IN_GROUPS ADD CONSTRAINT
+	DF_TARIFFS_IN_GROUPS_TARGR_STEP4_ENABLED6 DEFAULT ((0)) FOR TARGR_STEP10_ENABLED
+GO
+ALTER TABLE dbo.TARIFFS_IN_GROUPS SET (LOCK_ESCALATION = TABLE)
+GO
+COMMIT

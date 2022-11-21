@@ -1,0 +1,263 @@
+﻿.treeFilterActions 
+{
+    text-align:left;
+}
+.treeFilter
+{
+    text-align:left;
+    height: 80%;
+    background-color: white !important;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.liFilter
+{
+    height: 19px;
+}
+.liFilterLeft 
+{
+    float: left;    
+}
+.liFilterRight 
+{
+    float: right;
+    text-align: right;
+}
+.FilterAlt
+{
+    background-color: #edeaea;
+}
+
+.filter-logic-container 
+{
+    height: 55px;
+    margin-left: 2%;
+}
+
+.filter-container 
+{
+    height: 100%;
+    min-height: 120px;
+}
+
+.filter-label
+{
+    float: left;
+    clear: both;
+    width: 40%;
+    /*padding: .4em 0 1em;*/
+    margin-left: 2%;
+    text-align: left;
+    height: 100%;
+}
+
+.filter-field 
+{
+    float: right;
+    clear: right;
+    width: 50%;
+    margin-right: 2%;
+    /*padding: 0 0 .6em;*/
+    padding-top: 2%;
+    text-align: left;
+    height: 100%;
+}
+
+.filter-buttons 
+{
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+    width: 98%;
+}
+
+.FilterTreeNode.filterValue {
+    width: 700px;/*590*/
+}
+.FilterTreeNode.filterLogic {
+    width: 750px;/*620*/
+}
+.FilterTreeNodeLeft {
+    float: left;
+    width: 155px;
+}
+.FilterTreeNodeRight.filterValue {
+    float: right;
+    width: 495px; /*435*/   
+    
+}
+.FilterTreeNodeRight.filterLogic {
+    float: right;
+    width: 455px;
+    text-align: right;
+}
+.FilterTreeNode-ddlLogics {
+    width: 45px;/*60*/
+}
+.FilterTreeNode-cmbFilterFields {
+    width: 200px;/*150*/
+}
+.FilterTreeNode-ddlOperators {
+    width: 175px !important;
+    margin-right: 5px;
+	float:left;
+}
+.FilterTreeNode-txtValue {
+    width: 200px !important;
+}
+.k-widget.k-datetimepicker.FilterTreeNode-dtpValue {
+    width: 200px !important;
+}
+.k-widget.k-datepicker.FilterTreeNode-dpValue {
+    width: 200px !important;
+}
+.k-widget.k-timepicker.FilterTreeNode-tpValue {
+    width: 200px !important;
+}
+.FilterTreeNode-itxtValue {
+    width: 170px !important; /*200*/
+}
+.FilterTreeNode-itxtValue .k-input {
+    width: 168px !important; /*198*/
+}
+.FilterTreeNode-ftxtValue {
+    width: 200px !important;
+}
+.FilterTreeNode-ftxtValue .k-input {
+    width: 198px !important;
+}
+.FilterTreeNode-chkValue {
+    width: 200px !important;
+}
+.k-widget.k-combobox.FilterTreeNode-cmbValue {
+    width: 200px !important;
+	background: none;
+}
+/*posicionem la segona div dels valors de filtre - icones Y | O | X | checkbox*/
+.FilterTreeNodeRight.filterValue div:nth-child(2) {
+  right: 0px;/*20*/
+  position: relative;
+}
+
+.addFilterAnd-icon, .addFilterOr-icon{
+	width: 41px;/*26*/
+    height: 20px;
+	background-size: contain;
+    overflow: hidden;
+    display: inline-block;
+    font-size: 0;
+    line-height: 0;
+    vertical-align: top;    
+    -webkit-border-radius: 0px;
+    -mox-border-radius: 0px;
+    border-radius: 0px;
+	top:3px;
+    left:2px;
+    position:relative;   
+}
+
+.addFilterAnd-icon {
+    background: transparent url(images/grid/addFilterAnd.png) no-repeat 50% 50%;
+}
+.addFilterOr-icon {
+    background: transparent url(images/grid/addFilterOr.png) no-repeat 50% 50%;
+}
+
+.btnRefreshFilter {
+    display: none;
+}
+
+.filterActions {
+    float: right;
+    margin-top: 5px;
+}
+.filterCurrentProfile {    
+    display: inline-flex;
+}
+.filterCurrentProfile h3 {
+    font-weight:normal;
+    margin-top: 12px;
+}
+.filterCurrentProfile h2 {
+    font-weight:bold;
+    font-size: 15px;    
+}
+
+/* div de filtres - vistes i configuracio */
+div.k-treeview {overflow:visible;}
+.k-treeview {
+    overflow: visible;
+    /*min-height: 250px;*/
+}
+
+/*tabulacio dels filtres*/
+div [id*="tree"][id$="_Filter"] .k-group:not(.k-top):not(ul li [role="option"]) {
+    padding-left:25px;
+}
+div [id*="tree"][id$="_Filter"] > .k-top {
+    padding-left:0px;
+}
+div [id*="tree"][id$="_Filter"] .k-delete { /*icona delete*/
+    top:3px;
+    position:relative;
+	border: solid 1px #ccc;
+	background-color: #F7F7F7;
+	margin-left: 2px;
+	width: 18px;
+	height: 18px;
+	background-position: -31px -15px;
+}
+/*posicionem el checkbox a l'altre costat*/
+.k-checkbox {
+    float:left;
+    position:relative;
+    /*left:645px;*/
+    top:8px;
+}
+
+/*campo obligatorio reposicionem*/
+div [id*="tree"][id$="_Filter"] .k-widget.k-tooltip-validation {
+  position: static;
+  float:left;
+  /*border-color: #FFFFFF;
+  background-color: #6CAA25;
+  color: #FFFFFF;*/
+  margin: 5px 0;
+  padding: 3px;
+  width: 135px !important;
+}
+div [id*="tree"][id$="_Filter"] .k-warning {
+    height: 16px;
+}
+/*
+.k-treeview .k-item {
+  display: block;
+  border-width: 0;
+  margin: 0;
+  padding: 0 0 0 33px;  
+}*/
+
+/*reset per a padding dels selects de filtre*/
+.k-group.k-item {
+	padding:0px;
+}
+
+
+/*finestra pop up insercio registres*/
+div[data-role="draggable"] { /*.k-widget .k-window*/
+  border-style: solid;
+  border-width: 2px;
+  padding-top: 2em;
+  border-color: #999999;
+  -webkit-border-radius: 0px;
+  -mox-border-radius: 0px;
+  border-radius: 0px;
+}
+div[data-role="draggable"] .k-window-titlebar.k-header {
+border:none;
+background-color:#FFF;
+}
+
+div[data-role="draggable"] .k-edit-buttons {
+border:none;
+}

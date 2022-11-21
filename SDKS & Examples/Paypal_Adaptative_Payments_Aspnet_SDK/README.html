@@ -1,0 +1,285 @@
+<html>
+	<head>
+		<title>PayPal Platform C#.NET SDK</title>
+	    <style type="text/css">
+			body {				
+				font: normal .7em "Verdana", "Arial", sans-serif;
+				margin: 15px 10px;
+				width: 800px;
+				color: #333333;
+			}
+			ul, ol {
+				padding:0 0 0 30px;
+			}
+			pre {
+				font-size: 120%;
+			}
+			a {
+				color: #369;
+				text-decoration: none;
+			}
+			a:hover {
+				text-decoration: underline;
+			}
+			p {
+				margin: 10;
+				padding-top: 10px;				
+			}
+			h1, h2, h3, h4, h5, h6 {
+				color:#28426E;
+				margin-bottom:0.5em !important;
+			}
+			h2, h3 {
+				color:#E27133 !important;				
+				font-weight:bold;				
+				margin: 25px 0 0;
+			}
+			h1 {
+				font-style:italic;
+				line-height:1em;
+				font-size:22pt;
+			}
+			li {
+				padding-top:3px;
+			}
+			hr {
+				background-color:#CCCCCC;
+				border:0 none;
+				height:1px;
+			}
+		</style>
+    </head>
+<body>
+	<h1 align='center'>PayPal Platform C#.NET SDK</h1>
+	<br/>
+	<h2>Table of contents</h2>
+	<ul>
+		<li><a href='#overview'><b>Overview</b></a></li>
+		<li><a href='#prerequisites'><b>Prerequisites</b></a></li>
+		<li><a href='#contents'>SDK contents</a></li>				
+		<li><a href='#samples'><b>Running the samples</b></a></li>
+		<li><a href='#logging'>Application logging</a></li>				
+		<li><a href='#configuration'>Property files and configuration</a></li>
+		<li><a href='#using'>Integrating the SDK</a></li>
+		<li><a href='#troubleshooting'>Troubleshooting tips</a></li>
+		<li><a href='#building'>Building the SDK source</a></li>
+		<li><a href='#documentation'>Documentation and support</a></li>
+		<li><a href='#licensing'>Licensing</a></li>		
+	</ul>
+	<br/><br/>
+
+	<a name='overview'></a>
+	<h2>Overview</h2>
+		<p>
+		PayPal's Software Developer Kit (SDK) eases the process of integrating PayPal's webservices into your application by providing a core library, command line and web samples. This SDK provides wrappers for PayPal's platform APIs (AdaptiveAccounts, AdaptivePayments) and supports SOAP, XML and JSON bindings. This software is intended for use by software developers with a basic understanding of the selected platform's language (C#.NET) and environment. The latest upgrades, FAQs and announcements can always be found at: <a href='http://www.x.com' target='_blank'>Tools for PayPal Developers</a>.</p>
+
+	<h3> Features supported</h3> 
+
+		<ul>
+			<li><b>Simple Wrapper APIs: </b> The scripts in Base_*\Stub folder contains client side business artifacts/APIs/classes for the developers to consume AdaptivePayments/AdaptiveAccounts APIs and the wsdl file is available in the root directory of Base_*\Resources folder.</li>
+
+		    <li><b>Client Authentication: </b> PayPal supports two types of API credentials, namely <b>Three Token and Client Auth SSL certificate</b>. A merchant should have an appropriate (typically a business type account) account created by signing on to PayPal site. After creating an account he can choose to use either type of credentials at a time. Every API call should be accompanied by the API credentials as part of the HTTP headers. The SDK simplifies this by use of the web.config file. </li>
+
+			<li><b>Message protocol independence: </b> The PayPal Platform WebService APIs supports various request and response data bindings or payload formats <b>(JSON, XML, and SOAP)</b>. However, when you use the APIs provided by SDK you do not have to care about the payload format.</li>
+
+			<li><b>Command line samples and reference implementations: </b>  Sample projects that use the SDK to make PayPal API calls are supplied with the download bundle. Please read the respective sections given below to know more. Command lines samples are the quickest way to learn the APIs. </li>
+
+			<li><b>Proxy/Firewall server Support: </b> The SDK can work with Proxy servers. That is, the SDK can make API calls via a proxy server/port specified in the web.config file. Please see the file to know how to configure it.</li>
+
+			<li><b>Source code and build: </b>  The SDK is shipped with source code and an ant build script so that an end user can extend the SDK or rebuild artifacts with new WSDLs if and when needed. </li>
+
+	</ul>
+<hr>
+		
+<a name='prerequisites'></a>
+<h2>Prerequisites</h2>
+
+<h4>Software</h4>
+<ul>
+	<li>IIS 5.1</li>
+	<li>.NET 2.0 framework - <a href='http://www.microsoft.com/downloads/details.aspx?FamilyID=0856EACB-4362-4B0D-8EDD-AAB15C5E04F5&displaylang=en' target='_blank'><b>Download</b></a></li>
+	<li>OpenSSL (required only for API certificate based authentication. Default mode is 3-token) - <a href='http://www.openssl.org/related/binaries.html' target='_blank'><b>Download</b></a>
+        <p> To convert from txt format to pkcs12 format, run <i>openssl pkcs12 -export -inkey cert_key_pem.txt -in cert_key_pem.txt -out cert_key.p12</i></p></li>
+</ul>
+
+<h4>PayPal account</h4>
+<p>View the <a href='http://www.youtube.com/v/lDzCVtBLDu4&hl=en_US&fs=1&' target='_blank'><b>account creation demo</b></a> or click <a href='https://www.x.com/docs/DOC-1379' target='_blank'><b>here</b></a> for help.</p>
+<ul>
+    <li>Live business account (PayPal real time environment) - Sign up for an account at <a href='https://www.paypal.com/' target='_blank'>paypal.com</a></li>
+    <li>Sandbox business account (PayPal test environment) - Sign up for an account at <a href='https://developer.paypal.com/' target='_blank'>developer.paypal.com</a>  
+</li>
+    <li>For assistance register at <a href='http://x.com' target='_blank'>x.com</a></li>
+</ul>
+<hr>
+
+
+
+<a name='contents'></a>
+<h2>SDK contents</h2>
+<ul>
+	<li><b>src</b> -- Source code for the SDK</li>
+	<li><b>samples</b> -- Samples using the SDK.</li>
+	<li><b>docs</b> -- API documentation can be browsed by loading the PayPalBaseAPI.chm file available here</li>
+</ul>
+<a name='tested'></a>
+<h3>Tested versions</h3>
+	<p>This SDK has been tested on IIS 5.1 and .NET framework 2.0</p>
+<hr>
+    
+<a name='samples'></a>
+<h2>Running the samples</h2>
+The download bundle from <a href='https://www.x.com/community/ppx/sdks' target='_blank'><b>x.com</b></a> comes with prebuilt sample applications that can get you quickly started on using the SDK. You will find both web application samples and simple command line samples in your download bundle. Each sample application can be run independently as described in the next section.
+
+<h4>Commandline Samples</h4>
+<p>The "CommandLine_AA" sample demonstrates Adaptive Account API calls and the "CommandLine_AP" sample demonstrates Adaptive Payment API calls. These samples simply invoke a series of calls against the PayPal API server. To run the command line samples, 
+	<ol>
+		<li>Go to the samples/CommandLine* directory. </li>
+		<li>Optionally, edit the <a href='#configuration'><b>App.Config</b></a> file to provide correct configuration info. You can choose to skip this step and have the samples run using the default configuration file.</li>
+		<li>Execute the run.bat file by double clicking on it or typing 'run.bat' at the Windows command prompt.</li>		
+	</ol>
+</p>
+
+<h4>Web samples</h4>
+<p>
+To run the web samples,
+<ol>
+	<li>Copy the web sample folder (ASPNET_SDK_Samples*) into your any of your system drives and go to the samples directory.</li>
+	<li>Optionally, edit the <a href='#configuration'><b>Web.Config</b></a> file to provide correct configuration info. The samples can run just as well using the default configuration file.</li>
+	<li>Make sure that the SDK folder has appropriate permissions. (The logs folder, for instance, requires write permissions).</li>
+	<li>Execute the InstallSample.bat file by double clicking on it or typing 'InstallSample.bat' at the Windows command prompt. This script will automatically create a "virtual directory" of the project under IIS.</li>
+	<li>The batch file automatically opens a browser window that takes you to the home page of the sample application.</li>
+</ol>
+</p>
+<hr>
+
+<a name='logging'></a>
+<h2>Application logging</h2>
+	<p>A Logging Handler is supplied with the SDK to log every request and response soap message and soap fault to a file named  <b>paypal_platform.log</b> as a default. The SDK typically logs the following
+		<ul>
+			<li>On application startup, configuration parameters being used by the application.</li>
+			<li>Request and response message from PayPal.</li>
+			<li>Exceptions and other messages.</li>
+		</ul>
+	</p>
+	
+	<p>The SDK uses the latest version of log4net.dll provided by Microsoft for logging. To change the name of the file, edit the log4net section in web.config/app.config file. A new log file is created per day using a yyyy-mm-dd naming convention in the Logs folder.</p>
+<hr>
+
+	<a name='configuration'></a>
+	<h2>Property files and configuration</h2>
+
+	<p> In order to make successful web service calls, the <b>App.Config/Web.Config</b> file must contain correct config information. The SDK download contains a default config file that allows you to run the samples as it is. You will however want to edit this file to run the samples against your own account.
+
+	<ul>
+		<li>API credentials - Specify either 3-token or SSL Client Auth certificate credential details such as API Username, password and signature or path of the pem file location. By default, this is set to use a common/shared public account against PayPal sandbox environment.  </li>
+		<li>API_BASE_ENDPOINT - By default it is set to https://svcs.sandbox.paypal.com/. Please note the trailing slash at the end. You need to change it to https://svcs.paypal.com/ to use against live production server. Otherwise you can test the SDK against sandbox without making any changes at all.</li>
+		<li>Proxy configuration - If you are using a proxy server, then specify the hostname and port and other information in the proxy server section.</li>
+		<li>API_VERSION - Set it to right version to take advantage of the corresponding version features.</li>
+		<li>API_AUTHENTICATION_MODE - Set this to 'ssl' if you are using SSL certificate as API credential.</li>
+	</ul>
+</p>
+
+<hr>
+
+<a name='using'></a>
+<h2>Integrating the SDK</h2>
+	 <p> You can write your own applications using the SDK DLLs. To do this,
+	 <ol>
+		<li>Create a new project in Visual studio 2005.</li>
+		<li>Add one or more of the following DLLs from the SDK as references to your project. </li>
+		<ul>
+			<li>src\Base_Common\bin\Release\Base_Common.dll</li>
+			<li>src\Base_AA\bin\Release\Base_AA.dll</li>
+			<li>src\Base_AP\bin\Release\Base_AP.dll</li>
+		</ul>			 
+		<li>Add Microsoft's log4net.dll to your project references and add appropriate log4net configuration to your Web.Config/App.Config files.</li>
+		<li>Program as per the programming model shown below.</li>
+	 </ol> 
+	 </p>
+<h3>Adaptive SDK - Programming Model (C#)</h3>
+<pre>
+	// <b>Example for AdaptivePayment's "Pay" service call</b>
+
+	// <b>Create a profile object</b>
+	BaseAPIProfile profile2 = new BaseAPIProfile();
+	profile2.APIProfileType = ProfileType.ThreeToken;
+	profile2.APIUsername = "pbehar_1227728571_biz_api1.paypal.com";
+	profile2.APIPassword = "1227728581";
+	profile2.APISignature = "Ab.pl-i6z.xsXT9nLwVBjpUX.zWLAN8tQf3C9JuGAsNfK-ig8-G5QP5-";
+	profile2.ApplicationID = "APP-1JE4291016473214C" ;
+	profile2.Environment = "https://svcs.sandbox.paypal.com/";
+	profile2.RequestDataformat = "SOAP11";
+	profile2.ResponseDataformat = "SOAP11";
+
+	// <b>Create new service wrapper object</b>
+	AdapativePayments ap = new AdapativePayments();
+	ap.APIProfile = profile2;
+
+	// <b>Create request objects</b>
+	PayRequest payRequest = new PayRequest();
+	payRequest.cancelUrl = "http://www.google.com";
+	payRequest.returnUrl = "http://www.google.com";
+	payRequest.senderEmail = "pbehar_1227728571_biz@paypal.com";
+	payRequest.clientDetails = new ClientDetailsType();
+	payRequest.clientDetails.applicationId = "AppID";
+	payRequest.clientDetails.deviceId = "127001";
+	payRequest.clientDetails.ipAddress = "127.0.0.1";
+	payRequest.actionType = "PAY";
+	payRequest.currencyCode = "USD";
+	payRequest.requestEnvelope = new RequestEnvelope();
+	payRequest.requestEnvelope.errorLanguage = "en_US";
+	payRequest.receiverList = new Receiver[1];
+	payRequest.receiverList[0] = new Receiver();
+	payRequest.receiverList[0].amount = decimal.Parse("1.00");
+	payRequest.receiverList[0].email = "pbehar_1239699384_biz@paypal.com";	
+
+
+	// <b>Call a business method on the service wrapper object, passing correct request objects as argument</b>
+	PResponse = ap.pay(payRequest);
+	Console.WriteLine("Pay Transaction Request: " + ap.PayLoad);
+	Console.WriteLine("Pay Transaction Response: " + ap.LastResponse);
+
+                
+</pre>
+
+<hr>
+<a name='troubleshooting'></a>
+<h2>Troubleshooting tips</h2>
+<p>Successful running of the command line samples is a good indication that your environment is good. Sometimes you may see API calls failing and that perhaps is due to using invalid data for the API call. For example, if the start date of the preapproval API is in past, then the preapproval API call will fail. Once you correct the start date the sample code should work.</p>
+
+<p>Common errors include 
+<ul>
+	<li>Incorrect permissions on the Logs folder.</li>
+	<li>Not setting the correct version of .NET - If you have multiple versions of the .NET framework installed, open the IIS manager (inetmgr.exe), then right-click on < XXX  Virtual Directory > and go to properties. You will find a tab called ASP.NET. Here, change the ASP.NET Version to 2.0</li>
+</ul>
+</p>
+
+
+<hr>	
+	<a name='building'></a>
+	<h2>Building the SDK source</h2>
+    <p> The SDK bundle includes pre-built dll files and samples that work out of the box without any
+        configuration. If you need to rebuild the SDK (typically this step is not needed) follow these steps.
+        <ul>
+			<li>Add wsdl.exe to your PATH. This executable is usually available under C:\Program Files\Microsoft Visual Studio 8\SDK\v2.0\Bin. </li>
+			<li>If required, copy newer WSDL files to the "Resources" folder in the respective folders and rebuild the project. </li>
+			<li>Be sure to change the API_BASE_ENDPOINT property and API credentials in web.config file to https:/svcs.paypal.com before using the dll files against the live site.</li>
+        </ul>        
+     </p>
+
+<hr>
+<a name='documentation'></a>
+<h2>Documentation and support</h2>
+<ul>
+	<li>Read <a href='docs\PayPalBaseAPI.chm'>PayPalBaseAPI.chm</a> for more information.</li>
+	<li><a href='https://www.x.com' target='_blank'>PayPal developer Center</a></li>
+	<li><a href='https://www.x.com' target='_blank'>Technical Support</a></li>
+</ul>
+<hr>
+<a name='licensing'></a>
+<h2>Licensing</h2>
+<p>Read the <a href='licenses\LICENSE.txt'>license</a> file for important legal information regarding the PayPal
+SDK. There are important points you must consider when choosing to bundle this SDK within your application.</p>
+<br/>Copyright (c) 2009 PayPal, Inc.
+</body>
+</html>

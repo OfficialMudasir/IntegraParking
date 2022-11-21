@@ -1,0 +1,449 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="backOffice.Views.Shared.Site" %>
+<%@ Import Namespace="System.Globalization" %>
+<%@ Import Namespace="backOffice.Models" %>
+<%@ Import Namespace="backOffice.Infrastructure" %>
+<%@ Import Namespace="backOffice.Infrastructure.Security" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title><asp:ContentPlaceHolder ID="TitleContent" runat="server" /></title>
+    <link rel="stylesheet" href="../../Content/reset1.css" type="text/css"/>
+
+    <link rel="icon" href="<%= Url.Content("~/Content/img/favicon.ico") %>"/>
+
+    <link href="<%= Url.Content("~/Content/backOffice.css?v2.2") %>" rel="stylesheet" type="text/css" />
+    <link href="<%= Url.Content("~/Content/kendo/kendo.common.min.css") %>" rel="stylesheet" type="text/css" />
+    <link href="<%= Url.Content("~/Content/kendo/kendo.default.min.css") %>" rel="stylesheet" type="text/css" />    
+    <link href="<%= Url.Content("~/Content/kendo/kendo.silver.min.css") %>" rel="stylesheet" type="text/css" />
+    <link href="<%= Url.Content("~/Content/kendoExt/kendo.ext.css") %>" rel="stylesheet" type="text/css" />
+    <link href="<%= Url.Content("~/Content/kendo/kendo.dataviz.min.css") %>" rel="stylesheet" type="text/css" />
+    <link href="<%= Url.Content("~/Content/kendo/kendo.dataviz.default.min.css") %>" rel="stylesheet" type="text/css" />
+    <link href="<%= Url.Content("~/Content/themes/base/jquery.ui.all.css") %>" rel="stylesheet" type="text/css" />    
+    <link href="<%= Url.Content("~/Content/menu.css?v2.4") %>" rel="stylesheet" type="text/css" />    
+    <link href="<%= Url.Content("~/Content/common.css?v1.4") %>" rel="stylesheet" type="text/css" />
+
+    <script src="<%= Url.Content("~/Scripts/kendo/jquery.min.js") %>"></script>
+    <script src="<%= Url.Content("~/Scripts/kendo/kendo.all.min.js") %>"></script>
+    <script src="<%= Url.Content("~/Scripts/kendo/kendo.timezones.min.js") %>"></script>    
+    <script src="<%= Url.Content("~/Scripts/kendo/kendo.aspnetmvc.min.js") %>"></script>
+    <script src="<%= Url.Content("~/Scripts/kendoExt/kendo.web.ext.js") %>"></script>
+    <script src="<%= Url.Content("~/Scripts/jquery.cookie.js") %>"></script>    
+    <script src="<%= Url.Content("~/Scripts/hashtable.js") %>"></script>
+    <script src="<%= Url.Content("~/Scripts/list.js") %>"></script>
+    <script src="<%= Url.Content("~/Scripts/msgbox.js?v1.1") %>"></script>
+    <script src="<%= Url.Content("~/Scripts/application.js") %>"></script>
+    <script src="<%= Url.Content("~/Scripts/sessionControl.js") %>"></script>
+    <script src="<%= Url.Content("~/Scripts/utils.js") %>"></script>
+
+    <script src="<%= Url.Content("~/Scripts/jquery.signalR-2.2.0.min.js") %>" type="text/javascript"></script>
+    <script src="<%= Url.Content("~/signalr/hubs") %>" type="text/javascript"></script>
+        
+    <link href='https://fonts.googleapis.com/css?family=Maven+Pro:400,500' rel='stylesheet' type='text/css'/>
+
+    <%
+        var culture = System.Threading.Thread.CurrentThread.CurrentCulture;
+    %>
+    <script src="<%= Url.Content("~/Scripts/kendo/cultures/kendo.culture." + culture + ".min.js") %>"></script>
+    <script src="<%= Url.Content("~/Scripts/kendo/messages/kendo.messages." + culture + ".min.js") %>"></script>
+
+    <%-- Set the current culture --%>
+    <script>
+        kendo.culture("<%= culture %>");
+    </script>
+
+    <script>
+        <%
+            var resBundle = ResourceBundle.GetInstance("backOffice");            
+        %>
+
+        // This function enables/disables the onbeforeunload event.
+        //      - switchBool: true (enable) or false (disable)
+        //      - msgText: custom message. If empty, will show default message
+        function app_setBeforeUnload(switchBool, msgText) {
+            if (switchBool == true) {
+                $(window).bind('beforeunload', function () {
+                    if (typeof msgText != "undefined" && msgText != "") {
+                        return msgText;
+                    } else {                        
+                        return "<%= resBundle.GetString("backOffice", "Messages.application.beforeUnload", "You have entered new data on this page. If you navigate away from this page without first saving your data, the changes will be lost.") %>";
+                    }
+                });
+            } else {
+                $(window).unbind("beforeunload");
+            }
+        }
+
+    </script>
+    
+    <script type="text/javascript">
+        $(function () {
+            $.sessionControl.start({
+                //title: 'this is a better title',
+                idleLimitSeconds: <%= (ConfigurationManager.AppSettings["SessionTimeoutSeconds"] ?? "0") %>,                
+                idle: function () {
+                    $.sessionControl.stop();
+                    window.location = "<%= Url.Action("Logout", "Account", new { plugin = "SecurityPlugin" } )%>";
+                },
+                title:"<%= resBundle.GetString("backOffice", "SessionControl.Title", "Session") %>",
+                messages: {
+                    title: "<%= resBundle.GetString("backOffice", "SessionControl.Title", "Session") %>",
+                    message: "<%= resBundle.GetString("backOffice", "SessionControl.Message", "Your session is nearing expiry.<br/>Do you want to continue connected?") %>",
+                    buttons: {
+                        confirm: {
+                            title: "<%= resBundle.GetString("backOffice", "SessionControl.Confirm.Title", "Continue connected") %>",
+                            text: "<%= resBundle.GetString("backOffice", "SessionControl.Confirm.Text", "Continue") %>"
+                        },
+                        logout: {
+                            title: "<%= resBundle.GetString("backOffice", "SessionControl.Logout.Title", "Close session") %>",
+                            text: "<%= resBundle.GetString("backOffice", "SessionControl.Logout.Text", "Logout") %>"
+                        }
+                    }
+                }
+            });
+        });
+
+    </script>
+
+    <script type="text/javascript">
+        var _mnuAccordionActiveWidth = 950;
+        var _mnuAccordionActiveItem = null;
+
+        
+
+        $(document).ready(function () {
+        
+            Master_ToggleHeaderSmall();
+
+            //if ($("#mnuAccordion").css('display') != "none")
+                InitMnuAccordion();
+
+            //$("#mnuAccordion").kendoMenu();
+
+            LoadProfileContainer();
+
+            $("#mainloading").hide();
+            $("#centro").css('visibility', 'visible');
+
+        });
+
+        function InitMnuAccordion() {
+
+            MnuAccordionResize();
+
+            _mnuAccordionActiveItem = null;
+            $("#mnuAccordion .mnuAccordion_li").each(function (index) {
+                if ($(this).find(".k-state-highlight").length > 0) {
+                    _mnuAccordionActiveItem = this;                    
+                }
+            });
+            if (_mnuAccordionActiveItem == null) _mnuAccordionActiveItem = $("#mnuAccordion li:first")[0];
+            $(_mnuAccordionActiveItem).addClass('active');
+            $(_mnuAccordionActiveItem).width(_mnuAccordionActiveWidth);
+            $(_mnuAccordionActiveItem).find(".mnuAccordion_mnuContainer").attr('style', 'display: table-cell !important');
+
+            $("#mnuAccordion .mnuAccordion_li").click(function () {
+                if (this.id != "liSmallMenu") {
+                    if (_mnuAccordionActiveItem != this) {
+                        $(_mnuAccordionActiveItem).find(".mnuAccordion_mnuContainer").attr('style', 'display: none !important');
+                        $(_mnuAccordionActiveItem).animate({ width: "80px" }, { duration: 400, queue: false });
+                        $(this).animate({ width: _mnuAccordionActiveWidth }, {
+                            duration: 400, queue: false,
+                            complete: function () {
+                                //$(activeItem).addClass('active');
+                                $(_mnuAccordionActiveItem).find(".mnuAccordion_mnuContainer").attr('style', 'display: table-cell !important');
+                            }
+                        });
+                        $(_mnuAccordionActiveItem).removeClass('active');
+                        _mnuAccordionActiveItem = this;
+                        $(_mnuAccordionActiveItem).addClass('active');
+                    }
+                }
+                else {
+                    Master_SetHeaderSmall(true);
+                }
+            });
+
+        }
+
+        function MnuAccordionResize() {
+
+            _mnuAccordionActiveWidth = 950;
+            if ($("#mnuAccordion").width() < ((81 * ($("#mnuAccordion .mnuAccordion_li").length - 1)) + _mnuAccordionActiveWidth + 1)) {
+                _mnuAccordionActiveWidth = $("#mnuAccordion").width() - (81 * ($("#mnuAccordion .mnuAccordion_li").length - 1)) - 10;
+            }
+            $("#mnuAccordionRight").width($("#mnuAccordionRight").parent().width() - ((81 * ($("#mnuAccordion .mnuAccordion_li").length - 1)) + _mnuAccordionActiveWidth + 1));
+
+            if (_mnuAccordionActiveItem != null)
+                $(_mnuAccordionActiveItem).width(_mnuAccordionActiveWidth);
+        }
+
+        $(window).resize(MnuAccordionResize);
+
+        function LoadProfileContainer() {
+
+            $.ajax({
+                type: 'GET',
+                url: '<%= Url.Action("Profile", "Security", new { plugin = "SecurityPlugin" } ) %>',
+                data: { },
+                success: function (data) {
+
+                    //if ($("#mnuAccordion").css('display') != "none" || $("#mnuAccordion").hasClass("header-small"))
+                    if ($("#mnuAccordion").css("visibility") != "collapse")
+                        $("#divMenuProfile").html(data);
+                    else
+                        $("#divMenuProfile2").html(data);
+
+                }
+            });
+
+        }
+
+        function Master_SetHeaderSmall(bSmall) {
+            if (bSmall == null) bSmall = true;
+            $.cookie("HeaderSmall", (bSmall?"1":"0"), { path: "/" });
+            Master_ToggleHeaderSmall();
+        }
+        function Master_ToggleHeaderSmall() {
+            var bSmall = false;
+            if ($.cookie("HeaderSmall"))
+                bSmall = ($.cookie("HeaderSmall") == "1");
+            if (bSmall) {
+                $("#header").addClass("header-small");
+                $("#spanTitle").addClass("header-small");
+                $(".headerLeft").addClass("header-small");
+                $("#mnuAccordion").addClass("header-small");
+            }
+            else {
+                $("#header").removeClass("header-small");
+                $("#spanTitle").removeClass("header-small");
+                $(".headerLeft").removeClass("header-small");
+                $("#mnuAccordion").removeClass("header-small");
+            }
+            $(document).resize();
+        }
+
+    </script>
+
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <%
+        var culture = System.Threading.Thread.CurrentThread.CurrentCulture.DisplayName;
+        var locale = System.Threading.Thread.CurrentThread.CurrentCulture.Name;
+        //var resources = GetResourceBundle();
+        var resBundle = ResourceBundle.GetInstance("backOffice");
+
+        var curUser = FormAuthMemberShip.HelperService.GetCurrentUser();        
+    %>
+
+    <div id="headerTop"></div>
+    <div id="header" class="header">        
+        <span id="spanTitle" class="headerTitle"><%= resBundle.GetString("backOffice", "Main.BackOffice.Title", "CONTROL CENTER") %></span>
+
+        <div class="headerLeft">
+            <%        
+                Html.Kendo().Menu()
+                  .Name("mnuSmall")                  
+                  .Items(items =>
+                  {
+                      items.Add()
+                          //.Text((curUser != null ? curUser.Username : resBundle.GetString("backOffice", "MainMenu.User.NoUserLogged", "** no user logged **")))
+                          .ImageUrl(Url.Content("~/Content/img/menu/smallmenu-small.png"))
+                          .HtmlAttributes(new { onclick = "Master_SetHeaderSmall(false)" });                          
+                      
+                      var viewModel = UIShell.OSGi.BundleRuntime.Instance.GetFirstOrDefaultService<ApplicationViewModel>();
+                      if (viewModel != null)
+                      {
+                          AddMenuItem(items, viewModel.MainMenuItems);
+                      }              
+                  })
+                  .Render();            
+            %>
+        </div>
+
+        <div class="headerRight">            
+        <%
+        Html.Kendo().Menu()
+          .Name("mnuUser")
+          .HtmlAttributes(new { @class = "mnuUserInfo" })          
+          .Items(items =>
+          {
+              items.Add()
+                  .Text(System.Threading.Thread.CurrentThread.CurrentCulture.TwoLetterISOLanguageName.ToUpper())
+                  .LinkHtmlAttributes(new { @class = "menuLang" })
+                  .ImageUrl(Url.Content("~/Content/img/menu/lang.png"))
+                  .Items(children2 =>
+                  {
+                      AddMenuLanguages(children2);
+                  });              
+              items.Add()
+                  .Text((curUser != null ? curUser.Username : resBundle.GetString("backOffice", "MainMenu.User.NoUserLogged", "** no user logged **")))
+                  .LinkHtmlAttributes(new { @class = "menuUser" })
+                  .ContentHtmlAttributes(new { @class = "MenuProfileContainer" })
+                  .Content(() => {
+                    %>
+                    <div id="divMenuProfile">
+
+                    </div>
+                    <%
+                  })
+                  /*.Items(children =>
+                  {
+                      children.Add()
+                            .Text(resBundle.GetString("backOffice", "MainMenu.User.Profile", "Profile"))
+                            .Action("UserProfile", "Account", new { plugin = "SecurityPlugin" })
+                            .ImageUrl(Url.Content("~/Content/img/menu/profile.png"));
+                            //.ImageUrl(Url.Content("~/Content/img/flags/US.GIF"))
+                            //.Selected(System.Threading.Thread.CurrentThread.CurrentCulture.Name == "en-US");
+                  })*/;
+              items.Add()
+                  .Text(" ")                  
+                  .HtmlAttributes(new { title = resBundle.GetString("backOffice", "MainMenu.User.Logout", "Logout") })
+                  .Action("Logout", "Account", new { plugin = "SecurityPlugin" })
+                  .ImageUrl(Url.Content("~/Content/img/menu/logout.png"));
+              
+          })
+          .Events(ev =>
+          {
+              //ev.Select("siteMaster_OnMenuSelect");
+          })
+          .Render();
+            
+        %>
+
+        </div>
+    </div>    
+    <div id="cuerpo">
+    
+    <%
+        
+        Html.Kendo().Menu()
+          .Name("Menu")          
+          .Items(items =>
+          {
+              var viewModel = UIShell.OSGi.BundleRuntime.Instance.GetFirstOrDefaultService<ApplicationViewModel>();
+              if (viewModel != null)
+              {
+                  AddMenuItem(items, viewModel.MainMenuItems);
+              }
+                            
+              items.Add()
+                  .Text((curUser != null ? curUser.Username : resBundle.GetString("backOffice", "MainMenu.User.NoUserLogged", "** no user logged **")))
+                  .LinkHtmlAttributes(new { @class = "menuUser" })
+                  .Items(children =>
+                  {
+                      children.Add()
+                          .Text(System.Threading.Thread.CurrentThread.CurrentCulture.TwoLetterISOLanguageName.ToUpper())
+                          .LinkHtmlAttributes(new { @class = "menuLang" })
+                          .ImageUrl(Url.Content("~/Content/img/menu/lang.png"))
+                          .Items(children2 =>
+                          {
+                              AddMenuLanguages(children2);
+                          });
+                      children.Add()
+                            .Text(resBundle.GetString("backOffice", "MainMenu.User.Profile", "Profile"))
+                            //.Action("UserProfile", "Account", new { plugin = "SecurityPlugin" })
+                            .ImageUrl(Url.Content("~/Content/img/menu/profile.png"))
+                            .Content(() =>
+                            {
+                                %>
+                                <div id="divMenuProfile2">
+
+                                </div>
+                                <%
+                            });
+                      children.Add()
+                            .Text(resBundle.GetString("backOffice", "MainMenu.User.Logout", "Logout"))
+                            .Action("Logout", "Account", new { plugin = "SecurityPlugin" })
+                            .ImageUrl(Url.Content("~/Content/img/menu/logout.png"));
+                            //.ImageUrl(Url.Content("~/Content/img/flags/ES.GIF"))
+                            //.Selected(System.Threading.Thread.CurrentThread.CurrentCulture.Name == "es-ES");
+                  });
+              
+          })
+          .Events(ev =>
+          {
+              //ev.Select("siteMaster_OnMenuSelect");
+          })
+          .Render();
+            
+        %>
+
+        <div>
+            <ul id="mnuAccordion" class="header-small">
+                <%
+                    var mnuModel = UIShell.OSGi.BundleRuntime.Instance.GetFirstOrDefaultService<ApplicationViewModel>();
+                    if (mnuModel != null)
+                    {
+                        foreach (var oMenuItem in mnuModel.MainMenuItems.OrderBy(item => item.Order))
+                        {
+                            if (oMenuItem.RoleAllowed(true))
+                            {
+                                %>
+                                <li class="mnuAccordion_li" id="li<%: oMenuItem.Id %>">
+                                    <div>
+                                        <img src="<%: string.IsNullOrEmpty(oMenuItem.Image) ? "" : Url.Content(oMenuItem.Image) /*Url.Content("~/Content/img/menu/use.png")*/%>" class="mnuAccordion_img_active" />
+                                        <img src="<%: string.IsNullOrEmpty(oMenuItem.Image) ? "" : Url.Content(System.IO.Path.Combine(System.IO.Path.GetDirectoryName(oMenuItem.Image), System.IO.Path.GetFileNameWithoutExtension(oMenuItem.Image) + "_disabled" + System.IO.Path.GetExtension(oMenuItem.Image))) %>" class="mnuAccordion_img" />
+                                    </div>
+            
+                                    <div class="mnuAccordion_mnuContainer">
+            
+                                    <span class="mnuGroupTitle"><strong><%= oMenuItem.LocalizedText() %></strong></span><br />
+                                    <span class="mnuGroupDescription"><%= oMenuItem.LocalizedDescription() %></span><br />
+
+                                    <%
+                                        Html.Kendo().Menu()
+                                          .Name(oMenuItem.Id)
+                                          .HtmlAttributes(new { @class = "mainMenu" })
+                                          .Items(items =>
+                                          {
+                                              if (oMenuItem.SubItems != null && oMenuItem.SubItems.Count > 0)
+                                              {
+                                                  AddMenuItem(items, oMenuItem.SubItems);
+                                              }
+                                              else
+                                              {
+                                                  items.Add()
+                                                      .Text(oMenuItem.LocalizedText())
+                                                      .HtmlAttributes(new { title = oMenuItem.LocalizedDescription() })
+                                                      //.ImageUrl(string.IsNullOrEmpty(item.Image) ? "" : Url.Content(item.Image))
+                                                      //.ImageHtmlAttributes(new { @class = "menuIcon" })
+                                                      .Url(Url.Content(oMenuItem.URL));
+                                                  
+                                              }
+                                          })
+                                          .Render();
+        
+                                    %>
+                                    </div>
+
+                                </li>
+
+                                <%
+                            }
+                        }
+                    }
+                    
+                %>
+
+                <li class="mnuAccordion_li" id="liSmallMenu">
+                    <div>                        
+                        <img src="<%: Url.Content("~/Content/img/menu/smallmenu-big.png") %>" class="mnuAccordion_img" onclick="Master_SetHeaderSmall(true);" />
+                    </div>
+                </li>
+
+                <li id="mnuAccordionRight"></li>
+            </ul>            
+        </div> 
+        <br />
+        <div id="mainloading"></div>
+	    <div id="centro" class="centro" style="visibility:hidden;">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+        </div>
+	
+    </div>    
+</body>
+</html>

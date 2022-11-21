@@ -1,0 +1,1386 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AccessForm" xml:space="preserve">
+    <value>Access Form</value>
+  </data>
+  <data name="Account_Logout_Button" xml:space="preserve">
+    <value>Log Out</value>
+  </data>
+  <data name="Account_Main_BttnBalanceAndRecharge" xml:space="preserve">
+    <value>Balance and Adding credit</value>
+  </data>
+  <data name="Account_Main_BttnInvoices" xml:space="preserve">
+    <value>Invoicing</value>
+  </data>
+  <data name="Account_Main_BttnOperations" xml:space="preserve">
+    <value>Operations </value>
+  </data>
+  <data name="Account_Main_BttnUserData" xml:space="preserve">
+    <value>User Information</value>
+  </data>
+  <data name="Account_Op_Amount" xml:space="preserve">
+    <value>Amount</value>
+  </data>
+  <data name="Account_Op_ChangeApplied" xml:space="preserve">
+    <value>Change</value>
+  </data>
+  <data name="Account_Op_Date" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="Account_Op_Duration" xml:space="preserve">
+    <value>Duration</value>
+  </data>
+  <data name="Account_Op_End_Date" xml:space="preserve">
+    <value>End Date</value>
+  </data>
+  <data name="Account_Op_Filter" xml:space="preserve">
+    <value>Filter</value>
+  </data>
+  <data name="Account_Op_Installation" xml:space="preserve">
+    <value>Installation</value>
+  </data>
+  <data name="Account_Op_LicensePlate" xml:space="preserve">
+    <value>License Plate</value>
+  </data>
+  <data name="Account_Op_Operation" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="Account_Op_Start_Date" xml:space="preserve">
+    <value>Start Date</value>
+  </data>
+  <data name="Account_Op_Tariff" xml:space="preserve">
+    <value>Rate</value>
+  </data>
+  <data name="Account_Op_TicketData" xml:space="preserve">
+    <value>Ticket Details</value>
+  </data>
+  <data name="Account_Op_TicketNumber" xml:space="preserve">
+    <value>Ticket Number</value>
+  </data>
+  <data name="Account_Op_Type_Discount" xml:space="preserve">
+    <value>Discount</value>
+  </data>
+  <data name="Account_Op_Type_Extension" xml:space="preserve">
+    <value>Extend time</value>
+  </data>
+  <data name="Account_Op_Type_Parking" xml:space="preserve">
+    <value>Park</value>
+  </data>
+  <data name="Account_Op_Type_Recharge" xml:space="preserve">
+    <value>Add credit</value>
+  </data>
+  <data name="Account_Op_Type_Refund" xml:space="preserve">
+    <value>Complete parking</value>
+  </data>
+  <data name="Account_Op_Type_ServiceCharge" xml:space="preserve">
+    <value>Service Charge</value>
+  </data>
+  <data name="Account_Op_Type_TicketPayment" xml:space="preserve">
+    <value>Ticket Payment</value>
+  </data>
+  <data name="Account_Op_Zone" xml:space="preserve">
+    <value>Zone</value>
+  </data>
+  <data name="Account_RechargeButton_Cancel" xml:space="preserve">
+    <value>Cancel credit purchase</value>
+  </data>
+  <data name="Account_RechargeButton_Confirm" xml:space="preserve">
+    <value>Confirm credit purchase</value>
+  </data>
+  <data name="Account_RechargeButton_MainMenu" xml:space="preserve">
+    <value>Menu</value>
+  </data>
+  <data name="Account_RechargeButton_Recharge" xml:space="preserve">
+    <value>Buy more credit</value>
+  </data>
+  <data name="Account_RechargeCancelTitle" xml:space="preserve">
+    <value>Purchase canceled</value>
+  </data>
+  <data name="Account_RechargeCancel_1" xml:space="preserve">
+    <value>The purchase has been canceled. </value>
+  </data>
+  <data name="Account_RechargeCancel_2" xml:space="preserve">
+    <value>You must have a balance to use the pay by mobile application. </value>
+  </data>
+  <data name="Account_RechargeCancel_3" xml:space="preserve">
+    <value>Please, proceed with the purchase of more credit before using the application. </value>
+  </data>
+  <data name="Account_RechargeCancel_4" xml:space="preserve">
+    <value>You must buy more credit before using the system. </value>
+  </data>
+  <data name="Account_RechargeCancel_5" xml:space="preserve">
+    <value>If you wish to save time and take full advantage of the application, activate the automatic recharge option and configure the minimum amount.  </value>
+  </data>
+  <data name="Account_RechargeConfirmTitle" xml:space="preserve">
+    <value>Credit purchase confirmation</value>
+  </data>
+  <data name="Account_RechargeConfirm_1" xml:space="preserve">
+    <value>We are almost finished.</value>
+  </data>
+  <data name="Account_RechargeConfirm_2" xml:space="preserve">
+    <value>Please confirm the credit of </value>
+  </data>
+  <data name="Account_RechargeConfirm_3" xml:space="preserve">
+    <value>You must buy more credit before using the system. </value>
+  </data>
+  <data name="Account_RechargeConfirm_4" xml:space="preserve">
+    <value>If you wish to save time and take full advantage of the application, activate the automatic recharge option and configure the minimum amount.  </value>
+  </data>
+  <data name="Account_RechargeFailureTitle" xml:space="preserve">
+    <value>Credit purchase error</value>
+  </data>
+  <data name="Account_RechargeFailure_1" xml:space="preserve">
+    <value>An error has ocurred during the purchase of credit. </value>
+  </data>
+  <data name="Account_RechargeFailure_2" xml:space="preserve">
+    <value>You must have a balance to use the pay by mobile application. </value>
+  </data>
+  <data name="Account_RechargeFailure_3" xml:space="preserve">
+    <value>Please try again. </value>
+  </data>
+  <data name="Account_RechargeFailure_4" xml:space="preserve">
+    <value>You must buy more credit before using the system. </value>
+  </data>
+  <data name="Account_RechargeFailure_5" xml:space="preserve">
+    <value>If you wish to save time and take full advantage of the application, activate the automatic recharge option and configure the minimum amount.  </value>
+  </data>
+  <data name="Account_RechargeMessage_1" xml:space="preserve">
+    <value>Your current balance is insufficient. </value>
+  </data>
+  <data name="Account_RechargeMessage_2" xml:space="preserve">
+    <value>You must buy more credit before you continue using the system. </value>
+  </data>
+  <data name="Account_RechargeMessage_3" xml:space="preserve">
+    <value>Select the amount that will be used to verify your payment method and will be added to your current balance. You can choose between a minimum amount or an automatic recurring credit.</value>
+  </data>
+  <data name="Account_RechargeSuccessTitle" xml:space="preserve">
+    <value>Credit completed</value>
+  </data>
+  <data name="Account_RechargeSuccess_1" xml:space="preserve">
+    <value>Your credit has been purchased successfully. Your current balance is: </value>
+  </data>
+  <data name="Account_RechargeSuccess_2" xml:space="preserve">
+    <value>You must buy more credit before using the system. </value>
+  </data>
+  <data name="Account_RechargeSuccess_3" xml:space="preserve">
+    <value>If you wish to save time and take full advantage of the application, activate the automatic recharge option and configure the minimum amount.  </value>
+  </data>
+  <data name="Account_Recharge_Billing_Address" xml:space="preserve">
+    <value>Billing Address</value>
+  </data>
+  <data name="Account_Recharge_BuyCredit" xml:space="preserve">
+    <value>Buy Credit</value>
+  </data>
+  <data name="Account_Recharge_BuyNow" xml:space="preserve">
+    <value>Buy Credit Now</value>
+  </data>
+  <data name="Account_Recharge_ItemDescription" xml:space="preserve">
+    <value>Buy Credit</value>
+  </data>
+  <data name="Account_Recharge_PaymentsWithPreapproval" xml:space="preserve">
+    <value>Pre-approved payments</value>
+  </data>
+  <data name="Account_Recharge_PaymentsWithPreaprovalTitle" xml:space="preserve">
+    <value>Subscription to pre-approved payments has been finalized. </value>
+  </data>
+  <data name="Account_Recharge_PaymentsWithPreaproval_1" xml:space="preserve">
+    <value>Your subscription to pre-approved payments has been completed successfully. Your current balance is: </value>
+  </data>
+  <data name="Account_Recharge_PaymentsWithPreaproval_2" xml:space="preserve">
+    <value>You must buy more credit before using the system. </value>
+  </data>
+  <data name="Account_Recharge_SelectAnAmount" xml:space="preserve">
+    <value>Select an amount to add</value>
+  </data>
+  <data name="Account_Register_PaymentMean" xml:space="preserve">
+    <value>Payment method registration</value>
+  </data>
+  <data name="Account_Register_PaymentMeanCancelled" xml:space="preserve">
+    <value>Registration of payment method canceled </value>
+  </data>
+  <data name="Account_Register_PaymentMeanError" xml:space="preserve">
+    <value>Error in registration of payment method </value>
+  </data>
+  <data name="Account_Register_PaymentMeanFinished" xml:space="preserve">
+    <value>Registration of payment method complete</value>
+  </data>
+  <data name="Account_Register_PaymentMeanMessage" xml:space="preserve">
+    <value>The amount of  {0} {1} has been charged correctly in order to register your payment method.</value>
+  </data>
+  <data name="Account_Register_PaymentMeanMessageCancel" xml:space="preserve">
+    <value>The operation to charge the amount of {0} {1} in order to register your payment method has been canceled. </value>
+  </data>
+  <data name="Account_Register_PaymentMeanMessageError" xml:space="preserve">
+    <value>An error occurred while attempting to charge the amount of {0} {1} in order to register your payment method. </value>
+  </data>
+  <data name="Account_Register_PaymentMeanRetry" xml:space="preserve">
+    <value>Retry </value>
+  </data>
+  <data name="Account_Register_PaymentMean_ChangeToPrepay" xml:space="preserve">
+    <value>Change to prepay and enjoy the benefits</value>
+  </data>
+  <data name="Activation_EmailBody" xml:space="preserve">
+    <value>Continue the registration by pressing  &lt;a href="{0}"&gt;{1}&lt;/a&gt; once the SMS has been received.  &lt;br&gt;&lt;br&gt;&lt;br&gt; the EYSAMobile team</value>
+  </data>
+  <data name="Activation_EmailHeader" xml:space="preserve">
+    <value>EYSAMobile registration</value>
+  </data>
+  <data name="Activation_SMS" xml:space="preserve">
+    <value>This is a message from EYSAMobile. Check your e-mail to continue signing up your new User. Your activation code is {0}.</value>
+  </data>
+  <data name="Button_Back" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="Button_Cancel" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+  <data name="Button_Confirm" xml:space="preserve">
+    <value>Confirmar</value>
+  </data>
+  <data name="Button_Logon" xml:space="preserve">
+    <value>Log On</value>
+  </data>
+  <data name="Button_Next" xml:space="preserve">
+    <value>Next</value>
+  </data>
+  <data name="Button_ReInitRegistration" xml:space="preserve">
+    <value>Begin registration</value>
+  </data>
+  <data name="Button_ResendSMS" xml:space="preserve">
+    <value>resend SMS</value>
+  </data>
+  <data name="Button_RetrySend" xml:space="preserve">
+    <value>Retry </value>
+  </data>
+  <data name="Button_Validate" xml:space="preserve">
+    <value>validate</value>
+  </data>
+  <data name="ChangeEmailOrMobile_Remarks" xml:space="preserve">
+    <value>After pressing the button to confirm, an e-mail will be sent to your account containing a link. Once you receive an SMS on your mobile phone with a code, open the link and enter the code.</value>
+  </data>
+  <data name="ChangeEmailOrTelephone_EmailBody" xml:space="preserve">
+    <value>Complete the modification of e-mail and/or phone number by pressing &lt;a href="{0}"&gt;{1}&lt;/a&gt; once you have received the SMS. &lt;br&gt;&lt;br&gt;&lt;br&gt;The EYSAMobile team</value>
+  </data>
+  <data name="ChangeEmailOrTelephone_EmailHeader" xml:space="preserve">
+    <value>EYSAMobile: Change e-mail and/or phone number</value>
+  </data>
+  <data name="ChangeEmailOrTelephone_SMS" xml:space="preserve">
+    <value>This is a message from EYSAMobile. Your code to change your e-mail and/or phone number is {0}.</value>
+  </data>
+  <data name="ConfirmAutomaticRecharge_EmailHeader" xml:space="preserve">
+    <value>EYSAMobile: Credit Automatically Added</value>
+  </data>
+  <data name="ConfirmNoAutomaticRecharge_EmailHeader" xml:space="preserve">
+    <value>EYSAMobile: Credit Added</value>
+  </data>
+  <data name="ConfirmRecharge_EmailBody" xml:space="preserve">
+    <value>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;
+&lt;html&gt;
+&lt;head&gt;
+	&lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8"&gt;
+	&lt;title&gt;RechargeDone&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;table align="center" style="border-collapse: collapse; border-spacing: 0; margin: 0 auto; padding: 0; width: 650px;"&gt;
+		&lt;tr style="background: #0F4F7B;"&gt;
+			&lt;td style="padding: 15px 0 15px 25px; width: 60px"&gt;&lt;img src="https://www.eysamobile.com/integraMobile/Content/img/offp_icon.png" alt=""&gt;&lt;/td&gt;
+			&lt;td style="color: #FFF; font-family: Arial, sans-serif; font-size: 32px; padding: 15px 25px; vertical-align: middle; width: 95%;"&gt;Recharge&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td colspan="2" style="padding: 40px 0;"&gt;
+				&lt;table style="border-spacing: 0; margin: 0; padding: 0 4px 0 1px; table-layout: fixed; width: 100%;"&gt;
+					&lt;tr&gt;
+						&lt;td style="color: #8B8B8B; font-family: Arial, sans-serif; font-size: 13px; font-style: italic; padding: 0 0 10px;"&gt;Summary information&lt;/td&gt;
+					&lt;/tr&gt;
+				&lt;/table&gt;
+				&lt;table style="border-spacing: 0; margin: 0; padding: 0 4px 0 1px; table-layout: fixed; width: 100%;"&gt;
+					&lt;tr&gt;
+						&lt;td style="border-bottom: 1px solid #C2C2C2; color: #8B8B8B; font-family: Arial, sans-serif; font-size: 13px; font-style: italic; padding: 10px 1px; vertical-align: bottom;"&gt;Reference&lt;/td&gt;
+						&lt;td style="border-bottom: 2px solid #C2C2C2; color: #0F4F7B; font-family: Arial, sans-serif; font-size: 16px; padding: 10px 1px; vertical-align: bottom;"&gt;{0}&lt;/td&gt;
+						&lt;td style="width: 5%"&gt;&amp;nbsp;&lt;/td&gt;
+						&lt;td style="border-bottom: 1px solid #C2C2C2; color: #8B8B8B; font-family: Arial, sans-serif; font-size: 13px; font-style: italic; padding: 10px 1px; vertical-align: bottom;"&gt;Date&lt;/td&gt;
+						&lt;td style="border-bottom: 2px solid #C2C2C2; color: #0F4F7B; font-family: Arial, sans-serif; font-size: 16px; padding: 10px 1px; vertical-align: bottom;"&gt;{1:HH:mm:ss dd/MM/yyyy}&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td colspan="2" style="padding: 10px 1px;"&gt;&amp;nbsp;&lt;/td&gt;
+						&lt;td&gt;&amp;nbsp;&lt;/td&gt;
+						&lt;td colspan="2" style="padding: 10px 1px;"&gt;&amp;nbsp;&lt;/td&gt;
+					&lt;/tr&gt;
+					{6}
+					{7}
+					&lt;tr&gt;
+						&lt;td colspan="2" style="border-bottom: 1px solid #C2C2C2; color: #8B8B8B; font-family: Arial, sans-serif; font-size: 13px; font-style: italic; padding: 10px 1px; vertical-align: bottom;"&gt;Amount&lt;/td&gt;
+						&lt;td colspan="3" style="border-bottom: 2px solid #C2C2C2; color: #0F4F7B; font-family: Arial, sans-serif; font-size: 16px; padding: 10px 1px; text-align: center; vertical-align: bottom;"&gt;{2}&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td colspan="2" style="border-bottom: 1px solid #C2C2C2; color: #8B8B8B; font-family: Arial, sans-serif; font-size: 13px; font-style: italic; padding: 10px 1px;"&gt;Balance:&lt;/td&gt;
+						&lt;td colspan="3" style="border-bottom: 2px solid #C2C2C2; color: #0F4F7B; font-family: Arial, sans-serif; font-size: 16px; padding: 10px 1px; text-align: center; vertical-align: bottom;"&gt;{3}&lt;/td&gt;
+					&lt;/tr&gt;
+				&lt;/table&gt;
+			&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr style="background: #0F4F7B;"&gt;
+			&lt;td colspan="2" style="color: #FFF; font-family: Arial, sans-serif; font-size: 16px; padding: 20px 0; text-align: center;"&gt;EysaMobile - Parking&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td colspan="2" style="color: #B0B0B0; font-family: Arial, sans-serif; font-size: 11px; padding: 15px 0;"&gt;THIS E_MAIL IS PRIVILEGED AND CONTAINS CONFIDENTIAL INFORMATION. Any reading, retention, distribution or copying of this communication by any person other that its intended recipient is prohibited. Please consider the environment before printing .&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;</value>
+  </data>
+  <data name="CustomerInscriptionModel_AlternativePhoneNumber" xml:space="preserve">
+    <value>Home phone</value>
+  </data>
+  <data name="CustomerInscriptionModel_AlternativePhoneNumberPrefix" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CustomerInscriptionModel_AutomaticRecharge" xml:space="preserve">
+    <value>Save time in the future, Auto-Credit</value>
+  </data>
+  <data name="CustomerInscriptionModel_AutomaticRechargePaypalId" xml:space="preserve">
+    <value>PayPal ID</value>
+  </data>
+  <data name="CustomerInscriptionModel_AutomaticRechargeQuantity" xml:space="preserve">
+    <value>Amount to credit</value>
+  </data>
+  <data name="CustomerInscriptionModel_AutomaticRechargeWhenBelowQuantity" xml:space="preserve">
+    <value>Add credit when the amount is less than </value>
+  </data>
+  <data name="CustomerInscriptionModel_AutomaticRechargeWritePaypalID" xml:space="preserve">
+    <value>* write your PayPal ID</value>
+  </data>
+  <data name="CustomerInscriptionModel_City" xml:space="preserve">
+    <value>City</value>
+  </data>
+  <data name="CustomerInscriptionModel_ConfirmPassword" xml:space="preserve">
+    <value>Repeat Password</value>
+  </data>
+  <data name="CustomerInscriptionModel_Country" xml:space="preserve">
+    <value>Country</value>
+  </data>
+  <data name="CustomerInscriptionModel_DocID" xml:space="preserve">
+    <value>Driver's License Number</value>
+  </data>
+  <data name="CustomerInscriptionModel_DoorInStreetNumber" xml:space="preserve">
+    <value>Apartment #</value>
+  </data>
+  <data name="CustomerInscriptionModel_Email" xml:space="preserve">
+    <value>e-mail</value>
+  </data>
+  <data name="CustomerInscriptionModel_EmailAndSMSReSent" xml:space="preserve">
+    <value>Activation e-mail and SMS resent correctly. Number of tries {0}.</value>
+  </data>
+  <data name="CustomerInscriptionModel_FirstSurname" xml:space="preserve">
+    <value>Last Name</value>
+  </data>
+  <data name="CustomerInscriptionModel_LetterInStreetNumber" xml:space="preserve">
+    <value>St. Letter</value>
+  </data>
+  <data name="CustomerInscriptionModel_LevelInStreetNumber" xml:space="preserve">
+    <value>Floor</value>
+  </data>
+  <data name="CustomerInscriptionModel_MainPhoneNumber" xml:space="preserve">
+    <value>Cell Phone</value>
+  </data>
+  <data name="CustomerInscriptionModel_MainPhoneNumberPrefix" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CustomerInscriptionModel_Name" xml:space="preserve">
+    <value>First Name</value>
+  </data>
+  <data name="CustomerInscriptionModel_Password" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="CustomerInscriptionModel_PaymentMean" xml:space="preserve">
+    <value>Payment Method</value>
+  </data>
+  <data name="CustomerInscriptionModel_Plate" xml:space="preserve">
+    <value>License Plate</value>
+  </data>
+  <data name="CustomerInscriptionModel_reCaptchaIdiom" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="CustomerInscriptionModel_Remark_ivr" xml:space="preserve">
+    <value>Only for call center (optional)</value>
+  </data>
+  <data name="CustomerInscriptionModel_SecondSurname" xml:space="preserve">
+    <value>Middle Name</value>
+  </data>
+  <data name="CustomerInscriptionModel_SMSReSent" xml:space="preserve">
+    <value>Activation SMS resent correctly. Number of tries {0}.</value>
+  </data>
+  <data name="CustomerInscriptionModel_StairInStreetNumber" xml:space="preserve">
+    <value>Stair</value>
+  </data>
+  <data name="CustomerInscriptionModel_State" xml:space="preserve">
+    <value>State</value>
+  </data>
+  <data name="CustomerInscriptionModel_Step1EndIntroText1" xml:space="preserve">
+    <value>1) Check your SMS on the phone &lt;b&gt;{0}&lt;/b&gt;, where we have sent a numeric code that will be needed shortly </value>
+  </data>
+  <data name="CustomerInscriptionModel_Step1EndIntroText2" xml:space="preserve">
+    <value>2) Check your e-mail &lt;b&gt;{0}&lt;/b&gt; where we have sent a link to continue signing up your new User. </value>
+  </data>
+  <data name="CustomerInscriptionModel_Step1EndIntroText3" xml:space="preserve">
+    <value>Click on the link, enter the numeric code, and you will be able to continue the process, having securely verified your identity. </value>
+  </data>
+  <data name="CustomerInscriptionModel_Step1EndIntroText4" xml:space="preserve">
+    <value>If you do not receive an e-mail, please check your SPAM.</value>
+  </data>
+  <data name="CustomerInscriptionModel_Step1EndIntroText5" xml:space="preserve">
+    <value>If you do not receive an e-mail or the SMS after a few minutes, press the retry button. </value>
+  </data>
+  <data name="CustomerInscriptionModel_Step1IntroText1" xml:space="preserve">
+    <value>With the remote payment program you can manage the parking of your vehicle and extend parking
+time, from any point in our network of services, as well as pay for various operations easily with your
+credit card.</value>
+  </data>
+  <data name="CustomerInscriptionModel_Step1IntroText2" xml:space="preserve">
+    <value>Once registered, you can modify your personal details or unsubscribe at any point.</value>
+  </data>
+  <data name="CustomerInscriptionModel_Step1IntroText3" xml:space="preserve">
+    <value>All of the information you provide is protected under the “Protection of Personal Information Policy”
+covered on this website.</value>
+  </data>
+  <data name="CustomerInscriptionModel_Step1IntroText4" xml:space="preserve">
+    <value>Please fill out the personal details to enjoy the benefits of the remote payment for regulated parking
+service.</value>
+  </data>
+  <data name="CustomerInscriptionModel_Step1RememberUsernameEqualsEmail" xml:space="preserve">
+    <value>Remember your username will be your e-mail</value>
+  </data>
+  <data name="CustomerInscriptionModel_Step2IntroText1" xml:space="preserve">
+    <value>With the remote payment program you can manage the parking of your vehicle and extend parking
+time, from any point in our network of services, as well as pay for various operations easily with your
+credit card.</value>
+  </data>
+  <data name="CustomerInscriptionModel_Step2IntroText2" xml:space="preserve">
+    <value>Once registered, you can modify your personal details or unsubscribe at any point.</value>
+  </data>
+  <data name="CustomerInscriptionModel_Step2IntroText3" xml:space="preserve">
+    <value>All of the information you provide is protected under the “Protection of Personal Information Policy”
+covered on this website.</value>
+  </data>
+  <data name="CustomerInscriptionModel_Step2IntroText4" xml:space="preserve">
+    <value>Please fill out the personal details to enjoy the benefits of the remote payment for regulated parking
+service.</value>
+  </data>
+  <data name="CustomerInscriptionModel_Step2SendSMS" xml:space="preserve">
+    <value>If you have not received a message, press the button "Resend SMS" and you should receive a new SMS on the phone ending in {0}.</value>
+  </data>
+  <data name="CustomerInscriptionModel_Step2WriteYourCode" xml:space="preserve">
+    <value>Enter code: </value>
+  </data>
+  <data name="CustomerInscriptionModel_Step2WriteYourCode1" xml:space="preserve">
+    <value>Enter the code of {0}  digits received by SMS on the mobile device ending in {1} to continue with your registration (code valid for {2} min).</value>
+  </data>
+  <data name="CustomerInscriptionModel_Step3Address" xml:space="preserve">
+    <value>Company Name</value>
+  </data>
+  <data name="CustomerInscriptionModel_Step4IHaveReadAndAccept" xml:space="preserve">
+    <value>I have read and accept the terms and</value>
+  </data>
+  <data name="CustomerInscriptionModel_Step4PreferredPlate" xml:space="preserve">
+    <value>Preferred License Plate</value>
+  </data>
+  <data name="CustomerInscriptionModel_Step4SecurityAdvice" xml:space="preserve">
+    <value> (For security purposes, we recommend that you choose a different password than that of your e-mail.)</value>
+  </data>
+  <data name="CustomerInscriptionModel_Step4UseConditions" xml:space="preserve">
+    <value>Use Conditions</value>
+  </data>
+  <data name="CustomerInscriptionModel_Step4UserInformation" xml:space="preserve">
+    <value>User Information</value>
+  </data>
+  <data name="CustomerInscriptionModel_StepBttnFinish" xml:space="preserve">
+    <value>Complete</value>
+  </data>
+  <data name="CustomerInscriptionModel_StreetName" xml:space="preserve">
+    <value>St. Name</value>
+  </data>
+  <data name="CustomerInscriptionModel_StreetNumber" xml:space="preserve">
+    <value>St. Number</value>
+  </data>
+  <data name="CustomerInscriptionModel_SuccessCreatingAccount_1" xml:space="preserve">
+    <value> Congratulations! Your Pay by Mobile account has been successfully created. Now you can login to your new account and purchase credit to begin using this service. </value>
+  </data>
+  <data name="CustomerInscriptionModel_SuccessCreatingAccount_3" xml:space="preserve">
+    <value>We have sent a confirmation e-mail to: &lt;a href="{0}"&gt; {0}&lt;/a&gt;, where you will find information for login, user details, and password. </value>
+  </data>
+  <data name="CustomerInscriptionModel_SuccessCreatingAccount_4" xml:space="preserve">
+    <value>Remember the benefits of being registered: </value>
+  </data>
+  <data name="CustomerInscriptionModel_SuccessCreatingAccount_5" xml:space="preserve">
+    <value> Refund of unused time</value>
+  </data>
+  <data name="CustomerInscriptionModel_SuccessCreatingAccount_6" xml:space="preserve">
+    <value>Automatically credit your balance-- save time.</value>
+  </data>
+  <data name="CustomerInscriptionModel_SuccessCreatingAccount_7" xml:space="preserve">
+    <value>Online access to your operations and invoices</value>
+  </data>
+  <data name="CustomerInscriptionModel_SuccessCreatingAccount_8" xml:space="preserve">
+    <value> Expired time warnings</value>
+  </data>
+  <data name="CustomerInscriptionModel_SuccessCreatingAccount_9" xml:space="preserve">
+    <value>Park without having to go to the meter, and pay only for actual time parked. </value>
+  </data>
+  <data name="CustomerInscriptionModel_SummaryWelcomeEmail_Body" xml:space="preserve">
+    <value>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;
+&lt;html&gt;
+&lt;head&gt;
+	&lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8"&gt;
+	&lt;title&gt;Welcome&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;table align="center" style="border-collapse: collapse; border-spacing: 0; margin: 0 auto; padding: 0; width: 650px;"&gt;
+		&lt;tr style="background: #0F4F7B;"&gt;
+			&lt;td style="padding: 15px 0 15px 25px; width: 60px"&gt;&lt;img src="https://www.eysamobile.com/integraMobile/Content/img/offp_icon.png" alt=""&gt;&lt;/td&gt;
+			&lt;td style="color: #FFF; font-family: Arial, sans-serif; font-size: 32px; padding: 15px 25px; vertical-align: middle; width: 95%;"&gt;Welcome&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td colspan="2" style="padding: 40px 0 0;"&gt;
+				&lt;table style="border-spacing: 0; margin: 0; padding: 0 4px 0 1px; table-layout: fixed; width: 100%;"&gt;
+					&lt;tr&gt;
+						&lt;td style="color: #51565A; font-family: Arial, sans-serif; font-size: 20px; padding: 0 0 10px;"&gt;Congratulations, your account has been successfully created with the following login information:&lt;/td&gt;
+					&lt;/tr&gt;
+				&lt;/table&gt;
+				&lt;table style="border-spacing: 0; margin: 0; padding: 0 4px 0 1px; table-layout: fixed; width: 100%;"&gt;
+					&lt;tr&gt;
+						&lt;td colspan="2" style="border-bottom: 1px solid #C2C2C2; color: #8B8B8B; font-family: Arial, sans-serif; font-size: 13px; font-style: italic; padding: 10px 1px; vertical-align: bottom;"&gt;Login&lt;/td&gt;
+						&lt;td colspan="3" style="border-bottom: 2px solid #C2C2C2; color: #0F4F7B; font-family: Arial, sans-serif; font-size: 16px; padding: 10px 1px; text-align: center; vertical-align: bottom;"&gt;{2}&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td colspan="2" style="padding: 10px 1px;"&gt;&amp;nbsp;&lt;/td&gt;
+						&lt;td&gt;&amp;nbsp;&lt;/td&gt;
+						&lt;td colspan="2" style="padding: 10px 1px;"&gt;&amp;nbsp;&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td colspan="5" style="color: #51565A; font-family: Arial, sans-serif; font-size: 18px; padding: 0 0 10px; text-align: center;"&gt;Now you can access your account and recharge your wallet to use the service:&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td colspan="5" style="color: #51565A; font-family: Arial, sans-serif; font-size: 18px; padding: 25px 0 20px; text-align: center;"&gt;
+							&lt;a href="#" style="border: 2px solid #0F4F7B; color: #0F4F7B; font-size: 14px; font-weight: bold; padding: 15px 60px; text-decoration: none; text-transform: uppercase;"&gt;Login&lt;/a&gt;
+						&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td colspan="5" style="border-bottom: 1px solid #C2C2C2; color: #8B8B8B; font-family: Arial, sans-serif; font-size: 13px; font-style: italic; padding: 0 1px 10px;"&gt;&amp;nbsp;&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td colspan="2" style="padding: 10px 1px;"&gt;&amp;nbsp;&lt;/td&gt;
+						&lt;td&gt;&amp;nbsp;&lt;/td&gt;
+						&lt;td colspan="2" style="padding: 10px 1px;"&gt;&amp;nbsp;&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td colspan="5" style="color: #51565A; font-family: Arial, sans-serif; font-size: 18px; padding: 0 0 10px;"&gt;Remember the benefits of being a prepay user:&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td colspan="5" style="color: #51565A; font-family: Arial, sans-serif; font-size: 18px; padding: 0 1px 10px;"&gt;
+							&lt;ul style="padding-left: 20px;"&gt;
+								&lt;li style="color: #0F4F7B; font-size: 13px; font-weight: bold;"&gt;
+									&lt;a href="#" style="color: #0F4F7B; font-size: 13px; font-weight: bold; text-decoration: none;"&gt;Refund of the unused time.&lt;/a&gt;
+								&lt;/li&gt;
+								&lt;li style="color: #0F4F7B; font-size: 13px; font-weight: bold;"&gt;
+									&lt;a href="#" style="color: #0F4F7B; font-size: 13px; font-weight: bold; text-decoration: none;"&gt;Recharge automatically and save time.&lt;/a&gt;
+								&lt;/li&gt;
+								&lt;li style="color: #0F4F7B; font-size: 13px; font-weight: bold;"&gt;
+									&lt;a href="#" style="color: #0F4F7B; font-size: 13px; font-weight: bold; text-decoration: none;"&gt;Online access to your operations and invoices.&lt;/a&gt;
+								&lt;/li&gt;
+								&lt;li style="color: #0F4F7B; font-size: 13px; font-weight: bold;"&gt;
+									&lt;a href="#" style="color: #0F4F7B; font-size: 13px; font-weight: bold; text-decoration: none;"&gt;Alarms before your parking is over.&lt;/a&gt;
+								&lt;/li&gt;
+							&lt;/ul&gt;		
+						&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td colspan="5" style="color: #51565A; font-family: Arial, sans-serif; font-size: 13px; padding: 0 0 10px;"&gt;Remember that now you have a meter in your hand. Enjoy Your Parking!&lt;/td&gt;
+					&lt;/tr&gt;
+				&lt;/table&gt;
+			&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr style="background: #0F4F7B;"&gt;
+			&lt;td colspan="2" style="color: #FFF; font-family: Arial, sans-serif; font-size: 16px; padding: 20px 0; text-align: center;"&gt;EysaMobile - Parking&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td colspan="2" style="color: #B0B0B0; font-family: Arial, sans-serif; font-size: 11px; padding: 15px 0;"&gt;THIS E_MAIL IS PRIVILEGED AND CONTAINS CONFIDENTIAL INFORMATION. Any reading, retention, distribution or copying of this communication by any person other that its intended recipient is prohibited. Please consider the environment before printing .&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;</value>
+  </data>
+  <data name="CustomerInscriptionModel_SummaryWelcomeEmail_Subject" xml:space="preserve">
+    <value>Bienvenido a EYSAMobile</value>
+  </data>
+  <data name="CustomerInscriptionModel_Summary_Button_Login" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="CustomerInscriptionModel_SuscriptionType" xml:space="preserve">
+    <value>Suscription Type</value>
+  </data>
+  <data name="CustomerInscriptionModel_Username" xml:space="preserve">
+    <value>User Name</value>
+  </data>
+  <data name="CustomerInscriptionModel_Welcome" xml:space="preserve">
+    <value>Welcome, &lt;strong&gt;{0}&lt;/strong&gt;</value>
+  </data>
+  <data name="CustomerInscriptionModel_WriteYourAlternativePhoneNumber" xml:space="preserve">
+    <value>Write your home phone number</value>
+  </data>
+  <data name="CustomerInscriptionModel_WriteYourCity" xml:space="preserve">
+    <value>* Write the name of your city.</value>
+  </data>
+  <data name="CustomerInscriptionModel_WriteYourConfirmPassword" xml:space="preserve">
+    <value>* Repeat Password</value>
+  </data>
+  <data name="CustomerInscriptionModel_WriteYourDocID" xml:space="preserve">
+    <value>* Write your Driver's License Number</value>
+  </data>
+  <data name="CustomerInscriptionModel_WriteYourDoorInStreetNumber" xml:space="preserve">
+    <value>Apartment #</value>
+  </data>
+  <data name="CustomerInscriptionModel_WriteYourEmail" xml:space="preserve">
+    <value>* Write your e-mail</value>
+  </data>
+  <data name="CustomerInscriptionModel_WriteYourFirstSurname" xml:space="preserve">
+    <value>* Write your last name</value>
+  </data>
+  <data name="CustomerInscriptionModel_WriteYourLetterInStreetNumber" xml:space="preserve">
+    <value>letter</value>
+  </data>
+  <data name="CustomerInscriptionModel_WriteYourLevelInStreetNumber" xml:space="preserve">
+    <value>floor</value>
+  </data>
+  <data name="CustomerInscriptionModel_WriteYourMainPhoneNumber" xml:space="preserve">
+    <value>* Write your cell phone number</value>
+  </data>
+  <data name="CustomerInscriptionModel_WriteYourName" xml:space="preserve">
+    <value>* Write your first name</value>
+  </data>
+  <data name="CustomerInscriptionModel_WriteYourPassword" xml:space="preserve">
+    <value>* Min.- {0} Max {1} characteres</value>
+  </data>
+  <data name="CustomerInscriptionModel_WriteYourPlate" xml:space="preserve">
+    <value>* Vehicle License Plate</value>
+  </data>
+  <data name="CustomerInscriptionModel_WriteYourSecondSurname" xml:space="preserve">
+    <value>Write your middle name</value>
+  </data>
+  <data name="CustomerInscriptionModel_WriteYourStairInStreetNumber" xml:space="preserve">
+    <value>stair</value>
+  </data>
+  <data name="CustomerInscriptionModel_WriteYourState" xml:space="preserve">
+    <value>* Write your State.</value>
+  </data>
+  <data name="CustomerInscriptionModel_WriteYourStreetName" xml:space="preserve">
+    <value>* Write your Street Name</value>
+  </data>
+  <data name="CustomerInscriptionModel_WriteYourStreetNumber" xml:space="preserve">
+    <value>* Write your street number. </value>
+  </data>
+  <data name="CustomerInscriptionModel_WriteYourUsername" xml:space="preserve">
+    <value>* Min.- {0} Max {1} characteres</value>
+  </data>
+  <data name="CustomerInscriptionModel_WriteYourZipCode" xml:space="preserve">
+    <value>* Write your zip code</value>
+  </data>
+  <data name="CustomerInscriptionModel_ZipCode" xml:space="preserve">
+    <value>Zip Code</value>
+  </data>
+  <data name="ErrMsg_ActivationCodeAlreadyUsed" xml:space="preserve">
+    <value>The registration code has already been used. </value>
+  </data>
+  <data name="ErrMsg_ActivationCodeExpired" xml:space="preserve">
+    <value>The activation code has expired. Please restart the registration process. </value>
+  </data>
+  <data name="ErrMsg_ActivationCodeExpired_2" xml:space="preserve">
+    <value>The activation code has expired</value>
+  </data>
+  <data name="ErrMsg_ActivationURLIncorrect" xml:space="preserve">
+    <value>Activation link invalid. </value>
+  </data>
+  <data name="ErrMsg_DeleteUserMustBeAccepted" xml:space="preserve">
+    <value>You must check the box to accept</value>
+  </data>
+  <data name="ErrMsg_UseConditionsMustBeAccepted" xml:space="preserve">
+    <value>Use Conditions must be accepted</value>
+  </data>
+  <data name="ErrMsg_UsernameAlreadyExist" xml:space="preserve">
+    <value>This User Name already exists. Please choose another one. </value>
+  </data>
+  <data name="ErrMsg_ValidationCodeIsIncorrect" xml:space="preserve">
+    <value> The validation code is incorrect. </value>
+  </data>
+  <data name="ErrMsg_ValidationCodeIsRequired" xml:space="preserve">
+    <value>The validation code is required. </value>
+  </data>
+  <data name="ErrorsMsg_CaptchaNotValid" xml:space="preserve">
+    <value>Captcha not valid</value>
+  </data>
+  <data name="ErrorsMsg_ErrorAddindInformationToDB" xml:space="preserve">
+    <value>Error adding information to the database. </value>
+  </data>
+  <data name="ErrorsMsg_ErrorEmailAlreadyExist" xml:space="preserve">
+    <value>This e-mail cannot be used because it already exists in the system </value>
+  </data>
+  <data name="ErrorsMsg_ErrorNothingHasChanged" xml:space="preserve">
+    <value>Nothing has been changed</value>
+  </data>
+  <data name="ErrorsMsg_ErrorSendingActivation" xml:space="preserve">
+    <value>Error sending the activation</value>
+  </data>
+  <data name="ErrorsMsg_ErrorTelephoneAlreadyExist" xml:space="preserve">
+    <value>This telephone number cannot be used because it already exists in the system </value>
+  </data>
+  <data name="ErrorsMsg_InvalidFormat" xml:space="preserve">
+    <value>The {0} field is an invalid format </value>
+  </data>
+  <data name="ErrorsMsg_InvalidLength" xml:space="preserve">
+    <value>The maximum length of the {0} field is {1}</value>
+  </data>
+  <data name="ErrorsMsg_InvalidLengthWithMinimum" xml:space="preserve">
+    <value>The maximum length of the {0} field is {1}</value>
+  </data>
+  <data name="ErrorsMsg_InvalidPassword" xml:space="preserve">
+    <value>Invalid Password</value>
+  </data>
+  <data name="ErrorsMsg_LengthMustBeAtLeast" xml:space="preserve">
+    <value>The maximum length of the {0} field is {1}</value>
+  </data>
+  <data name="ErrorsMsg_PasswordsMustMatch" xml:space="preserve">
+    <value>The passwords must match</value>
+  </data>
+  <data name="ErrorsMsg_PlateListCantbeEmpty" xml:space="preserve">
+    <value>Plates List can't be empty</value>
+  </data>
+  <data name="ErrorsMsg_RequiredField" xml:space="preserve">
+    <value>The {0} field is required</value>
+  </data>
+  <data name="ErrorsMsg_RequiredFieldPayPalID" xml:space="preserve">
+    <value>The PayPal ID field is required. </value>
+  </data>
+  <data name="ErrorsMsg_SummaryMessage" xml:space="preserve">
+    <value>There are some errors. Please correct them to continue. </value>
+  </data>
+  <data name="ErrorsMsg_UserNotExists" xml:space="preserve">
+    <value>There is no user with this information</value>
+  </data>
+  <data name="ForgotPasswordEnd_Remark" xml:space="preserve">
+    <value>An e-mail has been sent to your account containing a link. Once you receive an SMS on your mobile phone with a code, open the link and enter the code. </value>
+  </data>
+  <data name="ForgotPassword_EmailBody" xml:space="preserve">
+    <value>Get your password by pressing  &lt;a href="{0}"&gt;{1}&lt;/a&gt; once you have received the SMS.  &lt;br&gt;&lt;br&gt;&lt;br&gt;The EYSAMobile Team</value>
+  </data>
+  <data name="ForgotPassword_EmailHeader" xml:space="preserve">
+    <value>EYSAMobile: Password Recovery</value>
+  </data>
+  <data name="ForgotPassword_Remarks" xml:space="preserve">
+    <value>After pressing the button to confirm, an e-mail will be sent to your account containing a link. Once you receive an SMS on your mobile phone with a code, open the link and enter the code. </value>
+  </data>
+  <data name="ForgotPassword_SMS" xml:space="preserve">
+    <value>This is a message from EYSAMobile. Your code to recover your password is {0}.</value>
+  </data>
+  <data name="ForgotPassword_Title" xml:space="preserve">
+    <value>Password Reminder</value>
+  </data>
+  <data name="Home_AddNewUser" xml:space="preserve">
+    <value>Add New User</value>
+  </data>
+  <data name="Home_BadUserNameOrPassword" xml:space="preserve">
+    <value> The User Name or password is incorrect. </value>
+  </data>
+  <data name="Home_Companies" xml:space="preserve">
+    <value>Company Name</value>
+  </data>
+  <data name="Home_ForgotPassword" xml:space="preserve">
+    <value>Forget your password? </value>
+  </data>
+  <data name="Home_ForgotUsername" xml:space="preserve">
+    <value>Forget your User Name?</value>
+  </data>
+  <data name="Home_GetUserDataError" xml:space="preserve">
+    <value>Error obtaining user information. </value>
+  </data>
+  <data name="Home_Individuals" xml:space="preserve">
+    <value>Individual</value>
+  </data>
+  <data name="Home_Password" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="Home_Service_Conditions" xml:space="preserve">
+    <value>Review the legal terms.</value>
+  </data>
+  <data name="Home_UserDeleteError" xml:space="preserve">
+    <value>Error deleting the user</value>
+  </data>
+  <data name="Home_UserDeleteOK" xml:space="preserve">
+    <value>User deleted correctly </value>
+  </data>
+  <data name="Home_Username" xml:space="preserve">
+    <value>User Name or e-mail</value>
+  </data>
+  <data name="Home_WhyService" xml:space="preserve">
+    <value>Why use EYSAMobile?</value>
+  </data>
+  <data name="No_Registries_Found" xml:space="preserve">
+    <value>No registered matches were found.</value>
+  </data>
+  <data name="Pager_First" xml:space="preserve">
+    <value>First </value>
+  </data>
+  <data name="Pager_Format" xml:space="preserve">
+    <value>Register {0} - {1} of {2}</value>
+  </data>
+  <data name="Pager_Last" xml:space="preserve">
+    <value>Last</value>
+  </data>
+  <data name="Pager_Next" xml:space="preserve">
+    <value>Next</value>
+  </data>
+  <data name="Pager_Previous" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="Pager_SingleFormat" xml:space="preserve">
+    <value>Register {0} of {1}</value>
+  </data>
+  <data name="PersonalData" xml:space="preserve">
+    <value>Personal Details</value>
+  </data>
+  <data name="RegistrationForm" xml:space="preserve">
+    <value>Registration Form</value>
+  </data>
+  <data name="RegistrationForm_Step1End_IdentityValidation_Step1" xml:space="preserve">
+    <value>Validation of identity - Step 1</value>
+  </data>
+  <data name="RegistrationForm_Step1End_IdentityValidation_Step2" xml:space="preserve">
+    <value>Validation of identity - Step 2</value>
+  </data>
+  <data name="RememberMeCheck" xml:space="preserve">
+    <value>Remember me</value>
+  </data>
+  <data name="SecurityOperationChangeEmailOrTelephone_Confirmation" xml:space="preserve">
+    <value>Edit e-mail and/or phone number - Confirmation</value>
+  </data>
+  <data name="SecurityOperationChangeEmailOrTelephone_ConfirmationText1" xml:space="preserve">
+    <value>Your e-mail and/or phone number has been correctly edited. </value>
+  </data>
+  <data name="SecurityOperationChangeEmailOrTelephone_ConfirmationText2" xml:space="preserve">
+    <value>e-mail: </value>
+  </data>
+  <data name="SecurityOperationChangeEmailOrTelephone_ConfirmationText3" xml:space="preserve">
+    <value>Phone number:</value>
+  </data>
+  <data name="SecurityOperationChangeEmailOrTelephone_IdentityValidation" xml:space="preserve">
+    <value>Edit e-mail and/or phone number - Identity Verification </value>
+  </data>
+  <data name="SecurityOperationChangeEmailOrTelephone_Step2WriteYourCode" xml:space="preserve">
+    <value>Enter code: </value>
+  </data>
+  <data name="SecurityOperationChangeEmailOrTelephone_Step2WriteYourCode1" xml:space="preserve">
+    <value>Enter the code containing {0}  digits received by SMS on the phone ending in {1}  to confirm the modification of e-mail and/or phone number (code valid for {2} min).</value>
+  </data>
+  <data name="SecurityOperationForgotPassword_Confirmation" xml:space="preserve">
+    <value>Password Reminder - Confirmation</value>
+  </data>
+  <data name="SecurityOperationForgotPassword_ConfirmationText1" xml:space="preserve">
+    <value>Your password will be shown below</value>
+  </data>
+  <data name="SecurityOperationForgotPassword_IdentityValidation" xml:space="preserve">
+    <value>Password Reminder - Identity Verification </value>
+  </data>
+  <data name="SecurityOperationForgotPassword_Step2WriteYourCode1" xml:space="preserve">
+    <value>Enter the code containing {0}  digits received by SMS on the phone ending in {1}  to get your password (code valid for {2} min).</value>
+  </data>
+  <data name="SecurityOperationForgotPassword_Step2WriteYourCode2" xml:space="preserve">
+    <value>Enter code: </value>
+  </data>
+  <data name="SelectPayMethod_ChangeSuscriptionType" xml:space="preserve">
+    <value>Change subscription type</value>
+  </data>
+  <data name="SelectPayMethod_CreditCard" xml:space="preserve">
+    <value>Credit or Debit Cards</value>
+  </data>
+  <data name="SelectPayMethod_IntroText1" xml:space="preserve">
+    <value>User - Establish method of payment</value>
+  </data>
+  <data name="SelectPayMethod_IntroText2" xml:space="preserve">
+    <value>Payment Method</value>
+  </data>
+  <data name="SelectPayMethod_IntroText3" xml:space="preserve">
+    <value>Automatic purchase of credit</value>
+  </data>
+  <data name="SelectPayMethod_IntroText4" xml:space="preserve">
+    <value>If you wish to save time and take full advantage of the application, activate the automatic recharge option and configure the minimum amount.  </value>
+  </data>
+  <data name="SelectPayMethod_Paypal" xml:space="preserve">
+    <value>PayPal</value>
+  </data>
+  <data name="SelectPayMethod_PerTransactionCheckBoxMessage" xml:space="preserve">
+    <value>I accept</value>
+  </data>
+  <data name="SelectPayMethod_PerTransactionCheckBox_Error" xml:space="preserve">
+    <value>You must accept the charge to continue</value>
+  </data>
+  <data name="SelectPayMethod_PerTransactionMessage" xml:space="preserve">
+    <value>Once you press Next, the amount of {0} {1} will be charged to activate your payment method online. </value>
+  </data>
+  <data name="SelectPayMethod_SubstituteCurrentCard" xml:space="preserve">
+    <value>Change current credit/debit card ({0})</value>
+  </data>
+  <data name="SelectPayMethod_SuscriptionType" xml:space="preserve">
+    <value>Subscription Type:</value>
+  </data>
+  <data name="SelectPayMethod_SuscriptionType_PerTransaction" xml:space="preserve">
+    <value>Payment by Transaction</value>
+  </data>
+  <data name="SelectPayMethod_SuscriptionType_Prepay" xml:space="preserve">
+    <value>Prepaid User</value>
+  </data>
+  <data name="SelectSuscriptionType_IntroText1" xml:space="preserve">
+    <value>User- Choose prepaid or transaction </value>
+  </data>
+  <data name="SelectSuscriptionType_IntroText2" xml:space="preserve">
+    <value>Prepaid User</value>
+  </data>
+  <data name="SelectSuscriptionType_IntroText3" xml:space="preserve">
+    <value>Payment by Transaction</value>
+  </data>
+  <data name="SelectSuscriptionType_PerTransaction1" xml:space="preserve">
+    <value>Payment by Transaction</value>
+  </data>
+  <data name="SelectSuscriptionType_PerTransaction2" xml:space="preserve">
+    <value>Every time you park, extend time, or pay a fine, the exact amount will be charged to your credit card. </value>
+  </data>
+  <data name="SelectSuscriptionType_PerTransaction3" xml:space="preserve">
+    <value>* In every operation which you add/modify the payment method, the amount of  {0} {1} will be charged. </value>
+  </data>
+  <data name="SelectSuscriptionType_Prepay1" xml:space="preserve">
+    <value>Prepay (and all of it's advantages)</value>
+  </data>
+  <data name="SelectSuscriptionType_Prepay2" xml:space="preserve">
+    <value>1) Park, extend time, or pay for a fine. </value>
+  </data>
+  <data name="SelectSuscriptionType_Prepay3" xml:space="preserve">
+    <value>We refund you {0} {1} for each operation that you complete. </value>
+  </data>
+  <data name="SelectSuscriptionType_Prepay4" xml:space="preserve">
+    <value>2) We refund your unused time. </value>
+  </data>
+  <data name="SelectSuscriptionType_Prepay5" xml:space="preserve">
+    <value>Don't worry if you're in a meeting.</value>
+  </data>
+  <data name="SelectSuscriptionType_Prepay6" xml:space="preserve">
+    <value>Enjoy your spare time.</value>
+  </data>
+  <data name="SelectSuscriptionType_Prepay7" xml:space="preserve">
+    <value>Stop worrying about your parking time, no matter what you have to get done.</value>
+  </data>
+  <data name="ServiceName" xml:space="preserve">
+    <value>Remote payment for regulated parking service</value>
+  </data>
+  <data name="SiteMaster_Contact" xml:space="preserve">
+    <value>Contact</value>
+  </data>
+  <data name="SiteMaster_Home" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="UserData_ButtonCancel" xml:space="preserve">
+    <value>Cancel Changes</value>
+  </data>
+  <data name="UserData_ButtonConfirm" xml:space="preserve">
+    <value>Confirm Changes</value>
+  </data>
+  <data name="UserData_CancelAdd" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="UserData_ChangeEmailOrMobileEnd_Remark" xml:space="preserve">
+    <value>An e-mail has been sent to your account containing a link. Once you receive an SMS on your mobile phone with a code, open the link and enter the code. </value>
+  </data>
+  <data name="UserData_ChangePaymentMean" xml:space="preserve">
+    <value>Change</value>
+  </data>
+  <data name="UserData_ChangeTelOrEmailTitle" xml:space="preserve">
+    <value>Change mobile phone and/or e-mail</value>
+  </data>
+  <data name="UserData_ConfirmAdd" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="UserData_ConfirmNewPassword" xml:space="preserve">
+    <value>Confirm New Password</value>
+  </data>
+  <data name="UserData_CurrentPassword" xml:space="preserve">
+    <value>Current Password</value>
+  </data>
+  <data name="UserData_DeleteUserEnd_Remark" xml:space="preserve">
+    <value>Your account has been deleted, all of your information has been deleted, your balance has expired, and it is no longer possible to recover your account. </value>
+  </data>
+  <data name="UserData_DeleteUserRemark" xml:space="preserve">
+    <value>If you delete your account, all of your information will be deleted and it will not be possible to recover your account.&lt;br/&gt;Your user agreement will end upon deleting your account and your balance will expire. </value>
+  </data>
+  <data name="UserData_DeleteUserTitle" xml:space="preserve">
+    <value>Delete User</value>
+  </data>
+  <data name="UserData_DeleteUser_IntroducePassword" xml:space="preserve">
+    <value>Enter your password to unsubscribe. </value>
+  </data>
+  <data name="UserData_DeleteUser_UnderstandDeletion" xml:space="preserve">
+    <value>I understand and I accept</value>
+  </data>
+  <data name="UserData_InitProcedure" xml:space="preserve">
+    <value>Start Procedure</value>
+  </data>
+  <data name="UserData_InsertNewPlate" xml:space="preserve">
+    <value>Insert New Plate</value>
+  </data>
+  <data name="UserData_NewPassword" xml:space="preserve">
+    <value>New Password</value>
+  </data>
+  <data name="UserData_PasswordRemark" xml:space="preserve">
+    <value>Only fill new password fields for changing password</value>
+  </data>
+  <data name="UserData_PayMeansRemark" xml:space="preserve">
+    <value>Changing Payment Mean will cause a charge on your payment method.</value>
+  </data>
+  <data name="UserData_PayMeansTitle" xml:space="preserve">
+    <value>Current Payment Mean Type</value>
+  </data>
+  <data name="UserData_Plates" xml:space="preserve">
+    <value>Plates</value>
+  </data>
+  <data name="UserData_PlatesRemark" xml:space="preserve">
+    <value>To Save plates changes "Save Changes" must be pressed</value>
+  </data>
+  <data name="UserData_RemovePlate" xml:space="preserve">
+    <value>Remove Selected Plate</value>
+  </data>
+  <data name="UserData_RemoveUserAccount" xml:space="preserve">
+    <value>Remove User Account</value>
+  </data>
+  <data name="UserData_UserDataTittle" xml:space="preserve">
+    <value>User Data</value>
+  </data>
+  <data name="UserData_WriteYourConfirmPassword" xml:space="preserve">
+    <value>* Repeat Your New Password</value>
+  </data>
+  <data name="UserData_WriteYourCurrentPassword" xml:space="preserve">
+    <value>* Write your current password</value>
+  </data>
+  <data name="Account_Invoice_Amount" xml:space="preserve">
+    <value>Recharges Amount</value>
+  </data>
+  <data name="Account_Invoice_Date" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="Account_Invoice_Down_Link" xml:space="preserve">
+    <value>Download Link</value>
+  </data>
+  <data name="Account_Invoice_End_Date" xml:space="preserve">
+    <value>End Date</value>
+  </data>
+  <data name="Account_Invoice_InvoiceNumber" xml:space="preserve">
+    <value>Invoice Number</value>
+  </data>
+  <data name="Account_Invoice_Start_Date" xml:space="preserve">
+    <value>Start Date</value>
+  </data>
+  <data name="Account_Invoice_PDF_Amount" xml:space="preserve">
+    <value>Amount</value>
+  </data>
+  <data name="Account_Invoice_PDF_BaseAmount" xml:space="preserve">
+    <value>Taxable Amount</value>
+  </data>
+  <data name="Account_Invoice_PDF_Date" xml:space="preserve">
+    <value>Date:</value>
+  </data>
+  <data name="Account_Invoice_PDF_Detail" xml:space="preserve">
+    <value>Datail</value>
+  </data>
+  <data name="Account_Invoice_PDF_DNI_NIF" xml:space="preserve">
+    <value>Doc ID/Tax ID:</value>
+  </data>
+  <data name="Account_Invoice_PDF_InvoiceNumber" xml:space="preserve">
+    <value>Invoice:</value>
+  </data>
+  <data name="Account_Invoice_PDF_NIF" xml:space="preserve">
+    <value>Tax ID:</value>
+  </data>
+  <data name="Account_Invoice_PDF_Total" xml:space="preserve">
+    <value>TOTAL:</value>
+  </data>
+  <data name="Account_Invoice_PDF_Units" xml:space="preserve">
+    <value>Units</value>
+  </data>
+  <data name="Account_Invoice_PDF_Unit_Amount" xml:space="preserve">
+    <value>Unit Amount</value>
+  </data>
+  <data name="Account_Invoice_PDF_VAT" xml:space="preserve">
+    <value>V.A.T.</value>
+  </data>
+  <data name="Account_RechargeMinImportRemark" xml:space="preserve">
+    <value>(mín. to validate payment method)</value>
+  </data>
+  <data name="UserData_PayMeansRemark_Prepay" xml:space="preserve">
+    <value>The related amount will be added to your balance.</value>
+  </data>
+  <data name="SelectPayMethod_Sus_Option1" xml:space="preserve">
+    <value>Select "Change current credit/debit card":</value>
+  </data>
+  <data name="SelectPayMethod_Sus_Option2" xml:space="preserve">
+    <value>Choose a method of payment:</value>
+  </data>
+  <data name="SelectPayMethod_Sus_Option3" xml:space="preserve">
+    <value>Take advantage of the automatic recurring credit and activate it now:</value>
+  </data>
+  <data name="SelectPayMethod_Sus_Remark1" xml:space="preserve">
+    <value>Remember that once you have pressed "next", if you have chosen "change current credit/debit card":</value>
+  </data>
+  <data name="SelectPayMethod_Sus_Remark2" xml:space="preserve">
+    <value>Your balance will still be available through your new method of payment.</value>
+  </data>
+  <data name="SelectPayMethod_Sus_Remark3" xml:space="preserve">
+    <value>You must add credit to your balance to verify your new method of payment by:</value>
+  </data>
+  <data name="SelectPayMethod_Sus_Remark4" xml:space="preserve">
+    <value>1) Selecting an amount that will be applied to your balance.</value>
+  </data>
+  <data name="SelectPayMethod_Sus_Remark5" xml:space="preserve">
+    <value>2) Entering the new payment method information.</value>
+  </data>
+  <data name="SelectPayMethod_Sus_Remark6" xml:space="preserve">
+    <value>If you do not wish to change your current method of payment, deselect "change current credit/debit card" in step 1.</value>
+  </data>
+  <data name="Account_Op_Source" xml:space="preserve">
+    <value>Operation Source</value>
+  </data>
+  <data name="Account_Op_SourceIdent" xml:space="preserve">
+    <value>({0})</value>
+  </data>
+  <data name="Account_Op_SourceType" xml:space="preserve">
+    <value>{0} {1}</value>
+  </data>
+  <data name="ErrorsMsg_InvalidPaymentMeanType" xml:space="preserve">
+    <value>Invalid payment method</value>
+  </data>
+  <data name="Account_Op_Date_Time" xml:space="preserve">
+    <value>Time</value>
+  </data>
+  <data name="Account_Op_End_Date_Time" xml:space="preserve">
+    <value>End Time</value>
+  </data>
+  <data name="Account_Op_ExportPdf_Title" xml:space="preserve">
+    <value>Export data to pdf format</value>
+  </data>
+  <data name="Account_Op_ExportXls_Title" xml:space="preserve">
+    <value>Export data to Excel format</value>
+  </data>
+  <data name="Account_Op_Export_PDFFilename" xml:space="preserve">
+    <value>Operations</value>
+  </data>
+  <data name="Account_Op_Export_XLSFilename" xml:space="preserve">
+    <value>Operations</value>
+  </data>
+  <data name="Account_Op_Start_Date_Time" xml:space="preserve">
+    <value>Start Time</value>
+  </data>
+  <data name="Account_Op_Type_OffstreetEntry" xml:space="preserve">
+    <value>Offstreet Entry</value>
+  </data>
+  <data name="Account_Op_Type_OffstreetExit" xml:space="preserve">
+    <value>Offstreet Exit</value>
+  </data>
+  <data name="Account_Op_Type_OffstreetOverduePayment" xml:space="preserve">
+    <value>Offstreet Overdue Payment</value>
+  </data>
+  <data name="Account_RechargeValue" xml:space="preserve">
+    <value>{0} {1}</value>
+  </data>
+  <data name="Account_RechargeValueBase_Label" xml:space="preserve">
+    <value>EysaMobile Credit:</value>
+  </data>
+  <data name="Account_RechargeValueFEE_Label" xml:space="preserve">
+    <value>Service fee:</value>
+  </data>
+  <data name="Account_RechargeValueOrder_Label" xml:space="preserve">
+    <value>Your order:</value>
+  </data>
+  <data name="Account_RechargeValueTotal_Label" xml:space="preserve">
+    <value>Total to pay:</value>
+  </data>
+  <data name="Account_RechargeValueVAT_Label" xml:space="preserve">
+    <value>VAT (21%):</value>
+  </data>
+  <data name="Account_RechargeValue_Label" xml:space="preserve">
+    <value>EysaMobile credit:</value>
+  </data>
+  <data name="Account_Op_AmountFEE" xml:space="preserve">
+    <value>FEE</value>
+  </data>
+  <data name="Account_Op_AmountTotal" xml:space="preserve">
+    <value>Total</value>
+  </data>
+  <data name="Account_Op_AmountVAT" xml:space="preserve">
+    <value>VAT</value>
+  </data>
+  <data name="Email_LayoutSubtotal" xml:space="preserve">
+    <value>&lt;tr&gt;
+	&lt;td colspan="2" style="border-bottom: 1px solid #C2C2C2; color: #8B8B8B; font-family: Arial, sans-serif; font-size: 13px; font-style: italic; padding: 10px 1px; vertical-align: bottom;"&gt;Subtotal:&lt;/td&gt;
+	&lt;td colspan="3" style="border-bottom: 2px solid #C2C2C2; color: #0F4F7B; font-family: Arial, sans-serif; font-size: 16px; padding: 10px 1px; text-align: center; vertical-align: bottom;"&gt;{0}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td colspan="2" style="border-bottom: 1px solid #C2C2C2; color: #8B8B8B; font-family: Arial, sans-serif; font-size: 13px; font-style: italic; padding: 10px 1px; vertical-align: bottom;"&gt;VAT ({1}):&lt;/td&gt;
+	&lt;td colspan="3" style="border-bottom: 2px solid #C2C2C2; color: #0F4F7B; font-family: Arial, sans-serif; font-size: 16px; padding: 10px 1px; text-align: center; vertical-align: bottom;"&gt;{2}&lt;/td&gt;
+&lt;/tr&gt;</value>
+  </data>
+  <data name="Email_LayoutTotal" xml:space="preserve">
+    <value>&lt;tr&gt;
+	&lt;td colspan="2" style="border-bottom: 1px solid #C2C2C2; color: #8B8B8B; font-family: Arial, sans-serif; font-size: 13px; font-style: italic; padding: 10px 1px; vertical-align: bottom;"&gt;Base:&lt;/td&gt;
+	&lt;td colspan="3" style="border-bottom: 2px solid #C2C2C2; color: #0F4F7B; font-family: Arial, sans-serif; font-size: 16px; padding: 10px 1px; text-align: center; vertical-align: bottom;"&gt;{0}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td colspan="2" style="border-bottom: 1px solid #C2C2C2; color: #8B8B8B; font-family: Arial, sans-serif; font-size: 13px; font-style: italic; padding: 10px 1px; vertical-align: bottom;"&gt;Service Cost:&lt;/td&gt;
+	&lt;td colspan="3" style="border-bottom: 2px solid #C2C2C2; color: #0F4F7B; font-family: Arial, sans-serif; font-size: 16px; padding: 10px 1px; text-align: center; vertical-align: bottom;"&gt;{1}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td colspan="2" style="border-bottom: 1px solid #C2C2C2; color: #8B8B8B; font-family: Arial, sans-serif; font-size: 13px; font-style: italic; padding: 10px 1px; vertical-align: bottom;"&gt;VAT ({2}):&lt;/td&gt;
+	&lt;td colspan="3" style="border-bottom: 2px solid #C2C2C2; color: #0F4F7B; font-family: Arial, sans-serif; font-size: 16px; padding: 10px 1px; text-align: center; vertical-align: bottom;"&gt;{3}&lt;/td&gt;
+&lt;/tr&gt;</value>
+  </data>
+  <data name="Account_Invoice_AmountOps" xml:space="preserve">
+    <value>Operations Amount</value>
+  </data>
+  <data name="Home_BuyCoupons" xml:space="preserve">
+    <value>Buy Coupons</value>
+  </data>
+  <data name="Account_Op_Type_BalanceTransfer" xml:space="preserve">
+    <value>Balance Transfer</value>
+  </data>
+  <data name="Account_Op_AdditionalUser" xml:space="preserve">
+    <value>Rel. User</value>
+  </data>
+  <data name="Account_Op_AmountBONUS" xml:space="preserve">
+    <value>Bonus</value>
+  </data>
+  <data name="Account_Op_Type_BalanceReception" xml:space="preserve">
+    <value>Saldo Reception</value>
+  </data>
+  <data name="Account_Main_BttnWebParking" xml:space="preserve">
+    <value>Parking</value>
+  </data>
+</root>

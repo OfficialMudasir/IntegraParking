@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="128px"
+	 height="128px" viewBox="0 0 128 128" enable-background="new 0 0 128 128" xml:space="preserve">
+<g id="Capa_2_1_" display="none">
+	<rect display="inline" width="128" height="128"/>
+</g>
+<g id="Capa_1" display="none">
+	<g id="Capa_1_1_">
+		<g display="inline">
+			<rect fill="#47B39C" width="128" height="128"/>
+			<polygon opacity="0.2" fill="#47B39C" enable-background="new    " points="128,128 0.051,128 128,-0.187 128,-0.107 			"/>
+			<g>
+				<polyline opacity="0.2" enable-background="new    " points="106.637,60.426 128,87.131 128,97.221 51.024,97.395 
+					21.178,67.695 				"/>
+				<g>
+					<rect x="21" y="60" fill="#FFFFFF" width="86" height="8"/>
+					<g>
+						<polygon fill="#FFFFFF" points="54.503,37.181 21.967,69.419 16.932,64.383 49.467,32.145 						"/>
+						<polygon fill="#FFFFFF" points="48.28,96.718 21.68,69.523 26.715,64.488 53.316,91.682 						"/>
+					</g>
+				</g>
+			</g>
+			<g display="none">
+				<polyline display="inline" opacity="0.2" enable-background="new    " points="106.637,91.285 128,117.991 128,128.08 
+					51.024,128.254 21.178,98.557 				"/>
+				<polyline display="inline" opacity="0.2" enable-background="new    " points="106.637,60.426 128,87.131 128,97.221 
+					51.024,97.395 21.178,67.695 				"/>
+				<polyline display="inline" opacity="0.2" enable-background="new    " points="106.637,30.752 128,57.458 128,67.547 
+					51.024,67.721 21.178,38.022 				"/>
+				<rect x="21" y="31" display="inline" fill="#FFFFFF" width="86" height="7"/>
+				<rect x="21" y="60" display="inline" fill="#FFFFFF" width="86" height="8"/>
+				<rect x="21" y="91" display="inline" fill="#FFFFFF" width="86" height="7"/>
+			</g>
+		</g>
+	</g>
+	<g id="Capa_2">
+		<path display="inline" fill="#F2F2F2" d="M115,24H13C0.869,24-9,33.869-9,46v35c0,12.131,9.869,22,22,22h102
+			c12.131,0,22-9.869,22-22V46C137,33.869,127.131,24,115,24z M127,81c0,6.627-5.373,12-12,12H25V35H8.211
+			c1.468-0.64,3.085-1,4.789-1h102c6.627,0,12,5.373,12,12V81z"/>
+		<line display="inline" fill="none" stroke="#000000" stroke-width="8" stroke-miterlimit="10" x1="78" y1="65" x2="120" y2="65"/>
+	</g>
+	<g id="Capa_3">
+		<g display="inline">
+			<path fill="none" stroke="#FFFFFF" stroke-width="8" stroke-miterlimit="10" d="M109,75c0,9.941-8.059,18-18,18H36
+				c-9.941,0-18-8.059-18-18V54c0-9.941,8.059-18,18-18h55c9.941,0,18,8.059,18,18V75z"/>
+			<path fill="none" stroke="#FFFFFF" stroke-width="8" stroke-miterlimit="10" d="M109,75c0,9.941-8.059,18-18,18H36
+				c-9.941,0-18-8.059-18-18V54c0-9.941,8.059-18,18-18h55c9.941,0,18,8.059,18,18V75z"/>
+			<path fill="#FFFFFF" stroke="#FFFFFF" stroke-width="8" stroke-miterlimit="10" d="M36.5,81c-3.309,0-6.5-3.191-6.5-6.5v-21
+				c0-3.309,3.191-5.5,6.5-5.5H42v5.5v21V81H36.5z"/>
+		</g>
+	</g>
+	<path display="inline" fill="#FFFFFF" d="M92.347,109.354H35.654c-9.394,0-17.008-7.614-17.008-17.008V35.654
+		c0-9.394,7.614-17.008,17.008-17.008h56.693c9.387,0,17.008,7.614,17.008,17.008v56.693
+		C109.354,101.74,101.733,109.354,92.347,109.354z M98.017,35.654c0-3.131-2.533-5.669-5.67-5.669H35.654
+		c-3.129,0-5.669,2.539-5.669,5.669v56.693c0,3.137,2.541,5.67,5.669,5.67h56.693c3.137,0,5.67-2.533,5.67-5.67V35.654z
+		 M69.669,75.339c0-3.137,2.535-5.67,5.67-5.67h17.008L69.669,92.347V75.339z M75.339,58.331c-3.135,0-5.67-2.534-5.67-5.669V35.654
+		l22.678,22.677H75.339z M52.661,69.669c3.13,0,5.669,2.533,5.669,5.67v17.008L35.654,69.669H52.661z M52.661,58.331H35.654
+		l22.677-22.677v17.007C58.331,55.797,55.791,58.331,52.661,58.331z"/>
+</g>
+<g id="Capa_3_1_">
+	<g>
+		<g>
+			<path fill="#FFFFFF" d="M64,19.021c-16.194,0-29.37,13.176-29.37,29.37c0,14.817,23.629,54.403,26.321,58.869
+				c0.646,1.066,1.801,1.721,3.049,1.721s2.404-0.654,3.049-1.721c2.693-4.466,26.321-44.051,26.321-58.869
+				C93.37,32.197,80.193,19.021,64,19.021z M64,98.409c-8.201-14.187-22.25-40.476-22.25-50.019c0-12.269,9.981-22.249,22.25-22.249
+				s22.25,9.98,22.25,22.249C86.25,57.93,72.201,84.222,64,98.409z"/>
+			<path fill="#FFFFFF" d="M64,31.479c-9.326,0-16.912,7.586-16.912,16.912c0,9.326,7.585,16.912,16.912,16.912
+				c9.325,0,16.912-7.585,16.912-16.912C80.912,39.065,73.325,31.479,64,31.479z M64,58.182c-5.399,0-9.792-4.393-9.792-9.792
+				s4.392-9.792,9.792-9.792c5.398,0,9.792,4.393,9.792,9.792S69.398,58.182,64,58.182z"/>
+		</g>
+	</g>
+</g>
+</svg>

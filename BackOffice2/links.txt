@@ -1,0 +1,23 @@
+@echo off set dbPBP=C:\work\svn\dbPBP
+@echo off set dbPIC=C:\work\svn\dbPIC
+
+del /Q %dbPBP%\01_trunk\02_SRC\02_Server\PayByPhoneWeb\BackOffice2\backOffice\Global.asax
+del /Q %dbPBP%\01_trunk\02_SRC\02_Server\PayByPhoneWeb\BackOffice2\backOffice\Plugins\BootStrapPlugin\Manifest.xml
+del /Q %dbPBP%\01_trunk\02_SRC\02_Server\PayByPhoneWeb\BackOffice2\backOffice\Plugins\MaintenancePlugin\Manifest.xml
+del /Q %dbPBP%\01_trunk\02_SRC\02_Server\PayByPhoneWeb\BackOffice2\backOffice\Plugins\SecurityPlugin\Manifest.xml
+
+mklink %dbPBP%\01_trunk\02_SRC\02_Server\PayByPhoneWeb\BackOffice2\backOffice\Global.asax %dbPIC%\trunk\02_Dev\02_CC\02_Src\BackOffice\backOffice\Global.asax
+mklink %dbPBP%\01_trunk\02_SRC\02_Server\PayByPhoneWeb\BackOffice2\backOffice\Plugins\BootStrapPlugin\Manifest.xml %dbPIC%\trunk\02_Dev\02_CC\02_Src\BackOffice\backOffice\Plugins\BootStrapPlugin\Manifest.xml
+mklink %dbPBP%\01_trunk\02_SRC\02_Server\PayByPhoneWeb\BackOffice2\backOffice\Plugins\MaintenancePlugin\Manifest.xml %dbPIC%\trunk\02_Dev\02_CC\02_Src\BackOffice\backOffice\Plugins\MaintenancePlugin\Manifest.xml
+mklink %dbPBP%\01_trunk\02_SRC\02_Server\PayByPhoneWeb\BackOffice2\backOffice\Plugins\SecurityPlugin\Manifest.xml %dbPIC%\trunk\02_Dev\02_CC\02_Src\BackOffice\backOffice\Plugins\SecurityPlugin\Manifest.xml
+
+
+To Export the Websites on IIS 7
+%windir%\system32\inetsrv\appcmd list site /config /xml > C:\sites.xml
+To Import the Websites
+%windir%\system32\inetsrv\appcmd add site /in < %dbPIC%\trunk\02_Dev\02_CC\02_Src\BackOffice\backOffice\BackOfficePIC.xml
+%windir%\system32\inetsrv\appcmd add site /in < %dbPBP%\01_trunk\02_SRC\02_Server\PayByPhoneWeb\BackOffice2\BackOfficePBP.xml
+
+appcmd add app /site.name: string /path: string /physicalPath: string
+appcmd set app /app.name: string /[path='/'].physicalPath: string
+appcmd add vdir /app.name: string / /path: string /physicalPath: string

@@ -1,0 +1,148 @@
+/*ELEMENTS*/
+body,
+html {
+	background-color: var(--page-bg, white);
+	color: var(--page-color, #373737);
+	font-family: var(--font-stack, sans-serif);
+
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: var(--title-stack, sans-serif);
+	color: var(--title-color, navy);
+}
+
+/*LAYOUT */
+.container {
+	max-width: 720px;
+}
+
+/*COMPONENTS*/
+iframe#monerisFrame {
+	border: 0px solid transparent !important;
+	outline: 0px solid transparent !important;
+	display: block;
+	margin: auto;
+	padding: 0.2em 0px;
+	height: 260px;
+	width: 100%;
+	min-width: 310px;
+	max-width: 400px;
+}
+
+#btnsubmit {
+	color: #fff;
+	background-color: #034FC7;
+	border-color: #034FC7;
+	border-radius: var(--border-radius, 2em);
+
+	font-size: 13pt;
+}
+
+#btncancel {
+	color: #fff;
+	background-color: #c70320;
+	border-color: #c70320;
+	border-radius: var(--border-radius, 2em);
+
+	font-size: 13pt;
+}
+
+
+#errorAlert {
+	display: none ;
+}
+
+/*--	CREDIT CARDS: --;*/
+
+#form-payment--disclaimer {
+	color: var(--gray);
+	line-height: 2.2em;
+
+}
+
+/*
+#form-payment--disclaimer i.fab {
+	font-size: var(--card-width, 2em);
+	margin: 0 0.1em;
+}
+*/
+
+.fab[data-toggle="tooltip"] {
+	cursor: help;
+
+}
+
+.fab[class*="fa-cc-"] {
+	display: inline-block;
+	font-size: var(--card-width, 2em);
+	color: var(--primary);
+	margin-left: 0.2em;
+}
+
+
+.fab[class*="fa-cc-"]::before {
+	content: '';
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	display: inline-block;
+	vertical-align: text-bottom;
+	background-color: #eee;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 1.5em;
+	height: 1.0em;
+}
+
+.fa-cc-visa {
+	display: var(--display-visa, none) !important;
+}
+
+.fa-cc-visa::before {
+	background-image: url(../../img/2020/card/visa.svg);
+}
+
+.fa-cc-mastercard {
+	display: var(--display-mastercard, none) !important;
+}
+
+.fa-cc-mastercard::before {
+	background-image: url(../../img/2020/card/mastercard.svg);
+}
+
+.fa-cc-amex {
+	display: var(--display-amex, none) !important;
+}
+
+.fa-cc-amex::before {
+	background-image: url(../../img/2020/card/amex.svg);
+}
+
+.fa-cc-paypal {
+	display: var(--display-paypal, none) !important;
+}
+
+.fa-cc-paypal::before {
+	background-image: url(../../img/2020/card/paypal.svg);
+}
+
+.fa-cc-stripe {
+	display: var(--display-stripe, none) !important;
+}
+
+
+.PCI-DDS-Cert {
+  height: 2.5em;
+}
+
+
+.fa-cc-stripe::before {
+	background-image: url(../../img/2020/card/stripe.svg);
+}

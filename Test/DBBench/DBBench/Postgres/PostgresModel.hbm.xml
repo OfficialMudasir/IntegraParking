@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping schema="test" assembly="DBBench" namespace="DBBench.Postgres" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="PgTestTable" table="test_table">
+    <id name="PgId" type="Int32">
+      <column name="id" not-null="true" sql-type="INT4" />
+      <generator class="sequence">
+        <param name="sequence">test_table_id_seq</param>
+      </generator>
+    </id>
+    <property name="PgStringField" type="String">
+      <column name="string_field" not-null="true" length="4096" sql-type="VARCHAR(4096)" />
+    </property>
+  </class>
+</hibernate-mapping>

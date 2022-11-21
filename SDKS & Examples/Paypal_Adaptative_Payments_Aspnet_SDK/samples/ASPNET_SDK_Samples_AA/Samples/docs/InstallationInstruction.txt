@@ -1,0 +1,18 @@
+How To configure and run ASP.net Web Samples.
+
+1. Check the following Environments available before running samples.
+    
+   a).NetFramework2.0
+    
+   b) IIS
+
+2. Copy Web sample folder into your any of your system drives (Ex: “C” drive)
+
+3. Run InstallSamples.bat file available in samples code. It creates < XXX virtual directory > in IIS
+
+4. If your server has multiple version of .NetFramwork Installed then Click on < XXX  Virtuval Directory > and go to properties will find a tab called ASP.NET .change the ASP.NET Version to 2.0
+
+5. Now you can browse the web samples.by (http://localhost/ < XXX  Virtuval Directory >/Default.aspx).
+
+6.if  you want to change any default credentials into your own credentials .please go  through web.config file will find a configuration separated section for three token and
+ Certificate credentials.

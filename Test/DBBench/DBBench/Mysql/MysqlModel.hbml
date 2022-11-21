@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="DBBench" namespace="DBBench.Mysql" p1:name="testdbModel" p1:Guid="849c1f54-ee1b-4811-94bc-3dcbeb1fc694" xmlns:p1="http://devart.com/schemas/EntityDeveloper/1.0" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="MyTestTable" table="my_test_table" schema="testdb" p1:Guid="d7350380-55c1-4a52-bd10-e7cc03307fbd">
+    <id name="MyId" type="Int32" p1:ValidateRequired="true" p1:Guid="a45cd1b7-f5f8-4ab2-95a8-6072ec9aeabc">
+      <column name="my_id" not-null="true" sql-type="int" unique="true" p1:unicode="false" />
+      <generator class="identity" />
+    </id>
+    <property name="MyStringField" type="String" p1:nullable="true" p1:ValidateMaxLength="4000" p1:ValidateRequired="false" p1:Guid="6f8d58aa-b5e4-4792-b88c-9d0af9216087">
+      <column name="my_string_field" not-null="false" length="4000" sql-type="varchar" p1:unicode="true" />
+    </property>
+  </class>
+</hibernate-mapping>

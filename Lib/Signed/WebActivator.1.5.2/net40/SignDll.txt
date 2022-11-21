@@ -1,0 +1,6 @@
+
+ildasm /all /out=WebActivator.il WebActivator.dll
+sn -k WebActivator.snk
+ilasm /dll /key=WebActivator.snk WebActivator.il
+
+pause

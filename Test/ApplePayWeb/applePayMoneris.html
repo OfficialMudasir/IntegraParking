@@ -1,0 +1,165 @@
+<HTML>
+
+<HEAD>
+
+<title>Blinkay Apple Pay</title>
+
+<!-- Moneris DEV -->
+<script type="text/javascript" src="https://esqa.moneris.com/applepayjs/applepay-api.js"></script>
+
+<!-- Moneris PROD -->
+<!--
+<script type="text/javascript" src="https://www3.moneris.com/applepayjs/applepay-api.js"></script>
+-->
+
+<SCRIPT >
+    var session; //Must be global. Set in onApplePayButtonClicked and ussed between different methods
+
+    // Define ApplePayPaymentRequest
+    const request = {
+        "countryCode": "US",
+        "currencyCode": "USD",
+        "merchantCapabilities": [
+            "supports3DS"
+        ],
+        "supportedNetworks": [
+            "visa",
+            "masterCard"
+        ],
+        "total": {
+            "label": "Demo (Card is not charged)",
+            "type": "final",
+            "amount": "0.60"
+        }
+    };
+
+function onApplePayButtonClicked() { 
+    if (!ApplePaySession) {
+        return;
+    }    
+
+    //We need to create the Apple Pay session in an user action method
+
+    session = new ApplePaySession(3, request); 
+
+    //Configure Apple Pay events
+
+    session.onvalidatemerchant = (event) => { 
+       const validationURL = event.validationURL; 
+
+        //alert("validate merchant URL: " + validationURL);
+
+       console.log("Validate merchant from URL: " + validationURL);        
+
+       window.MonerisApplePay.validateSession(validationURL, apSessionValidationSuccess, apSessionValidationError); 
+    }; 
+
+    session.onpaymentauthorized = (event) => { 
+       // Send payment for processing... 
+       const payment = event.payment; 
+       const paymentJson = JSON.stringify(payment); 
+       const respDiv = document.getElementById("apple-pay-resp"); 
+       const uiDiv = document.getElementById("apple-pay-ui"); 
+
+       uiDiv.classList.add("none"); 
+
+       respDiv.innerText = "Processing Payment...Please wait"; 
+
+       var moneris_request = { 
+          payment:event.payment 
+       } 
+
+       var transType = "preauth"; 
+       if (typeof(window.MonerisApplePay[transType]) === "function") {  
+          window.MonerisApplePay[transType](moneris_request, function(receipt) { 
+             
+             //TODO: make call to your backend to check async response 
+             
+             //console.log(receipt); 
+
+             if (receipt.receipt.ResponseCode  
+                && !isNaN(receipt.receipt.ResponseCode)  
+                && parseInt(receipt.receipt.ResponseCode) < 50){  
+             
+                session.completePayment(ApplePaySession.STATUS_SUCCESS); 
+             } else {  
+                session.completePayment(ApplePaySession.STATUS_FAILURE); 
+             }  
+
+             //Show the data in the HTML for development purposes
+
+             respDiv.innerText = "" + JSON.stringify(receipt); 
+          }); 
+       } 
+    } 
+
+    //Fetch Moneris ticket preload
+
+    fetch("/BlinkayPay/pay/moneris")
+              .then(res => res.json())              
+              .then(ticketPreload => {    
+                callMerchantValidation(ticketPreload, session);
+                })
+              .catch(err => {
+                console.error("Error fetching moneris ticket", err);
+              });       
+}
+
+function callMerchantValidation(monerisTicketPreload, session) {
+    //alert("Moneris Ticket: " + monerisTicketPreload);
+
+    window.MonerisApplePay.setTicket(monerisTicketPreload);            
+
+    session.begin();
+}
+
+function apSessionValidationSuccess(response) { 
+   console.log(response); 
+   
+   session.completeMerchantValidation(response); 
+} 
+
+function apSessionValidationError(response) { 
+   console.log("Failed to validate merchant session"); 
+   console.log(response); 
+
+   //alert("Failed to validate merchant session"); 
+   //alert(response); 
+} 
+
+function checkApplePay() {
+    var divApplePay = document.getElementById("applePayButtonDIV");
+    var divApplePayNotSupported = document.getElementById("applePayNotSupportedDIV");
+
+    divApplePay.style.display = "none";
+    divApplePayNotSupported.style.display = "block";
+
+    if (window.ApplePaySession && ApplePaySession.canMakePayments()) {
+        divApplePay.style.display = "block";
+        divApplePayNotSupported.style.display = "none";
+    }   
+}
+
+</SCRIPT>
+
+</HEAD>
+
+<BODY onload="checkApplePay();">
+
+<div id="moneris-apple-pay" store-id="monca05653" merchant-identifier="merchant.com.blinkay.storedev" display-name="Blinkay" style="display: none;"></div>
+
+<div id="applePayButtonDIV" style="display: none;">
+	<button onclick="onApplePayButtonClicked()" style="-webkit-appearance: -apple-pay-button; -apple-pay-button-type: plain; -apple-pay-button-style: black; width: 150px; height: 30px; border-radius: 3px;" lang="en";></button>
+</div>
+
+<div id="applePayNotSupportedDIV" style="display: none;">
+	Apple pay not supported
+</div>
+
+<div id="apple-pay-resp" style="background-color: yellow;"></div>
+<div id="apple-pay-ui"></div>
+
+
+</BODY>
+
+</HTML>

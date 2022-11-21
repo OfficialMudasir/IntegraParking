@@ -1,0 +1,63 @@
+.css-1ozk4ba {
+    text-align: center;
+    position: fixed;
+    pointer-events: none;
+    inset: 50% 0px 0px;
+    margin: auto;
+    z-index: 1051;
+    display:none;
+}
+
+.css-icssl9 {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin: 2px;
+    border-radius: 100%;
+    animation: 0.7s linear 0s infinite normal both running animation-1bzpvkt;
+}
+
+.css-1d6rj9n {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin: 2px;
+    border-radius: 100%;
+    animation: 0.7s linear 0.35s infinite normal both running animation-1bzpvkt;
+}
+
+@keyframes animation-1bzpvkt {
+  0% { 
+      opacity:1; 
+  }
+  50% { 
+      opacity:0.2; 
+  }
+  100% { 
+      opacity:1; 
+  }
+}
+
+#PayButton,
+#ConfirmButton,
+#PayWithGoogle, 
+#PayWithApple, 
+#PayWithCreditCard, 
+#PayWithPayPal,
+#vat_hidden,
+#P2,
+#P3,
+#FreeParkingRemaining,
+#FreeParkingRemainingAmount {
+    display:none;
+}
+
+.plate-block {
+    cursor:pointer;
+}
+
+.navbar-brand {
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}

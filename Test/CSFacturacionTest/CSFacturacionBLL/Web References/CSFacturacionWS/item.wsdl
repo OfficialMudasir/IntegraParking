@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="localhost" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="localhost" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="localhost">
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <xsd:import namespace="http://schemas.xmlsoap.org/wsdl/" />
+      <xsd:complexType name="respuestaUpload">
+        <xsd:all>
+          <xsd:element name="Msj" type="xsd:string" />
+          <xsd:element name="Resultado" type="xsd:boolean" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="respuestaValidarticket">
+        <xsd:all>
+          <xsd:element name="Msj" type="xsd:string" />
+          <xsd:element name="Resultado" type="xsd:boolean" />
+          <xsd:element name="cDatosreceptor" type="xsd:string" />
+          <xsd:element name="XML64" type="xsd:string" />
+          <xsd:element name="PDF64" type="xsd:string" />
+          <xsd:element name="NAMEFILE" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="respuestaObtenerdatosticket">
+        <xsd:all>
+          <xsd:element name="Msj" type="xsd:string" />
+          <xsd:element name="Resultado" type="xsd:boolean" />
+          <xsd:element name="cDatosticket" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="respuestaTimbrado">
+        <xsd:all>
+          <xsd:element name="Msj" type="xsd:string" />
+          <xsd:element name="XML64" type="xsd:string" />
+          <xsd:element name="PDF64" type="xsd:string" />
+          <xsd:element name="PDF" type="xsd:base64Binary" />
+          <xsd:element name="XML" type="xsd:base64Binary" />
+          <xsd:element name="NAMEFILE" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="UploadarchivoRequest">
+    <wsdl:part name="Password" type="xsd:string" />
+    <wsdl:part name="Archivo" type="xsd:base64Binary" />
+  </wsdl:message>
+  <wsdl:message name="UploadarchivoResponse">
+    <wsdl:part name="respuestaUpload" type="tns:respuestaUpload" />
+  </wsdl:message>
+  <wsdl:message name="timbrarTicketRequest">
+    <wsdl:part name="cRefid" type="xsd:string" />
+    <wsdl:part name="Password" type="xsd:string" />
+    <wsdl:part name="cDatosreceptor" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="timbrarTicketResponse">
+    <wsdl:part name="respuestaTimbrado" type="tns:respuestaTimbrado" />
+  </wsdl:message>
+  <wsdl:message name="validarTicketRequest">
+    <wsdl:part name="dTotal" type="xsd:double" />
+    <wsdl:part name="cRefid" type="xsd:string" />
+    <wsdl:part name="cRfcemisor" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="validarTicketResponse">
+    <wsdl:part name="respuestaValidarticket" type="tns:respuestaValidarticket" />
+  </wsdl:message>
+  <wsdl:message name="obtenerDatosticketRequest">
+    <wsdl:part name="cRefid" type="xsd:string" />
+    <wsdl:part name="Password" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="obtenerDatosticketResponse">
+    <wsdl:part name="respuestaObtenerdatosticket" type="tns:respuestaObtenerdatosticket" />
+  </wsdl:message>
+  <wsdl:portType name="miserviciowebPortType">
+    <wsdl:operation name="Uploadarchivo">
+      <documentation>Documentacion de Upload Archivo</documentation>
+      <wsdl:input message="tns:UploadarchivoRequest" />
+      <wsdl:output message="tns:UploadarchivoResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="timbrarTicket">
+      <documentation>Documentacion de Timbrar Ticket</documentation>
+      <wsdl:input message="tns:timbrarTicketRequest" />
+      <wsdl:output message="tns:timbrarTicketResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="validarTicket">
+      <documentation>Documentacion de Validar Ticket</documentation>
+      <wsdl:input message="tns:validarTicketRequest" />
+      <wsdl:output message="tns:validarTicketResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="obtenerDatosticket">
+      <documentation>Documentacion de Obtener datos del ticket</documentation>
+      <wsdl:input message="tns:obtenerDatosticketRequest" />
+      <wsdl:output message="tns:obtenerDatosticketResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="miserviciowebBinding" type="tns:miserviciowebPortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <wsdl:operation name="Uploadarchivo">
+      <soap:operation soapAction="SOAP_SERVER_NAMESPACE#Uploadarchivo" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="SOAP_SERVER_NAMESPACE" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="SOAP_SERVER_NAMESPACE" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="timbrarTicket">
+      <soap:operation soapAction="SOAP_SERVER_NAMESPACE#timbrarTicket" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="SOAP_SERVER_NAMESPACE" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="SOAP_SERVER_NAMESPACE" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="validarTicket">
+      <soap:operation soapAction="SOAP_SERVER_NAMESPACE#validarTicket" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="SOAP_SERVER_NAMESPACE" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="SOAP_SERVER_NAMESPACE" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obtenerDatosticket">
+      <soap:operation soapAction="SOAP_SERVER_NAMESPACE#obtenerDatosticket" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="SOAP_SERVER_NAMESPACE" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="SOAP_SERVER_NAMESPACE" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="miservicioweb">
+    <wsdl:port name="miserviciowebPort" binding="tns:miserviciowebBinding">
+      <soap:address location="https://www.csfacturacion.com:443/webservices/csticket/index.php" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

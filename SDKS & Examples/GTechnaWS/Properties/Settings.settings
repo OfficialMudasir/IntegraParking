@@ -1,0 +1,9 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="GTechnaWS.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="GTechnaWS_StandardThirdPartyFineWS_PayByPhoneSoapImplService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://192.168.3.91:8081/paybyphone-demo/services/PayByPhoneListener</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

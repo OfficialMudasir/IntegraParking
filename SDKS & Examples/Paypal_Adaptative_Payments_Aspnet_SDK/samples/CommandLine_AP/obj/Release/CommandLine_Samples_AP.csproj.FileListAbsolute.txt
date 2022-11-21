@@ -1,0 +1,11 @@
+C:\Proyectos\svn\dbPayByPhone\01_trunk\02_SRC\02_Server\PayByPhoneWeb\Paypal_Adaptative_Payments_Aspnet_SDK\samples\CommandLine_AP\bin\Release\CommandLine_Samples_AP.exe.config
+C:\Proyectos\svn\dbPayByPhone\01_trunk\02_SRC\02_Server\PayByPhoneWeb\Paypal_Adaptative_Payments_Aspnet_SDK\samples\CommandLine_AP\bin\Release\CommandLine_Samples_AP.exe
+C:\Proyectos\svn\dbPayByPhone\01_trunk\02_SRC\02_Server\PayByPhoneWeb\Paypal_Adaptative_Payments_Aspnet_SDK\samples\CommandLine_AP\bin\Release\CommandLine_Samples_AP.pdb
+C:\Proyectos\svn\dbPayByPhone\01_trunk\02_SRC\02_Server\PayByPhoneWeb\Paypal_Adaptative_Payments_Aspnet_SDK\samples\CommandLine_AP\bin\Release\Base_AP.dll
+C:\Proyectos\svn\dbPayByPhone\01_trunk\02_SRC\02_Server\PayByPhoneWeb\Paypal_Adaptative_Payments_Aspnet_SDK\samples\CommandLine_AP\bin\Release\Base_Common.dll
+C:\Proyectos\svn\dbPayByPhone\01_trunk\02_SRC\02_Server\PayByPhoneWeb\Paypal_Adaptative_Payments_Aspnet_SDK\samples\CommandLine_AP\bin\Release\log4net.dll
+C:\Proyectos\svn\dbPayByPhone\01_trunk\02_SRC\02_Server\PayByPhoneWeb\Paypal_Adaptative_Payments_Aspnet_SDK\samples\CommandLine_AP\bin\Release\Base_AP.pdb
+C:\Proyectos\svn\dbPayByPhone\01_trunk\02_SRC\02_Server\PayByPhoneWeb\Paypal_Adaptative_Payments_Aspnet_SDK\samples\CommandLine_AP\bin\Release\Base_Common.pdb
+C:\Proyectos\svn\dbPayByPhone\01_trunk\02_SRC\02_Server\PayByPhoneWeb\Paypal_Adaptative_Payments_Aspnet_SDK\samples\CommandLine_AP\obj\Release\ResolveAssemblyReference.cache
+C:\Proyectos\svn\dbPayByPhone\01_trunk\02_SRC\02_Server\PayByPhoneWeb\Paypal_Adaptative_Payments_Aspnet_SDK\samples\CommandLine_AP\obj\Release\CommandLine_Samples_AP.exe
+C:\Proyectos\svn\dbPayByPhone\01_trunk\02_SRC\02_Server\PayByPhoneWeb\Paypal_Adaptative_Payments_Aspnet_SDK\samples\CommandLine_AP\obj\Release\CommandLine_Samples_AP.pdb

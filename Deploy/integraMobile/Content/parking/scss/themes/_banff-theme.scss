@@ -1,0 +1,88 @@
+
+:root {
+    --green:          #696f5f;
+    --parking-green:  #3a7639;
+    --red:            #98002e;
+    --orange:         #c1753f;
+    --light-blue:     #3887af;
+    --blue:           #41597d;
+    --grey-dark:      #444;
+}
+
+a {
+    color: var(--blue);
+    &:hover {
+        color: var(--light-blue);
+        text-decoration: none !important;
+    }
+}
+
+// VARIABLES
+$blue:           #41597d;
+$parking-green:  #3a7639;
+$red:            #98002e;
+
+// COLORS
+.color-primary {
+    color: var(--blue);
+}
+.color-red {
+    color: var(--red);
+}
+
+.bk-bg-primary {
+    background-color: var(--blue);
+}
+.bk-bg-secondary {
+    background-color: var(--parking-green);
+}
+
+// ICONS
+.banff-car-select:before {
+    content: url(../img/car.png);
+    display: block;
+}
+
+// PICTOS
+.icon-picto-email:before { content: '\e800'; }
+.icon-picto-advice:before { content: '\e803'; }
+
+
+// BUTTONS
+.bk-btn-primary {
+    background-color: var(--blue);
+    &:hover, &:focus {
+        background-color: darken($blue,10%);
+        border-color: darken($blue,10%);
+    }
+}
+.bk-btn-secondary {
+    border-color: var(--blue);
+    color: var(--blue);
+    &:hover, &:focus {
+        background-color: darken($blue,10%);
+        border-color: darken($blue,10%);
+    }
+}
+.bk-btn-select {
+    &:hover, &:focus {
+        background-color: var(--blue);
+        border-color: var(--blue);
+    }
+}
+
+// FORMS
+.form-control:hover {
+    border-color: var(--parking-green);
+}
+
+// BADGES
+.badge-day-0 {
+    background-color: var(--parking-green);
+}
+.badge-day-1 {
+    background-color: var(--orange);
+}
+.badge-day-more {
+    background-color: var(--red);
+}

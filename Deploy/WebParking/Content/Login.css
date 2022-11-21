@@ -1,0 +1,52 @@
+﻿.login-container 
+{
+    height: 100%;
+    min-height: 300px;
+    padding-top: 100px;
+	position:relative;
+    text-align: center;
+}
+
+.login-label
+{
+    float: left;
+    clear: both;
+    width: 45%;
+    /*padding: .4em 0 1em;*/
+    margin-left: 2%;
+    text-align: right;
+    height: 100%;
+    line-height: 0px;
+}
+
+.login-field 
+{
+    float: right;
+    clear: right;
+    width: 50%;
+    margin-right: 2%;
+    /*padding: 0 0 .6em;*/
+    padding-top: 5px;
+    text-align: left;
+    height: 100%;
+}
+
+.login-submit
+{
+    float: left;
+    width: 100%;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.login-errors
+{
+    float: left;
+    width: 100%;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.login-field .k-textbox, .login-field .k-dropdown {
+    width: 50%;
+}

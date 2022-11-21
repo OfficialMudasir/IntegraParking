@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Bundle xmlns="urn:uiosp-bundle-manifest-2.0" Name="BootStrapPlugin" SymbolicName="BootStrapPlugin" Version="1.0.0.0" InitializedState="Active">
+  <Activator Type="BootStrapPlugin.Activator" Policy="Immediate" />
+  <Runtime>
+    <Assembly Path="bin\BootStrapPlugin.dll" Share="false" />
+  </Runtime>
+
+  <!--<Extension Point="MainMenu">
+    <Item id="mnuProduction" url="#" text="production" order="0" priority="1" image="Content/images/menu/production.png" class="" role="">
+      <Resources>
+        <Text locale="en-US" text="Production" description="Production options"></Text>
+        <Text locale="es-ES" text="Producción" description="Opciones para la gestión"></Text>          
+      </Resources>
+      <SubItems>
+        <Item id="mnuOperations" url="/Maintenance/Maintenance?plugin=MaintenancePlugin&amp;modelName=Operations" text="Operation" order="1" image="Content/images/menu/operations.png" class="" role="">
+          <Resources>
+            <Text locale="en-US" text="Operations"></Text>
+            <Text locale="es-ES" text="Operaciones"></Text>
+          </Resources>
+        </Item>
+        <Item id="mnuAlarms" url="/Maintenance/Maintenance?plugin=MaintenancePlugin&amp;modelName=Alarms" text="Alarms" order="2" image="Content/images/menu/alarms.png" class="" role="">
+          <Resources>
+            <Text locale="en-US" text="Alarms"></Text>
+            <Text locale="es-ES" text="Alarmas"></Text>
+          </Resources>
+        </Item>
+      </SubItems>
+    </Item>
+    <Item id="mnuAccounting" url="#" text="Accounting" order="1" priority="1" image="Content/images/menu/accounting.png" class="" role="">
+      <Resources>
+        <Text locale="en-US" text="Accounting"></Text>
+        <Text locale="es-ES" text="Finanzas"></Text>
+      </Resources>
+      <SubItems>
+        <Item id="mnuStatistics" url="#" text="Statistics" order="1" image="Content/images/menu/statistics.png" class="" role="">
+          <Resources>
+            <Text locale="en-US" text="Statistics"></Text>
+            <Text locale="es-ES" text="Estadísticas"></Text>
+          </Resources>
+        </Item>
+      </SubItems>
+    </Item>
+    <Item id="mnuConfiguration" url="#" text="Configuration" order="0" priority="1" image="Content/images/menu/configuration.png" class="" role="">
+      <Resources>
+        <Text locale="en-US" text="Configuration"></Text>
+        <Text locale="es-ES" text="Configuración"></Text>
+      </Resources>
+    </Item>
+
+  </Extension>-->
+</Bundle>

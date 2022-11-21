@@ -1,0 +1,52 @@
+
+BEGIN TRANSACTION
+GO
+ALTER TABLE dbo.INSTALLATIONS ADD
+	INS_PERMITS_INS_ID varchar(50) NULL,
+	INS_STREET_SECTION_UPDATE_WS_SIGNATURE_TYPE int NOT NULL CONSTRAINT DF_INSTALLATIONS_INS_STREET_SECTION_UPDATE_WS_SIGNATURE_TYPE DEFAULT 0,
+	INS_STREET_SECTION_UPDATE_WS_URL varchar(500) NULL,
+	INS_STREET_SECTION_UPDATE_WS_AUTH_HASH_KEY varchar(50) NULL,
+	INS_STREET_SECTION_UPDATE_WS_HTTP_USER varchar(50) NULL,
+	INS_STREET_SECTION_UPDATE_WS_HTTP_PASSWORD varchar(50) NULL,
+	INS_MAP_SCREEN_TYPE int NOT NULL CONSTRAINT DF_INSTALLATIONS_INS_MAP_SCREEN_TYPE DEFAULT 0
+GO
+DECLARE @v sql_variant 
+SET @v = N'Permits external installation id'
+EXECUTE sp_addextendedproperty N'MS_Description', @v, N'SCHEMA', N'dbo', N'TABLE', N'INSTALLATIONS', N'COLUMN', N'INS_PERMITS_INS_ID'
+GO
+DECLARE @v sql_variant 
+SET @v = N'Street Section Update WS signature type'
+EXECUTE sp_addextendedproperty N'MS_Description', @v, N'SCHEMA', N'dbo', N'TABLE', N'INSTALLATIONS', N'COLUMN', N'INS_STREET_SECTION_UPDATE_WS_SIGNATURE_TYPE'
+GO
+DECLARE @v sql_variant 
+SET @v = N'Street Section Update WS url'
+EXECUTE sp_addextendedproperty N'MS_Description', @v, N'SCHEMA', N'dbo', N'TABLE', N'INSTALLATIONS', N'COLUMN', N'INS_STREET_SECTION_UPDATE_WS_URL'
+GO
+DECLARE @v sql_variant 
+SET @v = N'Street Section Update WS hash key'
+EXECUTE sp_addextendedproperty N'MS_Description', @v, N'SCHEMA', N'dbo', N'TABLE', N'INSTALLATIONS', N'COLUMN', N'INS_STREET_SECTION_UPDATE_WS_AUTH_HASH_KEY'
+GO
+DECLARE @v sql_variant 
+SET @v = N'Street Section Update WS http user'
+EXECUTE sp_addextendedproperty N'MS_Description', @v, N'SCHEMA', N'dbo', N'TABLE', N'INSTALLATIONS', N'COLUMN', N'INS_STREET_SECTION_UPDATE_WS_HTTP_USER'
+GO
+DECLARE @v sql_variant 
+SET @v = N'Street Section Update WS http password'
+EXECUTE sp_addextendedproperty N'MS_Description', @v, N'SCHEMA', N'dbo', N'TABLE', N'INSTALLATIONS', N'COLUMN', N'INS_STREET_SECTION_UPDATE_WS_HTTP_PASSWORD'
+GO
+DECLARE @v sql_variant 
+SET @v = N'Map screen type (0: normal, 1: on air, 2: street sections)'
+EXECUTE sp_addextendedproperty N'MS_Description', @v, N'SCHEMA', N'dbo', N'TABLE', N'INSTALLATIONS', N'COLUMN', N'INS_MAP_SCREEN_TYPE'
+GO
+ALTER TABLE dbo.INSTALLATIONS SET (LOCK_ESCALATION = TABLE)
+GO
+COMMIT
+
+
+UPDATE INSTALLATIONS
+SET INS_MAP_SCREEN_TYPE = 1
+WHERE INS_ON_AIR = 1
+GO
+
+
+

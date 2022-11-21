@@ -1,0 +1,3 @@
+ildasm /all /out=MercadoPago.il MercadoPago.dll
+sn -k MercadoPago.snk
+ilasm /dll /key=MercadoPago.snk MercadoPago.il

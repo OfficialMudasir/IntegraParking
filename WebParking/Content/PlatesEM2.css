@@ -1,0 +1,61 @@
+﻿/*TGA @ FOR EM2 - PARKING PLATE LIST*/
+
+
+
+
+.mainContainer {
+    text-align: center;
+}
+
+#lstPlates
+{
+    background: none;
+    border:none;
+
+}
+
+
+
+#lstPlates .liPlate
+{
+    margin: 0.5em;
+    background: #2481bc url('EysaMobv2/btn-shadow.png') no-repeat 50% 50%;
+    background-size: 100% 100%;
+    color: #fafafa;
+    border: none;
+
+
+
+}
+
+
+.plateItem {
+
+    color: #fafafa;
+    background-image: url("EysaMobv2/plate-ico.svg");
+    background-position: 0.2em center;
+    background-repeat: no-repeat;
+    background-size: auto 100%;  
+      
+    padding-left: 2em;
+    text-align: center;
+}
+
+.plateItem a
+{
+    display: block;
+    margin: 0px;
+    padding:0.5em;
+
+    color: #fafafa;
+    background: transparent url('EysaMobv2/rarrow-ico.svg') no-repeat 100% 50%;
+    background-size: auto 100%;
+    border: none;
+
+    text-decoration:none;
+    text-transform: uppercase;
+
+
+
+}
+

@@ -1,0 +1,29 @@
+PayPal Platform ASP.NET SOAP SDK
+=====================================================================================================================================
+Version 1.0.6 - 08/12/2011
+1 - Added wrapper method for GetUserAgreement API method and a commandline sample
+=====================================================================================================================================
+Version 1.0.5 - 07/25/2011
+1 - 76.0 WSDL version update.
+=====================================================================================================================================
+Version 1.0.4 - 03/08/2011
+1 - 68.0 WSDL version update.
+=====================================================================================================================================
+Version 1.0.3 - 11/03/2010
+1 - 65.2 WSDL version update.
+=====================================================================================================================================
+Version 1.0.2 - 10/20/2010
+1 - 65.1 WSDL version update.
+=====================================================================================================================================
+Version 1.0.1 - 21/7/2010
+1 - WSDL version update.
+2 - New AA API samples added
+=====================================================================================================================================
+Version 1.0,0 - 11/7/2009
+1 - SDK core library- Thin wrapper APIs for  AdaptiveAccounts web service APIs.
+2 - Command line samples in the file CommnadLineSamples.cs for  AdaptiveAccounts in <instal_dir>/samples/ folder
+3 - A simplistic reference implementation (web samples) of the APIs using C#.NET. Tested with .NET 2.0 and IIS 6.0 web server.     
+4 - Source code for core library and web samples. The core library is in <instal_dir>/samples/web/lib folder
+5 - Logging. All the requests and responses are logged to Paypal.aspnet.log file using Open sourec Log library which is re-distribued.
+=====================================================================================================================================
+    

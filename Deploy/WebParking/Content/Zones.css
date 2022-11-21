@@ -1,0 +1,29 @@
+﻿.treeZone-template {
+    height: 50px;
+}
+
+.treeZone-template-left {
+    float: left;
+    background-image: url(images/ZoneNumIcon.png);
+    background-position: center center;
+    background-size: 24px;
+    background-repeat: no-repeat;    
+    text-align: center;
+    width: 32px;
+    height:50px;
+
+}
+.treeZone-template-left > span {
+    line-height: 39px;
+    font-size: x-small;
+}
+
+.treeZone-template-right {
+    float: right;
+    text-align: left;
+    width: 200px;
+    height: 100%;
+}
+.treeZone-template-right > span {
+    line-height: 50px;
+}

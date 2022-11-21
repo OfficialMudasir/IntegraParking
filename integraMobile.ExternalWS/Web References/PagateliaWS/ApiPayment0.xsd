@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/Pagatelia.ApiExternalPayments.WebService" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Pagatelia.ApiExternalPayments.WebService" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://www.pagatelia.com/apipayments/ApiPayment.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="DoLoginResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Balance" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="CodeResult" type="xs:short" />
+      <xs:element minOccurs="0" name="Currency" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdSession" nillable="true" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DoLoginResult" nillable="true" type="tns:DoLoginResult" />
+  <xs:complexType name="DoRechargeResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Balance" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="CodeResult" type="xs:short" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DoRechargeResult" nillable="true" type="tns:DoRechargeResult" />
+</xs:schema>

@@ -1,0 +1,32 @@
+c:
+cd C:\work\svn\dbPBP\01_trunk\02_SRC\02_Server\PayByPhoneWeb\Lib\Signed\MvcContrib
+
+ildasm /all /out=MvcContrib.il MvcContrib.dll
+sn -k MvcContrib.snk
+ilasm /dll /key=MvcContrib.snk MvcContrib.il
+
+ildasm /all /out=MvcContrib.FluentHtml.il MvcContrib.FluentHtml.dll
+sn -k MvcContrib.FluentHtml.snk
+ilasm /dll /key=MvcContrib.FluentHtml.snk MvcContrib.FluentHtml.il
+
+
+
+
+ildasm /all /out=Base_AP.il Base_AP.dll
+sn -k Base_AP.snk
+sn -Tp Base_Common.dll
+
+.assembly extern /*23000002*/ Base_Common
+{
+  .publickeytoken = (?? ?? ?? ?? ?? ?? ?? ?? )
+  .ver 1:0:0:0
+}
+
+ilasm /dll /key=Base_AP.snk Base_AP.il
+
+
+ildasm /all /out=paypal_base.il paypal_base.dll
+sn -k paypal_base.snk
+ilasm /dll /key=paypal_base.snk paypal_base.il
+
+pause

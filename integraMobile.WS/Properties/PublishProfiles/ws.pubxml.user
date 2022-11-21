@@ -1,0 +1,1258 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <LastUsedBuildConfiguration>Release</LastUsedBuildConfiguration>
+    <LastUsedPlatform>Any CPU</LastUsedPlatform>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\Proyectos\svn\dbPBP\01_trunk\02_SRC\02_Server\PayByPhoneWeb\Deploy\integraMobileWS</_PublishTargetUrl>
+    <History>True|2022-06-14T13:20:35.1252308Z;True|2022-06-14T13:21:13.8398925+02:00;True|2022-06-14T11:05:47.3045771+02:00;True|2022-05-26T13:18:58.4222367+02:00;True|2022-05-26T13:12:09.3439746+02:00;True|2022-05-26T13:00:48.4646713+02:00;True|2022-05-17T16:07:21.2338123+02:00;True|2022-05-17T16:03:55.4468436+02:00;True|2022-05-17T15:42:15.7927201+02:00;True|2022-05-17T12:25:33.3537212+02:00;True|2022-05-17T10:10:21.5997640+02:00;True|2022-05-17T09:55:28.9450008+02:00;True|2022-05-17T08:29:31.7983611+02:00;True|2022-05-12T15:42:11.9860086+02:00;</History>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/Base_AP.dll">
+      <publishTime>12/05/2013 22:05:16</publishTime>
+    </File>
+    <File Include="bin/Base_Common.dll">
+      <publishTime>12/05/2013 22:05:16</publishTime>
+    </File>
+    <File Include="bin/BouncyCastle.Crypto.dll">
+      <publishTime>12/09/2021 20:38:30</publishTime>
+    </File>
+    <File Include="bin/ca-ES/integraMobile.WS.resources.dll">
+      <publishTime>06/14/2022 15:20:32</publishTime>
+    </File>
+    <File Include="bin/CardEaseXMLClient.dll">
+      <publishTime>12/18/2015 20:32:09</publishTime>
+    </File>
+    <File Include="bin/CH.Crc32.dll">
+      <publishTime>12/05/2013 22:05:12</publishTime>
+    </File>
+    <File Include="bin/en-US/integraMobile.WS.resources.dll">
+      <publishTime>06/14/2022 15:20:32</publishTime>
+    </File>
+    <File Include="bin/es-AR/integraMobile.WS.resources.dll">
+      <publishTime>06/14/2022 15:20:31</publishTime>
+    </File>
+    <File Include="bin/es-ES/integraMobile.WS.resources.dll">
+      <publishTime>06/14/2022 15:20:32</publishTime>
+    </File>
+    <File Include="bin/es-MX/integraMobile.WS.resources.dll">
+      <publishTime>06/14/2022 15:20:32</publishTime>
+    </File>
+    <File Include="bin/eSELECTplus_dotNet_API.dll">
+      <publishTime>06/16/2020 09:07:32</publishTime>
+    </File>
+    <File Include="bin/fastJSON.dll">
+      <publishTime>11/11/2015 15:47:54</publishTime>
+    </File>
+    <File Include="bin/fr-CA/integraMobile.WS.resources.dll">
+      <publishTime>06/14/2022 15:20:32</publishTime>
+    </File>
+    <File Include="bin/fr-FR/integraMobile.WS.resources.dll">
+      <publishTime>06/14/2022 15:20:32</publishTime>
+    </File>
+    <File Include="bin/Gma.QrCodeNet.Encoding.dll">
+      <publishTime>12/05/2013 22:05:16</publishTime>
+    </File>
+    <File Include="bin/integraMobile.Domain.dll">
+      <publishTime>06/14/2022 15:17:53</publishTime>
+    </File>
+    <File Include="bin/integraMobile.Domain.dll.config">
+      <publishTime>02/25/2022 09:03:05</publishTime>
+    </File>
+    <File Include="bin/integraMobile.Domain.pdb">
+      <publishTime>06/14/2022 15:17:53</publishTime>
+    </File>
+    <File Include="bin/integraMobile.Domain.XmlSerializers.dll">
+      <publishTime>06/14/2022 15:17:54</publishTime>
+    </File>
+    <File Include="bin/integraMobile.ExternalWS.dll">
+      <publishTime>06/14/2022 15:17:58</publishTime>
+    </File>
+    <File Include="bin/integraMobile.ExternalWS.dll.config">
+      <publishTime>05/12/2022 09:24:37</publishTime>
+    </File>
+    <File Include="bin/integraMobile.ExternalWS.pdb">
+      <publishTime>06/14/2022 15:17:58</publishTime>
+    </File>
+    <File Include="bin/integraMobile.ExternalWS.XmlSerializers.dll">
+      <publishTime>06/14/2022 15:18:00</publishTime>
+    </File>
+    <File Include="bin/integraMobile.Infrastructure.dll">
+      <publishTime>06/14/2022 11:04:20</publishTime>
+    </File>
+    <File Include="bin/integraMobile.Infrastructure.dll.config">
+      <publishTime>05/26/2022 13:01:11</publishTime>
+    </File>
+    <File Include="bin/integraMobile.Infrastructure.pdb">
+      <publishTime>06/14/2022 11:04:20</publishTime>
+    </File>
+    <File Include="bin/integraMobile.Infrastructure.XmlSerializers.dll">
+      <publishTime>06/14/2022 11:04:30</publishTime>
+    </File>
+    <File Include="bin/integraMobile.WS.dll">
+      <publishTime>06/14/2022 15:20:28</publishTime>
+    </File>
+    <File Include="bin/integraMobile.WS.pdb">
+      <publishTime>06/14/2022 15:20:28</publishTime>
+    </File>
+    <File Include="bin/integraMobile.WS.XmlSerializers.dll">
+      <publishTime>06/14/2022 15:20:31</publishTime>
+    </File>
+    <File Include="bin/itextsharp.dll">
+      <publishTime>12/09/2021 20:38:38</publishTime>
+    </File>
+    <File Include="bin/log4net.dll">
+      <publishTime>06/05/2014 21:36:59</publishTime>
+    </File>
+    <File Include="bin/MercadoPago.dll">
+      <publishTime>02/25/2022 09:03:05</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Bcl.AsyncInterfaces.dll">
+      <publishTime>12/09/2021 20:38:31</publishTime>
+    </File>
+    <File Include="bin/Microsoft.IdentityModel.JsonWebTokens.dll">
+      <publishTime>04/15/2021 15:27:36</publishTime>
+    </File>
+    <File Include="bin/Microsoft.IdentityModel.Logging.dll">
+      <publishTime>04/15/2021 15:32:50</publishTime>
+    </File>
+    <File Include="bin/Microsoft.IdentityModel.Tokens.dll">
+      <publishTime>04/15/2021 15:39:58</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>09/04/2013 00:22:21</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Services3.dll">
+      <publishTime>05/03/2018 11:24:50</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>12/09/2021 20:38:33</publishTime>
+    </File>
+    <File Include="bin/Ninject.dll">
+      <publishTime>12/09/2021 20:38:34</publishTime>
+    </File>
+    <File Include="bin/Ninject.pdb">
+      <publishTime>09/04/2013 00:22:21</publishTime>
+    </File>
+    <File Include="bin/Ninject.Web.Common.dll">
+      <publishTime>02/08/2020 08:20:52</publishTime>
+    </File>
+    <File Include="bin/Ninject.Web.Common.pdb">
+      <publishTime>09/04/2013 00:22:24</publishTime>
+    </File>
+    <File Include="bin/Ninject.Web.Common.WebHost.dll">
+      <publishTime>02/08/2020 08:20:54</publishTime>
+    </File>
+    <File Include="bin/Ninject.Web.dll">
+      <publishTime>07/06/2020 15:47:56</publishTime>
+    </File>
+    <File Include="bin/Ninject.Web.pdb">
+      <publishTime>09/04/2013 00:22:22</publishTime>
+    </File>
+    <File Include="bin/Ninject.Web.WebApi.dll">
+      <publishTime>02/08/2020 13:14:26</publishTime>
+    </File>
+    <File Include="bin/Ninject.Web.WebApi.WebHost.dll">
+      <publishTime>02/08/2020 13:14:28</publishTime>
+    </File>
+    <File Include="bin/PayPal.dll">
+      <publishTime>11/21/2019 11:03:25</publishTime>
+    </File>
+    <File Include="bin/paypal_base.dll">
+      <publishTime>09/04/2013 00:21:03</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/ca-ES/Activation_EmailBody.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/ca-ES/CommerceSubscriptionRequest.html">
+      <publishTime>02/07/2018 11:16:36</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/ca-ES/ConfirmCampaignUserUse_EmailBody.html">
+      <publishTime>10/17/2018 15:06:59</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/ca-ES/ConfirmOffstreet_EmailBody.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/ca-ES/ConfirmOffstreet_EmailBody_Balance.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/ca-ES/ConfirmParking_1_0_EmailBody.html">
+      <publishTime>12/27/2018 10:07:07</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/ca-ES/ConfirmParking_1_0_EmailBody_Plates.html">
+      <publishTime>12/27/2018 10:07:07</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/ca-ES/ConfirmParking_1_EmailBody.html">
+      <publishTime>12/18/2018 17:00:51</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/ca-ES/ConfirmParking_1_EmailBody_Plates.html">
+      <publishTime>12/12/2018 17:59:22</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/ca-ES/ConfirmParking_EmailBody.html">
+      <publishTime>06/16/2020 09:06:08</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/ca-ES/ConfirmParking_EmailBody_SpaceSection.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/ca-ES/ConfirmRecharge_EmailBody.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/ca-ES/ConfirmTicketPayment_EmailBody.html">
+      <publishTime>03/02/2018 10:09:20</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/ca-ES/ConfirmUnParking_0_1_EmailBody.html">
+      <publishTime>01/08/2019 11:11:21</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/ca-ES/ConfirmUnParking_EmailBody.html">
+      <publishTime>03/02/2018 10:12:59</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/ca-ES/Confirm_EmailBody_Balance.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/ca-ES/CustomerInscriptionModel_SummaryWelcomeEmail_Body.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/ca-ES/Email_LayoutSubtotal.html">
+      <publishTime>01/31/2018 13:54:40</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/ca-ES/Email_LayoutTotal.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/ca-ES/Email_LayoutTotalBonus.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/ca-ES/ExternalTicketNotPayable_EmailBody.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/ca-ES/ExternalTicket_EmailBody.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/ca-ES/footer_COU_AW.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/ca-ES/footer_COU_ES.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/ca-ES/footer_COU_MX.html">
+      <publishTime>03/05/2018 09:53:34</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/ca-ES/footer_CUR_EUR.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/ca-ES/footer_CUR_MXN.html">
+      <publishTime>03/05/2018 09:53:34</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/ca-ES/footer_CUR_USD.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/ca-ES/ForgeUsername_EmailBody.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/ca-ES/ForgotPassword_EmailBody.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/ca-ES/InviteFriend_Email_Body.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/ca-ES/InvoiceSection.html">
+      <publishTime>03/01/2018 16:52:44</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/ca-ES/InvoiceSection_INS_SBL.html">
+      <publishTime>03/02/2018 10:36:16</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/ca-ES/InvoiceSection_INS_STC.html">
+      <publishTime>03/02/2018 10:58:23</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/ca-ES/InvoiceSection_INS_TER.html">
+      <publishTime>03/02/2018 11:00:01</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/ca-ES/NewUserWithoutPaymentMeanEmail_Body.html">
+      <publishTime>02/05/2018 17:54:11</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/ca-ES/SignupStep1_Email_Body.html">
+      <publishTime>01/31/2018 13:35:20</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/ca-ES/TransferBalanceDst_EmailBody.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/ca-ES/TransferBalanceSrc_EmailBody.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/en-US/Activation_EmailBody.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/en-US/CommerceSubscriptionRequest.html">
+      <publishTime>02/07/2018 11:16:36</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/en-US/ConfirmCampaignUserUse_EmailBody.html">
+      <publishTime>10/17/2018 15:06:59</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/en-US/ConfirmOffstreet_EmailBody.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/en-US/ConfirmOffstreet_EmailBody_Balance.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/en-US/ConfirmParking_1_0_EmailBody.html">
+      <publishTime>12/27/2018 10:07:07</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/en-US/ConfirmParking_1_0_EmailBody_Plates.html">
+      <publishTime>12/27/2018 10:07:07</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/en-US/ConfirmParking_1_EmailBody.html">
+      <publishTime>12/18/2018 17:00:51</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/en-US/ConfirmParking_1_EmailBody_Plates.html">
+      <publishTime>12/12/2018 17:59:22</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/en-US/ConfirmParking_EmailBody.html">
+      <publishTime>06/16/2020 09:06:10</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/en-US/ConfirmParking_EmailBody_SpaceSection.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/en-US/ConfirmRecharge_EmailBody.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/en-US/ConfirmTicketPayment_EmailBody.html">
+      <publishTime>03/02/2018 10:09:55</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/en-US/ConfirmUnParking_0_1_EmailBody.html">
+      <publishTime>01/08/2019 11:11:21</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/en-US/ConfirmUnParking_EmailBody.html">
+      <publishTime>03/02/2018 10:13:28</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/en-US/Confirm_EmailBody_Balance.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/en-US/CustomerInscriptionModel_SummaryWelcomeEmail_Body.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/en-US/Email_LayoutSubtotal.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/en-US/Email_LayoutTotal.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/en-US/Email_LayoutTotalBonus.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/en-US/ExternalTicketNotPayable_EmailBody.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/en-US/ExternalTicket_EmailBody.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/en-US/footer_COU_AW.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/en-US/footer_COU_ES.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/en-US/footer_COU_MX.html">
+      <publishTime>03/05/2018 09:53:34</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/en-US/footer_CUR_EUR.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/en-US/footer_CUR_MXN.html">
+      <publishTime>03/05/2018 09:53:34</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/en-US/footer_CUR_USD.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/en-US/ForgeUsername_EmailBody.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/en-US/ForgotPassword_EmailBody.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/en-US/InviteFriend_Email_Body.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/en-US/InvoiceSection.html">
+      <publishTime>03/01/2018 17:00:05</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/en-US/InvoiceSection_INS_SBL.html">
+      <publishTime>03/02/2018 10:46:08</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/en-US/InvoiceSection_INS_STC.html">
+      <publishTime>03/02/2018 10:58:46</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/en-US/InvoiceSection_INS_TER.html">
+      <publishTime>03/02/2018 10:59:48</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/en-US/NewUserWithoutPaymentMeanEmail_Body.html">
+      <publishTime>02/07/2018 14:11:05</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/en-US/NewUserWithoutPaymentMeanEmail_Body_COU_CA.html">
+      <publishTime>03/01/2018 09:05:52</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/en-US/SignupStep1_Email_Body.html">
+      <publishTime>01/31/2018 13:35:55</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/en-US/TransferBalanceDst_EmailBody.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/en-US/TransferBalanceSrc_EmailBody.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/es-ES/Activation_EmailBody.html">
+      <publishTime>01/31/2018 13:43:37</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/es-ES/CommerceSubscriptionRequest.html">
+      <publishTime>02/07/2018 11:16:36</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/es-ES/ConfirmCampaignUserUse_EmailBody.html">
+      <publishTime>10/17/2018 15:06:59</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/es-ES/ConfirmOffstreet_EmailBody.html">
+      <publishTime>01/31/2018 13:43:37</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/es-ES/ConfirmOffstreet_EmailBody_Balance.html">
+      <publishTime>01/31/2018 13:43:37</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/es-ES/ConfirmParking_1_0_EmailBody.html">
+      <publishTime>12/27/2018 10:07:07</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/es-ES/ConfirmParking_1_0_EmailBody_Plates.html">
+      <publishTime>12/27/2018 10:07:07</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/es-ES/ConfirmParking_1_EmailBody.html">
+      <publishTime>12/18/2018 17:00:51</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/es-ES/ConfirmParking_1_EmailBody_Plates.html">
+      <publishTime>12/12/2018 17:59:22</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/es-ES/ConfirmParking_EmailBody.html">
+      <publishTime>06/16/2020 09:06:09</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/es-ES/ConfirmParking_EmailBody_SpaceSection.html">
+      <publishTime>01/31/2018 13:43:37</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/es-ES/ConfirmRecharge_EmailBody.html">
+      <publishTime>05/27/2019 17:32:35</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/es-ES/ConfirmTicketPayment_EmailBody.html">
+      <publishTime>05/27/2019 17:32:35</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/es-ES/ConfirmUnParking_0_1_EmailBody.html">
+      <publishTime>05/27/2019 17:32:35</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/es-ES/ConfirmUnParking_EmailBody.html">
+      <publishTime>03/02/2018 10:13:47</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/es-ES/Confirm_EmailBody_Balance.html">
+      <publishTime>01/31/2018 13:43:37</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/es-ES/CustomerInscriptionModel_SummaryWelcomeEmail_Body.html">
+      <publishTime>05/27/2019 17:32:35</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/es-ES/Email_LayoutSubtotal.html">
+      <publishTime>05/27/2019 17:32:35</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/es-ES/Email_LayoutTotal.html">
+      <publishTime>05/27/2019 17:32:35</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/es-ES/Email_LayoutTotalBonus.html">
+      <publishTime>05/27/2019 17:32:35</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/es-ES/ExternalTicketNotPayable_EmailBody.html">
+      <publishTime>05/27/2019 17:32:35</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/es-ES/ExternalTicket_EmailBody.html">
+      <publishTime>05/27/2019 17:32:35</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/es-ES/footer_COU_AW.html">
+      <publishTime>05/27/2019 17:32:35</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/es-ES/footer_COU_ES.html">
+      <publishTime>05/22/2019 17:04:54</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/es-ES/footer_COU_MX.html">
+      <publishTime>05/27/2019 17:32:35</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/es-ES/footer_CUR_EUR.html">
+      <publishTime>05/27/2019 17:32:35</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/es-ES/footer_CUR_MXN.html">
+      <publishTime>05/27/2019 17:32:35</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/es-ES/footer_CUR_USD.html">
+      <publishTime>05/27/2019 17:32:35</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/es-ES/ForgeUsername_EmailBody.html">
+      <publishTime>01/31/2018 13:43:37</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/es-ES/ForgotPassword_EmailBody.html">
+      <publishTime>05/27/2019 17:32:35</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/es-ES/InvitedAFriendCongrat_EmailBody_2.html">
+      <publishTime>11/20/2018 15:50:12</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/es-ES/InvitedAFriendCongrat_EmailHeader_2.html">
+      <publishTime>11/20/2018 15:50:12</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/es-ES/InviteFriend_Email_Body.html">
+      <publishTime>01/31/2018 13:43:37</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/es-ES/InvoiceSection.html">
+      <publishTime>03/01/2018 17:03:35</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/es-ES/InvoiceSection_INS_SBL.html">
+      <publishTime>05/27/2019 17:32:35</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/es-ES/InvoiceSection_INS_STC.html">
+      <publishTime>05/27/2019 17:32:35</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/es-ES/InvoiceSection_INS_TER.html">
+      <publishTime>05/27/2019 17:32:35</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/es-ES/NewUserWithoutPaymentMeanEmail_Body.html">
+      <publishTime>05/27/2019 17:32:35</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/es-ES/SignupStep1_Email_Body.html">
+      <publishTime>05/22/2019 17:04:54</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/es-ES/TransferBalanceDst_EmailBody.html">
+      <publishTime>01/31/2018 13:43:37</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/es-ES/TransferBalanceSrc_EmailBody.html">
+      <publishTime>01/31/2018 13:43:37</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/es-MX/Activation_EmailBody.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/es-MX/CommerceSubscriptionRequest.html">
+      <publishTime>02/07/2018 11:16:36</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/es-MX/ConfirmCampaignUserUse_EmailBody.html">
+      <publishTime>10/17/2018 15:06:59</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/es-MX/ConfirmOffstreet_EmailBody.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/es-MX/ConfirmOffstreet_EmailBody_Balance.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/es-MX/ConfirmParking_1_0_EmailBody.html">
+      <publishTime>12/27/2018 10:07:07</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/es-MX/ConfirmParking_1_0_EmailBody_Plates.html">
+      <publishTime>12/27/2018 10:07:07</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/es-MX/ConfirmParking_1_EmailBody.html">
+      <publishTime>12/18/2018 17:00:51</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/es-MX/ConfirmParking_1_EmailBody_Plates.html">
+      <publishTime>12/12/2018 17:59:22</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/es-MX/ConfirmParking_EmailBody.html">
+      <publishTime>06/16/2020 09:08:48</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/es-MX/ConfirmParking_EmailBody_SpaceSection.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/es-MX/ConfirmRecharge_EmailBody.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/es-MX/ConfirmTicketPayment_EmailBody.html">
+      <publishTime>03/02/2018 10:10:47</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/es-MX/ConfirmUnParking_0_1_EmailBody.html">
+      <publishTime>01/08/2019 11:11:21</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/es-MX/ConfirmUnParking_EmailBody.html">
+      <publishTime>03/02/2018 10:14:07</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/es-MX/Confirm_EmailBody_Balance.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/es-MX/CustomerInscriptionModel_SummaryWelcomeEmail_Body.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/es-MX/Email_LayoutSubtotal.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/es-MX/Email_LayoutTotal.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/es-MX/Email_LayoutTotalBonus.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/es-MX/ExternalTicketNotPayable_EmailBody.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/es-MX/ExternalTicket_EmailBody.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/es-MX/footer_COU_AW.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/es-MX/footer_COU_ES.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/es-MX/footer_COU_MX.html">
+      <publishTime>03/05/2018 09:53:34</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/es-MX/footer_CUR_EUR.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/es-MX/footer_CUR_MXN.html">
+      <publishTime>03/05/2018 09:53:34</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/es-MX/footer_CUR_USD.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/es-MX/ForgeUsername_EmailBody.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/es-MX/ForgotPassword_EmailBody.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/es-MX/InviteFriend_Email_Body.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/es-MX/InvoiceSection.html">
+      <publishTime>03/01/2018 17:01:57</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/es-MX/NewUserWithoutPaymentMeanEmail_Body.html">
+      <publishTime>02/07/2018 14:17:09</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/es-MX/SignupStep1_Email_Body.html">
+      <publishTime>01/31/2018 13:36:34</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/es-MX/TransferBalanceDst_EmailBody.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="bin/ResourceExt/es-MX/TransferBalanceSrc_EmailBody.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="bin/Stripe.net.dll">
+      <publishTime>12/22/2021 10:30:52</publishTime>
+    </File>
+    <File Include="bin/System.IdentityModel.Tokens.Jwt.dll">
+      <publishTime>04/15/2021 15:23:42</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.Formatting.dll">
+      <publishTime>11/28/2018 14:00:36</publishTime>
+    </File>
+    <File Include="bin/System.Runtime.CompilerServices.Unsafe.dll">
+      <publishTime>12/09/2021 20:38:35</publishTime>
+    </File>
+    <File Include="bin/System.Threading.Tasks.Extensions.dll">
+      <publishTime>12/09/2021 20:38:37</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.dll">
+      <publishTime>11/28/2018 14:01:00</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.WebHost.dll">
+      <publishTime>11/28/2018 14:02:56</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>11/28/2018 13:59:46</publishTime>
+    </File>
+    <File Include="bin/TransbankCerts/597020000547.pfx">
+      <publishTime>07/15/2016 18:33:25</publishTime>
+    </File>
+    <File Include="bin/TransbankCerts/tbk.pem">
+      <publishTime>05/23/2016 22:04:06</publishTime>
+    </File>
+    <File Include="bin/UIShell.OSGi.dll">
+      <publishTime>07/23/2017 18:33:00</publishTime>
+    </File>
+    <File Include="bin/WebActivator.dll">
+      <publishTime>12/05/2013 22:05:16</publishTime>
+    </File>
+    <File Include="bin/WebActivatorEx.dll">
+      <publishTime>10/05/2016 13:11:52</publishTime>
+    </File>
+    <File Include="bin/Webpay.Transbank.Library.dll">
+      <publishTime>01/16/2018 17:16:40</publishTime>
+    </File>
+    <File Include="bin/ZeroBounce.dll">
+      <publishTime>02/26/2018 11:35:25</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>09/04/2013 00:22:18</publishTime>
+    </File>
+    <File Include="integraExternalServices.asmx">
+      <publishTime>09/04/2013 00:22:18</publishTime>
+    </File>
+    <File Include="integraMobile.WS.pfx">
+      <publishTime>12/13/2013 20:31:21</publishTime>
+    </File>
+    <File Include="integraMobileWS.asmx">
+      <publishTime>09/04/2013 00:22:18</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>04/12/2022 12:04:19</publishTime>
+    </File>
+    <File Include="Properties/Settings.settings">
+      <publishTime>06/17/2013 10:36:14</publishTime>
+    </File>
+    <File Include="ResourceExt/ca-ES/Activation_EmailBody.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="ResourceExt/ca-ES/CommerceSubscriptionRequest.html">
+      <publishTime>02/07/2018 11:16:36</publishTime>
+    </File>
+    <File Include="ResourceExt/ca-ES/ConfirmCampaignUserUse_EmailBody.html">
+      <publishTime>10/17/2018 15:06:59</publishTime>
+    </File>
+    <File Include="ResourceExt/ca-ES/ConfirmOffstreet_EmailBody.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="ResourceExt/ca-ES/ConfirmOffstreet_EmailBody_Balance.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="ResourceExt/ca-ES/ConfirmParking_1_0_EmailBody.html">
+      <publishTime>12/27/2018 10:07:07</publishTime>
+    </File>
+    <File Include="ResourceExt/ca-ES/ConfirmParking_1_0_EmailBody_Plates.html">
+      <publishTime>12/27/2018 10:07:07</publishTime>
+    </File>
+    <File Include="ResourceExt/ca-ES/ConfirmParking_1_EmailBody.html">
+      <publishTime>12/18/2018 17:00:51</publishTime>
+    </File>
+    <File Include="ResourceExt/ca-ES/ConfirmParking_1_EmailBody_Plates.html">
+      <publishTime>12/12/2018 17:59:22</publishTime>
+    </File>
+    <File Include="ResourceExt/ca-ES/ConfirmParking_EmailBody.html">
+      <publishTime>06/16/2020 09:06:08</publishTime>
+    </File>
+    <File Include="ResourceExt/ca-ES/ConfirmParking_EmailBody_SpaceSection.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="ResourceExt/ca-ES/ConfirmRecharge_EmailBody.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="ResourceExt/ca-ES/ConfirmTicketPayment_EmailBody.html">
+      <publishTime>03/02/2018 10:09:20</publishTime>
+    </File>
+    <File Include="ResourceExt/ca-ES/ConfirmUnParking_0_1_EmailBody.html">
+      <publishTime>01/08/2019 11:11:21</publishTime>
+    </File>
+    <File Include="ResourceExt/ca-ES/ConfirmUnParking_EmailBody.html">
+      <publishTime>03/02/2018 10:12:59</publishTime>
+    </File>
+    <File Include="ResourceExt/ca-ES/Confirm_EmailBody_Balance.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="ResourceExt/ca-ES/CustomerInscriptionModel_SummaryWelcomeEmail_Body.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="ResourceExt/ca-ES/Email_LayoutDiscountCampaign.html">
+      <publishTime>04/05/2020 20:58:56</publishTime>
+    </File>
+    <File Include="ResourceExt/ca-ES/Email_LayoutSubtotal.html">
+      <publishTime>01/31/2018 13:54:40</publishTime>
+    </File>
+    <File Include="ResourceExt/ca-ES/Email_LayoutTotal.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="ResourceExt/ca-ES/Email_LayoutTotalBonus.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="ResourceExt/ca-ES/ExternalTicketNotPayable_EmailBody.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="ResourceExt/ca-ES/ExternalTicket_EmailBody.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="ResourceExt/ca-ES/footer_COU_AW.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="ResourceExt/ca-ES/footer_COU_ES.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="ResourceExt/ca-ES/footer_COU_MX.html">
+      <publishTime>03/05/2018 09:53:34</publishTime>
+    </File>
+    <File Include="ResourceExt/ca-ES/footer_CUR_EUR.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="ResourceExt/ca-ES/footer_CUR_MXN.html">
+      <publishTime>03/05/2018 09:53:34</publishTime>
+    </File>
+    <File Include="ResourceExt/ca-ES/footer_CUR_USD.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="ResourceExt/ca-ES/ForgeUsername_EmailBody.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="ResourceExt/ca-ES/ForgotPassword_EmailBody.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="ResourceExt/ca-ES/InviteFriend_Email_Body.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="ResourceExt/ca-ES/InvoiceSection.html">
+      <publishTime>03/01/2018 16:52:44</publishTime>
+    </File>
+    <File Include="ResourceExt/ca-ES/InvoiceSection_INS_SBL.html">
+      <publishTime>03/02/2018 10:36:16</publishTime>
+    </File>
+    <File Include="ResourceExt/ca-ES/InvoiceSection_INS_STC.html">
+      <publishTime>03/02/2018 10:58:23</publishTime>
+    </File>
+    <File Include="ResourceExt/ca-ES/InvoiceSection_INS_TER.html">
+      <publishTime>03/02/2018 11:00:01</publishTime>
+    </File>
+    <File Include="ResourceExt/ca-ES/NewUserWithoutPaymentMeanEmail_Body.html">
+      <publishTime>02/05/2018 17:54:11</publishTime>
+    </File>
+    <File Include="ResourceExt/ca-ES/SignupStep1_Email_Body.html">
+      <publishTime>01/31/2018 13:35:20</publishTime>
+    </File>
+    <File Include="ResourceExt/ca-ES/TransferBalanceDst_EmailBody.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="ResourceExt/ca-ES/TransferBalanceSrc_EmailBody.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="ResourceExt/en-US/Activation_EmailBody.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="ResourceExt/en-US/CommerceSubscriptionRequest.html">
+      <publishTime>02/07/2018 11:16:36</publishTime>
+    </File>
+    <File Include="ResourceExt/en-US/ConfirmCampaignUserUse_EmailBody.html">
+      <publishTime>10/17/2018 15:06:59</publishTime>
+    </File>
+    <File Include="ResourceExt/en-US/ConfirmOffstreet_EmailBody.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="ResourceExt/en-US/ConfirmOffstreet_EmailBody_Balance.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="ResourceExt/en-US/ConfirmParking_1_0_EmailBody.html">
+      <publishTime>12/27/2018 10:07:07</publishTime>
+    </File>
+    <File Include="ResourceExt/en-US/ConfirmParking_1_0_EmailBody_Plates.html">
+      <publishTime>12/27/2018 10:07:07</publishTime>
+    </File>
+    <File Include="ResourceExt/en-US/ConfirmParking_1_EmailBody.html">
+      <publishTime>12/18/2018 17:00:51</publishTime>
+    </File>
+    <File Include="ResourceExt/en-US/ConfirmParking_1_EmailBody_Plates.html">
+      <publishTime>12/12/2018 17:59:22</publishTime>
+    </File>
+    <File Include="ResourceExt/en-US/ConfirmParking_EmailBody.html">
+      <publishTime>06/16/2020 09:06:10</publishTime>
+    </File>
+    <File Include="ResourceExt/en-US/ConfirmParking_EmailBody_SpaceSection.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="ResourceExt/en-US/ConfirmRecharge_EmailBody.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="ResourceExt/en-US/ConfirmTicketPayment_EmailBody.html">
+      <publishTime>03/02/2018 10:09:55</publishTime>
+    </File>
+    <File Include="ResourceExt/en-US/ConfirmUnParking_0_1_EmailBody.html">
+      <publishTime>01/08/2019 11:11:21</publishTime>
+    </File>
+    <File Include="ResourceExt/en-US/ConfirmUnParking_EmailBody.html">
+      <publishTime>03/02/2018 10:13:28</publishTime>
+    </File>
+    <File Include="ResourceExt/en-US/Confirm_EmailBody_Balance.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="ResourceExt/en-US/CustomerInscriptionModel_SummaryWelcomeEmail_Body.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="ResourceExt/en-US/Email_LayoutDiscountCampaign.html">
+      <publishTime>04/05/2020 20:58:56</publishTime>
+    </File>
+    <File Include="ResourceExt/en-US/Email_LayoutSubtotal.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="ResourceExt/en-US/Email_LayoutTotal.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="ResourceExt/en-US/Email_LayoutTotalBonus.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="ResourceExt/en-US/ExternalTicketNotPayable_EmailBody.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="ResourceExt/en-US/ExternalTicket_EmailBody.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="ResourceExt/en-US/footer_COU_AW.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="ResourceExt/en-US/footer_COU_ES.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="ResourceExt/en-US/footer_COU_MX.html">
+      <publishTime>03/05/2018 09:53:34</publishTime>
+    </File>
+    <File Include="ResourceExt/en-US/footer_CUR_EUR.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="ResourceExt/en-US/footer_CUR_MXN.html">
+      <publishTime>03/05/2018 09:53:34</publishTime>
+    </File>
+    <File Include="ResourceExt/en-US/footer_CUR_USD.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="ResourceExt/en-US/ForgeUsername_EmailBody.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="ResourceExt/en-US/ForgotPassword_EmailBody.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="ResourceExt/en-US/InviteFriend_Email_Body.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="ResourceExt/en-US/InvoiceSection.html">
+      <publishTime>03/01/2018 17:00:05</publishTime>
+    </File>
+    <File Include="ResourceExt/en-US/InvoiceSection_INS_SBL.html">
+      <publishTime>03/02/2018 10:46:08</publishTime>
+    </File>
+    <File Include="ResourceExt/en-US/InvoiceSection_INS_STC.html">
+      <publishTime>03/02/2018 10:58:46</publishTime>
+    </File>
+    <File Include="ResourceExt/en-US/InvoiceSection_INS_TER.html">
+      <publishTime>03/02/2018 10:59:48</publishTime>
+    </File>
+    <File Include="ResourceExt/en-US/NewUserWithoutPaymentMeanEmail_Body.html">
+      <publishTime>02/07/2018 14:11:05</publishTime>
+    </File>
+    <File Include="ResourceExt/en-US/NewUserWithoutPaymentMeanEmail_Body_COU_CA.html">
+      <publishTime>03/01/2018 09:05:52</publishTime>
+    </File>
+    <File Include="ResourceExt/en-US/SignupStep1_Email_Body.html">
+      <publishTime>01/31/2018 13:35:55</publishTime>
+    </File>
+    <File Include="ResourceExt/en-US/TransferBalanceDst_EmailBody.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="ResourceExt/en-US/TransferBalanceSrc_EmailBody.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="ResourceExt/es-ES/Activation_EmailBody.html">
+      <publishTime>01/31/2018 13:43:37</publishTime>
+    </File>
+    <File Include="ResourceExt/es-ES/CommerceSubscriptionRequest.html">
+      <publishTime>02/07/2018 11:16:36</publishTime>
+    </File>
+    <File Include="ResourceExt/es-ES/ConfirmCampaignUserUse_EmailBody.html">
+      <publishTime>10/17/2018 15:06:59</publishTime>
+    </File>
+    <File Include="ResourceExt/es-ES/ConfirmOffstreet_EmailBody.html">
+      <publishTime>01/31/2018 13:43:37</publishTime>
+    </File>
+    <File Include="ResourceExt/es-ES/ConfirmOffstreet_EmailBody_Balance.html">
+      <publishTime>01/31/2018 13:43:37</publishTime>
+    </File>
+    <File Include="ResourceExt/es-ES/ConfirmParking_1_0_EmailBody.html">
+      <publishTime>12/27/2018 10:07:07</publishTime>
+    </File>
+    <File Include="ResourceExt/es-ES/ConfirmParking_1_0_EmailBody_Plates.html">
+      <publishTime>12/27/2018 10:07:07</publishTime>
+    </File>
+    <File Include="ResourceExt/es-ES/ConfirmParking_1_EmailBody.html">
+      <publishTime>12/18/2018 17:00:51</publishTime>
+    </File>
+    <File Include="ResourceExt/es-ES/ConfirmParking_1_EmailBody_Plates.html">
+      <publishTime>12/12/2018 17:59:22</publishTime>
+    </File>
+    <File Include="ResourceExt/es-ES/ConfirmParking_EmailBody.html">
+      <publishTime>06/16/2020 09:06:09</publishTime>
+    </File>
+    <File Include="ResourceExt/es-ES/ConfirmParking_EmailBody_SpaceSection.html">
+      <publishTime>01/31/2018 13:43:37</publishTime>
+    </File>
+    <File Include="ResourceExt/es-ES/ConfirmRecharge_EmailBody.html">
+      <publishTime>05/27/2019 17:32:35</publishTime>
+    </File>
+    <File Include="ResourceExt/es-ES/ConfirmTicketPayment_EmailBody.html">
+      <publishTime>05/27/2019 17:32:35</publishTime>
+    </File>
+    <File Include="ResourceExt/es-ES/ConfirmUnParking_0_1_EmailBody.html">
+      <publishTime>05/27/2019 17:32:35</publishTime>
+    </File>
+    <File Include="ResourceExt/es-ES/ConfirmUnParking_EmailBody.html">
+      <publishTime>03/02/2018 10:13:47</publishTime>
+    </File>
+    <File Include="ResourceExt/es-ES/Confirm_EmailBody_Balance.html">
+      <publishTime>01/31/2018 13:43:37</publishTime>
+    </File>
+    <File Include="ResourceExt/es-ES/CustomerInscriptionModel_SummaryWelcomeEmail_Body.html">
+      <publishTime>05/27/2019 17:32:35</publishTime>
+    </File>
+    <File Include="ResourceExt/es-ES/Email_LayoutDiscountCampaign.html">
+      <publishTime>04/05/2020 20:58:56</publishTime>
+    </File>
+    <File Include="ResourceExt/es-ES/Email_LayoutSubtotal.html">
+      <publishTime>05/27/2019 17:32:35</publishTime>
+    </File>
+    <File Include="ResourceExt/es-ES/Email_LayoutTotal.html">
+      <publishTime>05/27/2019 17:32:35</publishTime>
+    </File>
+    <File Include="ResourceExt/es-ES/Email_LayoutTotalBonus.html">
+      <publishTime>05/27/2019 17:32:35</publishTime>
+    </File>
+    <File Include="ResourceExt/es-ES/ExternalTicketNotPayable_EmailBody.html">
+      <publishTime>05/27/2019 17:32:35</publishTime>
+    </File>
+    <File Include="ResourceExt/es-ES/ExternalTicket_EmailBody.html">
+      <publishTime>05/27/2019 17:32:35</publishTime>
+    </File>
+    <File Include="ResourceExt/es-ES/footer_COU_AW.html">
+      <publishTime>05/27/2019 17:32:35</publishTime>
+    </File>
+    <File Include="ResourceExt/es-ES/footer_COU_ES.html">
+      <publishTime>05/22/2019 17:04:54</publishTime>
+    </File>
+    <File Include="ResourceExt/es-ES/footer_COU_MX.html">
+      <publishTime>05/27/2019 17:32:35</publishTime>
+    </File>
+    <File Include="ResourceExt/es-ES/footer_CUR_EUR.html">
+      <publishTime>05/27/2019 17:32:35</publishTime>
+    </File>
+    <File Include="ResourceExt/es-ES/footer_CUR_MXN.html">
+      <publishTime>05/27/2019 17:32:35</publishTime>
+    </File>
+    <File Include="ResourceExt/es-ES/footer_CUR_USD.html">
+      <publishTime>05/27/2019 17:32:35</publishTime>
+    </File>
+    <File Include="ResourceExt/es-ES/ForgeUsername_EmailBody.html">
+      <publishTime>01/31/2018 13:43:37</publishTime>
+    </File>
+    <File Include="ResourceExt/es-ES/ForgotPassword_EmailBody.html">
+      <publishTime>05/27/2019 17:32:35</publishTime>
+    </File>
+    <File Include="ResourceExt/es-ES/InvitedAFriendCongrat_EmailBody_2.html">
+      <publishTime>11/20/2018 15:50:12</publishTime>
+    </File>
+    <File Include="ResourceExt/es-ES/InvitedAFriendCongrat_EmailHeader_2.html">
+      <publishTime>11/20/2018 15:50:12</publishTime>
+    </File>
+    <File Include="ResourceExt/es-ES/InviteFriend_Email_Body.html">
+      <publishTime>01/31/2018 13:43:37</publishTime>
+    </File>
+    <File Include="ResourceExt/es-ES/InvoiceSection.html">
+      <publishTime>03/01/2018 17:03:35</publishTime>
+    </File>
+    <File Include="ResourceExt/es-ES/InvoiceSection_INS_SBL.html">
+      <publishTime>05/27/2019 17:32:35</publishTime>
+    </File>
+    <File Include="ResourceExt/es-ES/InvoiceSection_INS_STC.html">
+      <publishTime>05/27/2019 17:32:35</publishTime>
+    </File>
+    <File Include="ResourceExt/es-ES/InvoiceSection_INS_TER.html">
+      <publishTime>05/27/2019 17:32:35</publishTime>
+    </File>
+    <File Include="ResourceExt/es-ES/NewUserWithoutPaymentMeanEmail_Body.html">
+      <publishTime>05/27/2019 17:32:35</publishTime>
+    </File>
+    <File Include="ResourceExt/es-ES/SignupStep1_Email_Body.html">
+      <publishTime>05/22/2019 17:04:54</publishTime>
+    </File>
+    <File Include="ResourceExt/es-ES/TransferBalanceDst_EmailBody.html">
+      <publishTime>01/31/2018 13:43:37</publishTime>
+    </File>
+    <File Include="ResourceExt/es-ES/TransferBalanceSrc_EmailBody.html">
+      <publishTime>01/31/2018 13:43:37</publishTime>
+    </File>
+    <File Include="ResourceExt/es-MX/Activation_EmailBody.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="ResourceExt/es-MX/CommerceSubscriptionRequest.html">
+      <publishTime>02/07/2018 11:16:36</publishTime>
+    </File>
+    <File Include="ResourceExt/es-MX/ConfirmCampaignUserUse_EmailBody.html">
+      <publishTime>10/17/2018 15:06:59</publishTime>
+    </File>
+    <File Include="ResourceExt/es-MX/ConfirmOffstreet_EmailBody.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="ResourceExt/es-MX/ConfirmOffstreet_EmailBody_Balance.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="ResourceExt/es-MX/ConfirmParking_1_0_EmailBody.html">
+      <publishTime>12/27/2018 10:07:07</publishTime>
+    </File>
+    <File Include="ResourceExt/es-MX/ConfirmParking_1_0_EmailBody_Plates.html">
+      <publishTime>12/27/2018 10:07:07</publishTime>
+    </File>
+    <File Include="ResourceExt/es-MX/ConfirmParking_1_EmailBody.html">
+      <publishTime>12/18/2018 17:00:51</publishTime>
+    </File>
+    <File Include="ResourceExt/es-MX/ConfirmParking_1_EmailBody_Plates.html">
+      <publishTime>12/12/2018 17:59:22</publishTime>
+    </File>
+    <File Include="ResourceExt/es-MX/ConfirmParking_EmailBody.html">
+      <publishTime>06/16/2020 09:08:48</publishTime>
+    </File>
+    <File Include="ResourceExt/es-MX/ConfirmParking_EmailBody_SpaceSection.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="ResourceExt/es-MX/ConfirmRecharge_EmailBody.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="ResourceExt/es-MX/ConfirmTicketPayment_EmailBody.html">
+      <publishTime>03/02/2018 10:10:47</publishTime>
+    </File>
+    <File Include="ResourceExt/es-MX/ConfirmUnParking_0_1_EmailBody.html">
+      <publishTime>01/08/2019 11:11:21</publishTime>
+    </File>
+    <File Include="ResourceExt/es-MX/ConfirmUnParking_EmailBody.html">
+      <publishTime>03/02/2018 10:14:07</publishTime>
+    </File>
+    <File Include="ResourceExt/es-MX/Confirm_EmailBody_Balance.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="ResourceExt/es-MX/CustomerInscriptionModel_SummaryWelcomeEmail_Body.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="ResourceExt/es-MX/Email_LayoutDiscountCampaign.html">
+      <publishTime>04/05/2020 20:58:56</publishTime>
+    </File>
+    <File Include="ResourceExt/es-MX/Email_LayoutSubtotal.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="ResourceExt/es-MX/Email_LayoutTotal.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="ResourceExt/es-MX/Email_LayoutTotalBonus.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="ResourceExt/es-MX/ExternalTicketNotPayable_EmailBody.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="ResourceExt/es-MX/ExternalTicket_EmailBody.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="ResourceExt/es-MX/footer_COU_AW.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="ResourceExt/es-MX/footer_COU_ES.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="ResourceExt/es-MX/footer_COU_MX.html">
+      <publishTime>03/05/2018 09:53:34</publishTime>
+    </File>
+    <File Include="ResourceExt/es-MX/footer_CUR_EUR.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="ResourceExt/es-MX/footer_CUR_MXN.html">
+      <publishTime>03/05/2018 09:53:34</publishTime>
+    </File>
+    <File Include="ResourceExt/es-MX/footer_CUR_USD.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="ResourceExt/es-MX/ForgeUsername_EmailBody.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="ResourceExt/es-MX/ForgotPassword_EmailBody.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="ResourceExt/es-MX/InviteFriend_Email_Body.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="ResourceExt/es-MX/InvoiceSection.html">
+      <publishTime>03/01/2018 17:01:57</publishTime>
+    </File>
+    <File Include="ResourceExt/es-MX/NewUserWithoutPaymentMeanEmail_Body.html">
+      <publishTime>02/07/2018 14:17:09</publishTime>
+    </File>
+    <File Include="ResourceExt/es-MX/SignupStep1_Email_Body.html">
+      <publishTime>01/31/2018 13:36:34</publishTime>
+    </File>
+    <File Include="ResourceExt/es-MX/TransferBalanceDst_EmailBody.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="ResourceExt/es-MX/TransferBalanceSrc_EmailBody.html">
+      <publishTime>01/31/2018 13:43:36</publishTime>
+    </File>
+    <File Include="Templates/es-ES/Test.html">
+      <publishTime>05/01/2014 10:07:37</publishTime>
+    </File>
+    <File Include="Web References/ExternalIntegraMobileWS/integraMobileWS.wsdl">
+      <publishTime>05/20/2019 08:39:05</publishTime>
+    </File>
+    <File Include="Web References/ExternalIntegraMobileWS/Reference.map">
+      <publishTime>01/20/2022 22:11:11</publishTime>
+    </File>
+    <File Include="Web References/EysaThirdPartyConfirmParkWS/Reference.map">
+      <publishTime>09/03/2013 11:55:58</publishTime>
+    </File>
+    <File Include="Web References/EysaThirdPartyConfirmParkWS/ticket.wsdl">
+      <publishTime>09/03/2013 11:55:58</publishTime>
+    </File>
+    <File Include="Web References/EysaThirdPartyFineWS/anulaciones.wsdl">
+      <publishTime>09/03/2013 11:41:26</publishTime>
+    </File>
+    <File Include="Web References/EysaThirdPartyFineWS/Reference.map">
+      <publishTime>09/03/2013 11:41:26</publishTime>
+    </File>
+    <File Include="Web References/EysaThirdPartyParkWS/Reference.map">
+      <publishTime>09/03/2013 11:55:59</publishTime>
+    </File>
+    <File Include="Web References/EysaThirdPartyParkWS/tarifas.wsdl">
+      <publishTime>09/03/2013 11:55:59</publishTime>
+    </File>
+    <File Include="Web References/gTechnaParkingConfirmWS/ParkingRightsListener.wsdl">
+      <publishTime>09/25/2013 18:17:39</publishTime>
+    </File>
+    <File Include="Web References/gTechnaParkingConfirmWS/Reference.map">
+      <publishTime>09/25/2013 18:17:39</publishTime>
+    </File>
+    <File Include="Web References/gTechnaThirdPartyFineWS/ticket_list_response1.datasource">
+      <publishTime>11/05/2013 09:54:20</publishTime>
+    </File>
+    <File Include="Web References/gTechnaThirdPartyFineWS/ticket_payment_response1.datasource">
+      <publishTime>11/05/2013 09:54:20</publishTime>
+    </File>
+    <File Include="Web References/gTechnaThirdPartyFineWS/ticket_status_response1.datasource">
+      <publishTime>11/05/2013 09:54:20</publishTime>
+    </File>
+    <File Include="Web References/gTechnaThirdPartyParkingConfirmWS/ParkingRightsListener.wsdl">
+      <publishTime>09/25/2013 18:17:39</publishTime>
+    </File>
+    <File Include="Web References/gTechnaThirdPartyParkingConfirmWS/Reference.map">
+      <publishTime>09/25/2013 18:17:39</publishTime>
+    </File>
+    <File Include="Web References/StandardParkingWS/Reference.map">
+      <publishTime>11/05/2013 10:22:14</publishTime>
+    </File>
+    <File Include="Web References/StandardParkingWS/TariffComputer.disco">
+      <publishTime>11/05/2013 10:22:14</publishTime>
+    </File>
+    <File Include="Web References/StandardParkingWS/TariffComputer.wsdl">
+      <publishTime>11/05/2013 10:22:14</publishTime>
+    </File>
+    <File Include="Web References/StandardThirdPartyFineWS/PayByPhoneListener.wsdl">
+      <publishTime>09/03/2013 11:41:26</publishTime>
+    </File>
+    <File Include="Web References/StandardThirdPartyFineWS/PayByPhoneOperationService.wsdl">
+      <publishTime>09/17/2013 11:54:24</publishTime>
+    </File>
+    <File Include="Web References/StandardThirdPartyFineWS/Reference.map">
+      <publishTime>09/17/2013 11:54:24</publishTime>
+    </File>
+    <File Include="Web References/StandardThirdPartyFineWS/ticket_list_response.datasource">
+      <publishTime>09/25/2013 19:46:51</publishTime>
+    </File>
+    <File Include="Web References/StandardThirdPartyFineWS/ticket_payment_response.datasource">
+      <publishTime>09/25/2013 19:46:51</publishTime>
+    </File>
+    <File Include="Web References/StandardThirdPartyFineWS/ticket_status_response.datasource">
+      <publishTime>09/25/2013 19:46:51</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>06/14/2022 15:20:33</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="iCurrencyChange">
+  <DataContextMoniker Name="/iCurrencyChangeDataContext" />
+  <nestedChildShapes>
+    <classShape Id="3ab0d08e-7b9a-4ee9-a1c1-36cd1b333681" absoluteBounds="0.75, 2.25, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/iCurrencyChangeDataContext/CURRENCy" />
+      <nestedChildShapes>
+        <elementListCompartment Id="140950da-6cd3-4b4f-9f1a-a08fbbca6b9a" absoluteBounds="0.765, 2.71, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="80ad13f4-85c0-4125-b038-aa8831d84947" absoluteBounds="6.75, 0.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/iCurrencyChangeDataContext/PARAMETER" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0575ae0b-b4c8-46b9-a52b-296e1dee683a" absoluteBounds="6.765, 1.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e59a2670-58ad-4f28-9143-ab183860573f" absoluteBounds="3.5, 1, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/iCurrencyChangeDataContext/CURRENCY_CHANGE" />
+      <nestedChildShapes>
+        <elementListCompartment Id="957ad5ef-18a3-438c-afe6-ee7eb5b9eeca" absoluteBounds="3.515, 1.46, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e52064b1-42d8-40b7-9d29-0c88155a825e" absoluteBounds="3.5, 3.625, 2, 1.9631982421875005">
+      <DataClassMoniker Name="/iCurrencyChangeDataContext/CURRENCY_CHANGES_HI" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6e3ea3d2-424c-430d-b142-a7a324575986" absoluteBounds="3.515, 4.085, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 2.51044840494792); (3.5 : 2.51044840494792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/iCurrencyChangeDataContext/CURRENCy/CURRENCy_CURRENCY_CHANGE" />
+      <nodes>
+        <classShapeMoniker Id="3ab0d08e-7b9a-4ee9-a1c1-36cd1b333681" />
+        <classShapeMoniker Id="e59a2670-58ad-4f28-9143-ab183860573f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 2.31772420247396); (3.5 : 2.31772420247396)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/iCurrencyChangeDataContext/CURRENCy/CURRENCy_CURRENCY_CHANGE1" />
+      <nodes>
+        <classShapeMoniker Id="3ab0d08e-7b9a-4ee9-a1c1-36cd1b333681" />
+        <classShapeMoniker Id="e59a2670-58ad-4f28-9143-ab183860573f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 4.01524983723958); (3.5 : 4.01524983723958)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/iCurrencyChangeDataContext/CURRENCy/CURRENCy_CURRENCY_CHANGES_HI" />
+      <nodes>
+        <classShapeMoniker Id="3ab0d08e-7b9a-4ee9-a1c1-36cd1b333681" />
+        <classShapeMoniker Id="e52064b1-42d8-40b7-9d29-0c88155a825e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 3.75762491861979); (3.5 : 3.75762491861979)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/iCurrencyChangeDataContext/CURRENCy/CURRENCy_CURRENCY_CHANGES_HI1" />
+      <nodes>
+        <classShapeMoniker Id="3ab0d08e-7b9a-4ee9-a1c1-36cd1b333681" />
+        <classShapeMoniker Id="e52064b1-42d8-40b7-9d29-0c88155a825e" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

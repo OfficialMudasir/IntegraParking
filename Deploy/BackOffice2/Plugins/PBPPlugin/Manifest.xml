@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Bundle xmlns="urn:uiosp-bundle-manifest-2.0" Name="PBPPlugin" SymbolicName="PBPPlugin" Version="1.0.0.0" InitializedState="Active">
+  <Activator Type="PBPPlugin.Activator" Policy="Immediate" />
+  <Runtime>
+    <Assembly Path="bin\PBPPlugin.dll" Share="false" />    
+    <Assembly Path="bin\integraMobile.Infrastructure.dll" Share="true" />
+    <Assembly Path="bin\integraMobile.Domain.dll" Share="true" />
+    <Assembly Path="bin\integraMobile.Domain.NH.dll" Share="true" />
+	  <Assembly Path="bin\integraMobile.Reports.dll" Share="true" />    
+  </Runtime>
+
+  <Extension Point="MainMenu">
+    <Item id="mnuOperationsMenu" url="#" text="Operations" order="1" image="Content/img/menu/operations.png" class="" role="OPERATIONS_READ;HISOPERATIONS_READ;TICKETPAYMENTS_READ;CURROPERATIONS_READ;HISOPERATIONSRESTRICTED_READ;BALANCETRANSFERS_READ">
+      <Resources>
+        <Text locale="en-US" text="Operations"></Text>
+        <Text locale="es-ES" text="Operaciones"></Text>
+        <Text locale="ca-ES" text="Operacions"></Text>
+      </Resources>
+      <SubItems>
+        <Item id="mnuVwHisOperations" url="~/Maintenance/Maintenance?plugin=MaintenancePlugin&amp;modelName=VwHisOperations" text="Parkings" order="1" image="Content/img/menu/operations.png" class="" role="HISOPERATIONS_READ">
+          <Resources>
+            <Text locale="en-US" text="Parkings"></Text>
+            <Text locale="es-ES" text="Estacionamientos"></Text>
+            <Text locale="ca-ES" text="Estacionaments"></Text>
+          </Resources>
+        </Item>
+        <Item id="mnuVwTicketPayments" url="~/Maintenance/Maintenance?plugin=MaintenancePlugin&amp;modelName=VwTicketPayments" text="Ticket Payments" order="2" image="Content/img/menu/operations.png" class="" role="TICKETPAYMENTS_READ">
+          <Resources>
+            <Text locale="en-US" text="Ticket Payments"></Text>
+            <Text locale="es-ES" text="Anulaciones"></Text>
+            <Text locale="ca-ES" text="Anul·lacions"></Text>
+          </Resources>
+        </Item>
+        <Item id="mnuVwCustomerPaymentMeansRecharges" url="~/Maintenance/Maintenance?plugin=MaintenancePlugin&amp;modelName=VwCustomerPaymentMeansRecharges" text="Recharges" order="3" image="Content/img/menu/operations.png" class="" role="RECHARGES_READ">
+          <Resources>
+            <Text locale="en-US" text="Recharges"></Text>
+            <Text locale="es-ES" text="Recargas"></Text>
+            <Text locale="ca-ES" text="Recàrregues"></Text>
+          </Resources>
+        </Item>        
+        <Item id="mnuOperationsCurr" url="~/Maintenance/Maintenance?plugin=MaintenancePlugin&amp;modelName=AllCurrOperationsExts" text="Current Operations" order="4" image="Content/img/menu/operations.png" class="" role="CURROPERATIONS_READ">
+          <Resources>
+            <Text locale="en-US" text="Current Operations"></Text>
+            <Text locale="es-ES" text="Operaciones Actuales"></Text>
+            <Text locale="ca-ES" text="Operacions Actuals"></Text>
+          </Resources>
+        </Item>
+        <Item id="mnuOperations" url="~/Maintenance/Maintenance?plugin=MaintenancePlugin&amp;modelName=AllOperationsExts" text="Operations Historic" order="5" image="Content/img/menu/operations.png" class="" role="OPERATIONS_READ">
+          <Resources>
+            <Text locale="en-US" text="Operations Historic"></Text>
+            <Text locale="es-ES" text="Histórico Operaciones"></Text>
+            <Text locale="ca-ES" text="Històric Operacions"></Text>
+          </Resources>
+        </Item>
+        <Item id="mnuVwHisOperationsRestricted" url="~/Maintenance/Maintenance?plugin=MaintenancePlugin&amp;modelName=VwHisOperationsRestricted" text="Parkings Restricted" order="6" image="Content/img/menu/operations.png" class="" role="HISOPERATIONSRESTRICTED_READ">
+          <Resources>
+            <Text locale="en-US" text="Parkings"></Text>
+            <Text locale="es-ES" text="Estacionamientos"></Text>
+            <Text locale="ca-ES" text="Estacionaments"></Text>
+          </Resources>
+        </Item>
+        <Item id="mnuVwBalanceTransfers" url="~/Maintenance/Maintenance?plugin=MaintenancePlugin&amp;modelName=VwBalanceTransfers" text="Balance Transfers" order="7" image="Content/img/menu/operations.png" class="" role="BALANCETRANSFERS_READ">
+          <Resources>
+            <Text locale="en-US" text="Balance Transfers"></Text>
+            <Text locale="es-ES" text="Transferencias de Saldo"></Text>
+            <Text locale="ca-ES" text="Transferències de Saldo"></Text>
+          </Resources>
+        </Item>
+      </SubItems>
+    </Item>
+    <Item id="mnuOperationsNoRecharges" url="~/Maintenance/Maintenance?plugin=MaintenancePlugin&amp;modelName=AllOperationsExtNorecharges" text="Operations" order="1" image="Content/img/menu/operations.png" class="" role="OPERATIONSNORECHARGES_READ">
+      <Resources>
+        <Text locale="en-US" text="Operations (No recharges)"></Text>
+        <Text locale="es-ES" text="Operaciones (Sin recargas)"></Text>
+        <Text locale="ca-ES" text="Operacions (Sense recàrregues)"></Text>
+      </Resources>
+    </Item>    
+    <Item id="mnuExternalParkingOperations" url="~/Maintenance/Maintenance?plugin=MaintenancePlugin&amp;modelName=ExternalParkingOperations" text="ExternalOperations" order="2" image="Content/img/menu/operations.png" class="" role="EXTERNALOPERATIONS_READ">
+      <Resources>
+        <Text locale="en-US" text="External Operations"></Text>
+        <Text locale="es-ES" text="Operaciones Externas"></Text>
+        <Text locale="ca-ES" text="Operacions Externes"></Text>
+      </Resources>
+    </Item>
+    <Item id="mnuCustomerInvoices" url="~/Maintenance/Maintenance?plugin=MaintenancePlugin&amp;modelName=VwCustomerInvoices" text="CustomerInvoices" order="3" image="Content/img/menu/invoices.png" class="" role="INVOICES_READ">
+      <Resources>
+        <Text locale="en-US" text="Invoices"></Text>
+        <Text locale="es-ES" text="Facturación"></Text>
+        <Text locale="ca-ES" text="Facturació"></Text>
+      </Resources>
+    </Item>
+    <Item id="mnuUsersGroup" url="#" text="Users" order="4" image="Content/img/menu/users.png" class="" role="USERS_READ;INSCRIPTIONS_READ;SECURITYOPERATIONS_READ;USERFRIENDS_READ;USERPUSHIDS_READ">
+      <Resources>
+        <Text locale="en-US" text="Users"></Text>
+        <Text locale="es-ES" text="Usuarios"></Text>
+        <Text locale="ca-ES" text="Usuaris"></Text>
+      </Resources>
+      <SubItems>
+        <Item id="mnuUsers" url="~/Maintenance/Maintenance?plugin=MaintenancePlugin&amp;modelName=Users" text="Users" order="1" image="Content/img/menu/users.png" class="" role="USERS_READ">
+          <Resources>
+            <Text locale="en-US" text="Users"></Text>
+            <Text locale="es-ES" text="Usuarios"></Text>
+            <Text locale="ca-ES" text="Usuaris"></Text>
+          </Resources>
+        </Item>
+        <Item id="mnuCustomerInscriptions" url="~/Maintenance/Maintenance?plugin=MaintenancePlugin&amp;modelName=CustomerInscriptions" text="CustomerInscriptions" order="2" image="Content/img/menu/customerinscriptions.png" class="" role="INSCRIPTIONS_READ">
+          <Resources>
+            <Text locale="en-US" text="Web Inscriptions"></Text>
+            <Text locale="es-ES" text="Altas en Web"></Text>
+            <Text locale="ca-ES" text="Altes en Web"></Text>
+          </Resources>
+        </Item>
+        <Item id="mnuUsersSecurityOptions" url="~/Maintenance/Maintenance?plugin=MaintenancePlugin&amp;modelName=UsersSecurityOperations" text="UsersSecurityOperations" order="3" image="Content/img/menu/usersecurityoperations.png" class="" role="SECURITYOPERATIONS_READ">
+          <Resources>
+            <Text locale="en-US" text="Secure Operations"></Text>
+            <Text locale="es-ES" text="Operaciones Seguras"></Text>
+            <Text locale="ca-ES" text="Operacions Segures"></Text>
+          </Resources>
+        </Item>
+        <Item id="mnuUsersFriends" url="~/Maintenance/Maintenance?plugin=MaintenancePlugin&amp;modelName=VwUsersFriends" text="UsersFriends" order="4" image="Content/img/menu/users.png" class="" role="USERFRIENDS_READ">
+          <Resources>
+            <Text locale="en-US" text="Users Friends"></Text>
+            <Text locale="es-ES" text="Invitaciones"></Text>
+            <Text locale="ca-ES" text="Invitacions"></Text>
+          </Resources>
+        </Item>
+        <Item id="mnuUsersPushIds" url="~/Maintenance/Maintenance?plugin=MaintenancePlugin&amp;modelName=VwUsersPushIds" text="UsersPushIds" order="5" image="Content/img/menu/users.png" class="" role="USERPUSHIDS_READ">
+          <Resources>
+            <Text locale="en-US" text="Devices"></Text>
+            <Text locale="es-ES" text="Dispositivos"></Text>
+            <Text locale="ca-ES" text="Dispositius"></Text>
+          </Resources>
+        </Item>            
+      </SubItems>
+    </Item>
+    <Item id="mnuRechargeCoupons" url="~/Maintenance/Maintenance?plugin=MaintenancePlugin&amp;modelName=VwRechargeCoupons" text="RechargeCoupons" order="7" image="Content/img/menu/operations.png" class="" role="RECHARGECOUPONS_READ">
+      <Resources>
+        <Text locale="en-US" text="Coupons"></Text>
+        <Text locale="es-ES" text="Vales Descuento"></Text>
+        <Text locale="ca-ES" text="Vals Descompte"></Text>
+      </Resources>
+    </Item>
+    <Item id="mnuToolsGroup" url="#" text="Tools" order="8" image="Content/img/menu/tools.png" class="" role="EMAILTOOL_READ;BALANCETRANSFERS_WRITE">
+      <Resources>
+        <Text locale="en-US" text="Tools"></Text>
+        <Text locale="es-ES" text="Herramientas"></Text>
+        <Text locale="ca-ES" text="Eines"></Text>
+      </Resources>
+      <SubItems>
+        <Item id="mnuEmailTool" url="~/Tools/EmailTool?plugin=PBPPlugin" text="Email Tool" order="1" image="Content/img/menu/emailtool.png" class="" role="EMAILTOOL_READ">
+          <Resources>
+            <Text locale="en-US" text="Emails sender"></Text>
+            <Text locale="es-ES" text="Envío de e-mails"></Text>
+            <Text locale="ca-ES" text="Enviament de e-mails"></Text>
+          </Resources>
+        </Item>
+        <Item id="mnuTransferTool" url="~/Tools/BalanceTransfersTool?plugin=PBPPlugin" text="Transfer Tool" order="2" image="Content/img/menu/tools.png" class="" role="BALANCETRANSFERS_WRITE">
+          <Resources>
+            <Text locale="en-US" text="Balance Transfer"></Text>
+            <Text locale="es-ES" text="Transferencia de Saldo"></Text>
+            <Text locale="ca-ES" text="Transferència de Saldo"></Text>
+          </Resources>
+        </Item>
+      </SubItems>
+    </Item>
+    <Item id="mnuDashboard" url="~/Dashboard/Dashboard?plugin=PBPPlugin" text="Dashboard" order="9" image="Content/img/menu/dashboard.png" class="" role="DASHBOARD_READ">
+      <Resources>
+        <Text locale="en-US" text="Dashboard"></Text>
+        <Text locale="es-ES" text="Cuadro de Mando"></Text>
+        <Text locale="ca-ES" text="Dashboard"></Text>
+      </Resources>
+    </Item>
+    <Item id="mnuReports" url="~/Tools/Reports?plugin=PBPPlugin" text="Reports" order="10" image="Content/img/menu/reports.png" class="" role="FRDEPOSITS_READ;FRLIQUIDATIOND_READ;FRBANK_READ;FRGENERALDATA_READ;FRGENERALDATAINST_READ;FRREGISTEREDUSERS_READ;FRDEPOSITSOPERATOR_READ;FRDEPOSITSCOUNCIL_READ">
+      <Resources>
+        <Text locale="en-US" text="Finantial Reports"></Text>
+        <Text locale="es-ES" text="Informes Financieros"></Text>
+        <Text locale="ca-ES" text="Informes Financers"></Text>
+      </Resources>
+    </Item>
+  </Extension>
+
+</Bundle>

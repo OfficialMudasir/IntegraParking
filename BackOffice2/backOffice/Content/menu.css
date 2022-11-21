@@ -1,0 +1,88 @@
+﻿#Menu {
+    background-color: white;
+    border-top-color: white;
+    border-right-style: none;
+}
+               
+#Menu > .k-state-highlight {
+    background: #73b5ca !important;
+}
+
+#Menu > .k-state-default {
+    background: #aaaaaf;            
+}
+
+.k-state-highlight {    
+    color: #FFFFFF;
+    background-image: none, linear-gradient(to bottom, #72b5c9 0px, #53aae2 100%) !important;
+}
+
+.k-state-border-right {    
+    color: #263248;
+    font-weight:bold;
+    /*background-image: none, linear-gradient(to bottom, #72b5c9 0px, #53aae2 100%);*/
+}
+
+#Menu > .k-last {
+    float: right;
+    border-left-width: 0px;
+    border-right-width: 0;
+    background: white;
+    vertical-align: bottom;
+}
+
+#Menu .k-group {
+    background: #aaaaaf;
+}
+
+#Menu .k-link:link,
+#Menu .k-link:visited,
+#Menu .k-nav-current.k-state-hover .k-link {
+    color: white;
+}
+
+.menuIcon {
+    height: 38px;
+    width: 38px;
+}
+.menuIconSmall {
+    height: 24px;
+    width: 24px;    
+}
+.menuLang {
+    /*font-weight: bold;*/
+    color: white;
+}
+.menuUser {
+    font-weight: bold;
+}
+
+
+.subMenuIcon {
+    height: 16px;
+    width: 16px;
+}
+
+#Menu .k-state-border-down {
+    background: #aaaaaf;
+}
+
+#mnuAccordion {
+    display: none;
+    visibility: collapse;
+}
+.mnuUserInfo {
+    display: none;
+}
+
+.MenuProfileContainer {
+    padding-right: 10px;
+    height: 200px;
+    width: 500px;
+    margin-right: 20px;
+    z-index: 99999999;    
+}
+
+.headerLeft {    
+    display: none;
+}

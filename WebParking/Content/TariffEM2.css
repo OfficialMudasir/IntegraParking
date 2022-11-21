@@ -1,0 +1,85 @@
+﻿#lstTariffs
+{
+    border: none;
+    background-color: initial;
+    background: none;
+}
+
+
+.tariffItemButton
+{
+    display: block;
+    margin:0.5em;
+    padding:0em;
+
+    color: #fafafa;
+    background: none;
+
+    background: #2481bc url('EysaMobv2/btn-shadow.png') no-repeat 50% 50%;
+    background-size: 100% 100%;
+
+    
+}
+
+.tariffItemButton .li-left
+{
+
+}
+
+.tariffItemButton a
+{
+
+    display:block;
+    padding:0.5em ;
+
+    color: #fafafa;
+    background: transparent url('EysaMobv2/rarrow-ico.svg') no-repeat 100% 50%;
+    background-size: auto 100%;
+
+    text-decoration:none;
+
+
+}
+
+
+.tariffItemButton a > span
+{
+    display:block;
+    padding-left: 1.5em;
+    background: transparent url('EysaMobv2/tariff-ico.svg') no-repeat 0% 50%;
+    background-size: auto 100%;
+
+}
+
+
+/* BLUE ZBE*/
+.tariffItemType3 {
+    background-color: #275680;
+}
+/* GREEN ZBE*/
+.tariffItemType4 {
+    background-color: #4b8056;
+}
+
+
+/*BLUE*/
+.tariffItemType7 {
+    background-color: #4383c3;
+}
+/*GREEN*/
+.tariffItemType8 {
+    background-color: #26af5f;
+}
+
+/*LARGE*/
+.tariffItemType31 {
+    background-color: #b39147;
+}
+
+
+.li-left.tariffItem
+{
+}
+
+
+

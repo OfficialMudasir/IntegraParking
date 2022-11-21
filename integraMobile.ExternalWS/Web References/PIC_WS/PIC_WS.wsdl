@@ -1,0 +1,1480 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="ExternalAlarmParkingmeter">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExternalAlarmParkingmeterResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ExternalAlarmParkingmeterResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExternalAlarmParkingmeterJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="jsonIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExternalAlarmParkingmeterJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ExternalAlarmParkingmeterJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExternalParkingmeterStatusNotification">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExternalParkingmeterStatusNotificationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ExternalParkingmeterStatusNotificationResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExternalParkingmeterStatusNotificationJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="jsonIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExternalParkingmeterStatusNotificationJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ExternalParkingmeterStatusNotificationJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExternalCollectingParkingmeter">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExternalCollectingParkingmeterResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ExternalCollectingParkingmeterResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExternalCollectingParkingmeterJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="jsonIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExternalCollectingParkingmeterJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ExternalCollectingParkingmeterJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExternalTicketPaymentParkingmeter">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExternalTicketPaymentParkingmeterResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ExternalTicketPaymentParkingmeterResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExternalTicketPaymentParkingmeterJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="jsonIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExternalTicketPaymentParkingmeterJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ExternalTicketPaymentParkingmeterJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExternalMeasuresParkingmeter">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExternalMeasuresParkingmeterResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ExternalMeasuresParkingmeterResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExternalMeasuresParkingmeterJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="jsonIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExternalMeasuresParkingmeterJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ExternalMeasuresParkingmeterJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="iParkTicketSecurityAuthentication">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="iParkTicketSecurityAuthenticationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="iParkTicketSecurityAuthenticationResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="iParkTicketSecurityAuthenticationJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="jsonIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="iParkTicketSecurityAuthenticationJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="iParkTicketSecurityAuthenticationJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="iParkTicketExportTicket">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="iParkTicketExportTicketResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="iParkTicketExportTicketResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="iParkTicketExportTicketJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="jsonIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="iParkTicketExportTicketJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="iParkTicketExportTicketJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="iParkControlSecurityAuthentication">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="iParkControlSecurityAuthenticationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="iParkControlSecurityAuthenticationResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="iParkControlSecurityAuthenticationJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="jsonIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="iParkControlSecurityAuthenticationJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="iParkControlSecurityAuthenticationJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BlinkaySuiteAppSecurityAuthentication">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BlinkaySuiteAppSecurityAuthenticationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BlinkaySuiteAppSecurityAuthenticationResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BlinkaySuiteAppSecurityAuthenticationJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="jsonIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BlinkaySuiteAppSecurityAuthenticationJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BlinkaySuiteAppSecurityAuthenticationJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ExternalAlarmParkingmeterSoapIn">
+    <wsdl:part name="parameters" element="tns:ExternalAlarmParkingmeter" />
+  </wsdl:message>
+  <wsdl:message name="ExternalAlarmParkingmeterSoapOut">
+    <wsdl:part name="parameters" element="tns:ExternalAlarmParkingmeterResponse" />
+  </wsdl:message>
+  <wsdl:message name="ExternalAlarmParkingmeterJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:ExternalAlarmParkingmeterJSON" />
+  </wsdl:message>
+  <wsdl:message name="ExternalAlarmParkingmeterJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:ExternalAlarmParkingmeterJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="ExternalParkingmeterStatusNotificationSoapIn">
+    <wsdl:part name="parameters" element="tns:ExternalParkingmeterStatusNotification" />
+  </wsdl:message>
+  <wsdl:message name="ExternalParkingmeterStatusNotificationSoapOut">
+    <wsdl:part name="parameters" element="tns:ExternalParkingmeterStatusNotificationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ExternalParkingmeterStatusNotificationJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:ExternalParkingmeterStatusNotificationJSON" />
+  </wsdl:message>
+  <wsdl:message name="ExternalParkingmeterStatusNotificationJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:ExternalParkingmeterStatusNotificationJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="ExternalCollectingParkingmeterSoapIn">
+    <wsdl:part name="parameters" element="tns:ExternalCollectingParkingmeter" />
+  </wsdl:message>
+  <wsdl:message name="ExternalCollectingParkingmeterSoapOut">
+    <wsdl:part name="parameters" element="tns:ExternalCollectingParkingmeterResponse" />
+  </wsdl:message>
+  <wsdl:message name="ExternalCollectingParkingmeterJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:ExternalCollectingParkingmeterJSON" />
+  </wsdl:message>
+  <wsdl:message name="ExternalCollectingParkingmeterJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:ExternalCollectingParkingmeterJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="ExternalTicketPaymentParkingmeterSoapIn">
+    <wsdl:part name="parameters" element="tns:ExternalTicketPaymentParkingmeter" />
+  </wsdl:message>
+  <wsdl:message name="ExternalTicketPaymentParkingmeterSoapOut">
+    <wsdl:part name="parameters" element="tns:ExternalTicketPaymentParkingmeterResponse" />
+  </wsdl:message>
+  <wsdl:message name="ExternalTicketPaymentParkingmeterJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:ExternalTicketPaymentParkingmeterJSON" />
+  </wsdl:message>
+  <wsdl:message name="ExternalTicketPaymentParkingmeterJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:ExternalTicketPaymentParkingmeterJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="ExternalMeasuresParkingmeterSoapIn">
+    <wsdl:part name="parameters" element="tns:ExternalMeasuresParkingmeter" />
+  </wsdl:message>
+  <wsdl:message name="ExternalMeasuresParkingmeterSoapOut">
+    <wsdl:part name="parameters" element="tns:ExternalMeasuresParkingmeterResponse" />
+  </wsdl:message>
+  <wsdl:message name="ExternalMeasuresParkingmeterJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:ExternalMeasuresParkingmeterJSON" />
+  </wsdl:message>
+  <wsdl:message name="ExternalMeasuresParkingmeterJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:ExternalMeasuresParkingmeterJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="iParkTicketSecurityAuthenticationSoapIn">
+    <wsdl:part name="parameters" element="tns:iParkTicketSecurityAuthentication" />
+  </wsdl:message>
+  <wsdl:message name="iParkTicketSecurityAuthenticationSoapOut">
+    <wsdl:part name="parameters" element="tns:iParkTicketSecurityAuthenticationResponse" />
+  </wsdl:message>
+  <wsdl:message name="iParkTicketSecurityAuthenticationJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:iParkTicketSecurityAuthenticationJSON" />
+  </wsdl:message>
+  <wsdl:message name="iParkTicketSecurityAuthenticationJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:iParkTicketSecurityAuthenticationJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="iParkTicketExportTicketSoapIn">
+    <wsdl:part name="parameters" element="tns:iParkTicketExportTicket" />
+  </wsdl:message>
+  <wsdl:message name="iParkTicketExportTicketSoapOut">
+    <wsdl:part name="parameters" element="tns:iParkTicketExportTicketResponse" />
+  </wsdl:message>
+  <wsdl:message name="iParkTicketExportTicketJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:iParkTicketExportTicketJSON" />
+  </wsdl:message>
+  <wsdl:message name="iParkTicketExportTicketJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:iParkTicketExportTicketJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="iParkControlSecurityAuthenticationSoapIn">
+    <wsdl:part name="parameters" element="tns:iParkControlSecurityAuthentication" />
+  </wsdl:message>
+  <wsdl:message name="iParkControlSecurityAuthenticationSoapOut">
+    <wsdl:part name="parameters" element="tns:iParkControlSecurityAuthenticationResponse" />
+  </wsdl:message>
+  <wsdl:message name="iParkControlSecurityAuthenticationJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:iParkControlSecurityAuthenticationJSON" />
+  </wsdl:message>
+  <wsdl:message name="iParkControlSecurityAuthenticationJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:iParkControlSecurityAuthenticationJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="BlinkaySuiteAppSecurityAuthenticationSoapIn">
+    <wsdl:part name="parameters" element="tns:BlinkaySuiteAppSecurityAuthentication" />
+  </wsdl:message>
+  <wsdl:message name="BlinkaySuiteAppSecurityAuthenticationSoapOut">
+    <wsdl:part name="parameters" element="tns:BlinkaySuiteAppSecurityAuthenticationResponse" />
+  </wsdl:message>
+  <wsdl:message name="BlinkaySuiteAppSecurityAuthenticationJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:BlinkaySuiteAppSecurityAuthenticationJSON" />
+  </wsdl:message>
+  <wsdl:message name="BlinkaySuiteAppSecurityAuthenticationJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:BlinkaySuiteAppSecurityAuthenticationJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="ExternalAlarmParkingmeterHttpGetIn">
+    <wsdl:part name="xmlIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ExternalAlarmParkingmeterHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ExternalAlarmParkingmeterJSONHttpGetIn">
+    <wsdl:part name="jsonIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ExternalAlarmParkingmeterJSONHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ExternalParkingmeterStatusNotificationHttpGetIn">
+    <wsdl:part name="xmlIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ExternalParkingmeterStatusNotificationHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ExternalParkingmeterStatusNotificationJSONHttpGetIn">
+    <wsdl:part name="jsonIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ExternalParkingmeterStatusNotificationJSONHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ExternalCollectingParkingmeterHttpGetIn">
+    <wsdl:part name="xmlIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ExternalCollectingParkingmeterHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ExternalCollectingParkingmeterJSONHttpGetIn">
+    <wsdl:part name="jsonIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ExternalCollectingParkingmeterJSONHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ExternalTicketPaymentParkingmeterHttpGetIn">
+    <wsdl:part name="xmlIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ExternalTicketPaymentParkingmeterHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ExternalTicketPaymentParkingmeterJSONHttpGetIn">
+    <wsdl:part name="jsonIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ExternalTicketPaymentParkingmeterJSONHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ExternalMeasuresParkingmeterHttpGetIn">
+    <wsdl:part name="xmlIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ExternalMeasuresParkingmeterHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ExternalMeasuresParkingmeterJSONHttpGetIn">
+    <wsdl:part name="jsonIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ExternalMeasuresParkingmeterJSONHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="iParkTicketSecurityAuthenticationHttpGetIn">
+    <wsdl:part name="xmlIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="iParkTicketSecurityAuthenticationHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="iParkTicketSecurityAuthenticationJSONHttpGetIn">
+    <wsdl:part name="jsonIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="iParkTicketSecurityAuthenticationJSONHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="iParkTicketExportTicketHttpGetIn">
+    <wsdl:part name="xmlIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="iParkTicketExportTicketHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="iParkTicketExportTicketJSONHttpGetIn">
+    <wsdl:part name="jsonIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="iParkTicketExportTicketJSONHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="iParkControlSecurityAuthenticationHttpGetIn">
+    <wsdl:part name="xmlIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="iParkControlSecurityAuthenticationHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="iParkControlSecurityAuthenticationJSONHttpGetIn">
+    <wsdl:part name="jsonIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="iParkControlSecurityAuthenticationJSONHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="BlinkaySuiteAppSecurityAuthenticationHttpGetIn">
+    <wsdl:part name="xmlIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="BlinkaySuiteAppSecurityAuthenticationHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="BlinkaySuiteAppSecurityAuthenticationJSONHttpGetIn">
+    <wsdl:part name="jsonIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="BlinkaySuiteAppSecurityAuthenticationJSONHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ExternalAlarmParkingmeterHttpPostIn">
+    <wsdl:part name="xmlIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ExternalAlarmParkingmeterHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ExternalAlarmParkingmeterJSONHttpPostIn">
+    <wsdl:part name="jsonIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ExternalAlarmParkingmeterJSONHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ExternalParkingmeterStatusNotificationHttpPostIn">
+    <wsdl:part name="xmlIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ExternalParkingmeterStatusNotificationHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ExternalParkingmeterStatusNotificationJSONHttpPostIn">
+    <wsdl:part name="jsonIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ExternalParkingmeterStatusNotificationJSONHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ExternalCollectingParkingmeterHttpPostIn">
+    <wsdl:part name="xmlIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ExternalCollectingParkingmeterHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ExternalCollectingParkingmeterJSONHttpPostIn">
+    <wsdl:part name="jsonIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ExternalCollectingParkingmeterJSONHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ExternalTicketPaymentParkingmeterHttpPostIn">
+    <wsdl:part name="xmlIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ExternalTicketPaymentParkingmeterHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ExternalTicketPaymentParkingmeterJSONHttpPostIn">
+    <wsdl:part name="jsonIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ExternalTicketPaymentParkingmeterJSONHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ExternalMeasuresParkingmeterHttpPostIn">
+    <wsdl:part name="xmlIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ExternalMeasuresParkingmeterHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ExternalMeasuresParkingmeterJSONHttpPostIn">
+    <wsdl:part name="jsonIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ExternalMeasuresParkingmeterJSONHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="iParkTicketSecurityAuthenticationHttpPostIn">
+    <wsdl:part name="xmlIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="iParkTicketSecurityAuthenticationHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="iParkTicketSecurityAuthenticationJSONHttpPostIn">
+    <wsdl:part name="jsonIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="iParkTicketSecurityAuthenticationJSONHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="iParkTicketExportTicketHttpPostIn">
+    <wsdl:part name="xmlIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="iParkTicketExportTicketHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="iParkTicketExportTicketJSONHttpPostIn">
+    <wsdl:part name="jsonIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="iParkTicketExportTicketJSONHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="iParkControlSecurityAuthenticationHttpPostIn">
+    <wsdl:part name="xmlIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="iParkControlSecurityAuthenticationHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="iParkControlSecurityAuthenticationJSONHttpPostIn">
+    <wsdl:part name="jsonIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="iParkControlSecurityAuthenticationJSONHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="BlinkaySuiteAppSecurityAuthenticationHttpPostIn">
+    <wsdl:part name="xmlIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="BlinkaySuiteAppSecurityAuthenticationHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="BlinkaySuiteAppSecurityAuthenticationJSONHttpPostIn">
+    <wsdl:part name="jsonIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="BlinkaySuiteAppSecurityAuthenticationJSONHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:portType name="PIC_WSSoap">
+    <wsdl:operation name="ExternalAlarmParkingmeter">
+      <wsdl:input message="tns:ExternalAlarmParkingmeterSoapIn" />
+      <wsdl:output message="tns:ExternalAlarmParkingmeterSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ExternalAlarmParkingmeterJSON">
+      <wsdl:input message="tns:ExternalAlarmParkingmeterJSONSoapIn" />
+      <wsdl:output message="tns:ExternalAlarmParkingmeterJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ExternalParkingmeterStatusNotification">
+      <wsdl:input message="tns:ExternalParkingmeterStatusNotificationSoapIn" />
+      <wsdl:output message="tns:ExternalParkingmeterStatusNotificationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ExternalParkingmeterStatusNotificationJSON">
+      <wsdl:input message="tns:ExternalParkingmeterStatusNotificationJSONSoapIn" />
+      <wsdl:output message="tns:ExternalParkingmeterStatusNotificationJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ExternalCollectingParkingmeter">
+      <wsdl:input message="tns:ExternalCollectingParkingmeterSoapIn" />
+      <wsdl:output message="tns:ExternalCollectingParkingmeterSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ExternalCollectingParkingmeterJSON">
+      <wsdl:input message="tns:ExternalCollectingParkingmeterJSONSoapIn" />
+      <wsdl:output message="tns:ExternalCollectingParkingmeterJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ExternalTicketPaymentParkingmeter">
+      <wsdl:input message="tns:ExternalTicketPaymentParkingmeterSoapIn" />
+      <wsdl:output message="tns:ExternalTicketPaymentParkingmeterSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ExternalTicketPaymentParkingmeterJSON">
+      <wsdl:input message="tns:ExternalTicketPaymentParkingmeterJSONSoapIn" />
+      <wsdl:output message="tns:ExternalTicketPaymentParkingmeterJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ExternalMeasuresParkingmeter">
+      <wsdl:input message="tns:ExternalMeasuresParkingmeterSoapIn" />
+      <wsdl:output message="tns:ExternalMeasuresParkingmeterSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ExternalMeasuresParkingmeterJSON">
+      <wsdl:input message="tns:ExternalMeasuresParkingmeterJSONSoapIn" />
+      <wsdl:output message="tns:ExternalMeasuresParkingmeterJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="iParkTicketSecurityAuthentication">
+      <wsdl:input message="tns:iParkTicketSecurityAuthenticationSoapIn" />
+      <wsdl:output message="tns:iParkTicketSecurityAuthenticationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="iParkTicketSecurityAuthenticationJSON">
+      <wsdl:input message="tns:iParkTicketSecurityAuthenticationJSONSoapIn" />
+      <wsdl:output message="tns:iParkTicketSecurityAuthenticationJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="iParkTicketExportTicket">
+      <wsdl:input message="tns:iParkTicketExportTicketSoapIn" />
+      <wsdl:output message="tns:iParkTicketExportTicketSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="iParkTicketExportTicketJSON">
+      <wsdl:input message="tns:iParkTicketExportTicketJSONSoapIn" />
+      <wsdl:output message="tns:iParkTicketExportTicketJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="iParkControlSecurityAuthentication">
+      <wsdl:input message="tns:iParkControlSecurityAuthenticationSoapIn" />
+      <wsdl:output message="tns:iParkControlSecurityAuthenticationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="iParkControlSecurityAuthenticationJSON">
+      <wsdl:input message="tns:iParkControlSecurityAuthenticationJSONSoapIn" />
+      <wsdl:output message="tns:iParkControlSecurityAuthenticationJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BlinkaySuiteAppSecurityAuthentication">
+      <wsdl:input message="tns:BlinkaySuiteAppSecurityAuthenticationSoapIn" />
+      <wsdl:output message="tns:BlinkaySuiteAppSecurityAuthenticationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BlinkaySuiteAppSecurityAuthenticationJSON">
+      <wsdl:input message="tns:BlinkaySuiteAppSecurityAuthenticationJSONSoapIn" />
+      <wsdl:output message="tns:BlinkaySuiteAppSecurityAuthenticationJSONSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="PIC_WSHttpGet">
+    <wsdl:operation name="ExternalAlarmParkingmeter">
+      <wsdl:input message="tns:ExternalAlarmParkingmeterHttpGetIn" />
+      <wsdl:output message="tns:ExternalAlarmParkingmeterHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ExternalAlarmParkingmeterJSON">
+      <wsdl:input message="tns:ExternalAlarmParkingmeterJSONHttpGetIn" />
+      <wsdl:output message="tns:ExternalAlarmParkingmeterJSONHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ExternalParkingmeterStatusNotification">
+      <wsdl:input message="tns:ExternalParkingmeterStatusNotificationHttpGetIn" />
+      <wsdl:output message="tns:ExternalParkingmeterStatusNotificationHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ExternalParkingmeterStatusNotificationJSON">
+      <wsdl:input message="tns:ExternalParkingmeterStatusNotificationJSONHttpGetIn" />
+      <wsdl:output message="tns:ExternalParkingmeterStatusNotificationJSONHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ExternalCollectingParkingmeter">
+      <wsdl:input message="tns:ExternalCollectingParkingmeterHttpGetIn" />
+      <wsdl:output message="tns:ExternalCollectingParkingmeterHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ExternalCollectingParkingmeterJSON">
+      <wsdl:input message="tns:ExternalCollectingParkingmeterJSONHttpGetIn" />
+      <wsdl:output message="tns:ExternalCollectingParkingmeterJSONHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ExternalTicketPaymentParkingmeter">
+      <wsdl:input message="tns:ExternalTicketPaymentParkingmeterHttpGetIn" />
+      <wsdl:output message="tns:ExternalTicketPaymentParkingmeterHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ExternalTicketPaymentParkingmeterJSON">
+      <wsdl:input message="tns:ExternalTicketPaymentParkingmeterJSONHttpGetIn" />
+      <wsdl:output message="tns:ExternalTicketPaymentParkingmeterJSONHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ExternalMeasuresParkingmeter">
+      <wsdl:input message="tns:ExternalMeasuresParkingmeterHttpGetIn" />
+      <wsdl:output message="tns:ExternalMeasuresParkingmeterHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ExternalMeasuresParkingmeterJSON">
+      <wsdl:input message="tns:ExternalMeasuresParkingmeterJSONHttpGetIn" />
+      <wsdl:output message="tns:ExternalMeasuresParkingmeterJSONHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="iParkTicketSecurityAuthentication">
+      <wsdl:input message="tns:iParkTicketSecurityAuthenticationHttpGetIn" />
+      <wsdl:output message="tns:iParkTicketSecurityAuthenticationHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="iParkTicketSecurityAuthenticationJSON">
+      <wsdl:input message="tns:iParkTicketSecurityAuthenticationJSONHttpGetIn" />
+      <wsdl:output message="tns:iParkTicketSecurityAuthenticationJSONHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="iParkTicketExportTicket">
+      <wsdl:input message="tns:iParkTicketExportTicketHttpGetIn" />
+      <wsdl:output message="tns:iParkTicketExportTicketHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="iParkTicketExportTicketJSON">
+      <wsdl:input message="tns:iParkTicketExportTicketJSONHttpGetIn" />
+      <wsdl:output message="tns:iParkTicketExportTicketJSONHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="iParkControlSecurityAuthentication">
+      <wsdl:input message="tns:iParkControlSecurityAuthenticationHttpGetIn" />
+      <wsdl:output message="tns:iParkControlSecurityAuthenticationHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="iParkControlSecurityAuthenticationJSON">
+      <wsdl:input message="tns:iParkControlSecurityAuthenticationJSONHttpGetIn" />
+      <wsdl:output message="tns:iParkControlSecurityAuthenticationJSONHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BlinkaySuiteAppSecurityAuthentication">
+      <wsdl:input message="tns:BlinkaySuiteAppSecurityAuthenticationHttpGetIn" />
+      <wsdl:output message="tns:BlinkaySuiteAppSecurityAuthenticationHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BlinkaySuiteAppSecurityAuthenticationJSON">
+      <wsdl:input message="tns:BlinkaySuiteAppSecurityAuthenticationJSONHttpGetIn" />
+      <wsdl:output message="tns:BlinkaySuiteAppSecurityAuthenticationJSONHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="PIC_WSHttpPost">
+    <wsdl:operation name="ExternalAlarmParkingmeter">
+      <wsdl:input message="tns:ExternalAlarmParkingmeterHttpPostIn" />
+      <wsdl:output message="tns:ExternalAlarmParkingmeterHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ExternalAlarmParkingmeterJSON">
+      <wsdl:input message="tns:ExternalAlarmParkingmeterJSONHttpPostIn" />
+      <wsdl:output message="tns:ExternalAlarmParkingmeterJSONHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ExternalParkingmeterStatusNotification">
+      <wsdl:input message="tns:ExternalParkingmeterStatusNotificationHttpPostIn" />
+      <wsdl:output message="tns:ExternalParkingmeterStatusNotificationHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ExternalParkingmeterStatusNotificationJSON">
+      <wsdl:input message="tns:ExternalParkingmeterStatusNotificationJSONHttpPostIn" />
+      <wsdl:output message="tns:ExternalParkingmeterStatusNotificationJSONHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ExternalCollectingParkingmeter">
+      <wsdl:input message="tns:ExternalCollectingParkingmeterHttpPostIn" />
+      <wsdl:output message="tns:ExternalCollectingParkingmeterHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ExternalCollectingParkingmeterJSON">
+      <wsdl:input message="tns:ExternalCollectingParkingmeterJSONHttpPostIn" />
+      <wsdl:output message="tns:ExternalCollectingParkingmeterJSONHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ExternalTicketPaymentParkingmeter">
+      <wsdl:input message="tns:ExternalTicketPaymentParkingmeterHttpPostIn" />
+      <wsdl:output message="tns:ExternalTicketPaymentParkingmeterHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ExternalTicketPaymentParkingmeterJSON">
+      <wsdl:input message="tns:ExternalTicketPaymentParkingmeterJSONHttpPostIn" />
+      <wsdl:output message="tns:ExternalTicketPaymentParkingmeterJSONHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ExternalMeasuresParkingmeter">
+      <wsdl:input message="tns:ExternalMeasuresParkingmeterHttpPostIn" />
+      <wsdl:output message="tns:ExternalMeasuresParkingmeterHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ExternalMeasuresParkingmeterJSON">
+      <wsdl:input message="tns:ExternalMeasuresParkingmeterJSONHttpPostIn" />
+      <wsdl:output message="tns:ExternalMeasuresParkingmeterJSONHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="iParkTicketSecurityAuthentication">
+      <wsdl:input message="tns:iParkTicketSecurityAuthenticationHttpPostIn" />
+      <wsdl:output message="tns:iParkTicketSecurityAuthenticationHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="iParkTicketSecurityAuthenticationJSON">
+      <wsdl:input message="tns:iParkTicketSecurityAuthenticationJSONHttpPostIn" />
+      <wsdl:output message="tns:iParkTicketSecurityAuthenticationJSONHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="iParkTicketExportTicket">
+      <wsdl:input message="tns:iParkTicketExportTicketHttpPostIn" />
+      <wsdl:output message="tns:iParkTicketExportTicketHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="iParkTicketExportTicketJSON">
+      <wsdl:input message="tns:iParkTicketExportTicketJSONHttpPostIn" />
+      <wsdl:output message="tns:iParkTicketExportTicketJSONHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="iParkControlSecurityAuthentication">
+      <wsdl:input message="tns:iParkControlSecurityAuthenticationHttpPostIn" />
+      <wsdl:output message="tns:iParkControlSecurityAuthenticationHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="iParkControlSecurityAuthenticationJSON">
+      <wsdl:input message="tns:iParkControlSecurityAuthenticationJSONHttpPostIn" />
+      <wsdl:output message="tns:iParkControlSecurityAuthenticationJSONHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BlinkaySuiteAppSecurityAuthentication">
+      <wsdl:input message="tns:BlinkaySuiteAppSecurityAuthenticationHttpPostIn" />
+      <wsdl:output message="tns:BlinkaySuiteAppSecurityAuthenticationHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BlinkaySuiteAppSecurityAuthenticationJSON">
+      <wsdl:input message="tns:BlinkaySuiteAppSecurityAuthenticationJSONHttpPostIn" />
+      <wsdl:output message="tns:BlinkaySuiteAppSecurityAuthenticationJSONHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="PIC_WSSoap" type="tns:PIC_WSSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ExternalAlarmParkingmeter">
+      <soap:operation soapAction="http://tempuri.org/ExternalAlarmParkingmeter" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExternalAlarmParkingmeterJSON">
+      <soap:operation soapAction="http://tempuri.org/ExternalAlarmParkingmeterJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExternalParkingmeterStatusNotification">
+      <soap:operation soapAction="http://tempuri.org/ExternalParkingmeterStatusNotification" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExternalParkingmeterStatusNotificationJSON">
+      <soap:operation soapAction="http://tempuri.org/ExternalParkingmeterStatusNotificationJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExternalCollectingParkingmeter">
+      <soap:operation soapAction="http://tempuri.org/ExternalCollectingParkingmeter" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExternalCollectingParkingmeterJSON">
+      <soap:operation soapAction="http://tempuri.org/ExternalCollectingParkingmeterJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExternalTicketPaymentParkingmeter">
+      <soap:operation soapAction="http://tempuri.org/ExternalTicketPaymentParkingmeter" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExternalTicketPaymentParkingmeterJSON">
+      <soap:operation soapAction="http://tempuri.org/ExternalTicketPaymentParkingmeterJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExternalMeasuresParkingmeter">
+      <soap:operation soapAction="http://tempuri.org/ExternalMeasuresParkingmeter" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExternalMeasuresParkingmeterJSON">
+      <soap:operation soapAction="http://tempuri.org/ExternalMeasuresParkingmeterJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="iParkTicketSecurityAuthentication">
+      <soap:operation soapAction="http://tempuri.org/iParkTicketSecurityAuthentication" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="iParkTicketSecurityAuthenticationJSON">
+      <soap:operation soapAction="http://tempuri.org/iParkTicketSecurityAuthenticationJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="iParkTicketExportTicket">
+      <soap:operation soapAction="http://tempuri.org/iParkTicketExportTicket" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="iParkTicketExportTicketJSON">
+      <soap:operation soapAction="http://tempuri.org/iParkTicketExportTicketJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="iParkControlSecurityAuthentication">
+      <soap:operation soapAction="http://tempuri.org/iParkControlSecurityAuthentication" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="iParkControlSecurityAuthenticationJSON">
+      <soap:operation soapAction="http://tempuri.org/iParkControlSecurityAuthenticationJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BlinkaySuiteAppSecurityAuthentication">
+      <soap:operation soapAction="http://tempuri.org/BlinkaySuiteAppSecurityAuthentication" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BlinkaySuiteAppSecurityAuthenticationJSON">
+      <soap:operation soapAction="http://tempuri.org/BlinkaySuiteAppSecurityAuthenticationJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="PIC_WSSoap12" type="tns:PIC_WSSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ExternalAlarmParkingmeter">
+      <soap12:operation soapAction="http://tempuri.org/ExternalAlarmParkingmeter" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExternalAlarmParkingmeterJSON">
+      <soap12:operation soapAction="http://tempuri.org/ExternalAlarmParkingmeterJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExternalParkingmeterStatusNotification">
+      <soap12:operation soapAction="http://tempuri.org/ExternalParkingmeterStatusNotification" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExternalParkingmeterStatusNotificationJSON">
+      <soap12:operation soapAction="http://tempuri.org/ExternalParkingmeterStatusNotificationJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExternalCollectingParkingmeter">
+      <soap12:operation soapAction="http://tempuri.org/ExternalCollectingParkingmeter" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExternalCollectingParkingmeterJSON">
+      <soap12:operation soapAction="http://tempuri.org/ExternalCollectingParkingmeterJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExternalTicketPaymentParkingmeter">
+      <soap12:operation soapAction="http://tempuri.org/ExternalTicketPaymentParkingmeter" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExternalTicketPaymentParkingmeterJSON">
+      <soap12:operation soapAction="http://tempuri.org/ExternalTicketPaymentParkingmeterJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExternalMeasuresParkingmeter">
+      <soap12:operation soapAction="http://tempuri.org/ExternalMeasuresParkingmeter" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExternalMeasuresParkingmeterJSON">
+      <soap12:operation soapAction="http://tempuri.org/ExternalMeasuresParkingmeterJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="iParkTicketSecurityAuthentication">
+      <soap12:operation soapAction="http://tempuri.org/iParkTicketSecurityAuthentication" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="iParkTicketSecurityAuthenticationJSON">
+      <soap12:operation soapAction="http://tempuri.org/iParkTicketSecurityAuthenticationJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="iParkTicketExportTicket">
+      <soap12:operation soapAction="http://tempuri.org/iParkTicketExportTicket" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="iParkTicketExportTicketJSON">
+      <soap12:operation soapAction="http://tempuri.org/iParkTicketExportTicketJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="iParkControlSecurityAuthentication">
+      <soap12:operation soapAction="http://tempuri.org/iParkControlSecurityAuthentication" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="iParkControlSecurityAuthenticationJSON">
+      <soap12:operation soapAction="http://tempuri.org/iParkControlSecurityAuthenticationJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BlinkaySuiteAppSecurityAuthentication">
+      <soap12:operation soapAction="http://tempuri.org/BlinkaySuiteAppSecurityAuthentication" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BlinkaySuiteAppSecurityAuthenticationJSON">
+      <soap12:operation soapAction="http://tempuri.org/BlinkaySuiteAppSecurityAuthenticationJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="PIC_WSHttpGet" type="tns:PIC_WSHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="ExternalAlarmParkingmeter">
+      <http:operation location="/ExternalAlarmParkingmeter" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExternalAlarmParkingmeterJSON">
+      <http:operation location="/ExternalAlarmParkingmeterJSON" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExternalParkingmeterStatusNotification">
+      <http:operation location="/ExternalParkingmeterStatusNotification" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExternalParkingmeterStatusNotificationJSON">
+      <http:operation location="/ExternalParkingmeterStatusNotificationJSON" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExternalCollectingParkingmeter">
+      <http:operation location="/ExternalCollectingParkingmeter" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExternalCollectingParkingmeterJSON">
+      <http:operation location="/ExternalCollectingParkingmeterJSON" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExternalTicketPaymentParkingmeter">
+      <http:operation location="/ExternalTicketPaymentParkingmeter" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExternalTicketPaymentParkingmeterJSON">
+      <http:operation location="/ExternalTicketPaymentParkingmeterJSON" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExternalMeasuresParkingmeter">
+      <http:operation location="/ExternalMeasuresParkingmeter" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExternalMeasuresParkingmeterJSON">
+      <http:operation location="/ExternalMeasuresParkingmeterJSON" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="iParkTicketSecurityAuthentication">
+      <http:operation location="/iParkTicketSecurityAuthentication" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="iParkTicketSecurityAuthenticationJSON">
+      <http:operation location="/iParkTicketSecurityAuthenticationJSON" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="iParkTicketExportTicket">
+      <http:operation location="/iParkTicketExportTicket" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="iParkTicketExportTicketJSON">
+      <http:operation location="/iParkTicketExportTicketJSON" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="iParkControlSecurityAuthentication">
+      <http:operation location="/iParkControlSecurityAuthentication" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="iParkControlSecurityAuthenticationJSON">
+      <http:operation location="/iParkControlSecurityAuthenticationJSON" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BlinkaySuiteAppSecurityAuthentication">
+      <http:operation location="/BlinkaySuiteAppSecurityAuthentication" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BlinkaySuiteAppSecurityAuthenticationJSON">
+      <http:operation location="/BlinkaySuiteAppSecurityAuthenticationJSON" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="PIC_WSHttpPost" type="tns:PIC_WSHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="ExternalAlarmParkingmeter">
+      <http:operation location="/ExternalAlarmParkingmeter" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExternalAlarmParkingmeterJSON">
+      <http:operation location="/ExternalAlarmParkingmeterJSON" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExternalParkingmeterStatusNotification">
+      <http:operation location="/ExternalParkingmeterStatusNotification" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExternalParkingmeterStatusNotificationJSON">
+      <http:operation location="/ExternalParkingmeterStatusNotificationJSON" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExternalCollectingParkingmeter">
+      <http:operation location="/ExternalCollectingParkingmeter" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExternalCollectingParkingmeterJSON">
+      <http:operation location="/ExternalCollectingParkingmeterJSON" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExternalTicketPaymentParkingmeter">
+      <http:operation location="/ExternalTicketPaymentParkingmeter" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExternalTicketPaymentParkingmeterJSON">
+      <http:operation location="/ExternalTicketPaymentParkingmeterJSON" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExternalMeasuresParkingmeter">
+      <http:operation location="/ExternalMeasuresParkingmeter" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExternalMeasuresParkingmeterJSON">
+      <http:operation location="/ExternalMeasuresParkingmeterJSON" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="iParkTicketSecurityAuthentication">
+      <http:operation location="/iParkTicketSecurityAuthentication" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="iParkTicketSecurityAuthenticationJSON">
+      <http:operation location="/iParkTicketSecurityAuthenticationJSON" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="iParkTicketExportTicket">
+      <http:operation location="/iParkTicketExportTicket" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="iParkTicketExportTicketJSON">
+      <http:operation location="/iParkTicketExportTicketJSON" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="iParkControlSecurityAuthentication">
+      <http:operation location="/iParkControlSecurityAuthentication" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="iParkControlSecurityAuthenticationJSON">
+      <http:operation location="/iParkControlSecurityAuthenticationJSON" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BlinkaySuiteAppSecurityAuthentication">
+      <http:operation location="/BlinkaySuiteAppSecurityAuthentication" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BlinkaySuiteAppSecurityAuthenticationJSON">
+      <http:operation location="/BlinkaySuiteAppSecurityAuthenticationJSON" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PIC_WS">
+    <wsdl:port name="PIC_WSSoap" binding="tns:PIC_WSSoap">
+      <soap:address location="http://localhost/TariffComputer.WS/PIC_WS.asmx" />
+    </wsdl:port>
+    <wsdl:port name="PIC_WSSoap12" binding="tns:PIC_WSSoap12">
+      <soap12:address location="http://localhost/TariffComputer.WS/PIC_WS.asmx" />
+    </wsdl:port>
+    <wsdl:port name="PIC_WSHttpGet" binding="tns:PIC_WSHttpGet">
+      <http:address location="http://localhost/TariffComputer.WS/PIC_WS.asmx" />
+    </wsdl:port>
+    <wsdl:port name="PIC_WSHttpPost" binding="tns:PIC_WSHttpPost">
+      <http:address location="http://localhost/TariffComputer.WS/PIC_WS.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

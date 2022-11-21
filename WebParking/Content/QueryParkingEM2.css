@@ -1,0 +1,254 @@
+﻿
+        .mainContainer {
+            /*text-align: center;*/
+        }
+
+
+        
+        .dateTime {
+            width: 100%;
+        }
+        .dateTime-left {
+            float: left;
+            clear: both;
+            width: 45%;
+            text-align: right;
+        }
+        .dateTime-right {
+            float: right;
+            clear: right;
+            width: 45%;
+            text-align: left;
+        }
+
+        .amount {
+            clear: both;
+            width: 100%;
+            text-align: center;
+        }
+
+        .slider, .k-slider-horizontal {
+            width: 100%;
+        }
+
+        .queryParking-submit {
+            clear: both;
+            padding-top: 20px;
+        }
+
+
+        #divQueryParking
+        {
+            padding:0.5em;
+        }
+
+        #selParkPlate
+        {
+            padding: 0.5em;
+            padding-left: 2.5em;
+             background: transparent url('EysaMobv2/plate-ico.svg') no-repeat 0% 50%;
+             background-size: auto 100%;
+
+        }
+        #selParkZone
+        {
+            padding: 0.5em;
+            padding-left: 2.5em;
+             background: transparent url('EysaMobv2/location-ico.svg') no-repeat 0% 50%;
+             background-size: auto 100%;
+
+        }
+
+
+        div.dateTime
+        {
+            padding:0.5em;
+            background: #2481bc url('EysaMobv2/btn-shadow.png') no-repeat 50% 50%;
+            background-size: 100% 100%;
+            box-sizing: border-box;
+            width: initial;
+            position:relative;
+        }
+
+        div.dateTime > *,
+        div.dateTime .dateTime-left,
+        div.dateTime .dateTime-right
+        {
+            float: none;
+            clear:both;
+            display: inline-block;
+            vertical-align: text-top;
+        }
+
+div.dateTime .dateTime-left
+{
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+    width: 50%;
+    position: relative;
+    z-index: 99;
+    padding-left: 1.5em;
+    box-sizing: border-box;
+
+}
+
+div.dateTime .dateTime-right
+{
+    width: 50%;
+    float: right;
+    text-align: center;
+    position:relative;
+    z-index: 66;
+}
+
+.icoWatch
+{
+    position:absolute;
+    top: 0px;
+    bottom:0px;
+    left:0px;
+    right:0px;
+    z-index:33;
+    background: transparent url('EysaMobv2/ico_watch.svg') no-repeat 0% 50%;
+    background-size: auto 100%;
+}
+/*  AMOUNT  */
+
+div.amount
+{
+    padding: 0.5em;
+    box-sizing: border-box;
+    background: #275680 url('EysaMobv2/btn-shadow.png') no-repeat 50% 50%;
+    background-size: 100% 100%;
+}
+
+
+/*  TOP VALUES  */
+#topvalues
+{
+    font-size: 0.6em;
+    margin: 1em 0;
+}
+
+#topvalues #valuemin
+{
+    float:left;
+}
+#topvalues #valuemax
+{
+    float:right;
+}
+
+
+/*  SLIDER  */
+
+div.slider
+{
+    margin-top: 1em;
+    padding: 0.5em 0em;
+}
+
+.buttonsInc
+{
+    text-align:center;
+}
+
+.buttonsInc > input {
+    display: inline-block;
+    background: #2481bc url('EysaMobv2/btn-shadow.png') no-repeat 50% 50%;
+    background-size: 100% 100%;
+    margin:1%;
+    width:30%;
+    color: #fafafa;
+    font-weight: normal;
+}
+
+
+a.k-draghandle,
+.k-slider-horizontal .k-draghandle,
+.k-slider .k-button, .k-grid .k-slider .k-button
+{
+    width:32px;
+    height:32px;
+    top: -8px;
+    border-radius: 100%;
+}
+
+.k-slider .k-button, .k-grid .k-slider .k-button
+{
+    width:32px;
+    height:32px;
+    top: -4px;
+    border-radius: 100%;
+}
+
+.k-slider-horizontal .k-slider-track, .k-slider-horizontal .k-slider-selection
+{
+        top: 50%;
+    left: 0;
+    height: 16px;
+    margin-top: -8px;
+    background-repeat: repeat-x;
+}
+
+
+
+.k-slider  span.k-icon
+{
+    display: none;
+}
+
+.k-slider-track,
+.k-slider-horizontal .k-slider-buttons .k-slider-track
+{
+    left: 48px;
+}
+
+
+.queryParking-submit
+{
+    text-align:center;
+}
+
+
+
+button.k-button[type=submit]
+{
+    margin: 0px;
+    padding: 0.5em;
+    width: 100%;
+    background: #4aba70 url('EysaMobv2/btn-shadow.png') no-repeat 50% 50%;
+    background-size: 100% 100%;
+    border-color: #4b8056;
+    color: #fafafa;
+    font-weight: normal;
+    text-transform: uppercase;
+
+    /*icon position*/
+    position: relative;
+}
+
+button.k-button[type=submit]:hover,
+button.k-button[type=submit]:focus,
+button.k-button[type=submit]:active
+{
+    background: #26af5f url('EysaMobv2/btn-shadow.png') no-repeat 50% 50%;
+    background-size: 100% 100%;
+
+    color:inherit;
+
+}
+
+    button.k-button[type=submit] .k-icon 
+    {
+        position: absolute;
+        top: 0px;
+        bottom: 0px;
+        left: 0px;
+        right: 75%;
+        width: auto;
+        height: inherit;
+        background: transparent url('EysaMobv2/ico_done.svg') no-repeat 0% 50%;
+        background-size: auto 100%;
+    }

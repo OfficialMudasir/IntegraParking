@@ -1,0 +1,67 @@
+﻿
+
+#divSelectorFav 
+
+{
+    background-color : transparent;
+}
+
+#divSelectorFav ul,
+#divSelectorFav li
+{
+    list-style: none;
+    margin: 0px;
+    padding:0px;
+}
+
+#divSelectorFav ul > li
+{
+    background: #4383c3 url('EysaMobv2/btn-shadow.png') no-repeat 50% 50%;
+    background-size: 100% 100%;
+    margin: 0.5em;
+    padding:0;
+}
+
+
+#divSelectorFav ul > li > a
+{
+    padding: 0.5em;
+    display:block;
+    color: #fafafa;
+    text-decoration: none;
+}
+
+#divSelectorFav ul > li > a > span
+{
+    display: block;
+    background: transparent url('EysaMobv2/rarrow-ico.svg') no-repeat 100% 50%;
+    background-size: auto 100%;
+}
+
+
+#divSelectorFav ul > li.itemFavLoc 
+
+{
+    background-color: #f0c514;
+}
+
+#divSelectorFav ul > li.itemFavLoc a
+{
+    background : transparent url('EysaMobv2/location-ico.svg') no-repeat 0% 50%;
+    background-size: auto 100%;
+    padding-left:2.5em;
+}
+
+    #divSelectorFav ul > li.itemOtherLoc 
+    {
+        background-color: #4383c3;
+    }
+    #divSelectorFav ul > li.itemOtherLoc a
+  {
+        background: transparent url('EysaMobv2/zone-ico.svg') no-repeat 0% 50%;
+        background-size: auto 100%;
+        padding-left: 2.5em;
+    }
+
+
+

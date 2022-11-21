@@ -1,0 +1,51 @@
+namespace integraMobile.Reports.Invoicing
+{
+    using System;
+    using System.ComponentModel;
+    using System.Drawing;
+    using System.Windows.Forms;
+    using Telerik.Reporting;
+    using Telerik.Reporting.Drawing;
+    //using backOffice.Infrastructure;
+
+    /// <summary>
+    /// Summary description for InvoiceServiceCharges.
+    /// </summary>
+    public partial class InvoiceServiceCharges : Telerik.Reporting.Report
+    {
+        public InvoiceServiceCharges()
+        {
+            //
+            // Required for telerik Reporting designer support
+            //
+            InitializeComponent();
+
+            //
+            // TODO: Add any constructor code after InitializeComponent call
+            //
+            this.ApplyResources();
+            this.ApplyCurrency(System.Configuration.ConfigurationManager.AppSettings["ApplicationCurrencyISOCode"] ?? "EUR");
+
+            if (this.ReportParameters.Contains("LanguageCulture"))
+            {
+                
+                string sLanguageCulture = System.Threading.Thread.CurrentThread.CurrentCulture.Name;
+                //if (!string.IsNullOrEmpty(ReportHelper.CurrentPlugin))
+                //    sLanguageCulture = ResourceBundle.GetInstance(ReportHelper.CurrentPlugin).Locale;
+                this.ReportParameters["LanguageCulture"].Value = sLanguageCulture;
+            }
+
+        }
+
+        private void Report_ItemDataBinding(object sender, EventArgs e)
+        {
+            Telerik.Reporting.Processing.Report oReport = (Telerik.Reporting.Processing.Report)sender;
+            try
+            {
+                this.ApplyCurrency(oReport.Parameters["CurrencyIsoCode"].Value.ToString());
+            }
+            catch (Exception ex) { }
+        }
+
+    }
+}

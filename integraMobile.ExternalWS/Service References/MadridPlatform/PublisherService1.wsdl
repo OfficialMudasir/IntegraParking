@@ -1,0 +1,743 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://www.parkaregroup.com/PublisherService" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:i0="http://www.parkaregroup.com/PublisherService/1.2" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:i1="http://www.parkaregroup.com/PublisherService/M.1.3" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="PublisherService" targetNamespace="http://www.parkaregroup.com/PublisherService" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="CustomBinding_IPublishServiceV12_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="CustomBinding_IPublishServiceM13_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="CustomBinding_IPublishServiceMonitoring_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:import namespace="http://www.parkaregroup.com/PublisherService/1.2" location="http://ser-web.madmovilidad.es/PublisherService/PublisherService.svc?wsdl=wsdl0" />
+  <wsdl:import namespace="http://www.parkaregroup.com/PublisherService/M.1.3" location="http://ser-web.madmovilidad.es/PublisherService/PublisherService.svc?wsdl=wsdl1" />
+  <wsdl:types />
+  <wsdl:binding name="CustomBinding_IPublishServiceV12" type="i0:IPublishServiceV12">
+    <wsp:PolicyReference URI="#CustomBinding_IPublishServiceV12_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="startSession">
+      <soap12:operation soapAction="http://www.parkaregroup.com/PublisherService/1.0/IAuthService/startSession" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="endSession">
+      <soap12:operation soapAction="http://www.parkaregroup.com/PublisherService/1.0/IAuthService/endSession" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHistAvailableSelection">
+      <soap12:operation soapAction="http://www.parkaregroup.com/PublisherService/1.0/IHistTransactionService/GetHistAvailableSelection" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHistTransaction">
+      <soap12:operation soapAction="http://www.parkaregroup.com/PublisherService/1.0/IHistTransactionService/GetHistTransaction" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHistDefTransactionType">
+      <soap12:operation soapAction="http://www.parkaregroup.com/PublisherService/1.0/IHistTransactionService/GetHistDefTransactionType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHistDefTransactionCardType">
+      <soap12:operation soapAction="http://www.parkaregroup.com/PublisherService/1.0/IHistTransactionService/GetHistDefTransactionCardType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHistCollection">
+      <soap12:operation soapAction="http://www.parkaregroup.com/PublisherService/1.0/IHistCollectionService/GetHistCollection" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHistDefCollectionCoinType">
+      <soap12:operation soapAction="http://www.parkaregroup.com/PublisherService/1.0/IHistCollectionService/GetHistDefCollectionCoinType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EntityFilter_GetAvailableSelection">
+      <soap12:operation soapAction="http://www.parkaregroup.com/PublisherService/1.0/IEntityFilter/EntityFilter_GetAvailableSelection" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInitialValCodeStat">
+      <soap12:operation soapAction="http://www.parkaregroup.com/PublisherService/1.1/IValCodeService/GetInitialValCodeStat" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUpdateValCodeStat">
+      <soap12:operation soapAction="http://www.parkaregroup.com/PublisherService/1.1/IValCodeService/GetUpdateValCodeStat" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetValCodeHist">
+      <soap12:operation soapAction="http://www.parkaregroup.com/PublisherService/1.1/IValCodeService/GetValCodeHist" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlateValCodeStat">
+      <soap12:operation soapAction="http://www.parkaregroup.com/PublisherService/1.1/IValCodeService/GetPlateValCodeStat" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRightsList">
+      <soap12:operation soapAction="http://www.parkaregroup.com/PublisherService/1.1/IValCodeService/GetRightsList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRightsListUpdate">
+      <soap12:operation soapAction="http://www.parkaregroup.com/PublisherService/1.1/IValCodeService/GetRightsListUpdate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRightsListFromParams">
+      <soap12:operation soapAction="http://www.parkaregroup.com/PublisherService/1.1/IValCodeService/GetRightsListFromParams" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRightsMovementsById">
+      <soap12:operation soapAction="http://www.parkaregroup.com/PublisherService/1.1/IValCodeService/GetRightsMovementsById" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTfnValidInfractions">
+      <soap12:operation soapAction="http://www.parkaregroup.com/PublisherService/1.2/ITrafficFineService/GetTfnValidInfractions" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTfnValidInvalidations">
+      <soap12:operation soapAction="http://www.parkaregroup.com/PublisherService/1.2/ITrafficFineService/GetTfnValidInvalidations" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetTfnNew">
+      <soap12:operation soapAction="http://www.parkaregroup.com/PublisherService/1.2/ITrafficFineService/SetTfnNew" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetTfnInvalidation">
+      <soap12:operation soapAction="http://www.parkaregroup.com/PublisherService/1.2/ITrafficFineService/SetTfnInvalidation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetTfnUndoInvalidation">
+      <soap12:operation soapAction="http://www.parkaregroup.com/PublisherService/1.2/ITrafficFineService/SetTfnUndoInvalidation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTfnWithXML">
+      <soap12:operation soapAction="http://www.parkaregroup.com/PublisherService/1.2/ITrafficFineService/UpdateTfnWithXML" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTfn">
+      <soap12:operation soapAction="http://www.parkaregroup.com/PublisherService/1.2/ITrafficFineService/GetTfn" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllTfn">
+      <soap12:operation soapAction="http://www.parkaregroup.com/PublisherService/1.2/ITrafficFineService/GetAllTfn" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTfnAnulations">
+      <soap12:operation soapAction="http://www.parkaregroup.com/PublisherService/1.2/ITrafficFineService/GetTfnAnulations" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTfnInvalidations">
+      <soap12:operation soapAction="http://www.parkaregroup.com/PublisherService/1.2/ITrafficFineService/GetTfnInvalidations" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTfnAllDay">
+      <soap12:operation soapAction="http://www.parkaregroup.com/PublisherService/1.2/ITrafficFineService/GetTfnAllDay" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetParkingAuthorization">
+      <soap12:operation soapAction="http://www.parkaregroup.com/PublisherService/1.2/IPayTransactionService/GetParkingAuthorization" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFineAnullationAuthorization">
+      <soap12:operation soapAction="http://www.parkaregroup.com/PublisherService/1.2/IPayTransactionService/GetFineAnullationAuthorization" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetParkingTransaction">
+      <soap12:operation soapAction="http://www.parkaregroup.com/PublisherService/1.2/IPayTransactionService/SetParkingTransaction" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetFineAnullationTransaction">
+      <soap12:operation soapAction="http://www.parkaregroup.com/PublisherService/1.2/IPayTransactionService/SetFineAnullationTransaction" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetParkingOccupancy">
+      <soap12:operation soapAction="http://www.parkaregroup.com/PublisherService/1.2/IPayTransactionService/GetParkingOccupancy" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTariffCongestion">
+      <soap12:operation soapAction="http://www.parkaregroup.com/PublisherService/1.2/IPayTransactionService/GetTariffCongestion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrentAlarm">
+      <soap12:operation soapAction="http://www.parkaregroup.com/PublisherService/1.2/IAlarmService/GetCurrentAlarm" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CustomBinding_IPublishServiceM13" type="i1:IPublishServiceM13">
+    <wsp:PolicyReference URI="#CustomBinding_IPublishServiceM13_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="startSession">
+      <soap12:operation soapAction="http://www.parkaregroup.com/PublisherService/1.0/IAuthService/startSession" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="endSession">
+      <soap12:operation soapAction="http://www.parkaregroup.com/PublisherService/1.0/IAuthService/endSession" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHistAvailableSelection">
+      <soap12:operation soapAction="http://www.parkaregroup.com/PublisherService/1.0/IHistTransactionService/GetHistAvailableSelection" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHistTransaction">
+      <soap12:operation soapAction="http://www.parkaregroup.com/PublisherService/1.0/IHistTransactionService/GetHistTransaction" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHistDefTransactionType">
+      <soap12:operation soapAction="http://www.parkaregroup.com/PublisherService/1.0/IHistTransactionService/GetHistDefTransactionType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHistDefTransactionCardType">
+      <soap12:operation soapAction="http://www.parkaregroup.com/PublisherService/1.0/IHistTransactionService/GetHistDefTransactionCardType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHistCollection">
+      <soap12:operation soapAction="http://www.parkaregroup.com/PublisherService/1.0/IHistCollectionService/GetHistCollection" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHistDefCollectionCoinType">
+      <soap12:operation soapAction="http://www.parkaregroup.com/PublisherService/1.0/IHistCollectionService/GetHistDefCollectionCoinType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EntityFilter_GetAvailableSelection">
+      <soap12:operation soapAction="http://www.parkaregroup.com/PublisherService/1.0/IEntityFilter/EntityFilter_GetAvailableSelection" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInitialValCodeStat">
+      <soap12:operation soapAction="http://www.parkaregroup.com/PublisherService/1.1/IValCodeService/GetInitialValCodeStat" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUpdateValCodeStat">
+      <soap12:operation soapAction="http://www.parkaregroup.com/PublisherService/1.1/IValCodeService/GetUpdateValCodeStat" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetValCodeHist">
+      <soap12:operation soapAction="http://www.parkaregroup.com/PublisherService/1.1/IValCodeService/GetValCodeHist" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlateValCodeStat">
+      <soap12:operation soapAction="http://www.parkaregroup.com/PublisherService/1.1/IValCodeService/GetPlateValCodeStat" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRightsList">
+      <soap12:operation soapAction="http://www.parkaregroup.com/PublisherService/1.1/IValCodeService/GetRightsList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRightsListUpdate">
+      <soap12:operation soapAction="http://www.parkaregroup.com/PublisherService/1.1/IValCodeService/GetRightsListUpdate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRightsListFromParams">
+      <soap12:operation soapAction="http://www.parkaregroup.com/PublisherService/1.1/IValCodeService/GetRightsListFromParams" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRightsMovementsById">
+      <soap12:operation soapAction="http://www.parkaregroup.com/PublisherService/1.1/IValCodeService/GetRightsMovementsById" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTfnValidInfractions">
+      <soap12:operation soapAction="http://www.parkaregroup.com/PublisherService/1.2/ITrafficFineService/GetTfnValidInfractions" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTfnValidInvalidations">
+      <soap12:operation soapAction="http://www.parkaregroup.com/PublisherService/1.2/ITrafficFineService/GetTfnValidInvalidations" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetTfnNew">
+      <soap12:operation soapAction="http://www.parkaregroup.com/PublisherService/1.2/ITrafficFineService/SetTfnNew" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetTfnInvalidation">
+      <soap12:operation soapAction="http://www.parkaregroup.com/PublisherService/1.2/ITrafficFineService/SetTfnInvalidation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetTfnUndoInvalidation">
+      <soap12:operation soapAction="http://www.parkaregroup.com/PublisherService/1.2/ITrafficFineService/SetTfnUndoInvalidation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTfnWithXML">
+      <soap12:operation soapAction="http://www.parkaregroup.com/PublisherService/1.2/ITrafficFineService/UpdateTfnWithXML" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTfn">
+      <soap12:operation soapAction="http://www.parkaregroup.com/PublisherService/1.2/ITrafficFineService/GetTfn" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllTfn">
+      <soap12:operation soapAction="http://www.parkaregroup.com/PublisherService/1.2/ITrafficFineService/GetAllTfn" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTfnAnulations">
+      <soap12:operation soapAction="http://www.parkaregroup.com/PublisherService/1.2/ITrafficFineService/GetTfnAnulations" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTfnInvalidations">
+      <soap12:operation soapAction="http://www.parkaregroup.com/PublisherService/1.2/ITrafficFineService/GetTfnInvalidations" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTfnAllDay">
+      <soap12:operation soapAction="http://www.parkaregroup.com/PublisherService/1.2/ITrafficFineService/GetTfnAllDay" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetParkingAuthorization">
+      <soap12:operation soapAction="http://www.parkaregroup.com/PublisherService/1.2/IPayTransactionService/GetParkingAuthorization" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFineAnullationAuthorization">
+      <soap12:operation soapAction="http://www.parkaregroup.com/PublisherService/1.2/IPayTransactionService/GetFineAnullationAuthorization" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetParkingTransaction">
+      <soap12:operation soapAction="http://www.parkaregroup.com/PublisherService/1.2/IPayTransactionService/SetParkingTransaction" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetFineAnullationTransaction">
+      <soap12:operation soapAction="http://www.parkaregroup.com/PublisherService/1.2/IPayTransactionService/SetFineAnullationTransaction" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetParkingOccupancy">
+      <soap12:operation soapAction="http://www.parkaregroup.com/PublisherService/1.2/IPayTransactionService/GetParkingOccupancy" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTariffCongestion">
+      <soap12:operation soapAction="http://www.parkaregroup.com/PublisherService/1.2/IPayTransactionService/GetTariffCongestion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrentAlarm">
+      <soap12:operation soapAction="http://www.parkaregroup.com/PublisherService/1.2/IAlarmService/GetCurrentAlarm" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTransactionInfoPD">
+      <soap12:operation soapAction="http://www.parkaregroup.com/PublisherService/M.1.3/IValCodeTransactionInfoService/GetTransactionInfoPD" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTransactionInfoMB">
+      <soap12:operation soapAction="http://www.parkaregroup.com/PublisherService/M.1.3/IValCodeTransactionInfoService/GetTransactionInfoMB" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTrafficFinePhotos">
+      <soap12:operation soapAction="http://www.parkaregroup.com/PublisherService/M.1.3/IPhotosService/UpdateTrafficFinePhotos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteTrafficFinePhotos">
+      <soap12:operation soapAction="http://www.parkaregroup.com/PublisherService/M.1.3/IPhotosService/DeleteTrafficFinePhotos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTrafficFinePhotos">
+      <soap12:operation soapAction="http://www.parkaregroup.com/PublisherService/M.1.3/IPhotosService/GetTrafficFinePhotos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CustomBinding_IPublishServiceMonitoring" type="i0:IPublishServiceMonitoring">
+    <wsp:PolicyReference URI="#CustomBinding_IPublishServiceMonitoring_policy" />
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetPublisherSrvStatus">
+      <soap:operation soapAction="http://www.parkaregroup.com/PublisherService/1.2/IMonitoring/GetPublisherSrvStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PublisherService">
+    <wsdl:port name="CustomBinding_IPublishServiceV12" binding="tns:CustomBinding_IPublishServiceV12">
+      <soap12:address location="http://ser-web.madmovilidad.es/PublisherService/PublisherService.svc/V1.2" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://ser-web.madmovilidad.es/PublisherService/PublisherService.svc/V1.2</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+    <wsdl:port name="CustomBinding_IPublishServiceM13" binding="tns:CustomBinding_IPublishServiceM13">
+      <soap12:address location="http://ser-web.madmovilidad.es/PublisherService/PublisherService.svc/M1.3" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://ser-web.madmovilidad.es/PublisherService/PublisherService.svc/M1.3</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+    <wsdl:port name="CustomBinding_IPublishServiceMonitoring" binding="tns:CustomBinding_IPublishServiceMonitoring">
+      <soap:address location="http://ser-web.madmovilidad.es/PublisherService/PublisherService.svc/xml" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://ser-web.madmovilidad.es/PublisherService/PublisherService.svc/xml</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

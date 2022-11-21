@@ -1,0 +1,359 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Telerik.ReportViewer.Mvc</name>
+    </assembly>
+    <members>
+        <member name="T:Telerik.ReportViewer.Mvc.ExceptionMessages">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Mvc.ExceptionMessages.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Mvc.ExceptionMessages.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Mvc.ExceptionMessages.NameCannotBeBlank">
+            <summary>
+              Looks up a localized string similar to The name of the element cannot be blank..
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Mvc.ExceptionMessages.NameCannotContainInvalidCharacters">
+            <summary>
+              Looks up a localized string similar to The name of the element cannot contain invalid characters..
+            </summary>
+        </member>
+        <member name="T:Telerik.ReportViewer.Mvc.HtmlHelpers">
+            <summary>
+            A class that contains a collection of all Telerik Reporting widgets
+            </summary>
+        </member>
+        <member name="M:Telerik.ReportViewer.Mvc.HtmlHelpers.TelerikReporting(System.Web.Mvc.HtmlHelper)">
+            <summary>
+            A factory used to generate the javascript representation of Telerik Reporting widgets
+            </summary>
+            <param name="htmlHelper"></param>
+            <returns><see cref="T:Telerik.ReportViewer.Mvc.TelerikReportingFactory"/></returns>
+        </member>
+        <member name="T:Telerik.ReportViewer.Mvc.IReportResolver">
+            <summary>
+            Represents a resolver that creates string representation of a report document reference from a <see cref="T:Telerik.Reporting.ReportSource"/> 
+            </summary>
+        </member>
+        <member name="M:Telerik.ReportViewer.Mvc.IReportResolver.Resolve(Telerik.Reporting.ReportSource)">
+            <summary>
+            Creates a string representation based on a <see cref="T:Telerik.Reporting.ReportSource"/>.
+            </summary>
+            <param name="reportSource">The report source to resolve</param>
+            <returns>The resulting string representation</returns>
+        </member>
+        <member name="T:Telerik.ReportViewer.Mvc.IReportViewerBuilder">
+            <summary>
+            Represents a builder that provides a way to initialize the report viewer
+            </summary>
+        </member>
+        <member name="M:Telerik.ReportViewer.Mvc.IReportViewerBuilder.Id(System.String)">
+            <summary>
+            Each report viewer must have an id - it will be used by the initialization script 
+            to find the element and initialize the report viewer.
+            </summary>
+            <param name="id"></param>
+            <returns><see cref="T:Telerik.ReportViewer.Mvc.IReportViewerBuilder"/></returns>
+        </member>
+        <member name="M:Telerik.ReportViewer.Mvc.IReportViewerBuilder.ServiceUrl(System.String)">
+            <summary>
+            The url of the service which will provide the report viewer with reports.
+            The service must be properly configured so that the report viewer can 
+            successfully communicate with the server. 
+            For more information on how to configure the service please check .
+            </summary>
+            <param name="serviceUrl"></param>
+            <returns><see cref="T:Telerik.ReportViewer.Mvc.IReportViewerBuilder"/></returns>
+        </member>
+        <member name="M:Telerik.ReportViewer.Mvc.IReportViewerBuilder.TemplateUrl(System.String)">
+            <summary>
+            The url for the report viewer template. The template can be edited - 
+            new functionalities can be added and not needed ones can be removed.
+            For more information please check .
+            </summary>
+            <param name="templateUrl"></param>
+            <returns><see cref="T:Telerik.ReportViewer.Mvc.IReportViewerBuilder"/></returns>
+        </member>
+        <member name="M:Telerik.ReportViewer.Mvc.IReportViewerBuilder.ReportSource(Telerik.Reporting.ReportSource)">
+            <summary>
+            Sets the <see cref="T:Telerik.Reporting.ReportSource"/> 
+            for the report displayed in the viewer.
+            </summary>
+            <param name="reportSource"></param>
+            <returns><see cref="T:Telerik.ReportViewer.Mvc.IReportViewerBuilder"/></returns>
+        </member>
+        <member name="M:Telerik.ReportViewer.Mvc.IReportViewerBuilder.ReportSource(Telerik.Reporting.TypeReportSource)">
+            <summary>
+            Sets the <see cref="T:Telerik.Reporting.ReportSource"/> as <see cref="T:Telerik.Reporting.TypeReportSource"/>
+            for the report displayed in the viewer.
+            </summary>
+            <param name="typeReportSource"></param>
+            <returns><see cref="T:Telerik.ReportViewer.Mvc.IReportViewerBuilder"/></returns>
+        </member>
+        <member name="M:Telerik.ReportViewer.Mvc.IReportViewerBuilder.ReportSource(Telerik.Reporting.UriReportSource)">
+            <summary>
+            Sets the <see cref="T:Telerik.Reporting.ReportSource"/> as <see cref="T:Telerik.Reporting.UriReportSource"/>
+            for the report displayed in the viewer.
+            </summary>
+            <param name="uriReportSource"></param>
+            <returns><see cref="T:Telerik.ReportViewer.Mvc.IReportViewerBuilder"/></returns>
+        </member>
+        <member name="M:Telerik.ReportViewer.Mvc.IReportViewerBuilder.ReportSource(System.String)">
+            <summary>
+            Sets the <see cref="T:Telerik.Reporting.ReportSource"/> as <see cref="T:System.String"/>
+            for the report displayed in the viewer.
+            </summary>
+            <param name="report"></param>
+            <returns><see cref="T:Telerik.ReportViewer.Mvc.IReportViewerBuilder"/></returns>
+        </member>
+        <member name="M:Telerik.ReportViewer.Mvc.IReportViewerBuilder.ReportSource(System.String,System.Collections.Generic.IDictionary{System.String,System.Object})">
+            <summary>
+            Sets the <see cref="T:Telerik.Reporting.ReportSource"/> as <see cref="T:System.String"/>
+            for the report displayed in the viewer.
+            Sets the parameters of the <see cref="T:Telerik.Reporting.ReportSource"/> 
+            as <see cref="T:System.Collections.Generic.IDictionary`2">IDictionary&lt;System.String, System.Object&gt;</see>
+            </summary>
+            <param name="report"></param>
+            <param name="parameters"></param>
+            <returns><see cref="T:Telerik.ReportViewer.Mvc.IReportViewerBuilder"/></returns>
+        </member>
+        <member name="M:Telerik.ReportViewer.Mvc.IReportViewerBuilder.ViewMode(Telerik.ReportViewer.Mvc.ViewModes)">
+            <summary>
+            Specifies whether the viewer is in interactive or print preview mode.
+            PRINT_PREVIEW - Displays the paginated report as if it is printed on paper. Interactivity is not enabled.
+            INTERACTIVE - Displays the report in its original width and height witn no paging. Additionally interactivity is enabled.
+            </summary>
+            <param name="viewMode"></param>
+            <returns><see cref="T:Telerik.ReportViewer.Mvc.IReportViewerBuilder"/></returns>
+        </member>
+        <member name="M:Telerik.ReportViewer.Mvc.IReportViewerBuilder.ScaleMode(Telerik.ReportViewer.Mvc.ScaleModes)">
+            <summary>
+            Sets the scale mode of the viewer.
+            Three modes exist currently:
+            FIT_PAGE - The whole report will fit on the page (will zoom in or out), regardless of its width and height.
+            FIT_PAGE_WIDTH - The report will be zoomed in or out so that the width of the screen and the width of the report match.
+            SPECIFIC - Uses the scale to zoom in and out the report
+            </summary>
+            <param name="scaleMode"></param>
+            <returns><see cref="T:Telerik.ReportViewer.Mvc.IReportViewerBuilder"/></returns>
+        </member>
+        <member name="M:Telerik.ReportViewer.Mvc.IReportViewerBuilder.Scale(System.Double)">
+            <summary>
+            Zoom in and out the report using the scale
+            1.0 is equal to 100%, i.e. the original size of the report
+            </summary>
+            <param name="scale"></param>
+            <returns><see cref="T:Telerik.ReportViewer.Mvc.IReportViewerBuilder"/></returns>
+        </member>
+        <member name="M:Telerik.ReportViewer.Mvc.IReportViewerBuilder.ReportResolver(Telerik.ReportViewer.Mvc.IReportResolver)">
+            <summary>
+            Sets the chain of report resolvers
+            </summary>
+            <param name="resolver"></param>
+            <returns><see cref="T:Telerik.ReportViewer.Mvc.IReportViewerBuilder"/></returns>
+        </member>
+        <member name="M:Telerik.ReportViewer.Mvc.IReportViewerBuilder.PersistSession(System.Boolean)">
+            <summary>
+            Sets whether the viewer’s client session to be persisted between the page’s refreshes(ex. postback). 
+            The session is stored in the browser’s sessionStorage and is available for the duration of the page session.
+            </summary>
+            <param name="persistSession"></param>
+            <returns><see cref="T:Telerik.ReportViewer.Mvc.IReportViewerBuilder"/></returns>
+        </member>
+        <member name="M:Telerik.ReportViewer.Mvc.IReportViewerBuilder.DirectPrint(System.Boolean)">
+            <summary>
+            Sets whether the viewer should use the browser's Adobe PDF plug-in for the print action.
+            </summary>
+            <param name="directPrint"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.ReportViewer.Mvc.IReportViewerBuilder.PrintMode(Telerik.ReportViewer.Mvc.PrintMode)">
+            <summary>
+            Sets the print mode of the viewer.
+            </summary>
+            <param name="printMode">Specifies the print mode of the viewer.</param>
+            <returns><see cref="T:Telerik.ReportViewer.Mvc.IReportViewerBuilder"/></returns>
+        </member>
+        <member name="T:Telerik.ReportViewer.Mvc.ITelerikReportingFactory">
+            <summary>
+            Represents a factory used to generate the javascript representation of Telerik Reporting widgets
+            </summary>
+        </member>
+        <member name="M:Telerik.ReportViewer.Mvc.ITelerikReportingFactory.ReportViewer">
+            <summary>
+            Represents the MVC ReportViewer wrapper.
+            </summary>
+            <returns><see cref="T:Telerik.ReportViewer.Mvc.IReportViewerBuilder"/></returns>
+        </member>
+        <member name="T:Telerik.ReportViewer.Mvc.PrintMode">
+            <summary>
+            Specifies how the viewer should handle the print command.
+            </summary>
+        </member>
+        <member name="F:Telerik.ReportViewer.Mvc.PrintMode.AutoSelect">
+            <summary>
+            Specifies that the viewer should automatically determine how to print: through the browser's PDF plug-in or through export to a PDF file.
+            </summary>
+        </member>
+        <member name="F:Telerik.ReportViewer.Mvc.PrintMode.ForcePDFPlugin">
+            <summary>
+            Specifies that the viewer should always use the PDF plugin regardless of the browser's version and settings.
+            </summary>
+        </member>
+        <member name="F:Telerik.ReportViewer.Mvc.PrintMode.ForcePDFFile">
+            <summary>
+            Specifies that the viewer should always export the report document to PDF format with the 'print' script enabled.
+            </summary>
+        </member>
+        <member name="T:Telerik.ReportViewer.Mvc.ReportSourceResolver">
+            <summary>
+            Base report resolver
+            </summary>
+        </member>
+        <member name="M:Telerik.ReportViewer.Mvc.ReportSourceResolver.#ctor(Telerik.ReportViewer.Mvc.IReportResolver)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="parent">The parent resolver.</param>
+        </member>
+        <member name="M:Telerik.ReportViewer.Mvc.ReportSourceResolver.CanResolve(Telerik.Reporting.ReportSource)">
+            <summary>
+            Determines if a <see cref="T:Telerik.Reporting.ReportSource"/> can be resolved.
+            </summary>
+            <param name="reportSource">The <see cref="T:Telerik.Reporting.ReportSource"/> to be resolved.</param>
+            <returns>True if the <see cref="T:Telerik.Reporting.ReportSource"/> can be resolved. Otherwise returns false.</returns>
+        </member>
+        <member name="M:Telerik.ReportViewer.Mvc.ReportSourceResolver.Resolve(Telerik.Reporting.ReportSource)">
+            <summary>
+            Resolves a <see cref="T:Telerik.Reporting.ReportSource"/> to string.
+            </summary>
+            <param name="reportSource">The <see cref="T:Telerik.Reporting.ReportSource"/> to be resolved.</param>
+            <returns>The resolved <see cref="T:Telerik.Reporting.ReportSource"/> as string.</returns>
+        </member>
+        <member name="T:Telerik.ReportViewer.Mvc.TypeReportSourceResolver">
+            <summary>
+            Creates a string representation from <see cref="T:Telerik.Reporting.UriReportSource"/> instance.
+            </summary>
+        </member>
+        <member name="M:Telerik.ReportViewer.Mvc.TypeReportSourceResolver.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.ReportViewer.Mvc.TypeReportSourceResolver"/> class.
+            </summary>
+        </member>
+        <member name="M:Telerik.ReportViewer.Mvc.TypeReportSourceResolver.#ctor(Telerik.ReportViewer.Mvc.IReportResolver)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.ReportViewer.Mvc.TypeReportSourceResolver"/> class.
+            </summary>
+            <param name="parent">The fallback resolver</param>
+        </member>
+        <member name="M:Telerik.ReportViewer.Mvc.TypeReportSourceResolver.CanResolve(Telerik.Reporting.ReportSource)">
+            <summary>
+            Determines if a <see cref="T:Telerik.Reporting.ReportSource"/> can be resolved as a <see cref="T:Telerik.Reporting.TypeReportSource"/>.
+            </summary>
+            <param name="reportSource">The <see cref="T:Telerik.Reporting.ReportSource"/> to be resolved.</param>
+            <returns>True if the <see cref="T:Telerik.Reporting.ReportSource"/> can be resolved as <see cref="T:Telerik.Reporting.TypeReportSource"/>. 
+            Otherwise returns false.</returns>
+        </member>
+        <member name="M:Telerik.ReportViewer.Mvc.TypeReportSourceResolver.Resolve(Telerik.Reporting.ReportSource)">
+            <summary>
+            Resolves the <see cref="T:Telerik.Reporting.ReportSource"/> as <see cref="T:Telerik.Reporting.TypeReportSource"/> to string.
+            </summary>
+            <param name="reportSource">The <see cref="T:Telerik.Reporting.ReportSource"/> to be resolved.</param>
+            <returns>The resolved <see cref="T:Telerik.Reporting.ReportSource"/> as string.</returns>
+        </member>
+        <member name="T:Telerik.ReportViewer.Mvc.FileReportSourceResolver">
+            <summary>
+            Creates an relative path to .trdx file from <see cref="T:Telerik.Reporting.UriReportSource"/> instance.
+            </summary>
+        </member>
+        <member name="M:Telerik.ReportViewer.Mvc.FileReportSourceResolver.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.ReportViewer.Mvc.FileReportSourceResolver"/> class.
+            </summary>
+        </member>
+        <member name="M:Telerik.ReportViewer.Mvc.FileReportSourceResolver.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.ReportViewer.Mvc.FileReportSourceResolver"/> class.
+            </summary>
+            <param name="basePath">Physical directory where .trdx reports are located. 
+            Used as path prefix when relative path is passed for resolving.</param>
+        </member>
+        <member name="M:Telerik.ReportViewer.Mvc.FileReportSourceResolver.#ctor(Telerik.ReportViewer.Mvc.IReportResolver,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.ReportViewer.Mvc.FileReportSourceResolver"/> class.
+            </summary>
+            <param name="parent">The fallback resolver</param>
+            <param name="basePath">Physical directory where .trdx reports are located. 
+            Used as path prefix when relative path is passed for resolving.</param>
+        </member>
+        <member name="M:Telerik.ReportViewer.Mvc.FileReportSourceResolver.CanResolve(Telerik.Reporting.ReportSource)">
+            <summary>
+            Determines if a <see cref="T:Telerik.Reporting.ReportSource"/> can be resolved as a <see cref="T:Telerik.Reporting.UriReportSource"/>.
+            </summary>
+            <param name="reportSource">The <see cref="T:Telerik.Reporting.ReportSource"/> to be resolved.</param>
+            <returns>True if the <see cref="T:Telerik.Reporting.ReportSource"/> can be resolved as <see cref="T:Telerik.Reporting.UriReportSource"/>. 
+            Otherwise returns false.</returns>
+        </member>
+        <member name="M:Telerik.ReportViewer.Mvc.FileReportSourceResolver.Resolve(Telerik.Reporting.ReportSource)">
+            <summary>
+            Resolves the <see cref="T:Telerik.Reporting.ReportSource"/> as <see cref="T:Telerik.Reporting.UriReportSource"/> to string.
+            </summary>
+            <param name="reportSource">The <see cref="T:Telerik.Reporting.ReportSource"/> to be resolved.</param>
+            <returns>The resolved <see cref="T:Telerik.Reporting.ReportSource"/> as string.</returns>
+        </member>
+        <member name="M:Telerik.ReportViewer.Mvc.ReportViewerBuilder.PrintMode(Telerik.ReportViewer.Mvc.PrintMode)">
+            <summary>
+            Sets the print mode of the viewer.
+            </summary>
+            <param name="printMode">Specifies the print mode of the viewer.</param>
+            <returns><see cref="T:Telerik.ReportViewer.Mvc.IReportViewerBuilder"/></returns>
+        </member>
+        <member name="T:Telerik.ReportViewer.Mvc.ScaleModes">
+            <summary>
+            Sets the scale mode of the viewer
+            </summary>
+        </member>
+        <member name="F:Telerik.ReportViewer.Mvc.ScaleModes.FIT_PAGE_WIDTH">
+            <summary>
+            The report will be zoomed in or out so that the width of the screen and the width of the report match.
+            </summary>
+        </member>
+        <member name="F:Telerik.ReportViewer.Mvc.ScaleModes.FIT_PAGE">
+            <summary>
+            The whole report will fit on the page (will zoom in or out), regardless of its width and height.
+            </summary>
+        </member>
+        <member name="F:Telerik.ReportViewer.Mvc.ScaleModes.SPECIFIC">
+            <summary>
+            Uses the scale to zoom in and out the report.
+            </summary>
+        </member>
+        <member name="T:Telerik.ReportViewer.Mvc.ViewModes">
+            <summary>
+            Specifies whether the viewer is in interactive or print preview mode
+            </summary>
+        </member>
+        <member name="F:Telerik.ReportViewer.Mvc.ViewModes.INTERACTIVE">
+            <summary>
+            Displays the report in its original width and height with no paging. Additionally interactivity is enabled.
+            </summary>
+        </member>
+        <member name="F:Telerik.ReportViewer.Mvc.ViewModes.PRINT_PREVIEW">
+            <summary>
+            Displays the paginated report as if it is printed on paper. Interactivity is not enabled.
+            </summary>
+        </member>
+    </members>
+</doc>

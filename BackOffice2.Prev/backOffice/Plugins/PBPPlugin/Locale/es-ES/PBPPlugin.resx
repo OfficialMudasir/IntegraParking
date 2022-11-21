@@ -1,0 +1,1635 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Boolean_false" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="Boolean_true" xml:space="preserve">
+    <value>Si</value>
+  </data>
+  <data name="ChargeOperationsTypes_BalanceRecharge" xml:space="preserve">
+    <value>Recargas</value>
+  </data>
+  <data name="ChargeOperationsTypes_Discount" xml:space="preserve">
+    <value>Descuentos</value>
+  </data>
+  <data name="ChargeOperationsTypes_ExtensionOperation" xml:space="preserve">
+    <value>Ampliaciones</value>
+  </data>
+  <data name="ChargeOperationsTypes_ParkingOperation" xml:space="preserve">
+    <value>Aparcamientos</value>
+  </data>
+  <data name="ChargeOperationsTypes_ParkingRefund" xml:space="preserve">
+    <value>Desaparcamientos</value>
+  </data>
+  <data name="ChargeOperationsTypes_ServiceCharge" xml:space="preserve">
+    <value>Cargos de Servicios</value>
+  </data>
+  <data name="ChargeOperationsTypes_TicketPayment" xml:space="preserve">
+    <value>Anulaciones de Denuncia</value>
+  </data>
+  <data name="ChargeOperationsType_BalanceRecharge" xml:space="preserve">
+    <value>Recarga</value>
+  </data>
+  <data name="ChargeOperationsType_Discount" xml:space="preserve">
+    <value>Descuento</value>
+  </data>
+  <data name="ChargeOperationsType_ExtensionOperation" xml:space="preserve">
+    <value>Ampliación</value>
+  </data>
+  <data name="ChargeOperationsType_OffstreetEntry" xml:space="preserve">
+    <value>Entrada Aparcamiento</value>
+  </data>
+  <data name="ChargeOperationsType_OffstreetExit" xml:space="preserve">
+    <value>Salida Aparcamiento</value>
+  </data>
+  <data name="ChargeOperationsType_OffstreetOverduePayment" xml:space="preserve">
+    <value>Pago Atrasado Aparcamiento</value>
+  </data>
+  <data name="ChargeOperationsType_ParkingOperation" xml:space="preserve">
+    <value>Aparcamiento</value>
+  </data>
+  <data name="ChargeOperationsType_ParkingRefund" xml:space="preserve">
+    <value>Desaparcamiento</value>
+  </data>
+  <data name="ChargeOperationsType_ServiceCharge" xml:space="preserve">
+    <value>Cargo de Servicios</value>
+  </data>
+  <data name="ChargeOperationsType_TicketPayment" xml:space="preserve">
+    <value>Anulación de Denuncia</value>
+  </data>
+  <data name="CustomerInscriptionDataModel_ActivationCode" xml:space="preserve">
+    <value>Código Activación</value>
+  </data>
+  <data name="CustomerInscriptionDataModel_ActivationRetries" xml:space="preserve">
+    <value>Reintentos Activación</value>
+  </data>
+  <data name="CustomerInscriptionDataModel_AlternativePhoneCountryID" xml:space="preserve">
+    <value>País Teléfono FIjo</value>
+  </data>
+  <data name="CustomerInscriptionDataModel_AlternativePhoneNumber" xml:space="preserve">
+    <value>Teléfono Fijo</value>
+  </data>
+  <data name="CustomerInscriptionDataModel_Culture" xml:space="preserve">
+    <value>Idioma</value>
+  </data>
+  <data name="CustomerInscriptionDataModel_CustomerId" xml:space="preserve">
+    <value>Código Usuario</value>
+  </data>
+  <data name="CustomerInscriptionDataModel_DocId" xml:space="preserve">
+    <value>DNI/Pasaporte</value>
+  </data>
+  <data name="CustomerInscriptionDataModel_Email" xml:space="preserve">
+    <value>e-mail</value>
+  </data>
+  <data name="CustomerInscriptionDataModel_LastSentTime" xml:space="preserve">
+    <value>Última Fecha Envío</value>
+  </data>
+  <data name="CustomerInscriptionDataModel_LastSentTime_Time" xml:space="preserve">
+    <value>Última Hora Envío</value>
+  </data>
+  <data name="CustomerInscriptionDataModel_MainPhoneCountryId" xml:space="preserve">
+    <value>País Teléfono Móvil</value>
+  </data>
+  <data name="CustomerInscriptionDataModel_MainPhoneNumber" xml:space="preserve">
+    <value>Teléfono móvil</value>
+  </data>
+  <data name="CustomerInscriptionDataModel_Name" xml:space="preserve">
+    <value>Nombre</value>
+  </data>
+  <data name="CustomerInscriptionDataModel_Surname1" xml:space="preserve">
+    <value>Primer Apellido</value>
+  </data>
+  <data name="CustomerInscriptionDataModel_Surname2" xml:space="preserve">
+    <value>Segundo Apellido</value>
+  </data>
+  <data name="CustomerInscriptionDataModel_Url" xml:space="preserve">
+    <value>Url</value>
+  </data>
+  <data name="CustomerInscriptionExport_PDFFilename" xml:space="preserve">
+    <value>inscripciones</value>
+  </data>
+  <data name="CustomerInscriptionExport_XLSFilename" xml:space="preserve">
+    <value>inscripciones</value>
+  </data>
+  <data name="CustomerInscriptions_Title" xml:space="preserve">
+    <value>Altas de Usuarios</value>
+  </data>
+  <data name="DashboardDataModel_Currency" xml:space="preserve">
+    <value>Moneda:</value>
+  </data>
+  <data name="DashboardDataModel_CustomEndDate" xml:space="preserve">
+    <value>Hasta:</value>
+  </data>
+  <data name="DashboardDataModel_CustomEndTime" xml:space="preserve">
+    <value>Hasta Hora:</value>
+  </data>
+  <data name="DashboardDataModel_CustomIniDate" xml:space="preserve">
+    <value>Desde:</value>
+  </data>
+  <data name="DashboardDataModel_CustomIniTime" xml:space="preserve">
+    <value>Desde Hora:</value>
+  </data>
+  <data name="DashboardDataModel_DateFilter" xml:space="preserve">
+    <value>Filtro:</value>
+  </data>
+  <data name="DashboardDataModel_DateGroup" xml:space="preserve">
+    <value>Agrupación:</value>
+  </data>
+  <data name="DashboardDataModel_DateGroupPattern" xml:space="preserve">
+    <value>Patrón</value>
+  </data>
+  <data name="DashboardDataModel_Installations" xml:space="preserve">
+    <value>Instalaciones:</value>
+  </data>
+  <data name="Dashboard_FilterNotify_ApplyButton" xml:space="preserve">
+    <value>Aplicar</value>
+  </data>
+  <data name="Dashboard_FilterNotify_CancelButton" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+  <data name="Dashboard_FilterNotify_Text" xml:space="preserve">
+    <value>El filtro ha cambiado. ¿Aplicar cambios?</value>
+  </data>
+  <data name="Dashboard_Serie1InscriptionAmountAvg" xml:space="preserve">
+    <value>Promedio primera recarga</value>
+  </data>
+  <data name="Dashboard_Serie2InscriptionAmountAvg" xml:space="preserve">
+    <value>Promedio recarga por usuario</value>
+  </data>
+  <data name="Dashboard_SerieBalanceRechargeAmountAvg" xml:space="preserve">
+    <value>Valor promedio recargas</value>
+  </data>
+  <data name="Dashboard_SerieExtensionOperationsAmountAvg" xml:space="preserve">
+    <value>Valor promedio ampliaciones</value>
+  </data>
+  <data name="Dashboard_SerieExtensionOperationsTimeAvg" xml:space="preserve">
+    <value>Duración promedia ampliación</value>
+  </data>
+  <data name="Dashboard_SerieInscriptionsCount" xml:space="preserve">
+    <value>Número Altas</value>
+  </data>
+  <data name="Dashboard_SerieOperationsAmountAvg" xml:space="preserve">
+    <value>Valor promedio operación</value>
+  </data>
+  <data name="Dashboard_SerieOperationsTimeAvg" xml:space="preserve">
+    <value>Duración promedia operación</value>
+  </data>
+  <data name="Dashboard_SerieOperationsUser" xml:space="preserve">
+    <value>Promedio {0} por usuario operativo:</value>
+  </data>
+  <data name="Dashboard_SerieOperationsUserAll" xml:space="preserve">
+    <value>Promedio {0} por usuario:</value>
+  </data>
+  <data name="Dashboard_SerieParkingOperationsAmountAvg" xml:space="preserve">
+    <value>Valor promedio aparcamiento</value>
+  </data>
+  <data name="Dashboard_SerieParkingOperationsTimeAvg" xml:space="preserve">
+    <value>Duración promedia aparcamiento</value>
+  </data>
+  <data name="Dashboard_SerieParkingRefundsAmountAvg" xml:space="preserve">
+    <value>Valor promedio desaparcamientos</value>
+  </data>
+  <data name="Dashboard_SerieParkingRefunsTimeAvg" xml:space="preserve">
+    <value>Duración promedia desaparcamientos</value>
+  </data>
+  <data name="Dashboard_SerieRechargesAmount" xml:space="preserve">
+    <value>Valor Recargas</value>
+  </data>
+  <data name="Dashboard_SerieRechargesCount" xml:space="preserve">
+    <value>Número Recargas</value>
+  </data>
+  <data name="Dashboard_TabInscriptions_Text" xml:space="preserve">
+    <value>Altas</value>
+  </data>
+  <data name="Dashboard_TabOperations_Text" xml:space="preserve">
+    <value>Operaciones</value>
+  </data>
+  <data name="Dashboard_TabRecharges_Text" xml:space="preserve">
+    <value>Recargas</value>
+  </data>
+  <data name="Dashboard_TabSystemUse_Text" xml:space="preserve">
+    <value>Uso del Sistema</value>
+  </data>
+  <data name="Dashboard_TabToday_Text" xml:space="preserve">
+    <value>Situación Actual</value>
+  </data>
+  <data name="Dashboard_Title" xml:space="preserve">
+    <value>Cuadro de mando</value>
+  </data>
+  <data name="Dashboard_TreeTitle" xml:space="preserve">
+    <value>Instalaciones y grupos</value>
+  </data>
+  <data name="Dashboard_YAxisAmount" xml:space="preserve">
+    <value>Valor</value>
+  </data>
+  <data name="Dashboard_YAxisAmountAvg" xml:space="preserve">
+    <value>Valor Promedio</value>
+  </data>
+  <data name="Dashboard_YAxisCount" xml:space="preserve">
+    <value>Número Operaciones</value>
+  </data>
+  <data name="Dashboard_YAxisCountInscriptions" xml:space="preserve">
+    <value>Número Altas</value>
+  </data>
+  <data name="Dashboard_YAxisTime" xml:space="preserve">
+    <value>Duración (hh:mm)</value>
+  </data>
+  <data name="Dashboard_YAxisTimeAvg" xml:space="preserve">
+    <value>Duración Promedia (hh:mm)</value>
+  </data>
+  <data name="DateFilterType_currentHalf" xml:space="preserve">
+    <value>Medio año actual</value>
+  </data>
+  <data name="DateFilterType_currentMonth" xml:space="preserve">
+    <value>Mes actual</value>
+  </data>
+  <data name="DateFilterType_currentQuarter" xml:space="preserve">
+    <value>Trimestre actual</value>
+  </data>
+  <data name="DateFilterType_currentWeek" xml:space="preserve">
+    <value>Semana actual</value>
+  </data>
+  <data name="DateFilterType_currentYear" xml:space="preserve">
+    <value>Año actual</value>
+  </data>
+  <data name="DateFilterType_custom" xml:space="preserve">
+    <value>Especificar fechas</value>
+  </data>
+  <data name="DateFilterType_lastHalf" xml:space="preserve">
+    <value>Últimos 6 meses</value>
+  </data>
+  <data name="DateFilterType_lastMonth" xml:space="preserve">
+    <value>Último mes</value>
+  </data>
+  <data name="DateFilterType_lastQuarter" xml:space="preserve">
+    <value>Últimos 3 meses</value>
+  </data>
+  <data name="DateFilterType_lastWeek" xml:space="preserve">
+    <value>Última semana</value>
+  </data>
+  <data name="DateFilterType_lastYear" xml:space="preserve">
+    <value>Último año</value>
+  </data>
+  <data name="DateGroupType_day" xml:space="preserve">
+    <value>Día</value>
+  </data>
+  <data name="DateGroupType_half" xml:space="preserve">
+    <value>6 meses</value>
+  </data>
+  <data name="DateGroupType_hour" xml:space="preserve">
+    <value>Hora</value>
+  </data>
+  <data name="DateGroupType_month" xml:space="preserve">
+    <value>Mes</value>
+  </data>
+  <data name="DateGroupType_quarter" xml:space="preserve">
+    <value>3 meses</value>
+  </data>
+  <data name="DateGroupType_week" xml:space="preserve">
+    <value>Semana</value>
+  </data>
+  <data name="DateGroupType_weekday" xml:space="preserve">
+    <value>Día de la semana</value>
+  </data>
+  <data name="DateGroupType_year" xml:space="preserve">
+    <value>Año</value>
+  </data>
+  <data name="EmailToolDataModel_Attachments" xml:space="preserve">
+    <value>Ficheros adjuntos</value>
+  </data>
+  <data name="EmailToolDataModel_Body" xml:space="preserve">
+    <value>Cuerpo</value>
+  </data>
+  <data name="EmailToolDataModel_Password" xml:space="preserve">
+    <value>Contraseña</value>
+  </data>
+  <data name="EmailToolDataModel_Recipients" xml:space="preserve">
+    <value>E-mails</value>
+  </data>
+  <data name="EmailToolDataModel_Subject" xml:space="preserve">
+    <value>Asunto</value>
+  </data>
+  <data name="EmailTool_AddRecipients" xml:space="preserve">
+    <value>Añadir</value>
+  </data>
+  <data name="EmailTool_AddRecipients_Accept" xml:space="preserve">
+    <value>Aceptar</value>
+  </data>
+  <data name="EmailTool_AddRecipients_Cancel" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+  <data name="EmailTool_AddRecipients_Error" xml:space="preserve">
+    <value>Error al añadir e-mails</value>
+  </data>
+  <data name="EmailTool_AddRecipients_Title" xml:space="preserve">
+    <value>Añadir e-mails</value>
+  </data>
+  <data name="EmailTool_DeleteAllRecipients" xml:space="preserve">
+    <value>Borrar todos los e-mails</value>
+  </data>
+  <data name="EmailTool_DeleteAllRecipients_Error" xml:space="preserve">
+    <value>Error al eliminar todos los e-mails</value>
+  </data>
+  <data name="EmailTool_DeleteEllRecipients_Confirm" xml:space="preserve">
+    <value>¿Conforme en borrar todos los e-mails de la lista?</value>
+  </data>
+  <data name="EmailTool_DeleteEllRecipients_Title" xml:space="preserve">
+    <value>Borrar todos los e-mails</value>
+  </data>
+  <data name="EmailTool_DeleteRecipient_Error" xml:space="preserve">
+    <value>Error al eliminar e-mail</value>
+  </data>
+  <data name="EmailTool_DeleteRecipient_Title" xml:space="preserve">
+    <value>Borrar e-mail</value>
+  </data>
+  <data name="EmailTool_Installations" xml:space="preserve">
+    <value>Usuarios que hayan operado en la instalación:</value>
+  </data>
+  <data name="EmailTool_InstallationsAll" xml:space="preserve">
+    <value>Todas</value>
+  </data>
+  <data name="EmailTool_PasteRecipients" xml:space="preserve">
+    <value>Pegar e-mails desde el portapapeles</value>
+  </data>
+  <data name="EmailTool_SelectAllFilteredUsers" xml:space="preserve">
+    <value>Seleccionar todos los usuarios filtrados (todas las páginas)</value>
+  </data>
+  <data name="EmailTool_SelectAllUsers" xml:space="preserve">
+    <value>Seleccionar todos los usuarios de la página actual</value>
+  </data>
+  <data name="EmailTool_Send" xml:space="preserve">
+    <value>Enviar</value>
+  </data>
+  <data name="EmailTool_SendEmails_Error" xml:space="preserve">
+    <value>Error al enviar los e-mails</value>
+  </data>
+  <data name="EmailTool_SendEmails_InvalidPwd" xml:space="preserve">
+    <value>Contraseña incorrecta</value>
+  </data>
+  <data name="EmailTool_SendEmails_NoRecipients" xml:space="preserve">
+    <value>Lista e-mails vacía</value>
+  </data>
+  <data name="EmailTool_SendEmails_Success" xml:space="preserve">
+    <value>E-mails enviados correctamente</value>
+  </data>
+  <data name="EmailTool_SendEmails_Title" xml:space="preserve">
+    <value>Enviar e-mails</value>
+  </data>
+  <data name="EmailTool_Title" xml:space="preserve">
+    <value>Envío de emails</value>
+  </data>
+  <data name="EmailTool_Users" xml:space="preserve">
+    <value>Usuarios</value>
+  </data>
+  <data name="ErrorsMsg_InvalidFormat" xml:space="preserve">
+    <value>Formato inválido</value>
+  </data>
+  <data name="ErrorsMsg_InvalidLength" xml:space="preserve">
+    <value>Longitud incorrecta</value>
+  </data>
+  <data name="ErrorsMsg_InvalidLengthWithMinimum" xml:space="preserve">
+    <value>Longitud incorrecta</value>
+  </data>
+  <data name="ErrorsMsg_RequiredField" xml:space="preserve">
+    <value>Campo {0} requerido</value>
+  </data>
+  <data name="ExternalOperationDataModel_Amount" xml:space="preserve">
+    <value>Valor</value>
+  </data>
+  <data name="ExternalOperationDataModel_AmountCurrencyId" xml:space="preserve">
+    <value>Moneda Valor</value>
+  </data>
+  <data name="ExternalOperationDataModel_Date" xml:space="preserve">
+    <value>Fecha</value>
+  </data>
+  <data name="ExternalOperationDataModel_DateUTC" xml:space="preserve">
+    <value>Fecha (UTC)</value>
+  </data>
+  <data name="ExternalOperationDataModel_DateUTCOffset" xml:space="preserve">
+    <value>Offset Fecha</value>
+  </data>
+  <data name="ExternalOperationDataModel_DateUTC_Time" xml:space="preserve">
+    <value>Hora (UTC)</value>
+  </data>
+  <data name="ExternalOperationDataModel_Date_Time" xml:space="preserve">
+    <value>Hora</value>
+  </data>
+  <data name="ExternalOperationDataModel_EndDate" xml:space="preserve">
+    <value>Fecha Final</value>
+  </data>
+  <data name="ExternalOperationDataModel_EndDateUTC" xml:space="preserve">
+    <value>Fecha FInal (UTC)</value>
+  </data>
+  <data name="ExternalOperationDataModel_EndDateUTCOffset" xml:space="preserve">
+    <value>Offset Fecha Final</value>
+  </data>
+  <data name="ExternalOperationDataModel_EndDateUTC_Time" xml:space="preserve">
+    <value>Hora FInal (UTC)</value>
+  </data>
+  <data name="ExternalOperationDataModel_EndDate_Time" xml:space="preserve">
+    <value>Hora Final</value>
+  </data>
+  <data name="ExternalOperationDataModel_EndingNotified" xml:space="preserve">
+    <value>Finalización Notificada</value>
+  </data>
+  <data name="ExternalOperationDataModel_ExternalProviderId" xml:space="preserve">
+    <value>Proveedor Externo</value>
+  </data>
+  <data name="ExternalOperationDataModel_Id" xml:space="preserve">
+    <value>Id Operación</value>
+  </data>
+  <data name="ExternalOperationDataModel_IniDate" xml:space="preserve">
+    <value>Fecha Inicio</value>
+  </data>
+  <data name="ExternalOperationDataModel_IniDateUTC" xml:space="preserve">
+    <value>Fecha Inicio (UTC)</value>
+  </data>
+  <data name="ExternalOperationDataModel_IniDateUTCOffset" xml:space="preserve">
+    <value>Offset Fecha Inicio</value>
+  </data>
+  <data name="ExternalOperationDataModel_IniDateUTC_Time" xml:space="preserve">
+    <value>Hora Inicio (UTC)</value>
+  </data>
+  <data name="ExternalOperationDataModel_IniDate_Time" xml:space="preserve">
+    <value>Hora Inicio</value>
+  </data>
+  <data name="ExternalOperationDataModel_InsertionNotified" xml:space="preserve">
+    <value>Inserción Notificada</value>
+  </data>
+  <data name="ExternalOperationDataModel_InsertionUTCDate" xml:space="preserve">
+    <value>Fecha Inserción (UTC)</value>
+  </data>
+  <data name="ExternalOperationDataModel_InsertionUTCDate_Time" xml:space="preserve">
+    <value>Hora Inserción (UTC)</value>
+  </data>
+  <data name="ExternalOperationDataModel_Installation" xml:space="preserve">
+    <value>Instalación</value>
+  </data>
+  <data name="ExternalOperationDataModel_InstallationShortDesc" xml:space="preserve">
+    <value>Instalación Abrv.</value>
+  </data>
+  <data name="ExternalOperationDataModel_OperationId1" xml:space="preserve">
+    <value>Id Operación Ext. 1</value>
+  </data>
+  <data name="ExternalOperationDataModel_OperationId2" xml:space="preserve">
+    <value>Id Operación Ext. 2</value>
+  </data>
+  <data name="ExternalOperationDataModel_Plate" xml:space="preserve">
+    <value>Matrícula</value>
+  </data>
+  <data name="ExternalOperationDataModel_SourceId" xml:space="preserve">
+    <value>Origen</value>
+  </data>
+  <data name="ExternalOperationDataModel_SourceIdentifier" xml:space="preserve">
+    <value>Identificador Origen</value>
+  </data>
+  <data name="ExternalOperationDataModel_TariffId" xml:space="preserve">
+    <value>Tarifa</value>
+  </data>
+  <data name="ExternalOperationDataModel_Time" xml:space="preserve">
+    <value>Duración</value>
+  </data>
+  <data name="ExternalOperationDataModel_TypeId" xml:space="preserve">
+    <value>Tipo</value>
+  </data>
+  <data name="ExternalOperationDataModel_ZoneId" xml:space="preserve">
+    <value>Zona</value>
+  </data>
+  <data name="ExternalOperationExport_PDFFilename" xml:space="preserve">
+    <value>OperacionesExternas</value>
+  </data>
+  <data name="ExternalOperationExport_XLSFilename" xml:space="preserve">
+    <value>OperacionesExternas</value>
+  </data>
+  <data name="ExternalOperations_Title" xml:space="preserve">
+    <value>Operaciones Externas</value>
+  </data>
+  <data name="Grid_ClearState_Title" xml:space="preserve">
+    <value>Resetear el estado de la grid</value>
+  </data>
+  <data name="Grid_ExportPdf_Title" xml:space="preserve">
+    <value>Exportar datos a formato pdf.</value>
+  </data>
+  <data name="Grid_ExportXls_Title" xml:space="preserve">
+    <value>Exportar datos a formato excel.</value>
+  </data>
+  <data name="Grid_FilterInfo_Title" xml:space="preserve">
+    <value>No hay ningún filtro activo.</value>
+  </data>
+  <data name="InvoiceDataModel_Amount" xml:space="preserve">
+    <value>Valor</value>
+  </data>
+  <data name="InvoiceDataModel_CurrencyId" xml:space="preserve">
+    <value>Moneda</value>
+  </data>
+  <data name="InvoiceDataModel_CurrencyIsoCode" xml:space="preserve">
+    <value>Abrev. Moneda</value>
+  </data>
+  <data name="InvoiceDataModel_Date" xml:space="preserve">
+    <value>Fecha</value>
+  </data>
+  <data name="InvoiceDataModel_Date_Time" xml:space="preserve">
+    <value>Hora</value>
+  </data>
+  <data name="InvoiceDataModel_DownloadURL" xml:space="preserve">
+    <value>Enalce de descarga</value>
+  </data>
+  <data name="InvoiceDataModel_InvoiceId" xml:space="preserve">
+    <value>Código</value>
+  </data>
+  <data name="InvoiceDataModel_InvoiceNumber" xml:space="preserve">
+    <value>Número</value>
+  </data>
+  <data name="InvoiceDataModel_UserId" xml:space="preserve">
+    <value>Usuario</value>
+  </data>
+  <data name="InvoiceExport_PDFFilename" xml:space="preserve">
+    <value>factures</value>
+  </data>
+  <data name="InvoiceExport_XLSFilename" xml:space="preserve">
+    <value>facturas</value>
+  </data>
+  <data name="Invoices_Title" xml:space="preserve">
+    <value>Facturas</value>
+  </data>
+  <data name="Invoice_PDF_Amount" xml:space="preserve">
+    <value>Importe</value>
+  </data>
+  <data name="Invoice_PDF_BaseAmount" xml:space="preserve">
+    <value>Base Imponible</value>
+  </data>
+  <data name="Invoice_PDF_Date" xml:space="preserve">
+    <value>Fecha: </value>
+  </data>
+  <data name="Invoice_PDF_Detail" xml:space="preserve">
+    <value>Concepto</value>
+  </data>
+  <data name="Invoice_PDF_DNI_NIF" xml:space="preserve">
+    <value>DNI/NIF :</value>
+  </data>
+  <data name="Invoice_PDF_InvoiceNumber" xml:space="preserve">
+    <value>Fact. nº:</value>
+  </data>
+  <data name="Invoice_PDF_NIF" xml:space="preserve">
+    <value>NIF: </value>
+  </data>
+  <data name="Invoice_PDF_Total" xml:space="preserve">
+    <value>TOTAL</value>
+  </data>
+  <data name="Invoice_PDF_Units" xml:space="preserve">
+    <value>Unidades</value>
+  </data>
+  <data name="Invoice_PDF_Unit_Amount" xml:space="preserve">
+    <value>Precio</value>
+  </data>
+  <data name="Invoice_PDF_VAT" xml:space="preserve">
+    <value>I.V.A.</value>
+  </data>
+  <data name="Invoice_Start_Date" xml:space="preserve">
+    <value>F.de Inicio</value>
+  </data>
+  <data name="Menu_CustomerInscriptions" xml:space="preserve">
+    <value>Altas</value>
+  </data>
+  <data name="Menu_Dashboard" xml:space="preserve">
+    <value>Cuadro de mando</value>
+  </data>
+  <data name="Menu_EmailTool" xml:space="preserve">
+    <value>Envío de e-mails</value>
+  </data>
+  <data name="Menu_ExternalOperations" xml:space="preserve">
+    <value>Operaciones Externas</value>
+  </data>
+  <data name="Menu_Invoices" xml:space="preserve">
+    <value>Facturación</value>
+  </data>
+  <data name="Menu_Operations" xml:space="preserve">
+    <value>Operaciones</value>
+  </data>
+  <data name="Menu_Users" xml:space="preserve">
+    <value>Usuarios</value>
+  </data>
+  <data name="Menu_UserSecurityOperations" xml:space="preserve">
+    <value>Operaciones Seguras</value>
+  </data>
+  <data name="MobileOS_Android" xml:space="preserve">
+    <value>Android</value>
+  </data>
+  <data name="MobileOS_Blackberry" xml:space="preserve">
+    <value>Blackberry</value>
+  </data>
+  <data name="MobileOS_iOS" xml:space="preserve">
+    <value>iOS</value>
+  </data>
+  <data name="MobileOS_Web" xml:space="preserve">
+    <value>Web</value>
+  </data>
+  <data name="MobileOS_WindowsPhone" xml:space="preserve">
+    <value>Windows Phone</value>
+  </data>
+  <data name="OperationExtDataModel_Amount" xml:space="preserve">
+    <value>Valor</value>
+  </data>
+  <data name="OperationExtDataModel_AmountCurrencyId" xml:space="preserve">
+    <value>Moneda Valor</value>
+  </data>
+  <data name="OperationExtDataModel_AmountCurrencyIsoCode" xml:space="preserve">
+    <value>Abrv. Moneda Valor</value>
+  </data>
+  <data name="OperationExtDataModel_AmountFinal" xml:space="preserve">
+    <value>Valor Final</value>
+  </data>
+  <data name="OperationExtDataModel_AppVersion" xml:space="preserve">
+    <value>Versión App.</value>
+  </data>
+  <data name="OperationExtDataModel_AuthCode" xml:space="preserve">
+    <value>Código Autorización</value>
+  </data>
+  <data name="OperationExtDataModel_BalanceBefore" xml:space="preserve">
+    <value>Saldo Previo</value>
+  </data>
+  <data name="OperationExtDataModel_BalanceCurrencyId" xml:space="preserve">
+    <value>Moneda Saldo Previo</value>
+  </data>
+  <data name="OperationExtDataModel_BalanceCurrencyIsoCode" xml:space="preserve">
+    <value>Abrev. Moneda Saldo Previo</value>
+  </data>
+  <data name="OperationExtDataModel_CardExpirationDate" xml:space="preserve">
+    <value>Fecha Expiración Tarjeta</value>
+  </data>
+  <data name="OperationExtDataModel_CardExpirationDate_Time" xml:space="preserve">
+    <value>Hora Expiración Tarjeta</value>
+  </data>
+  <data name="OperationExtDataModel_CardHash" xml:space="preserve">
+    <value>Hash Tarjeta</value>
+  </data>
+  <data name="OperationExtDataModel_CardReference" xml:space="preserve">
+    <value>Referencia Tarjeta</value>
+  </data>
+  <data name="OperationExtDataModel_CardScheme" xml:space="preserve">
+    <value>Sistema Tarjeta</value>
+  </data>
+  <data name="OperationExtDataModel_ChangeApplied" xml:space="preserve">
+    <value>Cambio</value>
+  </data>
+  <data name="OperationExtDataModel_Date" xml:space="preserve">
+    <value>Fecha</value>
+  </data>
+  <data name="OperationExtDataModel_DateEnd" xml:space="preserve">
+    <value>Fecha Final</value>
+  </data>
+  <data name="OperationExtDataModel_DateEnd_Time" xml:space="preserve">
+    <value>Hora Final</value>
+  </data>
+  <data name="OperationExtDataModel_DateIni" xml:space="preserve">
+    <value>Fecha Inicio</value>
+  </data>
+  <data name="OperationExtDataModel_DateIni_Time" xml:space="preserve">
+    <value>Hora Inicio</value>
+  </data>
+  <data name="OperationExtDataModel_DateUTC" xml:space="preserve">
+    <value>Fecha (UTC)</value>
+  </data>
+  <data name="OperationExtDataModel_DateUTC_Time" xml:space="preserve">
+    <value>Hora (UTC)</value>
+  </data>
+  <data name="OperationExtDataModel_Date_Time" xml:space="preserve">
+    <value>Hora</value>
+  </data>
+  <data name="OperationExtDataModel_DiscountAmount" xml:space="preserve">
+    <value>Valor Descuento</value>
+  </data>
+  <data name="OperationExtDataModel_DiscountAmountCurrencyId" xml:space="preserve">
+    <value>Moneda Valor Descuento</value>
+  </data>
+  <data name="OperationExtDataModel_DiscountAmountCurrencyIsoCode" xml:space="preserve">
+    <value>Abrev. Moneda Valor Descuento</value>
+  </data>
+  <data name="OperationExtDataModel_DiscountAmountFinal" xml:space="preserve">
+    <value>Valor Final Descuento</value>
+  </data>
+  <data name="OperationExtDataModel_DiscountBalanceBefore" xml:space="preserve">
+    <value>Saldo Previo Descuento</value>
+  </data>
+  <data name="OperationExtDataModel_DiscountBalanceCurrencyId" xml:space="preserve">
+    <value>Moneda Saldo Previo Descuento</value>
+  </data>
+  <data name="OperationExtDataModel_DiscountBalanceCurrencyIsoCode" xml:space="preserve">
+    <value>Abrev. Moneda Saldo Previo Descuento</value>
+  </data>
+  <data name="OperationExtDataModel_DiscountChangeApplied" xml:space="preserve">
+    <value>Cambio Descuento</value>
+  </data>
+  <data name="OperationExtDataModel_DiscountDate" xml:space="preserve">
+    <value>Fecha Descuento</value>
+  </data>
+  <data name="OperationExtDataModel_DiscountDate_Time" xml:space="preserve">
+    <value>Hora Descuento</value>
+  </data>
+  <data name="OperationExtDataModel_DiscountId" xml:space="preserve">
+    <value>Descuento</value>
+  </data>
+  <data name="OperationExtDataModel_DiscountInsertionUTCDate" xml:space="preserve">
+    <value>Fecha Inserción Descuento (UTC)</value>
+  </data>
+  <data name="OperationExtDataModel_DiscountInsertionUTCDate_Time" xml:space="preserve">
+    <value>Hora Inserción Descuento (UTC)</value>
+  </data>
+  <data name="OperationExtDataModel_ExternalId1" xml:space="preserve">
+    <value>Id Externo 1</value>
+  </data>
+  <data name="OperationExtDataModel_ExternalId2" xml:space="preserve">
+    <value>Id Externo 2</value>
+  </data>
+  <data name="OperationExtDataModel_ExternalId3" xml:space="preserve">
+    <value>Id Externo 3</value>
+  </data>
+  <data name="OperationExtDataModel_InsertionUTCDate" xml:space="preserve">
+    <value>Fecha Inserción (UTC)</value>
+  </data>
+  <data name="OperationExtDataModel_InsertionUTCDate_Time" xml:space="preserve">
+    <value>Hora Inserción (UTC)</value>
+  </data>
+  <data name="OperationExtDataModel_Installation" xml:space="preserve">
+    <value>Instalación</value>
+  </data>
+  <data name="OperationExtDataModel_InstallationId" xml:space="preserve">
+    <value>Instalación</value>
+  </data>
+  <data name="OperationExtDataModel_InstallationShortDesc" xml:space="preserve">
+    <value>Instalación Abrv.</value>
+  </data>
+  <data name="OperationExtDataModel_Latitude" xml:space="preserve">
+    <value>Latitud</value>
+  </data>
+  <data name="OperationExtDataModel_Longitude" xml:space="preserve">
+    <value>Longitud</value>
+  </data>
+  <data name="OperationExtDataModel_MaskedCardNumber" xml:space="preserve">
+    <value>Número Tarjeta enmascarado</value>
+  </data>
+  <data name="OperationExtDataModel_MobileOSId" xml:space="preserve">
+    <value>SO Móvil</value>
+  </data>
+  <data name="OperationExtDataModel_OffstreetEndDate" xml:space="preserve">
+    <value>Fecha Fin Aparcamiento</value>
+  </data>
+  <data name="OperationExtDataModel_OffstreetEntryDate" xml:space="preserve">
+    <value>Fecha Entrada Aparcamiento</value>
+  </data>
+  <data name="OperationExtDataModel_OffstreetExitDate" xml:space="preserve">
+    <value>Fecha Salida Aparcamiento</value>
+  </data>
+  <data name="OperationExtDataModel_OffstreetExitLimitDate" xml:space="preserve">
+    <value>Fecha Límite Salida Aparcamiento</value>
+  </data>
+  <data name="OperationExtDataModel_OffstreetGate" xml:space="preserve">
+    <value>Puerta Aparcamiento</value>
+  </data>
+  <data name="OperationExtDataModel_OffstreetLogicalId" xml:space="preserve">
+    <value>Tiquet Aparcamiento</value>
+  </data>
+  <data name="OperationExtDataModel_OffstreetNotifyEntryDate" xml:space="preserve">
+    <value>Fecha Notificación Entrada Aparcamiento</value>
+  </data>
+  <data name="OperationExtDataModel_OffstreetPaymentDate" xml:space="preserve">
+    <value>Fecha Pago Aparcamiento</value>
+  </data>
+  <data name="OperationExtDataModel_OffstreetSpaceDescription" xml:space="preserve">
+    <value>Plaza Aparcamiento</value>
+  </data>
+  <data name="OperationExtDataModel_OffstreetTariff" xml:space="preserve">
+    <value>Tarifa Aparcamiento</value>
+  </data>
+  <data name="OperationExtDataModel_OffstreetUTCEndDate" xml:space="preserve">
+    <value>Fecha (UTC) Fin Aparcamiento</value>
+  </data>
+  <data name="OperationExtDataModel_OffstreetUTCEntryDate" xml:space="preserve">
+    <value>Fecha (UTC) Entrada Aparcamiento</value>
+  </data>
+  <data name="OperationExtDataModel_OffstreetUTCExitDate" xml:space="preserve">
+    <value>Fecha (UTC) Salida Aparcamiento</value>
+  </data>
+  <data name="OperationExtDataModel_OffstreetUTCExitLimitDate" xml:space="preserve">
+    <value>Fecha (UTC) Límite Salida Aparcamiento</value>
+  </data>
+  <data name="OperationExtDataModel_OffstreetUTCNotifyEntryDate" xml:space="preserve">
+    <value>Fecha (UTC) Notificación Entrada Aparcamiento</value>
+  </data>
+  <data name="OperationExtDataModel_OffstreetUTCPaymentDate" xml:space="preserve">
+    <value>Fecha (UTC) Pago Aparcamiento</value>
+  </data>
+  <data name="OperationExtDataModel_OpReference" xml:space="preserve">
+    <value>Referencia Operación</value>
+  </data>
+  <data name="OperationExtDataModel_Plate" xml:space="preserve">
+    <value>Matrícula</value>
+  </data>
+  <data name="OperationExtDataModel_PlateId" xml:space="preserve">
+    <value>Matrícula</value>
+  </data>
+  <data name="OperationExtDataModel_RechargeAmount" xml:space="preserve">
+    <value>Valor Recarga</value>
+  </data>
+  <data name="OperationExtDataModel_RechargeAmountCurrencyId" xml:space="preserve">
+    <value>Moneda Valor Recarga</value>
+  </data>
+  <data name="OperationExtDataModel_RechargeAmountCurrencyIsoCode" xml:space="preserve">
+    <value>Abrev. Moneda Valor Recarga</value>
+  </data>
+  <data name="OperationExtDataModel_RechargeBalanceBefore" xml:space="preserve">
+    <value>Saldo Previo Recarga</value>
+  </data>
+  <data name="OperationExtDataModel_RechargeDate" xml:space="preserve">
+    <value>Fecha Recarga</value>
+  </data>
+  <data name="OperationExtDataModel_RechargeDate_Time" xml:space="preserve">
+    <value>Hora Recarga</value>
+  </data>
+  <data name="OperationExtDataModel_RechargeId" xml:space="preserve">
+    <value>Recarga</value>
+  </data>
+  <data name="OperationExtDataModel_RechargeInsertionUTCDate" xml:space="preserve">
+    <value>Fecha Inserción Recarga (UTC)</value>
+  </data>
+  <data name="OperationExtDataModel_RechargeInsertionUTCDate_Time" xml:space="preserve">
+    <value>Hora Inserción Recarga (UTC)</value>
+  </data>
+  <data name="OperationExtDataModel_SectorId" xml:space="preserve">
+    <value>Sector</value>
+  </data>
+  <data name="OperationExtDataModel_ServiceChargeTypeId" xml:space="preserve">
+    <value>Tipo Servicio Carga</value>
+  </data>
+  <data name="OperationExtDataModel_SuscriptionType" xml:space="preserve">
+    <value>Tipo Suscripción</value>
+  </data>
+  <data name="OperationExtDataModel_TariffId" xml:space="preserve">
+    <value>Tarifa</value>
+  </data>
+  <data name="OperationExtDataModel_TicketData" xml:space="preserve">
+    <value>Datos Denuncia</value>
+  </data>
+  <data name="OperationExtDataModel_TicketNumber" xml:space="preserve">
+    <value>Número Denuncia</value>
+  </data>
+  <data name="OperationExtDataModel_Time" xml:space="preserve">
+    <value>Duración</value>
+  </data>
+  <data name="OperationExtDataModel_TransactionId" xml:space="preserve">
+    <value>Código Transacción</value>
+  </data>
+  <data name="OperationExtDataModel_Type" xml:space="preserve">
+    <value>Tipo</value>
+  </data>
+  <data name="OperationExtDataModel_TypeId" xml:space="preserve">
+    <value>Tipo</value>
+  </data>
+  <data name="OperationExtDataModel_UserId" xml:space="preserve">
+    <value>Usuario</value>
+  </data>
+  <data name="OperationExtDataModel_Username" xml:space="preserve">
+    <value>Usuario</value>
+  </data>
+  <data name="OperationExtExport_PDFFilename" xml:space="preserve">
+    <value>operaciones</value>
+  </data>
+  <data name="OperationExtExport_XLSFilename" xml:space="preserve">
+    <value>operaciones</value>
+  </data>
+  <data name="OperationExtNoRechargeDataModel_Amount" xml:space="preserve">
+    <value>Valor</value>
+  </data>
+  <data name="OperationExtNoRechargeDataModel_AmountCurrencyId" xml:space="preserve">
+    <value>Moneda Valor</value>
+  </data>
+  <data name="OperationExtNoRechargeDataModel_AmountCurrencyIsoCode" xml:space="preserve">
+    <value>Abrv. Moneda Valor</value>
+  </data>
+  <data name="OperationExtNoRechargeDataModel_AmountFinal" xml:space="preserve">
+    <value>Valor Final</value>
+  </data>
+  <data name="OperationExtNoRechargeDataModel_AuthCode" xml:space="preserve">
+    <value>Código Autorización</value>
+  </data>
+  <data name="OperationExtNoRechargeDataModel_ChangeApplied" xml:space="preserve">
+    <value>Cambio</value>
+  </data>
+  <data name="OperationExtNoRechargeDataModel_Date" xml:space="preserve">
+    <value>Fecha</value>
+  </data>
+  <data name="OperationExtNoRechargeDataModel_DateEnd" xml:space="preserve">
+    <value>Fecha Final</value>
+  </data>
+  <data name="OperationExtNoRechargeDataModel_DateEnd_Time" xml:space="preserve">
+    <value>Hora Final</value>
+  </data>
+  <data name="OperationExtNoRechargeDataModel_DateIni" xml:space="preserve">
+    <value>Fecha Inicio</value>
+  </data>
+  <data name="OperationExtNoRechargeDataModel_DateIni_Time" xml:space="preserve">
+    <value>Hora Inicio</value>
+  </data>
+  <data name="OperationExtNoRechargeDataModel_DateUTC" xml:space="preserve">
+    <value>Fecha (UTC)</value>
+  </data>
+  <data name="OperationExtNoRechargeDataModel_DateUTC_Time" xml:space="preserve">
+    <value>Hora (UTC)</value>
+  </data>
+  <data name="OperationExtNoRechargeDataModel_Date_Time" xml:space="preserve">
+    <value>Hora</value>
+  </data>
+  <data name="OperationExtNoRechargeDataModel_ExternalId1" xml:space="preserve">
+    <value>Id Externo 1</value>
+  </data>
+  <data name="OperationExtNoRechargeDataModel_ExternalId2" xml:space="preserve">
+    <value>Id Externo 2</value>
+  </data>
+  <data name="OperationExtNoRechargeDataModel_ExternalId3" xml:space="preserve">
+    <value>Id Externo 3</value>
+  </data>
+  <data name="OperationExtNoRechargeDataModel_InsertionUTCDate" xml:space="preserve">
+    <value>Fecha Inserción (UTC)</value>
+  </data>
+  <data name="OperationExtNoRechargeDataModel_InsertionUTCDate_Time" xml:space="preserve">
+    <value>Hora Inserción (UTC)</value>
+  </data>
+  <data name="OperationExtNoRechargeDataModel_Installation" xml:space="preserve">
+    <value>Instalación</value>
+  </data>
+  <data name="OperationExtNoRechargeDataModel_InstallationId" xml:space="preserve">
+    <value>Instalación</value>
+  </data>
+  <data name="OperationExtNoRechargeDataModel_InstallationShortDesc" xml:space="preserve">
+    <value>Instalación Abrv.</value>
+  </data>
+  <data name="OperationExtNoRechargeDataModel_Latitude" xml:space="preserve">
+    <value>Latitud</value>
+  </data>
+  <data name="OperationExtNoRechargeDataModel_Longitude" xml:space="preserve">
+    <value>Longitud</value>
+  </data>
+  <data name="OperationExtNoRechargeDataModel_MobileOSId" xml:space="preserve">
+    <value>SO Móvil</value>
+  </data>
+  <data name="OperationExtNoRechargeDataModel_OpReference" xml:space="preserve">
+    <value>Referencia Operación</value>
+  </data>
+  <data name="OperationExtNoRechargeDataModel_Plate" xml:space="preserve">
+    <value>Matrícula</value>
+  </data>
+  <data name="OperationExtNoRechargeDataModel_PlateId" xml:space="preserve">
+    <value>Matrícula</value>
+  </data>
+  <data name="OperationExtNoRechargeDataModel_SectorId" xml:space="preserve">
+    <value>Sector</value>
+  </data>
+  <data name="OperationExtNoRechargeDataModel_SuscriptionType" xml:space="preserve">
+    <value>Tipo Suscripción</value>
+  </data>
+  <data name="OperationExtNoRechargeDataModel_TariffId" xml:space="preserve">
+    <value>Tarifa</value>
+  </data>
+  <data name="OperationExtNoRechargeDataModel_TicketData" xml:space="preserve">
+    <value>Datos Denuncia</value>
+  </data>
+  <data name="OperationExtNoRechargeDataModel_TicketNumber" xml:space="preserve">
+    <value>Número Denuncia</value>
+  </data>
+  <data name="OperationExtNoRechargeDataModel_Time" xml:space="preserve">
+    <value>Duración</value>
+  </data>
+  <data name="OperationExtNoRechargeDataModel_Type" xml:space="preserve">
+    <value>Tipo</value>
+  </data>
+  <data name="OperationExtNoRechargeDataModel_TypeId" xml:space="preserve">
+    <value>Tipo</value>
+  </data>
+  <data name="OperationExtNoRechargeDataModel_UserId" xml:space="preserve">
+    <value>Usuario</value>
+  </data>
+  <data name="OperationExtNoRechargeExport_PDFFilename" xml:space="preserve">
+    <value>operaciones</value>
+  </data>
+  <data name="OperationExtNoRechargeExport_XLSFilename" xml:space="preserve">
+    <value>operaciones</value>
+  </data>
+  <data name="OperationExt_Deleted_EmailBody_BalanceAfter" xml:space="preserve">
+    <value>Saldo actual:</value>
+  </data>
+  <data name="OperationExt_Deleted_EmailBody_BalanceBefore" xml:space="preserve">
+    <value>Saldo previo:</value>
+  </data>
+  <data name="OperationExt_Deleted_EmailBody_Discount" xml:space="preserve">
+    <value>&lt;br&gt;Descuento aplicado: {0}</value>
+  </data>
+  <data name="OperationExt_Delete_Button_Text" xml:space="preserve">
+    <value>Eliminar</value>
+  </data>
+  <data name="OperationExt_Delete_Button_Title" xml:space="preserve">
+    <value>Eliminar la operación</value>
+  </data>
+  <data name="OperationExt_Delete_Confirm" xml:space="preserve">
+    <value>¿Conforme en eliminar la operación de &lt;b&gt;{0}&lt;/b&gt; (ID: {1}, Usuario:{2})?</value>
+  </data>
+  <data name="OperationExt_Delete_Error" xml:space="preserve">
+    <value>Error al eliminar la operación</value>
+  </data>
+  <data name="OperationExt_Delete_Extension_EmailBody" xml:space="preserve">
+    <value>Datos de la ampliación de aparacamiento eliminada:&lt;br&gt;&lt;br&gt;Usuario: {12}&lt;br&gt;ID: {0}&lt;br&gt;Matr&amp;iacute;cula: {1}&lt;br&gt;Ciudad: {2}&lt;br&gt;Zona: {3}&lt;br&gt;Tarifa: {4}&lt;br&gt;Fecha de emisi&amp;oacute;n: {5:HH:mm:ss dd/MM/yyyy}&lt;br&gt;Aparcamiento Comienza:  {6:HH:mm:ss dd/MM/yyyy}&lt;br&gt;Aparcamiento Finaliza:  {7:HH:mm:ss dd/MM/yyyy}&lt;br&gt;Cantidad Pagada: {8}{15}{14} &lt;br&gt;&lt;br&gt;&lt;b&gt;{9}&lt;/b&gt;&lt;br&gt;&lt;b&gt;{13}&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;a href="{10}"&gt;&lt;img src="{11}" border="0" alt="{10}"&gt;&lt;/a&gt;&lt;br&gt;&lt;br&gt;</value>
+  </data>
+  <data name="OperationExt_Delete_Extension_EmailHeader" xml:space="preserve">
+    <value>EYSAMobile: Ampliación de aparcamiento eliminada</value>
+  </data>
+  <data name="OperationExt_Delete_Parking_EmailBody" xml:space="preserve">
+    <value>Datos del aparcamiento eliminado:&lt;br&gt;&lt;br&gt;Usuario: {12}&lt;br&gt;ID: {0}&lt;br&gt;Matr&amp;iacute;cula: {1}&lt;br&gt;Ciudad: {2}&lt;br&gt;Zona: {3}&lt;br&gt;Tarifa: {4}&lt;br&gt;Fecha de emisi&amp;oacute;n: {5:HH:mm:ss dd/MM/yyyy}&lt;br&gt;Aparcamiento Comienza:  {6:HH:mm:ss dd/MM/yyyy}&lt;br&gt;Aparcamiento Finaliza:  {7:HH:mm:ss dd/MM/yyyy}&lt;br&gt;Cantidad Pagada: {8}{15}{14} &lt;br&gt;&lt;br&gt;&lt;b&gt;{9}&lt;/b&gt;&lt;br&gt;&lt;b&gt;{13}&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;a href="{10}"&gt;&lt;img src="{11}" border="0" alt="{10}"&gt;&lt;/a&gt;&lt;br&gt;&lt;br&gt;</value>
+  </data>
+  <data name="OperationExt_Delete_Parking_EmailHeader" xml:space="preserve">
+    <value>EYSAMobile: Aparcamiento eliminado</value>
+  </data>
+  <data name="OperationExt_Delete_Recharge_EmailBody" xml:space="preserve">
+    <value>Datos de la recarga eliminada:&lt;br&gt;&lt;br&gt;Usuario: {6}&lt;br&gt;ID: {0}&lt;br&gt;Fecha de recarga: {1:HH:mm:ss dd/MM/yyyy}&lt;br&gt;Cantidad Recargada: {2}{8}&lt;br&gt;&lt;br&gt;&lt;b&gt;{3}&lt;/b&gt;&lt;br&gt;&lt;b&gt;{7}&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;a href="{4}"&gt;&lt;img src="{5}" border="0" alt="{4}"&gt;&lt;/a&gt;&lt;br&gt;&lt;br&gt;</value>
+  </data>
+  <data name="OperationExt_Delete_Recharge_EmailHeader" xml:space="preserve">
+    <value>EYSAMobile: Recarga eliminada</value>
+  </data>
+  <data name="OperationExt_Delete_ServiceCharge_EmailBody" xml:space="preserve">
+    <value>Datos del cargo de servicions eliminado:&lt;br&gt;&lt;br&gt;Usuario: {6}&lt;br&gt;ID: {0}&lt;br&gt;Fecha del cargo: {1:HH:mm:ss dd/MM/yyyy}&lt;br&gt;Cantidad: {2}{8}&lt;br&gt;&lt;br&gt;&lt;b&gt;{3}&lt;/b&gt;&lt;br&gt;&lt;b&gt;{7}&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;a href="{4}"&gt;&lt;img src="{5}" border="0" alt="{4}"&gt;&lt;/a&gt;&lt;br&gt;&lt;br&gt;</value>
+  </data>
+  <data name="OperationExt_Delete_ServiceCharge_EmailHeader" xml:space="preserve">
+    <value>EYSAMobile: Cargo de servicios eliminado</value>
+  </data>
+  <data name="OperationExt_Delete_Success" xml:space="preserve">
+    <value>Operación eliminada correctamente</value>
+  </data>
+  <data name="OperationExt_Delete_TicketPayment_EmailBody" xml:space="preserve">
+    <value>Datos de la anumación de denuncia:&lt;br&gt;&lt;br&gt;Usuario: {10}&lt;br&gt;ID: {0}&lt;br&gt;Bolet&amp;iacute;n: {1}&lt;br&gt;Matr&amp;iacute;cula: {2}&lt;br&gt;Ciudad: {3}&lt;br&gt;Fecha de anulaci&amp;oacute;n: {4:HH:mm:ss dd/MM/yyyy}&lt;br&gt;Descripci&amp;oacute;n: {5}&lt;br&gt;Cantidad Pagada: {6}&lt;br&gt;&lt;br&gt;&lt;b&gt;{7}&lt;/b&gt;&lt;br&gt;&lt;b&gt;{11}&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;a href="{8}"&gt;&lt;img src="{9}" border="0" alt="{8}"&gt;&lt;/a&gt;&lt;br&gt;&lt;br&gt;</value>
+  </data>
+  <data name="OperationExt_Delete_TicketPayment_EmailHeader" xml:space="preserve">
+    <value>EYSAMobile: Anulación de denuncia eliminada</value>
+  </data>
+  <data name="OperationExt_Delete_Title" xml:space="preserve">
+    <value>Eliminar Operación</value>
+  </data>
+  <data name="OperationExt_Delete_UnParking_EmailBody" xml:space="preserve">
+    <value>Datos del desaparcamiento eliminado:&lt;br&gt;&lt;br&gt;Usuario: {12}&lt;br&gt;ID: {0}&lt;br&gt;Matr&amp;iacute;cula: {1}&lt;br&gt;Ciudad: {2}&lt;br&gt;Fecha de emisi&amp;oacute;n: {5:HH:mm:ss dd/MM/yyyy}&lt;br&gt;Aparcamiento Comienz&amp;oacute;:  {6:HH:mm:ss dd/MM/yyyy}&lt;br&gt;Aparcamiento Finaliza:  {7:HH:mm:ss dd/MM/yyyy}&lt;br&gt;Cantidad Devuelta: {8}{15}{14} &lt;br&gt;&lt;br&gt;&lt;b&gt;{9}&lt;/b&gt;&lt;br&gt;&lt;b&gt;{13}&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;a href="{10}"&gt;&lt;img src="{11}" border="0" alt="{10}"&gt;&lt;/a&gt;&lt;br&gt;&lt;br&gt;</value>
+  </data>
+  <data name="OperationExt_Delete_UnParking_EmailHeader" xml:space="preserve">
+    <value>EYSAMobile: Desaparcamiento eliminado</value>
+  </data>
+  <data name="OperationSourceType_ExternalMobilePayment" xml:space="preserve">
+    <value>Pago por Móvil Externo</value>
+  </data>
+  <data name="OperationSourceType_ExternalParkingMeter" xml:space="preserve">
+    <value>Parquímetro Externo</value>
+  </data>
+  <data name="OperationSourceType_InternMobilePayment" xml:space="preserve">
+    <value>Pago por Móvil Interno</value>
+  </data>
+  <data name="Operations_Title" xml:space="preserve">
+    <value>Operaciones</value>
+  </data>
+  <data name="PaymentMeanSubType_pmstAmex" xml:space="preserve">
+    <value>Amex</value>
+  </data>
+  <data name="PaymentMeanSubType_pmstMaestro" xml:space="preserve">
+    <value>Maestro</value>
+  </data>
+  <data name="PaymentMeanSubType_pmstMasterCard" xml:space="preserve">
+    <value>MasterCard</value>
+  </data>
+  <data name="PaymentMeanSubType_pmstPaypal" xml:space="preserve">
+    <value>Paypal</value>
+  </data>
+  <data name="PaymentMeanSubType_pmstUndefined" xml:space="preserve">
+    <value>Sin definir</value>
+  </data>
+  <data name="PaymentMeanSubType_pmstVisa" xml:space="preserve">
+    <value>Visa</value>
+  </data>
+  <data name="PaymentMeanType_pmtDebitCreditCard" xml:space="preserve">
+    <value>Tarjetas de crédito o débito</value>
+  </data>
+  <data name="PaymentMeanType_pmtPaypal" xml:space="preserve">
+    <value>Paypal</value>
+  </data>
+  <data name="PaymentSuscryptionType_pstPerTransaction" xml:space="preserve">
+    <value>Por Transacción</value>
+  </data>
+  <data name="PaymentSuscryptionType_pstPrepay" xml:space="preserve">
+    <value>Prepago</value>
+  </data>
+  <data name="SecurityOperationStatus_Confirmed" xml:space="preserve">
+    <value>Confirmada</value>
+  </data>
+  <data name="SecurityOperationStatus_Expired" xml:space="preserve">
+    <value>Expirada</value>
+  </data>
+  <data name="SecurityOperationStatus_Inserted" xml:space="preserve">
+    <value>Insertada</value>
+  </data>
+  <data name="SecurityOperationType_ChangeEmail_Telephone" xml:space="preserve">
+    <value>Cambio Email-Teléfono</value>
+  </data>
+  <data name="SecurityOperationType_RecoverPassword" xml:space="preserve">
+    <value>Restablecer Contraseña</value>
+  </data>
+  <data name="ServiceChargeType_NewPaymentMean" xml:space="preserve">
+    <value>Medio de Pago</value>
+  </data>
+  <data name="ServiceChargeType_PeriodicCharge" xml:space="preserve">
+    <value>Carga Periódica</value>
+  </data>
+  <data name="UserDataModel_AlternativePhoneCountryID" xml:space="preserve">
+    <value>País Teléfono Fijo</value>
+  </data>
+  <data name="UserDataModel_AlternativePhoneNumber" xml:space="preserve">
+    <value>Teléfono Fijo</value>
+  </data>
+  <data name="UserDataModel_Balance" xml:space="preserve">
+    <value>Saldo Actual</value>
+  </data>
+  <data name="UserDataModel_BalanceCurrencyId" xml:space="preserve">
+    <value>Moneda Saldo Actual</value>
+  </data>
+  <data name="UserDataModel_BalanceCurrencyIsoCode" xml:space="preserve">
+    <value>Abrev. Moneda Saldo Actual</value>
+  </data>
+  <data name="UserDataModel_City" xml:space="preserve">
+    <value>Ciudad</value>
+  </data>
+  <data name="UserDataModel_CountryId" xml:space="preserve">
+    <value>País</value>
+  </data>
+  <data name="UserDataModel_DocId" xml:space="preserve">
+    <value>DNI/Pasaporte</value>
+  </data>
+  <data name="UserDataModel_DoorInStreetNumber" xml:space="preserve">
+    <value>Puerta</value>
+  </data>
+  <data name="UserDataModel_Email" xml:space="preserve">
+    <value>e-mail</value>
+  </data>
+  <data name="UserDataModel_Enabled" xml:space="preserve">
+    <value>Habilitado</value>
+  </data>
+  <data name="UserDataModel_InsertionUTCDate" xml:space="preserve">
+    <value>Fecha Inserción (UTC)</value>
+  </data>
+  <data name="UserDataModel_InsertionUTCDate_Time" xml:space="preserve">
+    <value>Hora Inserción (UTC)</value>
+  </data>
+  <data name="UserDataModel_LetterInStreetNumber" xml:space="preserve">
+    <value>Letra</value>
+  </data>
+  <data name="UserDataModel_LevelInStreetNumber" xml:space="preserve">
+    <value>Piso</value>
+  </data>
+  <data name="UserDataModel_MainPhoneCountryId" xml:space="preserve">
+    <value>País Teléfono Móvil</value>
+  </data>
+  <data name="UserDataModel_MainPhoneNumber" xml:space="preserve">
+    <value>Teléfono Móvil</value>
+  </data>
+  <data name="UserDataModel_Name" xml:space="preserve">
+    <value>Nombre</value>
+  </data>
+  <data name="UserDataModel_PaymentMeanSubTypeId" xml:space="preserve">
+    <value>Tipo Tarjeta</value>
+  </data>
+  <data name="UserDataModel_PaymentMeanTypeId" xml:space="preserve">
+    <value>Medio Pago</value>
+  </data>
+  <data name="UserDataModel_PaymentSuscriptionTypeId" xml:space="preserve">
+    <value>Tipo Suscripción</value>
+  </data>
+  <data name="UserDataModel_Plates" xml:space="preserve">
+    <value>Matrículas</value>
+  </data>
+  <data name="UserDataModel_StairInStreetNumber" xml:space="preserve">
+    <value>Escalera</value>
+  </data>
+  <data name="UserDataModel_State" xml:space="preserve">
+    <value>Provincia</value>
+  </data>
+  <data name="UserDataModel_StreetName" xml:space="preserve">
+    <value>Nombre de la Calle</value>
+  </data>
+  <data name="UserDataModel_StreetNumber" xml:space="preserve">
+    <value>Número</value>
+  </data>
+  <data name="UserDataModel_Surname1" xml:space="preserve">
+    <value>Primer Apellido</value>
+  </data>
+  <data name="UserDataModel_Surname2" xml:space="preserve">
+    <value>Segundo Apellido</value>
+  </data>
+  <data name="UserDataModel_UserId" xml:space="preserve">
+    <value>Código</value>
+  </data>
+  <data name="UserDataModel_Username" xml:space="preserve">
+    <value>Nombre de Usuario</value>
+  </data>
+  <data name="UserDataModel_ZipCode" xml:space="preserve">
+    <value>Código Postal</value>
+  </data>
+  <data name="UserExport_PDFFilename" xml:space="preserve">
+    <value>users</value>
+  </data>
+  <data name="UserExport_XLSFilename" xml:space="preserve">
+    <value>users</value>
+  </data>
+  <data name="UserSecurityOperationDataModel_ActivationCode" xml:space="preserve">
+    <value>Código Activación</value>
+  </data>
+  <data name="UserSecurityOperationDataModel_ActivationRetries" xml:space="preserve">
+    <value>Nº Reintentos</value>
+  </data>
+  <data name="UserSecurityOperationDataModel_LastSendDate" xml:space="preserve">
+    <value>Última Fecha Envío</value>
+  </data>
+  <data name="UserSecurityOperationDataModel_LastSendDate_Time" xml:space="preserve">
+    <value>Última Hora Envío</value>
+  </data>
+  <data name="UserSecurityOperationDataModel_NewEmail" xml:space="preserve">
+    <value>Nuevo e-mail</value>
+  </data>
+  <data name="UserSecurityOperationDataModel_NewMainPhoneCountryId" xml:space="preserve">
+    <value>País Teléfono Móvil</value>
+  </data>
+  <data name="UserSecurityOperationDataModel_NewMainPhoneNumber" xml:space="preserve">
+    <value>Teléfono Móvil</value>
+  </data>
+  <data name="UserSecurityOperationDataModel_OpType" xml:space="preserve">
+    <value>Tipo</value>
+  </data>
+  <data name="UserSecurityOperationDataModel_Status" xml:space="preserve">
+    <value>Estado</value>
+  </data>
+  <data name="UserSecurityOperationDataModel_UrlParameter" xml:space="preserve">
+    <value>Url</value>
+  </data>
+  <data name="UserSecurityOperationDataModel_Username" xml:space="preserve">
+    <value>Usuario</value>
+  </data>
+  <data name="UserSecurityOperationDataModel_UtcDateTime" xml:space="preserve">
+    <value>Fecha (UTC)</value>
+  </data>
+  <data name="UserSecurityOperationDataModel_UtcDateTime_Time" xml:space="preserve">
+    <value>Hora (UTC)</value>
+  </data>
+  <data name="UserSecurityOperationExport_PDFFilename" xml:space="preserve">
+    <value>OperacionesSeguras</value>
+  </data>
+  <data name="UserSecurityOperationExport_XLSFilename" xml:space="preserve">
+    <value>OperacionesSeguras</value>
+  </data>
+  <data name="UserSecurityOperation_Title" xml:space="preserve">
+    <value>Operaciones Seguras</value>
+  </data>
+  <data name="Users_Title" xml:space="preserve">
+    <value>Usuarios</value>
+  </data>
+  <data name="User_Disable_Button_Text" xml:space="preserve">
+    <value>Deshabilitar</value>
+  </data>
+  <data name="User_Disable_Button_Title" xml:space="preserve">
+    <value>Deshabilitar el usuario</value>
+  </data>
+  <data name="User_Disable_Confirm" xml:space="preserve">
+    <value>¿Conforme en deshabilitar el usuario '{0}'?</value>
+  </data>
+  <data name="User_Disable_Error" xml:space="preserve">
+    <value>Error al deshabilitar el usuario</value>
+  </data>
+  <data name="User_Disable_Title" xml:space="preserve">
+    <value>Deshabilitar Usuario</value>
+  </data>
+  <data name="OperationController.OperationDelete.AccessDenied" xml:space="preserve">
+    <value>El usuario actual no tiene permisos para eliminar la operación</value>
+  </data>
+  <data name="Reports.Title" xml:space="preserve">
+    <value>Informes</value>
+  </data>
+  <data name="UserController.UserDisable.AccessDenied" xml:space="preserve">
+    <value>El usuario actual no tiene permisos para eliminar el usuario</value>
+  </data>
+  <data name="Dashboard_YAxisCount_Invitations" xml:space="preserve">
+    <value>Número Invitaciones</value>
+  </data>
+  <data name="Dashboard_YAxisCount_InvitationsAcum" xml:space="preserve">
+    <value>Acumulado Invitaciones</value>
+  </data>
+  <data name="Dashboard_Invitations_Accepted" xml:space="preserve">
+    <value>Invitaciones Aceptadas</value>
+  </data>
+  <data name="Dashboard_Invitations_AcceptedTotal" xml:space="preserve">
+    <value>Invitaciones Aceptadas Totales</value>
+  </data>
+  <data name="Dashboard_Invitations_Acums_Accepted" xml:space="preserve">
+    <value>Acumulado Invitaciones Aceptadas</value>
+  </data>
+  <data name="Dashboard_Invitations_Acums_AcceptedTotal" xml:space="preserve">
+    <value>Acumulado Invitaciones Aceptadas Totales</value>
+  </data>
+  <data name="Dashboard_Invitations_Acums_Pending" xml:space="preserve">
+    <value>Acumulado Invitaciones Pendientes de Aceptar</value>
+  </data>
+  <data name="Dashboard_Invitations_Acums_Sended" xml:space="preserve">
+    <value>Acumulado Invitaciones Enviadas</value>
+  </data>
+  <data name="Dashboard_Invitations_Pending" xml:space="preserve">
+    <value>Invitaciones Pendientes de Aceptar</value>
+  </data>
+  <data name="Dashboard_Invitations_Sended" xml:space="preserve">
+    <value>Invitaciones Enviadas</value>
+  </data>
+  <data name="Dashboard_TabInvitations_Text" xml:space="preserve">
+    <value>Invitaciones</value>
+  </data>
+  <data name="Dashboard_RechargeCoupons_Acums_Purchased" xml:space="preserve">
+    <value>Acumulado Vales Comprados</value>
+  </data>
+  <data name="Dashboard_RechargeCoupons_Acums_Used" xml:space="preserve">
+    <value>Acumulador Vales Usados</value>
+  </data>
+  <data name="Dashboard_RechargeCoupons_Purchased" xml:space="preserve">
+    <value>Vales Comprados</value>
+  </data>
+  <data name="Dashboard_RechargeCoupons_Used" xml:space="preserve">
+    <value>Vales Usados</value>
+  </data>
+  <data name="Dashboard_TabRechargeCoupons_Text" xml:space="preserve">
+    <value>Vales de Descuento</value>
+  </data>
+  <data name="Dashboard_YAxisCount_RechargeCoupons" xml:space="preserve">
+    <value>Número Vales</value>
+  </data>
+  <data name="Dashboard_YAxisCount_RechargeCouponsAcum" xml:space="preserve">
+    <value>Acumulado Vales</value>
+  </data>
+  <data name="Dashboard_SerieBalanceRechargeAutomaticAmountAvg" xml:space="preserve">
+    <value>Valor Promedio Recargas Automáticas</value>
+  </data>
+  <data name="Dashboard_SerieBalanceRechargeChangePMAmountAvg" xml:space="preserve">
+    <value>Valor Promedio Recargas Cambio Método Pago</value>
+  </data>
+  <data name="Dashboard_SerieBalanceRechargeRegularAmountAvg" xml:space="preserve">
+    <value>Valor Promedio Recargas Normales</value>
+  </data>
+  <data name="Dashboard_SerieBalanceRechargeUserCreationAmountAvg" xml:space="preserve">
+    <value>Valor Promedio Recargas Iniciales</value>
+  </data>
+  <data name="Dashboard_SerieRechargesAutomaticCount" xml:space="preserve">
+    <value>Número Recargas Automáticas</value>
+  </data>
+  <data name="Dashboard_SerieRechargesChangePMCount" xml:space="preserve">
+    <value>Número Recargas Cambio Método Pago</value>
+  </data>
+  <data name="Dashboard_SerieRechargesRegularCount" xml:space="preserve">
+    <value>Número Recargas Normales</value>
+  </data>
+  <data name="Dashboard_SerieRechargesUserCreationCount" xml:space="preserve">
+    <value>Número Recargas Iniciales</value>
+  </data>
+  <data name="Dashboard_TabInscriptionsPlatform_Text" xml:space="preserve">
+    <value>Altas por Plataforma</value>
+  </data>
+  <data name="Dashboard_YAxisCountInscriptionsPlatform" xml:space="preserve">
+    <value>Número Altas</value>
+  </data>
+  <data name="Dashboard_YAxisCountInscriptionsPlatformAcums" xml:space="preserve">
+    <value>Acumulado Número Altas</value>
+  </data>
+  <data name="BalanceTransfer.AddRecipients" xml:space="preserve">
+    <value>Añadir</value>
+  </data>
+  <data name="BalanceTransfer.AddRecipients.Accept" xml:space="preserve">
+    <value>Aceptar</value>
+  </data>
+  <data name="BalanceTransfer.AddRecipients.Cancel" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+  <data name="BalanceTransfer.AddRecipients.Error" xml:space="preserve">
+    <value>Error al añadir destinatarios</value>
+  </data>
+  <data name="BalanceTransfer.AddRecipients.StatusInfo" xml:space="preserve">
+    <value>Emails añadidos: {0}</value>
+  </data>
+  <data name="BalanceTransfer.AddRecipients.Title" xml:space="preserve">
+    <value>Añadir Destinatario</value>
+  </data>
+  <data name="BalanceTransfer.DeleteAllRecipients" xml:space="preserve">
+    <value>Eliminar Todos</value>
+  </data>
+  <data name="BalanceTransfer.DeleteAllRecipients.Error" xml:space="preserve">
+    <value>Error al eliminar todos los destinatarios</value>
+  </data>
+  <data name="BalanceTransfer.DeleteAllRecipients.Title" xml:space="preserve">
+    <value>Eliminar todos los destinatarios</value>
+  </data>
+  <data name="BalanceTransfer.DeleteEllRecipients.Confirm" xml:space="preserve">
+    <value>¿Conforme en elimnar todos los destinatarios?</value>
+  </data>
+  <data name="BalanceTransfer.DeleteRecipient.Error" xml:space="preserve">
+    <value>Error al eliminar destinatario</value>
+  </data>
+  <data name="BalanceTransfer.DeleteRecipient.Title" xml:space="preserve">
+    <value>Eliminar destinatario</value>
+  </data>
+  <data name="BalanceTransfer.Installations" xml:space="preserve">
+    <value>Instalaciones</value>
+  </data>
+  <data name="BalanceTransfer.InstallationsAll" xml:space="preserve">
+    <value>Todas</value>
+  </data>
+  <data name="BalanceTransfer.Recipients" xml:space="preserve">
+    <value>Destinatarios</value>
+  </data>
+  <data name="BalanceTransfer.SelectAllFilteredUsers" xml:space="preserve">
+    <value>Seleccionar todos los usuarios filtrados (todas las páginas)</value>
+  </data>
+  <data name="BalanceTransfer.SelectAllUsers" xml:space="preserve">
+    <value>Seleccionar todos los usuarios de la página actual</value>
+  </data>
+  <data name="BalanceTransfer.Title" xml:space="preserve">
+    <value>Transferencias de Saldo</value>
+  </data>
+  <data name="BalanceTransfer.Transfer" xml:space="preserve">
+    <value>Transferir</value>
+  </data>
+  <data name="BalanceTransfer.Transfer.Error" xml:space="preserve">
+    <value>Error al transferir el saldo</value>
+  </data>
+  <data name="BalanceTransfer.Transfer.InvalidSourceUser" xml:space="preserve">
+    <value>Usuario origen incorrecto</value>
+  </data>
+  <data name="BalanceTransfer.Transfer.NoRecipients" xml:space="preserve">
+    <value>No hay ningún usuario destino seleccionado</value>
+  </data>
+  <data name="BalanceTransfer.Transfer.NotEnoughBalance" xml:space="preserve">
+    <value>Saldo insufciente</value>
+  </data>
+  <data name="BalanceTransfer.Transfer.Success" xml:space="preserve">
+    <value>Transferencia realizada correctamente</value>
+  </data>
+  <data name="BalanceTransfer.Transfer.Title" xml:space="preserve">
+    <value>Transferencia de Saldo</value>
+  </data>
+  <data name="BalanceTransfer.TransferStatus.Result_Error_InvalidAuthentication" xml:space="preserve">
+    <value>Contraseña incorrecta</value>
+  </data>
+  <data name="BalanceTransfer.TransferStatus.Result_Error_InvalidUserReceiverEmail" xml:space="preserve">
+    <value>Email usuario destino incorrecto</value>
+  </data>
+  <data name="BalanceTransfer.TransferStatus.Result_Error_Invalid_Input_Parameter" xml:space="preserve">
+    <value>Parámetro de entrada incorrecto</value>
+  </data>
+  <data name="BalanceTransfer.TransferStatus.Result_Error_Invalid_User" xml:space="preserve">
+    <value>Usuario incorrecto</value>
+  </data>
+  <data name="BalanceTransfer.TransferStatus.Result_Error_Not_Enough_Balance" xml:space="preserve">
+    <value>El usuario no tiene saldo suficiente</value>
+  </data>
+  <data name="BalanceTransfer.TransferStatus.Result_Error_Recharge_Failed" xml:space="preserve">
+    <value>Recarga fallida</value>
+  </data>
+  <data name="BalanceTransfer.TransferStatus.Result_Error_TransferingBalance" xml:space="preserve">
+    <value>Error transfiriendo saldo</value>
+  </data>
+  <data name="BalanceTransfer.TransferStatus.Result_Error_UserReceiverDisabled" xml:space="preserve">
+    <value>Usuario destino desactivado</value>
+  </data>
+  <data name="BalanceTransfer.Users" xml:space="preserve">
+    <value>Usuarios</value>
+  </data>
+  <data name="BalanceTransferDataModel.Amount" xml:space="preserve">
+    <value>Valor Transferencia</value>
+  </data>
+  <data name="BalanceTransferDataModel.Password" xml:space="preserve">
+    <value>Contraseña</value>
+  </data>
+  <data name="BalanceTransferDataModel.SourceEmail" xml:space="preserve">
+    <value>Usuario Origen</value>
+  </data>
+  <data name="BalanceTransfer.TransferStatus.Result_Error_Generic" xml:space="preserve">
+    <value>Error al realizar transferencia</value>
+  </data>
+</root>

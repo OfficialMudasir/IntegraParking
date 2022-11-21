@@ -1,0 +1,1982 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="NotifyPlateFine">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NotifyPlateFineResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NotifyPlateFineResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NotifyPlateFineJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="jsonIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NotifyPlateFineJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NotifyPlateFineJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NotifyPlateParking">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NotifyPlateParkingResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NotifyPlateParkingResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NotifyPlateParkingJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="jsonIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NotifyPlateParkingJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NotifyPlateParkingJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryPlateLastParkingOperation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryPlateLastParkingOperationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryPlateLastParkingOperationResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryPlateLastParkingOperationJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="jsonIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryPlateLastParkingOperationJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryPlateLastParkingOperationJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryParkingOperations">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryParkingOperationsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryParkingOperationsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryParkingOperationsJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="jsonIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryParkingOperationsJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryParkingOperationsJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryFinePayments">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryFinePaymentsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryFinePaymentsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryFinePaymentsJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="jsonIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryFinePaymentsJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryFinePaymentsJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryCoupon">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryCouponResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryCouponResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryCouponJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="jsonIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryCouponJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryCouponJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConfirmCoupon">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConfirmCouponResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConfirmCouponResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConfirmCouponJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="jsonIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConfirmCouponJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConfirmCouponJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NotifyCarEntry">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NotifyCarEntryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NotifyCarEntryResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NotifyCarEntryJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="jsonIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NotifyCarEntryJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NotifyCarEntryJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TryCarPayment">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TryCarPaymentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TryCarPaymentResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TryCarPaymentJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="jsonIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TryCarPaymentJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TryCarPaymentJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NotifyCarExit">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NotifyCarExitResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NotifyCarExitResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NotifyCarExitJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="jsonIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NotifyCarExitJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NotifyCarExitJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendPushWPNotificationsTo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strToastText1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strToastText2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strToastParam" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strTileTitle" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="iTileCount" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strBackgroundImage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendPushWPNotificationsToResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SendPushWPNotificationsToResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NotifyTollPayment">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NotifyTollPaymentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NotifyTollPaymentResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NotifyTollPaymentJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="jsonIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NotifyTollPaymentJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NotifyTollPaymentJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendPushAndroidNotificationsTo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAndroidRawData" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendPushAndroidNotificationsToResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SendPushAndroidNotificationsToResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+      <s:element name="boolean" type="s:boolean" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="NotifyPlateFineSoapIn">
+    <wsdl:part name="parameters" element="tns:NotifyPlateFine" />
+  </wsdl:message>
+  <wsdl:message name="NotifyPlateFineSoapOut">
+    <wsdl:part name="parameters" element="tns:NotifyPlateFineResponse" />
+  </wsdl:message>
+  <wsdl:message name="NotifyPlateFineJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:NotifyPlateFineJSON" />
+  </wsdl:message>
+  <wsdl:message name="NotifyPlateFineJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:NotifyPlateFineJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="NotifyPlateParkingSoapIn">
+    <wsdl:part name="parameters" element="tns:NotifyPlateParking" />
+  </wsdl:message>
+  <wsdl:message name="NotifyPlateParkingSoapOut">
+    <wsdl:part name="parameters" element="tns:NotifyPlateParkingResponse" />
+  </wsdl:message>
+  <wsdl:message name="NotifyPlateParkingJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:NotifyPlateParkingJSON" />
+  </wsdl:message>
+  <wsdl:message name="NotifyPlateParkingJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:NotifyPlateParkingJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryPlateLastParkingOperationSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryPlateLastParkingOperation" />
+  </wsdl:message>
+  <wsdl:message name="QueryPlateLastParkingOperationSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryPlateLastParkingOperationResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryPlateLastParkingOperationJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryPlateLastParkingOperationJSON" />
+  </wsdl:message>
+  <wsdl:message name="QueryPlateLastParkingOperationJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryPlateLastParkingOperationJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryParkingOperationsSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryParkingOperations" />
+  </wsdl:message>
+  <wsdl:message name="QueryParkingOperationsSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryParkingOperationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryParkingOperationsJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryParkingOperationsJSON" />
+  </wsdl:message>
+  <wsdl:message name="QueryParkingOperationsJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryParkingOperationsJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryFinePaymentsSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryFinePayments" />
+  </wsdl:message>
+  <wsdl:message name="QueryFinePaymentsSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryFinePaymentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryFinePaymentsJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryFinePaymentsJSON" />
+  </wsdl:message>
+  <wsdl:message name="QueryFinePaymentsJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryFinePaymentsJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryCouponSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryCoupon" />
+  </wsdl:message>
+  <wsdl:message name="QueryCouponSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryCouponResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryCouponJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryCouponJSON" />
+  </wsdl:message>
+  <wsdl:message name="QueryCouponJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryCouponJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConfirmCouponSoapIn">
+    <wsdl:part name="parameters" element="tns:ConfirmCoupon" />
+  </wsdl:message>
+  <wsdl:message name="ConfirmCouponSoapOut">
+    <wsdl:part name="parameters" element="tns:ConfirmCouponResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConfirmCouponJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:ConfirmCouponJSON" />
+  </wsdl:message>
+  <wsdl:message name="ConfirmCouponJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:ConfirmCouponJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="NotifyCarEntrySoapIn">
+    <wsdl:part name="parameters" element="tns:NotifyCarEntry" />
+  </wsdl:message>
+  <wsdl:message name="NotifyCarEntrySoapOut">
+    <wsdl:part name="parameters" element="tns:NotifyCarEntryResponse" />
+  </wsdl:message>
+  <wsdl:message name="NotifyCarEntryJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:NotifyCarEntryJSON" />
+  </wsdl:message>
+  <wsdl:message name="NotifyCarEntryJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:NotifyCarEntryJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="TryCarPaymentSoapIn">
+    <wsdl:part name="parameters" element="tns:TryCarPayment" />
+  </wsdl:message>
+  <wsdl:message name="TryCarPaymentSoapOut">
+    <wsdl:part name="parameters" element="tns:TryCarPaymentResponse" />
+  </wsdl:message>
+  <wsdl:message name="TryCarPaymentJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:TryCarPaymentJSON" />
+  </wsdl:message>
+  <wsdl:message name="TryCarPaymentJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:TryCarPaymentJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="NotifyCarExitSoapIn">
+    <wsdl:part name="parameters" element="tns:NotifyCarExit" />
+  </wsdl:message>
+  <wsdl:message name="NotifyCarExitSoapOut">
+    <wsdl:part name="parameters" element="tns:NotifyCarExitResponse" />
+  </wsdl:message>
+  <wsdl:message name="NotifyCarExitJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:NotifyCarExitJSON" />
+  </wsdl:message>
+  <wsdl:message name="NotifyCarExitJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:NotifyCarExitJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendPushWPNotificationsToSoapIn">
+    <wsdl:part name="parameters" element="tns:SendPushWPNotificationsTo" />
+  </wsdl:message>
+  <wsdl:message name="SendPushWPNotificationsToSoapOut">
+    <wsdl:part name="parameters" element="tns:SendPushWPNotificationsToResponse" />
+  </wsdl:message>
+  <wsdl:message name="NotifyTollPaymentSoapIn">
+    <wsdl:part name="parameters" element="tns:NotifyTollPayment" />
+  </wsdl:message>
+  <wsdl:message name="NotifyTollPaymentSoapOut">
+    <wsdl:part name="parameters" element="tns:NotifyTollPaymentResponse" />
+  </wsdl:message>
+  <wsdl:message name="NotifyTollPaymentJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:NotifyTollPaymentJSON" />
+  </wsdl:message>
+  <wsdl:message name="NotifyTollPaymentJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:NotifyTollPaymentJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendPushAndroidNotificationsToSoapIn">
+    <wsdl:part name="parameters" element="tns:SendPushAndroidNotificationsTo" />
+  </wsdl:message>
+  <wsdl:message name="SendPushAndroidNotificationsToSoapOut">
+    <wsdl:part name="parameters" element="tns:SendPushAndroidNotificationsToResponse" />
+  </wsdl:message>
+  <wsdl:message name="NotifyPlateFineHttpGetIn">
+    <wsdl:part name="xmlIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="NotifyPlateFineHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="NotifyPlateFineJSONHttpGetIn">
+    <wsdl:part name="jsonIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="NotifyPlateFineJSONHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="NotifyPlateParkingHttpGetIn">
+    <wsdl:part name="xmlIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="NotifyPlateParkingHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="NotifyPlateParkingJSONHttpGetIn">
+    <wsdl:part name="jsonIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="NotifyPlateParkingJSONHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryPlateLastParkingOperationHttpGetIn">
+    <wsdl:part name="xmlIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryPlateLastParkingOperationHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryPlateLastParkingOperationJSONHttpGetIn">
+    <wsdl:part name="jsonIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryPlateLastParkingOperationJSONHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryParkingOperationsHttpGetIn">
+    <wsdl:part name="xmlIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryParkingOperationsHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryParkingOperationsJSONHttpGetIn">
+    <wsdl:part name="jsonIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryParkingOperationsJSONHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryFinePaymentsHttpGetIn">
+    <wsdl:part name="xmlIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryFinePaymentsHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryFinePaymentsJSONHttpGetIn">
+    <wsdl:part name="jsonIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryFinePaymentsJSONHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryCouponHttpGetIn">
+    <wsdl:part name="xmlIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryCouponHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryCouponJSONHttpGetIn">
+    <wsdl:part name="jsonIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryCouponJSONHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ConfirmCouponHttpGetIn">
+    <wsdl:part name="xmlIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ConfirmCouponHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ConfirmCouponJSONHttpGetIn">
+    <wsdl:part name="jsonIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ConfirmCouponJSONHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="NotifyCarEntryHttpGetIn">
+    <wsdl:part name="xmlIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="NotifyCarEntryHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="NotifyCarEntryJSONHttpGetIn">
+    <wsdl:part name="jsonIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="NotifyCarEntryJSONHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="TryCarPaymentHttpGetIn">
+    <wsdl:part name="xmlIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="TryCarPaymentHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="TryCarPaymentJSONHttpGetIn">
+    <wsdl:part name="jsonIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="TryCarPaymentJSONHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="NotifyCarExitHttpGetIn">
+    <wsdl:part name="xmlIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="NotifyCarExitHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="NotifyCarExitJSONHttpGetIn">
+    <wsdl:part name="jsonIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="NotifyCarExitJSONHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="SendPushWPNotificationsToHttpGetIn">
+    <wsdl:part name="strUser" type="s:string" />
+    <wsdl:part name="strToastText1" type="s:string" />
+    <wsdl:part name="strToastText2" type="s:string" />
+    <wsdl:part name="strToastParam" type="s:string" />
+    <wsdl:part name="strTileTitle" type="s:string" />
+    <wsdl:part name="iTileCount" type="s:string" />
+    <wsdl:part name="strBackgroundImage" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SendPushWPNotificationsToHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="NotifyTollPaymentHttpGetIn">
+    <wsdl:part name="xmlIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="NotifyTollPaymentHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="NotifyTollPaymentJSONHttpGetIn">
+    <wsdl:part name="jsonIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="NotifyTollPaymentJSONHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="SendPushAndroidNotificationsToHttpGetIn">
+    <wsdl:part name="strUser" type="s:string" />
+    <wsdl:part name="strAndroidRawData" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SendPushAndroidNotificationsToHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="NotifyPlateFineHttpPostIn">
+    <wsdl:part name="xmlIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="NotifyPlateFineHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="NotifyPlateFineJSONHttpPostIn">
+    <wsdl:part name="jsonIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="NotifyPlateFineJSONHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="NotifyPlateParkingHttpPostIn">
+    <wsdl:part name="xmlIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="NotifyPlateParkingHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="NotifyPlateParkingJSONHttpPostIn">
+    <wsdl:part name="jsonIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="NotifyPlateParkingJSONHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryPlateLastParkingOperationHttpPostIn">
+    <wsdl:part name="xmlIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryPlateLastParkingOperationHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryPlateLastParkingOperationJSONHttpPostIn">
+    <wsdl:part name="jsonIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryPlateLastParkingOperationJSONHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryParkingOperationsHttpPostIn">
+    <wsdl:part name="xmlIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryParkingOperationsHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryParkingOperationsJSONHttpPostIn">
+    <wsdl:part name="jsonIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryParkingOperationsJSONHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryFinePaymentsHttpPostIn">
+    <wsdl:part name="xmlIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryFinePaymentsHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryFinePaymentsJSONHttpPostIn">
+    <wsdl:part name="jsonIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryFinePaymentsJSONHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryCouponHttpPostIn">
+    <wsdl:part name="xmlIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryCouponHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryCouponJSONHttpPostIn">
+    <wsdl:part name="jsonIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryCouponJSONHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ConfirmCouponHttpPostIn">
+    <wsdl:part name="xmlIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ConfirmCouponHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ConfirmCouponJSONHttpPostIn">
+    <wsdl:part name="jsonIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ConfirmCouponJSONHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="NotifyCarEntryHttpPostIn">
+    <wsdl:part name="xmlIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="NotifyCarEntryHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="NotifyCarEntryJSONHttpPostIn">
+    <wsdl:part name="jsonIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="NotifyCarEntryJSONHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="TryCarPaymentHttpPostIn">
+    <wsdl:part name="xmlIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="TryCarPaymentHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="TryCarPaymentJSONHttpPostIn">
+    <wsdl:part name="jsonIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="TryCarPaymentJSONHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="NotifyCarExitHttpPostIn">
+    <wsdl:part name="xmlIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="NotifyCarExitHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="NotifyCarExitJSONHttpPostIn">
+    <wsdl:part name="jsonIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="NotifyCarExitJSONHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="SendPushWPNotificationsToHttpPostIn">
+    <wsdl:part name="strUser" type="s:string" />
+    <wsdl:part name="strToastText1" type="s:string" />
+    <wsdl:part name="strToastText2" type="s:string" />
+    <wsdl:part name="strToastParam" type="s:string" />
+    <wsdl:part name="strTileTitle" type="s:string" />
+    <wsdl:part name="iTileCount" type="s:string" />
+    <wsdl:part name="strBackgroundImage" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SendPushWPNotificationsToHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="NotifyTollPaymentHttpPostIn">
+    <wsdl:part name="xmlIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="NotifyTollPaymentHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="NotifyTollPaymentJSONHttpPostIn">
+    <wsdl:part name="jsonIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="NotifyTollPaymentJSONHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="SendPushAndroidNotificationsToHttpPostIn">
+    <wsdl:part name="strUser" type="s:string" />
+    <wsdl:part name="strAndroidRawData" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SendPushAndroidNotificationsToHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:portType name="integraExternalServicesSoap">
+    <wsdl:operation name="NotifyPlateFine">
+      <wsdl:input message="tns:NotifyPlateFineSoapIn" />
+      <wsdl:output message="tns:NotifyPlateFineSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NotifyPlateFineJSON">
+      <wsdl:input message="tns:NotifyPlateFineJSONSoapIn" />
+      <wsdl:output message="tns:NotifyPlateFineJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NotifyPlateParking">
+      <wsdl:input message="tns:NotifyPlateParkingSoapIn" />
+      <wsdl:output message="tns:NotifyPlateParkingSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NotifyPlateParkingJSON">
+      <wsdl:input message="tns:NotifyPlateParkingJSONSoapIn" />
+      <wsdl:output message="tns:NotifyPlateParkingJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryPlateLastParkingOperation">
+      <wsdl:input message="tns:QueryPlateLastParkingOperationSoapIn" />
+      <wsdl:output message="tns:QueryPlateLastParkingOperationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryPlateLastParkingOperationJSON">
+      <wsdl:input message="tns:QueryPlateLastParkingOperationJSONSoapIn" />
+      <wsdl:output message="tns:QueryPlateLastParkingOperationJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryParkingOperations">
+      <wsdl:input message="tns:QueryParkingOperationsSoapIn" />
+      <wsdl:output message="tns:QueryParkingOperationsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryParkingOperationsJSON">
+      <wsdl:input message="tns:QueryParkingOperationsJSONSoapIn" />
+      <wsdl:output message="tns:QueryParkingOperationsJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryFinePayments">
+      <wsdl:input message="tns:QueryFinePaymentsSoapIn" />
+      <wsdl:output message="tns:QueryFinePaymentsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryFinePaymentsJSON">
+      <wsdl:input message="tns:QueryFinePaymentsJSONSoapIn" />
+      <wsdl:output message="tns:QueryFinePaymentsJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryCoupon">
+      <wsdl:input message="tns:QueryCouponSoapIn" />
+      <wsdl:output message="tns:QueryCouponSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryCouponJSON">
+      <wsdl:input message="tns:QueryCouponJSONSoapIn" />
+      <wsdl:output message="tns:QueryCouponJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmCoupon">
+      <wsdl:input message="tns:ConfirmCouponSoapIn" />
+      <wsdl:output message="tns:ConfirmCouponSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmCouponJSON">
+      <wsdl:input message="tns:ConfirmCouponJSONSoapIn" />
+      <wsdl:output message="tns:ConfirmCouponJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NotifyCarEntry">
+      <wsdl:input message="tns:NotifyCarEntrySoapIn" />
+      <wsdl:output message="tns:NotifyCarEntrySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NotifyCarEntryJSON">
+      <wsdl:input message="tns:NotifyCarEntryJSONSoapIn" />
+      <wsdl:output message="tns:NotifyCarEntryJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TryCarPayment">
+      <wsdl:input message="tns:TryCarPaymentSoapIn" />
+      <wsdl:output message="tns:TryCarPaymentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TryCarPaymentJSON">
+      <wsdl:input message="tns:TryCarPaymentJSONSoapIn" />
+      <wsdl:output message="tns:TryCarPaymentJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NotifyCarExit">
+      <wsdl:input message="tns:NotifyCarExitSoapIn" />
+      <wsdl:output message="tns:NotifyCarExitSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NotifyCarExitJSON">
+      <wsdl:input message="tns:NotifyCarExitJSONSoapIn" />
+      <wsdl:output message="tns:NotifyCarExitJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendPushWPNotificationsTo">
+      <wsdl:input message="tns:SendPushWPNotificationsToSoapIn" />
+      <wsdl:output message="tns:SendPushWPNotificationsToSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NotifyTollPayment">
+      <wsdl:input message="tns:NotifyTollPaymentSoapIn" />
+      <wsdl:output message="tns:NotifyTollPaymentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NotifyTollPaymentJSON">
+      <wsdl:input message="tns:NotifyTollPaymentJSONSoapIn" />
+      <wsdl:output message="tns:NotifyTollPaymentJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendPushAndroidNotificationsTo">
+      <wsdl:input message="tns:SendPushAndroidNotificationsToSoapIn" />
+      <wsdl:output message="tns:SendPushAndroidNotificationsToSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="integraExternalServicesHttpGet">
+    <wsdl:operation name="NotifyPlateFine">
+      <wsdl:input message="tns:NotifyPlateFineHttpGetIn" />
+      <wsdl:output message="tns:NotifyPlateFineHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NotifyPlateFineJSON">
+      <wsdl:input message="tns:NotifyPlateFineJSONHttpGetIn" />
+      <wsdl:output message="tns:NotifyPlateFineJSONHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NotifyPlateParking">
+      <wsdl:input message="tns:NotifyPlateParkingHttpGetIn" />
+      <wsdl:output message="tns:NotifyPlateParkingHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NotifyPlateParkingJSON">
+      <wsdl:input message="tns:NotifyPlateParkingJSONHttpGetIn" />
+      <wsdl:output message="tns:NotifyPlateParkingJSONHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryPlateLastParkingOperation">
+      <wsdl:input message="tns:QueryPlateLastParkingOperationHttpGetIn" />
+      <wsdl:output message="tns:QueryPlateLastParkingOperationHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryPlateLastParkingOperationJSON">
+      <wsdl:input message="tns:QueryPlateLastParkingOperationJSONHttpGetIn" />
+      <wsdl:output message="tns:QueryPlateLastParkingOperationJSONHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryParkingOperations">
+      <wsdl:input message="tns:QueryParkingOperationsHttpGetIn" />
+      <wsdl:output message="tns:QueryParkingOperationsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryParkingOperationsJSON">
+      <wsdl:input message="tns:QueryParkingOperationsJSONHttpGetIn" />
+      <wsdl:output message="tns:QueryParkingOperationsJSONHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryFinePayments">
+      <wsdl:input message="tns:QueryFinePaymentsHttpGetIn" />
+      <wsdl:output message="tns:QueryFinePaymentsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryFinePaymentsJSON">
+      <wsdl:input message="tns:QueryFinePaymentsJSONHttpGetIn" />
+      <wsdl:output message="tns:QueryFinePaymentsJSONHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryCoupon">
+      <wsdl:input message="tns:QueryCouponHttpGetIn" />
+      <wsdl:output message="tns:QueryCouponHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryCouponJSON">
+      <wsdl:input message="tns:QueryCouponJSONHttpGetIn" />
+      <wsdl:output message="tns:QueryCouponJSONHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmCoupon">
+      <wsdl:input message="tns:ConfirmCouponHttpGetIn" />
+      <wsdl:output message="tns:ConfirmCouponHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmCouponJSON">
+      <wsdl:input message="tns:ConfirmCouponJSONHttpGetIn" />
+      <wsdl:output message="tns:ConfirmCouponJSONHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NotifyCarEntry">
+      <wsdl:input message="tns:NotifyCarEntryHttpGetIn" />
+      <wsdl:output message="tns:NotifyCarEntryHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NotifyCarEntryJSON">
+      <wsdl:input message="tns:NotifyCarEntryJSONHttpGetIn" />
+      <wsdl:output message="tns:NotifyCarEntryJSONHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TryCarPayment">
+      <wsdl:input message="tns:TryCarPaymentHttpGetIn" />
+      <wsdl:output message="tns:TryCarPaymentHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TryCarPaymentJSON">
+      <wsdl:input message="tns:TryCarPaymentJSONHttpGetIn" />
+      <wsdl:output message="tns:TryCarPaymentJSONHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NotifyCarExit">
+      <wsdl:input message="tns:NotifyCarExitHttpGetIn" />
+      <wsdl:output message="tns:NotifyCarExitHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NotifyCarExitJSON">
+      <wsdl:input message="tns:NotifyCarExitJSONHttpGetIn" />
+      <wsdl:output message="tns:NotifyCarExitJSONHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendPushWPNotificationsTo">
+      <wsdl:input message="tns:SendPushWPNotificationsToHttpGetIn" />
+      <wsdl:output message="tns:SendPushWPNotificationsToHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NotifyTollPayment">
+      <wsdl:input message="tns:NotifyTollPaymentHttpGetIn" />
+      <wsdl:output message="tns:NotifyTollPaymentHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NotifyTollPaymentJSON">
+      <wsdl:input message="tns:NotifyTollPaymentJSONHttpGetIn" />
+      <wsdl:output message="tns:NotifyTollPaymentJSONHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendPushAndroidNotificationsTo">
+      <wsdl:input message="tns:SendPushAndroidNotificationsToHttpGetIn" />
+      <wsdl:output message="tns:SendPushAndroidNotificationsToHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="integraExternalServicesHttpPost">
+    <wsdl:operation name="NotifyPlateFine">
+      <wsdl:input message="tns:NotifyPlateFineHttpPostIn" />
+      <wsdl:output message="tns:NotifyPlateFineHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NotifyPlateFineJSON">
+      <wsdl:input message="tns:NotifyPlateFineJSONHttpPostIn" />
+      <wsdl:output message="tns:NotifyPlateFineJSONHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NotifyPlateParking">
+      <wsdl:input message="tns:NotifyPlateParkingHttpPostIn" />
+      <wsdl:output message="tns:NotifyPlateParkingHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NotifyPlateParkingJSON">
+      <wsdl:input message="tns:NotifyPlateParkingJSONHttpPostIn" />
+      <wsdl:output message="tns:NotifyPlateParkingJSONHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryPlateLastParkingOperation">
+      <wsdl:input message="tns:QueryPlateLastParkingOperationHttpPostIn" />
+      <wsdl:output message="tns:QueryPlateLastParkingOperationHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryPlateLastParkingOperationJSON">
+      <wsdl:input message="tns:QueryPlateLastParkingOperationJSONHttpPostIn" />
+      <wsdl:output message="tns:QueryPlateLastParkingOperationJSONHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryParkingOperations">
+      <wsdl:input message="tns:QueryParkingOperationsHttpPostIn" />
+      <wsdl:output message="tns:QueryParkingOperationsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryParkingOperationsJSON">
+      <wsdl:input message="tns:QueryParkingOperationsJSONHttpPostIn" />
+      <wsdl:output message="tns:QueryParkingOperationsJSONHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryFinePayments">
+      <wsdl:input message="tns:QueryFinePaymentsHttpPostIn" />
+      <wsdl:output message="tns:QueryFinePaymentsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryFinePaymentsJSON">
+      <wsdl:input message="tns:QueryFinePaymentsJSONHttpPostIn" />
+      <wsdl:output message="tns:QueryFinePaymentsJSONHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryCoupon">
+      <wsdl:input message="tns:QueryCouponHttpPostIn" />
+      <wsdl:output message="tns:QueryCouponHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryCouponJSON">
+      <wsdl:input message="tns:QueryCouponJSONHttpPostIn" />
+      <wsdl:output message="tns:QueryCouponJSONHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmCoupon">
+      <wsdl:input message="tns:ConfirmCouponHttpPostIn" />
+      <wsdl:output message="tns:ConfirmCouponHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmCouponJSON">
+      <wsdl:input message="tns:ConfirmCouponJSONHttpPostIn" />
+      <wsdl:output message="tns:ConfirmCouponJSONHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NotifyCarEntry">
+      <wsdl:input message="tns:NotifyCarEntryHttpPostIn" />
+      <wsdl:output message="tns:NotifyCarEntryHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NotifyCarEntryJSON">
+      <wsdl:input message="tns:NotifyCarEntryJSONHttpPostIn" />
+      <wsdl:output message="tns:NotifyCarEntryJSONHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TryCarPayment">
+      <wsdl:input message="tns:TryCarPaymentHttpPostIn" />
+      <wsdl:output message="tns:TryCarPaymentHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TryCarPaymentJSON">
+      <wsdl:input message="tns:TryCarPaymentJSONHttpPostIn" />
+      <wsdl:output message="tns:TryCarPaymentJSONHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NotifyCarExit">
+      <wsdl:input message="tns:NotifyCarExitHttpPostIn" />
+      <wsdl:output message="tns:NotifyCarExitHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NotifyCarExitJSON">
+      <wsdl:input message="tns:NotifyCarExitJSONHttpPostIn" />
+      <wsdl:output message="tns:NotifyCarExitJSONHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendPushWPNotificationsTo">
+      <wsdl:input message="tns:SendPushWPNotificationsToHttpPostIn" />
+      <wsdl:output message="tns:SendPushWPNotificationsToHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NotifyTollPayment">
+      <wsdl:input message="tns:NotifyTollPaymentHttpPostIn" />
+      <wsdl:output message="tns:NotifyTollPaymentHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NotifyTollPaymentJSON">
+      <wsdl:input message="tns:NotifyTollPaymentJSONHttpPostIn" />
+      <wsdl:output message="tns:NotifyTollPaymentJSONHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendPushAndroidNotificationsTo">
+      <wsdl:input message="tns:SendPushAndroidNotificationsToHttpPostIn" />
+      <wsdl:output message="tns:SendPushAndroidNotificationsToHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="integraExternalServicesSoap" type="tns:integraExternalServicesSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="NotifyPlateFine">
+      <soap:operation soapAction="http://tempuri.org/NotifyPlateFine" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NotifyPlateFineJSON">
+      <soap:operation soapAction="http://tempuri.org/NotifyPlateFineJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NotifyPlateParking">
+      <soap:operation soapAction="http://tempuri.org/NotifyPlateParking" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NotifyPlateParkingJSON">
+      <soap:operation soapAction="http://tempuri.org/NotifyPlateParkingJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryPlateLastParkingOperation">
+      <soap:operation soapAction="http://tempuri.org/QueryPlateLastParkingOperation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryPlateLastParkingOperationJSON">
+      <soap:operation soapAction="http://tempuri.org/QueryPlateLastParkingOperationJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryParkingOperations">
+      <soap:operation soapAction="http://tempuri.org/QueryParkingOperations" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryParkingOperationsJSON">
+      <soap:operation soapAction="http://tempuri.org/QueryParkingOperationsJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryFinePayments">
+      <soap:operation soapAction="http://tempuri.org/QueryFinePayments" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryFinePaymentsJSON">
+      <soap:operation soapAction="http://tempuri.org/QueryFinePaymentsJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryCoupon">
+      <soap:operation soapAction="http://tempuri.org/QueryCoupon" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryCouponJSON">
+      <soap:operation soapAction="http://tempuri.org/QueryCouponJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmCoupon">
+      <soap:operation soapAction="http://tempuri.org/ConfirmCoupon" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmCouponJSON">
+      <soap:operation soapAction="http://tempuri.org/ConfirmCouponJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NotifyCarEntry">
+      <soap:operation soapAction="http://tempuri.org/NotifyCarEntry" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NotifyCarEntryJSON">
+      <soap:operation soapAction="http://tempuri.org/NotifyCarEntryJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TryCarPayment">
+      <soap:operation soapAction="http://tempuri.org/TryCarPayment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TryCarPaymentJSON">
+      <soap:operation soapAction="http://tempuri.org/TryCarPaymentJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NotifyCarExit">
+      <soap:operation soapAction="http://tempuri.org/NotifyCarExit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NotifyCarExitJSON">
+      <soap:operation soapAction="http://tempuri.org/NotifyCarExitJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendPushWPNotificationsTo">
+      <soap:operation soapAction="http://tempuri.org/SendPushWPNotificationsTo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NotifyTollPayment">
+      <soap:operation soapAction="http://tempuri.org/NotifyTollPayment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NotifyTollPaymentJSON">
+      <soap:operation soapAction="http://tempuri.org/NotifyTollPaymentJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendPushAndroidNotificationsTo">
+      <soap:operation soapAction="http://tempuri.org/SendPushAndroidNotificationsTo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="integraExternalServicesSoap12" type="tns:integraExternalServicesSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="NotifyPlateFine">
+      <soap12:operation soapAction="http://tempuri.org/NotifyPlateFine" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NotifyPlateFineJSON">
+      <soap12:operation soapAction="http://tempuri.org/NotifyPlateFineJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NotifyPlateParking">
+      <soap12:operation soapAction="http://tempuri.org/NotifyPlateParking" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NotifyPlateParkingJSON">
+      <soap12:operation soapAction="http://tempuri.org/NotifyPlateParkingJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryPlateLastParkingOperation">
+      <soap12:operation soapAction="http://tempuri.org/QueryPlateLastParkingOperation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryPlateLastParkingOperationJSON">
+      <soap12:operation soapAction="http://tempuri.org/QueryPlateLastParkingOperationJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryParkingOperations">
+      <soap12:operation soapAction="http://tempuri.org/QueryParkingOperations" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryParkingOperationsJSON">
+      <soap12:operation soapAction="http://tempuri.org/QueryParkingOperationsJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryFinePayments">
+      <soap12:operation soapAction="http://tempuri.org/QueryFinePayments" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryFinePaymentsJSON">
+      <soap12:operation soapAction="http://tempuri.org/QueryFinePaymentsJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryCoupon">
+      <soap12:operation soapAction="http://tempuri.org/QueryCoupon" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryCouponJSON">
+      <soap12:operation soapAction="http://tempuri.org/QueryCouponJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmCoupon">
+      <soap12:operation soapAction="http://tempuri.org/ConfirmCoupon" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmCouponJSON">
+      <soap12:operation soapAction="http://tempuri.org/ConfirmCouponJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NotifyCarEntry">
+      <soap12:operation soapAction="http://tempuri.org/NotifyCarEntry" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NotifyCarEntryJSON">
+      <soap12:operation soapAction="http://tempuri.org/NotifyCarEntryJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TryCarPayment">
+      <soap12:operation soapAction="http://tempuri.org/TryCarPayment" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TryCarPaymentJSON">
+      <soap12:operation soapAction="http://tempuri.org/TryCarPaymentJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NotifyCarExit">
+      <soap12:operation soapAction="http://tempuri.org/NotifyCarExit" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NotifyCarExitJSON">
+      <soap12:operation soapAction="http://tempuri.org/NotifyCarExitJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendPushWPNotificationsTo">
+      <soap12:operation soapAction="http://tempuri.org/SendPushWPNotificationsTo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NotifyTollPayment">
+      <soap12:operation soapAction="http://tempuri.org/NotifyTollPayment" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NotifyTollPaymentJSON">
+      <soap12:operation soapAction="http://tempuri.org/NotifyTollPaymentJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendPushAndroidNotificationsTo">
+      <soap12:operation soapAction="http://tempuri.org/SendPushAndroidNotificationsTo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="integraExternalServicesHttpGet" type="tns:integraExternalServicesHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="NotifyPlateFine">
+      <http:operation location="/NotifyPlateFine" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NotifyPlateFineJSON">
+      <http:operation location="/NotifyPlateFineJSON" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NotifyPlateParking">
+      <http:operation location="/NotifyPlateParking" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NotifyPlateParkingJSON">
+      <http:operation location="/NotifyPlateParkingJSON" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryPlateLastParkingOperation">
+      <http:operation location="/QueryPlateLastParkingOperation" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryPlateLastParkingOperationJSON">
+      <http:operation location="/QueryPlateLastParkingOperationJSON" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryParkingOperations">
+      <http:operation location="/QueryParkingOperations" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryParkingOperationsJSON">
+      <http:operation location="/QueryParkingOperationsJSON" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryFinePayments">
+      <http:operation location="/QueryFinePayments" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryFinePaymentsJSON">
+      <http:operation location="/QueryFinePaymentsJSON" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryCoupon">
+      <http:operation location="/QueryCoupon" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryCouponJSON">
+      <http:operation location="/QueryCouponJSON" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmCoupon">
+      <http:operation location="/ConfirmCoupon" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmCouponJSON">
+      <http:operation location="/ConfirmCouponJSON" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NotifyCarEntry">
+      <http:operation location="/NotifyCarEntry" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NotifyCarEntryJSON">
+      <http:operation location="/NotifyCarEntryJSON" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TryCarPayment">
+      <http:operation location="/TryCarPayment" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TryCarPaymentJSON">
+      <http:operation location="/TryCarPaymentJSON" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NotifyCarExit">
+      <http:operation location="/NotifyCarExit" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NotifyCarExitJSON">
+      <http:operation location="/NotifyCarExitJSON" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendPushWPNotificationsTo">
+      <http:operation location="/SendPushWPNotificationsTo" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NotifyTollPayment">
+      <http:operation location="/NotifyTollPayment" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NotifyTollPaymentJSON">
+      <http:operation location="/NotifyTollPaymentJSON" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendPushAndroidNotificationsTo">
+      <http:operation location="/SendPushAndroidNotificationsTo" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="integraExternalServicesHttpPost" type="tns:integraExternalServicesHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="NotifyPlateFine">
+      <http:operation location="/NotifyPlateFine" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NotifyPlateFineJSON">
+      <http:operation location="/NotifyPlateFineJSON" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NotifyPlateParking">
+      <http:operation location="/NotifyPlateParking" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NotifyPlateParkingJSON">
+      <http:operation location="/NotifyPlateParkingJSON" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryPlateLastParkingOperation">
+      <http:operation location="/QueryPlateLastParkingOperation" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryPlateLastParkingOperationJSON">
+      <http:operation location="/QueryPlateLastParkingOperationJSON" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryParkingOperations">
+      <http:operation location="/QueryParkingOperations" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryParkingOperationsJSON">
+      <http:operation location="/QueryParkingOperationsJSON" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryFinePayments">
+      <http:operation location="/QueryFinePayments" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryFinePaymentsJSON">
+      <http:operation location="/QueryFinePaymentsJSON" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryCoupon">
+      <http:operation location="/QueryCoupon" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryCouponJSON">
+      <http:operation location="/QueryCouponJSON" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmCoupon">
+      <http:operation location="/ConfirmCoupon" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmCouponJSON">
+      <http:operation location="/ConfirmCouponJSON" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NotifyCarEntry">
+      <http:operation location="/NotifyCarEntry" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NotifyCarEntryJSON">
+      <http:operation location="/NotifyCarEntryJSON" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TryCarPayment">
+      <http:operation location="/TryCarPayment" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TryCarPaymentJSON">
+      <http:operation location="/TryCarPaymentJSON" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NotifyCarExit">
+      <http:operation location="/NotifyCarExit" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NotifyCarExitJSON">
+      <http:operation location="/NotifyCarExitJSON" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendPushWPNotificationsTo">
+      <http:operation location="/SendPushWPNotificationsTo" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NotifyTollPayment">
+      <http:operation location="/NotifyTollPayment" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NotifyTollPaymentJSON">
+      <http:operation location="/NotifyTollPaymentJSON" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendPushAndroidNotificationsTo">
+      <http:operation location="/SendPushAndroidNotificationsTo" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="integraExternalServices">
+    <wsdl:port name="integraExternalServicesSoap" binding="tns:integraExternalServicesSoap">
+      <soap:address location="https://ws.iparkme.com/PreProd/integraMobileWS/integraExternalServices.asmx" />
+    </wsdl:port>
+    <wsdl:port name="integraExternalServicesSoap12" binding="tns:integraExternalServicesSoap12">
+      <soap12:address location="https://ws.iparkme.com/PreProd/integraMobileWS/integraExternalServices.asmx" />
+    </wsdl:port>
+    <wsdl:port name="integraExternalServicesHttpGet" binding="tns:integraExternalServicesHttpGet">
+      <http:address location="https://ws.iparkme.com/PreProd/integraMobileWS/integraExternalServices.asmx" />
+    </wsdl:port>
+    <wsdl:port name="integraExternalServicesHttpPost" binding="tns:integraExternalServicesHttpPost">
+      <http:address location="https://ws.iparkme.com/PreProd/integraMobileWS/integraExternalServices.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

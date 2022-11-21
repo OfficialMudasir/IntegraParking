@@ -1,0 +1,585 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3BF4A87A-07F5-45BE-BDA6-8BD01BB86EBA}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PBPPlugin</RootNamespace>
+    <AssemblyName>PBPPlugin</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime">
+      <HintPath>..\..\..\..\..\..\..\..\dbPIC\trunk\02_Dev\02_CC\02_Src\BackOffice\packages\WebGrease.1.3.0\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.4.4.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\eysaMobile\packages\iTextSharp.5.4.4\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Kendo.Mvc, Version=2016.3.1118.440, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\..\dbPIC\trunk\02_Dev\02_CC\02_Src\BackOffice\Lib\Kendo\Mvc4\Kendo.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject">
+      <HintPath>..\..\..\..\..\..\..\..\dbPIC\trunk\02_Dev\02_CC\02_Src\BackOffice\Lib\Ninject\Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI, Version=1.2.5.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\dbPIC\trunk\02_Dev\02_CC\02_Src\BackOffice\packages\NPOI.1.2.5\lib\net40\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Mvc, Version=4.0.0.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\..\dbPIC\trunk\02_Dev\02_CC\02_Src\BackOffice\packages\Microsoft.AspNet.Mvc.4.0.20710.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\..\..\..\..\..\..\..\dbPIC\trunk\02_Dev\02_CC\02_Src\BackOffice\packages\Microsoft.AspNet.Web.Optimization.1.0.0\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Providers">
+      <HintPath>..\..\..\..\..\..\..\..\dbPIC\trunk\02_Dev\02_CC\02_Src\BackOffice\packages\Microsoft.AspNet.Providers.Core.1.2\lib\net40\System.Web.Providers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\..\dbPIC\trunk\02_Dev\02_CC\02_Src\BackOffice\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\..\dbPIC\trunk\02_Dev\02_CC\02_Src\BackOffice\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\..\dbPIC\trunk\02_Dev\02_CC\02_Src\BackOffice\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Mvc.FixedDisplayModes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.FixedDisplayModes.1.0.0\lib\net40\Microsoft.Web.Mvc.FixedDisplayModes.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.20710.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.20710.0\lib\net40\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.20710.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.20715.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.OpenAccess, Version=2015.1.225.1, Culture=neutral, PublicKeyToken=7ce17eeaf1d59342, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\..\dbPIC\trunk\02_Dev\02_CC\02_Src\BackOffice\Lib\Kendo\Telerik.DataAccess.Core.2015.3.1221.1\lib\net40\Telerik.OpenAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.OpenAccess.35.Extensions, Version=2015.1.225.1, Culture=neutral, PublicKeyToken=7ce17eeaf1d59342, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\..\dbPIC\trunk\02_Dev\02_CC\02_Src\BackOffice\Lib\Kendo\Telerik.DataAccess.Core.2015.3.1221.1\lib\net40\Telerik.OpenAccess.35.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.OpenAccess.40.Extensions, Version=2015.1.225.1, Culture=neutral, PublicKeyToken=7ce17eeaf1d59342, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\..\dbPIC\trunk\02_Dev\02_CC\02_Src\BackOffice\Lib\Kendo\Telerik.DataAccess.Core.2015.3.1221.1\lib\net40\Telerik.OpenAccess.40.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.OpenAccess.Runtime, Version=2015.1.225.1, Culture=neutral, PublicKeyToken=7ce17eeaf1d59342, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\..\dbPIC\trunk\02_Dev\02_CC\02_Src\BackOffice\Lib\Kendo\Telerik.DataAccess.Core.2015.3.1221.1\lib\net40\Telerik.OpenAccess.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.OpenAccess.Web.40, Version=2015.1.225.1, Culture=neutral, PublicKeyToken=7ce17eeaf1d59342, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\..\dbPIC\trunk\02_Dev\02_CC\02_Src\BackOffice\Lib\Kendo\Telerik.DataAccess.Web.2015.3.1221.1\lib\net40\Telerik.OpenAccess.Web.40.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Reporting, Version=10.1.16.615, Culture=neutral, PublicKeyToken=a9d7983dfcc261be, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\..\dbPIC\trunk\02_Dev\02_CC\02_Src\BackOffice\Lib\Kendo\Reporting R2 2016\dlls\Telerik.Reporting.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Reporting.Cache.Database, Version=10.1.16.615, Culture=neutral, PublicKeyToken=a9d7983dfcc261be, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\..\dbPIC\trunk\02_Dev\02_CC\02_Src\BackOffice\Lib\Kendo\Reporting R2 2016\dlls\Telerik.Reporting.Cache.Database.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Reporting.Services.WebApi, Version=10.1.16.615, Culture=neutral, PublicKeyToken=a9d7983dfcc261be, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\..\dbPIC\trunk\02_Dev\02_CC\02_Src\BackOffice\Lib\Kendo\Reporting R2 2016\dlls\Telerik.Reporting.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Reporting.XpsRendering, Version=10.1.16.615, Culture=neutral, PublicKeyToken=a9d7983dfcc261be, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\..\dbPIC\trunk\02_Dev\02_CC\02_Src\BackOffice\Lib\Kendo\Reporting R2 2016\dlls\Telerik.Reporting.XpsRendering.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.ReportViewer.Mvc, Version=10.1.16.615, Culture=neutral, PublicKeyToken=a9d7983dfcc261be, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\..\dbPIC\trunk\02_Dev\02_CC\02_Src\BackOffice\Lib\Kendo\Reporting R2 2016\dlls\Telerik.ReportViewer.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="UIShell.OSGi">
+      <HintPath>..\..\..\..\..\..\..\..\dbPIC\trunk\02_Dev\02_CC\02_Src\BackOffice\Lib\iOpenworks\UIShell.OSGi.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <HintPath>..\..\..\..\..\..\..\..\dbPIC\trunk\02_Dev\02_CC\02_Src\BackOffice\packages\WebGrease.1.3.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Activator.cs" />
+    <Compile Include="App_GlobalResources\Telerik.ReportViewer.WebForms.Resources.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Telerik.ReportViewer.WebForms.Resources.resx</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\DashboardController.cs" />
+    <Compile Include="Controllers\InvoiceController.cs" />
+    <Compile Include="Controllers\OperationController.cs" />
+    <Compile Include="Controllers\ReportsController.cs" />
+    <Compile Include="Controllers\SecurityController.cs" />
+    <Compile Include="Controllers\ToolsController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Helper\Helper.cs" />
+    <Compile Include="Models\AllCurrOperationsExtDataModel.cs" />
+    <Compile Include="Models\AllOperationsExtDataModel.cs" />
+    <Compile Include="Models\BalanceTransferDataModel.cs" />
+    <Compile Include="Models\BooleanDataModel.cs" />
+    <Compile Include="Models\ChargeOperationTypeDataModel.cs" />
+    <Compile Include="Models\CashRechargeDataModel.cs" />
+    <Compile Include="Models\CountryDataModel.cs" />
+    <Compile Include="Models\CurrencyDataModel.cs" />
+    <Compile Include="Models\PaymentMeanRechargeTypeDataModel.cs" />
+    <Compile Include="Models\Dashboard\ChartDataItem.cs" />
+    <Compile Include="Models\Dashboard\ChartsRepository.cs" />
+    <Compile Include="Models\Dashboard\DashboardDataModel.cs" />
+    <Compile Include="Models\Dashboard\DetailDataModel.cs" />
+    <Compile Include="Models\Dashboard\TodayData.cs" />
+    <Compile Include="Models\EmailToolDataModel.cs" />
+    <Compile Include="Models\InstallationDataModel.cs" />
+    <Compile Include="Models\MobileOSDataModel.cs" />
+    <Compile Include="Models\PaymentMeanSubTypeDataModel.cs" />
+    <Compile Include="Models\PaymentMeanTypeDataModel.cs" />
+    <Compile Include="Models\PaymentSuscryptionTypeDataModel.cs" />
+    <Compile Include="Models\ServiceChargeTypeDataModel.cs" />
+    <Compile Include="Models\UserDataModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="ResourceExt\ResourceExtension.cs" />
+    <Compile Include="Views\Shared\Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Shared\Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\integraMobileWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="WS\Data\WSCities.cs" />
+    <Compile Include="WS\Data\WSExtensions.cs" />
+    <Compile Include="WS\Data\WSQueryParkingOperation.cs" />
+    <Compile Include="WS\Data\WSUserPlates.cs" />
+    <Compile Include="WS\Data\WSUserPreferences.cs" />
+    <Compile Include="WS\Data\WSZoneTar.cs" />
+    <Compile Include="WS\Data\ZoneTreeViewItem.cs" />
+    <Compile Include="WS\WSBase.cs" />
+    <Compile Include="WS\WSIntegraMobile.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\Account\home.png" />
+    <Content Include="Content\Account\Login.css" />
+    <Content Include="Content\Account\logo.png" />
+    <Content Include="Content\balanceTransfer.css" />
+    <Content Include="Content\cashRecharge.css" />
+    <Content Include="Content\dashboard.css" />
+    <Content Include="Content\emailTool.css" />
+    <Content Include="Content\grid.css" />
+    <Content Include="Content\img\grid\clearState.png" />
+    <Content Include="Content\img\grid\exportExcel.png" />
+    <Content Include="Content\img\grid\exportPdf.png" />
+    <Content Include="Content\img\grid\filterInfo.png" />
+    <Content Include="Content\img\grid\filterInfoActive.png" />
+    <Content Include="Content\img\grid\filters16.png" />
+    <Content Include="Content\img\grid\filtersActive16.png" />
+    <Content Include="Content\img\grid\profiles16.png" />
+    <Content Include="Content\img\menu\cashRecharge.png" />
+    <Content Include="Content\img\menu\customerinscriptions.png" />
+    <Content Include="Content\img\menu\dashboard.png" />
+    <Content Include="Content\img\menu\emailtool.png" />
+    <Content Include="Content\img\menu\invoices.png" />
+    <Content Include="Content\img\menu\operations.png" />
+    <Content Include="Content\img\menu\reports.png" />
+    <Content Include="Content\img\menu\tools.png" />
+    <Content Include="Content\img\menu\users.png" />
+    <Content Include="Content\img\menu\usersecurityoperations.png" />
+    <Content Include="Content\img\ShopkeeperUsers\Approve.png" />
+    <Content Include="Content\img\ShopkeeperUsers\Disable.png" />
+    <Content Include="Content\img\ShopkeeperUsers\Refuse.png" />
+    <Content Include="Content\img\Tools\email.png" />
+    <Content Include="Content\img\Tools\transfer.png" />
+    <Content Include="Content\img\Tools\trash.png" />
+    <Content Include="Content\img\Tools\trash16.png" />
+    <Content Include="Content\img\Tools\user16.png" />
+    <Content Include="Content\Maintenance\grid.css" />
+    <Content Include="Content\Maintenance\shopkeeperusers.css" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\jquery-ui.css" />
+    <Content Include="Content\themes\base\jquery.ui.accordion.css" />
+    <Content Include="Content\themes\base\jquery.ui.all.css" />
+    <Content Include="Content\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="Content\themes\base\jquery.ui.base.css" />
+    <Content Include="Content\themes\base\jquery.ui.button.css" />
+    <Content Include="Content\themes\base\jquery.ui.core.css" />
+    <Content Include="Content\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="Content\themes\base\jquery.ui.dialog.css" />
+    <Content Include="Content\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="Content\themes\base\jquery.ui.resizable.css" />
+    <Content Include="Content\themes\base\jquery.ui.selectable.css" />
+    <Content Include="Content\themes\base\jquery.ui.slider.css" />
+    <Content Include="Content\themes\base\jquery.ui.tabs.css" />
+    <Content Include="Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\minified\jquery-ui.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.accordion.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.autocomplete.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.button.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.core.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.datepicker.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.dialog.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.progressbar.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.resizable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.selectable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Content\Invoicing\eysa_invoice_lp.pdf" />
+    <Content Include="Content\Invoicing\eysa_invoice_nlp.pdf" />
+    <None Include="Properties\PublishProfiles\hbusque-PBPPlugin.pubxml" />
+    <Content Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </Content>
+    <None Include="Scripts\jquery-1.8.2.intellisense.js" />
+    <Content Include="Manifest.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="ReportViewer\js\kendo.subset.2015.3.930.min.js" />
+    <Content Include="ReportViewer\js\telerikReportViewer-10.1.16.615.ca-ES.js" />
+    <Content Include="ReportViewer\js\telerikReportViewer-10.1.16.615.en-US.js" />
+    <Content Include="ReportViewer\js\telerikReportViewer-10.1.16.615.es-ES.js" />
+    <Content Include="ReportViewer\styles\kendo.blueopal.min.css" />
+    <Content Include="ReportViewer\styles\kendo.common.min.css" />
+    <Content Include="ReportViewer\styles\telerikReportViewer.css" />
+    <Content Include="ReportViewer\templates\telerikReportViewerTemplate-FA.html" />
+    <Content Include="ReportViewer\templates\telerikReportViewerTemplate.ca-ES.html" />
+    <Content Include="ReportViewer\templates\telerikReportViewerTemplate.en-US.html" />
+    <Content Include="ReportViewer\templates\telerikReportViewerTemplate.es-ES.html" />
+    <Content Include="ReportViewer\templates\telerikReportViewerTemplate.html" />
+    <Content Include="ResourceExt\ca-ES\CommerceSubscriptionConfirm.html" />
+    <Content Include="ResourceExt\ca-ES\footer_COU_AW.html" />
+    <Content Include="ResourceExt\ca-ES\footer_COU_ES.html" />
+    <Content Include="ResourceExt\ca-ES\footer_COU_MX.html" />
+    <Content Include="ResourceExt\en-US\CommerceSubscriptionConfirm.html" />
+    <Content Include="ResourceExt\en-US\footer_COU_AW.html" />
+    <Content Include="ResourceExt\en-US\footer_COU_ES.html" />
+    <Content Include="ResourceExt\en-US\footer_COU_MX.html" />
+    <Content Include="ResourceExt\es-ES\CommerceSubscriptionConfirm.html" />
+    <Content Include="ResourceExt\es-ES\footer_COU_AW.html" />
+    <Content Include="ResourceExt\es-ES\footer_COU_ES.html" />
+    <Content Include="ResourceExt\es-ES\footer_COU_MX.html" />
+    <Content Include="ResourceExt\es-MX\CommerceSubscriptionConfirm.html" />
+    <Content Include="ResourceExt\es-MX\footer_COU_AW.html" />
+    <Content Include="ResourceExt\es-MX\footer_COU_ES.html" />
+    <Content Include="ResourceExt\es-MX\footer_COU_MX.html" />
+    <Content Include="Scripts\grid.js" />
+    <Content Include="Scripts\jquery-1.8.2.js" />
+    <Content Include="Scripts\jquery-1.8.2.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery-ui-1.8.24.js" />
+    <Content Include="Scripts\jquery-ui-1.8.24.min.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\knockout-2.2.0.debug.js" />
+    <Content Include="Scripts\knockout-2.2.0.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Views\Account\Login.aspx" />
+    <Content Include="Views\Dashboard\UsersInstallationCharts.ascx" />
+    <Content Include="Views\Dashboard\InscriptionsPlatformCharts.ascx" />
+    <Content Include="Views\Dashboard\InvitationsCharts.ascx" />
+    <Content Include="Views\Dashboard\RechargeCouponsCharts.ascx" />
+    <Content Include="Views\Maintenances\AllOperationsExtNorecharges.ascx" />
+    <Content Include="Views\Maintenances\AllOperationsExts.ascx" />
+    <Content Include="Views\Maintenances\AllCurrOperationsExts.ascx" />
+    <Content Include="Views\Maintenances\VwShopkeeperUsers.ascx" />
+    <Content Include="Views\Maintenances\VwBalanceTransfers.ascx" />
+    <Content Include="Views\Maintenances\VwHisOperationsRestricted.ascx" />
+    <Content Include="Views\Maintenances\ExternalParkingOperations.ascx" />
+    <Content Include="Views\Maintenances\VwCustomerPaymentMeansRecharges.ascx" />
+    <Content Include="Views\Maintenances\VwHisOperations.ascx" />
+    <Content Include="Views\Maintenances\VwCustomerInvoices.ascx" />
+    <Content Include="Views\Maintenances\CustomerInscriptions.ascx" />
+    <Content Include="Views\Maintenances\CustomerInvoices.ascx" />
+    <Content Include="Views\Dashboard\Dashboard.aspx" />
+    <Content Include="Views\Dashboard\InscriptionsCharts.ascx" />
+    <Content Include="Views\Dashboard\OperationsCharts.ascx" />
+    <Content Include="Views\Dashboard\RechargesCharts.ascx" />
+    <Content Include="Views\Dashboard\SystemUseCharts.ascx" />
+    <Content Include="Views\Dashboard\TodayCharts.ascx" />
+    <Content Include="Views\Invoice\Export.aspx" />
+    <Content Include="Views\Maintenances\VwRechargeCoupons.ascx" />
+    <Content Include="Views\Maintenances\VwTicketPayments.ascx" />
+    <Content Include="Views\Maintenances\VwUsersFriends.ascx" />
+    <Content Include="Views\Maintenances\VwUsersPushIds.ascx" />
+    <Content Include="Views\Tools\BalanceTransfersTool.aspx" />
+    <Content Include="Views\Tools\CashRechargeTool.aspx" />
+    <Content Include="Views\Tools\EmailTool.aspx" />
+    <Content Include="Views\Tools\EmailTool2.aspx" />
+    <Content Include="Views\Tools\Reports.aspx" />
+    <Content Include="Views\Maintenances\UsersSecurityOperations.ascx" />
+    <Content Include="Views\Maintenances\Users.ascx" />
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\Shared\Error.aspx" />
+    <Content Include="Views\Shared\Site.Master" />
+    <Content Include="Web References\integraMobileWS\integraMobileWS.disco" />
+    <Content Include="web.config" />
+    <Content Include="Web References\integraMobileWS\integraMobileWS.wsdl" />
+    <Content Include="Web References\integraMobileWS\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
+    <None Include="web.BackOfficeI%40_Debug.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+    <None Include="web.Debug.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+    <None Include="web.Release.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Reports\Finantial\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\..\..\..\..\dbPIC\trunk\02_Dev\02_CC\02_Src\BackOffice\backOffice\Plugins\MaintenancePlugin\MaintenancePlugin.csproj">
+      <Project>{c1f157df-7475-4dd6-9e44-010cd2aff889}</Project>
+      <Name>MaintenancePlugin</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\..\..\..\..\dbPIC\trunk\02_Dev\02_CC\02_Src\BackOffice\backOffice\Plugins\SecurityPlugin\SecurityPlugin.csproj">
+      <Project>{fef26a62-2d63-4dfc-8d61-35bd9b5786b4}</Project>
+      <Name>SecurityPlugin</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\..\..\..\..\dbPIC\trunk\02_Dev\02_CC\02_Src\PIC.Domain\PIC.Domain.csproj">
+      <Project>{363051f8-1e99-447e-a542-b6d19f1f14b2}</Project>
+      <Name>PIC.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\integraMobile.Domain\integraMobile.Domain.csproj">
+      <Project>{d61b49d2-71e7-4594-b4bf-7111445dd51c}</Project>
+      <Name>integraMobile.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\integraMobile.Infrastructure\integraMobile.Infrastructure.csproj">
+      <Project>{1a917a7c-c1d1-4bc8-9434-9f37fadc0a6b}</Project>
+      <Name>integraMobile.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\..\..\..\..\dbPIC\trunk\02_Dev\02_CC\02_Src\Infrastructure\Common\Common.csproj">
+      <Project>{9d356047-4d2a-4f59-90c0-592c96670119}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\..\..\..\..\dbPIC\trunk\02_Dev\02_CC\02_Src\BackOffice\Common\backOffice.Infrastructure\backOffice.Infrastructure.csproj">
+      <Project>{b505da11-b18a-4716-a4d4-b08a26e7c000}</Project>
+      <Name>backOffice.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\integraMobile.Domain.NH\integraMobile.Domain.NH.csproj">
+      <Project>{b526a7a4-1fbf-4ae1-9e89-7a13b847dd64}</Project>
+      <Name>integraMobile.Domain.NH</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\integraMobile.Reports\integraMobile.Reports.csproj">
+      <Project>{931b7f94-c30b-4fa2-b671-603cbfe108c8}</Project>
+      <Name>integraMobile.Reports</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Locale\ca-ES\Security.resx" />
+    <EmbeddedResource Include="Locale\en-US\Security.resx" />
+    <EmbeddedResource Include="Locale\es-ES\Security.resx" />
+    <None Include="App_GlobalResources\Telerik.ReportViewer.WebForms.Resources.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Telerik.ReportViewer.WebForms.Resources.designer.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <EmbeddedResource Include="Locale\ca-ES\Maintenance.resx" />
+    <EmbeddedResource Include="Locale\ca-ES\PBPPlugin.resx" />
+    <EmbeddedResource Include="Locale\en-US\Maintenance.resx" />
+    <EmbeddedResource Include="Locale\en-US\PBPPlugin.resx" />
+    <EmbeddedResource Include="Locale\es-ES\Maintenance.resx" />
+    <EmbeddedResource Include="Locale\es-ES\PBPPlugin.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://localhost/integraMobile.WS/integraMobileWS.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\integraMobileWS\</RelPath>
+      <UpdateFromURL>http://localhost/integraMobile.WS/integraMobileWS.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>PBPPlugin_integraMobileWS_integraMobileWS</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'BackOfficeI%40_Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\..\backOffice\Plugins\PBPPlugin\bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>2420</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

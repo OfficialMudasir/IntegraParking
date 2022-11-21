@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="AddSMSToSend">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strSMS" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strSMSRecipient" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strConfirmationURL" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strConfirmationURLUsername" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strConfirmationPassword" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddSMSToSendResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddSMSToSendResult" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddEmailToSend">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strEmailSubject" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strEmailBody" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strEmailRecipient" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strConfirmationURL" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strConfirmationURLUsername" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strConfirmationPassword" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddEmailToSendResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddEmailToSendResult" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddEmailToSendWithPriority">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strEmailSubject" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strEmailBody" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strEmailRecipient" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strConfirmationURL" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strConfirmationURLUsername" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strConfirmationPassword" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="priority" type="tns:EmailPriority" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:simpleType name="EmailPriority">
+        <s:restriction base="s:string">
+          <s:enumeration value="VeryHigh" />
+          <s:enumeration value="High" />
+          <s:enumeration value="Normal" />
+          <s:enumeration value="Low" />
+          <s:enumeration value="VeryLow" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="AddEmailToSendWithPriorityResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddEmailToSendWithPriorityResult" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddEmailToSendMultiRecipients">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strEmailSubject" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strEmailBody" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="arrEmailRecipients" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="strConfirmationURL" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strConfirmationURLUsername" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strConfirmationPassword" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="priority" type="tns:EmailPriority" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="AddEmailToSendMultiRecipientsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AddEmailToSendMultiRecipientsResult" type="tns:ArrayOfLong" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfLong">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="long" type="s:long" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="AddEmailWithAttachementsToSend">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strEmailSubject" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strEmailBody" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strEmailRecipient" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="arrFiles" type="tns:ArrayOfFileAttachmentInfo" />
+            <s:element minOccurs="0" maxOccurs="1" name="strConfirmationURL" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strConfirmationURLUsername" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strConfirmationPassword" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfFileAttachmentInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="FileAttachmentInfo" type="tns:FileAttachmentInfo" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="FileAttachmentInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="strName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="strMediaType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="fileContent" type="s:base64Binary" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="AddEmailWithAttachementsToSendResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddEmailWithAttachementsToSendResult" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddEmailWithAttachementsToSendWithPriority">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strEmailSubject" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strEmailBody" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strEmailRecipient" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="arrFiles" type="tns:ArrayOfFileAttachmentInfo" />
+            <s:element minOccurs="0" maxOccurs="1" name="strConfirmationURL" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strConfirmationURLUsername" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strConfirmationPassword" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="priority" type="tns:EmailPriority" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddEmailWithAttachementsToSendWithPriorityResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddEmailWithAttachementsToSendWithPriorityResult" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddEmailWithAttachementsToSendMultiRecipients">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strEmailSubject" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strEmailBody" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="arrEmailRecipients" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="arrFiles" type="tns:ArrayOfFileAttachmentInfo" />
+            <s:element minOccurs="0" maxOccurs="1" name="strConfirmationURL" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strConfirmationURLUsername" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strConfirmationPassword" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="priority" type="tns:EmailPriority" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddEmailWithAttachementsToSendMultiRecipientsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AddEmailWithAttachementsToSendMultiRecipientsResult" type="tns:ArrayOfLong" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="AddSMSToSendSoapIn">
+    <wsdl:part name="parameters" element="tns:AddSMSToSend" />
+  </wsdl:message>
+  <wsdl:message name="AddSMSToSendSoapOut">
+    <wsdl:part name="parameters" element="tns:AddSMSToSendResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddEmailToSendSoapIn">
+    <wsdl:part name="parameters" element="tns:AddEmailToSend" />
+  </wsdl:message>
+  <wsdl:message name="AddEmailToSendSoapOut">
+    <wsdl:part name="parameters" element="tns:AddEmailToSendResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddEmailToSendWithPrioritySoapIn">
+    <wsdl:part name="parameters" element="tns:AddEmailToSendWithPriority" />
+  </wsdl:message>
+  <wsdl:message name="AddEmailToSendWithPrioritySoapOut">
+    <wsdl:part name="parameters" element="tns:AddEmailToSendWithPriorityResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddEmailToSendMultiRecipientsSoapIn">
+    <wsdl:part name="parameters" element="tns:AddEmailToSendMultiRecipients" />
+  </wsdl:message>
+  <wsdl:message name="AddEmailToSendMultiRecipientsSoapOut">
+    <wsdl:part name="parameters" element="tns:AddEmailToSendMultiRecipientsResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddEmailWithAttachementsToSendSoapIn">
+    <wsdl:part name="parameters" element="tns:AddEmailWithAttachementsToSend" />
+  </wsdl:message>
+  <wsdl:message name="AddEmailWithAttachementsToSendSoapOut">
+    <wsdl:part name="parameters" element="tns:AddEmailWithAttachementsToSendResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddEmailWithAttachementsToSendWithPrioritySoapIn">
+    <wsdl:part name="parameters" element="tns:AddEmailWithAttachementsToSendWithPriority" />
+  </wsdl:message>
+  <wsdl:message name="AddEmailWithAttachementsToSendWithPrioritySoapOut">
+    <wsdl:part name="parameters" element="tns:AddEmailWithAttachementsToSendWithPriorityResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddEmailWithAttachementsToSendMultiRecipientsSoapIn">
+    <wsdl:part name="parameters" element="tns:AddEmailWithAttachementsToSendMultiRecipients" />
+  </wsdl:message>
+  <wsdl:message name="AddEmailWithAttachementsToSendMultiRecipientsSoapOut">
+    <wsdl:part name="parameters" element="tns:AddEmailWithAttachementsToSendMultiRecipientsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="integraSenderSoap">
+    <wsdl:operation name="AddSMSToSend">
+      <wsdl:input message="tns:AddSMSToSendSoapIn" />
+      <wsdl:output message="tns:AddSMSToSendSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddEmailToSend">
+      <wsdl:input message="tns:AddEmailToSendSoapIn" />
+      <wsdl:output message="tns:AddEmailToSendSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddEmailToSendWithPriority">
+      <wsdl:input message="tns:AddEmailToSendWithPrioritySoapIn" />
+      <wsdl:output message="tns:AddEmailToSendWithPrioritySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddEmailToSendMultiRecipients">
+      <wsdl:input message="tns:AddEmailToSendMultiRecipientsSoapIn" />
+      <wsdl:output message="tns:AddEmailToSendMultiRecipientsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddEmailWithAttachementsToSend">
+      <wsdl:input message="tns:AddEmailWithAttachementsToSendSoapIn" />
+      <wsdl:output message="tns:AddEmailWithAttachementsToSendSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddEmailWithAttachementsToSendWithPriority">
+      <wsdl:input message="tns:AddEmailWithAttachementsToSendWithPrioritySoapIn" />
+      <wsdl:output message="tns:AddEmailWithAttachementsToSendWithPrioritySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddEmailWithAttachementsToSendMultiRecipients">
+      <wsdl:input message="tns:AddEmailWithAttachementsToSendMultiRecipientsSoapIn" />
+      <wsdl:output message="tns:AddEmailWithAttachementsToSendMultiRecipientsSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="integraSenderSoap" type="tns:integraSenderSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AddSMSToSend">
+      <soap:operation soapAction="http://tempuri.org/AddSMSToSend" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddEmailToSend">
+      <soap:operation soapAction="http://tempuri.org/AddEmailToSend" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddEmailToSendWithPriority">
+      <soap:operation soapAction="http://tempuri.org/AddEmailToSendWithPriority" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddEmailToSendMultiRecipients">
+      <soap:operation soapAction="http://tempuri.org/AddEmailToSendMultiRecipients" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddEmailWithAttachementsToSend">
+      <soap:operation soapAction="http://tempuri.org/AddEmailWithAttachementsToSend" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddEmailWithAttachementsToSendWithPriority">
+      <soap:operation soapAction="http://tempuri.org/AddEmailWithAttachementsToSendWithPriority" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddEmailWithAttachementsToSendMultiRecipients">
+      <soap:operation soapAction="http://tempuri.org/AddEmailWithAttachementsToSendMultiRecipients" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="integraSenderSoap12" type="tns:integraSenderSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AddSMSToSend">
+      <soap12:operation soapAction="http://tempuri.org/AddSMSToSend" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddEmailToSend">
+      <soap12:operation soapAction="http://tempuri.org/AddEmailToSend" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddEmailToSendWithPriority">
+      <soap12:operation soapAction="http://tempuri.org/AddEmailToSendWithPriority" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddEmailToSendMultiRecipients">
+      <soap12:operation soapAction="http://tempuri.org/AddEmailToSendMultiRecipients" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddEmailWithAttachementsToSend">
+      <soap12:operation soapAction="http://tempuri.org/AddEmailWithAttachementsToSend" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddEmailWithAttachementsToSendWithPriority">
+      <soap12:operation soapAction="http://tempuri.org/AddEmailWithAttachementsToSendWithPriority" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddEmailWithAttachementsToSendMultiRecipients">
+      <soap12:operation soapAction="http://tempuri.org/AddEmailWithAttachementsToSendMultiRecipients" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="integraSender">
+    <wsdl:port name="integraSenderSoap" binding="tns:integraSenderSoap">
+      <soap:address location="http://ips.integraparking.com/integraSenderWS/integraSender.asmx" />
+    </wsdl:port>
+    <wsdl:port name="integraSenderSoap12" binding="tns:integraSenderSoap12">
+      <soap12:address location="http://ips.integraparking.com/integraSenderWS/integraSender.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

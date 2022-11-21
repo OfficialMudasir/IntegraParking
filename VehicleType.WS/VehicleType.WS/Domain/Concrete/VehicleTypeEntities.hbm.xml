@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="VehicleType.WS" namespace="VehicleType.WS.Domain.Entities" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="Vehicle" table="VEHICLES" >
+    <id name="VehPlate" type="String">
+      <column name="VEH_PLATE" not-null="true" length="50" sql-type="VARCHAR2(50 CHAR)" />
+      <generator class="assigned" />
+    </id>
+    <property name="VehType" type="String">
+      <column name="VEH_TYPE" not-null="false" length="50" sql-type="VARCHAR2(50 CHAR)" />
+    </property>
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,782 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ConfirmAutomaticRecharge_EmailHeader" xml:space="preserve">
+    <value>EYSAMobile: Recàrrega Automàtica realitzada</value>
+  </data>
+  <data name="ConfirmNoAutomaticRecharge_EmailHeader" xml:space="preserve">
+    <value>EYSAMobile: Recàrrega realitzada</value>
+  </data>
+  <data name="ConfirmParking_EmailBody" xml:space="preserve">
+    <value>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;
+&lt;html&gt;
+&lt;head&gt;
+	&lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8"&gt;
+	&lt;title&gt;ParkingDone&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;table align="center" style="border-collapse: collapse; border-spacing: 0; margin: 0 auto; padding: 0; width: 650px;"&gt;
+		&lt;tr style="background: #0F4F7B;"&gt;
+			&lt;td style="padding: 15px 0 15px 25px; width: 60px"&gt;&lt;img src="https://www.eysamobile.com/integraMobile/Content/img/offp_icon.png" alt=""&gt;&lt;/td&gt;
+			&lt;td style="color: #FFF; font-family: Arial, sans-serif; font-size: 32px; padding: 15px 25px; vertical-align: middle; width: 95%;"&gt;Aparcament&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td colspan="2" style="padding: 40px 0;"&gt;
+				&lt;table style="border-spacing: 0; margin: 0; padding: 0 4px 0 1px; table-layout: fixed; width: 100%;"&gt;
+					&lt;tr&gt;
+						&lt;td style="color: #8B8B8B; font-family: Arial, sans-serif; font-size: 13px; font-style: italic; padding: 0 0 10px;"&gt;Resum de l'Aparcament&lt;/td&gt;
+					&lt;/tr&gt;
+				&lt;/table&gt;
+				&lt;table style="border-spacing: 0; margin: 0; padding: 0 4px 0 1px; table-layout: fixed; width: 100%;"&gt;
+					&lt;tr&gt;
+						&lt;td style="border-bottom: 1px solid #C2C2C2; color: #8B8B8B; font-family: Arial, sans-serif; font-size: 13px; font-style: italic; padding: 10px 1px; vertical-align: bottom;"&gt;ID&lt;/td&gt;
+						&lt;td style="border-bottom: 2px solid #C2C2C2; color: #0F4F7B; font-family: Arial, sans-serif; font-size: 16px; padding: 10px 1px; vertical-align: bottom;"&gt;{0}&lt;/td&gt;
+						&lt;td style="width: 5%"&gt;&amp;nbsp;&lt;/td&gt;
+						&lt;td style="border-bottom: 1px solid #C2C2C2; color: #8B8B8B; font-family: Arial, sans-serif; font-size: 13px; font-style: italic; padding: 10px 1px; vertical-align: bottom;"&gt;Matr&amp;iacute;cula&lt;/td&gt;
+						&lt;td style="border-bottom: 2px solid #C2C2C2; color: #0F4F7B; font-family: Arial, sans-serif; font-size: 16px; padding: 10px 1px; vertical-align: bottom;"&gt;{1}&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td style="border-bottom: 1px solid #C2C2C2; color: #8B8B8B; font-family: Arial, sans-serif; font-size: 13px; font-style: italic; padding: 10px 1px; vertical-align: bottom;"&gt;Ciutat&lt;/td&gt;
+						&lt;td style="border-bottom: 2px solid #C2C2C2; color: #0F4F7B; font-family: Arial, sans-serif; font-size: 16px; padding: 10px 1px; vertical-align: bottom;"&gt;{2}&lt;/td&gt;
+						&lt;td style="width: 5%"&gt;&amp;nbsp;&lt;/td&gt;
+						&lt;td style="border-bottom: 1px solid #C2C2C2; color: #8B8B8B; font-family: Arial, sans-serif; font-size: 13px; font-style: italic; padding: 10px 1px; vertical-align: bottom;"&gt;Data d'emissi&amp;oacute;&lt;/td&gt;
+						&lt;td style="border-bottom: 2px solid #C2C2C2; color: #0F4F7B; font-family: Arial, sans-serif; font-size: 16px; padding: 10px 1px; vertical-align: bottom;"&gt;{5:HH:mm:ss dd/MM/yyyy}&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td style="border-bottom: 1px solid #C2C2C2; color: #8B8B8B; font-family: Arial, sans-serif; font-size: 13px; font-style: italic; padding: 10px 1px; vertical-align: bottom;"&gt;Zona&lt;/td&gt;
+						&lt;td style="border-bottom: 2px solid #C2C2C2; color: #0F4F7B; font-family: Arial, sans-serif; font-size: 16px; padding: 10px 1px; vertical-align: bottom;"&gt;{3}&lt;/td&gt;
+						&lt;td style="width: 5%"&gt;&amp;nbsp;&lt;/td&gt;
+						&lt;td style="border-bottom: 1px solid #C2C2C2; color: #8B8B8B; font-family: Arial, sans-serif; font-size: 13px; font-style: italic; padding: 10px 1px; vertical-align: bottom;"&gt;Tarifa&lt;/td&gt;
+						&lt;td style="border-bottom: 2px solid #C2C2C2; color: #0F4F7B; font-family: Arial, sans-serif; font-size: 16px; padding: 10px 1px; vertical-align: bottom;"&gt;{4}&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td colspan="2" style="padding: 10px 1px;"&gt;&amp;nbsp;&lt;/td&gt;
+						&lt;td&gt;&amp;nbsp;&lt;/td&gt;
+						&lt;td colspan="2" style="padding: 10px 1px;"&gt;&amp;nbsp;&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td colspan="2" style="border-bottom: 1px solid #C2C2C2; color: #8B8B8B; font-family: Arial, sans-serif; font-size: 13px; font-style: italic; padding: 10px 1px; vertical-align: bottom;"&gt;L'aparcament Comença:&lt;/td&gt;
+						&lt;td style="width: 5%"&gt;&amp;nbsp;&lt;/td&gt;
+						&lt;td colspan="2" style="border-bottom: 1px solid #C2C2C2; color: #8B8B8B; font-family: Arial, sans-serif; font-size: 13px; font-style: italic; padding: 10px 1px; vertical-align: bottom;"&gt;L'aparcament Finalitza:&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td colspan="2" style="border-bottom: 2px solid #C2C2C2; color: #0F4F7B; font-family: Arial, sans-serif; font-size: 16px; padding: 10px 1px; text-align: center; vertical-align: bottom;"&gt;{6:HH:mm:ss dd/MM/yyyy}&lt;/td&gt;
+						&lt;td style="width: 5%"&gt;&amp;nbsp;&lt;/td&gt;
+						&lt;td colspan="2" style="border-bottom: 2px solid #C2C2C2; color: #0F4F7B; font-family: Arial, sans-serif; font-size: 16px; padding: 10px 1px; text-align: center; vertical-align: bottom;"&gt;{7:HH:mm:ss dd/MM/yyyy}&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td colspan="2" style="padding: 10px 1px;"&gt;&amp;nbsp;&lt;/td&gt;
+						&lt;td&gt;&amp;nbsp;&lt;/td&gt;
+						&lt;td colspan="2" style="padding: 10px 1px;"&gt;&amp;nbsp;&lt;/td&gt;
+					&lt;/tr&gt;
+					{12}
+					{13}
+					&lt;tr&gt;
+						&lt;td colspan="2" style="border-bottom: 1px solid #C2C2C2; color: #8B8B8B; font-family: Arial, sans-serif; font-size: 13px; font-style: italic; padding: 10px 1px; vertical-align: bottom;"&gt;Total:&lt;/td&gt;
+						&lt;td colspan="3" style="border-bottom: 2px solid #C2C2C2; color: #0F4F7B; font-family: Arial, sans-serif; font-size: 16px; padding: 10px 1px; text-align: center; vertical-align: bottom;"&gt;{8}&lt;/td&gt;
+					&lt;/tr&gt;
+					{9}					
+				&lt;/table&gt;
+			&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr style="background: #0F4F7B;"&gt;
+			&lt;td colspan="2" style="color: #FFF; font-family: Arial, sans-serif; font-size: 16px; padding: 20px 0; text-align: center;"&gt;EysaMobile - Parking&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td colspan="2" style="color: #B0B0B0; font-family: Arial, sans-serif; font-size: 11px; padding: 15px 0;"&gt;AQUEST CORREU ELECTRÒNIC CONTÉ INFORMACIÓ ESTRICTAMENT CONFIDENCIAL. Si vostè no és el destinatari del missatge no està autritzat a llegir-lo, retenir-lo o difundir-lo.&lt;br&gt;Abans d'imprimir aquest correu pensi si és realment necessari.&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;</value>
+  </data>
+  <data name="ConfirmParking_EmailHeader" xml:space="preserve">
+    <value>EYSAMobile: Aparcament realitzat</value>
+  </data>
+  <data name="ConfirmRecharge_EmailBody" xml:space="preserve">
+    <value>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;
+&lt;html&gt;
+&lt;head&gt;
+	&lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8"&gt;
+	&lt;title&gt;RechargeDone&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;table align="center" style="border-collapse: collapse; border-spacing: 0; margin: 0 auto; padding: 0; width: 650px;"&gt;
+		&lt;tr style="background: #0F4F7B;"&gt;
+			&lt;td style="padding: 15px 0 15px 25px; width: 60px"&gt;&lt;img src="https://www.eysamobile.com/integraMobile/Content/img/offp_icon.png" alt=""&gt;&lt;/td&gt;
+			&lt;td style="color: #FFF; font-family: Arial, sans-serif; font-size: 32px; padding: 15px 25px; vertical-align: middle; width: 95%;"&gt;Recàrrega&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td colspan="2" style="padding: 40px 0;"&gt;
+				&lt;table style="border-spacing: 0; margin: 0; padding: 0 4px 0 1px; table-layout: fixed; width: 100%;"&gt;
+					&lt;tr&gt;
+						&lt;td style="color: #8B8B8B; font-family: Arial, sans-serif; font-size: 13px; font-style: italic; padding: 0 0 10px;"&gt;Resum de la recàrrega&lt;/td&gt;
+					&lt;/tr&gt;
+				&lt;/table&gt;
+				&lt;table style="border-spacing: 0; margin: 0; padding: 0 4px 0 1px; table-layout: fixed; width: 100%;"&gt;
+					&lt;tr&gt;
+						&lt;td style="border-bottom: 1px solid #C2C2C2; color: #8B8B8B; font-family: Arial, sans-serif; font-size: 13px; font-style: italic; padding: 10px 1px; vertical-align: bottom;"&gt;ID&lt;/td&gt;
+						&lt;td style="border-bottom: 2px solid #C2C2C2; color: #0F4F7B; font-family: Arial, sans-serif; font-size: 16px; padding: 10px 1px; vertical-align: bottom;"&gt;{0}&lt;/td&gt;
+						&lt;td style="width: 5%"&gt;&amp;nbsp;&lt;/td&gt;
+						&lt;td style="border-bottom: 1px solid #C2C2C2; color: #8B8B8B; font-family: Arial, sans-serif; font-size: 13px; font-style: italic; padding: 10px 1px; vertical-align: bottom;"&gt;Data de la recàrrega&lt;/td&gt;
+						&lt;td style="border-bottom: 2px solid #C2C2C2; color: #0F4F7B; font-family: Arial, sans-serif; font-size: 16px; padding: 10px 1px; vertical-align: bottom;"&gt;{1:HH:mm:ss dd/MM/yyyy}&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td colspan="2" style="padding: 10px 1px;"&gt;&amp;nbsp;&lt;/td&gt;
+						&lt;td&gt;&amp;nbsp;&lt;/td&gt;
+						&lt;td colspan="2" style="padding: 10px 1px;"&gt;&amp;nbsp;&lt;/td&gt;
+					&lt;/tr&gt;
+					{6}
+					{7}
+					&lt;tr&gt;
+						&lt;td colspan="2" style="border-bottom: 1px solid #C2C2C2; color: #8B8B8B; font-family: Arial, sans-serif; font-size: 13px; font-style: italic; padding: 10px 1px; vertical-align: bottom;"&gt;Quantitat Recarregada:&lt;/td&gt;
+						&lt;td colspan="3" style="border-bottom: 2px solid #C2C2C2; color: #0F4F7B; font-family: Arial, sans-serif; font-size: 16px; padding: 10px 1px; text-align: center; vertical-align: bottom;"&gt;{2}&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td colspan="2" style="border-bottom: 1px solid #C2C2C2; color: #8B8B8B; font-family: Arial, sans-serif; font-size: 13px; font-style: italic; padding: 10px 1px;"&gt;Saldo:&lt;/td&gt;
+						&lt;td colspan="3" style="border-bottom: 2px solid #C2C2C2; color: #0F4F7B; font-family: Arial, sans-serif; font-size: 16px; padding: 10px 1px; text-align: center; vertical-align: bottom;"&gt;{3}&lt;/td&gt;
+					&lt;/tr&gt;
+				&lt;/table&gt;
+			&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr style="background: #0F4F7B;"&gt;
+			&lt;td colspan="2" style="color: #FFF; font-family: Arial, sans-serif; font-size: 16px; padding: 20px 0; text-align: center;"&gt;EysaMobile - Parking&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td colspan="2" style="color: #B0B0B0; font-family: Arial, sans-serif; font-size: 11px; padding: 15px 0;"&gt;AQUEST CORREU ELECTRÒNIC CONTÉ INFORMACIÓ ESTRICTAMENT CONFIDENCIAL. Si vostè no és el destinatari del missatge no està autritzat a llegir-lo, retenir-lo o difundir-lo.&lt;br&gt;Abans d'imprimir aquest correu pensi si és realment necessari.&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;</value>
+  </data>
+  <data name="ConfirmTicketPayment_EmailHeader" xml:space="preserve">
+    <value>EYSAMobile: Denúncia Anul·lada</value>
+  </data>
+  <data name="ForgetUsername_EmailHeader" xml:space="preserve">
+    <value>Ha oblidat l'usuari de EYSAMobile? </value>
+  </data>
+  <data name="ForgeUsername_EmailBody" xml:space="preserve">
+    <value>D'acord amb la seva solicitud, li estem enviant el seu nom d'usuari de EYSAMobile.&lt;br&gt;Usuari: {0}&lt;br&gt;&lt;br&gt;L'equip de EYSAMobile  </value>
+  </data>
+  <data name="ForgotPassword_EmailBody" xml:space="preserve">
+    <value>Obtingui la seva paraula de pas prement  &lt;a href="{0}"&gt;{1}&lt;/a&gt; un cop hagi rebut l'SMS.  &lt;br&gt;&lt;br&gt;&lt;br&gt;L'equip de EYSAMobile</value>
+  </data>
+  <data name="ForgotPassword_EmailHeader" xml:space="preserve">
+    <value>EYSAMobile: Recuperació de la paraula de pas</value>
+  </data>
+  <data name="ForgotPassword_SMS" xml:space="preserve">
+    <value>Aquest és un missatge de EYSAMobile. El seu codi per la recuperació de la paraula de pas és {0}.</value>
+  </data>
+  <data name="ConfirmTicketPayment_EmailBody" xml:space="preserve">
+    <value>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;
+&lt;html&gt;
+&lt;head&gt;
+	&lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8"&gt;
+	&lt;title&gt;Denúncia Anul·lada&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;table align="center" style="border-collapse: collapse; border-spacing: 0; margin: 0 auto; padding: 0; width: 650px;"&gt;
+		&lt;tr style="background: #DF2D46;"&gt;
+			&lt;td style="padding: 20px 0 20px 25px; width: 60px"&gt;&lt;img src="https://www.eysamobile.com/integraMobile/Content/img/FinePaid.png" alt=""&gt;&lt;/td&gt;
+			&lt;td style="color: #FFF; font-family: Arial, sans-serif; font-size: 32px; padding: 20px 25px; vertical-align: middle; width: 95%;"&gt;Denúncia Anul·lada&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td colspan="2" style="padding: 40px 0;"&gt;
+				&lt;table style="border-spacing: 0; margin: 0; padding: 0 4px 0 1px; table-layout: fixed; width: 100%;"&gt;
+					&lt;tr&gt;
+						&lt;td style="color: #8B8B8B; font-family: Arial, sans-serif; font-size: 13px; font-style: italic; padding: 0 0 10px;"&gt;Resum de la denúncia&lt;/td&gt;
+					&lt;/tr&gt;
+				&lt;/table&gt;
+				&lt;table style="border-spacing: 0; margin: 0; padding: 0 4px 0 1px; table-layout: fixed; width: 100%;"&gt;
+					&lt;tr&gt;
+						&lt;td style="border-bottom: 1px solid #C2C2C2; color: #8B8B8B; font-family: Arial, sans-serif; font-size: 13px; font-style: italic; padding: 10px 1px; vertical-align: bottom;"&gt;Butllet&amp;iacute;&lt;/td&gt;
+						&lt;td style="border-bottom: 2px solid #C2C2C2; color: #0F4F7B; font-family: Arial, sans-serif; font-size: 16px; padding: 10px 1px; vertical-align: bottom;"&gt;{1}&lt;/td&gt;
+						&lt;td style="width: 5%"&gt;&amp;nbsp;&lt;/td&gt;
+						&lt;td style="border-bottom: 1px solid #C2C2C2; color: #8B8B8B; font-family: Arial, sans-serif; font-size: 13px; font-style: italic; padding: 10px 1px; vertical-align: bottom;"&gt;Matr&amp;iacute;cula&lt;/td&gt;
+						&lt;td style="border-bottom: 2px solid #C2C2C2; color: #0F4F7B; font-family: Arial, sans-serif; font-size: 16px; padding: 10px 1px; vertical-align: bottom;"&gt;{2}&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td style="border-bottom: 1px solid #C2C2C2; color: #8B8B8B; font-family: Arial, sans-serif; font-size: 13px; font-style: italic; padding: 10px 1px; vertical-align: bottom;"&gt;Ciutat&lt;/td&gt;
+						&lt;td style="border-bottom: 2px solid #C2C2C2; color: #0F4F7B; font-family: Arial, sans-serif; font-size: 16px; padding: 10px 1px; vertical-align: bottom;"&gt;{3}&lt;/td&gt;
+						&lt;td style="width: 5%"&gt;&amp;nbsp;&lt;/td&gt;
+						&lt;td style="border-bottom: 1px solid #C2C2C2; color: #8B8B8B; font-family: Arial, sans-serif; font-size: 13px; font-style: italic; padding: 10px 1px; vertical-align: bottom;"&gt;Data d'anul·laci&amp;oacute;&lt;/td&gt;
+						&lt;td style="border-bottom: 2px solid #C2C2C2; color: #0F4F7B; font-family: Arial, sans-serif; font-size: 16px; padding: 10px 1px; vertical-align: bottom;"&gt; {4:HH:mm:ss dd/MM/yyyy}&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td colspan="2" style="padding: 10px 1px;"&gt;&amp;nbsp;&lt;/td&gt;
+						&lt;td&gt;&amp;nbsp;&lt;/td&gt;
+						&lt;td colspan="2" style="padding: 10px 1px;"&gt;&amp;nbsp;&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td colspan="2" style="border-bottom: 1px solid #C2C2C2; color: #8B8B8B; font-family: Arial, sans-serif; font-size: 13px; font-style: italic; padding: 10px 1px; vertical-align: bottom;"&gt;Descripci&amp;oacute;&lt;/td&gt;
+						&lt;td colspan="3" style="border-bottom: 2px solid #C2C2C2; color: #0F4F7B; font-family: Arial, sans-serif; font-size: 16px; padding: 10px 1px; vertical-align: bottom;"&gt;{5}&lt;/td&gt;
+					&lt;/tr&gt;
+					{10}
+					{11}
+					&lt;tr&gt;
+						&lt;td colspan="2" style="border-bottom: 1px solid #C2C2C2; color: #8B8B8B; font-family: Arial, sans-serif; font-size: 13px; font-style: italic; padding: 10px 1px; vertical-align: bottom;"&gt;Quantitat Pagada&lt;/td&gt;
+						&lt;td colspan="3" style="border-bottom: 2px solid #C2C2C2; color: #0F4F7B; font-family: Arial, sans-serif; font-size: 16px; padding: 10px 1px; text-align: center; vertical-align: bottom;"&gt;{6}&lt;/td&gt;
+					&lt;/tr&gt;
+					{7}
+				&lt;/table&gt;
+			&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr style="background: #DF2D46;"&gt;
+			&lt;td colspan="2" style="color: #FFF; font-family: Arial, sans-serif; font-size: 16px; padding: 20px 0; text-align: center;"&gt;EysaMobile - Parking&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td colspan="2" style="color: #B0B0B0; font-family: Arial, sans-serif; font-size: 11px; padding: 15px 0;"&gt;AQUEST CORREU ELECTRÒNIC CONTÉ INFORMACIÓ ESTRICTAMENT CONFIDENCIAL. Si vostè no és el destinatari del missatge no està autritzat a llegir-lo, retenir-lo o difundir-lo.&lt;br&gt;Abans d'imprimir aquest correu pensi si és realment necessari.&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;</value>
+  </data>
+  <data name="Confirm_EmailBody_Balance" xml:space="preserve">
+    <value>&lt;tr&gt;
+	&lt;td colspan="2" style="border-bottom: 1px solid #C2C2C2; color: #8B8B8B; font-family: Arial, sans-serif; font-size: 13px; font-style: italic; padding: 10px 1px;"&gt;Saldo:&lt;/td&gt;
+	&lt;td colspan="3" style="border-bottom: 2px solid #C2C2C2; color: #0F4F7B; font-family: Arial, sans-serif; font-size: 16px; padding: 10px 1px; text-align: center; vertical-align: bottom;"&gt;{0}&lt;/td&gt;
+&lt;/tr&gt;</value>
+  </data>
+  <data name="ExternalTicket_EmailBody" xml:space="preserve">
+    <value>Butllet&amp;iacute;: {0}&lt;br&gt;Matr&amp;iacute;cula: {1}&lt;br&gt;Ciutat: {2}&lt;br&gt;Data: {3:HH:mm:ss dd/MM/yyyy}&lt;br&gt;Descripci&amp;oacute;: {4}&lt;br&gt;Quantitat a Pagar: {5}&lt;br&gt;&lt;br&gt;&lt;a href="{6}"&gt;&lt;img src="{7}" border="0"&gt;&lt;/a&gt;&lt;br&gt;&lt;br&gt;</value>
+  </data>
+  <data name="ExternalTicket_EmailHeader" xml:space="preserve">
+    <value>EYSAMobile: {0} ha sigut denunciat amb el butlletí {1}</value>
+  </data>
+  <data name="Activation_EmailBody" xml:space="preserve">
+    <value>Continuï el registre prement &lt;a href="{0}"&gt;{1}&lt;/a&gt; un cop hagi rebut l'SMS.&lt;br&gt;&lt;br&gt;&lt;br&gt;L'equip de EYSAMobile</value>
+  </data>
+  <data name="Activation_EmailHeader" xml:space="preserve">
+    <value>Registre de EYSAMobile</value>
+  </data>
+  <data name="Activation_SMS" xml:space="preserve">
+    <value>Aquest és un missatge de EYSAMobile. Comprovi el seu e-mail per continuar amb el registre. El seu codi d'activació és {0}.</value>
+  </data>
+  <data name="CustomerInscriptionModel_SummaryWelcomeEmail_Body" xml:space="preserve">
+    <value>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;
+&lt;html&gt;
+&lt;head&gt;
+	&lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8"&gt;
+	&lt;title&gt;Welcome&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;table align="center" style="border-collapse: collapse; border-spacing: 0; margin: 0 auto; padding: 0; width: 650px;"&gt;
+		&lt;tr style="background: #0F4F7B;"&gt;
+			&lt;td style="padding: 15px 0 15px 25px; width: 60px"&gt;&lt;img src="https://www.eysamobile.com/integraMobile/Content/img/offp_icon.png" alt=""&gt;&lt;/td&gt;
+			&lt;td style="color: #FFF; font-family: Arial, sans-serif; font-size: 32px; padding: 15px 25px; vertical-align: middle; width: 95%;"&gt;Benvingut/a&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td colspan="2" style="padding: 40px 0 0;"&gt;
+				&lt;table style="border-spacing: 0; margin: 0; padding: 0 4px 0 1px; table-layout: fixed; width: 100%;"&gt;
+					&lt;tr&gt;
+						&lt;td style="color: #51565A; font-family: Arial, sans-serif; font-size: 20px; padding: 0 0 10px;"&gt;Enhorabona, el seu compte de pagament per m&amp;ograve;bil ha sigut creat correctament amb les seg&amp;uuml;ents dades d'acc&amp;eacute;s:&lt;/td&gt;
+					&lt;/tr&gt;
+				&lt;/table&gt;
+				&lt;table style="border-spacing: 0; margin: 0; padding: 0 4px 0 1px; table-layout: fixed; width: 100%;"&gt;
+					&lt;tr&gt;
+						&lt;td colspan="2" style="border-bottom: 1px solid #C2C2C2; color: #8B8B8B; font-family: Arial, sans-serif; font-size: 13px; font-style: italic; padding: 10px 1px; vertical-align: bottom;"&gt;Usuari&lt;/td&gt;
+						&lt;td colspan="3" style="border-bottom: 2px solid #C2C2C2; color: #0F4F7B; font-family: Arial, sans-serif; font-size: 16px; padding: 10px 1px; text-align: center; vertical-align: bottom;"&gt;{2}&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td colspan="2" style="padding: 10px 1px;"&gt;&amp;nbsp;&lt;/td&gt;
+						&lt;td&gt;&amp;nbsp;&lt;/td&gt;
+						&lt;td colspan="2" style="padding: 10px 1px;"&gt;&amp;nbsp;&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td colspan="5" style="color: #51565A; font-family: Arial, sans-serif; font-size: 18px; padding: 0 0 10px; text-align: center;"&gt;Ara ja pot accedir al seu nou compte i recarregar el seu saldo per poder comen&amp;ccedil;ar a utilitzar el servei:&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td colspan="5" style="color: #51565A; font-family: Arial, sans-serif; font-size: 18px; padding: 25px 0 20px; text-align: center;"&gt;
+							&lt;a href="#" style="border: 2px solid #0F4F7B; color: #0F4F7B; font-size: 14px; font-weight: bold; padding: 15px 60px; text-decoration: none; text-transform: uppercase;"&gt;Entrar&lt;/a&gt;
+						&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td colspan="5" style="border-bottom: 1px solid #C2C2C2; color: #8B8B8B; font-family: Arial, sans-serif; font-size: 13px; font-style: italic; padding: 0 1px 10px;"&gt;&amp;nbsp;&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td colspan="2" style="padding: 10px 1px;"&gt;&amp;nbsp;&lt;/td&gt;
+						&lt;td&gt;&amp;nbsp;&lt;/td&gt;
+						&lt;td colspan="2" style="padding: 10px 1px;"&gt;&amp;nbsp;&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td colspan="5" style="color: #51565A; font-family: Arial, sans-serif; font-size: 18px; padding: 0 0 10px;"&gt;Recordi els beneficis d'estar registrat:&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td colspan="5" style="color: #51565A; font-family: Arial, sans-serif; font-size: 18px; padding: 0 1px 10px;"&gt;
+							&lt;ul style="padding-left: 20px;"&gt;
+								&lt;li style="color: #0F4F7B; font-size: 13px; font-weight: bold;"&gt;
+									&lt;a href="#" style="color: #0F4F7B; font-size: 13px; font-weight: bold; text-decoration: none;"&gt;Devoluci&amp;oacute; del temps no consumit.&lt;/a&gt;
+								&lt;/li&gt;
+								&lt;li style="color: #0F4F7B; font-size: 13px; font-weight: bold;"&gt;
+									&lt;a href="#" style="color: #0F4F7B; font-size: 13px; font-weight: bold; text-decoration: none;"&gt;Auto rec&amp;agrave;rrega autom&amp;agrave;tica – estalvi de temps.&lt;/a&gt;
+								&lt;/li&gt;
+								&lt;li style="color: #0F4F7B; font-size: 13px; font-weight: bold;"&gt;
+									&lt;a href="#" style="color: #0F4F7B; font-size: 13px; font-weight: bold; text-decoration: none;"&gt;Acc&amp;eacute;s online a les seves operacions i facturaci&amp;oacute;.&lt;/a&gt;
+								&lt;/li&gt;
+								&lt;li style="color: #0F4F7B; font-size: 13px; font-weight: bold;"&gt;
+									&lt;a href="#" style="color: #0F4F7B; font-size: 13px; font-weight: bold; text-decoration: none;"&gt;Avisos per temps caducat.&lt;/a&gt;
+								&lt;/li&gt;
+							&lt;/ul&gt;		
+						&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td colspan="5" style="color: #51565A; font-family: Arial, sans-serif; font-size: 13px; padding: 0 0 10px;"&gt;I recordi, te un parqu&amp;iacute;metre a l'abast de la m&amp;agrave;. Enjoy Your Parking!&lt;/td&gt;
+					&lt;/tr&gt;
+				&lt;/table&gt;
+			&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr style="background: #0F4F7B;"&gt;
+			&lt;td colspan="2" style="color: #FFF; font-family: Arial, sans-serif; font-size: 16px; padding: 20px 0; text-align: center;"&gt;EysaMobile - Parking&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td colspan="2" style="color: #B0B0B0; font-family: Arial, sans-serif; font-size: 11px; padding: 15px 0;"&gt;AQUEST CORREU ELECTRÒNIC CONTÉ INFORMACIÓ ESTRICTAMENT CONFIDENCIAL. Si vostè no és el destinatari del missatge no està autritzat a llegir-lo, retenir-lo o difundir-lo.&lt;br&gt;Abans d'imprimir aquest correu pensi si és realment necessari.&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;</value>
+  </data>
+  <data name="CustomerInscriptionModel_SummaryWelcomeEmail_Subject" xml:space="preserve">
+    <value>Benvingut a EYSAMobile</value>
+  </data>
+  <data name="ConfirmUnParking_EmailBody" xml:space="preserve">
+    <value>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;
+&lt;html&gt;
+&lt;head&gt;
+	&lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8"&gt;
+	&lt;title&gt;UnparkingDone&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;table align="center" style="border-collapse: collapse; border-spacing: 0; margin: 0 auto; padding: 0; width: 650px;"&gt;
+		&lt;tr style="background: #0F4F7B;"&gt;
+			&lt;td style="padding: 15px 0 15px 25px; width: 60px"&gt;&lt;img src="https://www.eysamobile.com/integraMobile/Content/img/offp_icon.png" alt=""&gt;&lt;/td&gt;
+			&lt;td style="color: #FFF; font-family: Arial, sans-serif; font-size: 32px; padding: 15px 25px; vertical-align: middle; width: 95%;"&gt;Desaparcament Realitzat&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td colspan="2" style="padding: 40px 0;"&gt;
+				&lt;table style="border-spacing: 0; margin: 0; padding: 0 4px 0 1px; table-layout: fixed; width: 100%;"&gt;
+					&lt;tr&gt;
+						&lt;td style="color: #8B8B8B; font-family: Arial, sans-serif; font-size: 13px; font-style: italic; padding: 0 0 10px;"&gt;Resum del desaparcament&lt;/td&gt;
+					&lt;/tr&gt;
+				&lt;/table&gt;
+				&lt;table style="border-spacing: 0; margin: 0; padding: 0 4px 0 1px; table-layout: fixed; width: 100%;"&gt;
+					&lt;tr&gt;
+						&lt;td style="border-bottom: 1px solid #C2C2C2; color: #8B8B8B; font-family: Arial, sans-serif; font-size: 13px; font-style: italic; padding: 10px 1px; vertical-align: bottom;"&gt;ID&lt;/td&gt;
+						&lt;td style="border-bottom: 2px solid #C2C2C2; color: #0F4F7B; font-family: Arial, sans-serif; font-size: 16px; padding: 10px 1px; vertical-align: bottom;"&gt;{0}&lt;/td&gt;
+						&lt;td style="width: 5%"&gt;&amp;nbsp;&lt;/td&gt;
+						&lt;td style="border-bottom: 1px solid #C2C2C2; color: #8B8B8B; font-family: Arial, sans-serif; font-size: 13px; font-style: italic; padding: 10px 1px; vertical-align: bottom;"&gt;Matr&amp;iacute;cula&lt;/td&gt;
+						&lt;td style="border-bottom: 2px solid #C2C2C2; color: #0F4F7B; font-family: Arial, sans-serif; font-size: 16px; padding: 10px 1px; vertical-align: bottom;"&gt;{1}&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td style="border-bottom: 1px solid #C2C2C2; color: #8B8B8B; font-family: Arial, sans-serif; font-size: 13px; font-style: italic; padding: 10px 1px; vertical-align: bottom;"&gt;Ciutat&lt;/td&gt;
+						&lt;td style="border-bottom: 2px solid #C2C2C2; color: #0F4F7B; font-family: Arial, sans-serif; font-size: 16px; padding: 10px 1px; vertical-align: bottom;"&gt;{2}&lt;/td&gt;
+						&lt;td style="width: 5%"&gt;&amp;nbsp;&lt;/td&gt;
+						&lt;td style="border-bottom: 1px solid #C2C2C2; color: #8B8B8B; font-family: Arial, sans-serif; font-size: 13px; font-style: italic; padding: 10px 1px; vertical-align: bottom;"&gt;Data de l'emissi&amp;oacute;&lt;/td&gt;
+						&lt;td style="border-bottom: 2px solid #C2C2C2; color: #0F4F7B; font-family: Arial, sans-serif; font-size: 16px; padding: 10px 1px; vertical-align: bottom;"&gt;{3:HH:mm:ss dd/MM/yyyy}&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td colspan="2" style="padding: 10px 1px;"&gt;&amp;nbsp;&lt;/td&gt;
+						&lt;td&gt;&amp;nbsp;&lt;/td&gt;
+						&lt;td colspan="2" style="padding: 10px 1px;"&gt;&amp;nbsp;&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td colspan="2" style="border-bottom: 1px solid #C2C2C2; color: #8B8B8B; font-family: Arial, sans-serif; font-size: 13px; font-style: italic; padding: 10px 1px; vertical-align: bottom;"&gt;L'aparcament Comença&lt;/td&gt;
+						&lt;td style="width: 5%"&gt;&amp;nbsp;&lt;/td&gt;
+						&lt;td colspan="2" style="border-bottom: 1px solid #C2C2C2; color: #8B8B8B; font-family: Arial, sans-serif; font-size: 13px; font-style: italic; padding: 10px 1px; vertical-align: bottom;"&gt;L'aparcament Finalitza&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td colspan="2" style="border-bottom: 2px solid #C2C2C2; color: #0F4F7B; font-family: Arial, sans-serif; font-size: 16px; padding: 10px 1px; text-align: center; vertical-align: bottom;"&gt;{4:HH:mm:ss dd/MM/yyyy}&lt;/td&gt;
+						&lt;td style="width: 5%"&gt;&amp;nbsp;&lt;/td&gt;
+						&lt;td colspan="2" style="border-bottom: 2px solid #C2C2C2; color: #0F4F7B; font-family: Arial, sans-serif; font-size: 16px; padding: 10px 1px; text-align: center; vertical-align: bottom;"&gt;{5:HH:mm:ss dd/MM/yyyy}&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td colspan="2" style="padding: 10px 1px;"&gt;&amp;nbsp;&lt;/td&gt;
+						&lt;td&gt;&amp;nbsp;&lt;/td&gt;
+						&lt;td colspan="2" style="padding: 10px 1px;"&gt;&amp;nbsp;&lt;/td&gt;
+					&lt;/tr&gt;
+					{10}
+					{11}
+					&lt;tr&gt;
+						&lt;td colspan="2" style="border-bottom: 1px solid #C2C2C2; color: #8B8B8B; font-family: Arial, sans-serif; font-size: 13px; font-style: italic; padding: 10px 1px; vertical-align: bottom;"&gt;Quantitat retornada&lt;/td&gt;
+						&lt;td colspan="3" style="border-bottom: 2px solid #C2C2C2; color: #0F4F7B; font-family: Arial, sans-serif; font-size: 16px; padding: 10px 1px; text-align: center; vertical-align: bottom;"&gt;{6}&lt;/td&gt;
+					&lt;/tr&gt;
+					{7}					
+				&lt;/table&gt;
+			&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr style="background: #0F4F7B;"&gt;
+			&lt;td colspan="2" style="color: #FFF; font-family: Arial, sans-serif; font-size: 16px; padding: 20px 0; text-align: center;"&gt;EysaMobile - Parking&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td colspan="2" style="color: #B0B0B0; font-family: Arial, sans-serif; font-size: 11px; padding: 15px 0;"&gt;AQUEST CORREU ELECTRÒNIC CONTÉ INFORMACIÓ ESTRICTAMENT CONFIDENCIAL. Si vostè no és el destinatari del missatge no està autritzat a llegir-lo, retenir-lo o difundir-lo.&lt;br&gt;Abans d'imprimir aquest correu pensi si és realment necessari.&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;</value>
+  </data>
+  <data name="ConfirmUnParking_EmailHeader" xml:space="preserve">
+    <value>EYSAMobile: Desaparcament realitzat</value>
+  </data>
+  <data name="ConfirmOffstreet_EmailBody" xml:space="preserve">
+    <value>&lt;div id="page" style="font-family: Arial, Helvetica, sans-serif; color: #666; margin:auto; width:650px;"&gt;
+
+	&lt;!--	HEADER	--&gt;
+    &lt;div id="header" style="background-color: #004f7c; color: #fff; padding: 10px 20px;"&gt;    	
+        &lt;h2 style="font-weight:lighter; font-size: 24pt; margin:0px; padding: 0px; line-height:0px; display: inline;"&gt;
+			&lt;img id="logo" src="https://www.eysamobile.com/integraMobile/Content/img/offp_icon.png" width="92" height="92" alt="EysaMobile" style="vertical-align: middle; margin-right: 20px;"&gt;Aparcamiento
+		&lt;/h2&gt;
+    &lt;/div&gt;
+    &lt;!--	CONTENT		--&gt;
+    &lt;div id="content" style="margin: 40px 0px;"&gt;
+    &lt;table border="0" cellpadding="5" cellspacing="0" summary="OffStreet Parking Resume" style="table-layout: fixed; width: 100%;"&gt;
+      &lt;caption style="text-align: left;	color: #999; font-style: italic; margin-bottom: 10px; font-size: 10pt;"&gt;
+        Resum de l'Aparcament
+      &lt;/caption&gt;
+      &lt;tr&gt;
+        &lt;td class="label" style="padding: 10px 5px; white-space: nowrap; vertical-align: baseline; border-bottom: 1px solid #ccc; font-style: italic; color: #999; font-size: 10pt;"&gt;ID&lt;/td&gt;
+        &lt;td class="data" style="padding: 10px 5px; white-space: nowrap; vertical-align: baseline; border-bottom: 2px solid #ccc; color: #004f7c; font-size: 12pt;"&gt;{0}&lt;/td&gt;
+        &lt;td width="5%" style="padding: 10px 5px; white-space: nowrap; vertical-align: baseline;"&gt;&amp;nbsp;&lt;/td&gt;
+        &lt;td class="label" style="padding: 10px 5px; white-space: nowrap; vertical-align: baseline; border-bottom: 1px solid #ccc; font-style: italic; color: #999; font-size: 10pt;"&gt;Matr&amp;iacute;cula&lt;/td&gt;
+        &lt;td class="data" style="padding: 10px 5px; white-space: nowrap; vertical-align: baseline; border-bottom: 2px solid #ccc; color: #004f7c; font-size: 12pt;"&gt;{1}&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td class="label" style="padding: 10px 5px; white-space: nowrap; vertical-align: baseline; border-bottom: 1px solid #ccc; font-style: italic; color: #999; font-size: 10pt;"&gt;Ciutat&lt;/td&gt;
+        &lt;td class="data" style="padding: 10px 5px; white-space: nowrap; vertical-align: baseline; border-bottom: 2px solid #ccc; color: #004f7c; font-size: 12pt;"&gt;{2}&lt;/td&gt;
+        &lt;td width="5%" style="padding: 10px 5px; white-space: nowrap; vertical-align: baseline;"&gt;&amp;nbsp;&lt;/td&gt;
+        &lt;td class="label" style="padding: 10px 5px; white-space: nowrap; vertical-align: baseline; border-bottom: 1px solid #ccc; font-style: italic; color: #999; font-size: 10pt;"&gt;Data d'emissi&amp;oacute;&lt;/td&gt;
+        &lt;td class="data" style="padding: 10px 5px; white-space: nowrap; vertical-align: baseline; border-bottom: 2px solid #ccc; color: #004f7c; font-size: 12pt;"&gt;{5:HH:mm:ss dd/MM/yyyy}&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td class="label" style="padding: 10px 5px; white-space: nowrap; vertical-align: baseline; border-bottom: 1px solid #ccc; font-style: italic; color: #999; font-size: 10pt;"&gt;Parking&lt;/td&gt;
+        &lt;td class="data" style="padding: 10px 5px; white-space: nowrap; vertical-align: baseline; border-bottom: 2px solid #ccc; color: #004f7c; font-size: 12pt;"&gt;{3}&lt;/td&gt;
+        &lt;td width="5%" style="padding: 10px 5px; white-space: nowrap; vertical-align: baseline;"&gt;&amp;nbsp;&lt;/td&gt;
+        &lt;td class="label" style="padding: 10px 5px; white-space: nowrap; vertical-align: baseline; border-bottom: 1px solid #ccc; font-style: italic; color: #999; font-size: 10pt;"&gt;Tarifa&lt;/td&gt;
+        &lt;td class="data" style="padding: 10px 5px; white-space: nowrap; vertical-align: baseline; border-bottom: 2px solid #ccc; color: #004f7c; font-size: 12pt;"&gt;{4}&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td colspan="2" style="padding: 10px 5px; white-space: nowrap; vertical-align: baseline;"&gt;&amp;nbsp;&lt;/td&gt;
+        &lt;td style="padding: 10px 5px; white-space: nowrap; vertical-align: baseline;"&gt;&amp;nbsp;&lt;/td&gt;
+        &lt;td colspan="2" style="padding: 10px 5px; white-space: nowrap; vertical-align: baseline;"&gt;&amp;nbsp;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td colspan="2" class="label" style="padding: 10px 5px; white-space: nowrap; vertical-align: baseline; border-bottom: 1px solid #ccc; font-style: italic; color: #999; font-size: 10pt;"&gt;Hora i data d'entrada al parking:&lt;/td&gt;
+        &lt;td width="5%" style="padding: 10px 5px; white-space: nowrap; vertical-align: baseline;"&gt;&amp;nbsp;&lt;/td&gt;
+        &lt;td colspan="2" class="label" style="padding: 10px 5px; white-space: nowrap; vertical-align: baseline; border-bottom: 1px solid #ccc; font-style: italic; color: #999; font-size: 10pt;"&gt;Hora i data de sortida del parking:&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr class="dates"&gt;
+        &lt;td colspan="2" class="data" style="padding: 10px 5px; white-space: nowrap; vertical-align: baseline; border-bottom: 2px solid #ccc; color: #004f7c; font-size: 12pt; text-align: center; font-size: 14pt;"&gt;{6:HH:mm:ss dd/MM/yyyy}&lt;/td&gt;
+        &lt;td width="5%" style="padding: 10px 5px; white-space: nowrap; vertical-align: baseline;"&gt;&amp;nbsp;&lt;/td&gt;
+        &lt;td colspan="2" class="data empha" style="padding: 10px 5px; white-space: nowrap; vertical-align: baseline; border-bottom: 2px solid #ccc; color: #004f7c; font-size: 12pt; text-align: center; font-size: 14pt; font-weight: bold;"&gt;{7:HH:mm:ss dd/MM/yyyy}&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td colspan="2" style="padding: 10px 5px; white-space: nowrap; vertical-align: baseline;"&gt;&amp;nbsp;&lt;/td&gt;
+        &lt;td&gt;&amp;nbsp;&lt;/td&gt;
+        &lt;td colspan="2" style="padding: 10px 5px; white-space: nowrap; vertical-align: baseline;"&gt;&amp;nbsp;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td colspan="2" class="label" style="padding: 10px 5px; white-space: nowrap; vertical-align: baseline; border-bottom: 1px solid #ccc; font-style: italic; color: #999; font-size: 10pt;"&gt;Import abonat&lt;/td&gt;
+        &lt;td width="5%" class="label" style="padding: 10px 5px; white-space: nowrap; vertical-align: baseline; border-bottom: 1px solid #ccc; font-style: italic; color: #999; font-size: 10pt;"&gt;&amp;nbsp;&lt;/td&gt;
+        &lt;td colspan="2" class="money data empha" style="text-align: right; padding: 10px 5px; white-space: nowrap; vertical-align: baseline; border-bottom: 2px solid #ccc; color: #004f7c; font-size: 12pt; text-align: center; font-size: 14pt; font-weight: bold;"&gt;{8}&lt;/td&gt;
+      &lt;/tr&gt;	
+	  {9}
+    &lt;/table&gt;	
+    &lt;/div&gt;
+    &lt;!--	FOOTER	--&gt;
+  &lt;div id="footer" style="color: #FFF; background-color: #004f7c; text-align: center; padding: 20px;"&gt;
+    	EysaMobile - Parking subterrani
+  &lt;/div&gt;
+  &lt;!-- DISCLAIMER	--&gt;
+  &lt;div id="disclaimer" style="font-size: 8pt; text-align: justify; color: #999;"&gt;
+  &lt;p&gt;AQUEST CORREU ELECTRÒNIC CONTÉ INFORMACIÓ ESTRICTAMENT CONFIDENCIAL. Si vostè no és el destinatari del missatge no està autritzat a llegir-lo, retenir-lo o difundir-lo.&lt;br&gt;Abans d'imprimir aquest correu pensi si és realment necessari. &lt;a href="https://www.eysamobile.com"&gt;www.eysamobile.com&lt;/a&gt;&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</value>
+  </data>
+  <data name="ConfirmOffstreet_EmailHeader" xml:space="preserve">
+    <value>Aparcament realitzat</value>
+  </data>
+  <data name="ExternalTicketNotPayable_EmailBody" xml:space="preserve">
+    <value>Butllet&amp;iacute;: {0}&lt;br&gt;Matr&amp;iacute;cula: {1}&lt;br&gt;Ciutat: {2}&lt;br&gt;Data: {3:HH:mm:ss dd/MM/yyyy}&lt;br&gt;Descripci&amp;oacute;: {4}&lt;br&gt;DENÚNCIA NO ANUL·LABLE&lt;br&gt;&lt;br&gt;&lt;a href="{5}"&gt;&lt;img src="{6}" border="0"&gt;&lt;/a&gt;&lt;br&gt;&lt;br&gt;</value>
+  </data>
+  <data name="ConfirmOffstreet_EmailBody_Balance" xml:space="preserve">
+    <value>&lt;tr&gt;
+	&lt;td colspan="2" class="label" style="padding: 10px 5px; white-space: nowrap; vertical-align: baseline; border-bottom: 1px solid #ccc; font-style: italic; color: #999; font-size: 10pt;"&gt;Saldo&lt;/td&gt;
+	&lt;td width="5%" class="label" style="padding: 10px 5px; white-space: nowrap; vertical-align: baseline; border-bottom: 1px solid #ccc; font-style: italic; color: #999; font-size: 10pt;"&gt;&amp;nbsp;&lt;/td&gt;
+	&lt;td colspan="2" class="money data empha" style="text-align: right; padding: 10px 5px; white-space: nowrap; vertical-align: baseline; border-bottom: 2px solid #ccc; color: #004f7c; font-size: 12pt; text-align: center; font-size: 14pt; font-weight: bold;"&gt;{0}&lt;/td&gt;
+&lt;/tr&gt;</value>
+  </data>
+  <data name="Email_LayoutSubtotal" xml:space="preserve">
+    <value>&lt;tr&gt;
+	&lt;td colspan="2" style="border-bottom: 1px solid #C2C2C2; color: #8B8B8B; font-family: Arial, sans-serif; font-size: 13px; font-style: italic; padding: 10px 1px; vertical-align: bottom;"&gt;Subtotal:&lt;/td&gt;
+	&lt;td colspan="3" style="border-bottom: 2px solid #C2C2C2; color: #0F4F7B; font-family: Arial, sans-serif; font-size: 16px; padding: 10px 1px; text-align: center; vertical-align: bottom;"&gt;{0}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td colspan="2" style="border-bottom: 1px solid #C2C2C2; color: #8B8B8B; font-family: Arial, sans-serif; font-size: 13px; font-style: italic; padding: 10px 1px; vertical-align: bottom;"&gt;IVA ({1}):&lt;/td&gt;
+	&lt;td colspan="3" style="border-bottom: 2px solid #C2C2C2; color: #0F4F7B; font-family: Arial, sans-serif; font-size: 16px; padding: 10px 1px; text-align: center; vertical-align: bottom;"&gt;{2}&lt;/td&gt;
+&lt;/tr&gt;</value>
+  </data>
+  <data name="Email_LayoutTotal" xml:space="preserve">
+    <value>&lt;tr&gt;
+	&lt;td colspan="2" style="border-bottom: 1px solid #C2C2C2; color: #8B8B8B; font-family: Arial, sans-serif; font-size: 13px; font-style: italic; padding: 10px 1px; vertical-align: bottom;"&gt;Base:&lt;/td&gt;
+	&lt;td colspan="3" style="border-bottom: 2px solid #C2C2C2; color: #0F4F7B; font-family: Arial, sans-serif; font-size: 16px; padding: 10px 1px; text-align: center; vertical-align: bottom;"&gt;{0}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td colspan="2" style="border-bottom: 1px solid #C2C2C2; color: #8B8B8B; font-family: Arial, sans-serif; font-size: 13px; font-style: italic; padding: 10px 1px; vertical-align: bottom;"&gt;Cost del Servei:&lt;/td&gt;
+	&lt;td colspan="3" style="border-bottom: 2px solid #C2C2C2; color: #0F4F7B; font-family: Arial, sans-serif; font-size: 16px; padding: 10px 1px; text-align: center; vertical-align: bottom;"&gt;{1}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td colspan="2" style="border-bottom: 1px solid #C2C2C2; color: #8B8B8B; font-family: Arial, sans-serif; font-size: 13px; font-style: italic; padding: 10px 1px; vertical-align: bottom;"&gt;IVA ({2}):&lt;/td&gt;
+	&lt;td colspan="3" style="border-bottom: 2px solid #C2C2C2; color: #0F4F7B; font-family: Arial, sans-serif; font-size: 16px; padding: 10px 1px; text-align: center; vertical-align: bottom;"&gt;{3}&lt;/td&gt;
+&lt;/tr&gt;</value>
+  </data>
+  <data name="Email_LayoutTotalBonus" xml:space="preserve">
+    <value>&lt;tr&gt;
+	&lt;td colspan="2" style="border-bottom: 1px solid #C2C2C2; color: #8B8B8B; font-family: Arial, sans-serif; font-size: 13px; font-style: italic; padding: 10px 1px; vertical-align: bottom;"&gt;Base:&lt;/td&gt;
+	&lt;td colspan="3" style="border-bottom: 2px solid #C2C2C2; color: #0F4F7B; font-family: Arial, sans-serif; font-size: 16px; padding: 10px 1px; text-align: center; vertical-align: bottom;"&gt;{0}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td colspan="2" style="border-bottom: 1px solid #C2C2C2; color: #8B8B8B; font-family: Arial, sans-serif; font-size: 13px; font-style: italic; padding: 10px 1px; vertical-align: bottom;"&gt;Cost del Servei:&lt;/td&gt;
+	&lt;td colspan="3" style="border-bottom: 2px solid #C2C2C2; color: #0F4F7B; font-family: Arial, sans-serif; font-size: 16px; padding: 10px 1px; text-align: center; vertical-align: bottom;"&gt;{1}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td colspan="2" style="border-bottom: 1px solid #C2C2C2; color: #8B8B8B; font-family: Arial, sans-serif; font-size: 13px; font-style: italic; padding: 10px 1px; vertical-align: bottom;"&gt;Bonificació:&lt;/td&gt;
+	&lt;td colspan="3" style="border-bottom: 2px solid #C2C2C2; color: #0F4F7B; font-family: Arial, sans-serif; font-size: 16px; padding: 10px 1px; text-align: center; vertical-align: bottom;"&gt;{2}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td colspan="2" style="border-bottom: 1px solid #C2C2C2; color: #8B8B8B; font-family: Arial, sans-serif; font-size: 13px; font-style: italic; padding: 10px 1px; vertical-align: bottom;"&gt;IVA ({3}):&lt;/td&gt;
+	&lt;td colspan="3" style="border-bottom: 2px solid #C2C2C2; color: #0F4F7B; font-family: Arial, sans-serif; font-size: 16px; padding: 10px 1px; text-align: center; vertical-align: bottom;"&gt;{4}&lt;/td&gt;
+&lt;/tr&gt;</value>
+  </data>
+  <data name="TransferBalanceDst_EmailBody" xml:space="preserve">
+    <value>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;
+&lt;html&gt;
+&lt;head&gt;
+	&lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8"&gt;
+	&lt;title&gt;&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;table align="center" style="border-collapse: collapse; border-spacing: 0; margin: 0 auto; padding: 0; width: 650px;"&gt;
+		&lt;tr style="background: #0F4F7B;"&gt;
+			&lt;td style="padding: 15px 0 15px 25px; width: 60px"&gt;&lt;img src="https://www.eysamobile.com/integraMobile/Content/img/recharge_icon.png" alt=""&gt;&lt;/td&gt;
+			&lt;td style="color: #FFF; font-family: Arial, sans-serif; font-size: 32px; padding: 15px 25px; vertical-align: middle; width: 95%;"&gt;Recepció de Saldo&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td colspan="2" style="padding: 40px 0;"&gt;
+				&lt;table style="border-spacing: 0; margin: 0; padding: 0 4px 0 1px; table-layout: fixed; width: 100%;"&gt;
+					&lt;tr&gt;
+					  &lt;td align="center" valign="middle" style="color: #0F4F7B; font-family: Arial, sans-serif; font-size: 26px; font-style: normal; padding: 20px 10px;"&gt;
+                      	&lt;img src="https://www.eysamobile.com/integraMobile/Content/img/confirm_icon.png" alt="OK"&gt; &lt;br&gt;
+                        Ha rebut amb èxit la següent transferència
+                      &lt;/td&gt;
+				  &lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td style="color: #8B8B8B; font-family: Arial, sans-serif; font-size: 13px; font-style: italic; padding: 0 0 10px;"&gt;Resum de la transferència:&lt;/td&gt;
+					&lt;/tr&gt;
+				&lt;/table&gt;
+				&lt;table style="border-spacing: 0; margin: 0; padding: 0 4px 0 1px; table-layout: fixed; width: 100%;"&gt;
+					&lt;tr&gt;
+						&lt;td style="border-bottom: 1px solid #C2C2C2; color: #8B8B8B; font-family: Arial, sans-serif; font-size: 13px; font-style: italic; padding: 10px 1px; vertical-align: bottom;"&gt;Ordenant:&lt;/td&gt;
+						&lt;td style="border-bottom: 2px solid #C2C2C2; color: #0F4F7B; font-family: Arial, sans-serif; font-size: 16px; padding: 10px 1px; text-align: center; vertical-align: bottom;"&gt;{0}&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td style="border-bottom: 1px solid #C2C2C2; color: #8B8B8B; font-family: Arial, sans-serif; font-size: 13px; font-style: italic; padding: 10px 1px; vertical-align: bottom;"&gt;Import:&lt;/td&gt;
+						&lt;td style="border-bottom: 2px solid #C2C2C2; color: #0F4F7B; font-family: Arial, sans-serif; font-size: 16px; padding: 10px 1px; text-align: center; vertical-align: bottom;"&gt;{1}&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td style="border-bottom: 1px solid #C2C2C2; color: #8B8B8B; font-family: Arial, sans-serif; font-size: 13px; font-style: italic; padding: 10px 1px; vertical-align: bottom;"&gt;Saldo actual:&lt;/td&gt;
+						&lt;td style="border-bottom: 2px solid #C2C2C2; color: #0F4F7B; font-family: Arial, sans-serif; font-size: 16px; padding: 10px 1px; text-align: center; vertical-align: bottom;"&gt;{2}&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td style="border-bottom: 1px solid #C2C2C2; color: #8B8B8B; font-family: Arial, sans-serif; font-size: 13px; font-style: italic; padding: 10px 1px; vertical-align: bottom;"&gt;Hora de la transferència:&lt;/td&gt;
+						&lt;td style="border-bottom: 2px solid #C2C2C2; color: #0F4F7B; font-family: Arial, sans-serif; font-size: 16px; padding: 10px 1px; text-align: center; vertical-align: bottom;"&gt;{3}&lt;/td&gt;
+					&lt;/tr&gt;
+				&lt;/table&gt;
+			&lt;/td&gt;
+		&lt;/tr&gt;
+				&lt;tr style="background: #0F4F7B;"&gt;
+			&lt;td colspan="2" style="color: #FFF; font-family: Arial, sans-serif; font-size: 16px; padding: 20px 0; text-align: center;"&gt;EysaMobile - Parking&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td colspan="2" style="color: #B0B0B0; font-family: Arial, sans-serif; font-size: 11px; padding: 15px 0;"&gt;AQUEST CORREU ELECTRÒNIC CONTÉ INFORMACIÓ ESTRICTAMENT CONFIDENCIAL. Si vostè no és el destinatari del missatge no està autritzat a llegir-lo, retenir-lo o difundir-lo.&lt;br&gt;Abans d'imprimir aquest correu pensi si és realment necessari.&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;</value>
+  </data>
+  <data name="TransferBalanceDst_EmailHeader" xml:space="preserve">
+    <value>EysaMobile: Transferència de Saldo Rebuda</value>
+  </data>
+  <data name="TransferBalanceSrc_EmailBody" xml:space="preserve">
+    <value>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;
+&lt;html&gt;
+&lt;head&gt;
+	&lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8"&gt;
+	&lt;title&gt;&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;table align="center" style="border-collapse: collapse; border-spacing: 0; margin: 0 auto; padding: 0; width: 650px;"&gt;
+		&lt;tr style="background: #0F4F7B;"&gt;
+			&lt;td style="padding: 15px 0 15px 25px; width: 60px"&gt;&lt;img src="https://www.eysamobile.com/integraMobile/Content/img/recharge_icon.png" alt=""&gt;&lt;/td&gt;
+			&lt;td style="color: #FFF; font-family: Arial, sans-serif; font-size: 32px; padding: 15px 25px; vertical-align: middle; width: 95%;"&gt;Transferència de Saldo&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td colspan="2" style="padding: 40px 0;"&gt;
+				&lt;table style="border-spacing: 0; margin: 0; padding: 0 4px 0 1px; table-layout: fixed; width: 100%;"&gt;
+					&lt;tr&gt;
+					  &lt;td align="center" valign="middle" style="color: #0F4F7B; font-family: Arial, sans-serif; font-size: 26px; font-style: normal; padding: 20px 10px;"&gt;
+                      	&lt;img src="https://www.eysamobile.com/integraMobile/Content/img/confirm_icon.png" alt="OK"&gt; &lt;br&gt;
+                        Ha realitzat amb èxit la següent transferència
+                      &lt;/td&gt;
+				  &lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td style="color: #8B8B8B; font-family: Arial, sans-serif; font-size: 13px; font-style: italic; padding: 0 0 10px;"&gt;Resum de la transferència:&lt;/td&gt;
+					&lt;/tr&gt;
+				&lt;/table&gt;
+				&lt;table style="border-spacing: 0; margin: 0; padding: 0 4px 0 1px; table-layout: fixed; width: 100%;"&gt;
+					&lt;tr&gt;
+						&lt;td style="border-bottom: 1px solid #C2C2C2; color: #8B8B8B; font-family: Arial, sans-serif; font-size: 13px; font-style: italic; padding: 10px 1px; vertical-align: bottom;"&gt;Receptor:&lt;/td&gt;
+						&lt;td style="border-bottom: 2px solid #C2C2C2; color: #0F4F7B; font-family: Arial, sans-serif; font-size: 16px; padding: 10px 1px; text-align: center; vertical-align: bottom;"&gt;{0}&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td style="border-bottom: 1px solid #C2C2C2; color: #8B8B8B; font-family: Arial, sans-serif; font-size: 13px; font-style: italic; padding: 10px 1px; vertical-align: bottom;"&gt;Import:&lt;/td&gt;
+						&lt;td style="border-bottom: 2px solid #C2C2C2; color: #0F4F7B; font-family: Arial, sans-serif; font-size: 16px; padding: 10px 1px; text-align: center; vertical-align: bottom;"&gt;{1}&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td style="border-bottom: 1px solid #C2C2C2; color: #8B8B8B; font-family: Arial, sans-serif; font-size: 13px; font-style: italic; padding: 10px 1px; vertical-align: bottom;"&gt;Saldo actual:&lt;/td&gt;
+						&lt;td style="border-bottom: 2px solid #C2C2C2; color: #0F4F7B; font-family: Arial, sans-serif; font-size: 16px; padding: 10px 1px; text-align: center; vertical-align: bottom;"&gt;{2}&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td style="border-bottom: 1px solid #C2C2C2; color: #8B8B8B; font-family: Arial, sans-serif; font-size: 13px; font-style: italic; padding: 10px 1px; vertical-align: bottom;"&gt;Hora de la transferència:&lt;/td&gt;
+						&lt;td style="border-bottom: 2px solid #C2C2C2; color: #0F4F7B; font-family: Arial, sans-serif; font-size: 16px; padding: 10px 1px; text-align: center; vertical-align: bottom;"&gt;{3}&lt;/td&gt;
+					&lt;/tr&gt;
+				&lt;/table&gt;
+			&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;/tr&gt;
+				&lt;tr style="background: #0F4F7B;"&gt;
+			&lt;td colspan="2" style="color: #FFF; font-family: Arial, sans-serif; font-size: 16px; padding: 20px 0; text-align: center;"&gt;EysaMobile - Parking&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td colspan="2" style="color: #B0B0B0; font-family: Arial, sans-serif; font-size: 11px; padding: 15px 0;"&gt;AQUEST CORREU ELECTRÒNIC CONTÉ INFORMACIÓ ESTRICTAMENT CONFIDENCIAL. Si vostè no és el destinatari del missatge no està autritzat a llegir-lo, retenir-lo o difundir-lo.&lt;br&gt;Abans d'imprimir aquest correu pensi si és realment necessari.&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;</value>
+  </data>
+  <data name="TransferBalanceSrc_EmailHeader" xml:space="preserve">
+    <value>EysaMobile: Transferència de Saldo Enviada</value>
+  </data>
+</root>

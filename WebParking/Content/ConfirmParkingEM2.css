@@ -1,0 +1,274 @@
+﻿/*
+.mainContainer {
+    text-align: center;
+}
+.plate {
+    width: 100%;
+    text-align: center;
+}
+.zoneTar {
+    width: 100%;
+}
+.fieldlabel {
+    float: left;
+    clear: both;
+    text-align: left;
+    width: 50%;
+}
+.fieldvalue {
+    float:right;
+    clear: right;
+    text-align: right;
+    width: 50%;
+}
+.tabulated {
+    width: 35%;
+    padding-left: 15%;
+}
+.confirmParking-submit {
+    clear: both;
+    padding-top: 20px;
+    text-align: center
+}
+*/
+
+
+
+#divConfirmParking
+{
+    padding: 0.5em;
+}
+
+
+
+.opField
+{
+    margin:0.5em;
+    font-size: 0.9em;
+    text-align:left;
+}
+
+#opPlate
+{
+    background: transparent url('EysaMobv2/plate-ico.svg') no-repeat 0% 50%;
+    background-size: auto 100%;
+    padding-left: 2em;
+}
+
+#opZoneTariff
+{
+    background: transparent url('EysaMobv2/location-ico.svg') no-repeat 0% 50%;
+    background-size: auto 100%;
+    padding-left: 2em;
+}
+
+#opIniDate
+{
+    background: transparent url('EysaMobv2/watch-ico.svg') no-repeat 0% 50%;
+    background-size: auto 100%;
+    padding-left: 2em;
+}
+
+#opEndDate
+{
+    margin-bottom: 0;
+    padding:0.5em;
+    padding-left:2.8em;
+    background: #2481bc url('EysaMobv2/btn-shadow.png') no-repeat 50% 50%;
+    background-size: 100% 100%;
+    box-sizing: border-box;
+    width: initial;
+    position:relative;
+}
+
+
+#opEndDate > * 
+{
+    display:inline-block;
+    vertical-align: middle;
+}
+
+
+.icoWatch
+{
+    position:absolute;
+    top: 0px;
+    bottom:0px;
+    left:0px;
+    right:0px;
+    z-index:33;
+    background: transparent url('EysaMobv2/ico_watch.svg') no-repeat 0% 50%;
+    background-size: auto 100%;
+}
+
+#opEndDate .EndLabel
+{
+    width: 15%;
+}
+#opEndDate .EndTime
+{
+    font-size: 1.5em;
+    text-align:center;
+    box-sizing: border-box;
+    width: 30%;
+
+}
+
+#opEndDate .EndDate
+{
+   float: right;
+   width: 50%;
+   text-align: center;
+   position:absolute;
+}
+
+
+
+#opDuration 
+{
+    margin-top: 0;
+    padding: 0.5em;
+    background: #275680 url('EysaMobv2/btn-shadow.png') no-repeat 50% 50%;
+    background-size: 100% 100%;
+    box-sizing: border-box;
+    width: initial;
+    position: relative;
+
+    text-align: center;
+}
+
+.amount
+{
+    font-size: 0.8em;
+}
+
+.amount > *
+{   
+    box-sizing: border-box;
+    padding: 0.2em 0.5em;
+}
+
+.amount .fieldlabel
+{ 
+    opacity: 0.8; 
+    float:left;
+    clear: both;
+
+}
+
+.amount .fieldvalue
+{ 
+    opacity: 0.8; 
+    float:right;;
+
+}
+
+
+.amount .totalLabel,
+.amount .totalValue
+{
+    opacity:1;
+
+}
+
+.amount .totalValue
+{
+    font-weight: bold;
+}
+
+
+#confirmParking-submit,
+.confirmParking-submit
+{
+    clear:both;
+    padding-top: 0.5em;
+}
+
+button.k-button[type=submit],
+button.k-button-close
+{
+    margin: 0px;
+    padding: 0.5em;
+    width: 100%;
+    background: #4aba70 url('EysaMobv2/btn-shadow.png') no-repeat 50% 50%;
+    background-size: 100% 100%;
+    border-color: #4b8056;
+    color: #fafafa;
+    font-weight: normal;
+    text-transform: uppercase;
+
+    /*icon position*/
+    position: relative;
+}
+
+button.k-button[type=submit]:hover,
+button.k-button[type=submit]:focus,
+button.k-button[type=submit]:active,
+button.k-button-close:hover,
+button.k-button-close:focus,
+button.k-button-close:active
+
+{
+    background: #26af5f url('EysaMobv2/btn-shadow.png') no-repeat 50% 50%;
+    background-size: 100% 100%;
+
+    color:inherit;
+
+}
+
+button.k-button[type=submit] .k-icon 
+{
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 75%;
+    width: auto;
+    height: inherit;
+    background: transparent url('EysaMobv2/ico_done.svg') no-repeat 0% 50%;
+    background-size: auto 100%;
+}
+
+button.k-button-close #icoClose
+{
+    position:absolute;
+    width:33%;
+    /* height:100%; */
+    background: transparent url('EysaMobv2/icon_close_shdw.svg') no-repeat 0% 50%;
+    background-size: auto 100%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    display: block;
+}
+
+
+
+/********* CONFIRMED    ************/
+
+#ConfirmParking
+{
+    text-align: center;
+
+}
+
+#ConfirmParking #ConfirmParkingIco
+{
+    display: block;
+
+    width:150px;
+    height:150px;
+   
+    margin: auto;
+
+    background: transparent url('EysaMobv2/ico_confirmop.svg') no-repeat 50% 50%;
+    background-size: 100% 100%;
+}
+
+#ConfirmParking #ConfirmParkingMsg
+{
+    margin: 0.5em 0;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    font-weight:normal;
+}

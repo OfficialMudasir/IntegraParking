@@ -1,0 +1,401 @@
+﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+<%@ Import Namespace="System.Globalization" %>
+
+<!DOCTYPE html>
+<html>
+
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   
+    <title><asp:ContentPlaceHolder ID="TitleContent" runat="server" /> | <%=Resources.ServiceName %> </title>
+    <meta name="author" content="Blinkay Technologies">
+
+    <%--    manifest.json    --%>
+    <%--    https://w3c.github.io/manifest/    --%>
+    <%--    https://developer.mozilla.org/en-US/docs/Web/Manifest    --%>
+    <%-- <link rel="manifest" type="application/manifest+json" href="~/manifest.webmanifest"> --%>
+    <link rel="manifest" type="application/manifest+json" href="~/manifest.json">
+    <%--    https://developers.google.com/web/fundamentals/native-hardware/fullscreen/?hl=es    --%>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <%--  https://developer.mozilla.org/en-US/docs/Web/Manifest#icons      --%>
+    <link rel="shortcut icon"   sizes="48x48"     href="launcher-icon-1x.png">
+    <link rel="shortcut icon"   sizes="96x96"     href="launcher-icon-2x.png">
+    <link rel="shortcut icon"   sizes="128x128"   href="icon-128x128.png">
+    <link rel="shortcut icon"   sizes="144x144"   href="ms-touch-icon-144x144-precomposed.png">
+    <link rel="shortcut icon"   sizes="152x152"   href="apple-touch-icon.png">
+    <link rel="shortcut icon"   sizes="192x192"   href="chrome-touch-icon-192x192.png">
+    <link rel="shortcut icon"   sizes="196x196"   href="icon-196x196.png">
+    <link rel="shortcut icon"   sizes="256x256"   href="icon-256x256.png">
+
+
+    <%--   https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html  ---%>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <%-- iPhone ICON default --%>
+    <link rel="apple-touch-icon" href="~/Content/ico/apple-touch-icon.png"/>
+    <%-- iPhone ICON --%>
+    <link rel="apple-touch-icon" sizes="57x57" href="~/Content/ico/apple-touch-icon-57x57.png" />
+    <%-- iPad ICON--%>
+    <link rel="apple-touch-icon" sizes="72x72" href="~/Content/ico/apple-touch-icon-72x72.png" />
+    <%-- iPhone (Retina) ICON--%>
+    <link rel="apple-touch-icon" sizes="114x114" href="~/Content/ico/apple-touch-icon-114x114.png" />
+    <%-- iPad (Retina) ICON--%>
+    <link rel="apple-touch-icon" sizes="144x144" href="~/Content/ico/apple-touch-icon-144x144.png" />
+    <%-- iOS ICON precomposed--%>
+    <link rel="apple-touch-icon-precomposed" sizes="128x128" href="~/Content/ico/apple-touch-icon-precomposed-128x128.png">
+
+    <!-- --->
+
+    <link rel="apple-touch-startup-image" href="apple-touch-startup-image.png">
+
+<%--
+    <!-- iPhone SPLASHSCREEN-->
+    <link href="apple-touch-startup-image-320x460.png" media="(device-width: 320px)" rel="apple-touch-startup-image">
+    <!-- iPhone (Retina) SPLASHSCREEN-->
+    <link href="apple-touch-startup-image-640x920.png" media="(device-width: 320px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+    <!-- iPad (portrait) SPLASHSCREEN-->
+    <link href="apple-touch-startup-image-768x1004.png" media="(device-width: 768px) and (orientation: portrait)" rel="apple-touch-startup-image">
+    <!-- iPad (landscape) SPLASHSCREEN-->
+    <link href="apple-touch-startup-image-748x1024.png" media="(device-width: 768px) and (orientation: landscape)" rel="apple-touch-startup-image">
+    <!-- iPad (Retina, portrait) SPLASHSCREEN-->
+    <link href="apple-touch-startup-image-1536x2008.png" media="(device-width: 1536px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+    <!-- iPad (Retina, landscape) SPLASHSCREEN-->
+    <link href="apple-touch-startup-image-2048x1496.png" media="(device-width: 1536px)  and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+    <!-- iPhone 6/7/8 -->
+    <link href="/images/favicon/750x1334.png" media="(device-width: 375px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+    <!-- iPhone 6 Plus/7 Plus/8 Plus -->
+    <link href="/images/favicon/1242x2208.png" media="(device-width: 414px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image" />
+--%>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            if ($(location).attr("href").toString().toLowerCase().indexOf("integramobile/fine/") >= 0) {
+                if ($(location).attr("href").toString().toLowerCase().indexOf("iparkme.com") >= 0 || $(location).attr("href").toString().toLowerCase().indexOf("localhost/integramobile") >= 0) {
+                    /* ########## START IPT-260 ########### */
+                    <% if (Session["CustomLogo"] != null && !string.IsNullOrEmpty(Session["CustomLogo"].ToString())) { %>
+                    $(".sm-logo img").prop("src", "<%=Session["CustomLogo"]%>");
+                    <% } %>
+                    <% if (Session["CustomElementsToHide"] != null && !string.IsNullOrEmpty(Session["CustomElementsToHide"].ToString())) { %>
+                    $("<%=Session["CustomElementsToHide"]%>").css("display", "none");
+                    <% } %>
+                    /* ########## END IPT-260 ########### */
+                    /* ########## START IPS-198 ########### */
+                    <% if (Session["CustomNavbarBackgroundColor"] != null && !string.IsNullOrEmpty(Session["CustomNavbarBackgroundColor"].ToString())) { %>
+                    $("nav").css("background-color", "<%=Session["CustomNavbarBackgroundColor"]%>");
+                    $(".navbar").addClass("remove_margin_top");
+                    $(".navbar").css("padding-top", "10px");
+                    $(".navbar").css("padding-bottom", "10px");
+                    $("body").css("background-position-y", "130px");
+                    $("body").append('<div style="position:absolute; width:130px; height:130px; background-color:#1d2a32; left:0; top:0; z-index:-1;"></div>');
+                    <% } %>
+                    /* ########## END IPS-198 ########### */
+                }
+                else if ($(location).attr("href").toString().toLowerCase().indexOf("blinkay.app") >= 0) {
+                    /* ########## START IPT-260 ########### */
+                    <% if (Session["CustomLogo"] != null && !string.IsNullOrEmpty(Session["CustomLogo"].ToString())) { %>
+                    $(".sm-logo img").prop("src", "<%=Session["CustomLogo"]%>");
+                    $(".sm-logo img").css("height", "auto");
+                    $("#logo-mobile img").prop("src", "<%=Session["CustomLogo"]%>");
+                    $("#logo-mobile img").css("height", "auto");
+                    $("#logo-mobile img").css("margin-top", "-10px");
+                    <% } %>
+                    <% if (Session["CustomElementsToHide"] != null && !string.IsNullOrEmpty(Session["CustomElementsToHide"].ToString())) { %>
+                    $("<%=Session["CustomElementsToHide"]%>").css("display", "none");
+                    <% } %>
+                    /* ########## END IPT-260 ########### */
+                    /* ########## START IPS-198 ########### */
+                    <% if (Session["CustomNavbarBackgroundColor"] != null && !string.IsNullOrEmpty(Session["CustomNavbarBackgroundColor"].ToString())) { %>
+                    $(".navbar.navbar-static-top").css("background-color", "<%=Session["CustomNavbarBackgroundColor"]%>");
+                    <% } %>
+                    /* ########## END IPS-198 ########### */
+                }
+            }
+        });
+    </script>
+
+
+    <link rel="stylesheet" href="~/Content/css/loader-style.css">
+    <link rel="stylesheet" href="~/Content/css/blinkay.css">
+    <link rel="stylesheet" href="~/Content/css/style.css">
+    <link rel="stylesheet" href="~/Content/css/extra-pages.css">
+
+<%--   OLD IPARKME VERSION  -- // 
+    <style type="text/css">
+        /* ########## START IPS-198 ########### */
+        .remove_margin_top {
+            margin-top:0!important;
+        }
+        /* ########## END IPS-198 ########### */
+
+    	@media (max-width: 767px) {
+    		body {
+    			padding: 0 !important;
+    		}
+    	}
+
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet" > body {
+            background: #eee;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .msgcontent {
+            background-color: #fff;
+            padding: 10px;
+            text-align: center;
+            font-family: 'Roboto', sans-serif;
+            border: 0px solid transparent;
+        }
+
+        .msgcontent__literal,
+        .msgcontent__resource {
+            margin: 10px;
+            padding: 10px;
+            display: inline-block;
+            width: 66%;
+            text-align: center;
+            font-weight: 300;
+            font-size: 14pt;
+        }
+
+    </style>
+// -- OLD IPARKME VESION --%>
+
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server" />
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+        <script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+    <!-- Fav and touch icons -->
+    <link rel="shortcut icon" href="~/Content/ico/favicon.ico">
+
+    <!--models css-->
+
+    <style>
+
+        
+.fade-scale {
+  transform: scale(0);
+  opacity: 0;
+  -webkit-transition: all .25s linear;
+  -o-transition: all .25s linear;
+  transition: all .25s linear;
+}
+.fade-scale.in {
+  opacity: 1;
+  transform: scale(1);
+}
+.fade-scale .modal-dialog {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%) !important;
+}
+
+.fade-rotate {
+  transform: rotate(180deg);
+  opacity: 0;
+  -webkit-transition: all .25s linear;
+  -o-transition: all .25s linear;
+  transition: all .25s linear;
+}
+.fade-rotate.in {
+  opacity: 1;
+  transform: rotate(0deg);
+}
+.fade-rotate .modal-dialog {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%) !important;
+}
+
+.fade-flip {
+  transform: rotateX(-90deg);
+  opacity: 0;
+  -webkit-transition: all .25s linear;
+  -o-transition: all .25s linear;
+  transition: all .25s linear;
+}
+.fade-flip.in {
+  opacity: 1;
+  transform: rotateX(0deg);
+}
+.fade-flip .modal-dialog {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%) !important;
+}
+    </style>
+
+
+
+</head>
+
+<body class="siteMaster">
+
+    <div id="preloader">
+        <div id="status">&nbsp;</div>
+    </div>
+
+    <nav role="navigation" class="navbar navbar-static-top no-print">
+        <div class="container-fluid">
+
+            <div class="navbar-header">
+                <button data-target="#top-navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+                    <span class="bky-config"></span>
+                </button>
+
+                <div id="logo-mobile">
+                    <a href="<%= Url.Action("Main", "Account") %>"><img src="<%= Url.Content("~/Content/img/logo-mobile.svg") %>" alt="Blinkay"></a>   
+                </div>
+
+            </div>
+
+            <div id="top-navbar-collapse" class="collapse navbar-collapse">
+
+                <ul class="nav navbar-nav navbar-right">
+                    <%--
+                    <li>
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                          <i class="bky-profile" ></i>  &nbsp; <%=Resources.Account_Hi%> <%=ViewData["UserNameAndSurname"]%>! &nbsp; <i class="bky-arrow"></i></b>
+                        </a>
+                        <ul role="menu" class="dropdown-setting dropdown-menu">
+                            <li>
+                                <a href="<%= Url.Action("LogOff", "Account") %>">
+                                    <span class="bky-logout"></span> &nbsp; <%=Resources.Account_Logout%></a>
+                            </li>
+                        </ul>
+                    </li>
+                    --%>
+                    <%--<li>
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                            <span class="entypo-globe"></span> &nbsp; <%=Resources.Account_ChangeLanguage%> &nbsp; <i class="bky-arrow"></i></a>
+                        <ul role="menu" class="dropdown-setting dropdown-menu">
+                            <% Html.RenderPartial("CultureChooserUserControl"); %>
+                        </ul>
+                    </li>--%>
+
+                    <%--New Changes--%>
+
+                    <li>
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                            <span class="entypo-globe"></span> &nbsp; <%=Resources.Account_ChangeLanguage%> &nbsp; <i class="bky-arrow"></i><span id="selectedidlang" style="margin-left: 10px;">English</span></a>
+                        <ul role="menu" class="dropdown-setting dropdown-menu">
+                            <% Html.RenderPartial("CultureChooserUserControl"); %>
+                        </ul>
+                    </li>
+
+                    <%--New Changes End--%>
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav><!--// .navbar-static-top navigation -->
+
+    <main id="page-wrap">
+            <!-- PAGE HEADER -->
+            <header  id="page-header" class="container">
+                <div class="row">
+                    <div class="col-md-12 col-block title-content">
+                        <h1 class="main-content-title">
+                            <asp:ContentPlaceHolder ID="MainContentTitle" runat="server" />
+                        </h1>
+                    </div>
+                </div>
+            </header><!--// #page-header -->
+            <!-- PAGE CONTENT -->
+            <div id="page-content" class="container">
+                <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+
+            </div><!-- // #page-content -->
+
+
+        <!-- Error Modal -->
+
+        <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+          <symbol id="check-circle-fill" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+          </symbol>
+          <symbol id="info-fill" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
+          </symbol>
+          <symbol id="exclamation-triangle-fill" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+          </symbol>
+        </svg>
+        
+<!-- Modal -->
+        <div class="modal fade-scale" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" id="btnCloseHead" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title text-center text-danger" id="exampleModalLongTitle">
+                    <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Danger:">
+                            <use xlink:href="#exclamation-triangle-fill"/></svg>
+                </h4>
+                  
+              </div>
+               <div class="alert alert-danger d-flex align-items-center" role="alert">
+                         <div class="modal-body text-center">
+                            <span id="ErrorMessage"></span>
+                        </div>
+                      </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" id="btnclose" data-dismiss="modal">Close</button>
+                <%--<button type="button" class="btn btn-primary">Save changes</button>--%>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+            <!-- PAGE FOOTER -->
+            <footer id="page-footer" class="no-print">
+                <div class="container">
+                    <div class="copyright">
+                        <a href="/" title="Website">
+                        &copy; Blinkay, <%= DateTime.Now.Year.ToString() %>
+                        </a>
+                    </div><!--// .copyright -->
+                    <ul class="bottom-menu">
+                        <%-- Redirect to home page--%>
+                        <%-- <li><a href="<%=Url.Content( "~/Content/docs/WhyService_" + Session["Culture"].ToString().Replace("-","_") +".pdf")%>"><%=Resources.Home_WhyService %></a></li> --%>
+                        <li><a href="/"><%=Resources.Home_WhyService %></a></li>
+                        <li><a href="<%= Url.Action("gCond_" + Session["Culture"].ToString().Replace("-","_") , "Home") %>"><%=Resources.Home_Service_Conditions %></a></li>
+                    </ul><!--// .bottom-menu -->
+                </div>
+            </footer><!-- // #footer -->
+    </main><!--// #content-wrap -->
+
+
+    <%-- New Model Changes --%>
+
+
+    
+
+
+
+
+    <script type="text/javascript" src="<%= Url.Content("~/Content/js/preloader.js") %>"></script>
+    <script type="text/javascript" src="<%= Url.Content("~/Content/js/bootstrap.min.js") %>"></script>
+    <script type="text/javascript" src="<%= Url.Content("~/Content/js/app.js") %>"></script>
+    <script type="text/javascript" src="<%= Url.Content("~/Content/js/load.js") %>"></script>
+    <script type="text/javascript" src="<%= Url.Content("~/Content/js/main.js") %>"></script>
+
+    <% Html.RenderPartial("GoogleAnalytics"); %>
+
+</body>
+</html>

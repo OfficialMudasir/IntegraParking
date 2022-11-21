@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:intf="http://192.168.3.91:8081/paybyphone-demo/services/PayByPhoneListener" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:impl="http://192.168.3.91:8081/paybyphone-demo/services/PayByPhoneListener" targetNamespace="http://192.168.3.91:8081/paybyphone-demo/services/PayByPhoneListener" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types />
+  <wsdl:message name="queryListOfFinesRequest">
+    <wsdl:part name="xmlIn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="athentificationHashResponse">
+    <wsdl:part name="athentificationHashReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="queryFinePaymentQuantityResponse">
+    <wsdl:part name="queryFinePaymentQuantityReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="confirmFinePaymentRequest">
+    <wsdl:part name="xmlIn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="queryListOfFinesResponse">
+    <wsdl:part name="queryListOfFinesReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="athentificationHashRequest">
+    <wsdl:part name="xmlIn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="queryFinePaymentQuantityRequest">
+    <wsdl:part name="xmlIn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="confirmFinePaymentResponse">
+    <wsdl:part name="confirmFinePaymentReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:portType name="PayByPhoneSoapImpl">
+    <wsdl:operation name="queryFinePaymentQuantity" parameterOrder="xmlIn">
+      <wsdl:input name="queryFinePaymentQuantityRequest" message="impl:queryFinePaymentQuantityRequest" />
+      <wsdl:output name="queryFinePaymentQuantityResponse" message="impl:queryFinePaymentQuantityResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="queryListOfFines" parameterOrder="xmlIn">
+      <wsdl:input name="queryListOfFinesRequest" message="impl:queryListOfFinesRequest" />
+      <wsdl:output name="queryListOfFinesResponse" message="impl:queryListOfFinesResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="confirmFinePayment" parameterOrder="xmlIn">
+      <wsdl:input name="confirmFinePaymentRequest" message="impl:confirmFinePaymentRequest" />
+      <wsdl:output name="confirmFinePaymentResponse" message="impl:confirmFinePaymentResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="athentificationHash" parameterOrder="xmlIn">
+      <wsdl:input name="athentificationHashRequest" message="impl:athentificationHashRequest" />
+      <wsdl:output name="athentificationHashResponse" message="impl:athentificationHashResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="PayByPhoneListenerSoapBinding" type="impl:PayByPhoneSoapImpl">
+    <wsdlsoap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <wsdl:operation name="queryFinePaymentQuantity">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="queryFinePaymentQuantityRequest">
+        <wsdlsoap:body use="encoded" namespace="http://paybyphone.cc.gti.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="queryFinePaymentQuantityResponse">
+        <wsdlsoap:body use="encoded" namespace="http://192.168.3.91:8081/paybyphone-demo/services/PayByPhoneListener" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryListOfFines">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="queryListOfFinesRequest">
+        <wsdlsoap:body use="encoded" namespace="http://paybyphone.cc.gti.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="queryListOfFinesResponse">
+        <wsdlsoap:body use="encoded" namespace="http://192.168.3.91:8081/paybyphone-demo/services/PayByPhoneListener" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="confirmFinePayment">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="confirmFinePaymentRequest">
+        <wsdlsoap:body use="encoded" namespace="http://paybyphone.cc.gti.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="confirmFinePaymentResponse">
+        <wsdlsoap:body use="encoded" namespace="http://192.168.3.91:8081/paybyphone-demo/services/PayByPhoneListener" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="athentificationHash">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="athentificationHashRequest">
+        <wsdlsoap:body use="encoded" namespace="http://paybyphone.cc.gti.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="athentificationHashResponse">
+        <wsdlsoap:body use="encoded" namespace="http://192.168.3.91:8081/paybyphone-demo/services/PayByPhoneListener" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PayByPhoneSoapImplService">
+    <wsdl:port name="PayByPhoneListener" binding="impl:PayByPhoneListenerSoapBinding">
+      <wsdlsoap:address location="http://192.168.3.91:8081/paybyphone-demo/services/PayByPhoneListener" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

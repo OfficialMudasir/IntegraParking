@@ -1,0 +1,68 @@
+﻿.save16-icon {
+    width: 16px;
+    height: 16px;
+    background: transparent url(img/tools/16x16/save.png) no-repeat 50% 50%;
+    background-size: contain;
+    overflow: hidden;
+    display: inline-block;
+    font-size: 0;
+    line-height: 0;
+    vertical-align: top;
+    margin: 2px 0 0 3px;
+    -webkit-border-radius: 5px;
+    -mox-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.add16-icon {
+    width: 16px;
+    height: 16px;
+    background: transparent url(img/tools/16x16/new.png) no-repeat 50% 50%;
+    background-size: contain;
+    overflow: hidden;
+    display: inline-block;
+    font-size: 0;
+    line-height: 0;
+    vertical-align: top;
+    margin: 2px 0 0 3px;
+    -webkit-border-radius: 5px;
+    -mox-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.remove16-icon {
+    width: 16px;
+    height: 16px;
+    background: transparent url(img/tools/16x16/trash.png) no-repeat 50% 50%;
+    background-size: contain;
+    overflow: hidden;
+    display: inline-block;
+    font-size: 0;
+    line-height: 0;
+    vertical-align: top;
+    margin: 2px 0 0 3px;
+    -webkit-border-radius: 5px;
+    -mox-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.cancel16-icon {
+    width: 16px;
+    height: 16px;
+    background: transparent url(img/tools/16x16/cancel.png) no-repeat 50% 50%;
+    background-size: contain;
+    overflow: hidden;
+    display: inline-block;
+    font-size: 0;
+    line-height: 0;
+    vertical-align: top;
+    margin: 2px 0 0 3px;
+    -webkit-border-radius: 5px;
+    -mox-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.k-tabstrip .k-content {
+    width: 97.5%;
+    overflow: visible;
+}

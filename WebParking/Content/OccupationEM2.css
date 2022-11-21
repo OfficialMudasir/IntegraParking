@@ -1,0 +1,196 @@
+﻿.cloudCO2
+{
+    height:  128px ;
+    width  : 128px;
+    margin :auto;
+    background: transparent url('EysaMobv2/co2-ico.svg') no-repeat 50% 50%;
+    background-size: 100% 100%;
+}
+
+
+.co2msg,.occupationmsg,.carcatmsg
+{
+    font-size: 0.8em;
+}
+
+.co2msg .occupcoe 
+{
+    display: block;
+    font-size: 2em;
+}
+
+#divOccupation
+{
+    margin: 0.5em;
+    text-align: center;
+    color:#fafafa;
+
+}
+
+ 
+#divOccupationDesc,
+#divCarCatDesc
+{
+    background: #2481bc url('EysaMobv2/btn-shadow.png') no-repeat 50% 50%;
+    background-size: 100% 100%;
+
+    text-align: left;
+    font-size: 1.2em;
+
+    margin: 0.5em;
+    padding: 0.5em;
+
+
+
+
+}
+
+
+#divOccupationDesc .fieldlabel,
+#divCarCatDesc .fieldlabel
+{
+    /*  for icons */
+    padding-left: 1.5em;
+    background-size: auto 100%;
+
+    /* 1 line overflow*/
+    width: 85%;
+    box-sizing: border-box;
+    white-space: nowrap;
+    overflow: hidden;
+
+}
+
+#divOccupation .fieldlabel ,
+#divOccupation .fieldvalue 
+{
+    display: inline-block;
+}
+
+#divOccupationDesc .fieldlabel
+{
+    padding-left: 1.5em;
+    background: transparent url('EysaMobv2/location-ico.svg') no-repeat 0% 50%;
+    background-size: auto 100%;
+}
+
+
+#divOccupationDesc .fieldvalue 
+{
+    background-color: #fafafa; color:#2481bc;
+    padding: 0em 0.2em;
+    border-radius: 5px;
+    float: right;
+}
+
+
+
+
+
+#divCarCatDesc .fieldlabel
+{
+    padding-left: 1.5em;
+    background: transparent url('EysaMobv2/plate-ico.svg') no-repeat 0% 50%;
+    background-size: auto 100%;
+
+    
+}
+
+
+#divCarCatDesc .fieldvalue 
+{
+    background-color: #fafafa; color:#2481bc;
+    padding: 0em 0.2em;
+    border-radius: 5px;
+    float: right;
+}
+
+
+
+form
+{
+    padding: 0em 0.5em;
+}
+
+
+.chkShowAgain
+{
+    zoom:2;
+}
+.chkShowAgain *
+{
+    display: inline-block;
+    vertical-align:baseline;
+    color:#fafafa;
+}
+
+
+
+button.k-button[type=submit]
+{
+    margin: 0px;
+    padding: 0.5em;
+    width: 100%;
+    background: #4aba70 url('EysaMobv2/btn-shadow.png') no-repeat 50% 50%;
+    background-size: 100% 100%;
+    border-color: #4b8056;
+    color: #fafafa;
+    font-weight: normal;
+    text-transform: uppercase;
+
+    /*icon position*/
+    position: relative;
+}
+
+button.k-button[type=submit]:hover,
+button.k-button[type=submit]:focus,
+button.k-button[type=submit]:active
+{
+    background: #26af5f url('EysaMobv2/btn-shadow.png') no-repeat 50% 50%;
+    background-size: 100% 100%;
+
+    color:inherit;
+
+}
+
+    button.k-button[type=submit] .k-icon 
+    {
+        position: absolute;
+        top: 0px;
+        bottom: 0px;
+        left: 0px;
+        right: 75%;
+        width: auto;
+        height: inherit;
+        background: transparent url('EysaMobv2/ico_done.svg') no-repeat 0% 50%;
+        background-size: auto 100%;
+    }
+
+/*****************************************************
+
+    MEDIA QUERIES
+
+*******************************************************/
+
+
+@media only screen  
+    /*and (min-width: 920px)*/
+  and (orientation: landscape) 
+{
+
+
+    .co2msg,.occupationmsg,.carcatmsg
+    {
+        font-size: 1em;
+    }
+
+
+    .chkShowAgain
+    {
+        zoom: 1.5;
+        margin: 0.5em 0;
+    }
+
+
+
+}

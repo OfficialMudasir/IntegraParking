@@ -1,0 +1,45 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PermitRenewer", "PermitRenewer\PermitRenewer.csproj", "{EADA74BB-86E4-4AA7-B12D-972B9D9F059C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "integraMobile.Domain", "..\integraMobile.Domain\integraMobile.Domain.csproj", "{D61B49D2-71E7-4594-B4BF-7111445DD51C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "integraMobile.Infrastructure", "..\integraMobile.Infrastructure\integraMobile.Infrastructure.csproj", "{1A917A7C-C1D1-4BC8-9434-9F37FADC0A6B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{F8B956FD-AC23-40DD-8FB3-84CED8B85F9A}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "integraMobile.ExternalWS", "..\integraMobile.ExternalWS\integraMobile.ExternalWS.csproj", "{CAF33ABE-7E51-4812-AE08-78DA84F2140B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EADA74BB-86E4-4AA7-B12D-972B9D9F059C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EADA74BB-86E4-4AA7-B12D-972B9D9F059C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EADA74BB-86E4-4AA7-B12D-972B9D9F059C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EADA74BB-86E4-4AA7-B12D-972B9D9F059C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D61B49D2-71E7-4594-B4BF-7111445DD51C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D61B49D2-71E7-4594-B4BF-7111445DD51C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D61B49D2-71E7-4594-B4BF-7111445DD51C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D61B49D2-71E7-4594-B4BF-7111445DD51C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A917A7C-C1D1-4BC8-9434-9F37FADC0A6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A917A7C-C1D1-4BC8-9434-9F37FADC0A6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A917A7C-C1D1-4BC8-9434-9F37FADC0A6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A917A7C-C1D1-4BC8-9434-9F37FADC0A6B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CAF33ABE-7E51-4812-AE08-78DA84F2140B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CAF33ABE-7E51-4812-AE08-78DA84F2140B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CAF33ABE-7E51-4812-AE08-78DA84F2140B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CAF33ABE-7E51-4812-AE08-78DA84F2140B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

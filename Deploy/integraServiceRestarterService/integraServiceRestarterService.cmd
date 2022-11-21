@@ -1,0 +1,1 @@
+integraServiceRestarterService.exe -c

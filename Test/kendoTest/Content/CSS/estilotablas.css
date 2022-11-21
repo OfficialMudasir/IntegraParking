@@ -1,0 +1,1061 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body {
+	background-color:#FFF;
+	margin-bottom: 0px;
+	margin-top: 0px;
+	font-weight: normal;
+	border: 0px;
+	font-family: Arial, sans-serif;
+	font-size:14px;
+	line-height:22px;
+	color:#017dc7;	
+
+}
+
+#cuerpo {
+	-height: 1000px;	
+	-width: 980px;
+	-background-color: #FFF;
+	-margin-right: 0;
+	-margin-left:0;
+ 	-padding: 20px;
+	}
+	
+#cabecera  {
+	height: 85px;
+	width: 100%;
+	background-color: #017dc7;
+	margin-right:0;
+	margin-left:0;
+	margin-top:0;
+	-padding: 20px;
+	background: #017dc7 url(../img/logoIntegra.jpg) no-repeat top left;
+	color: #090;
+	}
+ 
+div.cabecera {
+	border:1px solid #017dc7;
+	clear:left;
+	float:none;
+	position:static;
+	display:block;
+	padding-left:45%;
+	padding-right:8%;
+	-padding-top:4%;
+	-padding-bottom:4%;
+	-margin-bottom:20px;
+	text-align:left;
+}
+#centro  {
+	height:600px;	
+	width: 90%;
+	background-color: #FFF;
+	margin-right:0;
+	margin-left:0;
+	margin-top:0px;
+ 	-padding: 20px;	 
+	}
+ 
+div.centro {
+	-border:1px solid #CCC;
+	clear:left;
+	float:none;
+	position:static;
+	display:block;
+	padding-left:5%;
+	padding-right:5%;
+	-padding-top:4%;
+	-padding-bottom:4%;
+	-margin-bottom:20px;
+	text-align:left;
+}
+#botones {
+	height:200px;	
+	width: 100%;
+	background-color: #FFF;
+	margin-right:0;
+	margin-left:0px;
+	padding-top:20px;
+
+	}
+ 
+div.botones {
+	-border:1px solid #CCC;
+	clear:left;
+	float:none;
+	position:static;
+	display:block;
+	padding-left:8%;
+	padding-right:8%;
+	-padding-top:4%;
+	-padding-bottom:4%;
+	-margin-bottom:20px;
+	text-align:left;
+}
+
+#botonesMenu {
+	height:100px;
+	width:100%;
+	margin-top:0px;
+	margin-left:0px;
+	margin-bottom:40px;
+	background-color:#86c7ec;
+	padding-top:10px;	
+	-margin:0;
+	min-width: 100%;
+	max-width: 100%;
+	float:left;
+	clear:left;
+	display: inline;
+	text-align:center;
+
+}
+
+
+h1 {
+	font-family:'Source Sans Pro', Arial;
+	font-size:x-large;
+	color:#007dc5;
+	margin-bottom: 20px;
+}
+h2 {
+	font-family:'Source Sans Pro', Arial;
+	font-size:large;
+	color:#9C3;
+	-border-bottom:1px solid #CCC ;
+	margin-bottom: 20px;
+}
+
+h3 {
+	font-family:'Source Sans Pro', Arial;
+	font-size:medium;
+	color:#9C3;
+	border-bottom:1px solid #9C3 ;
+	margin-bottom: 20px;
+}
+
+h4 {
+	/* usado en formulario de acceso de portada */
+	font-family:'Source Sans Pro', Arial;
+	font-size:medium;
+	color:#007dc5;
+	margin:0px;
+	-font-weight:bold;
+}
+
+a {
+font-weight:bold;
+text-decoration:none;
+}
+a:link {
+	color:#007dc5;
+	line-height:18px;
+}
+a:visited  {
+	color:#acb2b5;
+}
+a:active  {
+	color:#ffrr43;
+}
+a:hover {
+	color:#61bdf1;
+}
+
+form {
+	font-family:'Source Sans Pro', Arial;
+	border:0px;
+	margin:10px 0px 10px 0px;
+	padding:0px;
+	
+}
+.username {
+	font-family:'Source Sans Pro', Arial;
+	font-size:16px;
+	color:#FFF;
+	-border-bottom:1px solid #CCC ;
+	margin-bottom:0px;
+	margin-top:20px;
+	
+}
+
+.usersaldo{
+	font-family:'Source Sans Pro', Arial;
+	font-size:18px;
+	color:#FFF;
+	-border-bottom:1px solid #CCC ;
+	margin-bottom:0px;
+	margin-top:20px;
+}
+div.greenhr hr {
+	border:1px solid #9C3;
+	height: 1px;
+	color: #9C3;
+	background-color: #9C3;
+	margin: 10px 0px 2px 0px;
+	width: 100%;
+	display: block;
+	clear:left;
+}
+
+.inputelementsw100{
+	background:#fff;
+	border:1px solid #666;
+	/*0.5 es la transparencia*/
+	border-radius: 5px;
+	-webkit-border-radius:5px;
+	/*los navegadores que incluye webkit son Crome, safari-*/
+	-o-border-radius: 5px;
+	/*compatibilidad opera*/
+	display:block;
+	margin: 4px 0px 8px 0px;
+	width:100%;
+	color:#555;
+	
+}
+
+form input, form textarea, form select {
+	background:#fff;
+	border:1px solid #666;
+	/*0.5 es la transparencia*/
+	border-radius: 5px;
+	-webkit-border-radius:5px;
+	/*los navegadores que incluye webkit son Crome, safari-*/
+	-o-border-radius: 5px;
+	/*compatibilidad opera*/
+	display:block;
+	margin: 4px 0px 8px 0px;
+	color:#555;
+	
+}
+
+
+
+form select { /* corrige un pequeño error que hace que los select se vean algo mas altos que el resto de inputs*/
+height:18px;
+}
+
+footer { 
+	font-family:'Source Sans Pro', Arial;	
+	font-size:15px;
+	color: white;
+	margin: auto;
+	text-align:center;
+	width:82%;
+	height:80px;
+	background:#999;
+	
+}
+.apartado,.apartado a, .apartado a:hover, .apartado a:visited 
+{
+font-size:small;
+line-height:10px;
+-font-weight:bold;
+text-decoration:none;
+color:#0072b4;
+position:relative;
+top:4px;
+margin-bottom:0px;
+margin-left:8px;
+}
+.aclaracion, .aclaracion a, .aclaracion a:hover, .aclaracion a:visited {
+font-size:small;
+text-decoration:none;
+color:#999;
+position:relative;
+top:4px;
+margin-bottom:10px;
+}
+
+.bluetext {
+	color:#007dc5;
+}
+
+.redtext{
+	color:#ab1717;
+	font-weight:bold;
+	font-size:16px;
+	line-height:26px;
+}
+
+.greentext {
+	color:#a6ce39;
+	font-weight:bold;
+	font-size:16px;
+	line-height:26px;
+}
+
+
+div.div50-left
+{
+margin:0;
+width:48%;
+min-width: 48%;
+max-width: 48%;
+float:left;
+clear:left;
+display: inline;
+padding-right:2%;
+height:auto;
+
+}
+
+div.div50-leftStep
+{
+margin:0;
+width:48%;
+min-width: 48%;
+max-width: 48%;
+float:left;
+clear:left;
+display: inline;
+padding-right:10%;
+height:auto;
+
+}
+div.div-leftbuycredit
+{
+margin:0;
+width:60%;
+min-width: 60%;
+max-width: 60%;
+float:left;
+clear:left;
+display: block;
+padding-right:10%;
+-padding-left:20%;
+height:auto;
+
+}
+
+div.div50-right
+{
+margin:0;
+width:50%;
+min-width: 50%;
+max-width: 50%;
+float:left;
+clear:none;
+display: inline;
+padding: 0px;
+height:auto;
+
+}
+
+
+div.div33-left
+{
+margin:0;
+width:32%;
+min-width: 32%;
+max-width: 32%;
+clear:none;
+float:left;
+display: inline;
+padding-right:1%;
+}
+
+div.div33-center
+{
+margin:0;
+width:32%;
+min-width: 32%;
+max-width: 32%;
+clear:none;
+float:left;
+display: inline;
+padding-right:1%;
+padding-left:1%;
+}
+
+div.div33-right
+{
+margin:0;
+width:33%;
+min-width: 33%;
+max-width: 33%;
+clear:none;
+float:left;
+display: inline;
+padding: 0;
+}
+
+
+div.div40-left
+{
+margin:0;
+width:38%;
+min-width: 38%;
+max-width: 38%;
+overflow: visible;
+clear:none;
+float:left;
+display: inline;
+padding-right:2%;
+}
+div.div60-right
+{
+margin:0;
+width:60%;
+min-width: 60%;
+max-width: 60%;
+clear:none;
+float:left;
+display: inline;
+padding-right:0;
+}
+div.div65-right
+{
+margin:0;
+width:63%;
+min-width: 63%;
+max-width: 63%;
+clear:none;
+float:left;
+display: inline;
+padding-right:0;
+}
+
+div.div100
+{
+margin:0;
+width:100%;
+min-width: 100%;
+max-width: 100%;
+float:left;
+clear:left;
+display: inline;
+height:auto;
+text-align:left;
+}
+
+div.div12-center
+{
+margin:0;
+width:11%;
+min-width: 11%;
+max-width: 11%;
+margin-right: 1%;
+clear:none;
+float:left;
+display: inline;
+height:auto;
+}
+
+
+div.div12-right
+{
+margin:0;
+width:12%;
+min-width: 12%;
+max-width: 12%;
+clear:none;
+float:left;
+display: inline;
+height:auto;
+}
+
+div.div25-leftBotones
+{
+margin-right:1%;
+width:22%;
+min-width: 22%;
+max-width: 22%;
+clear:none;
+float:left;
+display: inline;
+height:auto;
+}
+
+div.div25-right
+{
+margin:0;
+width:25%;
+min-width: 25%;
+max-width: 25%;
+clear:none;
+float:left;
+display: inline;
+height:auto;
+}
+
+div.div15-left
+{
+margin-right:1%;
+width:14%;
+min-width: 14%;
+max-width: 14%;
+clear:none;
+float:left;
+display: inline;
+height:auto;
+}
+div.div35-left
+{
+margin-right:1%;
+width:34%;
+min-width: 34%;
+max-width: 34%;
+clear:none;
+float:left;
+display: inline;
+height:auto;
+}
+
+.botonverde
+{
+background-color:#9C3;
+color:#FFF;
+float:right;
+display:inline;
+width:auto;
+padding-left:25px;
+padding-right:25px;
+padding-top:5px;
+padding-bottom:5px;
+font-weight:bold;
+border:0px;
+border-radius: 20px;
+-webkit-border-radius:20px;
+/*los navegadores que incluye webkit son Crome, safari-*/
+-o-border-radius: 20px;
+/*compatibilidad opera*/
+margin-left:10px;
+cursor:pointer;
+}
+.botonverdeleft
+{
+background-color:#9C3;
+color:#FFF;
+float:left;
+display:inline;
+width:auto;
+padding-left:25px;
+padding-right:25px;
+padding-top:5px;
+padding-bottom:5px;
+font-weight:bold;
+border:0px;
+border-radius: 20px;
+-webkit-border-radius:20px;
+/*los navegadores que incluye webkit son Crome, safari-*/
+-o-border-radius: 20px;
+/*compatibilidad opera*/
+margin-left:10px;
+cursor:pointer;
+}
+
+.botonverdecenter
+{
+background-color:#9C3;
+color:#FFF;
+float:none;
+display:inline;
+width:auto;
+padding-left:25px;
+padding-right:25px;
+padding-top:5px;
+padding-bottom:5px;
+font-weight:bold;
+border:0px;
+border-radius: 20px;
+-webkit-border-radius:20px;
+/*los navegadores que incluye webkit son Crome, safari-*/
+-o-border-radius: 20px;
+/*compatibilidad opera*/
+margin-left:10px;
+cursor:pointer;
+}
+
+.botongris
+{
+background-color:#CCC;
+color:#FFF;
+float:right;
+display:inline;
+width:auto;
+padding-left:25px;
+padding-right:25px;
+padding-top:5px;
+padding-bottom:5px;
+font-weight:bold;
+border:0px;
+border-radius: 20px;
+-webkit-border-radius:20px;
+/*los navegadores que incluye webkit son Crome, safari-*/
+-o-border-radius: 20px;
+/*compatibilidad opera*/
+margin-left:10px;
+cursor:pointer;
+}
+
+.botonazul
+{
+background-color:#007dc5;
+color:#FFF;
+float:right;
+display:inline;
+width:auto;
+padding-left:25px;
+padding-right:25px;
+padding-top:5px;
+padding-bottom:5px;
+font-weight:bold;
+border:0px;
+border-radius: 20px;
+-webkit-border-radius:20px;
+/*los navegadores que incluye webkit son Crome, safari-*/
+-o-border-radius: 20px;
+/*compatibilidad opera*/
+margin-left:10px;
+}
+.botonGrande
+{
+background-color:#9C3;
+color:#FFF;
+float:right;
+display:inline;
+width:auto;
+padding-left:55px;
+padding-right:55px;
+padding-top:10px;
+padding-bottom:10px;
+font-weight:bold;
+border:0px;
+border-radius: 20px;
+-webkit-border-radius:20px;
+/*los navegadores que incluye webkit son Crome, safari-*/
+-o-border-radius: 20px;
+/*compatibilidad opera*/
+margin-left:10px;
+}
+.botonverde:hover, .botongris:hover , .botonGrande:hover
+{
+color:#007dc5;
+}
+
+.botonazul:hover
+{
+color:#9C3;
+}
+
+.cajagris {
+border:1px solid #CCC;
+clear:left;
+float:left;
+display:block;
+width:84%;
+padding-left:8%;
+padding-right:8%;
+padding-top:4%;
+padding-bottom:4%;
+margin-bottom:20px;
+text-align:left;
+}
+
+#cajagris ul {
+list-style-image:url(../img/ok.jpg); 
+}
+
+.cajabotones {
+-border:1px solid #CCC;
+-background-color:blue;
+clear:left;
+float:left;
+display:block;
+width:96%;
+padding-left:4%;
+-padding-right:5%;
+padding-top:4%;
+padding-bottom:4%;
+margin-bottom:20px;
+text-align:left;
+}
+
+
+
+
+.cajagris input
+{
+display:inline;
+width:auto;
+margin-right:5px;
+}
+
+.cajagris img
+{
+vertical-align:middle;
+
+}
+
+.login {
+width:50%;
+float:right;
+clear:none;
+display:inline;
+}
+
+.login input{
+text-align:left;
+width:20%;
+display:inline;
+clear:none;
+float:right;
+background:#CCC;
+color:#666;
+margin:0 0 0 3px;
+border:0px;
+padding-left:10px;
+}
+
+.login img{
+float:right;
+display:inline;
+clear:none;
+margin:0 0 0 3px;
+border:0px;
+padding-left:10px;
+}
+
+#header
+{
+background: url(../img/logo.jpg) no-repeat 0px 50px;
+width: 100%;
+float: left;
+margin: 0px;
+padding: 0px;
+height: 120px;
+position:relative;
+border-bottom: #CCC 1px solid; 
+padding-bottom:20px;
+margin-bottom:40px;
+}
+.left
+{
+float:left;
+width:auto;
+display:inline;
+text-align:left;
+}
+
+.right
+{
+float:right;
+width:auto;
+display:inline;
+text-align:right;
+}
+
+#menucontainer
+{
+width:100%;
+display:block;
+height:auto;
+margin-top:10px;
+margin-left:2%;
+padding:0;
+font-weight:bold;
+font-color:white;
+}
+
+
+#menucontainer ul {
+	vertical-align:baseline;
+	line-height: 1em; /* setting the line height now so we don't have any headaches*/
+	margin: 0 0 0 0; /* let's keep the margin set to 0 for the same reasons as above*/
+	list-style-type: none; /* we remove the UL's default disc bullets */
+	float: left; /* we float the list to the left like we will all the elements inside*/
+	padding: 0px 0px 0px 0px; /* give it a left padding of 5px to counter the effect of margin -5px below */
+	border:0px;
+	color:#007dc5;
+	-font-size:large;
+	display:inline;
+	-background-color:#007dc5; /* esto determina el color de las rayas que vemos entre opciones de menu */
+}
+#menucontainer ul li {
+	float: left;
+	vertical-align:baseline;	
+	background-color:#007dc5;
+	margin:0;
+	margin-left:0px; /* esto determina el grosor de las rayas que vemos entre opciones de menu */
+	border:0px;
+	padding-left:15px;
+	padding-right:15px;
+	padding-top:3px;
+	padding-bottom:3px;
+	-font-size:large;
+	display:inline;
+	cursor: pointer;
+	vertical-align:baseline;
+
+}
+
+
+#menucontainer-DISABLED ul li:first-child {
+	-webkit-border-top-left-radius: 15px;
+	-webkit-border-bottom-left-radius: 15px;
+	-moz-border-radius-topleft: 15px;
+	-moz-border-radius-bottomleft: 15px;
+	border-top-left-radius: 15px;
+	border-bottom-left-radius: 15px;
+
+}
+
+
+#menucontainer ul li:first-child {
+	margin-left:0px; /* esto quita la primera raya vertical de la lista de menu */
+	padding-left:0px;  /* esto alinea el primer element de menu "English" con la izquierda absoluta */
+}
+
+#menucontainer-DISABLED ul li:last-child {
+	-webkit-border-top-right-radius: 15px;
+	-webkit-border-bottom-right-radius: 15px;
+	-moz-border-radius-topright: 15px;
+	-moz-border-radius-bottomright: 15px;
+	border-top-right-radius: 15px;
+	border-bottom-right-radius: 15px;
+}
+
+
+#menucontainer ul li a, #menucontainer ul li a:visited {
+text-decoration: none; /* remove the default underline off the anchor text */
+display: block; /* we display this text as block so that we can apply padding/margin without problems */
+float: left; /* floatin' left, to make the menu horizontal */
+padding: 0px 0px 0px 0px; /* we give it a left padding of 10px to show the first 10 pixels of the tabs image. you can also use padding-left: 10px; */
+margin-left: 0px; /* this is important for the overlapping part - we are overlapping the tabs by 5 px */
+z-index: 0; /* keep it on layer 0 (default) */
+position: relative; /* very important as this enables the z-index to work for us and keeps the tabs where they should be */
+color: #AAA; /* color of the tab text */
+}
+
+#menucontainer ul li a:hover {
+position: relative; /* again, keep things relative */
+z-index: 5; /* we show this tab over all other tabs in the menu, which would be on layer 0, thus overlapping occurs */
+color: #666;
+}
+
+#divformularioacceso {
+border:1px solid #CCC;
+clear:left;
+float:left;
+display:block;
+width:96%;
+padding-left:2%;
+padding-right:2%;
+padding-top:20px;
+padding-bottom:2%;
+margin-bottom:20px;
+text-align:left;
+}
+
+#divlogin {
+padding:0px;
+margin:0px;
+width:55%;
+display:inline;
+float:left;
+}
+
+#divregistro {
+padding:0px;
+margin:0px;
+-background: #eee;
+width:44%;
+display:inline;
+float:left;
+border-left:1px solid #ccc
+}
+
+#divloginmargen {
+margin:15px;
+margin-right:30px;
+padding-left:80px;
+background: url(../img/imgsesionusuario.jpg) no-repeat top left; 
+}
+
+.left
+{
+float:left;
+width:auto;
+display:inline;
+text-align:left;
+}
+
+.right
+{
+float:right;
+width:auto;
+display:inline;
+text-align:right;
+}
+
+#cuerpofacturacion {
+	height: 1000px;
+	width: 1200px;
+	background-color: #FFF;
+	margin-right: auto;
+	margin-left: auto;
+	-padding: 20px;
+	font-family: Arial, sans-serif;
+}
+
+
+#cabeceraFacturacion  {
+	height: 85px;
+	width: 100%;
+	background-color: #017dc7;
+	margin-right:0;
+	margin-left:0;
+	margin-top:0;
+	padding-top: 25px;
+	background: #017dc7 url(../img/logoIntegra.jpg) no-repeat top left;
+	color: #090;
+	}
+
+#menufact
+{
+float:right;
+width:50%;
+margin-left:0;
+display:block;
+height:auto;
+margin:0;
+padding:0;
+font-weight:bold;
+}
+
+#menufact ul {
+	line-height: 1em; /* setting the line height now so we don't have any headaches*/
+	margin: 0 0 0 0; /* let's keep the margin set to 0 for the same reasons as above*/
+	list-style-type: none; /* we remove the UL's default disc bullets */
+	float: right; /* we float the list to the left like we will all the elements inside*/
+	padding: 0px 0px 0px 0px; /* give it a left padding of 5px to counter the effect of margin -5px below */
+	border:0px;
+	color:#fff;
+	vertical-align:baseline;
+	-font-size:large;
+	display:inline;
+	background-color:#007dc5; /* esto determina el color de las rayas que vemos entre opciones de menu */
+}
+
+#menufact ul li {
+	float: right;
+	background-color:#007dc5;
+	margin:0;
+	margin-left:3px; /* esto determina el grosor de las rayas que vemos entre opciones de menu */
+	border:0px;
+	padding-left:15px;
+	padding-right:15px;
+	padding-top:3px;
+	padding-bottom:3px;
+	-font-size:large;
+	display:inline;
+	cursor: pointer;
+
+}
+
+#menufact-DISABLED ul li:first-child {
+	-webkit-border-top-left-radius: 15px;
+	-webkit-border-bottom-left-radius: 15px;
+	-moz-border-radius-topleft: 15px;
+	-moz-border-radius-bottomleft: 15px;
+	border-top-left-radius: 15px;
+	border-bottom-left-radius: 15px;
+
+}
+
+
+#menufact ul li:first-child {
+	margin-left:0px; /* esto quita la primera raya vertical de la lista de menu */
+	padding-left:0px;  /* esto alinea el primer element de menu "English" con la izquierda absoluta */
+}
+
+
+#menufact-DISABLED ul li:last-child {
+	-webkit-border-top-right-radius: 15px;
+	-webkit-border-bottom-right-radius: 15px;
+	-moz-border-radius-topright: 15px;
+	-moz-border-radius-bottomright: 15px;
+	border-top-right-radius: 15px;
+	border-bottom-right-radius: 15px;
+}
+
+#menufact ul li a, #menufact ul li a:visited {
+text-decoration: none; /* remove the default underline off the anchor text */
+display: block; /* we display this text as block so that we can apply padding/margin without problems */
+float: left; /* floatin' left, to make the menu horizontal */
+padding: 0px 0px 0px 0px; /* we give it a left padding of 10px to show the first 10 pixels of the tabs image. you can also use padding-left: 10px; */
+margin-left: 0px; /* this is important for the overlapping part - we are overlapping the tabs by 5 px */
+z-index: 0; /* keep it on layer 0 (default) */
+position: relative; /* very important as this enables the z-index to work for us and keeps the tabs where they should be */
+color: #AAA; /* color of the tab text */
+}
+
+#menufact ul li a:hover {
+position: relative; /* again, keep things relative */
+z-index: 5; /* we show this tab over all other tabs in the menu, which would be on layer 0, thus overlapping occurs */
+color: #666;
+}
+
+.sort_desc 
+{
+	background-image: url('../img/down.png') !important;
+	background-position: right !important;
+	background-repeat: no-repeat !important;
+	padding-right: 20px !important;
+	filter: !important;
+}
+.sort_asc 
+{
+	background-image: url('../img/up.png') !important;
+	background-position: right !important;
+	background-repeat: no-repeat !important;
+	padding-right: 20px !important;
+	filter: !important;
+}
+
+.importe {
+	font-size:24px;
+	text-align:center;
+}
+div.error {
+	font-family:Tahoma, Geneva, sans-serif;
+	font-size:small;
+	color:Red;
+}
+
+.field-validation-error
+{
+    color: #ff0000;
+}
+
+.input-validation-error
+{
+    border: 1px solid #ff0000;
+    background-color: #ffeeee;
+}
+
+.validation-summary-errors
+{
+    font-weight: bold;
+    color: #ff0000;
+}
+
+.PlatesSelect {
+	background:#fff;
+	border:1px solid #666;
+	/*0.5 es la transparencia*/
+	border-radius: 5px;
+	-webkit-border-radius:5px;
+	/*los navegadores que incluye webkit son Crome, safari-*/
+	-o-border-radius: 5px;
+	/*compatibilidad opera*/
+	display:block;
+	margin: 4px 0px 8px 0px;
+	width:100%;
+	color:#555;	
+    float:left;
+    height:100px;
+    line-height:27px;
+}

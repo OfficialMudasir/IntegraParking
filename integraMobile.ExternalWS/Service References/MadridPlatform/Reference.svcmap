@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="77054e5f-6d1e-41c2-9dcc-897c76ec226c" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="https://ser-web.madmovilidad.es/PublisherService/PublisherService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="PublisherService.xsd" MetadataType="Schema" ID="530649a2-7837-472f-8a95-45c8986c7d39" SourceId="1" SourceUrl="http://ser-web.madmovilidad.es/PublisherService/PublisherService.svc?xsd=xsd7" />
+    <MetadataFile FileName="PublisherService1.xsd" MetadataType="Schema" ID="4a286f80-f732-4369-90e1-a34fffaa83ae" SourceId="1" SourceUrl="http://ser-web.madmovilidad.es/PublisherService/PublisherService.svc?xsd=xsd10" />
+    <MetadataFile FileName="PublisherService.wsdl" MetadataType="Wsdl" ID="09408181-ed26-473f-b421-8925b9dd1144" SourceId="1" SourceUrl="http://ser-web.madmovilidad.es/PublisherService/PublisherService.svc?wsdl=wsdl1" />
+    <MetadataFile FileName="PublisherService2.xsd" MetadataType="Schema" ID="b4cbbd6a-e84e-4d00-a6a7-46bbabf7d2c3" SourceId="1" SourceUrl="http://ser-web.madmovilidad.es/PublisherService/PublisherService.svc?xsd=xsd8" />
+    <MetadataFile FileName="PublisherService3.xsd" MetadataType="Schema" ID="e83e1e81-0800-4f84-89d2-85b8654aa5ca" SourceId="1" SourceUrl="http://ser-web.madmovilidad.es/PublisherService/PublisherService.svc?xsd=xsd9" />
+    <MetadataFile FileName="PublisherService4.xsd" MetadataType="Schema" ID="d21ca375-6922-4a14-9deb-219b09848014" SourceId="1" SourceUrl="http://ser-web.madmovilidad.es/PublisherService/PublisherService.svc?xsd=xsd6" />
+    <MetadataFile FileName="PublisherService1.wsdl" MetadataType="Wsdl" ID="32f1f134-1e41-4cee-9684-49ae9d60b48a" SourceId="1" SourceUrl="http://ser-web.madmovilidad.es/PublisherService/PublisherService.svc?wsdl" />
+    <MetadataFile FileName="PublisherService5.xsd" MetadataType="Schema" ID="c71eaad4-d5e4-4689-8b09-f2226980d160" SourceId="1" SourceUrl="http://ser-web.madmovilidad.es/PublisherService/PublisherService.svc?xsd=xsd4" />
+    <MetadataFile FileName="PublisherService6.xsd" MetadataType="Schema" ID="4b9c368a-8206-42b7-8641-f340303d63ad" SourceId="1" SourceUrl="http://ser-web.madmovilidad.es/PublisherService/PublisherService.svc?xsd=xsd5" />
+    <MetadataFile FileName="PublisherService7.xsd" MetadataType="Schema" ID="26c03a43-915d-4200-864a-6a7eb17906dd" SourceId="1" SourceUrl="http://ser-web.madmovilidad.es/PublisherService/PublisherService.svc?xsd=xsd2" />
+    <MetadataFile FileName="PublisherService8.xsd" MetadataType="Schema" ID="e6086605-0838-4837-b3c6-20d3bb89ccd5" SourceId="1" SourceUrl="http://ser-web.madmovilidad.es/PublisherService/PublisherService.svc?xsd=xsd3" />
+    <MetadataFile FileName="PublisherService9.xsd" MetadataType="Schema" ID="b701e6f9-2c7b-4e9d-b6c5-6e8489af6632" SourceId="1" SourceUrl="http://ser-web.madmovilidad.es/PublisherService/PublisherService.svc?xsd=xsd0" />
+    <MetadataFile FileName="PublisherService10.xsd" MetadataType="Schema" ID="fd41d239-0a3f-497f-b023-37f970fd98a2" SourceId="1" SourceUrl="http://ser-web.madmovilidad.es/PublisherService/PublisherService.svc?xsd=xsd1" />
+    <MetadataFile FileName="PublisherService2.wsdl" MetadataType="Wsdl" ID="725bb439-a08d-4524-9794-d3c23118eb8c" SourceId="1" SourceUrl="http://ser-web.madmovilidad.es/PublisherService/PublisherService.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="PublisherService.disco" MetadataType="Disco" ID="383a7d33-a35a-4e5d-83d7-5d4e7e5ca991" SourceId="1" SourceUrl="http://ser-web.madmovilidad.es/PublisherService/PublisherService.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

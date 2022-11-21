@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="urn:anulaciones" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="urn:anulaciones" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="urn:anulaciones">
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <xsd:import namespace="http://schemas.xmlsoap.org/wsdl/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="EsExpedienteAnulableRequest">
+    <wsdl:part name="CodigoPoblacion" type="xsd:int" />
+    <wsdl:part name="Expediente" type="xsd:string" />
+    <wsdl:part name="FechaParquimetro" type="xsd:long" />
+  </wsdl:message>
+  <wsdl:message name="EsExpedienteAnulableResponse">
+    <wsdl:part name="return" type="xsd:int" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerImporteAnulacionRequest">
+    <wsdl:part name="CodigoPoblacion" type="xsd:int" />
+    <wsdl:part name="Expediente" type="xsd:string" />
+    <wsdl:part name="FechaParquimetro" type="xsd:long" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerImporteAnulacionResponse">
+    <wsdl:part name="return" type="xsd:int" />
+  </wsdl:message>
+  <wsdl:message name="AnularExpedienteRequest">
+    <wsdl:part name="CodigoPoblacion" type="xsd:int" />
+    <wsdl:part name="Expediente" type="xsd:string" />
+    <wsdl:part name="FechaPago" type="xsd:long" />
+    <wsdl:part name="NumeroParquimetro" type="xsd:int" />
+    <wsdl:part name="NumeroTicketImpreso" type="xsd:int" />
+  </wsdl:message>
+  <wsdl:message name="AnularExpedienteResponse">
+    <wsdl:part name="return" type="xsd:int" />
+  </wsdl:message>
+  <wsdl:portType name="anulacionesPortType">
+    <wsdl:operation name="EsExpedienteAnulable">
+      <documentation>Devuelve si el expediente es anulable</documentation>
+      <wsdl:input message="tns:EsExpedienteAnulableRequest" />
+      <wsdl:output message="tns:EsExpedienteAnulableResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerImporteAnulacion">
+      <documentation>Devuelve el importe de la anulacion, en centimos de euro</documentation>
+      <wsdl:input message="tns:ObtenerImporteAnulacionRequest" />
+      <wsdl:output message="tns:ObtenerImporteAnulacionResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="AnularExpediente">
+      <documentation>Anula el expediente y devuelve el nï¿½mero de expedientes anulados(1 o 0)</documentation>
+      <wsdl:input message="tns:AnularExpedienteRequest" />
+      <wsdl:output message="tns:AnularExpedienteResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="anulacionesBinding" type="tns:anulacionesPortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <wsdl:operation name="EsExpedienteAnulable">
+      <soap:operation soapAction="urn:anulaciones#EsExpedienteAnulable" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:anulaciones" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:anulaciones" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerImporteAnulacion">
+      <soap:operation soapAction="urn:anulaciones#ObtenerImporteAnulacion" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:anulaciones" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:anulaciones" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AnularExpediente">
+      <soap:operation soapAction="urn:anulaciones#AnularExpediente" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:anulaciones" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:anulaciones" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="anulaciones">
+    <wsdl:port name="anulacionesPort" binding="tns:anulacionesBinding">
+      <soap:address location="http://www.gesblue.com/app/v2/webservice_anulaciones.php" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

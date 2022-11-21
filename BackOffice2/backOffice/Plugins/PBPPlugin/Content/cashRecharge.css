@@ -1,0 +1,73 @@
+﻿    .editor-label {
+        float: left;
+        clear: both;
+        width: 7%;
+        padding: .4em 0 1em;
+        margin-left: 2%;
+        text-align: right;
+    }
+
+    .editor-field {
+        float: right;
+        clear: right;
+        width: 88%;
+        margin-right: 2%;
+        padding: 0 0 .6em;
+    }
+
+    .buttonsleft-container {
+        float: left;
+        clear: both;
+        width: 5%;        
+        margin-left: 2%;        
+        padding-top: 20px;
+    }
+    .buttonsright-container {
+        float: right;
+        clear: right;
+        width: 90%;
+        margin-right: 0%;        
+        text-align: left;
+        padding-top: 20px;
+    }
+
+    .recharge-icon {
+        width: 32px;
+        height: 32px;
+        background: transparent url(img/Tools/transfer.png) no-repeat 50% 50%;
+        background-size: contain;
+        overflow: hidden;
+        display: inline-block;
+        font-size: 0;
+        line-height: 0;
+        vertical-align: top;
+        margin: 2px 0 0 3px;
+        -webkit-border-radius: 5px;
+        -mox-border-radius: 5px;
+        border-radius: 5px;
+    }
+
+    .rechargeSummary-buttons {
+        text-align: center;
+        padding-top: 5px;
+    }
+
+    .rechargeSummary-content {    
+        height: calc(100% - 50px);
+        /*margin-top: 20px;*/
+    }
+
+    .input-summary {
+        width: 100%;
+        height: auto;    
+    }
+
+.summary-title {
+    text-align: center;
+    padding-bottom: 20px;
+    font-size: x-large;
+}
+
+.k-edit-form-container.rechargeSummary-content {
+    width: 100%;
+}

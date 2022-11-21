@@ -1,0 +1,451 @@
+﻿@import url(http://fonts.googleapis.com/css?family=Arimo:400,700,400italic,700italic);
+
+html,body
+{
+
+    font-family: 'Arimo', sans-serif; 
+
+
+    background-color:#47454a;
+    /* eliminate site.css borders*/
+
+    border: none;
+
+    width: 100%;
+    height: 100%;
+
+
+    
+    
+}
+
+body
+{
+        font-size: 250%;
+
+}
+
+h1, h2, h3,
+h4, h5, h6 {
+    color: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+label {
+    cursor: pointer;
+    cursor: hand;
+
+    font-size: initial;
+    font-weight:initial;
+    color: initial;
+} 
+
+a{padding:initial;}
+
+
+/*****  LOADING ******/
+.loading {
+    background: rgba(32,32,32,0.66) url('EysaMobv2/Preloader_7.gif') no-repeat 50% 50%;
+    background-size: 128px 128px;
+    color: #fafafa;
+
+    position: fixed;
+    z-index: 9999;
+
+    top: 0%; bottom:0%;
+    left: 0%; right:0%;
+    /*
+    width: 150px;
+    height: 150px;
+   
+    margin-top: -75px;
+    margin-left: -75px;
+        
+
+    border: 2px solid #24262b;
+    border-radius: 5px;
+
+
+
+    */
+    cursor:wait;
+}
+
+
+
+
+/********      CONTENT  BODY   ****************/
+
+div.container-content
+{
+    height:100%;
+    box-sizing: border-box;
+    padding-bottom: 128px; /* Footer Space*/
+}
+
+#body
+{
+
+
+    width: 100%;
+    max-width:none;
+    max-height:none;
+    min-height: 100%;
+
+    position: relative;
+
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#464449+0,24262b+100 */
+background: #464449; /* Old browsers */
+background: -moz-linear-gradient(-45deg,  #464449 0%, #24262b 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#464449), color-stop(100%,#24262b)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(-45deg,  #464449 0%,#24262b 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(-45deg,  #464449 0%,#24262b 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(-45deg,  #464449 0%,#24262b 100%); /* IE10+ */
+background: linear-gradient(135deg,  #464449 0%,#24262b 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#464449', endColorstr='#24262b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+
+background-attachment: fixed;
+
+}
+
+
+#body {
+    margin: 0px;
+    padding:0px;
+
+    background-color: initial;
+    color: #fafafa;
+}
+
+section.main-content
+{
+
+    margin:0px;
+
+    /* TGA @ For Header & Footer Height Spacing*/
+    padding:130px 0px;
+
+    background: none;
+    background-color:rgba(32,32,32,.32);
+
+
+}
+
+/*****  HEADER    ******/
+header
+{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+
+    display: block;
+    position: fixed;
+    top:0px;
+    left:0px;
+    right:0px;
+    z-index:999;
+
+
+    min-height:128px;
+    height:128px; /* Header Height*/
+
+
+    
+    /*reset from Site.css*/
+    font-size: inherit;
+    text-align: center;
+
+    background-color:#009d88;
+    background-image: url('EysaMobv2/btn-shadow.png');
+    background-position: center center;
+    background-size: 100% 100%;
+
+}
+
+/* For H2 Text Vertical Align*/
+header span.valign
+{
+    display:inline-block;
+    width:0px;
+    height:100%;
+    vertical-align:middle;
+}
+header h2
+{
+    font-family: 'Arimo', sans-serif; 
+
+    font-weight:normal;
+    font-size: inherit;
+
+    text-transform: uppercase;
+    margin: 0;
+
+    /* for side icons*/
+    display:inline-block;
+    vertical-align:middle;
+    padding: 0px 130px; /* Space for Both Side Icon Buttons*/
+
+    box-sizing:border-box;
+    width:98%;
+
+
+
+
+
+}
+
+header .btn-left
+{
+    position:absolute;
+    left: 0px;
+    height:100%;
+    width:128px;
+
+    background-size: 80%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-image:  url('EysaMobv2/back-ico.svg');
+    background-color: transparent;
+
+}
+header .btn-back{
+    background-image: url('EysaMobv2/back-ico.svg');
+ }
+
+/*****  HEADER OP-PARKING   *****/
+
+header.op-parking
+{
+
+    background-color:#2481bc;
+
+
+}
+
+header.op-parking h2
+{
+    /* http://sandbox.juan-i.com/longshadows/ */
+  text-shadow: rgb(0, 97, 140) 1px 1px,
+    rgb(0, 97, 140) 2px 2px,
+    rgb(0, 97, 140) 3px 3px,
+    rgb(0, 97, 140) 4px 4px,
+    rgb(0, 97, 140) 5px 5px,
+    rgb(0, 97, 140) 6px 6px,
+    rgb(0, 97, 140) 7px 7px,
+    rgb(0, 97, 140) 8px 8px,
+    rgb(0, 97, 140) 9px 9px,
+    rgb(0, 97, 140) 10px 10px,
+    rgb(0, 98, 141) 11px 11px,
+    rgb(0, 99, 143) 12px 12px,
+    rgb(0, 100, 145) 13px 13px,
+    rgb(0, 101, 147) 14px 14px,
+    rgb(0, 103, 148) 15px 15px,
+    rgb(0, 104, 150) 16px 16px,
+    rgb(0, 105, 152) 17px 17px,
+    rgb(0, 106, 154) 18px 18px,
+    rgb(0, 107, 155) 19px 19px,
+    rgb(0, 109, 157) 20px 20px,
+    rgb(0, 110, 159) 21px 21px,
+    rgb(0, 111, 161) 22px 22px,
+    rgb(0, 112, 162) 23px 23px,
+    rgb(0, 113, 164) 24px 24px,
+    rgb(0, 115, 166) 25px 25px,
+    rgb(0, 116, 168) 26px 26px,
+    rgb(0, 117, 169) 27px 27px,
+    rgb(0, 118, 171) 28px 28px,
+    rgb(0, 119, 173) 29px 29px,
+    rgb(0, 121, 175) 30px 30px;
+
+
+}
+
+
+
+/*******    FOOTER  *********************/
+
+
+footer
+{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+
+    position:fixed;
+    left: 0px;
+    right:0px;
+    bottom: 0px;
+
+    /*width: 100%;*/
+    height: 128px;
+
+    z-index: 9999;
+
+    background: #24262b none; /* Old browsers */
+    color: #fafafa;
+
+    font-size:inherit;
+
+}
+
+footer a,
+footer li a,
+footer ul#menu a,
+footer ul#menu li a
+{
+    color: #ffffff;
+}
+
+footer.gradient
+{
+
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#464449+0,24262b+100 */
+    background: #24262b; /* Old browsers */
+    /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzQ2NDQ0OSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMyNDI2MmIiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(top,  #464449 0%, #24262b 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#464449), color-stop(100%,#24262b)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #464449 0%,#24262b 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #464449 0%,#24262b 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #464449 0%,#24262b 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #464449 0%,#24262b 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#464449', endColorstr='#24262b',GradientType=0 ); /* IE6-8 */
+
+}
+
+footer .navfooter
+{
+    position:relative;
+
+}
+
+ul#menu {
+    font-size: inherit;
+    font-weight: inherit;
+    margin: 0px;
+    padding: 0px;
+    text-align: left;
+
+    color: #fafafa;
+
+    height: 128px;
+}
+
+ul#menu > li
+{
+    display: inline-block;
+    vertical-align: middle;
+
+    margin: 0px;
+    padding:0px;
+}
+
+ul#menu li#liLogout
+{
+    display:none !important;
+}
+
+ul#menu li.item-icon
+{
+    margin-right: -0.5em;
+}
+
+ul#menu li#item-money
+{
+    margin-left: 0.5em;
+}
+
+
+
+h1.credits { 
+    font-size: 0.8em;
+    font-weight: normal;
+    text-align: center;
+    margin: 0px;
+    padding:0px;
+
+    color: inherit;
+
+    margin: 1em auto;
+
+    display:none;
+
+}
+
+
+/******     KENDO ADJUST    *****/
+.k-icon
+{
+    zoom: 2.5;
+}
+
+/*****************************************************
+
+    MEDIA QUERIES
+
+*******************************************************/
+
+
+@media only screen  
+    /*and (min-width: 920px)*/
+  and (orientation: landscape) 
+{
+
+
+    body
+    {
+        font-size: 150%;
+        min-width:700px;
+
+    }
+
+    #body, section.main-content
+    {
+        -webkit-box-shadow: inset 2px 2px 7px 1px rgba(51,51,51,0.5);
+        -moz-box-shadow: inset 2px 2px 7px 1px rgba(51,51,51,0.5);
+        box-shadow: inset 2px 2px 7px 1px rgba(51,51,51,0.5);
+    }
+
+
+    header,footer,#body,section.main-content
+    {
+        width:640px;
+        margin:auto;
+
+    }
+
+    footer,header
+    {
+        zoom: 0.8;
+        width:800px;
+    }
+
+    header h2
+    {
+        font-size: 1.5em;
+    }
+
+
+    section.main-content
+    {
+        padding: 106px 0px; /* Header Footer Space*/
+    
+    }
+
+    div.container-content
+    {
+        padding-bottom: 100px; /* Footer Space*/
+    }
+
+
+}
+
+
+
+@media-desktop
+{
+
+}
+
+

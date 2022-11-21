@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "integraMobile.WS.Test", "integraMobile.WS.Test.csproj", "{5D765E90-38FC-4702-BF0E-BB7C1A40C499}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "integraMobile.WS", "..\..\integraMobile.WS\integraMobile.WS.csproj", "{731356CD-2E8A-40E9-8ADD-0C7AD4530DEF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "integraMobile.Domain", "..\..\integraMobile.Domain\integraMobile.Domain.csproj", "{D61B49D2-71E7-4594-B4BF-7111445DD51C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "integraMobile.Infrastructure", "..\..\integraMobile.Infrastructure\integraMobile.Infrastructure.csproj", "{1A917A7C-C1D1-4BC8-9434-9F37FADC0A6B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{3349AC4B-5698-46A2-A6DB-790F279FF585}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.pdb = .nuget\NuGet.pdb
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5D765E90-38FC-4702-BF0E-BB7C1A40C499}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D765E90-38FC-4702-BF0E-BB7C1A40C499}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D765E90-38FC-4702-BF0E-BB7C1A40C499}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D765E90-38FC-4702-BF0E-BB7C1A40C499}.Release|Any CPU.Build.0 = Release|Any CPU
+		{731356CD-2E8A-40E9-8ADD-0C7AD4530DEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{731356CD-2E8A-40E9-8ADD-0C7AD4530DEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{731356CD-2E8A-40E9-8ADD-0C7AD4530DEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{731356CD-2E8A-40E9-8ADD-0C7AD4530DEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D61B49D2-71E7-4594-B4BF-7111445DD51C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D61B49D2-71E7-4594-B4BF-7111445DD51C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D61B49D2-71E7-4594-B4BF-7111445DD51C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D61B49D2-71E7-4594-B4BF-7111445DD51C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A917A7C-C1D1-4BC8-9434-9F37FADC0A6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A917A7C-C1D1-4BC8-9434-9F37FADC0A6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A917A7C-C1D1-4BC8-9434-9F37FADC0A6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A917A7C-C1D1-4BC8-9434-9F37FADC0A6B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

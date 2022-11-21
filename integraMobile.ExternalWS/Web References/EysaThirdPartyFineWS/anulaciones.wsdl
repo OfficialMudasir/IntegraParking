@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="Upload">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="deviceCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="parkCode" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pndDate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="plateNumber" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="fineStatus" type="s:short" />
+            <s:element minOccurs="0" maxOccurs="1" name="numTicket" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UploadResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsolaSoapHeader" type="tns:ConsolaSoapHeader" />
+      <s:complexType name="ConsolaSoapHeader">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="IdContrata" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="LocalTime" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="NomUsuario" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NumSerie" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IdUsuario" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="EsExpedienteAnulable">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="expediente" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="fechaParquimetro" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EsExpedienteAnulableResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EsExpedienteAnulableResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EsExpedienteAnulableConCuantia">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="expediente" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="fechaParquimetro" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EsExpedienteAnulableConCuantiaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EsExpedienteAnulableConCuantiaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="rdPQueryListOfFines">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="rdPQueryListOfFinesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="rdPQueryListOfFinesResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="rdPQueryFinePaymentQuantity">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="rdPQueryFinePaymentQuantityResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="rdPQueryFinePaymentQuantityResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="rdPConfirmFinePayment">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="rdPConfirmFinePaymentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="rdPConfirmFinePaymentResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="UploadSoapIn">
+    <wsdl:part name="parameters" element="tns:Upload" />
+  </wsdl:message>
+  <wsdl:message name="UploadSoapOut">
+    <wsdl:part name="parameters" element="tns:UploadResponse" />
+  </wsdl:message>
+  <wsdl:message name="UploadConsolaSoapHeader">
+    <wsdl:part name="ConsolaSoapHeader" element="tns:ConsolaSoapHeader" />
+  </wsdl:message>
+  <wsdl:message name="EsExpedienteAnulableSoapIn">
+    <wsdl:part name="parameters" element="tns:EsExpedienteAnulable" />
+  </wsdl:message>
+  <wsdl:message name="EsExpedienteAnulableSoapOut">
+    <wsdl:part name="parameters" element="tns:EsExpedienteAnulableResponse" />
+  </wsdl:message>
+  <wsdl:message name="EsExpedienteAnulableConsolaSoapHeader">
+    <wsdl:part name="ConsolaSoapHeader" element="tns:ConsolaSoapHeader" />
+  </wsdl:message>
+  <wsdl:message name="EsExpedienteAnulableConCuantiaSoapIn">
+    <wsdl:part name="parameters" element="tns:EsExpedienteAnulableConCuantia" />
+  </wsdl:message>
+  <wsdl:message name="EsExpedienteAnulableConCuantiaSoapOut">
+    <wsdl:part name="parameters" element="tns:EsExpedienteAnulableConCuantiaResponse" />
+  </wsdl:message>
+  <wsdl:message name="EsExpedienteAnulableConCuantiaConsolaSoapHeader">
+    <wsdl:part name="ConsolaSoapHeader" element="tns:ConsolaSoapHeader" />
+  </wsdl:message>
+  <wsdl:message name="rdPQueryListOfFinesSoapIn">
+    <wsdl:part name="parameters" element="tns:rdPQueryListOfFines" />
+  </wsdl:message>
+  <wsdl:message name="rdPQueryListOfFinesSoapOut">
+    <wsdl:part name="parameters" element="tns:rdPQueryListOfFinesResponse" />
+  </wsdl:message>
+  <wsdl:message name="rdPQueryListOfFinesConsolaSoapHeader">
+    <wsdl:part name="ConsolaSoapHeader" element="tns:ConsolaSoapHeader" />
+  </wsdl:message>
+  <wsdl:message name="rdPQueryFinePaymentQuantitySoapIn">
+    <wsdl:part name="parameters" element="tns:rdPQueryFinePaymentQuantity" />
+  </wsdl:message>
+  <wsdl:message name="rdPQueryFinePaymentQuantitySoapOut">
+    <wsdl:part name="parameters" element="tns:rdPQueryFinePaymentQuantityResponse" />
+  </wsdl:message>
+  <wsdl:message name="rdPQueryFinePaymentQuantityConsolaSoapHeader">
+    <wsdl:part name="ConsolaSoapHeader" element="tns:ConsolaSoapHeader" />
+  </wsdl:message>
+  <wsdl:message name="rdPConfirmFinePaymentSoapIn">
+    <wsdl:part name="parameters" element="tns:rdPConfirmFinePayment" />
+  </wsdl:message>
+  <wsdl:message name="rdPConfirmFinePaymentSoapOut">
+    <wsdl:part name="parameters" element="tns:rdPConfirmFinePaymentResponse" />
+  </wsdl:message>
+  <wsdl:message name="rdPConfirmFinePaymentConsolaSoapHeader">
+    <wsdl:part name="ConsolaSoapHeader" element="tns:ConsolaSoapHeader" />
+  </wsdl:message>
+  <wsdl:portType name="AnulacionesSoap">
+    <wsdl:operation name="Upload">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Inserta anulaciones</documentation>
+      <wsdl:input message="tns:UploadSoapIn" />
+      <wsdl:output message="tns:UploadSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EsExpedienteAnulable">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Indica si el expediente es anulable o no</documentation>
+      <wsdl:input message="tns:EsExpedienteAnulableSoapIn" />
+      <wsdl:output message="tns:EsExpedienteAnulableSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EsExpedienteAnulableConCuantia">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Indica si el expediente es anulable (con cuantía correspondiente) o no</documentation>
+      <wsdl:input message="tns:EsExpedienteAnulableConCuantiaSoapIn" />
+      <wsdl:output message="tns:EsExpedienteAnulableConCuantiaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="rdPQueryListOfFines">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Consulta de las denuncias que tienen las matrículas</documentation>
+      <wsdl:input message="tns:rdPQueryListOfFinesSoapIn" />
+      <wsdl:output message="tns:rdPQueryListOfFinesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="rdPQueryFinePaymentQuantity">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Consulta de si las denuncias que tienen las matrículas son anulables o no y su cuantía</documentation>
+      <wsdl:input message="tns:rdPQueryFinePaymentQuantitySoapIn" />
+      <wsdl:output message="tns:rdPQueryFinePaymentQuantitySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="rdPConfirmFinePayment">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Confirmación de la anulación de la matrícula</documentation>
+      <wsdl:input message="tns:rdPConfirmFinePaymentSoapIn" />
+      <wsdl:output message="tns:rdPConfirmFinePaymentSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="AnulacionesSoap" type="tns:AnulacionesSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Upload">
+      <soap:operation soapAction="http://tempuri.org/Upload" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:UploadConsolaSoapHeader" part="ConsolaSoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EsExpedienteAnulable">
+      <soap:operation soapAction="http://tempuri.org/EsExpedienteAnulable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:EsExpedienteAnulableConsolaSoapHeader" part="ConsolaSoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EsExpedienteAnulableConCuantia">
+      <soap:operation soapAction="http://tempuri.org/EsExpedienteAnulableConCuantia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:EsExpedienteAnulableConCuantiaConsolaSoapHeader" part="ConsolaSoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="rdPQueryListOfFines">
+      <soap:operation soapAction="http://tempuri.org/rdPQueryListOfFines" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:rdPQueryListOfFinesConsolaSoapHeader" part="ConsolaSoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="rdPQueryFinePaymentQuantity">
+      <soap:operation soapAction="http://tempuri.org/rdPQueryFinePaymentQuantity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:rdPQueryFinePaymentQuantityConsolaSoapHeader" part="ConsolaSoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="rdPConfirmFinePayment">
+      <soap:operation soapAction="http://tempuri.org/rdPConfirmFinePayment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:rdPConfirmFinePaymentConsolaSoapHeader" part="ConsolaSoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Anulaciones">
+    <documentation xmlns="http://schemas.xmlsoap.org/wsdl/" />
+    <wsdl:port name="AnulacionesSoap" binding="tns:AnulacionesSoap">
+      <soap:address location="http://esdcvyewb02p/parquimetrosWS/framework/anulaciones.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

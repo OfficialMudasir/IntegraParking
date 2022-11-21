@@ -1,0 +1,11 @@
+C:\tpa\wrapper add\wrapper add\aspnet_sdk\samples\CommandLine_AP\bin\Release\CommandLine_Samples_AP.exe.config
+C:\tpa\wrapper add\wrapper add\aspnet_sdk\samples\CommandLine_AP\bin\Release\CommandLine_Samples_AP.exe
+C:\tpa\wrapper add\wrapper add\aspnet_sdk\samples\CommandLine_AP\bin\Release\CommandLine_Samples_AP.pdb
+C:\tpa\wrapper add\wrapper add\aspnet_sdk\samples\CommandLine_AP\bin\Release\Base_AP.dll
+C:\tpa\wrapper add\wrapper add\aspnet_sdk\samples\CommandLine_AP\bin\Release\Base_Common.dll
+C:\tpa\wrapper add\wrapper add\aspnet_sdk\samples\CommandLine_AP\bin\Release\log4net.dll
+C:\tpa\wrapper add\wrapper add\aspnet_sdk\samples\CommandLine_AP\bin\Release\Base_AP.pdb
+C:\tpa\wrapper add\wrapper add\aspnet_sdk\samples\CommandLine_AP\bin\Release\Base_Common.pdb
+C:\tpa\wrapper add\wrapper add\aspnet_sdk\samples\CommandLine_AP\obj\Release\ResolveAssemblyReference.cache
+C:\tpa\wrapper add\wrapper add\aspnet_sdk\samples\CommandLine_AP\obj\Release\CommandLine_Samples_AP.exe
+C:\tpa\wrapper add\wrapper add\aspnet_sdk\samples\CommandLine_AP\obj\Release\CommandLine_Samples_AP.pdb

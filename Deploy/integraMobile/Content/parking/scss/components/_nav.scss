@@ -1,0 +1,26 @@
+//exception max-width for navigation
+
+  .sidebar-nav {
+    position: fixed;
+    z-index: 4;
+    background-color: var(--blue);
+    overflow-y: visible;
+    min-height: 90vh;
+    transition: all 0.6s;
+    right: -560px;
+    width: 0vw;
+    height: 90vh;
+    min-width: 0;
+    overflow: auto;
+    overflow-x: hidden;
+    top: 57px;
+    padding-top: 2rem;
+}
+  .sidebar-nav.show {
+    position: absolute;
+    right: 0;
+    transition: all 0.6s;
+    width: 100vw;
+  }
+
+

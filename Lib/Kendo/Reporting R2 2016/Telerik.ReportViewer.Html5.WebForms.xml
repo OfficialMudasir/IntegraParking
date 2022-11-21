@@ -1,0 +1,549 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Telerik.ReportViewer.Html5.WebForms</name>
+    </assembly>
+    <members>
+        <member name="T:Telerik.ReportViewer.Html5.WebForms.ClientEvents">
+            <summary>
+            Represents a control that provides a way to initialize the event handlers of the report viewer.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Html5.WebForms.ClientEvents.RenderingBegin">
+            <summary>
+            Attach the event handler that will be called when the rendering of the report begins.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Html5.WebForms.ClientEvents.RenderingEnd">
+            <summary>
+            Attach the event handler that will be called when the rendering of the report ends.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Html5.WebForms.ClientEvents.PrintBegin">
+            <summary>
+            Attach the event handler that will be called prior to starting the print report command.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Html5.WebForms.ClientEvents.PrintEnd">
+            <summary>
+            Attach the event handler that will be called when the print document (Adobe PDF) is ready for download, but prior to being send to the printer.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Html5.WebForms.ClientEvents.ExportBegin">
+            <summary>
+            Attach the event handler that will be called prior to starting the report export command.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Html5.WebForms.ClientEvents.ExportEnd">
+            <summary>
+            Attach the event handler that will be called when the exported document is ready for download, but prior to the actual downloading.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Html5.WebForms.ClientEvents.PageReady">
+            <summary>
+            Attach the event handler that will be called every time a page from the report is rendered and ready for display.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Html5.WebForms.ClientEvents.UpdateUi">
+            <summary>
+            Attach the event handler that will be called every time the UI needs an update; 
+            can be used for changing the UI of the report viewer while interacting with the reports.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Html5.WebForms.ClientEvents.Error">
+            <summary>
+            Attach the event handler that will be called when an error occurs.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Html5.WebForms.ClientEvents.Ready">
+            <summary>
+            Attach the event handler that will be called when the report viewer template is loaded.
+            </summary>
+        </member>
+        <member name="T:Telerik.ReportViewer.Html5.WebForms.IdentifierType">
+            <summary>
+            The type of the identifier used in the <see cref="T:Telerik.ReportViewer.Html5.WebForms.ReportSource"/>
+            </summary>
+        </member>
+        <member name="F:Telerik.ReportViewer.Html5.WebForms.IdentifierType.TypeReportSource">
+            <summary>
+            The identifier is a type
+            </summary>
+        </member>
+        <member name="F:Telerik.ReportViewer.Html5.WebForms.IdentifierType.UriReportSource">
+            <summary>
+            The identifier is a URI pointing to a .trdp/.trdx file
+            </summary>
+        </member>
+        <member name="F:Telerik.ReportViewer.Html5.WebForms.IdentifierType.CustomReportSource">
+            <summary>
+            The identifier is custom and it's resolving is implemented by the user
+            </summary>
+        </member>
+        <member name="T:Telerik.ReportViewer.Html5.WebForms.Parameter">
+            <summary>
+            A parameter passed to the <see cref="T:Telerik.Reporting.IReportDocument"/> object when initialized
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Html5.WebForms.Parameter.Name">
+            <summary>
+            The name of the parameter.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Html5.WebForms.Parameter.Value">
+            <summary>
+            The value of the parameter.
+            </summary>
+        </member>
+        <member name="T:Telerik.ReportViewer.Html5.WebForms.Parameter.ObjectWrapper">
+            <summary>
+            Telerik internal use only.
+            </summary>
+        </member>
+        <member name="M:Telerik.ReportViewer.Html5.WebForms.ParameterCollection.Add(System.String,System.Object)">
+            <summary>
+            Creates a <see cref="T:Telerik.ReportViewer.Html5.WebForms.Parameter"/> with specific settings and
+            adds it to the 
+            <see cref="T:Telerik.ReportViewer.Html5.WebForms.ParameterCollection"/>. 
+            </summary>
+            <param name="name">
+            A <see cref="T:System.String"/> value that will be used as 
+            <see cref="P:Telerik.ReportViewer.Html5.WebForms.Parameter.Name"/> for the newly created 
+            <see cref="T:Telerik.ReportViewer.Html5.WebForms.Parameter"/>.
+            </param>
+            <param name="value">
+            A <see cref="T:System.Object"/> value that will be used as 
+            <see cref="P:Telerik.ReportViewer.Html5.WebForms.Parameter.Value"/> for the newly created 
+            <see cref="T:Telerik.ReportViewer.Html5.WebForms.Parameter"/>. May be expression.
+            </param>
+            <returns>The newly created and added <see cref="T:Telerik.ReportViewer.Html5.WebForms.Parameter"/>
+            </returns>
+        </member>
+        <member name="M:Telerik.ReportViewer.Html5.WebForms.ParameterCollection.AddRange(System.Collections.Generic.IEnumerable{Telerik.ReportViewer.Html5.WebForms.Parameter})">
+            <summary>
+            Adds an enumerable of <see cref="T:Telerik.ReportViewer.Html5.WebForms.Parameter"/> objects to the 
+            <see cref="T:Telerik.ReportViewer.Html5.WebForms.ParameterCollection"/>. 
+            </summary>
+            <param name="enumerable">
+            An enumerable of <see cref="T:Telerik.ReportViewer.Html5.WebForms.Parameter"/> objects to add to 
+            the <see cref="T:Telerik.ReportViewer.Html5.WebForms.ParameterCollection"/>.
+            </param>
+            <remarks>
+            <para>The <see cref="T:Telerik.ReportViewer.Html5.WebForms.Parameter"/> objects returned from the
+            enumerable are appended to the end of the 
+            <see cref="T:Telerik.ReportViewer.Html5.WebForms.ParameterCollection"/>.</para>
+            </remarks>
+        </member>
+        <member name="M:Telerik.ReportViewer.Html5.WebForms.ParameterCollection.Contains(System.String)">
+            <summary>
+            Determines whether the <see cref="T:Telerik.ReportViewer.Html5.WebForms.ParameterCollection"/>
+            contains a parameter with a specific name.
+            </summary>
+            <param name="name">
+            A <see cref="T:System.String"/> that specifies the parameter name for which
+            to search the elements of the 
+            <see cref="T:Telerik.ReportViewer.Html5.WebForms.ParameterCollection"/>.
+            </param>
+            <returns>
+            Returns a <see cref="T:System.Boolean"/> value indicating whether the
+            <see cref="T:Telerik.ReportViewer.Html5.WebForms.ParameterCollection"/> object contains a
+            parameter with the specified name.
+            </returns>
+        </member>
+        <member name="M:Telerik.ReportViewer.Html5.WebForms.ParameterCollection.IndexOf(System.String)">
+            <summary>
+            Determines the index of a specific parameter in the
+            <see cref="T:Telerik.ReportViewer.Html5.WebForms.ParameterCollection"/>.
+            </summary>
+            <param name="name">The parameter name used to locate the
+            parameter in the <see cref="T:Telerik.ReportViewer.Html5.WebForms.ParameterCollection"/>.</param>
+            <returns>The index of parameter if found in the 
+            <see cref="T:Telerik.ReportViewer.Html5.WebForms.ParameterCollection"/>; otherwise, -1.</returns>
+        </member>
+        <member name="P:Telerik.ReportViewer.Html5.WebForms.ParameterCollection.Item(System.String)">
+            <summary>
+            Gets a <see cref="T:Telerik.ReportViewer.Html5.WebForms.Parameter"/> by name.
+            </summary>
+            <param name="name">The name of the parameter.</param>
+            <returns>A parameter if found; otherwise null (Nothing)</returns>
+        </member>
+        <member name="T:Telerik.ReportViewer.Html5.WebForms.CustomParameterEditor">
+            <summary>
+            Represents a custom parameter editor with a custom match function.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Html5.WebForms.CustomParameterEditor.MatchFunction">
+            <summary>
+            The name of the match function as string, without parentheses.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Html5.WebForms.CustomParameterEditor.CreateEditorFunction">
+            <summary>
+            The name of the createEditor function as string, without parentheses.
+            </summary>
+        </member>
+        <member name="T:Telerik.ReportViewer.Html5.WebForms.ParameterEditors">
+            <summary>
+            Represents a class that provides a way to initialize the parameter editors of the report viewer.
+            </summary>
+        </member>
+        <member name="M:Telerik.ReportViewer.Html5.WebForms.ParameterEditors.#ctor">
+            <summary>
+            The default constructor.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Html5.WebForms.ParameterEditors.MultiSelectEditor">
+            <summary>
+            Attach the parameter editor that will handle parameters that have provided AvailableValues and MultiValue set to true.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Html5.WebForms.ParameterEditors.SingleSelectEditor">
+            <summary>
+            Attach the parameter editor that will handle parameters that have provided AvailableValues and MultiValue set to false.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Html5.WebForms.ParameterEditors.MultiValueEditor">
+            <summary>
+            Attach the parameter editor that will handle parameters that have MultiValue set to true but have not provided AvailableValues.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Html5.WebForms.ParameterEditors.DateTimeEditor">
+            <summary>
+            Attach the parameter editor that will handle DateTime parameters.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Html5.WebForms.ParameterEditors.StringEditor">
+            <summary>
+            Attach the parameter editor that will handle String parameters.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Html5.WebForms.ParameterEditors.NumberEditor">
+            <summary>
+            Attach the parameter editor that will handle Numeric parameters.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Html5.WebForms.ParameterEditors.BooleanEditor">
+            <summary>
+            Attach the parameter editor that will handle Boolean parameters.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Html5.WebForms.ParameterEditors.DefaultEditor">
+            <summary>
+            Attach the parameter editor that will handle non defined parameters.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Html5.WebForms.ParameterEditors.CustomEditors">
+            <summary>
+            Attach parameter editors that can handle custom scenarios.
+            For example MultiValue parameter of DateTime type.
+            Custom editors are added before all other editors, in the specified order.
+            </summary>
+        </member>
+        <member name="T:Telerik.ReportViewer.Html5.WebForms.PrintMode">
+            <summary>
+            Specifies how the viewer should handle the print command.
+            </summary>
+        </member>
+        <member name="F:Telerik.ReportViewer.Html5.WebForms.PrintMode.AutoSelect">
+            <summary>
+            Specifies that the viewer should automatically determine how to print: through the browser's PDF plug-in or through export to a PDF file.
+            </summary>
+        </member>
+        <member name="F:Telerik.ReportViewer.Html5.WebForms.PrintMode.ForcePDFPlugin">
+            <summary>
+            Specifies that the viewer should always use the PDF plugin regardless of the browser's version and settings.
+            </summary>
+        </member>
+        <member name="F:Telerik.ReportViewer.Html5.WebForms.PrintMode.ForcePDFFile">
+            <summary>
+            Specifies that the viewer should always export the report document to PDF format with the 'print' script enabled.
+            </summary>
+        </member>
+        <member name="T:Telerik.ReportViewer.Html5.WebForms.ReportSource">
+            <summary>
+            Provides a class for the report source. This is a class
+            that contains the collection of parameter values, report identifier and type
+            </summary>
+        </member>
+        <member name="M:Telerik.ReportViewer.Html5.WebForms.ReportSource.#ctor">
+            <summary>
+            The default constructor.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Html5.WebForms.ReportSource.Parameters">
+            <summary>
+            A collection of parameter values passed to the <see cref="T:Telerik.Reporting.IReportDocument"/> object when initialized.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Html5.WebForms.ReportSource.Identifier">
+            <summary>
+            The report identifier.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Html5.WebForms.ReportSource.IdentifierType">
+            <summary>
+            The type of the report identifier.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Html5.WebForms.ReportViewer.ServiceUrl">
+            <summary>
+            The URL of the service which will provide the report viewer with reports.
+            The service must be properly configured so that the report viewer can 
+            successfully communicate with the server. 
+            For more information on how to configure the service please check http://www.telerik.com/help/reporting/telerik-reporting-rest-conception.html.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:Telerik.ReportViewer.Html5.WebForms.ReportViewer.ReportServer" -->
+        <!-- Badly formed XML comment ignored for member "P:Telerik.ReportViewer.Html5.WebForms.ReportViewer.AuthenticationToken" -->
+        <member name="P:Telerik.ReportViewer.Html5.WebForms.ReportViewer.TemplateUrl">
+            <summary>
+            The URL for the report viewer template. The template can be edited - 
+            new functionalities can be added and not needed ones can be removed.
+            For more information please check http://www.telerik.com/help/reporting/html5-report-viewer-templates.html.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Html5.WebForms.ReportViewer.ReportSource">
+            <summary>
+            Gets or sets the <see cref="T:Telerik.ReportViewer.Html5.WebForms.ReportSource"/>
+            for the report displayed in the viewer.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Html5.WebForms.ReportViewer.PrintMode">
+            <summary>
+            Gets or sets the print mode of the viewer.
+            Three modes exist currently:
+            AutoSelect - Specifies that the viewer should automatically determine how to print: through the browser's PDF plug-in or through export to a PDF file.
+            ForcePDFPlugin - Specifies that the viewer should always use the PDF plugin regardless of the browser's version and settings.
+            ForcePDFFile - Specifies that the viewer should always export the report document to PDF format with the 'print' script enabled.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Html5.WebForms.ReportViewer.ViewMode">
+            <summary>
+            Specifies whether the viewer is in interactive or print preview mode.
+            PrintPreview - Displays the paginated report as if it is printed on paper. Interactivity is not enabled.
+            Interactive - Displays the report in its original width and height with no paging. Additionally interactivity is enabled.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Html5.WebForms.ReportViewer.ScaleMode">
+            <summary>
+            Gets or sets the scale mode of the viewer.
+            Three modes exist currently:
+            FitPage - The whole report will fit on the page (will zoom in or out), regardless of its width and height.
+            FitPageWidth - The report will be zoomed in or out so that the width of the screen and the width of the report match.
+            Specific - Uses the scale to zoom in and out the report.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Html5.WebForms.ReportViewer.Scale">
+            <summary>
+            Zoom in and out the report using the scale.
+            1.0 is equal to 100%, i.e. the original size of the report.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Html5.WebForms.ReportViewer.DocumentMapVisible">
+            <summary>
+            Gets or sets the viewer’s document map initial visibility state.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Html5.WebForms.ReportViewer.ParametersAreaVisible">
+            <summary>
+            Gets or sets the viewer’s parameters area initial visibility state.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Html5.WebForms.ReportViewer.PageNumber">
+            <summary>
+            Gets or sets the current page number of the report.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Html5.WebForms.ReportViewer.DisabledButtonClass">
+            <summary>
+            Gets or sets the class to be used by buttons in the disabled state.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Html5.WebForms.ReportViewer.CheckedButtonClass">
+            <summary>
+            Gets or sets the class to be used by buttons in the checked state.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Html5.WebForms.ReportViewer.Deferred">
+            <summary>
+            Defers the script initialization statement.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Html5.WebForms.ReportViewer.ClientEvents">
+            <summary>
+            Represents a control that provides a way to initialize the event handlers of the report viewer.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Html5.WebForms.ReportViewer.ParameterEditors">
+            <summary>
+            Represents a control that provides a way to initialize the parameter editors of the report viewer.
+            </summary>
+        </member>
+        <member name="T:Telerik.ReportViewer.Html5.WebForms.ScaleMode">
+            <summary>
+            Sets the scale mode of the viewer
+            </summary>
+        </member>
+        <member name="F:Telerik.ReportViewer.Html5.WebForms.ScaleMode.FitPageWidth">
+            <summary>
+            The report will be zoomed in or out so that the width of the screen and the width of the report match.
+            </summary>
+        </member>
+        <member name="F:Telerik.ReportViewer.Html5.WebForms.ScaleMode.FitPage">
+            <summary>
+            The whole report will fit on the page (will zoom in or out), regardless of its width and height.
+            </summary>
+        </member>
+        <member name="F:Telerik.ReportViewer.Html5.WebForms.ScaleMode.Specific">
+            <summary>
+            Uses the scale to zoom in and out the report.
+            </summary>
+        </member>
+        <member name="T:Telerik.ReportViewer.Html5.WebForms.ViewMode">
+            <summary>
+            Specifies whether the viewer is in interactive or print preview mode
+            </summary>
+        </member>
+        <member name="F:Telerik.ReportViewer.Html5.WebForms.ViewMode.Interactive">
+            <summary>
+            Displays the report in its original width and height with no paging. Additionally interactivity is enabled.
+            </summary>
+        </member>
+        <member name="F:Telerik.ReportViewer.Html5.WebForms.ViewMode.PrintPreview">
+            <summary>
+            Displays the paginated report as if it is printed on paper. Interactivity is not enabled.
+            </summary>
+        </member>
+        <member name="T:Telerik.ReportViewer.Html5.Common.ExceptionMessages">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Html5.Common.ExceptionMessages.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Html5.Common.ExceptionMessages.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Html5.Common.ExceptionMessages.NameCannotBeBlank">
+            <summary>
+              Looks up a localized string similar to The name of the element cannot be blank..
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Html5.Common.ExceptionMessages.NameCannotContainInvalidCharacters">
+            <summary>
+              Looks up a localized string similar to The name of the element cannot contain invalid characters..
+            </summary>
+        </member>
+        <member name="T:Telerik.ReportViewer.Html5.Common.PrintMode">
+            <summary>
+            Specifies how the viewer should handle the print command.
+            </summary>
+        </member>
+        <member name="F:Telerik.ReportViewer.Html5.Common.PrintMode.AutoSelect">
+            <summary>
+            Specifies that the viewer should automatically determine how to print: through the browser's PDF plug-in or through export to a PDF file.
+            </summary>
+        </member>
+        <member name="F:Telerik.ReportViewer.Html5.Common.PrintMode.ForcePDFPlugin">
+            <summary>
+            Specifies that the viewer should always use the PDF plugin regardless of the browser's version and settings.
+            </summary>
+        </member>
+        <member name="F:Telerik.ReportViewer.Html5.Common.PrintMode.ForcePDFFile">
+            <summary>
+            Specifies that the viewer should always export the report document to PDF format with the 'print' script enabled.
+            </summary>
+        </member>
+        <member name="T:Telerik.ReportViewer.Html5.Common.ReportServer">
+            <summary>
+            Provides a class for the report server data.
+            Contains the URL to the report server instance, a valid username and password.
+            </summary>
+        </member>
+        <member name="M:Telerik.ReportViewer.Html5.Common.ReportServer.#ctor">
+            <summary>
+            The default constructor.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Html5.Common.ReportServer.Url">
+            <summary>
+            The URL of the Telerik Report Server instance
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Html5.Common.ReportServer.Username">
+            <summary>
+            A valid username that exists in Report Server registered users.
+            Empty in order to use the built-in Guest account.
+            Either usage requires configured server permissions for accessing the report.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Html5.Common.ReportServer.Password">
+            <summary>
+            The password associated with the username. Empty when Username is not set
+            </summary>
+        </member>
+        <member name="T:Telerik.ReportViewer.Html5.Common.ScaleMode">
+            <summary>
+            Sets the scale mode of the viewer
+            </summary>
+        </member>
+        <member name="F:Telerik.ReportViewer.Html5.Common.ScaleMode.FitPageWidth">
+            <summary>
+            The report will be zoomed in or out so that the width of the screen and the width of the report match.
+            </summary>
+        </member>
+        <member name="F:Telerik.ReportViewer.Html5.Common.ScaleMode.FitPage">
+            <summary>
+            The whole report will fit on the page (will zoom in or out), regardless of its width and height.
+            </summary>
+        </member>
+        <member name="F:Telerik.ReportViewer.Html5.Common.ScaleMode.Specific">
+            <summary>
+            Uses the scale to zoom in and out the report.
+            </summary>
+        </member>
+        <member name="T:Telerik.ReportViewer.Html5.Common.ViewMode">
+            <summary>
+            Specifies whether the viewer is in interactive or print preview mode
+            </summary>
+        </member>
+        <member name="F:Telerik.ReportViewer.Html5.Common.ViewMode.Interactive">
+            <summary>
+            Displays the report in its original width and height with no paging. Additionally interactivity is enabled.
+            </summary>
+        </member>
+        <member name="F:Telerik.ReportViewer.Html5.Common.ViewMode.PrintPreview">
+            <summary>
+            Displays the paginated report as if it is printed on paper. Interactivity is not enabled.
+            </summary>
+        </member>
+        <member name="M:Telerik.ReportViewer.WebForms.AjaxHelper.IsUpdatedByAjaxManager(System.Web.UI.Control)">
+            <summary>
+            Checks whether the control is being updated by the Telerik AjaxManager.
+            </summary>        
+        </member>
+        <member name="M:Telerik.ReportViewer.WebForms.AjaxHelper.IsInPartialRendering(System.Web.UI.Control)">
+            <summary>
+            Checks whether an update panel is being partially rendered.
+            </summary>
+        </member>
+        <member name="M:Telerik.ReportViewer.WebForms.AjaxHelper.IsRenderedByUpdatePanel(System.Web.UI.Control)">
+            <summary>
+            Checks whether the control is being partially rendered in an UpdatePanel.
+            </summary>        
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:Telerik.ReportViewer.WebForms.AjaxHelper.IsAspNetAjaxRequest" -->
+        <member name="T:Telerik.ReportViewer.WebForms.Utils">
+            <summary>
+            Summary description for Utils.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "T:Telerik.ReportViewer.WebForms.UrlQueryBuilder" -->
+    </members>
+</doc>

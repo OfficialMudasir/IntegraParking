@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="https://ws.iparkme.com/Dev/integraMobileWS/integraMobileWS.asmx?wsdl" docRef="https://ws.iparkme.com/Dev/integraMobileWS/integraMobileWS.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="https://ws.iparkme.com/Dev/integraMobileWS/integraMobileWS.asmx" xmlns:q1="http://tempuri.org/" binding="q1:integraMobileWSSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="https://ws.iparkme.com/Dev/integraMobileWS/integraMobileWS.asmx" xmlns:q2="http://tempuri.org/" binding="q2:integraMobileWSSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

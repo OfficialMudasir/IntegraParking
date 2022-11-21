@@ -1,0 +1,25 @@
+1) Instalar IIS
+2) Configurar una aplicación en %dbPBP%\01_trunk\02_SRC\02_Server\PayByPhoneWeb\BackOffice2\backOffice como backofficePBP
+3) Crear un directorio virtual Scripts (desde la raiz de la aplicación) apuntando a %dbPIC%\trunk\02_Dev\02_CC\02_Src\BackOffice\backOffice\Scripts (machaca el directorio Scripts que ya existe)
+4) Crear un directorio virtual Views (desde la raiz de la aplicación) apuntando a %dbPIC%\trunk\02_Dev\02_CC\02_Src\BackOffice\backOffice\Views (machaca el directorio Views que ya existe)
+5) Crear un directorio virtual kendo (desde Content) apuntando a %dbPIC%\trunk\02_Dev\02_CC\02_Src\BackOffice\backOffice\Content\kendo (machaca el directorio kendo que ya existe)
+6) Crear un directorio virtual kendoExt (desde Content) apuntando a %dbPIC%\trunk\02_Dev\02_CC\02_Src\BackOffice\backOffice\Content\kendoExt (machaca el directorio kendoExt que ya existe)
+7) Crear un directorio virtual themes (desde Content) apuntando a %dbPIC%\trunk\02_Dev\02_CC\02_Src\BackOffice\backOffice\Content\themes (machaca el directorio themes que ya existe)
+8) Crear un directorio virtual BootStrapPlugin (desde Plugins) apuntando a %dbPIC%\trunk\02_Dev\02_CC\02_Src\BackOffice\backOffice\Plugins\BootStrapPlugin (machaca el directorio BootStrapPlugin que ya existe)
+9) Crear un directorio virtual MaintenancePlugin (desde Plugins) apuntando a %dbPIC%\trunk\02_Dev\02_CC\02_Src\BackOffice\backOffice\Plugins\MaintenancePlugin (machaca el directorio MaintenancePlugin que ya existe)
+10) Crear un directorio virtual SecurityPlugin (desde Plugins) apuntando a %dbPIC%\trunk\02_Dev\02_CC\02_Src\BackOffice\backOffice\Plugins\SecurityPlugin (machaca el directorio SecurityPlugin que ya existe)
+11) Ejecutar:
+	mklink %dbPBP%\01_trunk\02_SRC\02_Server\PayByPhoneWeb\BackOffice2\backOffice\Global.asax %dbPIC%\trunk\02_Dev\02_CC\02_Src\BackOffice\backOffice\Global.asax
+	mklink %dbPBP%\01_trunk\02_SRC\02_Server\PayByPhoneWeb\BackOffice2\backOffice\Plugins\BootStrapPlugin\Manifest.xml %dbPIC%\trunk\02_Dev\02_CC\02_Src\BackOffice\backOffice\Plugins\BootStrapPlugin\Manifest.xml 
+	mklink %dbPBP%\01_trunk\02_SRC\02_Server\PayByPhoneWeb\BackOffice2\backOffice\Plugins\MaintenancePlugin\Manifest.xml %dbPIC%\trunk\02_Dev\02_CC\02_Src\BackOffice\backOffice\Plugins\MaintenancePlugin\Manifest.xml
+	mklink %dbPBP%\01_trunk\02_SRC\02_Server\PayByPhoneWeb\BackOffice2\backOffice\Plugins\SecurityPlugin\Manifest.xml %dbPIC%\trunk\02_Dev\02_CC\02_Src\BackOffice\backOffice\Plugins\SecurityPlugin\Manifest.xml
+	
+	
+12) Importar bases de datos integramobile, dbBackoffice, ASPSession y Reporting State.
+13) Modificar Web.config del proyecto backoffice para que apunte a las bases de datos en local
+14) Comprobar que la referencia a System.Web.MVC.dll es MVC 3 en backoffice.Infraestructure (NO MVC4)
+15) Comprobar que la delegación de Caractereisticas de asignaciones de controlador esté a "Lectura/Escritura"
+16) Comprobar que ASP NET este instalado en IIS y sino instalarlo: dism /online /enable-feature /all /featurename:IIS-ASPNET45
+17) Configurar Telerik Reporting: Instalar Telerik_Reporting_Q3_2015_9.2.15.1216_DEV	
+	
+	

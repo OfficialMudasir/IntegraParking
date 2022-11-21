@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="DBBench" namespace="DBBench.Oracle" p1:name="C__TESTDBUSERModel" p1:Guid="f2c01b9e-7f50-4217-b551-e9b6188182f7" xmlns:p1="http://devart.com/schemas/EntityDeveloper/1.0" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="OraTestTable" table="TEST_TABLE" schema="`C##TESTDBUSER`" p1:Guid="b7d94fd6-1d32-43ea-830e-23fb3563551a">
+    <id name="OraId" type="Decimal" p1:ValidateRequired="true" p1:Guid="9b4589c3-c9cf-46db-8775-537078b70a9a">
+      <column name="ID" not-null="true" scale="0" sql-type="NUMBER" p1:unicode="false" />
+      <generator class="trigger-identity" />
+    </id>
+    <property name="OraStringField" type="String" p1:nullable="true" p1:ValidateMaxLength="4000" p1:ValidateRequired="false" p1:Guid="1d8a6c84-d5f4-4eb3-ae06-60b051c93a8d">
+      <column name="STRING_FIELD" not-null="false" length="4000" sql-type="VARCHAR2" p1:unicode="false" />
+    </property>
+  </class>
+</hibernate-mapping>

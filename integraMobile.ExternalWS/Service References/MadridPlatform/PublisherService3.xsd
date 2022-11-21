@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://www.parkaregroup.com/PublisherService/1.3" elementFormDefault="qualified" targetNamespace="http://www.parkaregroup.com/PublisherService/1.3" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://ser-web.madmovilidad.es/PublisherService/PublisherService.svc?xsd=xsd10" namespace="http://schemas.datacontract.org/2004/07/PublisherService.TempoVigilancia.Contracts" />
+  <xs:import schemaLocation="http://ser-web.madmovilidad.es/PublisherService/PublisherService.svc?xsd=xsd0" namespace="http://www.parkaregroup.com/PublisherService/1.0" />
+  <xs:complexType name="PhotosUpdateRequest">
+    <xs:sequence>
+      <xs:element name="ExpedientNumber" nillable="true" type="xs:string" />
+      <xs:element name="Photos" nillable="true" type="tns:ArrayOfPhotoItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PhotosUpdateRequest" nillable="true" type="tns:PhotosUpdateRequest" />
+  <xs:complexType name="ArrayOfPhotoItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PhotoItem" nillable="true" type="tns:PhotoItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPhotoItem" nillable="true" type="tns:ArrayOfPhotoItem" />
+  <xs:complexType name="PhotoItem">
+    <xs:sequence>
+      <xs:element name="Content" nillable="true" type="xs:base64Binary" />
+      <xs:element name="DateCreate" type="xs:dateTime" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/PublisherService.TempoVigilancia.Contracts" name="Type" type="q1:PhotoType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PhotoItem" nillable="true" type="tns:PhotoItem" />
+  <xs:complexType name="PhotosResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://www.parkaregroup.com/PublisherService/1.0" base="q2:PublisherResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Result" nillable="true" type="tns:ArrayOfPhotoItem" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PhotosResponse" nillable="true" type="tns:PhotosResponse" />
+  <xs:complexType name="PhotosDeleteRequest">
+    <xs:sequence>
+      <xs:element name="ExpedientNumber" nillable="true" type="xs:string" />
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/PublisherService.TempoVigilancia.Contracts" name="TypesToDelete" nillable="true" type="q3:ArrayOfPhotoType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PhotosDeleteRequest" nillable="true" type="tns:PhotosDeleteRequest" />
+</xs:schema>

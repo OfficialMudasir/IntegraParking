@@ -1,0 +1,1438 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://www.parkaregroup.com/PublisherService/1.2" elementFormDefault="qualified" targetNamespace="http://www.parkaregroup.com/PublisherService/1.2" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://217.124.242.5/PublisherService/PublisherService.svc?xsd=xsd0" namespace="http://www.parkaregroup.com/PublisherService/1.0" />
+  <xs:import schemaLocation="https://217.124.242.5/PublisherService/PublisherService.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="https://217.124.242.5/PublisherService/PublisherService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/PublisherService.TempoVigilancia.Contracts.Objects" />
+  <xs:import schemaLocation="https://217.124.242.5/PublisherService/PublisherService.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/Parkare.PD" />
+  <xs:import schemaLocation="https://217.124.242.5/PublisherService/PublisherService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:simpleType name="PublisherResponse.AuthError">
+    <xs:annotation>
+      <xs:appinfo />
+      <xs:documentation>&lt;summary&gt;
+            Error code associated to the authentication response
+            &lt;/summary&gt;</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="INVALID_LOGIN">
+        <xs:annotation>
+          <xs:documentation>&lt;summary&gt;
+            Access denied: invalid user name or password
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="INVALID_SESSION">
+        <xs:annotation>
+          <xs:documentation>&lt;summary&gt;
+            Access denied: invalid session
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="INVALID_PERMISSIONS">
+        <xs:annotation>
+          <xs:documentation>&lt;summary&gt;
+            Access denied: invalid user's permissions
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="EXPIRED_SESSION">
+        <xs:annotation>
+          <xs:documentation>&lt;summary&gt;
+            Access denied: expired session
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PublisherResponse.AuthError" nillable="true" type="tns:PublisherResponse.AuthError" />
+  <xs:element name="GetTfnValidInfractions">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://www.parkaregroup.com/PublisherService/1.0" minOccurs="0" name="authSession" nillable="true" type="q1:AuthSession" />
+        <xs:element xmlns:q2="http://www.parkaregroup.com/PublisherService/1.0" minOccurs="0" name="city" nillable="true" type="q2:EntityFilterCity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTfnValidInfractionsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetTfnValidInfractionsResult" nillable="true" type="tns:InfractionResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="InfractionResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://www.parkaregroup.com/PublisherService/1.0" base="q3:PublisherResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Result" nillable="true" type="tns:ArrayOfInfraction">
+            <xs:annotation>
+              <xs:appinfo />
+              <xs:documentation>&lt;summary&gt;
+            List of all valid infractions
+            &lt;see cref="T:Objects.Infraction" /&gt;
+            &lt;list type="Infraction"&gt;&lt;/list&gt;
+            &lt;/summary&gt;</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="InfractionResponse" nillable="true" type="tns:InfractionResponse" />
+  <xs:complexType name="ArrayOfInfraction">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Infraction" nillable="true" type="tns:Infraction" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfInfraction" nillable="true" type="tns:ArrayOfInfraction" />
+  <xs:complexType name="Infraction">
+    <xs:sequence>
+      <xs:element name="AllowCancel" type="xs:boolean">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Cancellation amount
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="AllowCancelMinutes" nillable="true" type="xs:int">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Maximum allowed cancellation time.
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Article" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Article used to issue the infraction
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ByLaw" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            ByLaw, extended 
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="CancelAmount" nillable="true" type="xs:decimal">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Cancellation amount
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Currency" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Amount currency
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Infraction" nillable="true" type="tns:Infraction" />
+  <xs:element name="GetTfnValidInvalidations">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://www.parkaregroup.com/PublisherService/1.0" minOccurs="0" name="authSession" nillable="true" type="q4:AuthSession" />
+        <xs:element xmlns:q5="http://www.parkaregroup.com/PublisherService/1.0" minOccurs="0" name="city" nillable="true" type="q5:EntityFilterCity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTfnValidInvalidationsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetTfnValidInvalidationsResult" nillable="true" type="tns:InvalidationResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="InvalidationResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q6="http://www.parkaregroup.com/PublisherService/1.0" base="q6:PublisherResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Result" nillable="true" type="tns:ArrayOfInvalidation">
+            <xs:annotation>
+              <xs:appinfo />
+              <xs:documentation>&lt;summary&gt;
+            List of all valid Invalidations
+            &lt;see cref="T:Objects.Invalidation" /&gt;
+            &lt;list type="Invalidation"&gt;&lt;/list&gt;
+            &lt;/summary&gt;</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="InvalidationResponse" nillable="true" type="tns:InvalidationResponse" />
+  <xs:complexType name="ArrayOfInvalidation">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Invalidation" nillable="true" type="tns:Invalidation" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfInvalidation" nillable="true" type="tns:ArrayOfInvalidation" />
+  <xs:complexType name="Invalidation">
+    <xs:sequence>
+      <xs:element name="Code" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Invalidation code
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Description" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            ByLaw, extended 
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Invalidation" nillable="true" type="tns:Invalidation" />
+  <xs:element name="SetTfnNew">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://www.parkaregroup.com/PublisherService/1.0" minOccurs="0" name="authSession" nillable="true" type="q7:AuthSession" />
+        <xs:element xmlns:q8="http://www.parkaregroup.com/PublisherService/1.0" minOccurs="0" name="city" nillable="true" type="q8:EntityFilterCity" />
+        <xs:element minOccurs="0" name="trafficFine" nillable="true" type="tns:TrfFine" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="TrfFine">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AnulStartDtUTC" nillable="true" type="xs:dateTime">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Date when traffic fine anullation period start
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element xmlns:q9="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="AnullationCodes" nillable="true" type="q9:ArrayOfstring">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            List of valid Anullation codes (if cancellable)
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="AnulledDtUTC" nillable="true" type="xs:dateTime">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Date when traffic fine was anuled.
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="CodPhyZone" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="CreatedUTC" type="xs:dateTime">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Date time the trafficfine was created.
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ExpedientNumber" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            TrafficFine unique expedient number
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            TrafficFine unique Identifier
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Infraction" nillable="true" type="tns:Infraction">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Infraction
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="InvalidatedDtUTC" nillable="true" type="xs:dateTime">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Date when traffic fine was anuled.
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Invalidation" nillable="true" type="tns:Invalidation">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Invalidation code
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="LastModificationUTC" type="xs:dateTime">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Date last time the trafficfine was modified.
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/PublisherService.TempoVigilancia.Contracts.Objects" minOccurs="0" name="State" type="q10:TrfFine.TrafficFineState">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            TrafficFine State
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="SubCodPhyZone" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="TicketNumber" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Ticket number issued on Traffic fine cancellation pay.
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Vehicle" nillable="true" type="tns:Vehicle">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Vehicle information
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Xml" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Signed traffic fine
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TrfFine" nillable="true" type="tns:TrfFine" />
+  <xs:complexType name="Vehicle">
+    <xs:sequence>
+      <xs:element name="LicensePlate" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Vehicle license plate
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Vehicle" nillable="true" type="tns:Vehicle" />
+  <xs:element name="SetTfnNewResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SetTfnNewResult" nillable="true" type="tns:TrafficFineResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="TrafficFineResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q11="http://www.parkaregroup.com/PublisherService/1.0" base="q11:PublisherResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Result" nillable="true" type="tns:ArrayOfTrfFine">
+            <xs:annotation>
+              <xs:appinfo />
+              <xs:documentation>&lt;summary&gt;
+            List of all Trafficfine's according to the provided filter requirements
+            &lt;see cref="T:Objects.TrfFine" /&gt;
+            &lt;list type="TrfFine"&gt;&lt;/list&gt;
+            &lt;/summary&gt;</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TrafficFineResponse" nillable="true" type="tns:TrafficFineResponse" />
+  <xs:complexType name="ArrayOfTrfFine">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TrfFine" nillable="true" type="tns:TrfFine" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTrfFine" nillable="true" type="tns:ArrayOfTrfFine" />
+  <xs:element name="SetTfnInvalidation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://www.parkaregroup.com/PublisherService/1.0" minOccurs="0" name="authSession" nillable="true" type="q12:AuthSession" />
+        <xs:element xmlns:q13="http://www.parkaregroup.com/PublisherService/1.0" minOccurs="0" name="city" nillable="true" type="q13:EntityFilterCity" />
+        <xs:element minOccurs="0" name="trafficFine" nillable="true" type="tns:TrfFine" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetTfnInvalidationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SetTfnInvalidationResult" nillable="true" type="tns:TrafficFineResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTfn">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://www.parkaregroup.com/PublisherService/1.0" minOccurs="0" name="authSession" nillable="true" type="q14:AuthSession" />
+        <xs:element minOccurs="0" name="Selector" nillable="true" type="tns:VigTrafficFineFilter" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="VigTrafficFineFilter">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ExpedientNumber" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+          <xs:documentation>&lt;summary&gt;
+            Trafficfine data selection ExpedientNumber
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="FromId" nillable="true" type="xs:long">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+          <xs:documentation>&lt;summary&gt;
+            Trafficfine data selection from Traffic fine Id's
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="IncludeXml" type="xs:boolean">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Include XML at query
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="LicensePlate" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+          <xs:documentation>&lt;summary&gt;
+            Trafficfine data selection License plate
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="OnlyAnullable" nillable="true" type="xs:boolean">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+          <xs:documentation>&lt;summary&gt;
+            Trafficfine data selection Cancellable/Non Cancellable
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element xmlns:q15="http://www.parkaregroup.com/PublisherService/1.0" name="VigFilter" nillable="true" type="q15:EntityFilterBase">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Trafficfine data selection related to system, geographical zone, city
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="VigTrafficFineFilter" nillable="true" type="tns:VigTrafficFineFilter" />
+  <xs:element name="GetTfnResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetTfnResult" nillable="true" type="tns:TrafficFineResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTfnAnulations">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://www.parkaregroup.com/PublisherService/1.0" minOccurs="0" name="authSession" nillable="true" type="q16:AuthSession" />
+        <xs:element minOccurs="0" name="selector" nillable="true" type="tns:VigAnulationFilter" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="VigAnulationFilter">
+    <xs:sequence>
+      <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/Parkare.PD" minOccurs="0" name="CodAnul" nillable="true" type="q17:DefTrafficFine.AnulationMotive">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="FromId" type="xs:long">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+          <xs:documentation>&lt;summary&gt;
+            Anulation data selection from Traffic fine Id's
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element xmlns:q18="http://www.parkaregroup.com/PublisherService/1.0" name="VigFilter" nillable="true" type="q18:EntityFilterBase">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Anulation data selection related to system, geographical zone, city
+             &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="VigAnulationFilter" nillable="true" type="tns:VigAnulationFilter" />
+  <xs:element name="GetTfnAnulationsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetTfnAnulationsResult" nillable="true" type="tns:AnulationResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="AnulationResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q19="http://www.parkaregroup.com/PublisherService/1.0" base="q19:PublisherResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Result" nillable="true" type="tns:ArrayOfAnulation">
+            <xs:annotation>
+              <xs:appinfo />
+              <xs:documentation>&lt;summary&gt;
+            List of all Anulations
+            &lt;see cref="T:Objects.Anulation" /&gt;
+            &lt;list type="Anulation"&gt;&lt;/list&gt;
+            &lt;/summary&gt;</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AnulationResponse" nillable="true" type="tns:AnulationResponse" />
+  <xs:complexType name="ArrayOfAnulation">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Anulation" nillable="true" type="tns:Anulation" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAnulation" nillable="true" type="tns:ArrayOfAnulation" />
+  <xs:complexType name="Anulation">
+    <xs:sequence>
+      <xs:element name="AnulationCode" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Anulation code used
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="DtLocal" nillable="true" type="xs:dateTime" />
+      <xs:element name="Expedient" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Expedient number (where available)
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Id" type="xs:long">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Anulation Id
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/Parkare.PD" name="IdMot" type="q20:DefTrafficFine.AnulationMotive">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Motive
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="InsertDtUTC" type="xs:dateTime">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Operation Date Time
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="LicensePlate" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            License Plate (where available)
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="PdMachine" nillable="true" type="xs:string" />
+      <xs:element name="User" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Anulation" nillable="true" type="tns:Anulation" />
+  <xs:element name="GetTfnInvalidations">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://www.parkaregroup.com/PublisherService/1.0" minOccurs="0" name="authSession" nillable="true" type="q21:AuthSession" />
+        <xs:element minOccurs="0" name="selector" nillable="true" type="tns:VigInvalidationFilter" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="VigInvalidationFilter">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FromId" type="xs:long">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element xmlns:q22="http://www.parkaregroup.com/PublisherService/1.0" name="VigFilter" nillable="true" type="q22:EntityFilterBase" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="VigInvalidationFilter" nillable="true" type="tns:VigInvalidationFilter" />
+  <xs:element name="GetTfnInvalidationsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetTfnInvalidationsResult" nillable="true" type="tns:AnulationResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetParkingAuthorization">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://www.parkaregroup.com/PublisherService/1.0" minOccurs="0" name="authSession" nillable="true" type="q23:AuthSession" />
+        <xs:element minOccurs="0" name="request" nillable="true" type="tns:PayTransactionAuthRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="PayTransactionAuthRequest">
+    <xs:annotation>
+      <xs:appinfo />
+      <xs:documentation>&lt;summary&gt;
+            Parameter to be provided to getAuthorization request.
+            &lt;see cref="T:PayTransactionAuthResponse" /&gt;
+            &lt;/summary&gt;</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DtRequest" nillable="true" type="xs:dateTime">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+          <xs:documentation>&lt;summary&gt;
+            [OPTIONAL] Timestamp of the request
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="InitialTariff" type="xs:int">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Initial tariff (0,1,2,...) selected by user
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="IsoLang" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+          <xs:documentation>&lt;summary&gt;
+            [OPTIONAL] Language coded in ISO 639-1 
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element xmlns:q24="http://www.parkaregroup.com/PublisherService/1.0" name="PhyZone" nillable="true" type="q24:EntityFilterPhyZone">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Physical zone to perform the authorization request
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="UserCode" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            User code (typically its license plate) to authorize
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PayTransactionAuthRequest" nillable="true" type="tns:PayTransactionAuthRequest" />
+  <xs:element name="GetParkingAuthorizationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetParkingAuthorizationResult" nillable="true" type="tns:PayTransactionAuthResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="PayTransactionAuthResponse">
+    <xs:annotation>
+      <xs:appinfo />
+      <xs:documentation>&lt;summary&gt;
+            Response to PayTransactionAuthRequest
+            &lt;see cref="T:PayTransactionAuthRequest" /&gt;
+            &lt;/summary&gt;
+            &lt;summary&gt;
+            Response to PayTransactionAuthRequest
+            &lt;see cref="T:PayTransactionAuthRequest" /&gt;
+            &lt;/summary&gt;</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q25="http://www.parkaregroup.com/PublisherService/1.0" base="q25:PublisherResponse">
+        <xs:sequence>
+          <xs:element name="AuthId" type="xs:long">
+            <xs:annotation>
+              <xs:appinfo />
+              <xs:documentation>&lt;summary&gt;
+            Authorization unique identifier.
+            Must be provided on payment notification operations
+            &lt;/summary&gt;</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="AuthResult" type="xs:int">
+            <xs:annotation>
+              <xs:appinfo />
+              <xs:documentation>&lt;summary&gt;
+            Authorization result code.
+            Only 0 corresponds to an allowed auhorization. 
+            Every each other value must be treated as non-authorized operation
+            &lt;/summary&gt;</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="AuthTime" nillable="true" type="tns:AuthorizedTime">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+              <xs:documentation>&lt;summary&gt;
+            [OPTIONAL] Definition of time parking constraints
+            &lt;/summary&gt;</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="CurOper" nillable="true" type="tns:PayParking">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+              <xs:documentation>&lt;summary&gt;
+            [OPTIONAL] Current ongoing payment operation for the provided license plate.
+            Needed to perform time extension operations
+            &lt;/summary&gt;</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="TarDef" nillable="true" type="tns:TariffDefinition">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+              <xs:documentation>&lt;summary&gt;
+            [OPTIONAL] Definition of tariff to be used in payment
+            &lt;see cref="T:TariffDefinition" /&gt;
+            &lt;/summary&gt;</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PayTransactionAuthResponse" nillable="true" type="tns:PayTransactionAuthResponse" />
+  <xs:complexType name="AuthorizedTime">
+    <xs:annotation>
+      <xs:appinfo />
+      <xs:documentation>&lt;summary&gt;
+            Parking time constraints
+            &lt;/summary&gt;</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="MaxTime" type="ser:duration">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Remaining maximum allowed parking duration 
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AuthorizedTime" nillable="true" type="tns:AuthorizedTime" />
+  <xs:complexType name="PayParking">
+    <xs:annotation>
+      <xs:appinfo />
+      <xs:documentation>&lt;summary&gt;
+            Parking operation ticket
+            &lt;/summary&gt;</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="PrkBgnUtc" type="xs:dateTime">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Timestamp(in UTC) of the beginning of the ongoing parking operation
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="PrkEndUtc" type="xs:dateTime">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Timestamp(in UTC) of the end of the ongoing parking operation
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="TotAmo" type="xs:decimal">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Accumulated total amount of the purchased ongoing parking operation
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="TotTim" type="ser:duration">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Accumulated total duration of the purchased ongoing parking operation
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PayParking" nillable="true" type="tns:PayParking" />
+  <xs:complexType name="TariffDefinition">
+    <xs:annotation>
+      <xs:appinfo />
+      <xs:documentation>&lt;summary&gt;
+            Tariff definition and constraints for the parking operation
+            &lt;/summary&gt;</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="BaseId" type="xs:int">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Tariff base identifier
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="BonMlt" nillable="true" type="xs:decimal">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+          <xs:documentation>&lt;summary&gt;
+            [OPTIONAL] Multiplier factor over base tariff
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="displayTexts" nillable="true" type="tns:TariffDisplay">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+          <xs:documentation>&lt;summary&gt;
+            [OPTIONAL] Help texts localized in multiple languages
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TariffDefinition" nillable="true" type="tns:TariffDefinition" />
+  <xs:complexType name="TariffDisplay">
+    <xs:annotation>
+      <xs:appinfo />
+      <xs:documentation>&lt;summary&gt;
+            Tariff help text in multiple languages
+            &lt;/summary&gt;</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="LocDetails" nillable="true" type="tns:ArrayOfLocalizedText">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Array of tariff help localized texts
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TariffDisplay" nillable="true" type="tns:TariffDisplay" />
+  <xs:complexType name="ArrayOfLocalizedText">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LocalizedText" nillable="true" type="tns:LocalizedText" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLocalizedText" nillable="true" type="tns:ArrayOfLocalizedText" />
+  <xs:complexType name="LocalizedText">
+    <xs:annotation>
+      <xs:appinfo />
+      <xs:documentation>&lt;summary&gt;
+            Generic localized text
+            &lt;/summary&gt;</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="IsoLang" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Language coded in ISO 639-1 
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Text" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Localized text
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LocalizedText" nillable="true" type="tns:LocalizedText" />
+  <xs:element name="GetFineAnullationAuthorization">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://www.parkaregroup.com/PublisherService/1.0" minOccurs="0" name="authSession" nillable="true" type="q26:AuthSession" />
+        <xs:element minOccurs="0" name="request" nillable="true" type="tns:FineAnullationAuthRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="FineAnullationAuthRequest">
+    <xs:annotation>
+      <xs:appinfo />
+      <xs:documentation>&lt;summary&gt;
+            FineAnullationAuthRequest...
+            &lt;/summary&gt;</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AnullationCode" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+          <xs:documentation>&lt;summary&gt;
+            Anullation Code
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element xmlns:q27="http://www.parkaregroup.com/PublisherService/1.0" name="City" nillable="true" type="q27:EntityFilterCity">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Physical zone to perform the authorization request
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="DtRequest" nillable="true" type="xs:dateTime">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+          <xs:documentation>&lt;summary&gt;
+            [OPTIONAL] Timestamp of the request
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="ExpedientNumber" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="IsoLang" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+          <xs:documentation>&lt;summary&gt;
+            [OPTIONAL] Language coded in ISO 639-1 
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FineAnullationAuthRequest" nillable="true" type="tns:FineAnullationAuthRequest" />
+  <xs:element name="GetFineAnullationAuthorizationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetFineAnullationAuthorizationResult" nillable="true" type="tns:FineAnullationAuthResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="FineAnullationAuthResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q28="http://www.parkaregroup.com/PublisherService/1.0" base="q28:PublisherResponse">
+        <xs:sequence>
+          <xs:element name="AuthId" type="xs:long">
+            <xs:annotation>
+              <xs:appinfo />
+              <xs:documentation>&lt;summary&gt;
+            Authorization unique identifier.
+            Must be provided on payment notification operations
+            &lt;/summary&gt;</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="AuthResult" type="xs:int">
+            <xs:annotation>
+              <xs:appinfo />
+              <xs:documentation>&lt;summary&gt;
+            Authorization result
+            &lt;/summary&gt;</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="Expedient" nillable="true" type="xs:string">
+            <xs:annotation>
+              <xs:appinfo />
+              <xs:documentation>&lt;summary&gt;
+            Asociated expedient for the requested anullation code
+            &lt;/summary&gt;</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="TotAmo" type="xs:decimal">
+            <xs:annotation>
+              <xs:appinfo />
+              <xs:documentation>&lt;summary&gt;
+            Accumulated total amount of the purchased ongoing parking operation
+            &lt;/summary&gt;</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="eAuthResult" type="tns:FineAnullationAuthResponse.enAuthResult">
+            <xs:annotation>
+              <xs:appinfo />
+              <xs:documentation>&lt;summary&gt;
+            Authorization result
+            &lt;/summary&gt;</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FineAnullationAuthResponse" nillable="true" type="tns:FineAnullationAuthResponse" />
+  <xs:simpleType name="FineAnullationAuthResponse.enAuthResult">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Authoritzed" />
+      <xs:enumeration value="OutOfPeriod" />
+      <xs:enumeration value="NotAnullable" />
+      <xs:enumeration value="NumNotExists" />
+      <xs:enumeration value="AlreadyPaid" />
+      <xs:enumeration value="AlreadyInvalidate" />
+      <xs:enumeration value="Server2Error" />
+      <xs:enumeration value="ServerException">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">99</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="FineAnullationAuthResponse.enAuthResult" nillable="true" type="tns:FineAnullationAuthResponse.enAuthResult" />
+  <xs:element name="SetParkingTransaction">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://www.parkaregroup.com/PublisherService/1.0" minOccurs="0" name="authSession" nillable="true" type="q29:AuthSession" />
+        <xs:element minOccurs="0" name="request" nillable="true" type="tns:PayParkingTransactionRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="PayParkingTransactionRequest">
+    <xs:annotation>
+      <xs:appinfo />
+      <xs:documentation>&lt;summary&gt;
+            Parking transaction payment. Must be applied to a physical zone
+            &lt;/summary&gt;</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:PayTransactionRequestBase">
+        <xs:sequence>
+          <xs:element xmlns:q30="http://www.parkaregroup.com/PublisherService/1.0" name="PhyZone" nillable="true" type="q30:EntityFilterPhyZone">
+            <xs:annotation>
+              <xs:appinfo />
+              <xs:documentation>&lt;summary&gt;
+            Physical zone where the payment has to be applied
+            &lt;/summary&gt;</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="PrkTrans" nillable="true" type="tns:PayTransactionParking">
+            <xs:annotation>
+              <xs:appinfo />
+              <xs:documentation>&lt;summary&gt;
+            Parking payment definition
+            &lt;/summary&gt;</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="SubBarrio" nillable="true" type="xs:string">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PayParkingTransactionRequest" nillable="true" type="tns:PayParkingTransactionRequest" />
+  <xs:complexType name="PayTransactionRequestBase">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:element name="PayTransactionRequestBase" nillable="true" type="tns:PayTransactionRequestBase" />
+  <xs:complexType name="PayTransactionParking">
+    <xs:annotation>
+      <xs:appinfo />
+      <xs:documentation>&lt;summary&gt;
+            Parking transaction definition
+            &lt;/summary&gt;</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:PayTransactionBase">
+        <xs:sequence>
+          <xs:element name="ParkingOper" nillable="true" type="tns:PayParking">
+            <xs:annotation>
+              <xs:appinfo />
+              <xs:documentation>&lt;summary&gt;
+            Parking operation data
+            &lt;/summary&gt;</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="UserPlate" nillable="true" type="xs:string">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+              <xs:documentation>&lt;summary&gt;
+            [OPTIONAL] User's license plate
+            &lt;/summary&gt;</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="UserSpace" nillable="true" type="xs:string">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+              <xs:documentation>&lt;summary&gt;
+            [OPTIONAL] User's selected space number
+            &lt;/summary&gt;</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PayTransactionParking" nillable="true" type="tns:PayTransactionParking" />
+  <xs:complexType name="PayTransactionBase">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AuthId" nillable="true" type="xs:long">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+          <xs:documentation>&lt;summary&gt;
+            [OPTIONAL] Authorization unique identifier obtained through PayTransactionAuthResponse
+            A NULL value indicates an offline operation
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="OperationDateUTC" type="xs:dateTime">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Operation timestamp (in UTC time)
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="TariffId" type="xs:int">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Tariff base identifier
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="TicketNum" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+          <xs:documentation>&lt;summary&gt;
+            [OPTIONAL] Printed ticket number
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="TransId" type="xs:long">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Transaction unique identifier
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PayTransactionBase" nillable="true" type="tns:PayTransactionBase" />
+  <xs:complexType name="PayTransactionFineCancellation">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:PayTransactionBase">
+        <xs:sequence>
+          <xs:element name="FineAmount" type="xs:decimal">
+            <xs:annotation>
+              <xs:appinfo />
+              <xs:documentation>&lt;summary&gt;
+            Fine cancellation paid amount
+            &lt;/summary&gt;</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="FineCancellationCode" nillable="true" type="xs:string">
+            <xs:annotation>
+              <xs:appinfo />
+              <xs:documentation>&lt;summary&gt;
+            Fine cancellation code
+            &lt;remarks&gt;At least FineCancellationCode or FineExpedientNumber must be set&lt;/remarks&gt;
+            &lt;/summary&gt;</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="FineExpedientNumber" nillable="true" type="xs:string">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PayTransactionFineCancellation" nillable="true" type="tns:PayTransactionFineCancellation" />
+  <xs:element name="SetParkingTransactionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SetParkingTransactionResult" nillable="true" type="tns:PayTransactionResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="PayTransactionResponse">
+    <xs:annotation>
+      <xs:appinfo />
+      <xs:documentation>&lt;summary&gt;
+            Response to a PayTransactionRequestBase
+            &lt;/summary&gt;</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q31="http://www.parkaregroup.com/PublisherService/1.0" base="q31:PublisherResponse">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PayTransactionResponse" nillable="true" type="tns:PayTransactionResponse" />
+  <xs:element name="SetFineAnullationTransaction">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://www.parkaregroup.com/PublisherService/1.0" minOccurs="0" name="authSession" nillable="true" type="q32:AuthSession" />
+        <xs:element minOccurs="0" name="request" nillable="true" type="tns:PayFineCancellationTransactionRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="PayFineCancellationTransactionRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:PayTransactionRequestBase">
+        <xs:sequence>
+          <xs:element xmlns:q33="http://www.parkaregroup.com/PublisherService/1.0" name="City" nillable="true" type="q33:EntityFilterCity">
+            <xs:annotation>
+              <xs:appinfo />
+              <xs:documentation>&lt;summary&gt;
+            City where the payment has to be applied
+            &lt;/summary&gt;</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="FineTrans" nillable="true" type="tns:PayTransactionFineCancellation">
+            <xs:annotation>
+              <xs:appinfo />
+              <xs:documentation>&lt;summary&gt;
+            Fine cancellation definition
+            &lt;/summary&gt;</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PayFineCancellationTransactionRequest" nillable="true" type="tns:PayFineCancellationTransactionRequest" />
+  <xs:element name="SetFineAnullationTransactionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SetFineAnullationTransactionResult" nillable="true" type="tns:PayTransactionResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetParkingOccupancy">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q34="http://www.parkaregroup.com/PublisherService/1.0" minOccurs="0" name="authSession" nillable="true" type="q34:AuthSession" />
+        <xs:element minOccurs="0" name="request" nillable="true" type="tns:ParkingOccupancyRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ParkingOccupancyRequest">
+    <xs:sequence>
+      <xs:element xmlns:q35="http://www.parkaregroup.com/PublisherService/1.0" name="Filter" nillable="true" type="q35:EntityFilterPhyZone">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Filter to retrieve the parking occupancy
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="TariffId" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ParkingOccupancyRequest" nillable="true" type="tns:ParkingOccupancyRequest" />
+  <xs:element name="GetParkingOccupancyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetParkingOccupancyResult" nillable="true" type="tns:ParkingOccupancyResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ParkingOccupancyResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q36="http://www.parkaregroup.com/PublisherService/1.0" base="q36:PublisherResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Result" nillable="true" type="tns:ArrayOfParkingOccupancyItem">
+            <xs:annotation>
+              <xs:appinfo />
+              <xs:documentation>&lt;summary&gt;
+            List of all parking occupancy items
+            &lt;/summary&gt;</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ParkingOccupancyResponse" nillable="true" type="tns:ParkingOccupancyResponse" />
+  <xs:complexType name="ArrayOfParkingOccupancyItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ParkingOccupancyItem" nillable="true" type="tns:ParkingOccupancyItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfParkingOccupancyItem" nillable="true" type="tns:ArrayOfParkingOccupancyItem" />
+  <xs:complexType name="ParkingOccupancyItem">
+    <xs:sequence>
+      <xs:element name="PeriodBegin" type="xs:dateTime">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Period begin of occupancy calculation (in local time units)
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="PeriodEnd" type="xs:dateTime">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Period end of occupancy calculation (in local time units)
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="PeriodLevelAbsolute" type="xs:decimal">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Absolute level of occupancy within the period
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="PeriodLevelRelative" nillable="true" type="xs:decimal">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Relative level of occupancy within the period, calculated as (PeriodLevelAbsolute / TotSpaces)
+            &lt;remarks&gt;Not a percent value. A NULL value indicates division-by-zero&lt;/remarks&gt;
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="TariffId" type="xs:int">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ParkingOccupancyItem" nillable="true" type="tns:ParkingOccupancyItem" />
+  <xs:element name="GetTariffCongestion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q37="http://www.parkaregroup.com/PublisherService/1.0" minOccurs="0" name="authSession" nillable="true" type="q37:AuthSession" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTariffCongestionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetTariffCongestionResult" nillable="true" type="tns:TariffCongestionResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="TariffCongestionResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q38="http://www.parkaregroup.com/PublisherService/1.0" base="q38:PublisherResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Result" nillable="true" type="tns:ArrayOfTariffCongestionResponseItem" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TariffCongestionResponse" nillable="true" type="tns:TariffCongestionResponse" />
+  <xs:complexType name="ArrayOfTariffCongestionResponseItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TariffCongestionResponseItem" nillable="true" type="tns:TariffCongestionResponseItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTariffCongestionResponseItem" nillable="true" type="tns:ArrayOfTariffCongestionResponseItem" />
+  <xs:complexType name="TariffCongestionResponseItem">
+    <xs:sequence>
+      <xs:element name="CongestionLevel" type="xs:int" />
+      <xs:element name="TariffId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TariffCongestionResponseItem" nillable="true" type="tns:TariffCongestionResponseItem" />
+</xs:schema>

@@ -1,0 +1,2712 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Fields.AllOperationsExts.Amount" xml:space="preserve">
+    <value>Valor</value>
+  </data>
+  <data name="Fields.AllOperationsExts.AmountCurId" xml:space="preserve">
+    <value>Moneda Valor</value>
+  </data>
+  <data name="Fields.AllOperationsExts.AmountCurrencyIsoCode" xml:space="preserve">
+    <value>Abrv. Moneda Valor</value>
+  </data>
+  <data name="Fields.AllOperationsExts.AppVersion" xml:space="preserve">
+    <value>Versión App.</value>
+  </data>
+  <data name="Fields.AllOperationsExts.AuthCode" xml:space="preserve">
+    <value>Código Autorización</value>
+  </data>
+  <data name="Fields.AllOperationsExts.BalanceBefore" xml:space="preserve">
+    <value>Saldo Previo</value>
+  </data>
+  <data name="Fields.AllOperationsExts.BalanceCurId" xml:space="preserve">
+    <value>Moneda Saldo Previo</value>
+  </data>
+  <data name="Fields.AllOperationsExts.BalanceCurrencyIsoCode" xml:space="preserve">
+    <value>Abrev. Moneda Saldo Previo</value>
+  </data>
+  <data name="Fields.AllOperationsExts.BtnAction" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Fields.AllOperationsExts.CardExpirationDate" xml:space="preserve">
+    <value>Fecha Expiración Tarjeta</value>
+  </data>
+  <data name="Fields.AllOperationsExts.CardExpirationDate_Time" xml:space="preserve">
+    <value>Hora Expiración Tarjeta</value>
+  </data>
+  <data name="Fields.AllOperationsExts.CardHash" xml:space="preserve">
+    <value>Hash Tarjeta</value>
+  </data>
+  <data name="Fields.AllOperationsExts.CardReference" xml:space="preserve">
+    <value>Referencia Tarjeta</value>
+  </data>
+  <data name="Fields.AllOperationsExts.CardScheme" xml:space="preserve">
+    <value>Sistema Tarjeta</value>
+  </data>
+  <data name="Fields.AllOperationsExts.ChangeApplied" xml:space="preserve">
+    <value>Cambio</value>
+  </data>
+  <data name="Fields.AllOperationsExts.Date" xml:space="preserve">
+    <value>Fecha</value>
+  </data>
+  <data name="Fields.AllOperationsExts.Date_Time" xml:space="preserve">
+    <value>Hora</value>
+  </data>
+  <data name="Fields.AllOperationsExts.DiscountAmount" xml:space="preserve">
+    <value>Valor Descuento</value>
+  </data>
+  <data name="Fields.AllOperationsExts.DiscountAmountCurrencyId" xml:space="preserve">
+    <value>Moneda Valor Descuento</value>
+  </data>
+  <data name="Fields.AllOperationsExts.DiscountAmountCurrencyIsoCode" xml:space="preserve">
+    <value>Abrev. Moneda Valor Descuento</value>
+  </data>
+  <data name="Fields.AllOperationsExts.DiscountAmountFinal" xml:space="preserve">
+    <value>Valor Final Descuento</value>
+  </data>
+  <data name="Fields.AllOperationsExts.DiscountBalanceBefore" xml:space="preserve">
+    <value>Saldo Previo Descuento</value>
+  </data>
+  <data name="Fields.AllOperationsExts.DiscountBalanceCurrencyId" xml:space="preserve">
+    <value>Moneda Saldo Previo Descuento</value>
+  </data>
+  <data name="Fields.AllOperationsExts.DiscountBalanceCurrencyIsoCode" xml:space="preserve">
+    <value>Abrev. Moneda Saldo Previo Descuento</value>
+  </data>
+  <data name="Fields.AllOperationsExts.DiscountChangeApplied" xml:space="preserve">
+    <value>Cambio Descuento</value>
+  </data>
+  <data name="Fields.AllOperationsExts.DiscountDate" xml:space="preserve">
+    <value>Fecha Descuento</value>
+  </data>
+  <data name="Fields.AllOperationsExts.DiscountDate_Time" xml:space="preserve">
+    <value>Hora Descuento</value>
+  </data>
+  <data name="Fields.AllOperationsExts.DiscountId" xml:space="preserve">
+    <value>Descuento</value>
+  </data>
+  <data name="Fields.AllOperationsExts.DiscountInsertionUTCDate" xml:space="preserve">
+    <value>Fecha Inserción Descuento (UTC)</value>
+  </data>
+  <data name="Fields.AllOperationsExts.DiscountInsertionUTCDate_Time" xml:space="preserve">
+    <value>Hora Inserción Descuento (UTC)</value>
+  </data>
+  <data name="Fields.AllOperationsExts.Enddate" xml:space="preserve">
+    <value>Fecha Final</value>
+  </data>
+  <data name="Fields.AllOperationsExts.Enddate_Time" xml:space="preserve">
+    <value>Hora Final</value>
+  </data>
+  <data name="Fields.AllOperationsExts.ExternalId1" xml:space="preserve">
+    <value>Id Externo 1</value>
+  </data>
+  <data name="Fields.AllOperationsExts.ExternalId2" xml:space="preserve">
+    <value>Id Externo 2</value>
+  </data>
+  <data name="Fields.AllOperationsExts.ExternalId3" xml:space="preserve">
+    <value>Id Externo 3</value>
+  </data>
+  <data name="Fields.AllOperationsExts.FinalAmount" xml:space="preserve">
+    <value>Valor Final</value>
+  </data>
+  <data name="Fields.AllOperationsExts.Inidate" xml:space="preserve">
+    <value>Fecha Inicio</value>
+  </data>
+  <data name="Fields.AllOperationsExts.Inidate_Time" xml:space="preserve">
+    <value>Hora Inicio</value>
+  </data>
+  <data name="Fields.AllOperationsExts.InsDescription" xml:space="preserve">
+    <value>Instalación</value>
+  </data>
+  <data name="Fields.AllOperationsExts.InsertionUTCDate" xml:space="preserve">
+    <value>Fecha Inserción (UTC)</value>
+  </data>
+  <data name="Fields.AllOperationsExts.InsertionUTCDate_Time" xml:space="preserve">
+    <value>Hora Inserción (UTC)</value>
+  </data>
+  <data name="Fields.AllOperationsExts.InsShortdesc" xml:space="preserve">
+    <value>Instalación Abrv.</value>
+  </data>
+  <data name="Fields.AllOperationsExts.InstallationId" xml:space="preserve">
+    <value>Instalación</value>
+  </data>
+  <data name="Fields.AllOperationsExts.Latitude" xml:space="preserve">
+    <value>Latitud</value>
+  </data>
+  <data name="Fields.AllOperationsExts.Longitude" xml:space="preserve">
+    <value>Longitud</value>
+  </data>
+  <data name="Fields.AllOperationsExts.MaskedCardNumber" xml:space="preserve">
+    <value>Número Tarjeta enmascarado</value>
+  </data>
+  <data name="Fields.AllOperationsExts.MobileOS" xml:space="preserve">
+    <value>SO Móvil</value>
+  </data>
+  <data name="Fields.AllOperationsExts.OffstreetEndDate" xml:space="preserve">
+    <value>Fecha Fin Aparcamiento</value>
+  </data>
+  <data name="Fields.AllOperationsExts.OffstreetEntryDate" xml:space="preserve">
+    <value>Fecha Entrada Aparcamiento</value>
+  </data>
+  <data name="Fields.AllOperationsExts.OffstreetExitDate" xml:space="preserve">
+    <value>Fecha Salida Aparcamiento</value>
+  </data>
+  <data name="Fields.AllOperationsExts.OffstreetExitLimitDate" xml:space="preserve">
+    <value>Fecha Límite Salida Aparcamiento</value>
+  </data>
+  <data name="Fields.AllOperationsExts.OffstreetGate" xml:space="preserve">
+    <value>Puerta Aparcamiento</value>
+  </data>
+  <data name="Fields.AllOperationsExts.OffstreetLogicalId" xml:space="preserve">
+    <value>Tiquet Aparcamiento</value>
+  </data>
+  <data name="Fields.AllOperationsExts.OffstreetNotifyEntryDate" xml:space="preserve">
+    <value>Fecha Notificación Entrada Aparcamiento</value>
+  </data>
+  <data name="Fields.AllOperationsExts.OffstreetPaymentDate" xml:space="preserve">
+    <value>Fecha Pago Aparcamiento</value>
+  </data>
+  <data name="Fields.AllOperationsExts.OffstreetSpaceDescription" xml:space="preserve">
+    <value>Plaza Aparcamiento</value>
+  </data>
+  <data name="Fields.AllOperationsExts.OffstreetTariff" xml:space="preserve">
+    <value>Tarifa Aparcamiento</value>
+  </data>
+  <data name="Fields.AllOperationsExts.OffstreetUTCEndDate" xml:space="preserve">
+    <value>Fecha (UTC) Fin Aparcamiento</value>
+  </data>
+  <data name="Fields.AllOperationsExts.OffstreetUTCEntryDate" xml:space="preserve">
+    <value>Fecha (UTC) Entrada Aparcamiento</value>
+  </data>
+  <data name="Fields.AllOperationsExts.OffstreetUTCExitDate" xml:space="preserve">
+    <value>Fecha (UTC) Salida Aparcamiento</value>
+  </data>
+  <data name="Fields.AllOperationsExts.OffstreetUTCExitLimitDate" xml:space="preserve">
+    <value>Fecha (UTC) Límite Salida Aparcamiento</value>
+  </data>
+  <data name="Fields.AllOperationsExts.OffstreetUTCNotifyEntryDate" xml:space="preserve">
+    <value>Fecha (UTC) Notificación Entrada Aparcamiento</value>
+  </data>
+  <data name="Fields.AllOperationsExts.OffstreetUTCPaymentDate" xml:space="preserve">
+    <value>Fecha (UTC) Pago Aparcamiento</value>
+  </data>
+  <data name="Fields.AllOperationsExts.OpReference" xml:space="preserve">
+    <value>Referencia Operación</value>
+  </data>
+  <data name="Fields.AllOperationsExts.Plate" xml:space="preserve">
+    <value>Matrícula</value>
+  </data>
+  <data name="Fields.AllOperationsExts.PlateId" xml:space="preserve">
+    <value>Matrícula</value>
+  </data>
+  <data name="Fields.AllOperationsExts.RechargeAmount" xml:space="preserve">
+    <value>Valor Recarga</value>
+  </data>
+  <data name="Fields.AllOperationsExts.RechargeAmountCurrencyId" xml:space="preserve">
+    <value>Moneda Valor Recarga</value>
+  </data>
+  <data name="Fields.AllOperationsExts.RechargeAmountCurrencyIsoCode" xml:space="preserve">
+    <value>Abrev. Moneda Valor Recarga</value>
+  </data>
+  <data name="Fields.AllOperationsExts.RechargeBalanceBefore" xml:space="preserve">
+    <value>Saldo Previo Recarga</value>
+  </data>
+  <data name="Fields.AllOperationsExts.RechargeDate" xml:space="preserve">
+    <value>Fecha Recarga</value>
+  </data>
+  <data name="Fields.AllOperationsExts.RechargeDate_Time" xml:space="preserve">
+    <value>Hora Recarga</value>
+  </data>
+  <data name="Fields.AllOperationsExts.RechargeId" xml:space="preserve">
+    <value>Recarga</value>
+  </data>
+  <data name="Fields.AllOperationsExts.RechargeInsertionUTCDate" xml:space="preserve">
+    <value>Fecha Inserción Recarga (UTC)</value>
+  </data>
+  <data name="Fields.AllOperationsExts.RechargeInsertionUTCDate_Time" xml:space="preserve">
+    <value>Hora Inserción Recarga (UTC)</value>
+  </data>
+  <data name="Fields.AllOperationsExts.SectorId" xml:space="preserve">
+    <value>Sector</value>
+  </data>
+  <data name="Fields.AllOperationsExts.ServiceChargeTypeId" xml:space="preserve">
+    <value>Tipo Servicio Carga</value>
+  </data>
+  <data name="Fields.AllOperationsExts.SuscriptionType" xml:space="preserve">
+    <value>Tipo Suscripción</value>
+  </data>
+  <data name="Fields.AllOperationsExts.Tariff" xml:space="preserve">
+    <value>Tarifa</value>
+  </data>
+  <data name="Fields.AllOperationsExts.TicketData" xml:space="preserve">
+    <value>Datos Denuncia</value>
+  </data>
+  <data name="Fields.AllOperationsExts.TicketNumber" xml:space="preserve">
+    <value>Número Denuncia</value>
+  </data>
+  <data name="Fields.AllOperationsExts.Time" xml:space="preserve">
+    <value>Duración</value>
+  </data>
+  <data name="Fields.AllOperationsExts.TransactionId" xml:space="preserve">
+    <value>Código Transacción</value>
+  </data>
+  <data name="Fields.AllOperationsExts.Type" xml:space="preserve">
+    <value>Tipo</value>
+  </data>
+  <data name="Fields.AllOperationsExts.TypeId" xml:space="preserve">
+    <value>Tipo</value>
+  </data>
+  <data name="Fields.AllOperationsExts.UserId" xml:space="preserve">
+    <value>Usuario</value>
+  </data>
+  <data name="Fields.AllOperationsExts.Username" xml:space="preserve">
+    <value>Usuario</value>
+  </data>
+  <data name="Fields.AllOperationsExts.UtcDate" xml:space="preserve">
+    <value>Fecha (UTC)</value>
+  </data>
+  <data name="Fields.AllOperationsExts.UtcDate_Time" xml:space="preserve">
+    <value>Hora (UTC)</value>
+  </data>
+  <data name="Fields.AllOperationsExts.Export.PDFFilename" xml:space="preserve">
+    <value>operaciones</value>
+  </data>
+  <data name="Fields.AllOperationsExts.Export.XLSFilename" xml:space="preserve">
+    <value>operaciones</value>
+  </data>
+  <data name="TypeEnums.ChargeOperationTypes.BalanceRecharge" xml:space="preserve">
+    <value>Recarga</value>
+  </data>
+  <data name="TypeEnums.ChargeOperationTypes.Discount" xml:space="preserve">
+    <value>Descuento</value>
+  </data>
+  <data name="TypeEnums.ChargeOperationTypes.ExtensionOperation" xml:space="preserve">
+    <value>Ampliación</value>
+  </data>
+  <data name="TypeEnums.ChargeOperationTypes.OffstreetEntry" xml:space="preserve">
+    <value>Entrada Aparcamiento</value>
+  </data>
+  <data name="TypeEnums.ChargeOperationTypes.OffstreetExit" xml:space="preserve">
+    <value>Salida Aparcamiento</value>
+  </data>
+  <data name="TypeEnums.ChargeOperationTypes.OffstreetOverduePayment" xml:space="preserve">
+    <value>Pago Atrasado Aparcamiento</value>
+  </data>
+  <data name="TypeEnums.ChargeOperationTypes.ParkingOperation" xml:space="preserve">
+    <value>Aparcamiento</value>
+  </data>
+  <data name="TypeEnums.ChargeOperationTypes.ParkingRefund" xml:space="preserve">
+    <value>Desaparcamiento</value>
+  </data>
+  <data name="TypeEnums.ChargeOperationTypes.ServiceCharge" xml:space="preserve">
+    <value>Cargo de Servicios</value>
+  </data>
+  <data name="TypeEnums.ChargeOperationTypes.TicketPayment" xml:space="preserve">
+    <value>Anulación de Denuncia</value>
+  </data>
+  <data name="Fields.AllOperationsExts" xml:space="preserve">
+    <value>Histórico Operaciones</value>
+  </data>
+  <data name="TypeEnums.MobileOSs.Android" xml:space="preserve">
+    <value>Android</value>
+  </data>
+  <data name="TypeEnums.MobileOSs.Blackberry" xml:space="preserve">
+    <value>Blackberry</value>
+  </data>
+  <data name="TypeEnums.MobileOSs.iOS" xml:space="preserve">
+    <value>iOS</value>
+  </data>
+  <data name="TypeEnums.MobileOSs.Web" xml:space="preserve">
+    <value>Web</value>
+  </data>
+  <data name="TypeEnums.MobileOSs.WindowsPhone" xml:space="preserve">
+    <value>Windows Phone</value>
+  </data>
+  <data name="Fields.ExternalParkingOperations" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Fields.ExternalParkingOperations.Amount" xml:space="preserve">
+    <value>Valor</value>
+  </data>
+  <data name="Fields.ExternalParkingOperations.Date" xml:space="preserve">
+    <value>Fecha</value>
+  </data>
+  <data name="Fields.ExternalParkingOperations.DateUtc" xml:space="preserve">
+    <value>Fecha (UTC)</value>
+  </data>
+  <data name="Fields.ExternalParkingOperations.DateUtcOffset" xml:space="preserve">
+    <value>Offset Fecha</value>
+  </data>
+  <data name="Fields.ExternalParkingOperations.DateUtc_Time" xml:space="preserve">
+    <value>Hora (UTC)</value>
+  </data>
+  <data name="Fields.ExternalParkingOperations.Date_Time" xml:space="preserve">
+    <value>Hora</value>
+  </data>
+  <data name="Fields.ExternalParkingOperations.Enddate" xml:space="preserve">
+    <value>Fecha Final</value>
+  </data>
+  <data name="Fields.ExternalParkingOperations.EnddateUtc" xml:space="preserve">
+    <value>Fecha FInal (UTC)</value>
+  </data>
+  <data name="Fields.ExternalParkingOperations.EnddateUtcOffset" xml:space="preserve">
+    <value>Offset Fecha Final</value>
+  </data>
+  <data name="Fields.ExternalParkingOperations.EnddateUtc_Time" xml:space="preserve">
+    <value>Hora FInal (UTC)</value>
+  </data>
+  <data name="Fields.ExternalParkingOperations.Enddate_Time" xml:space="preserve">
+    <value>Hora Final</value>
+  </data>
+  <data name="Fields.ExternalParkingOperations.EndingNotified" xml:space="preserve">
+    <value>Finalización Notificada</value>
+  </data>
+  <data name="Fields.ExternalParkingOperations.Exp" xml:space="preserve">
+    <value>Proveedor Externo</value>
+  </data>
+  <data name="Fields.ExternalParkingOperations.Export_PDFFilename" xml:space="preserve">
+    <value>OperacionesExternas</value>
+  </data>
+  <data name="Fields.ExternalParkingOperations.Export_XLSFilename" xml:space="preserve">
+    <value>OperacionesExternas</value>
+  </data>
+  <data name="Fields.ExternalParkingOperations.Id" xml:space="preserve">
+    <value>Id Operación</value>
+  </data>
+  <data name="Fields.ExternalParkingOperations.Inidate" xml:space="preserve">
+    <value>Fecha Inicio</value>
+  </data>
+  <data name="Fields.ExternalParkingOperations.InidateUtc" xml:space="preserve">
+    <value>Fecha Inicio (UTC)</value>
+  </data>
+  <data name="Fields.ExternalParkingOperations.InidateUtcOffset" xml:space="preserve">
+    <value>Offset Fecha Inicio</value>
+  </data>
+  <data name="Fields.ExternalParkingOperations.InidateUtc_Time" xml:space="preserve">
+    <value>Hora Inicio (UTC)</value>
+  </data>
+  <data name="Fields.ExternalParkingOperations.Inidate_Time" xml:space="preserve">
+    <value>Hora Inicio</value>
+  </data>
+  <data name="Fields.ExternalParkingOperations.Ins" xml:space="preserve">
+    <value>Instalación</value>
+  </data>
+  <data name="Fields.ExternalParkingOperations.InsertionNotified" xml:space="preserve">
+    <value>Inserción Notificada</value>
+  </data>
+  <data name="Fields.ExternalParkingOperations.InsertionUtcDate" xml:space="preserve">
+    <value>Fecha Inserción (UTC)</value>
+  </data>
+  <data name="Fields.ExternalParkingOperations.InsertionUtcDate_Time" xml:space="preserve">
+    <value>Hora Inserción (UTC)</value>
+  </data>
+  <data name="Fields.ExternalParkingOperations.OperationId1" xml:space="preserve">
+    <value>Id Operación Ext. 1</value>
+  </data>
+  <data name="Fields.ExternalParkingOperations.OperationId2" xml:space="preserve">
+    <value>Id Operación Ext. 2</value>
+  </data>
+  <data name="Fields.ExternalParkingOperations.Plate" xml:space="preserve">
+    <value>Matrícula</value>
+  </data>
+  <data name="Fields.ExternalParkingOperations.SrcIdent" xml:space="preserve">
+    <value>Identificador Origen</value>
+  </data>
+  <data name="Fields.ExternalParkingOperations.SrcType" xml:space="preserve">
+    <value>Origen</value>
+  </data>
+  <data name="Fields.ExternalParkingOperations.Tariff" xml:space="preserve">
+    <value>Tarifa</value>
+  </data>
+  <data name="Fields.ExternalParkingOperations.Time" xml:space="preserve">
+    <value>Duración</value>
+  </data>
+  <data name="Fields.ExternalParkingOperations.Type" xml:space="preserve">
+    <value>Tipo</value>
+  </data>
+  <data name="Fields.ExternalParkingOperations.Zone" xml:space="preserve">
+    <value>Zona</value>
+  </data>
+  <data name="TypeEnums.OperationSourceTypes.ExternalMobilePayment" xml:space="preserve">
+    <value>Pago por Móvil Externo</value>
+  </data>
+  <data name="TypeEnums.OperationSourceTypes.ExternalParkingMeter" xml:space="preserve">
+    <value>Parquímetro Externo</value>
+  </data>
+  <data name="TypeEnums.OperationSourceTypes.InternMobilePayment" xml:space="preserve">
+    <value>Pago por Móvil Interno</value>
+  </data>
+  <data name="CustomerInvoices_DownloadURL" xml:space="preserve">
+    <value>Enalce de descarga</value>
+  </data>
+  <data name="Fields.CustomerInvoices" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Fields.CustomerInvoices..Export.PDFFilename" xml:space="preserve">
+    <value>factures</value>
+  </data>
+  <data name="Fields.CustomerInvoices.InvAmount" xml:space="preserve">
+    <value>Valor</value>
+  </data>
+  <data name="Fields.CustomerInvoices.BtnInvoiceExport" xml:space="preserve">
+    <value>Descargar</value>
+  </data>
+  <data name="Fields.CustomerInvoices.Cus" xml:space="preserve">
+    <value>Usuario</value>
+  </data>
+  <data name="Fields.CustomerInvoices.Export.XLSFilename" xml:space="preserve">
+    <value>facturas</value>
+  </data>
+  <data name="Fields.CustomerInvoices.Id" xml:space="preserve">
+    <value>Código</value>
+  </data>
+  <data name="Fields.CustomerInvoices.InvDate" xml:space="preserve">
+    <value>Fecha</value>
+  </data>
+  <data name="Fields.CustomerInvoices.InvDate_Time" xml:space="preserve">
+    <value>Hora</value>
+  </data>
+  <data name="Fields.CustomerInvoices.InvNumber" xml:space="preserve">
+    <value>Número</value>
+  </data>
+  <data name="Fields.CustomerInscriptions" xml:space="preserve">
+    <value>Altas en Web</value>
+  </data>
+  <data name="Fields.CustomerInscriptions.ActivationCode" xml:space="preserve">
+    <value>Código Activación</value>
+  </data>
+  <data name="Fields.CustomerInscriptions.ActivationRetries" xml:space="preserve">
+    <value>Reintentos Activación</value>
+  </data>
+  <data name="Fields.CustomerInscriptions.Culture" xml:space="preserve">
+    <value>Idioma</value>
+  </data>
+  <data name="Fields.CustomerInscriptions.CusId" xml:space="preserve">
+    <value>Código Usuario</value>
+  </data>
+  <data name="Fields.CustomerInscriptions.DocId" xml:space="preserve">
+    <value>DNI/Pasaporte</value>
+  </data>
+  <data name="Fields.CustomerInscriptions.Email" xml:space="preserve">
+    <value>E-mail</value>
+  </data>
+  <data name="Fields.CustomerInscriptions.Id" xml:space="preserve">
+    <value>Código</value>
+  </data>
+  <data name="Fields.CustomerInscriptions.LastSentDate" xml:space="preserve">
+    <value>Última Fecha Envío</value>
+  </data>
+  <data name="Fields.CustomerInscriptions.MainTel" xml:space="preserve">
+    <value>Teléfono Móvil</value>
+  </data>
+  <data name="Fields.CustomerInscriptions.MainTelCountry" xml:space="preserve">
+    <value>País Teléfono Móvil</value>
+  </data>
+  <data name="Fields.CustomerInscriptions.Name" xml:space="preserve">
+    <value>Nombre</value>
+  </data>
+  <data name="Fields.CustomerInscriptions.SecundTel" xml:space="preserve">
+    <value>Teléfono Fijo</value>
+  </data>
+  <data name="Fields.CustomerInscriptions.SecundTelCountry" xml:space="preserve">
+    <value>País Teléfono Fijo</value>
+  </data>
+  <data name="Fields.CustomerInscriptions.Surname1" xml:space="preserve">
+    <value>Primer Apellido</value>
+  </data>
+  <data name="Fields.CustomerInscriptions.Surname2" xml:space="preserve">
+    <value>Segundo Apellido</value>
+  </data>
+  <data name="Fields.CustomerInscriptions.UrlParameter" xml:space="preserve">
+    <value>Url</value>
+  </data>
+  <data name="Fields.Users" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Fields.Users.City" xml:space="preserve">
+    <value>Ciudad</value>
+  </data>
+  <data name="Fields.Users.CouId" xml:space="preserve">
+    <value>País</value>
+  </data>
+  <data name="Fields.Users.DocId" xml:space="preserve">
+    <value>DNI/Pasaporte</value>
+  </data>
+  <data name="Fields.Users.Door" xml:space="preserve">
+    <value>Puerta</value>
+  </data>
+  <data name="Fields.Users.Email" xml:space="preserve">
+    <value>E-mail</value>
+  </data>
+  <data name="Fields.Users.Id" xml:space="preserve">
+    <value>Código</value>
+  </data>
+  <data name="Fields.Users.Letter" xml:space="preserve">
+    <value>Letra</value>
+  </data>
+  <data name="Fields.Users.LevelNum" xml:space="preserve">
+    <value>Piso</value>
+  </data>
+  <data name="Fields.Users.MainTel" xml:space="preserve">
+    <value>Teléfono Móvil</value>
+  </data>
+  <data name="Fields.Users.MainTelCountry" xml:space="preserve">
+    <value>País Teléfono Móvil</value>
+  </data>
+  <data name="Fields.Users.Plates" xml:space="preserve">
+    <value>Matrículas</value>
+  </data>
+  <data name="Fields.Users.SecundTel" xml:space="preserve">
+    <value>Teléfono Fijo</value>
+  </data>
+  <data name="Fields.Users.SecundTelCountry" xml:space="preserve">
+    <value>País Teléfono Fijo</value>
+  </data>
+  <data name="Fields.Users.Stair" xml:space="preserve">
+    <value>Escalera</value>
+  </data>
+  <data name="Fields.Users.State" xml:space="preserve">
+    <value>Provincia</value>
+  </data>
+  <data name="Fields.Users.Street" xml:space="preserve">
+    <value>Nombre de la Calle</value>
+  </data>
+  <data name="Fields.Users.StreetNumber" xml:space="preserve">
+    <value>Número</value>
+  </data>
+  <data name="Fields.Users.Surname1" xml:space="preserve">
+    <value>Primer Apellido</value>
+  </data>
+  <data name="Fields.Users.Surname2" xml:space="preserve">
+    <value>Segundo Apellido</value>
+  </data>
+  <data name="Fields.Users.Username" xml:space="preserve">
+    <value>Nombre</value>
+  </data>
+  <data name="Fields.Users.Zipcode" xml:space="preserve">
+    <value>Código Postal</value>
+  </data>
+  <data name="Fields.UsersSecurityOperations" xml:space="preserve">
+    <value>Operaciones Seguras</value>
+  </data>
+  <data name="TypeEnums.SecurityOperationStatus.Confirmed" xml:space="preserve">
+    <value>Confirmada</value>
+  </data>
+  <data name="TypeEnums.SecurityOperationStatus.Expired" xml:space="preserve">
+    <value>Expirada</value>
+  </data>
+  <data name="TypeEnums.SecurityOperationStatus.Inserted" xml:space="preserve">
+    <value>Insertada</value>
+  </data>
+  <data name="TypeEnums.SecurityOperationTypes.ChangeEmail_Telephone" xml:space="preserve">
+    <value>Cambio Email-Teléfono</value>
+  </data>
+  <data name="TypeEnums.SecurityOperationTypes.RecoverPassword" xml:space="preserve">
+    <value>Restablecer Contraseña</value>
+  </data>
+  <data name="Fields.AllOperationsExts.FixedFee" xml:space="preserve">
+    <value>Comisión Fija</value>
+  </data>
+  <data name="Fields.AllOperationsExts.PartialFixedFee" xml:space="preserve">
+    <value>Valor Comisión Fija</value>
+  </data>
+  <data name="Fields.AllOperationsExts.PartialPercFee" xml:space="preserve">
+    <value>Valor Comisión Porc.</value>
+  </data>
+  <data name="Fields.AllOperationsExts.PartialVat1" xml:space="preserve">
+    <value>Valor IVA</value>
+  </data>
+  <data name="Fields.AllOperationsExts.PercFee" xml:space="preserve">
+    <value>% Comisión</value>
+  </data>
+  <data name="Fields.AllOperationsExts.PercFeeTopped" xml:space="preserve">
+    <value>Comisión Máx.</value>
+  </data>
+  <data name="Fields.AllOperationsExts.PercVat1" xml:space="preserve">
+    <value>% IVA 1</value>
+  </data>
+  <data name="Fields.AllOperationsExts.PercVat2" xml:space="preserve">
+    <value>% IVA 2</value>
+  </data>
+  <data name="Fields.AllOperationsExts.TotalAmount" xml:space="preserve">
+    <value>Valor Total</value>
+  </data>
+  <data name="Fields.Users.LctId" xml:space="preserve">
+    <value>Términos Licencia</value>
+  </data>
+  <data name="TypeEnums.ServiceChargeType.NewPaymentMean" xml:space="preserve">
+    <value>Medio de Pago</value>
+  </data>
+  <data name="TypeEnums.ServiceChargeType.PeriodicCharge" xml:space="preserve">
+    <value>Carga Periódica</value>
+  </data>
+  <data name="TypeEnums.PaymentSuscryptionTypes.pstPerTransaction" xml:space="preserve">
+    <value>Por Transacción</value>
+  </data>
+  <data name="TypeEnums.PaymentSuscryptionTypes.pstPrepay" xml:space="preserve">
+    <value>Prepago</value>
+  </data>
+  <data name="Fields.AllOperationsExtNorecharges.Amount" xml:space="preserve">
+    <value>Valor</value>
+  </data>
+  <data name="Fields.AllOperationsExtNorecharges.AmountCurId" xml:space="preserve">
+    <value>Moneda Valor</value>
+  </data>
+  <data name="Fields.AllOperationsExtNorecharges.AmountCurrencyIsoCode" xml:space="preserve">
+    <value>Abrv. Moneda Valor</value>
+  </data>
+  <data name="Fields.AllOperationsExtNorecharges.AppVersion" xml:space="preserve">
+    <value>Versión App.</value>
+  </data>
+  <data name="Fields.AllOperationsExtNorecharges.AuthCode" xml:space="preserve">
+    <value>Código Autorización</value>
+  </data>
+  <data name="Fields.AllOperationsExtNorecharges.BalanceBefore" xml:space="preserve">
+    <value>Saldo Previo</value>
+  </data>
+  <data name="Fields.AllOperationsExtNorecharges.BalanceCurId" xml:space="preserve">
+    <value>Moneda Saldo Previo</value>
+  </data>
+  <data name="Fields.AllOperationsExtNorecharges.BalanceCurrencyIsoCode" xml:space="preserve">
+    <value>Abrev. Moneda Saldo Previo</value>
+  </data>
+  <data name="Fields.AllOperationsExtNorecharges.BtnAction" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Fields.AllOperationsExtNorecharges.CardExpirationDate" xml:space="preserve">
+    <value>Fecha Expiración Tarjeta</value>
+  </data>
+  <data name="Fields.AllOperationsExtNorecharges.CardExpirationDate_Time" xml:space="preserve">
+    <value>Hora Expiración Tarjeta</value>
+  </data>
+  <data name="Fields.AllOperationsExtNorecharges.CardHash" xml:space="preserve">
+    <value>Hash Tarjeta</value>
+  </data>
+  <data name="Fields.AllOperationsExtNorecharges.CardReference" xml:space="preserve">
+    <value>Referencia Tarjeta</value>
+  </data>
+  <data name="Fields.AllOperationsExtNorecharges.CardScheme" xml:space="preserve">
+    <value>Sistema Tarjeta</value>
+  </data>
+  <data name="Fields.AllOperationsExtNorecharges.ChangeApplied" xml:space="preserve">
+    <value>Cambio</value>
+  </data>
+  <data name="Fields.AllOperationsExtNorecharges.Date" xml:space="preserve">
+    <value>Fecha</value>
+  </data>
+  <data name="Fields.AllOperationsExtNorecharges.Date_Time" xml:space="preserve">
+    <value>Hora</value>
+  </data>
+  <data name="Fields.AllOperationsExtNorecharges.DiscountAmount" xml:space="preserve">
+    <value>Valor Descuento</value>
+  </data>
+  <data name="Fields.AllOperationsExtNorecharges.DiscountAmountCurrencyId" xml:space="preserve">
+    <value>Moneda Valor Descuento</value>
+  </data>
+  <data name="Fields.AllOperationsExtNorecharges.DiscountAmountCurrencyIsoCode" xml:space="preserve">
+    <value>Abrev. Moneda Valor Descuento</value>
+  </data>
+  <data name="Fields.AllOperationsExtNorecharges.DiscountAmountFinal" xml:space="preserve">
+    <value>Valor Final Descuento</value>
+  </data>
+  <data name="Fields.AllOperationsExtNorecharges.DiscountBalanceBefore" xml:space="preserve">
+    <value>Saldo Previo Descuento</value>
+  </data>
+  <data name="Fields.AllOperationsExtNorecharges.DiscountBalanceCurrencyId" xml:space="preserve">
+    <value>Moneda Saldo Previo Descuento</value>
+  </data>
+  <data name="Fields.AllOperationsExtNorecharges.DiscountBalanceCurrencyIsoCode" xml:space="preserve">
+    <value>Abrev. Moneda Saldo Previo Descuento</value>
+  </data>
+  <data name="Fields.AllOperationsExtNorecharges.DiscountChangeApplied" xml:space="preserve">
+    <value>Cambio Descuento</value>
+  </data>
+  <data name="Fields.AllOperationsExtNorecharges.DiscountDate" xml:space="preserve">
+    <value>Fecha Descuento</value>
+  </data>
+  <data name="Fields.AllOperationsExtNorecharges.DiscountDate_Time" xml:space="preserve">
+    <value>Hora Descuento</value>
+  </data>
+  <data name="Fields.AllOperationsExtNorecharges.DiscountId" xml:space="preserve">
+    <value>Descuento</value>
+  </data>
+  <data name="Fields.AllOperationsExtNorecharges.DiscountInsertionUTCDate" xml:space="preserve">
+    <value>Fecha Inserción Descuento (UTC)</value>
+  </data>
+  <data name="Fields.AllOperationsExtNorecharges.DiscountInsertionUTCDate_Time" xml:space="preserve">
+    <value>Hora Inserción Descuento (UTC)</value>
+  </data>
+  <data name="Fields.AllOperationsExtNorecharges.Enddate" xml:space="preserve">
+    <value>Fecha Final</value>
+  </data>
+  <data name="Fields.AllOperationsExtNorecharges.Enddate_Time" xml:space="preserve">
+    <value>Hora Final</value>
+  </data>
+  <data name="Fields.AllOperationsExtNorecharges.Export.PDFFilename" xml:space="preserve">
+    <value>operaciones</value>
+  </data>
+  <data name="Fields.AllOperationsExtNorecharges.Export.XLSFilename" xml:space="preserve">
+    <value>operaciones</value>
+  </data>
+  <data name="Fields.AllOperationsExtNorecharges.ExternalId1" xml:space="preserve">
+    <value>Id Externo 1</value>
+  </data>
+  <data name="Fields.AllOperationsExtNorecharges.ExternalId2" xml:space="preserve">
+    <value>Id Externo 2</value>
+  </data>
+  <data name="Fields.AllOperationsExtNorecharges.ExternalId3" xml:space="preserve">
+    <value>Id Externo 3</value>
+  </data>
+  <data name="Fields.AllOperationsExtNorecharges.FinalAmount" xml:space="preserve">
+    <value>Valor Final</value>
+  </data>
+  <data name="Fields.AllOperationsExtNorecharges.FixedFee" xml:space="preserve">
+    <value>Comisión Fija</value>
+  </data>
+  <data name="Fields.AllOperationsExtNorecharges.Inidate" xml:space="preserve">
+    <value>Fecha Inicio</value>
+  </data>
+  <data name="Fields.AllOperationsExtNorecharges.Inidate_Time" xml:space="preserve">
+    <value>Hora Inicio</value>
+  </data>
+  <data name="Fields.AllOperationsExtNorecharges.InsDescription" xml:space="preserve">
+    <value>Instalación</value>
+  </data>
+  <data name="Fields.AllOperationsExtNorecharges.InsertionUTCDate" xml:space="preserve">
+    <value>Fecha Inserción (UTC)</value>
+  </data>
+  <data name="Fields.AllOperationsExtNorecharges.InsertionUTCDate_Time" xml:space="preserve">
+    <value>Hora Inserción (UTC)</value>
+  </data>
+  <data name="Fields.AllOperationsExtNorecharges.InsShortdesc" xml:space="preserve">
+    <value>Instalación Abrv.</value>
+  </data>
+  <data name="Fields.AllOperationsExtNorecharges.InstallationId" xml:space="preserve">
+    <value>Instalación</value>
+  </data>
+  <data name="Fields.AllOperationsExtNorecharges.Latitude" xml:space="preserve">
+    <value>Latitud</value>
+  </data>
+  <data name="Fields.AllOperationsExtNorecharges.Longitude" xml:space="preserve">
+    <value>Longitud</value>
+  </data>
+  <data name="Fields.AllOperationsExtNorecharges.MaskedCardNumber" xml:space="preserve">
+    <value>Número Tarjeta enmascarado</value>
+  </data>
+  <data name="Fields.AllOperationsExtNorecharges.MobileOS" xml:space="preserve">
+    <value>SO Móvil</value>
+  </data>
+  <data name="Fields.AllOperationsExtNorecharges.OffstreetEndDate" xml:space="preserve">
+    <value>Fecha Fin Aparcamiento</value>
+  </data>
+  <data name="Fields.AllOperationsExtNorecharges.OffstreetEntryDate" xml:space="preserve">
+    <value>Fecha Entrada Aparcamiento</value>
+  </data>
+  <data name="Fields.AllOperationsExtNorecharges.OffstreetExitDate" xml:space="preserve">
+    <value>Fecha Salida Aparcamiento</value>
+  </data>
+  <data name="Fields.AllOperationsExtNorecharges.OffstreetExitLimitDate" xml:space="preserve">
+    <value>Fecha Límite Salida Aparcamiento</value>
+  </data>
+  <data name="Fields.AllOperationsExtNorecharges.OffstreetGate" xml:space="preserve">
+    <value>Puerta Aparcamiento</value>
+  </data>
+  <data name="Fields.AllOperationsExtNorecharges.OffstreetLogicalId" xml:space="preserve">
+    <value>Tiquet Aparcamiento</value>
+  </data>
+  <data name="Fields.AllOperationsExtNorecharges.OffstreetNotifyEntryDate" xml:space="preserve">
+    <value>Fecha Notificación Entrada Aparcamiento</value>
+  </data>
+  <data name="Fields.AllOperationsExtNorecharges.OffstreetPaymentDate" xml:space="preserve">
+    <value>Fecha Pago Aparcamiento</value>
+  </data>
+  <data name="Fields.AllOperationsExtNorecharges.OffstreetSpaceDescription" xml:space="preserve">
+    <value>Plaza Aparcamiento</value>
+  </data>
+  <data name="Fields.AllOperationsExtNorecharges.OffstreetTariff" xml:space="preserve">
+    <value>Tarifa Aparcamiento</value>
+  </data>
+  <data name="Fields.AllOperationsExtNorecharges.OffstreetUTCEndDate" xml:space="preserve">
+    <value>Fecha (UTC) Fin Aparcamiento</value>
+  </data>
+  <data name="Fields.AllOperationsExtNorecharges.OffstreetUTCEntryDate" xml:space="preserve">
+    <value>Fecha (UTC) Entrada Aparcamiento</value>
+  </data>
+  <data name="Fields.AllOperationsExtNorecharges.OffstreetUTCExitDate" xml:space="preserve">
+    <value>Fecha (UTC) Salida Aparcamiento</value>
+  </data>
+  <data name="Fields.AllOperationsExtNorecharges.OffstreetUTCExitLimitDate" xml:space="preserve">
+    <value>Fecha (UTC) Límite Salida Aparcamiento</value>
+  </data>
+  <data name="Fields.AllOperationsExtNorecharges.OffstreetUTCNotifyEntryDate" xml:space="preserve">
+    <value>Fecha (UTC) Notificación Entrada Aparcamiento</value>
+  </data>
+  <data name="Fields.AllOperationsExtNorecharges.OffstreetUTCPaymentDate" xml:space="preserve">
+    <value>Fecha (UTC) Pago Aparcamiento</value>
+  </data>
+  <data name="Fields.AllOperationsExtNorecharges.OpReference" xml:space="preserve">
+    <value>Referencia Operación</value>
+  </data>
+  <data name="Fields.AllOperationsExtNorecharges.PartialFixedFee" xml:space="preserve">
+    <value>Valor Comisión Fija</value>
+  </data>
+  <data name="Fields.AllOperationsExtNorecharges.PartialPercFee" xml:space="preserve">
+    <value>Valor Comisión Porc.</value>
+  </data>
+  <data name="Fields.AllOperationsExtNorecharges.PartialVat1" xml:space="preserve">
+    <value>Valor IVA</value>
+  </data>
+  <data name="Fields.AllOperationsExtNorecharges.PercFee" xml:space="preserve">
+    <value>% Comisión</value>
+  </data>
+  <data name="Fields.AllOperationsExtNorecharges.PercFeeTopped" xml:space="preserve">
+    <value>Comisión Máx.</value>
+  </data>
+  <data name="Fields.AllOperationsExtNorecharges.PercVat1" xml:space="preserve">
+    <value>% IVA 1</value>
+  </data>
+  <data name="Fields.AllOperationsExtNorecharges.PercVat2" xml:space="preserve">
+    <value>% IVA 2</value>
+  </data>
+  <data name="Fields.AllOperationsExtNorecharges.Plate" xml:space="preserve">
+    <value>Matrícula</value>
+  </data>
+  <data name="Fields.AllOperationsExtNorecharges.PlateId" xml:space="preserve">
+    <value>Matrícula</value>
+  </data>
+  <data name="Fields.AllOperationsExtNorecharges.RechargeAmount" xml:space="preserve">
+    <value>Valor Recarga</value>
+  </data>
+  <data name="Fields.AllOperationsExtNorecharges.RechargeAmountCurrencyId" xml:space="preserve">
+    <value>Moneda Valor Recarga</value>
+  </data>
+  <data name="Fields.AllOperationsExtNorecharges.RechargeAmountCurrencyIsoCode" xml:space="preserve">
+    <value>Abrev. Moneda Valor Recarga</value>
+  </data>
+  <data name="Fields.AllOperationsExtNorecharges.RechargeBalanceBefore" xml:space="preserve">
+    <value>Saldo Previo Recarga</value>
+  </data>
+  <data name="Fields.AllOperationsExtNorecharges.RechargeDate" xml:space="preserve">
+    <value>Fecha Recarga</value>
+  </data>
+  <data name="Fields.AllOperationsExtNorecharges.RechargeDate_Time" xml:space="preserve">
+    <value>Hora Recarga</value>
+  </data>
+  <data name="Fields.AllOperationsExtNorecharges.RechargeId" xml:space="preserve">
+    <value>Recarga</value>
+  </data>
+  <data name="Fields.AllOperationsExtNorecharges.RechargeInsertionUTCDate" xml:space="preserve">
+    <value>Fecha Inserción Recarga (UTC)</value>
+  </data>
+  <data name="Fields.AllOperationsExtNorecharges.RechargeInsertionUTCDate_Time" xml:space="preserve">
+    <value>Hora Inserción Recarga (UTC)</value>
+  </data>
+  <data name="Fields.AllOperationsExtNorecharges.SectorId" xml:space="preserve">
+    <value>Sector</value>
+  </data>
+  <data name="Fields.AllOperationsExtNorecharges.ServiceChargeTypeId" xml:space="preserve">
+    <value>Tipo Servicio Carga</value>
+  </data>
+  <data name="Fields.AllOperationsExtNorecharges.SuscriptionType" xml:space="preserve">
+    <value>Tipo Suscripción</value>
+  </data>
+  <data name="Fields.AllOperationsExtNorecharges.Tariff" xml:space="preserve">
+    <value>Tarifa</value>
+  </data>
+  <data name="Fields.AllOperationsExtNorecharges.TicketData" xml:space="preserve">
+    <value>Datos Denuncia</value>
+  </data>
+  <data name="Fields.AllOperationsExtNorecharges.TicketNumber" xml:space="preserve">
+    <value>Número Denuncia</value>
+  </data>
+  <data name="Fields.AllOperationsExtNorecharges.Time" xml:space="preserve">
+    <value>Duración</value>
+  </data>
+  <data name="Fields.AllOperationsExtNorecharges.TotalAmount" xml:space="preserve">
+    <value>Valor Total</value>
+  </data>
+  <data name="Fields.AllOperationsExtNorecharges.TransactionId" xml:space="preserve">
+    <value>Código Transacción</value>
+  </data>
+  <data name="Fields.AllOperationsExtNorecharges.Type" xml:space="preserve">
+    <value>Tipo</value>
+  </data>
+  <data name="Fields.AllOperationsExtNorecharges.TypeId" xml:space="preserve">
+    <value>Tipo</value>
+  </data>
+  <data name="Fields.AllOperationsExtNorecharges.UserId" xml:space="preserve">
+    <value>Usuario</value>
+  </data>
+  <data name="Fields.AllOperationsExtNorecharges.Username" xml:space="preserve">
+    <value>Usuario</value>
+  </data>
+  <data name="Fields.AllOperationsExtNorecharges.UtcDate" xml:space="preserve">
+    <value>Fecha (UTC)</value>
+  </data>
+  <data name="Fields.AllOperationsExtNorecharges.UtcDate_Time" xml:space="preserve">
+    <value>Hora (UTC)</value>
+  </data>
+  <data name="Fields.AllOperationsExtNorecharges" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Fields.AllCurrOperationsExts" xml:space="preserve">
+    <value>Operaciones Actuales</value>
+  </data>
+  <data name="Fields.AllCurrOperationsExts.Amount" xml:space="preserve">
+    <value>Valor</value>
+  </data>
+  <data name="Fields.AllCurrOperationsExts.AmountCurId" xml:space="preserve">
+    <value>Moneda Valor</value>
+  </data>
+  <data name="Fields.AllCurrOperationsExts.AmountCurrencyIsoCode" xml:space="preserve">
+    <value>Abrv. Moneda Valor</value>
+  </data>
+  <data name="Fields.AllCurrOperationsExts.AppVersion" xml:space="preserve">
+    <value>Versión App.</value>
+  </data>
+  <data name="Fields.AllCurrOperationsExts.AuthCode" xml:space="preserve">
+    <value>Código Autorización</value>
+  </data>
+  <data name="Fields.AllCurrOperationsExts.BalanceBefore" xml:space="preserve">
+    <value>Saldo Previo</value>
+  </data>
+  <data name="Fields.AllCurrOperationsExts.BalanceCurId" xml:space="preserve">
+    <value>Moneda Saldo Previo</value>
+  </data>
+  <data name="Fields.AllCurrOperationsExts.BalanceCurrencyIsoCode" xml:space="preserve">
+    <value>Abrev. Moneda Saldo Previo</value>
+  </data>
+  <data name="Fields.AllCurrOperationsExts.BtnAction" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Fields.AllCurrOperationsExts.CardExpirationDate" xml:space="preserve">
+    <value>Fecha Expiración Tarjeta</value>
+  </data>
+  <data name="Fields.AllCurrOperationsExts.CardExpirationDate_Time" xml:space="preserve">
+    <value>Hora Expiración Tarjeta</value>
+  </data>
+  <data name="Fields.AllCurrOperationsExts.CardHash" xml:space="preserve">
+    <value>Hash Tarjeta</value>
+  </data>
+  <data name="Fields.AllCurrOperationsExts.CardReference" xml:space="preserve">
+    <value>Referencia Tarjeta</value>
+  </data>
+  <data name="Fields.AllCurrOperationsExts.CardScheme" xml:space="preserve">
+    <value>Sistema Tarjeta</value>
+  </data>
+  <data name="Fields.AllCurrOperationsExts.ChangeApplied" xml:space="preserve">
+    <value>Cambio</value>
+  </data>
+  <data name="Fields.AllCurrOperationsExts.Date" xml:space="preserve">
+    <value>Fecha</value>
+  </data>
+  <data name="Fields.AllCurrOperationsExts.Date_Time" xml:space="preserve">
+    <value>Hora</value>
+  </data>
+  <data name="Fields.AllCurrOperationsExts.DiscountAmount" xml:space="preserve">
+    <value>Valor Descuento</value>
+  </data>
+  <data name="Fields.AllCurrOperationsExts.DiscountAmountCurrencyId" xml:space="preserve">
+    <value>Moneda Valor Descuento</value>
+  </data>
+  <data name="Fields.AllCurrOperationsExts.DiscountAmountCurrencyIsoCode" xml:space="preserve">
+    <value>Abrev. Moneda Valor Descuento</value>
+  </data>
+  <data name="Fields.AllCurrOperationsExts.DiscountAmountFinal" xml:space="preserve">
+    <value>Valor Final Descuento</value>
+  </data>
+  <data name="Fields.AllCurrOperationsExts.DiscountBalanceBefore" xml:space="preserve">
+    <value>Saldo Previo Descuento</value>
+  </data>
+  <data name="Fields.AllCurrOperationsExts.DiscountBalanceCurrencyId" xml:space="preserve">
+    <value>Moneda Saldo Previo Descuento</value>
+  </data>
+  <data name="Fields.AllCurrOperationsExts.DiscountBalanceCurrencyIsoCode" xml:space="preserve">
+    <value>Abrev. Moneda Saldo Previo Descuento</value>
+  </data>
+  <data name="Fields.AllCurrOperationsExts.DiscountChangeApplied" xml:space="preserve">
+    <value>Cambio Descuento</value>
+  </data>
+  <data name="Fields.AllCurrOperationsExts.DiscountDate" xml:space="preserve">
+    <value>Fecha Descuento</value>
+  </data>
+  <data name="Fields.AllCurrOperationsExts.DiscountDate_Time" xml:space="preserve">
+    <value>Hora Descuento</value>
+  </data>
+  <data name="Fields.AllCurrOperationsExts.DiscountId" xml:space="preserve">
+    <value>Descuento</value>
+  </data>
+  <data name="Fields.AllCurrOperationsExts.DiscountInsertionUTCDate" xml:space="preserve">
+    <value>Fecha Inserción Descuento (UTC)</value>
+  </data>
+  <data name="Fields.AllCurrOperationsExts.DiscountInsertionUTCDate_Time" xml:space="preserve">
+    <value>Hora Inserción Descuento (UTC)</value>
+  </data>
+  <data name="Fields.AllCurrOperationsExts.Enddate" xml:space="preserve">
+    <value>Fecha Final</value>
+  </data>
+  <data name="Fields.AllCurrOperationsExts.Enddate_Time" xml:space="preserve">
+    <value>Hora Final</value>
+  </data>
+  <data name="Fields.AllCurrOperationsExts.Export.PDFFilename" xml:space="preserve">
+    <value>operaciones</value>
+  </data>
+  <data name="Fields.AllCurrOperationsExts.Export.XLSFilename" xml:space="preserve">
+    <value>operaciones</value>
+  </data>
+  <data name="Fields.AllCurrOperationsExts.ExternalId1" xml:space="preserve">
+    <value>Id Externo 1</value>
+  </data>
+  <data name="Fields.AllCurrOperationsExts.ExternalId2" xml:space="preserve">
+    <value>Id Externo 2</value>
+  </data>
+  <data name="Fields.AllCurrOperationsExts.ExternalId3" xml:space="preserve">
+    <value>Id Externo 3</value>
+  </data>
+  <data name="Fields.AllCurrOperationsExts.FinalAmount" xml:space="preserve">
+    <value>Valor Final</value>
+  </data>
+  <data name="Fields.AllCurrOperationsExts.FixedFee" xml:space="preserve">
+    <value>Comisión Fija</value>
+  </data>
+  <data name="Fields.AllCurrOperationsExts.Inidate" xml:space="preserve">
+    <value>Fecha Inicio</value>
+  </data>
+  <data name="Fields.AllCurrOperationsExts.Inidate_Time" xml:space="preserve">
+    <value>Hora Inicio</value>
+  </data>
+  <data name="Fields.AllCurrOperationsExts.InsDescription" xml:space="preserve">
+    <value>Instalación</value>
+  </data>
+  <data name="Fields.AllCurrOperationsExts.InsertionUTCDate" xml:space="preserve">
+    <value>Fecha Inserción (UTC)</value>
+  </data>
+  <data name="Fields.AllCurrOperationsExts.InsertionUTCDate_Time" xml:space="preserve">
+    <value>Hora Inserción (UTC)</value>
+  </data>
+  <data name="Fields.AllCurrOperationsExts.InsShortdesc" xml:space="preserve">
+    <value>Instalación Abrv.</value>
+  </data>
+  <data name="Fields.AllCurrOperationsExts.InstallationId" xml:space="preserve">
+    <value>Instalación</value>
+  </data>
+  <data name="Fields.AllCurrOperationsExts.Latitude" xml:space="preserve">
+    <value>Latitud</value>
+  </data>
+  <data name="Fields.AllCurrOperationsExts.Longitude" xml:space="preserve">
+    <value>Longitud</value>
+  </data>
+  <data name="Fields.AllCurrOperationsExts.MaskedCardNumber" xml:space="preserve">
+    <value>Número Tarjeta enmascarado</value>
+  </data>
+  <data name="Fields.AllCurrOperationsExts.MobileOS" xml:space="preserve">
+    <value>SO Móvil</value>
+  </data>
+  <data name="Fields.AllCurrOperationsExts.OffstreetEndDate" xml:space="preserve">
+    <value>Fecha Fin Aparcamiento</value>
+  </data>
+  <data name="Fields.AllCurrOperationsExts.OffstreetEntryDate" xml:space="preserve">
+    <value>Fecha Entrada Aparcamiento</value>
+  </data>
+  <data name="Fields.AllCurrOperationsExts.OffstreetExitDate" xml:space="preserve">
+    <value>Fecha Salida Aparcamiento</value>
+  </data>
+  <data name="Fields.AllCurrOperationsExts.OffstreetExitLimitDate" xml:space="preserve">
+    <value>Fecha Límite Salida Aparcamiento</value>
+  </data>
+  <data name="Fields.AllCurrOperationsExts.OffstreetGate" xml:space="preserve">
+    <value>Puerta Aparcamiento</value>
+  </data>
+  <data name="Fields.AllCurrOperationsExts.OffstreetLogicalId" xml:space="preserve">
+    <value>Tiquet Aparcamiento</value>
+  </data>
+  <data name="Fields.AllCurrOperationsExts.OffstreetNotifyEntryDate" xml:space="preserve">
+    <value>Fecha Notificación Entrada Aparcamiento</value>
+  </data>
+  <data name="Fields.AllCurrOperationsExts.OffstreetPaymentDate" xml:space="preserve">
+    <value>Fecha Pago Aparcamiento</value>
+  </data>
+  <data name="Fields.AllCurrOperationsExts.OffstreetSpaceDescription" xml:space="preserve">
+    <value>Plaza Aparcamiento</value>
+  </data>
+  <data name="Fields.AllCurrOperationsExts.OffstreetTariff" xml:space="preserve">
+    <value>Tarifa Aparcamiento</value>
+  </data>
+  <data name="Fields.AllCurrOperationsExts.OffstreetUTCEndDate" xml:space="preserve">
+    <value>Fecha (UTC) Fin Aparcamiento</value>
+  </data>
+  <data name="Fields.AllCurrOperationsExts.OffstreetUTCEntryDate" xml:space="preserve">
+    <value>Fecha (UTC) Entrada Aparcamiento</value>
+  </data>
+  <data name="Fields.AllCurrOperationsExts.OffstreetUTCExitDate" xml:space="preserve">
+    <value>Fecha (UTC) Salida Aparcamiento</value>
+  </data>
+  <data name="Fields.AllCurrOperationsExts.OffstreetUTCExitLimitDate" xml:space="preserve">
+    <value>Fecha (UTC) Límite Salida Aparcamiento</value>
+  </data>
+  <data name="Fields.AllCurrOperationsExts.OffstreetUTCNotifyEntryDate" xml:space="preserve">
+    <value>Fecha (UTC) Notificación Entrada Aparcamiento</value>
+  </data>
+  <data name="Fields.AllCurrOperationsExts.OffstreetUTCPaymentDate" xml:space="preserve">
+    <value>Fecha (UTC) Pago Aparcamiento</value>
+  </data>
+  <data name="Fields.AllCurrOperationsExts.OpReference" xml:space="preserve">
+    <value>Referencia Operación</value>
+  </data>
+  <data name="Fields.AllCurrOperationsExts.PartialFixedFee" xml:space="preserve">
+    <value>Valor Comisión Fija</value>
+  </data>
+  <data name="Fields.AllCurrOperationsExts.PartialPercFee" xml:space="preserve">
+    <value>Valor Comisión Porc.</value>
+  </data>
+  <data name="Fields.AllCurrOperationsExts.PartialVat1" xml:space="preserve">
+    <value>Valor IVA</value>
+  </data>
+  <data name="Fields.AllCurrOperationsExts.PercFee" xml:space="preserve">
+    <value>% Comisión</value>
+  </data>
+  <data name="Fields.AllCurrOperationsExts.PercFeeTopped" xml:space="preserve">
+    <value>Comisión Máx.</value>
+  </data>
+  <data name="Fields.AllCurrOperationsExts.PercVat1" xml:space="preserve">
+    <value>% IVA 1</value>
+  </data>
+  <data name="Fields.AllCurrOperationsExts.PercVat2" xml:space="preserve">
+    <value>% IVA 2</value>
+  </data>
+  <data name="Fields.AllCurrOperationsExts.Plate" xml:space="preserve">
+    <value>Matrícula</value>
+  </data>
+  <data name="Fields.AllCurrOperationsExts.PlateId" xml:space="preserve">
+    <value>Matrícula</value>
+  </data>
+  <data name="Fields.AllCurrOperationsExts.RechargeAmount" xml:space="preserve">
+    <value>Valor Recarga</value>
+  </data>
+  <data name="Fields.AllCurrOperationsExts.RechargeAmountCurrencyId" xml:space="preserve">
+    <value>Moneda Valor Recarga</value>
+  </data>
+  <data name="Fields.AllCurrOperationsExts.RechargeAmountCurrencyIsoCode" xml:space="preserve">
+    <value>Abrev. Moneda Valor Recarga</value>
+  </data>
+  <data name="Fields.AllCurrOperationsExts.RechargeBalanceBefore" xml:space="preserve">
+    <value>Saldo Previo Recarga</value>
+  </data>
+  <data name="Fields.AllCurrOperationsExts.RechargeDate" xml:space="preserve">
+    <value>Fecha Recarga</value>
+  </data>
+  <data name="Fields.AllCurrOperationsExts.RechargeDate_Time" xml:space="preserve">
+    <value>Hora Recarga</value>
+  </data>
+  <data name="Fields.AllCurrOperationsExts.RechargeId" xml:space="preserve">
+    <value>Recarga</value>
+  </data>
+  <data name="Fields.AllCurrOperationsExts.RechargeInsertionUTCDate" xml:space="preserve">
+    <value>Fecha Inserción Recarga (UTC)</value>
+  </data>
+  <data name="Fields.AllCurrOperationsExts.RechargeInsertionUTCDate_Time" xml:space="preserve">
+    <value>Hora Inserción Recarga (UTC)</value>
+  </data>
+  <data name="Fields.AllCurrOperationsExts.SectorId" xml:space="preserve">
+    <value>Sector</value>
+  </data>
+  <data name="Fields.AllCurrOperationsExts.ServiceChargeTypeId" xml:space="preserve">
+    <value>Tipo Servicio Carga</value>
+  </data>
+  <data name="Fields.AllCurrOperationsExts.SuscriptionType" xml:space="preserve">
+    <value>Tipo Suscripción</value>
+  </data>
+  <data name="Fields.AllCurrOperationsExts.Tariff" xml:space="preserve">
+    <value>Tarifa</value>
+  </data>
+  <data name="Fields.AllCurrOperationsExts.TicketData" xml:space="preserve">
+    <value>Datos Denuncia</value>
+  </data>
+  <data name="Fields.AllCurrOperationsExts.TicketNumber" xml:space="preserve">
+    <value>Número Denuncia</value>
+  </data>
+  <data name="Fields.AllCurrOperationsExts.Time" xml:space="preserve">
+    <value>Duración</value>
+  </data>
+  <data name="Fields.AllCurrOperationsExts.TotalAmount" xml:space="preserve">
+    <value>Valor Total</value>
+  </data>
+  <data name="Fields.AllCurrOperationsExts.TransactionId" xml:space="preserve">
+    <value>Código Transacción</value>
+  </data>
+  <data name="Fields.AllCurrOperationsExts.Type" xml:space="preserve">
+    <value>Tipo</value>
+  </data>
+  <data name="Fields.AllCurrOperationsExts.TypeId" xml:space="preserve">
+    <value>Tipo</value>
+  </data>
+  <data name="Fields.AllCurrOperationsExts.UserId" xml:space="preserve">
+    <value>Usuario</value>
+  </data>
+  <data name="Fields.AllCurrOperationsExts.Username" xml:space="preserve">
+    <value>Usuario</value>
+  </data>
+  <data name="Fields.AllCurrOperationsExts.UtcDate" xml:space="preserve">
+    <value>Fecha (UTC)</value>
+  </data>
+  <data name="Fields.AllCurrOperationsExts.UtcDate_Time" xml:space="preserve">
+    <value>Hora (UTC)</value>
+  </data>
+  <data name="Fields.VwCustomerInvoices" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Fields.VwCustomerInvoices.BtnInvoiceExport" xml:space="preserve">
+    <value>Descargar</value>
+  </data>
+  <data name="Fields.VwCustomerInvoices.Cus" xml:space="preserve">
+    <value>Usuario</value>
+  </data>
+  <data name="Fields.VwCustomerInvoices.Export.PDFFilename" xml:space="preserve">
+    <value>facturas</value>
+  </data>
+  <data name="Fields.VwCustomerInvoices.Export.XLSFilename" xml:space="preserve">
+    <value>facturas</value>
+  </data>
+  <data name="Fields.VwCustomerInvoices.Id" xml:space="preserve">
+    <value>Código</value>
+  </data>
+  <data name="Fields.VwCustomerInvoices.InvAmount" xml:space="preserve">
+    <value>Valor Recargas</value>
+  </data>
+  <data name="Fields.VwCustomerInvoices.InvAmountOps" xml:space="preserve">
+    <value>Valor Operaciones</value>
+  </data>
+  <data name="Fields.VwCustomerInvoices.InvDate" xml:space="preserve">
+    <value>Fecha</value>
+  </data>
+  <data name="Fields.VwCustomerInvoices.InvDate_Time" xml:space="preserve">
+    <value>Hora</value>
+  </data>
+  <data name="Fields.VwCustomerInvoices.InvNumber" xml:space="preserve">
+    <value>Número</value>
+  </data>
+  <data name="Fields.Users.Balance" xml:space="preserve">
+    <value>Saldo Actual</value>
+  </data>
+  <data name="Fields.Users.CurId" xml:space="preserve">
+    <value>Moneda Saldo</value>
+  </data>
+  <data name="Fields.Users.InsertUtcDate" xml:space="preserve">
+    <value>Fecha Inserción (UTC)</value>
+  </data>
+  <data name="Fields.VwCustomerPaymentMeansRecharges" xml:space="preserve">
+    <value>Recargas</value>
+  </data>
+  <data name="Fields.VwCustomerPaymentMeansRecharges.Amount" xml:space="preserve">
+    <value>Valor</value>
+  </data>
+  <data name="Fields.VwCustomerPaymentMeansRecharges.AmountCurId" xml:space="preserve">
+    <value>Moneda Valor</value>
+  </data>
+  <data name="Fields.VwCustomerPaymentMeansRecharges.AmountCurrencyIsoCode" xml:space="preserve">
+    <value>Abrv. Moneda Valor</value>
+  </data>
+  <data name="Fields.VwCustomerPaymentMeansRecharges.AppVersion" xml:space="preserve">
+    <value>Versión App.</value>
+  </data>
+  <data name="Fields.VwCustomerPaymentMeansRecharges.AuthCode" xml:space="preserve">
+    <value>Código Autorización</value>
+  </data>
+  <data name="Fields.VwCustomerPaymentMeansRecharges.BalanceBefore" xml:space="preserve">
+    <value>Saldo Previo</value>
+  </data>
+  <data name="Fields.VwCustomerPaymentMeansRecharges.BalanceCurId" xml:space="preserve">
+    <value>Moneda Saldo Previo</value>
+  </data>
+  <data name="Fields.VwCustomerPaymentMeansRecharges.BalanceCurrencyIsoCode" xml:space="preserve">
+    <value>Abrev. Moneda Saldo Previo</value>
+  </data>
+  <data name="Fields.VwCustomerPaymentMeansRecharges.BtnAction" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Fields.VwCustomerPaymentMeansRecharges.CardExpirationDate" xml:space="preserve">
+    <value>Fecha Expiración Tarjeta</value>
+  </data>
+  <data name="Fields.VwCustomerPaymentMeansRecharges.CardExpirationDate_Time" xml:space="preserve">
+    <value>Hora Expiración Tarjeta</value>
+  </data>
+  <data name="Fields.VwCustomerPaymentMeansRecharges.CardHash" xml:space="preserve">
+    <value>Hash Tarjeta</value>
+  </data>
+  <data name="Fields.VwCustomerPaymentMeansRecharges.CardReference" xml:space="preserve">
+    <value>Referencia Tarjeta</value>
+  </data>
+  <data name="Fields.VwCustomerPaymentMeansRecharges.CardScheme" xml:space="preserve">
+    <value>Sistema Tarjeta</value>
+  </data>
+  <data name="Fields.VwCustomerPaymentMeansRecharges.ChangeApplied" xml:space="preserve">
+    <value>Cambio</value>
+  </data>
+  <data name="Fields.VwCustomerPaymentMeansRecharges.Date" xml:space="preserve">
+    <value>Fecha</value>
+  </data>
+  <data name="Fields.VwCustomerPaymentMeansRecharges.Date_Time" xml:space="preserve">
+    <value>Hora</value>
+  </data>
+  <data name="Fields.VwCustomerPaymentMeansRecharges.DiscountAmount" xml:space="preserve">
+    <value>Valor Descuento</value>
+  </data>
+  <data name="Fields.VwCustomerPaymentMeansRecharges.DiscountAmountCurrencyId" xml:space="preserve">
+    <value>Moneda Valor Descuento</value>
+  </data>
+  <data name="Fields.VwCustomerPaymentMeansRecharges.DiscountAmountCurrencyIsoCode" xml:space="preserve">
+    <value>Abrev. Moneda Valor Descuento</value>
+  </data>
+  <data name="Fields.VwCustomerPaymentMeansRecharges.DiscountAmountFinal" xml:space="preserve">
+    <value>Valor Final Descuento</value>
+  </data>
+  <data name="Fields.VwCustomerPaymentMeansRecharges.DiscountBalanceBefore" xml:space="preserve">
+    <value>Saldo Previo Descuento</value>
+  </data>
+  <data name="Fields.VwCustomerPaymentMeansRecharges.DiscountBalanceCurrencyId" xml:space="preserve">
+    <value>Moneda Saldo Previo Descuento</value>
+  </data>
+  <data name="Fields.VwCustomerPaymentMeansRecharges.DiscountBalanceCurrencyIsoCode" xml:space="preserve">
+    <value>Abrev. Moneda Saldo Previo Descuento</value>
+  </data>
+  <data name="Fields.VwCustomerPaymentMeansRecharges.DiscountChangeApplied" xml:space="preserve">
+    <value>Cambio Descuento</value>
+  </data>
+  <data name="Fields.VwCustomerPaymentMeansRecharges.DiscountDate" xml:space="preserve">
+    <value>Fecha Descuento</value>
+  </data>
+  <data name="Fields.VwCustomerPaymentMeansRecharges.DiscountDate_Time" xml:space="preserve">
+    <value>Hora Descuento</value>
+  </data>
+  <data name="Fields.VwCustomerPaymentMeansRecharges.DiscountId" xml:space="preserve">
+    <value>Descuento</value>
+  </data>
+  <data name="Fields.VwCustomerPaymentMeansRecharges.DiscountInsertionUTCDate" xml:space="preserve">
+    <value>Fecha Inserción Descuento (UTC)</value>
+  </data>
+  <data name="Fields.VwCustomerPaymentMeansRecharges.DiscountInsertionUTCDate_Time" xml:space="preserve">
+    <value>Hora Inserción Descuento (UTC)</value>
+  </data>
+  <data name="Fields.VwCustomerPaymentMeansRecharges.Enddate" xml:space="preserve">
+    <value>Fecha Final</value>
+  </data>
+  <data name="Fields.VwCustomerPaymentMeansRecharges.Enddate_Time" xml:space="preserve">
+    <value>Hora Final</value>
+  </data>
+  <data name="Fields.VwCustomerPaymentMeansRecharges.Export.PDFFilename" xml:space="preserve">
+    <value>operaciones</value>
+  </data>
+  <data name="Fields.VwCustomerPaymentMeansRecharges.Export.XLSFilename" xml:space="preserve">
+    <value>operaciones</value>
+  </data>
+  <data name="Fields.VwCustomerPaymentMeansRecharges.ExternalId1" xml:space="preserve">
+    <value>Id Externo 1</value>
+  </data>
+  <data name="Fields.VwCustomerPaymentMeansRecharges.ExternalId2" xml:space="preserve">
+    <value>Id Externo 2</value>
+  </data>
+  <data name="Fields.VwCustomerPaymentMeansRecharges.ExternalId3" xml:space="preserve">
+    <value>Id Externo 3</value>
+  </data>
+  <data name="Fields.VwCustomerPaymentMeansRecharges.FinalAmount" xml:space="preserve">
+    <value>Valor Final</value>
+  </data>
+  <data name="Fields.VwCustomerPaymentMeansRecharges.FixedFee" xml:space="preserve">
+    <value>Comisión Fija</value>
+  </data>
+  <data name="Fields.VwCustomerPaymentMeansRecharges.Inidate" xml:space="preserve">
+    <value>Fecha Inicio</value>
+  </data>
+  <data name="Fields.VwCustomerPaymentMeansRecharges.Inidate_Time" xml:space="preserve">
+    <value>Hora Inicio</value>
+  </data>
+  <data name="Fields.VwCustomerPaymentMeansRecharges.InsDescription" xml:space="preserve">
+    <value>Instalación</value>
+  </data>
+  <data name="Fields.VwCustomerPaymentMeansRecharges.InsertionUTCDate" xml:space="preserve">
+    <value>Fecha Inserción (UTC)</value>
+  </data>
+  <data name="Fields.VwCustomerPaymentMeansRecharges.InsertionUTCDate_Time" xml:space="preserve">
+    <value>Hora Inserción (UTC)</value>
+  </data>
+  <data name="Fields.VwCustomerPaymentMeansRecharges.InsShortdesc" xml:space="preserve">
+    <value>Instalación Abrv.</value>
+  </data>
+  <data name="Fields.VwCustomerPaymentMeansRecharges.InstallationId" xml:space="preserve">
+    <value>Instalación</value>
+  </data>
+  <data name="Fields.VwCustomerPaymentMeansRecharges.Latitude" xml:space="preserve">
+    <value>Latitud</value>
+  </data>
+  <data name="Fields.VwCustomerPaymentMeansRecharges.Longitude" xml:space="preserve">
+    <value>Longitud</value>
+  </data>
+  <data name="Fields.VwCustomerPaymentMeansRecharges.MainTel" xml:space="preserve">
+    <value>Móvil</value>
+  </data>
+  <data name="Fields.VwCustomerPaymentMeansRecharges.MaskedCardNumber" xml:space="preserve">
+    <value>Número Tarjeta enmascarado</value>
+  </data>
+  <data name="Fields.VwCustomerPaymentMeansRecharges.MobileOS" xml:space="preserve">
+    <value>SO Móvil</value>
+  </data>
+  <data name="Fields.VwCustomerPaymentMeansRecharges.OffstreetEndDate" xml:space="preserve">
+    <value>Fecha Fin Aparcamiento</value>
+  </data>
+  <data name="Fields.VwCustomerPaymentMeansRecharges.OffstreetEntryDate" xml:space="preserve">
+    <value>Fecha Entrada Aparcamiento</value>
+  </data>
+  <data name="Fields.VwCustomerPaymentMeansRecharges.OffstreetExitDate" xml:space="preserve">
+    <value>Fecha Salida Aparcamiento</value>
+  </data>
+  <data name="Fields.VwCustomerPaymentMeansRecharges.OffstreetExitLimitDate" xml:space="preserve">
+    <value>Fecha Límite Salida Aparcamiento</value>
+  </data>
+  <data name="Fields.VwCustomerPaymentMeansRecharges.OffstreetGate" xml:space="preserve">
+    <value>Puerta Aparcamiento</value>
+  </data>
+  <data name="Fields.VwCustomerPaymentMeansRecharges.OffstreetLogicalId" xml:space="preserve">
+    <value>Tiquet Aparcamiento</value>
+  </data>
+  <data name="Fields.VwCustomerPaymentMeansRecharges.OffstreetNotifyEntryDate" xml:space="preserve">
+    <value>Fecha Notificación Entrada Aparcamiento</value>
+  </data>
+  <data name="Fields.VwCustomerPaymentMeansRecharges.OffstreetPaymentDate" xml:space="preserve">
+    <value>Fecha Pago Aparcamiento</value>
+  </data>
+  <data name="Fields.VwCustomerPaymentMeansRecharges.OffstreetSpaceDescription" xml:space="preserve">
+    <value>Plaza Aparcamiento</value>
+  </data>
+  <data name="Fields.VwCustomerPaymentMeansRecharges.OffstreetTariff" xml:space="preserve">
+    <value>Tarifa Aparcamiento</value>
+  </data>
+  <data name="Fields.VwCustomerPaymentMeansRecharges.OffstreetUTCEndDate" xml:space="preserve">
+    <value>Fecha (UTC) Fin Aparcamiento</value>
+  </data>
+  <data name="Fields.VwCustomerPaymentMeansRecharges.OffstreetUTCEntryDate" xml:space="preserve">
+    <value>Fecha (UTC) Entrada Aparcamiento</value>
+  </data>
+  <data name="Fields.VwCustomerPaymentMeansRecharges.OffstreetUTCExitDate" xml:space="preserve">
+    <value>Fecha (UTC) Salida Aparcamiento</value>
+  </data>
+  <data name="Fields.VwCustomerPaymentMeansRecharges.OffstreetUTCExitLimitDate" xml:space="preserve">
+    <value>Fecha (UTC) Límite Salida Aparcamiento</value>
+  </data>
+  <data name="Fields.VwCustomerPaymentMeansRecharges.OffstreetUTCNotifyEntryDate" xml:space="preserve">
+    <value>Fecha (UTC) Notificación Entrada Aparcamiento</value>
+  </data>
+  <data name="Fields.VwCustomerPaymentMeansRecharges.OffstreetUTCPaymentDate" xml:space="preserve">
+    <value>Fecha (UTC) Pago Aparcamiento</value>
+  </data>
+  <data name="Fields.VwCustomerPaymentMeansRecharges.OpReference" xml:space="preserve">
+    <value>Referencia Operación</value>
+  </data>
+  <data name="Fields.VwCustomerPaymentMeansRecharges.PartialFixedFee" xml:space="preserve">
+    <value>Valor Comisión Fija</value>
+  </data>
+  <data name="Fields.VwCustomerPaymentMeansRecharges.PartialPercFee" xml:space="preserve">
+    <value>Valor Comisión Porc.</value>
+  </data>
+  <data name="Fields.VwCustomerPaymentMeansRecharges.PartialVat1" xml:space="preserve">
+    <value>Valor IVA</value>
+  </data>
+  <data name="Fields.VwCustomerPaymentMeansRecharges.PercFee" xml:space="preserve">
+    <value>% Comisión</value>
+  </data>
+  <data name="Fields.VwCustomerPaymentMeansRecharges.PercFeeTopped" xml:space="preserve">
+    <value>Comisión Máx.</value>
+  </data>
+  <data name="Fields.VwCustomerPaymentMeansRecharges.PercVat1" xml:space="preserve">
+    <value>% IVA 1</value>
+  </data>
+  <data name="Fields.VwCustomerPaymentMeansRecharges.PercVat2" xml:space="preserve">
+    <value>% IVA 2</value>
+  </data>
+  <data name="Fields.VwCustomerPaymentMeansRecharges.Plate" xml:space="preserve">
+    <value>Matrícula</value>
+  </data>
+  <data name="Fields.VwCustomerPaymentMeansRecharges.PlateId" xml:space="preserve">
+    <value>Matrícula</value>
+  </data>
+  <data name="Fields.VwCustomerPaymentMeansRecharges.RechargeAmount" xml:space="preserve">
+    <value>Valor Recarga</value>
+  </data>
+  <data name="Fields.VwCustomerPaymentMeansRecharges.RechargeAmountCurrencyId" xml:space="preserve">
+    <value>Moneda Valor Recarga</value>
+  </data>
+  <data name="Fields.VwCustomerPaymentMeansRecharges.RechargeAmountCurrencyIsoCode" xml:space="preserve">
+    <value>Abrev. Moneda Valor Recarga</value>
+  </data>
+  <data name="Fields.VwCustomerPaymentMeansRecharges.RechargeBalanceBefore" xml:space="preserve">
+    <value>Saldo Previo Recarga</value>
+  </data>
+  <data name="Fields.VwCustomerPaymentMeansRecharges.RechargeDate" xml:space="preserve">
+    <value>Fecha Recarga</value>
+  </data>
+  <data name="Fields.VwCustomerPaymentMeansRecharges.RechargeDate_Time" xml:space="preserve">
+    <value>Hora Recarga</value>
+  </data>
+  <data name="Fields.VwCustomerPaymentMeansRecharges.RechargeId" xml:space="preserve">
+    <value>Recarga</value>
+  </data>
+  <data name="Fields.VwCustomerPaymentMeansRecharges.RechargeInsertionUTCDate" xml:space="preserve">
+    <value>Fecha Inserción Recarga (UTC)</value>
+  </data>
+  <data name="Fields.VwCustomerPaymentMeansRecharges.RechargeInsertionUTCDate_Time" xml:space="preserve">
+    <value>Hora Inserción Recarga (UTC)</value>
+  </data>
+  <data name="Fields.VwCustomerPaymentMeansRecharges.SectorId" xml:space="preserve">
+    <value>Sector</value>
+  </data>
+  <data name="Fields.VwCustomerPaymentMeansRecharges.ServiceChargeTypeId" xml:space="preserve">
+    <value>Tipo Servicio Carga</value>
+  </data>
+  <data name="Fields.VwCustomerPaymentMeansRecharges.SuscriptionType" xml:space="preserve">
+    <value>Tipo Suscripción</value>
+  </data>
+  <data name="Fields.VwCustomerPaymentMeansRecharges.Tariff" xml:space="preserve">
+    <value>Tarifa</value>
+  </data>
+  <data name="Fields.VwCustomerPaymentMeansRecharges.TicketData" xml:space="preserve">
+    <value>Datos Denuncia</value>
+  </data>
+  <data name="Fields.VwCustomerPaymentMeansRecharges.TicketNumber" xml:space="preserve">
+    <value>Número Denuncia</value>
+  </data>
+  <data name="Fields.VwCustomerPaymentMeansRecharges.Time" xml:space="preserve">
+    <value>Duración</value>
+  </data>
+  <data name="Fields.VwCustomerPaymentMeansRecharges.TotalAmount" xml:space="preserve">
+    <value>Valor Total</value>
+  </data>
+  <data name="Fields.VwCustomerPaymentMeansRecharges.TransactionId" xml:space="preserve">
+    <value>Código Transacción</value>
+  </data>
+  <data name="Fields.VwCustomerPaymentMeansRecharges.Type" xml:space="preserve">
+    <value>Tipo</value>
+  </data>
+  <data name="Fields.VwCustomerPaymentMeansRecharges.TypeId" xml:space="preserve">
+    <value>Tipo</value>
+  </data>
+  <data name="Fields.VwCustomerPaymentMeansRecharges.UserId" xml:space="preserve">
+    <value>Usuario</value>
+  </data>
+  <data name="Fields.VwCustomerPaymentMeansRecharges.Username" xml:space="preserve">
+    <value>Usuario</value>
+  </data>
+  <data name="Fields.VwCustomerPaymentMeansRecharges.UtcDate" xml:space="preserve">
+    <value>Fecha (UTC)</value>
+  </data>
+  <data name="Fields.VwCustomerPaymentMeansRecharges.UtcDate_Time" xml:space="preserve">
+    <value>Hora (UTC)</value>
+  </data>
+  <data name="Fields.VwHisOperations" xml:space="preserve">
+    <value>Estacionamientos</value>
+  </data>
+  <data name="Fields.VwHisOperations.Amount" xml:space="preserve">
+    <value>Valor</value>
+  </data>
+  <data name="Fields.VwHisOperations.AmountCurId" xml:space="preserve">
+    <value>Moneda Valor</value>
+  </data>
+  <data name="Fields.VwHisOperations.AmountCurrencyIsoCode" xml:space="preserve">
+    <value>Abrv. Moneda Valor</value>
+  </data>
+  <data name="Fields.VwHisOperations.AppVersion" xml:space="preserve">
+    <value>Versión App.</value>
+  </data>
+  <data name="Fields.VwHisOperations.AuthCode" xml:space="preserve">
+    <value>Código Autorización</value>
+  </data>
+  <data name="Fields.VwHisOperations.BalanceBefore" xml:space="preserve">
+    <value>Saldo Previo</value>
+  </data>
+  <data name="Fields.VwHisOperations.BalanceCurId" xml:space="preserve">
+    <value>Moneda Saldo Previo</value>
+  </data>
+  <data name="Fields.VwHisOperations.BalanceCurrencyIsoCode" xml:space="preserve">
+    <value>Abrev. Moneda Saldo Previo</value>
+  </data>
+  <data name="Fields.VwHisOperations.BtnAction" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Fields.VwHisOperations.CardExpirationDate" xml:space="preserve">
+    <value>Fecha Expiración Tarjeta</value>
+  </data>
+  <data name="Fields.VwHisOperations.CardExpirationDate_Time" xml:space="preserve">
+    <value>Hora Expiración Tarjeta</value>
+  </data>
+  <data name="Fields.VwHisOperations.CardHash" xml:space="preserve">
+    <value>Hash Tarjeta</value>
+  </data>
+  <data name="Fields.VwHisOperations.CardReference" xml:space="preserve">
+    <value>Referencia Tarjeta</value>
+  </data>
+  <data name="Fields.VwHisOperations.CardScheme" xml:space="preserve">
+    <value>Sistema Tarjeta</value>
+  </data>
+  <data name="Fields.VwHisOperations.ChangeApplied" xml:space="preserve">
+    <value>Cambio</value>
+  </data>
+  <data name="Fields.VwHisOperations.Date" xml:space="preserve">
+    <value>Fecha</value>
+  </data>
+  <data name="Fields.VwHisOperations.Date_Time" xml:space="preserve">
+    <value>Hora</value>
+  </data>
+  <data name="Fields.VwHisOperations.DiscountAmount" xml:space="preserve">
+    <value>Valor Descuento</value>
+  </data>
+  <data name="Fields.VwHisOperations.DiscountAmountCurrencyId" xml:space="preserve">
+    <value>Moneda Valor Descuento</value>
+  </data>
+  <data name="Fields.VwHisOperations.DiscountAmountCurrencyIsoCode" xml:space="preserve">
+    <value>Abrev. Moneda Valor Descuento</value>
+  </data>
+  <data name="Fields.VwHisOperations.DiscountAmountFinal" xml:space="preserve">
+    <value>Valor Final Descuento</value>
+  </data>
+  <data name="Fields.VwHisOperations.DiscountBalanceBefore" xml:space="preserve">
+    <value>Saldo Previo Descuento</value>
+  </data>
+  <data name="Fields.VwHisOperations.DiscountBalanceCurrencyId" xml:space="preserve">
+    <value>Moneda Saldo Previo Descuento</value>
+  </data>
+  <data name="Fields.VwHisOperations.DiscountBalanceCurrencyIsoCode" xml:space="preserve">
+    <value>Abrev. Moneda Saldo Previo Descuento</value>
+  </data>
+  <data name="Fields.VwHisOperations.DiscountChangeApplied" xml:space="preserve">
+    <value>Cambio Descuento</value>
+  </data>
+  <data name="Fields.VwHisOperations.DiscountDate" xml:space="preserve">
+    <value>Fecha Descuento</value>
+  </data>
+  <data name="Fields.VwHisOperations.DiscountDate_Time" xml:space="preserve">
+    <value>Hora Descuento</value>
+  </data>
+  <data name="Fields.VwHisOperations.DiscountId" xml:space="preserve">
+    <value>Descuento</value>
+  </data>
+  <data name="Fields.VwHisOperations.DiscountInsertionUTCDate" xml:space="preserve">
+    <value>Fecha Inserción Descuento (UTC)</value>
+  </data>
+  <data name="Fields.VwHisOperations.DiscountInsertionUTCDate_Time" xml:space="preserve">
+    <value>Hora Inserción Descuento (UTC)</value>
+  </data>
+  <data name="Fields.VwHisOperations.Enddate" xml:space="preserve">
+    <value>Fecha Final</value>
+  </data>
+  <data name="Fields.VwHisOperations.Enddate_Time" xml:space="preserve">
+    <value>Hora Final</value>
+  </data>
+  <data name="Fields.VwHisOperations.Export.PDFFilename" xml:space="preserve">
+    <value>operaciones</value>
+  </data>
+  <data name="Fields.VwHisOperations.Export.XLSFilename" xml:space="preserve">
+    <value>operaciones</value>
+  </data>
+  <data name="Fields.VwHisOperations.ExternalId1" xml:space="preserve">
+    <value>Id Externo 1</value>
+  </data>
+  <data name="Fields.VwHisOperations.ExternalId2" xml:space="preserve">
+    <value>Id Externo 2</value>
+  </data>
+  <data name="Fields.VwHisOperations.ExternalId3" xml:space="preserve">
+    <value>Id Externo 3</value>
+  </data>
+  <data name="Fields.VwHisOperations.FinalAmount" xml:space="preserve">
+    <value>Valor Final</value>
+  </data>
+  <data name="Fields.VwHisOperations.FixedFee" xml:space="preserve">
+    <value>Comisión Fija</value>
+  </data>
+  <data name="Fields.VwHisOperations.Inidate" xml:space="preserve">
+    <value>Fecha Inicio</value>
+  </data>
+  <data name="Fields.VwHisOperations.Inidate_Time" xml:space="preserve">
+    <value>Hora Inicio</value>
+  </data>
+  <data name="Fields.VwHisOperations.InsDescription" xml:space="preserve">
+    <value>Instalación</value>
+  </data>
+  <data name="Fields.VwHisOperations.InsertionUTCDate" xml:space="preserve">
+    <value>Fecha Inserción (UTC)</value>
+  </data>
+  <data name="Fields.VwHisOperations.InsertionUTCDate_Time" xml:space="preserve">
+    <value>Hora Inserción (UTC)</value>
+  </data>
+  <data name="Fields.VwHisOperations.InsShortdesc" xml:space="preserve">
+    <value>Instalación Abrv.</value>
+  </data>
+  <data name="Fields.VwHisOperations.InstallationId" xml:space="preserve">
+    <value>Instalación</value>
+  </data>
+  <data name="Fields.VwHisOperations.Latitude" xml:space="preserve">
+    <value>Latitud</value>
+  </data>
+  <data name="Fields.VwHisOperations.Longitude" xml:space="preserve">
+    <value>Longitud</value>
+  </data>
+  <data name="Fields.VwHisOperations.MaskedCardNumber" xml:space="preserve">
+    <value>Número Tarjeta enmascarado</value>
+  </data>
+  <data name="Fields.VwHisOperations.MobileOS" xml:space="preserve">
+    <value>SO Móvil</value>
+  </data>
+  <data name="Fields.VwHisOperations.OffstreetEndDate" xml:space="preserve">
+    <value>Fecha Fin Aparcamiento</value>
+  </data>
+  <data name="Fields.VwHisOperations.OffstreetEntryDate" xml:space="preserve">
+    <value>Fecha Entrada Aparcamiento</value>
+  </data>
+  <data name="Fields.VwHisOperations.OffstreetExitDate" xml:space="preserve">
+    <value>Fecha Salida Aparcamiento</value>
+  </data>
+  <data name="Fields.VwHisOperations.OffstreetExitLimitDate" xml:space="preserve">
+    <value>Fecha Límite Salida Aparcamiento</value>
+  </data>
+  <data name="Fields.VwHisOperations.OffstreetGate" xml:space="preserve">
+    <value>Puerta Aparcamiento</value>
+  </data>
+  <data name="Fields.VwHisOperations.OffstreetLogicalId" xml:space="preserve">
+    <value>Tiquet Aparcamiento</value>
+  </data>
+  <data name="Fields.VwHisOperations.OffstreetNotifyEntryDate" xml:space="preserve">
+    <value>Fecha Notificación Entrada Aparcamiento</value>
+  </data>
+  <data name="Fields.VwHisOperations.OffstreetPaymentDate" xml:space="preserve">
+    <value>Fecha Pago Aparcamiento</value>
+  </data>
+  <data name="Fields.VwHisOperations.OffstreetSpaceDescription" xml:space="preserve">
+    <value>Plaza Aparcamiento</value>
+  </data>
+  <data name="Fields.VwHisOperations.OffstreetTariff" xml:space="preserve">
+    <value>Tarifa Aparcamiento</value>
+  </data>
+  <data name="Fields.VwHisOperations.OffstreetUTCEndDate" xml:space="preserve">
+    <value>Fecha (UTC) Fin Aparcamiento</value>
+  </data>
+  <data name="Fields.VwHisOperations.OffstreetUTCEntryDate" xml:space="preserve">
+    <value>Fecha (UTC) Entrada Aparcamiento</value>
+  </data>
+  <data name="Fields.VwHisOperations.OffstreetUTCExitDate" xml:space="preserve">
+    <value>Fecha (UTC) Salida Aparcamiento</value>
+  </data>
+  <data name="Fields.VwHisOperations.OffstreetUTCExitLimitDate" xml:space="preserve">
+    <value>Fecha (UTC) Límite Salida Aparcamiento</value>
+  </data>
+  <data name="Fields.VwHisOperations.OffstreetUTCNotifyEntryDate" xml:space="preserve">
+    <value>Fecha (UTC) Notificación Entrada Aparcamiento</value>
+  </data>
+  <data name="Fields.VwHisOperations.OffstreetUTCPaymentDate" xml:space="preserve">
+    <value>Fecha (UTC) Pago Aparcamiento</value>
+  </data>
+  <data name="Fields.VwHisOperations.OpReference" xml:space="preserve">
+    <value>Referencia Operación</value>
+  </data>
+  <data name="Fields.VwHisOperations.PartialFixedFee" xml:space="preserve">
+    <value>Valor Comisión Fija</value>
+  </data>
+  <data name="Fields.VwHisOperations.PartialPercFee" xml:space="preserve">
+    <value>Valor Comisión Porc.</value>
+  </data>
+  <data name="Fields.VwHisOperations.PartialVat1" xml:space="preserve">
+    <value>Valor IVA</value>
+  </data>
+  <data name="Fields.VwHisOperations.PercFee" xml:space="preserve">
+    <value>% Comisión</value>
+  </data>
+  <data name="Fields.VwHisOperations.PercFeeTopped" xml:space="preserve">
+    <value>Comisión Máx.</value>
+  </data>
+  <data name="Fields.VwHisOperations.PercVat1" xml:space="preserve">
+    <value>% IVA 1</value>
+  </data>
+  <data name="Fields.VwHisOperations.PercVat2" xml:space="preserve">
+    <value>% IVA 2</value>
+  </data>
+  <data name="Fields.VwHisOperations.Plate" xml:space="preserve">
+    <value>Matrícula</value>
+  </data>
+  <data name="Fields.VwHisOperations.PlateId" xml:space="preserve">
+    <value>Matrícula</value>
+  </data>
+  <data name="Fields.VwHisOperations.RechargeAmount" xml:space="preserve">
+    <value>Valor Recarga</value>
+  </data>
+  <data name="Fields.VwHisOperations.RechargeAmountCurrencyId" xml:space="preserve">
+    <value>Moneda Valor Recarga</value>
+  </data>
+  <data name="Fields.VwHisOperations.RechargeAmountCurrencyIsoCode" xml:space="preserve">
+    <value>Abrev. Moneda Valor Recarga</value>
+  </data>
+  <data name="Fields.VwHisOperations.RechargeBalanceBefore" xml:space="preserve">
+    <value>Saldo Previo Recarga</value>
+  </data>
+  <data name="Fields.VwHisOperations.RechargeDate" xml:space="preserve">
+    <value>Fecha Recarga</value>
+  </data>
+  <data name="Fields.VwHisOperations.RechargeDate_Time" xml:space="preserve">
+    <value>Hora Recarga</value>
+  </data>
+  <data name="Fields.VwHisOperations.RechargeId" xml:space="preserve">
+    <value>Recarga</value>
+  </data>
+  <data name="Fields.VwHisOperations.RechargeInsertionUTCDate" xml:space="preserve">
+    <value>Fecha Inserción Recarga (UTC)</value>
+  </data>
+  <data name="Fields.VwHisOperations.RechargeInsertionUTCDate_Time" xml:space="preserve">
+    <value>Hora Inserción Recarga (UTC)</value>
+  </data>
+  <data name="Fields.VwHisOperations.SectorId" xml:space="preserve">
+    <value>Sector</value>
+  </data>
+  <data name="Fields.VwHisOperations.ServiceChargeTypeId" xml:space="preserve">
+    <value>Tipo Servicio Carga</value>
+  </data>
+  <data name="Fields.VwHisOperations.SuscriptionType" xml:space="preserve">
+    <value>Tipo Suscripción</value>
+  </data>
+  <data name="Fields.VwHisOperations.Tariff" xml:space="preserve">
+    <value>Tarifa</value>
+  </data>
+  <data name="Fields.VwHisOperations.TicketData" xml:space="preserve">
+    <value>Datos Denuncia</value>
+  </data>
+  <data name="Fields.VwHisOperations.TicketNumber" xml:space="preserve">
+    <value>Número Denuncia</value>
+  </data>
+  <data name="Fields.VwHisOperations.Time" xml:space="preserve">
+    <value>Duración</value>
+  </data>
+  <data name="Fields.VwHisOperations.TotalAmount" xml:space="preserve">
+    <value>Valor Total</value>
+  </data>
+  <data name="Fields.VwHisOperations.TransactionId" xml:space="preserve">
+    <value>Código Transacción</value>
+  </data>
+  <data name="Fields.VwHisOperations.Type" xml:space="preserve">
+    <value>Tipo</value>
+  </data>
+  <data name="Fields.VwHisOperations.TypeId" xml:space="preserve">
+    <value>Tipo</value>
+  </data>
+  <data name="Fields.VwHisOperations.UserId" xml:space="preserve">
+    <value>Usuario</value>
+  </data>
+  <data name="Fields.VwHisOperations.Username" xml:space="preserve">
+    <value>Usuario</value>
+  </data>
+  <data name="Fields.VwHisOperations.UtcDate" xml:space="preserve">
+    <value>Fecha (UTC)</value>
+  </data>
+  <data name="Fields.VwHisOperations.UtcDate_Time" xml:space="preserve">
+    <value>Hora (UTC)</value>
+  </data>
+  <data name="Fields.VwTicketPayments" xml:space="preserve">
+    <value>Anulaciones</value>
+  </data>
+  <data name="Fields.VwTicketPayments.Amount" xml:space="preserve">
+    <value>Valor</value>
+  </data>
+  <data name="Fields.VwTicketPayments.AmountCurId" xml:space="preserve">
+    <value>Moneda Valor</value>
+  </data>
+  <data name="Fields.VwTicketPayments.AmountCurrencyIsoCode" xml:space="preserve">
+    <value>Abrv. Moneda Valor</value>
+  </data>
+  <data name="Fields.VwTicketPayments.AppVersion" xml:space="preserve">
+    <value>Versión App.</value>
+  </data>
+  <data name="Fields.VwTicketPayments.AuthCode" xml:space="preserve">
+    <value>Código Autorización</value>
+  </data>
+  <data name="Fields.VwTicketPayments.BalanceBefore" xml:space="preserve">
+    <value>Saldo Previo</value>
+  </data>
+  <data name="Fields.VwTicketPayments.BalanceCurId" xml:space="preserve">
+    <value>Moneda Saldo Previo</value>
+  </data>
+  <data name="Fields.VwTicketPayments.BalanceCurrencyIsoCode" xml:space="preserve">
+    <value>Abrev. Moneda Saldo Previo</value>
+  </data>
+  <data name="Fields.VwTicketPayments.BtnAction" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Fields.VwTicketPayments.CardExpirationDate" xml:space="preserve">
+    <value>Fecha Expiración Tarjeta</value>
+  </data>
+  <data name="Fields.VwTicketPayments.CardExpirationDate_Time" xml:space="preserve">
+    <value>Hora Expiración Tarjeta</value>
+  </data>
+  <data name="Fields.VwTicketPayments.CardHash" xml:space="preserve">
+    <value>Hash Tarjeta</value>
+  </data>
+  <data name="Fields.VwTicketPayments.CardReference" xml:space="preserve">
+    <value>Referencia Tarjeta</value>
+  </data>
+  <data name="Fields.VwTicketPayments.CardScheme" xml:space="preserve">
+    <value>Sistema Tarjeta</value>
+  </data>
+  <data name="Fields.VwTicketPayments.ChangeApplied" xml:space="preserve">
+    <value>Cambio</value>
+  </data>
+  <data name="Fields.VwTicketPayments.Date" xml:space="preserve">
+    <value>Fecha</value>
+  </data>
+  <data name="Fields.VwTicketPayments.Date_Time" xml:space="preserve">
+    <value>Hora</value>
+  </data>
+  <data name="Fields.VwTicketPayments.DiscountAmount" xml:space="preserve">
+    <value>Valor Descuento</value>
+  </data>
+  <data name="Fields.VwTicketPayments.DiscountAmountCurrencyId" xml:space="preserve">
+    <value>Moneda Valor Descuento</value>
+  </data>
+  <data name="Fields.VwTicketPayments.DiscountAmountCurrencyIsoCode" xml:space="preserve">
+    <value>Abrev. Moneda Valor Descuento</value>
+  </data>
+  <data name="Fields.VwTicketPayments.DiscountAmountFinal" xml:space="preserve">
+    <value>Valor Final Descuento</value>
+  </data>
+  <data name="Fields.VwTicketPayments.DiscountBalanceBefore" xml:space="preserve">
+    <value>Saldo Previo Descuento</value>
+  </data>
+  <data name="Fields.VwTicketPayments.DiscountBalanceCurrencyId" xml:space="preserve">
+    <value>Moneda Saldo Previo Descuento</value>
+  </data>
+  <data name="Fields.VwTicketPayments.DiscountBalanceCurrencyIsoCode" xml:space="preserve">
+    <value>Abrev. Moneda Saldo Previo Descuento</value>
+  </data>
+  <data name="Fields.VwTicketPayments.DiscountChangeApplied" xml:space="preserve">
+    <value>Cambio Descuento</value>
+  </data>
+  <data name="Fields.VwTicketPayments.DiscountDate" xml:space="preserve">
+    <value>Fecha Descuento</value>
+  </data>
+  <data name="Fields.VwTicketPayments.DiscountDate_Time" xml:space="preserve">
+    <value>Hora Descuento</value>
+  </data>
+  <data name="Fields.VwTicketPayments.DiscountId" xml:space="preserve">
+    <value>Descuento</value>
+  </data>
+  <data name="Fields.VwTicketPayments.DiscountInsertionUTCDate" xml:space="preserve">
+    <value>Fecha Inserción Descuento (UTC)</value>
+  </data>
+  <data name="Fields.VwTicketPayments.DiscountInsertionUTCDate_Time" xml:space="preserve">
+    <value>Hora Inserción Descuento (UTC)</value>
+  </data>
+  <data name="Fields.VwTicketPayments.Enddate" xml:space="preserve">
+    <value>Fecha Final</value>
+  </data>
+  <data name="Fields.VwTicketPayments.Enddate_Time" xml:space="preserve">
+    <value>Hora Final</value>
+  </data>
+  <data name="Fields.VwTicketPayments.Export.PDFFilename" xml:space="preserve">
+    <value>operaciones</value>
+  </data>
+  <data name="Fields.VwTicketPayments.Export.XLSFilename" xml:space="preserve">
+    <value>operaciones</value>
+  </data>
+  <data name="Fields.VwTicketPayments.ExternalId1" xml:space="preserve">
+    <value>Id Externo 1</value>
+  </data>
+  <data name="Fields.VwTicketPayments.ExternalId2" xml:space="preserve">
+    <value>Id Externo 2</value>
+  </data>
+  <data name="Fields.VwTicketPayments.ExternalId3" xml:space="preserve">
+    <value>Id Externo 3</value>
+  </data>
+  <data name="Fields.VwTicketPayments.FinalAmount" xml:space="preserve">
+    <value>Valor Final</value>
+  </data>
+  <data name="Fields.VwTicketPayments.FixedFee" xml:space="preserve">
+    <value>Comisión Fija</value>
+  </data>
+  <data name="Fields.VwTicketPayments.Inidate" xml:space="preserve">
+    <value>Fecha Inicio</value>
+  </data>
+  <data name="Fields.VwTicketPayments.Inidate_Time" xml:space="preserve">
+    <value>Hora Inicio</value>
+  </data>
+  <data name="Fields.VwTicketPayments.InsDescription" xml:space="preserve">
+    <value>Instalación</value>
+  </data>
+  <data name="Fields.VwTicketPayments.InsertionUTCDate" xml:space="preserve">
+    <value>Fecha Inserción (UTC)</value>
+  </data>
+  <data name="Fields.VwTicketPayments.InsertionUTCDate_Time" xml:space="preserve">
+    <value>Hora Inserción (UTC)</value>
+  </data>
+  <data name="Fields.VwTicketPayments.InsShortdesc" xml:space="preserve">
+    <value>Instalación Abrv.</value>
+  </data>
+  <data name="Fields.VwTicketPayments.InstallationId" xml:space="preserve">
+    <value>Instalación</value>
+  </data>
+  <data name="Fields.VwTicketPayments.Latitude" xml:space="preserve">
+    <value>Latitud</value>
+  </data>
+  <data name="Fields.VwTicketPayments.Longitude" xml:space="preserve">
+    <value>Longitud</value>
+  </data>
+  <data name="Fields.VwTicketPayments.MainTel" xml:space="preserve">
+    <value>Móvil</value>
+  </data>
+  <data name="Fields.VwTicketPayments.MaskedCardNumber" xml:space="preserve">
+    <value>Número Tarjeta enmascarado</value>
+  </data>
+  <data name="Fields.VwTicketPayments.MobileOS" xml:space="preserve">
+    <value>SO Móvil</value>
+  </data>
+  <data name="Fields.VwTicketPayments.OffstreetEndDate" xml:space="preserve">
+    <value>Fecha Fin Aparcamiento</value>
+  </data>
+  <data name="Fields.VwTicketPayments.OffstreetEntryDate" xml:space="preserve">
+    <value>Fecha Entrada Aparcamiento</value>
+  </data>
+  <data name="Fields.VwTicketPayments.OffstreetExitDate" xml:space="preserve">
+    <value>Fecha Salida Aparcamiento</value>
+  </data>
+  <data name="Fields.VwTicketPayments.OffstreetExitLimitDate" xml:space="preserve">
+    <value>Fecha Límite Salida Aparcamiento</value>
+  </data>
+  <data name="Fields.VwTicketPayments.OffstreetGate" xml:space="preserve">
+    <value>Puerta Aparcamiento</value>
+  </data>
+  <data name="Fields.VwTicketPayments.OffstreetLogicalId" xml:space="preserve">
+    <value>Tiquet Aparcamiento</value>
+  </data>
+  <data name="Fields.VwTicketPayments.OffstreetNotifyEntryDate" xml:space="preserve">
+    <value>Fecha Notificación Entrada Aparcamiento</value>
+  </data>
+  <data name="Fields.VwTicketPayments.OffstreetPaymentDate" xml:space="preserve">
+    <value>Fecha Pago Aparcamiento</value>
+  </data>
+  <data name="Fields.VwTicketPayments.OffstreetSpaceDescription" xml:space="preserve">
+    <value>Plaza Aparcamiento</value>
+  </data>
+  <data name="Fields.VwTicketPayments.OffstreetTariff" xml:space="preserve">
+    <value>Tarifa Aparcamiento</value>
+  </data>
+  <data name="Fields.VwTicketPayments.OffstreetUTCEndDate" xml:space="preserve">
+    <value>Fecha (UTC) Fin Aparcamiento</value>
+  </data>
+  <data name="Fields.VwTicketPayments.OffstreetUTCEntryDate" xml:space="preserve">
+    <value>Fecha (UTC) Entrada Aparcamiento</value>
+  </data>
+  <data name="Fields.VwTicketPayments.OffstreetUTCExitDate" xml:space="preserve">
+    <value>Fecha (UTC) Salida Aparcamiento</value>
+  </data>
+  <data name="Fields.VwTicketPayments.OffstreetUTCExitLimitDate" xml:space="preserve">
+    <value>Fecha (UTC) Límite Salida Aparcamiento</value>
+  </data>
+  <data name="Fields.VwTicketPayments.OffstreetUTCNotifyEntryDate" xml:space="preserve">
+    <value>Fecha (UTC) Notificación Entrada Aparcamiento</value>
+  </data>
+  <data name="Fields.VwTicketPayments.OffstreetUTCPaymentDate" xml:space="preserve">
+    <value>Fecha (UTC) Pago Aparcamiento</value>
+  </data>
+  <data name="Fields.VwTicketPayments.OpReference" xml:space="preserve">
+    <value>Referencia Operación</value>
+  </data>
+  <data name="Fields.VwTicketPayments.PartialFixedFee" xml:space="preserve">
+    <value>Valor Comisión Fija</value>
+  </data>
+  <data name="Fields.VwTicketPayments.PartialPercFee" xml:space="preserve">
+    <value>Valor Comisión Porc.</value>
+  </data>
+  <data name="Fields.VwTicketPayments.PartialVat1" xml:space="preserve">
+    <value>Valor IVA</value>
+  </data>
+  <data name="Fields.VwTicketPayments.PercFee" xml:space="preserve">
+    <value>% Comisión</value>
+  </data>
+  <data name="Fields.VwTicketPayments.PercFeeTopped" xml:space="preserve">
+    <value>Comisión Máx.</value>
+  </data>
+  <data name="Fields.VwTicketPayments.PercVat1" xml:space="preserve">
+    <value>% IVA 1</value>
+  </data>
+  <data name="Fields.VwTicketPayments.PercVat2" xml:space="preserve">
+    <value>% IVA 2</value>
+  </data>
+  <data name="Fields.VwTicketPayments.Plate" xml:space="preserve">
+    <value>Matrícula</value>
+  </data>
+  <data name="Fields.VwTicketPayments.PlateId" xml:space="preserve">
+    <value>Matrícula</value>
+  </data>
+  <data name="Fields.VwTicketPayments.RechargeAmount" xml:space="preserve">
+    <value>Valor Recarga</value>
+  </data>
+  <data name="Fields.VwTicketPayments.RechargeAmountCurrencyId" xml:space="preserve">
+    <value>Moneda Valor Recarga</value>
+  </data>
+  <data name="Fields.VwTicketPayments.RechargeAmountCurrencyIsoCode" xml:space="preserve">
+    <value>Abrev. Moneda Valor Recarga</value>
+  </data>
+  <data name="Fields.VwTicketPayments.RechargeBalanceBefore" xml:space="preserve">
+    <value>Saldo Previo Recarga</value>
+  </data>
+  <data name="Fields.VwTicketPayments.RechargeDate" xml:space="preserve">
+    <value>Fecha Recarga</value>
+  </data>
+  <data name="Fields.VwTicketPayments.RechargeDate_Time" xml:space="preserve">
+    <value>Hora Recarga</value>
+  </data>
+  <data name="Fields.VwTicketPayments.RechargeId" xml:space="preserve">
+    <value>Recarga</value>
+  </data>
+  <data name="Fields.VwTicketPayments.RechargeInsertionUTCDate" xml:space="preserve">
+    <value>Fecha Inserción Recarga (UTC)</value>
+  </data>
+  <data name="Fields.VwTicketPayments.RechargeInsertionUTCDate_Time" xml:space="preserve">
+    <value>Hora Inserción Recarga (UTC)</value>
+  </data>
+  <data name="Fields.VwTicketPayments.SectorId" xml:space="preserve">
+    <value>Sector</value>
+  </data>
+  <data name="Fields.VwTicketPayments.ServiceChargeTypeId" xml:space="preserve">
+    <value>Tipo Servicio Carga</value>
+  </data>
+  <data name="Fields.VwTicketPayments.SuscriptionType" xml:space="preserve">
+    <value>Tipo Suscripción</value>
+  </data>
+  <data name="Fields.VwTicketPayments.Tariff" xml:space="preserve">
+    <value>Tarifa</value>
+  </data>
+  <data name="Fields.VwTicketPayments.TicketData" xml:space="preserve">
+    <value>Datos Denuncia</value>
+  </data>
+  <data name="Fields.VwTicketPayments.TicketNumber" xml:space="preserve">
+    <value>Número Denuncia</value>
+  </data>
+  <data name="Fields.VwTicketPayments.Time" xml:space="preserve">
+    <value>Duración</value>
+  </data>
+  <data name="Fields.VwTicketPayments.TotalAmount" xml:space="preserve">
+    <value>Valor Total</value>
+  </data>
+  <data name="Fields.VwTicketPayments.TransactionId" xml:space="preserve">
+    <value>Código Transacción</value>
+  </data>
+  <data name="Fields.VwTicketPayments.Type" xml:space="preserve">
+    <value>Tipo</value>
+  </data>
+  <data name="Fields.VwTicketPayments.TypeId" xml:space="preserve">
+    <value>Tipo</value>
+  </data>
+  <data name="Fields.VwTicketPayments.UserId" xml:space="preserve">
+    <value>Usuario</value>
+  </data>
+  <data name="Fields.VwTicketPayments.Username" xml:space="preserve">
+    <value>Usuario</value>
+  </data>
+  <data name="Fields.VwTicketPayments.UtcDate" xml:space="preserve">
+    <value>Fecha (UTC)</value>
+  </data>
+  <data name="Fields.VwTicketPayments.UtcDate_Time" xml:space="preserve">
+    <value>Hora (UTC)</value>
+  </data>
+  <data name="Fields.VwHisOperations.MainTel" xml:space="preserve">
+    <value>Móvil</value>
+  </data>
+  <data name="Fields.Users.BtnDisable" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Fields.VwHisOperationsRestricted" xml:space="preserve">
+    <value>Estacionamientos</value>
+  </data>
+  <data name="Fields.VwHisOperationsRestricted.Amount" xml:space="preserve">
+    <value>Valor</value>
+  </data>
+  <data name="Fields.VwHisOperationsRestricted.Date" xml:space="preserve">
+    <value>Fecha</value>
+  </data>
+  <data name="Fields.VwHisOperationsRestricted.Date_Time" xml:space="preserve">
+    <value>Hora</value>
+  </data>
+  <data name="Fields.VwHisOperationsRestricted.Enddate" xml:space="preserve">
+    <value>Fecha Final</value>
+  </data>
+  <data name="Fields.VwHisOperationsRestricted.Enddate_Time" xml:space="preserve">
+    <value>Hora Final</value>
+  </data>
+  <data name="Fields.VwHisOperationsRestricted.Export.PDFFilename" xml:space="preserve">
+    <value>operaciones</value>
+  </data>
+  <data name="Fields.VwHisOperationsRestricted.Export.XLSFilename" xml:space="preserve">
+    <value>operaciones</value>
+  </data>
+  <data name="Fields.VwHisOperationsRestricted.Inidate" xml:space="preserve">
+    <value>Fecha Inicio</value>
+  </data>
+  <data name="Fields.VwHisOperationsRestricted.Inidate_Time" xml:space="preserve">
+    <value>Hora Inicio</value>
+  </data>
+  <data name="Fields.VwHisOperationsRestricted.InsDescription" xml:space="preserve">
+    <value>Instalación</value>
+  </data>
+  <data name="Fields.VwHisOperationsRestricted.SectorId" xml:space="preserve">
+    <value>Sector</value>
+  </data>
+  <data name="Fields.VwHisOperationsRestricted.Tariff" xml:space="preserve">
+    <value>Tarifa</value>
+  </data>
+  <data name="Fields.VwHisOperationsRestricted.Time" xml:space="preserve">
+    <value>Duración</value>
+  </data>
+  <data name="Fields.VwHisOperationsRestricted.Type" xml:space="preserve">
+    <value>Tipo</value>
+  </data>
+  <data name="Fields.UsersSecurityOperations.ActivationCode" xml:space="preserve">
+    <value>Código Activación</value>
+  </data>
+  <data name="Fields.UsersSecurityOperations.ActivationRetries" xml:space="preserve">
+    <value>Nº Reintentos</value>
+  </data>
+  <data name="Fields.UsersSecurityOperations.Export.PDFFilename" xml:space="preserve">
+    <value>OperacionesSeguras</value>
+  </data>
+  <data name="Fields.UsersSecurityOperations.Export.XLSFilename" xml:space="preserve">
+    <value>OperacionesSeguras</value>
+  </data>
+  <data name="Fields.UsersSecurityOperations.LastSendDate" xml:space="preserve">
+    <value>Última Fecha Envío</value>
+  </data>
+  <data name="Fields.UsersSecurityOperations.LastSendDate_Time" xml:space="preserve">
+    <value>Última Hora Envío</value>
+  </data>
+  <data name="Fields.UsersSecurityOperations.NewEmail" xml:space="preserve">
+    <value>Nuevo e-mail</value>
+  </data>
+  <data name="Fields.UsersSecurityOperations.NewMainTel" xml:space="preserve">
+    <value>Teléfono Móvil</value>
+  </data>
+  <data name="Fields.UsersSecurityOperations.NewMaintelCountry" xml:space="preserve">
+    <value>País Teléfono Móvil</value>
+  </data>
+  <data name="Fields.UsersSecurityOperations.OpType" xml:space="preserve">
+    <value>Tipo</value>
+  </data>
+  <data name="Fields.UsersSecurityOperations.Status" xml:space="preserve">
+    <value>Estado</value>
+  </data>
+  <data name="Fields.UsersSecurityOperations.UrlParameter" xml:space="preserve">
+    <value>Url</value>
+  </data>
+  <data name="Fields.UsersSecurityOperations.UsrId" xml:space="preserve">
+    <value>Usuario</value>
+  </data>
+  <data name="Fields.UsersSecurityOperations.Utcdatetime" xml:space="preserve">
+    <value>Fecha (UTC)</value>
+  </data>
+  <data name="Fields.UsersSecurityOperations.Utcdatetime_Time" xml:space="preserve">
+    <value>Hora (UTC)</value>
+  </data>
+  <data name="Fields.VwBalanceTransfers" xml:space="preserve">
+    <value>Transferencias de Saldo</value>
+  </data>
+  <data name="Fields.VwBalanceTransfers.Amount" xml:space="preserve">
+    <value>Valor</value>
+  </data>
+  <data name="Fields.VwBalanceTransfers.AmountCurId" xml:space="preserve">
+    <value>Moneda Valor</value>
+  </data>
+  <data name="Fields.VwBalanceTransfers.ChangeApplied" xml:space="preserve">
+    <value>Cambio</value>
+  </data>
+  <data name="Fields.VwBalanceTransfers.Date" xml:space="preserve">
+    <value>Fecha</value>
+  </data>
+  <data name="Fields.VwBalanceTransfers.DstAmount" xml:space="preserve">
+    <value>Valor Moneda Destino</value>
+  </data>
+  <data name="Fields.VwBalanceTransfers.DstBalanceBefore" xml:space="preserve">
+    <value>Saldo Previo Usuario Destino</value>
+  </data>
+  <data name="Fields.VwBalanceTransfers.DstUsrUsername" xml:space="preserve">
+    <value>Usuario Destino</value>
+  </data>
+  <data name="Fields.VwBalanceTransfers.Export.PDFFilename" xml:space="preserve">
+    <value>TransferenciasSaldo</value>
+  </data>
+  <data name="Fields.VwBalanceTransfers.Export.XLSFilename" xml:space="preserve">
+    <value>TransferenciasSaldo</value>
+  </data>
+  <data name="Fields.VwBalanceTransfers.Id" xml:space="preserve">
+    <value>Id</value>
+  </data>
+  <data name="Fields.VwBalanceTransfers.InsertionUtcDate" xml:space="preserve">
+    <value>Fecha Inserción (UTC)</value>
+  </data>
+  <data name="Fields.VwBalanceTransfers.MoseOs" xml:space="preserve">
+    <value>SO Móvil</value>
+  </data>
+  <data name="Fields.VwBalanceTransfers.SrcBalanceBefore" xml:space="preserve">
+    <value>Saldo Previo Usuario Origen</value>
+  </data>
+  <data name="Fields.VwBalanceTransfers.SrcUsrUsername" xml:space="preserve">
+    <value>Usuario Origen</value>
+  </data>
+  <data name="Fields.VwBalanceTransfers.UtcDate" xml:space="preserve">
+    <value>Fecha (UTC)</value>
+  </data>
+  <data name="Fields.AllCurrOperationsExts.CuspmrPagateliaNewBalance" xml:space="preserve">
+    <value>Nuevo Saldo Pagatelia</value>
+  </data>
+  <data name="Fields.AllCurrOperationsExts.CuspmrType" xml:space="preserve">
+    <value>Tipo de Recarga</value>
+  </data>
+  <data name="Fields.AllOperationsExts.CuspmrPagateliaNewBalance" xml:space="preserve">
+    <value>Nuevo Saldo Pagatelia</value>
+  </data>
+  <data name="Fields.AllOperationsExts.CuspmrType" xml:space="preserve">
+    <value>Tipo de Recarga</value>
+  </data>
+  <data name="Fields.VwCustomerPaymentMeansRecharges.PagateliaNewBalance" xml:space="preserve">
+    <value>Nuevo Saldo Pagatelia</value>
+  </data>
+  <data name="TypeEnums.PaymentMeanRechargeTypes.Coupon" xml:space="preserve">
+    <value>Vale Descuento</value>
+  </data>
+  <data name="TypeEnums.PaymentMeanRechargeTypes.Pagatelia" xml:space="preserve">
+    <value>Pagatelia</value>
+  </data>
+  <data name="TypeEnums.PaymentMeanRechargeTypes.Payment" xml:space="preserve">
+    <value>Pago</value>
+  </data>
+  <data name="Fields.Users.PaymentMethod" xml:space="preserve">
+    <value>Forma de Pago</value>
+  </data>
+  <data name="Fields.Users.SuscriptionType" xml:space="preserve">
+    <value>Tipo Suscripción</value>
+  </data>
+  <data name="TypeEnums.PaymentMeanTypeStatus.pmsDebitCreditCard" xml:space="preserve">
+    <value>Tarjeta de Crédito/Débito</value>
+  </data>
+  <data name="TypeEnums.PaymentMeanTypeStatus.pmsPaypal" xml:space="preserve">
+    <value>PayPal</value>
+  </data>
+  <data name="TypeEnums.PaymentMeanTypeStatus.pmsWithoutPaymentMean" xml:space="preserve">
+    <value>Sin Forma de Pago</value>
+  </data>
+  <data name="TypeEnums.PaymentMeanTypeStatus.pmsWithoutValidPaymentMean" xml:space="preserve">
+    <value>Forma de Pago Inválida</value>
+  </data>
+  <data name="Fields.VwUsersFriends" xml:space="preserve">
+    <value>Invitaciones Usuarios</value>
+  </data>
+  <data name="Fields.VwUsersFriends.AcceptDate" xml:space="preserve">
+    <value>Fecha Aceptación</value>
+  </data>
+  <data name="Fields.VwUsersFriends.AcceptUsr" xml:space="preserve">
+    <value>Usuario Aceptación</value>
+  </data>
+  <data name="Fields.VwUsersFriends.Date" xml:space="preserve">
+    <value>Fecha</value>
+  </data>
+  <data name="Fields.VwUsersFriends.Export.PDFFilename" xml:space="preserve">
+    <value>UsersFriends</value>
+  </data>
+  <data name="Fields.VwUsersFriends.Export.XLSFilename" xml:space="preserve">
+    <value>UsersFriends</value>
+  </data>
+  <data name="Fields.VwUsersFriends.FriendEmail" xml:space="preserve">
+    <value>Email Amigo</value>
+  </data>
+  <data name="Fields.VwUsersFriends.Id" xml:space="preserve">
+    <value>Id</value>
+  </data>
+  <data name="Fields.VwUsersFriends.SenderId" xml:space="preserve">
+    <value>SenderId</value>
+  </data>
+  <data name="Fields.VwUsersFriends.Status" xml:space="preserve">
+    <value>Estado</value>
+  </data>
+  <data name="Fields.VwUsersFriends.Usr" xml:space="preserve">
+    <value>Usuario</value>
+  </data>
+  <data name="Fields.VwUsersPushIds" xml:space="preserve">
+    <value>Dispositivos</value>
+  </data>
+  <data name="Fields.VwUsersPushIds.AppSessionKeepAlive" xml:space="preserve">
+    <value>Mantener Sesión Viva</value>
+  </data>
+  <data name="Fields.VwUsersPushIds.AppVersion" xml:space="preserve">
+    <value>Versión App</value>
+  </data>
+  <data name="Fields.VwUsersPushIds.CellImei" xml:space="preserve">
+    <value>Imei</value>
+  </data>
+  <data name="Fields.VwUsersPushIds.CellModel" xml:space="preserve">
+    <value>Modelo</value>
+  </data>
+  <data name="Fields.VwUsersPushIds.CellSerialnumber" xml:space="preserve">
+    <value>Número de Serie</value>
+  </data>
+  <data name="Fields.VwUsersPushIds.CellWifiMac" xml:space="preserve">
+    <value>Wifi Mac</value>
+  </data>
+  <data name="Fields.VwUsersPushIds.Export.PDFFilename" xml:space="preserve">
+    <value>UsersPushIds</value>
+  </data>
+  <data name="Fields.VwUsersPushIds.Export.XLSFilename" xml:space="preserve">
+    <value>UsersPushIds</value>
+  </data>
+  <data name="Fields.VwUsersPushIds.Id" xml:space="preserve">
+    <value>Id</value>
+  </data>
+  <data name="Fields.VwUsersPushIds.LastRetryDatetime" xml:space="preserve">
+    <value>Fecha y Hora Último Intento</value>
+  </data>
+  <data name="Fields.VwUsersPushIds.LastSucessfulPush" xml:space="preserve">
+    <value>Fecha y Hora Último Push</value>
+  </data>
+  <data name="Fields.VwUsersPushIds.LastUpdateDatetime" xml:space="preserve">
+    <value>Fecha y Hora Última Actualización</value>
+  </data>
+  <data name="Fields.VwUsersPushIds.OS" xml:space="preserve">
+    <value>SO Mòvil</value>
+  </data>
+  <data name="Fields.VwUsersPushIds.OsVersion" xml:space="preserve">
+    <value>Versión SO Mòvil</value>
+  </data>
+  <data name="Fields.VwUsersPushIds.Pushid" xml:space="preserve">
+    <value>PushId</value>
+  </data>
+  <data name="Fields.VwUsersPushIds.PushRetries" xml:space="preserve">
+    <value>Reintentos Push</value>
+  </data>
+  <data name="Fields.VwUsersPushIds.Usr" xml:space="preserve">
+    <value>Usuario</value>
+  </data>
+  <data name="TypeEnums.InvitationStatus.isAccepted" xml:space="preserve">
+    <value>Aceptada</value>
+  </data>
+  <data name="TypeEnums.InvitationStatus.isSent" xml:space="preserve">
+    <value>Enviada</value>
+  </data>
+  <data name="Fields.VwRechargeCoupons" xml:space="preserve">
+    <value>Vales de Descuento</value>
+  </data>
+  <data name="Fields.VwRechargeCoupons.Code" xml:space="preserve">
+    <value>Código</value>
+  </data>
+  <data name="Fields.VwRechargeCoupons.CurId" xml:space="preserve">
+    <value>Moneda</value>
+  </data>
+  <data name="Fields.VwRechargeCoupons.ExpDate" xml:space="preserve">
+    <value>Fecha Final Validez</value>
+  </data>
+  <data name="Fields.VwRechargeCoupons.Export.PDFFilename" xml:space="preserve">
+    <value>RechargeCoupons</value>
+  </data>
+  <data name="Fields.VwRechargeCoupons.Export.XLSFilename" xml:space="preserve">
+    <value>RechargeCoupons</value>
+  </data>
+  <data name="Fields.VwRechargeCoupons.Id" xml:space="preserve">
+    <value>Id</value>
+  </data>
+  <data name="Fields.VwRechargeCoupons.Keycode" xml:space="preserve">
+    <value>Código Teclado</value>
+  </data>
+  <data name="Fields.VwRechargeCoupons.RtlAddress" xml:space="preserve">
+    <value>Dirección Comerciante</value>
+  </data>
+  <data name="Fields.VwRechargeCoupons.RtlDocId" xml:space="preserve">
+    <value>CIF Comerciante</value>
+  </data>
+  <data name="Fields.VwRechargeCoupons.RtlEmail" xml:space="preserve">
+    <value>Email Comerciante</value>
+  </data>
+  <data name="Fields.VwRechargeCoupons.RtlName" xml:space="preserve">
+    <value>Nombre Comerciante</value>
+  </data>
+  <data name="Fields.VwRechargeCoupons.StartDate" xml:space="preserve">
+    <value>Fecha Inicio Validez</value>
+  </data>
+  <data name="Fields.VwRechargeCoupons.Status" xml:space="preserve">
+    <value>Estado</value>
+  </data>
+  <data name="Fields.VwRechargeCoupons.Value" xml:space="preserve">
+    <value>Importe</value>
+  </data>
+  <data name="Literals.RechargeCouponsStatus.Actived" xml:space="preserve">
+    <value>Activado</value>
+  </data>
+  <data name="Literals.RechargeCouponsStatus.Cancelled" xml:space="preserve">
+    <value>Cancelado</value>
+  </data>
+  <data name="Literals.RechargeCouponsStatus.Locked" xml:space="preserve">
+    <value>Bloqueado</value>
+  </data>
+  <data name="Literals.RechargeCouponsStatus.Pending Activation" xml:space="preserve">
+    <value>Pendiente Activación</value>
+  </data>
+  <data name="Literals.RechargeCouponsStatus.Used" xml:space="preserve">
+    <value>Utilizado</value>
+  </data>
+  <data name="Fields.VwCustomerPaymentMeansRecharges.CreationType" xml:space="preserve">
+    <value>Tipo Creación</value>
+  </data>
+  <data name="TypeEnums.PaymentMeanRechargeCreationTypes.pmrctAutomaticRecharge" xml:space="preserve">
+    <value>Recarga Automática</value>
+  </data>
+  <data name="TypeEnums.PaymentMeanRechargeCreationTypes.pmrctChangePaymentMeanRecharge" xml:space="preserve">
+    <value>Recarga Cambio Método Pago</value>
+  </data>
+  <data name="TypeEnums.PaymentMeanRechargeCreationTypes.pmrctRegularRecharge" xml:space="preserve">
+    <value>Recarga Normal</value>
+  </data>
+  <data name="TypeEnums.PaymentMeanRechargeCreationTypes.pmrctUserCreationRecharge" xml:space="preserve">
+    <value>Recarga Inicial</value>
+  </data>
+  <data name="TypeEnums.PaymentMeanRechargeTypes.Spotycoins" xml:space="preserve">
+    <value>Spotycoins</value>
+  </data>
+  <data name="TypeEnums.ChargeOperationTypes.BalanceReception" xml:space="preserve">
+    <value>Recepción de Saldo</value>
+  </data>
+  <data name="TypeEnums.ChargeOperationTypes.BalanceRechargeRefund" xml:space="preserve">
+    <value>Devolución de Recarga</value>
+  </data>
+  <data name="TypeEnums.ChargeOperationTypes.BalanceTransfer" xml:space="preserve">
+    <value>Transferencia de Saldo</value>
+  </data>
+  <data name="TypeEnums.ChargeOperationTypes.CouponCharge" xml:space="preserve">
+    <value>Recarga por Cupón</value>
+  </data>
+  <data name="TypeEnums.ChargeOperationTypes.SubscriptionCharge" xml:space="preserve">
+    <value>Cargo por Suscripción</value>
+  </data>
+  <data name="TypeEnums.ChargeOperationTypes.TollPayment" xml:space="preserve">
+    <value>Pago Peaje</value>
+  </data>
+  <data name="TypeEnums.ChargeOperationTypes.TollLock" xml:space="preserve">
+    <value>Bloqueo Peaje</value>
+  </data>
+  <data name="TypeEnums.ChargeOperationTypes.TollUnlock" xml:space="preserve">
+    <value>Desbloqueo Peaje</value>
+  </data>
+  <data name="TypeEnums.MobileOSs.None" xml:space="preserve">
+    <value>Sin S.O.</value>
+  </data>
+</root>

@@ -1,0 +1,88 @@
+
+// width 100% on mobile
+.w-100-sm {
+    width: 100%;
+    @include media-breakpoint-up(md) {
+      width: 400px;
+    }
+}
+
+.border-right-5 {
+    border-right-width: .5rem;
+}
+.border-blue {
+    border-right-color: var(--info);
+}
+.border-green {
+    border-right-color: var(--green);
+}
+
+// Border Radius
+.rounded-xs {
+    border-radius: 1rem !important;
+}
+.rounded-m {
+    border-radius: 2rem !important;
+}
+.rounded-l {
+    border-radius: 3rem !important;
+}
+
+// Icons
+.fa, .fas {
+    font-weight: 200;
+}
+
+// Pictos
+.picto-big {
+    font-size: 9rem;
+}
+
+// Dividers
+hr {
+    margin: 1rem 0;
+    color: var(--grey-light);
+    background-color: transparent;
+    border: none;
+    opacity: 1;
+}
+// Solid border
+hr.divider1 {
+    border-bottom: 1px solid;
+}
+// Dotted border
+hr.divider2 {
+    border-bottom: 1px dashed;
+}
+
+// 100% width
+.neg-margin {
+margin: 1rem -.75rem 1em;
+}
+
+// colors
+.color-primary {
+    color: $color-primary;
+}
+.color-primary-light {
+    color: lighten($color-primary,40%);
+}
+.color-secondary {
+    color: $secondary;
+}
+
+.line-height {
+    @include line-height(18);
+}
+
+// Background colors
+.bk-bg-primary {
+    background-color: $bk-bg-primary;
+}
+.bk-bg-secondary {
+    background-color: $bk-bg-secondary;
+}
+
+.bk-color-white {
+    color: $white;
+}

@@ -1,0 +1,91 @@
+﻿.login-container 
+{
+    height: 100%;
+    min-height: 300px;
+    padding-top: 100px;
+	position:relative;
+    text-align: center;
+}
+
+.login-label
+{
+    float: left;
+    clear: both;
+    width: 45%;
+    /*padding: .4em 0 1em;*/
+    margin-left: 2%;
+    text-align: right;
+    height: 100%;
+}
+
+.login-field 
+{
+    float: right;
+    clear: right;
+    width: 50%;
+    margin-right: 2%;
+    /*padding: 0 0 .6em;*/
+    padding-top: 5px;
+    text-align: left;
+    height: 100%;
+}
+
+.login-submit
+{
+    float: left;
+    width: 100%;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.login-errors
+{
+    float: left;
+    width: 100%;
+    text-align: center;
+    padding-top: 10px;
+}
+/*******************************************/
+/* ESTILS LOGIN */
+/*******************************************/
+/* no mostrem les banderes*/
+#ddlLanguages_listbox img {display:none;}
+	
+span.k-input {
+background-image:none;
+padding-left:5px;
+}
+
+#spanTitleLogin {
+  position: relative;
+  top: -10px;
+  font-size: x-large;
+  font-stretch: extra-condensed;
+  color: #666666;
+  font-family: Geneva, Arial, Helvetica, sans-serif;
+}
+#viaLogin {
+	width: 600px;
+	margin-left:
+	calc(50% - 250px);
+}
+#meyparLogin  {
+	position: relative;
+	float: right;
+	top: 20px;
+	right: 20px;
+}
+body {
+overflow-x:hidden;
+}
+
+#footerCiutat { 
+  background: url(home.png) no-repeat 0px 0px; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  /*position: relative;*/  
+  margin-top: 285px;
+  height: 96px;
+}

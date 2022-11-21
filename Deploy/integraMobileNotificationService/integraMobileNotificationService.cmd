@@ -1,0 +1,1 @@
+integraMobileNotificationService.exe -c

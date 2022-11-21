@@ -1,0 +1,53 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.Master.cs" Inherits="PBPPlugin.Views.Shared.Site" %>
+<%@ Import Namespace="System.Web.Helpers" %>
+<%@ Import Namespace="System.Web.Mvc" %>
+<%@ Import Namespace="System.Web.Mvc.Ajax" %>
+<%@ Import Namespace="System.Web.Mvc.Html" %>
+<%@ Import Namespace="System.Web.Optimization" %>
+<%@ Import Namespace="System.Web.Routing" %>
+<%@ Import Namespace="System.Web.WebPages" %>
+<%@ Import Namespace="SecurityPlugin" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title><asp:ContentPlaceHolder ID="TitleContent" runat="server" /></title>
+    
+    <link href="<%= Url.Content("~/Content/backOffice.css") %>" rel="stylesheet" type="text/css" />
+    <link href="<%= Url.Content("~/Content/kendo/kendo.common.min.css") %>" rel="stylesheet" type="text/css" />
+    <link href="<%= Url.Content("~/Content/kendo/kendo.default.min.css") %>" rel="stylesheet" type="text/css" />    
+    <link href="<%= Url.Content("~/Content/kendo/kendo.silver.min.css") %>" rel="stylesheet" type="text/css" />    
+    <link href="<%= Url.Content("~/Content/kendoExt/kendo.ext.css") %>" rel="stylesheet" type="text/css" />
+    <script src="<%= Url.Content("~/Scripts/kendo/jquery.min.js") %>"></script>
+    <script src="<%= Url.Content("~/Scripts/kendo/kendo.web.min.js") %>"></script>
+    <script src="<%= Url.Content("~/Scripts/kendo/kendo.aspnetmvc.min.js") %>"></script>
+    <script src="<%= Url.Content("~/Scripts/kendoExt/kendo.web.ext.js") %>"></script>
+    <script src="<%= Url.Content("~/Scripts/jquery.cookie.js") %>"></script>
+    <script src="<%= Url.Content("~/Scripts/msgbox.js") %>"></script>
+    
+    <link href='http://fonts.googleapis.com/css?family=Maven+Pro:400,500' rel='stylesheet' type='text/css'>
+
+    <%
+        var culture = System.Threading.Thread.CurrentThread.CurrentCulture;
+    %>
+    <script src="<%= Url.Content("~/Scripts/kendo/cultures/kendo.culture." + culture + ".min.js") %>"></script>
+
+    <%-- Set the current culture --%>
+    <script>
+        kendo.culture("<%= culture %>");
+    </script>
+
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <asp:ContentPlaceHolder ID="MainContent" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>

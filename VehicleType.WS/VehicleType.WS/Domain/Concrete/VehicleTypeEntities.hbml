@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="VehicleType.WS" namespace="VehicleType.WS.Domain.Entities" p1:Guid="1da966bc-e9c4-48e3-aec6-8235e3f01cd5" xmlns:p1="http://devart.com/schemas/EntityDeveloper/1.0" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="Vehicle" table="VEHICLES" schema="`C##VEHICLETYPE`" p1:Guid="6fd4a663-c561-4a07-b816-3b0cd665e761">
+    <id name="VehPlate" type="String" p1:ValidateMaxLength="50" p1:ValidateRequired="true" p1:Guid="ca5fd43e-0a9a-4b94-b5a6-262ffd85f936">
+      <column name="VEH_PLATE" not-null="true" length="50" sql-type="VARCHAR2" p1:unicode="false" />
+    </id>
+    <property name="VehType" type="String" p1:nullable="true" p1:ValidateMaxLength="50" p1:ValidateRequired="false" p1:Guid="544286ea-f512-4670-94eb-08395d6af07a">
+      <column name="VEH_TYPE" not-null="false" length="50" sql-type="VARCHAR2" p1:unicode="false" />
+    </property>
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Telerik.Reporting.Cache.Database</name>
+    </assembly>
+    <members>
+        <member name="T:Telerik.Reporting.Cache.Database.DatabaseStorage">
+            <summary>
+            <see cref="T:Telerik.Reporting.Cache.Interfaces.IStorage"/>
+            implementation utilizing the various connectivity options
+            provided by the <a href="http://www.telerik.com/data-access">Data Access</a>
+            ORM solution.
+            </summary>
+            <remarks>
+            Because of the various database engines that are supported the DatabaseStorage 
+            is appropriate for single instance deployment scenario only.
+            </remarks>
+            <seealso cref="T:Telerik.Reporting.Cache.MsSqlServerStorage"/>
+            <seealso cref="T:Telerik.Reporting.Cache.StackExchangeRedis.RedisStorage"/>
+        </member>
+        <member name="M:Telerik.Reporting.Cache.Database.DatabaseStorage.#ctor(System.String,System.String)">
+            <summary>
+            Creates an instance of the storage.
+            </summary>
+            <param name="backendName">The backend string identifying the target backend.
+            See <a href="http://docs.telerik.com/data-access/developers-guide/database-specifics/database-specifics-backend-strings-provider-names-list"/>Backend Strings and Provider Names List</param>
+            for all available backend storages and corresponding string that should be provided.
+            <param name="connectionString">The backend specific connection string need to connect.</param>
+        </member>
+    </members>
+</doc>

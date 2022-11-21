@@ -1,0 +1,40 @@
+﻿04 Dec 2012 21:23:48 DEBUG [ConfigSectionParser] Found endpoint : 'live-paypalapi', environment: 'live', port: 'PayPalAPI'
+04 Dec 2012 21:23:48 DEBUG [ConfigSectionParser] Found endpoint : 'live-paypalapiaa', environment: 'live', port: 'PayPalAPIAA'
+04 Dec 2012 21:23:48 DEBUG [ConfigSectionParser] Found endpoint : 'live-paypalapi-threeToken', environment: 'live', port: 'PayPalAPI'
+04 Dec 2012 21:23:48 DEBUG [ConfigSectionParser] Found endpoint : 'live-paypalapiaa-threeToken', environment: 'live', port: 'PayPalAPIAA'
+04 Dec 2012 21:23:48 DEBUG [ConfigSectionParser] Found endpoint : 'sandbox-paypalapi', environment: 'sandbox', port: 'PayPalAPI'
+04 Dec 2012 21:23:48 DEBUG [ConfigSectionParser] Found endpoint : 'sandbox-paypalapiaa', environment: 'sandbox', port: 'PayPalAPIAA'
+04 Dec 2012 21:23:48 DEBUG [ConfigSectionParser] Found endpoint : 'sandbox-paypalapi-threeToken', environment: 'sandbox', port: 'PayPalAPI'
+04 Dec 2012 21:23:48 DEBUG [ConfigSectionParser] Found endpoint : 'sandbox-paypalapiaa-threeToken', environment: 'sandbox', port: 'PayPalAPIAA'
+04 Dec 2012 21:23:48 DEBUG [ConfigSectionParser] Found endpoint : 'beta-sandbox-paypalapi', environment: 'beta-sandbox', port: 'PayPalAPI'
+04 Dec 2012 21:23:48 DEBUG [ConfigSectionParser] Found endpoint : 'beta-sandbox-paypalapiaa', environment: 'beta-sandbox', port: 'PayPalAPIAA'
+04 Dec 2012 21:23:48 DEBUG [ConfigSectionParser] Found endpoint : 'beta-sandbox-paypalapi-threeToken', environment: 'beta-sandbox', port: 'PayPalAPI'
+04 Dec 2012 21:23:48 DEBUG [ConfigSectionParser] Found endpoint : 'beta-sandbox-paypalapiaa-threeToken', environment: 'beta-sandbox', port: 'PayPalAPIAA'
+04 Dec 2012 21:23:48 DEBUG [Config] 
+04 Dec 2012 21:23:48 DEBUG [ConfigSectionParser] Found endpoint : 'live-paypalapi', environment: 'live', port: 'PayPalAPI'
+04 Dec 2012 21:23:48 DEBUG [ConfigSectionParser] Found endpoint : 'live-paypalapiaa', environment: 'live', port: 'PayPalAPIAA'
+04 Dec 2012 21:23:48 DEBUG [ConfigSectionParser] Found endpoint : 'live-paypalapi-threeToken', environment: 'live', port: 'PayPalAPI'
+04 Dec 2012 21:23:48 DEBUG [ConfigSectionParser] Found endpoint : 'live-paypalapiaa-threeToken', environment: 'live', port: 'PayPalAPIAA'
+04 Dec 2012 21:23:48 DEBUG [ConfigSectionParser] Found endpoint : 'sandbox-paypalapi', environment: 'sandbox', port: 'PayPalAPI'
+04 Dec 2012 21:23:48 DEBUG [ConfigSectionParser] Found endpoint : 'sandbox-paypalapiaa', environment: 'sandbox', port: 'PayPalAPIAA'
+04 Dec 2012 21:23:48 DEBUG [ConfigSectionParser] Found endpoint : 'sandbox-paypalapi-threeToken', environment: 'sandbox', port: 'PayPalAPI'
+04 Dec 2012 21:23:48 DEBUG [ConfigSectionParser] Found endpoint : 'sandbox-paypalapiaa-threeToken', environment: 'sandbox', port: 'PayPalAPIAA'
+04 Dec 2012 21:23:48 DEBUG [ConfigSectionParser] Found endpoint : 'beta-sandbox-paypalapi', environment: 'beta-sandbox', port: 'PayPalAPI'
+04 Dec 2012 21:23:48 DEBUG [ConfigSectionParser] Found endpoint : 'beta-sandbox-paypalapiaa', environment: 'beta-sandbox', port: 'PayPalAPIAA'
+04 Dec 2012 21:23:48 DEBUG [ConfigSectionParser] Found endpoint : 'beta-sandbox-paypalapi-threeToken', environment: 'beta-sandbox', port: 'PayPalAPI'
+04 Dec 2012 21:23:48 DEBUG [ConfigSectionParser] Found endpoint : 'beta-sandbox-paypalapiaa-threeToken', environment: 'beta-sandbox', port: 'PayPalAPIAA'
+04 Dec 2012 21:23:48 DEBUG [Config] Current assembly version: paypal_base, Version=5.6.65.1, Culture=neutral, PublicKeyToken=b37401294aaf5617
+04 Dec 2012 21:23:48 DEBUG [Config] TrustAll :True
+04 Dec 2012 21:23:48 DEBUG [Config] Endpoints loaded :12
+04 Dec 2012 21:23:49 INFO  [SOAPAPICaller] binding URL is: https://api-3t.sandbox.paypal.com/2.0/
+04 Dec 2012 21:23:49 INFO  [SOAPAPICaller] binding URL is: https://api-3t.sandbox.paypal.com/2.0/
+04 Dec 2012 21:23:49 INFO  [SOAPAPICaller] SetExpressCheckout sent
+04 Dec 2012 21:23:52 INFO  [SOAPAPICaller] SetExpressCheckout Ack : Success Elapsed Time : 2s 512 ms
+04 Dec 2012 21:24:57 INFO  [SOAPAPICaller] binding URL is: https://api-3t.sandbox.paypal.com/2.0/
+04 Dec 2012 21:24:57 INFO  [SOAPAPICaller] binding URL is: https://api-3t.sandbox.paypal.com/2.0/
+04 Dec 2012 21:24:57 INFO  [SOAPAPICaller] GetExpressCheckoutDetails sent
+04 Dec 2012 21:24:58 INFO  [SOAPAPICaller] GetExpressCheckoutDetails Ack : Success Elapsed Time : 1s 485 ms
+04 Dec 2012 21:25:06 INFO  [SOAPAPICaller] binding URL is: https://api-3t.sandbox.paypal.com/2.0/
+04 Dec 2012 21:25:06 INFO  [SOAPAPICaller] binding URL is: https://api-3t.sandbox.paypal.com/2.0/
+04 Dec 2012 21:25:06 INFO  [SOAPAPICaller] DoExpressCheckoutPayment sent
+04 Dec 2012 21:25:13 INFO  [SOAPAPICaller] DoExpressCheckoutPayment Ack : Success Elapsed Time : 7s 308 ms

@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="Aloha">
+        <s:complexType />
+      </s:element>
+      <s:element name="AlohaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AlohaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="thirdpnotifycarentrymanual">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlin" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="thirdpnotifycarentrymanualResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="thirdpnotifycarentrymanualResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="thirdpregisterdiscountinadvance">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlin" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="thirdpregisterdiscountinadvanceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="thirdpregisterdiscountinadvanceResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="thirdpquerycarexitforpayment">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlin" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="thirdpquerycarexitforpaymentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="thirdpquerycarexitforpaymentResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="thirdpnotifycarpayment">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlin" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="thirdpnotifycarpaymentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="thirdpnotifycarpaymentResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="thirdPQueryCarDiscountforPayment">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlin" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="thirdPQueryCarDiscountforPaymentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="thirdPQueryCarDiscountforPaymentResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegistrarDescuentoNotificadoOnline">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="jsonIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegistrarDescuentoNotificadoOnlineResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RegistrarDescuentoNotificadoOnlineResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegistrarDescuentoNotificadoOnlineVinculado">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="pTipoSoporte" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="pValorSoporte" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pJsonIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegistrarDescuentoNotificadoOnlineVinculadoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RegistrarDescuentoNotificadoOnlineVinculadoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="AlohaSoapIn">
+    <wsdl:part name="parameters" element="tns:Aloha" />
+  </wsdl:message>
+  <wsdl:message name="AlohaSoapOut">
+    <wsdl:part name="parameters" element="tns:AlohaResponse" />
+  </wsdl:message>
+  <wsdl:message name="thirdpnotifycarentrymanualSoapIn">
+    <wsdl:part name="parameters" element="tns:thirdpnotifycarentrymanual" />
+  </wsdl:message>
+  <wsdl:message name="thirdpnotifycarentrymanualSoapOut">
+    <wsdl:part name="parameters" element="tns:thirdpnotifycarentrymanualResponse" />
+  </wsdl:message>
+  <wsdl:message name="thirdpregisterdiscountinadvanceSoapIn">
+    <wsdl:part name="parameters" element="tns:thirdpregisterdiscountinadvance" />
+  </wsdl:message>
+  <wsdl:message name="thirdpregisterdiscountinadvanceSoapOut">
+    <wsdl:part name="parameters" element="tns:thirdpregisterdiscountinadvanceResponse" />
+  </wsdl:message>
+  <wsdl:message name="thirdpquerycarexitforpaymentSoapIn">
+    <wsdl:part name="parameters" element="tns:thirdpquerycarexitforpayment" />
+  </wsdl:message>
+  <wsdl:message name="thirdpquerycarexitforpaymentSoapOut">
+    <wsdl:part name="parameters" element="tns:thirdpquerycarexitforpaymentResponse" />
+  </wsdl:message>
+  <wsdl:message name="thirdpnotifycarpaymentSoapIn">
+    <wsdl:part name="parameters" element="tns:thirdpnotifycarpayment" />
+  </wsdl:message>
+  <wsdl:message name="thirdpnotifycarpaymentSoapOut">
+    <wsdl:part name="parameters" element="tns:thirdpnotifycarpaymentResponse" />
+  </wsdl:message>
+  <wsdl:message name="thirdPQueryCarDiscountforPaymentSoapIn">
+    <wsdl:part name="parameters" element="tns:thirdPQueryCarDiscountforPayment" />
+  </wsdl:message>
+  <wsdl:message name="thirdPQueryCarDiscountforPaymentSoapOut">
+    <wsdl:part name="parameters" element="tns:thirdPQueryCarDiscountforPaymentResponse" />
+  </wsdl:message>
+  <wsdl:message name="RegistrarDescuentoNotificadoOnlineSoapIn">
+    <wsdl:part name="parameters" element="tns:RegistrarDescuentoNotificadoOnline" />
+  </wsdl:message>
+  <wsdl:message name="RegistrarDescuentoNotificadoOnlineSoapOut">
+    <wsdl:part name="parameters" element="tns:RegistrarDescuentoNotificadoOnlineResponse" />
+  </wsdl:message>
+  <wsdl:message name="RegistrarDescuentoNotificadoOnlineVinculadoSoapIn">
+    <wsdl:part name="parameters" element="tns:RegistrarDescuentoNotificadoOnlineVinculado" />
+  </wsdl:message>
+  <wsdl:message name="RegistrarDescuentoNotificadoOnlineVinculadoSoapOut">
+    <wsdl:part name="parameters" element="tns:RegistrarDescuentoNotificadoOnlineVinculadoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="InterfazPublicaWebServiceSoap">
+    <wsdl:operation name="Aloha">
+      <wsdl:input message="tns:AlohaSoapIn" />
+      <wsdl:output message="tns:AlohaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="thirdpnotifycarentrymanual">
+      <wsdl:input message="tns:thirdpnotifycarentrymanualSoapIn" />
+      <wsdl:output message="tns:thirdpnotifycarentrymanualSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="thirdpregisterdiscountinadvance">
+      <wsdl:input message="tns:thirdpregisterdiscountinadvanceSoapIn" />
+      <wsdl:output message="tns:thirdpregisterdiscountinadvanceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="thirdpquerycarexitforpayment">
+      <wsdl:input message="tns:thirdpquerycarexitforpaymentSoapIn" />
+      <wsdl:output message="tns:thirdpquerycarexitforpaymentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="thirdpnotifycarpayment">
+      <wsdl:input message="tns:thirdpnotifycarpaymentSoapIn" />
+      <wsdl:output message="tns:thirdpnotifycarpaymentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="thirdPQueryCarDiscountforPayment">
+      <wsdl:input message="tns:thirdPQueryCarDiscountforPaymentSoapIn" />
+      <wsdl:output message="tns:thirdPQueryCarDiscountforPaymentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarDescuentoNotificadoOnline">
+      <wsdl:input message="tns:RegistrarDescuentoNotificadoOnlineSoapIn" />
+      <wsdl:output message="tns:RegistrarDescuentoNotificadoOnlineSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarDescuentoNotificadoOnlineVinculado">
+      <wsdl:input message="tns:RegistrarDescuentoNotificadoOnlineVinculadoSoapIn" />
+      <wsdl:output message="tns:RegistrarDescuentoNotificadoOnlineVinculadoSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="InterfazPublicaWebServiceSoap" type="tns:InterfazPublicaWebServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Aloha">
+      <soap:operation soapAction="http://tempuri.org/Aloha" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="thirdpnotifycarentrymanual">
+      <soap:operation soapAction="http://tempuri.org/thirdpnotifycarentrymanual" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="thirdpregisterdiscountinadvance">
+      <soap:operation soapAction="http://tempuri.org/thirdpregisterdiscountinadvance" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="thirdpquerycarexitforpayment">
+      <soap:operation soapAction="http://tempuri.org/thirdpquerycarexitforpayment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="thirdpnotifycarpayment">
+      <soap:operation soapAction="http://tempuri.org/thirdpnotifycarpayment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="thirdPQueryCarDiscountforPayment">
+      <soap:operation soapAction="http://tempuri.org/thirdPQueryCarDiscountforPayment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarDescuentoNotificadoOnline">
+      <soap:operation soapAction="http://tempuri.org/RegistrarDescuentoNotificadoOnline" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarDescuentoNotificadoOnlineVinculado">
+      <soap:operation soapAction="http://tempuri.org/RegistrarDescuentoNotificadoOnlineVinculado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="InterfazPublicaWebServiceSoap12" type="tns:InterfazPublicaWebServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Aloha">
+      <soap12:operation soapAction="http://tempuri.org/Aloha" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="thirdpnotifycarentrymanual">
+      <soap12:operation soapAction="http://tempuri.org/thirdpnotifycarentrymanual" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="thirdpregisterdiscountinadvance">
+      <soap12:operation soapAction="http://tempuri.org/thirdpregisterdiscountinadvance" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="thirdpquerycarexitforpayment">
+      <soap12:operation soapAction="http://tempuri.org/thirdpquerycarexitforpayment" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="thirdpnotifycarpayment">
+      <soap12:operation soapAction="http://tempuri.org/thirdpnotifycarpayment" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="thirdPQueryCarDiscountforPayment">
+      <soap12:operation soapAction="http://tempuri.org/thirdPQueryCarDiscountforPayment" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarDescuentoNotificadoOnline">
+      <soap12:operation soapAction="http://tempuri.org/RegistrarDescuentoNotificadoOnline" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarDescuentoNotificadoOnlineVinculado">
+      <soap12:operation soapAction="http://tempuri.org/RegistrarDescuentoNotificadoOnlineVinculado" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="InterfazPublicaWebService">
+    <wsdl:port name="InterfazPublicaWebServiceSoap" binding="tns:InterfazPublicaWebServiceSoap">
+      <soap:address location="http://80.28.251.76:2424/InterfazPublicaWS/InterfazPublicaWebService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="InterfazPublicaWebServiceSoap12" binding="tns:InterfazPublicaWebServiceSoap12">
+      <soap12:address location="http://80.28.251.76:2424/InterfazPublicaWS/InterfazPublicaWebService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

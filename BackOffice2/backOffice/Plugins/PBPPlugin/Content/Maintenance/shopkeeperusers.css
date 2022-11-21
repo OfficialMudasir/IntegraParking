@@ -1,0 +1,38 @@
+﻿.k-grid-Approve {
+    /*margin-left: 20px !important;*/
+}
+.k-grid-Approve span {
+    background-image: url(../img/ShopkeeperUsers/Approve.png);
+    width: 25px;
+    height: 20px;
+    display: inline-block;
+    background-size: contain;
+    margin: 0px !important;
+    /*margin-top: 1px;*/
+}
+
+.k-grid-Refuse {
+    /*margin-left: 20px !important;*/
+}
+.k-grid-Refuse span {
+    background-image: url(../img/ShopkeeperUsers/Refuse.png);
+    width: 25px;
+    height: 20px;
+    display: inline-block;
+    background-size: contain;
+    margin: 0px !important;
+    /*margin-top: 1px;*/
+}
+
+.k-grid-Disable {
+    /*margin-left: 20px !important;*/
+}
+.k-grid-Disable span {
+    background-image: url(../img/ShopkeeperUsers/Disable.png);
+    width: 25px;
+    height: 20px;
+    display: inline-block;
+    background-size: contain;
+    margin: 0px !important;
+    /*margin-top: 1px;*/
+}

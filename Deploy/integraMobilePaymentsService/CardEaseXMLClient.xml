@@ -1,0 +1,4006 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CardEaseXMLClient</name>
+    </assembly>
+    <members>
+        <member name="T:CardEaseXML.Error">
+            <summary>
+            An error that can be returned as the result of a CardEaseXML request in a
+            CardEase response.
+            </summary>
+            <remarks>
+            Contains both an error code and a error message. This class
+            is used to hold these.
+            </remarks>
+        </member>
+        <member name="F:CardEaseXML.Error.m_code">
+            <summary>
+            The error code associated with this error.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Error.m_message">
+            <summary>
+            The error message associated with this error code.
+            </summary>
+        </member>
+        <member name="M:CardEaseXML.Error.#ctor(CardEaseXML.ErrorCode,System.String)">
+            <summary>
+            Constructs a new error with the given error code and error message.
+            </summary>
+            <param name="code">The error code associated with this error. This should be a valid integer.</param>
+            <param name="message">The error message associated with this error. This is an alphanumeric string. This should not be null.</param>
+        </member>
+        <member name="M:CardEaseXML.Error.ToString">
+            <summary>
+            Returns a string showing both the error code and error message associated
+            with this error.
+            </summary>
+            <returns>A string showing both the error code and error message associated with this error.</returns>
+        </member>
+        <member name="P:CardEaseXML.Error.Code">
+            <summary>
+            The error code associated with this error.
+            </summary>
+        </member>
+        <member name="P:CardEaseXML.Error.Message">
+            <summary>
+            The error message associated with this error. This is an alphanumeric string.
+            </summary>
+        </member>
+        <member name="T:CardEaseXML.CardEaseXMLRequestException">
+            <summary>
+            A CardEaseXML exception with is raised during processing of request data.
+            </summary>
+            <remarks>
+            This often indicates that the request has been badly formed (missing data,
+            conflicting data, etc).
+            </remarks>
+        </member>
+        <member name="T:CardEaseXML.CardEaseXMLException">
+            <summary>
+            A general CardEaseXML exception from which other CardEaseXML exceptions are derived.
+            </summary>
+        </member>
+        <member name="M:CardEaseXML.CardEaseXMLException.#ctor">
+            <summary>
+            Constructs a new exception with null as its detail message.
+            </summary>
+        </member>
+        <member name="M:CardEaseXML.CardEaseXMLException.#ctor(System.String)">
+            <summary>
+            Constructs a new exception with the specified detail message.
+            </summary>
+            <param name="message">the detail message.  The detail message is saved for later retrieval.</param>
+        </member>
+        <member name="M:CardEaseXML.CardEaseXMLException.#ctor(System.String,System.Exception)">
+            <summary>
+            Constructs a new exception with the specified detail message and cause.
+            </summary>
+            <param name="message">the detail message (which is saved for later retrieval).</param>
+            <param name="cause">the cause (which is saved for later retrieval).</param>
+        </member>
+        <member name="M:CardEaseXML.CardEaseXMLException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Constructs a new exception with the specified info and context.
+            </summary>
+            <param name="info"></param>
+            <param name="context"></param>
+        </member>
+        <member name="M:CardEaseXML.CardEaseXMLRequestException.#ctor">
+            <summary>
+            Constructs a new exception with null as its detail message.
+            </summary>
+        </member>
+        <member name="M:CardEaseXML.CardEaseXMLRequestException.#ctor(System.String)">
+            <summary>
+            Constructs a new exception with the specified detail message.
+            </summary>
+            <param name="message">the detail message.  The detail message is saved for later retrieval.</param>
+        </member>
+        <member name="M:CardEaseXML.CardEaseXMLRequestException.#ctor(System.String,System.Exception)">
+            <summary>
+            Constructs a new exception with the specified detail message and cause.
+            </summary>
+            <param name="message">the detail message (which is saved for later retrieval).</param>
+            <param name="cause">the cause (which is saved for later retrieval).</param>
+        </member>
+        <member name="M:CardEaseXML.CardEaseXMLRequestException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Constructs a new exception with the specified info and context.
+            </summary>
+            <param name="info"></param>
+            <param name="context"></param>
+        </member>
+        <member name="T:CardEaseXML.ProductRisk">
+            <summary>
+            A class to represent the risk that a particular product holds.
+            </summary>
+            <remarks>
+            For example, a high value product may have a higher risk, and a low value product a lower risk.
+            </remarks>
+        </member>
+        <member name="F:CardEaseXML.ProductRisk.VeryLow">
+            <summary>
+            The product has very low risk.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.ProductRisk.Low">
+            <summary>
+            The product has low risk.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.ProductRisk.Medium">
+            <summary>
+            The product has medium risk.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.ProductRisk.High">
+            <summary>
+            The product has high risk.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.ProductRisk.VeryHigh">
+            <summary>
+            The product has very high risk.
+            </summary>
+        </member>
+        <member name="T:CardEaseXML.IAVFormat">
+            <summary>
+            The format of the IAV property
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.IAVFormat.AsciiHex">
+            <summary>
+            The format of the value data is ASCII Hex. For example, FF00.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.IAVFormat.Base64">
+            <summary>
+            The format of the value data is Base64.
+            </summary>
+        </member>
+        <member name="T:CardEaseXML.CardEaseXMLCommunicationException">
+            <summary>
+            A CardEaseXML exception which is raised during communication with the
+            CardEaseXML servers.
+            </summary>
+        </member>
+        <member name="M:CardEaseXML.CardEaseXMLCommunicationException.#ctor">
+            <summary>
+            Constructs a new exception with null as its detail message.
+            </summary>
+        </member>
+        <member name="M:CardEaseXML.CardEaseXMLCommunicationException.#ctor(System.String)">
+            <summary>
+            Constructs a new exception with the specified detail message.
+            </summary>
+            <param name="message">the detail message.  The detail message is saved for later retrieval.</param>
+        </member>
+        <member name="M:CardEaseXML.CardEaseXMLCommunicationException.#ctor(System.String,System.Exception)">
+            <summary>
+            Constructs a new exception with the specified detail message and cause.
+            </summary>
+            <param name="message">the detail message (which is saved for later retrieval).</param>
+            <param name="cause">the cause (which is saved for later retrieval).</param>
+        </member>
+        <member name="M:CardEaseXML.CardEaseXMLCommunicationException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Constructs a new exception with the specified info and context.
+            </summary>
+            <param name="info"></param>
+            <param name="context"></param>
+        </member>
+        <member name="T:CardEaseXML.RequestType">
+            <summary>
+            The type of CardEaseXML request to be processed.
+            </summary>
+            <seealso cref="T:CardEaseXML.Request"/>
+            <seealso cref="T:CardEaseXML.Response"/>
+        </member>
+        <member name="F:CardEaseXML.RequestType.Auth">
+            <summary>
+            An authorisation request. This is a request for payment. This can include
+            manual, magnetic stripe and EMV transactions.
+            <para></para>
+            EMV transactions will be processed and any ICC data provided by the
+            issuer will be returned as part of the response data.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.RequestType.Conf">
+            <summary>
+            A confirmation request. This is the second stage to an authorisation
+            request in which the authorisation obtained is confirmed. This is
+            required before settlement can be achieved.
+            <para></para>
+            The specification of the amount is optional and if required can be less
+            than the authorised amount.
+            <para></para>
+            In the case of an EMV request, all of the ICC tags that have changed
+            since authorisation are required in settlement. These typically include:
+            <list type="bullet">
+            <item>Application cryptogram</item>
+            <item>Cryptogram information data</item>
+            <item>Application transaction counter</item>
+            <item>Issuer application data</item>
+            <item>Terminal verification results</item>
+            <item>Transaction status information</item>
+            <item>Issuer script results</item>
+            </list>
+            It should be noted that there is no ICC tag ID allocated for the Issuer
+            Script Results. It is up to the EMV Kernel/Terminal Integrator to
+            allocate their own. Therefore when the terminal must send the script
+            results they must set the tag ID of the ICCTag to the value
+            "IssuerScriptResults".
+            <para></para>
+            The response to the confirmation request is an acknowledgement of
+            receiving the request.
+            </summary>
+            <seealso cref="T:CardEaseXML.ICCTag"/>
+        </member>
+        <member name="F:CardEaseXML.RequestType.ICCManagement">
+            <summary>
+            An ICC management request. This is used to perform ICC management
+            functionality.
+            </summary>
+            <remarks>
+            For example, aquire a list of public keys.
+            </remarks>
+        </member>
+        <member name="F:CardEaseXML.RequestType.Offline">
+            <summary>
+            An offline request. This is used to settle an EMV transaction using the
+            ICC data provided where the card has approved a transaction offline.
+            <para></para>
+            Any ICC data provided by the issuer will be returned as part of the
+            response data.
+            </summary>
+            <seealso cref="T:CardEaseXML.ICCTag"/>
+        </member>
+        <member name="F:CardEaseXML.RequestType.PreAuth">
+            <summary>
+            A pre-authorisation request. This is a small request for payment to
+            confirm that the card details are valid. This can include manual,
+            magnetic stripe and EMV transactions.
+            <para></para>
+            EMV transactions will be processed and any ICC data provided by the
+            issuer will be returned as part of the response data.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.RequestType.Refund">
+            <summary>
+            A refund request. This is used to refund a transaction that has
+            previously been settled. A CardEaseReference obtained from the previous
+            transaction is required.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.RequestType.Test">
+            <summary>
+            A test request. This is used to test connectivity to CardEaseXML. This
+            functionality should be used infrequently as excessive misuse may be
+            interpreted as being a Denial-Of-Service attack causing the sender to be
+            blocked from the CardEaseXML servers.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.RequestType.Void">
+            <summary>
+            A void request. This is used to void the original transaction.
+            <para></para>
+            The response to the void request is an acknowledgement of whether the
+            void was approved or declined.
+            </summary>
+        </member>
+        <member name="T:CardEaseXML.ExtendedProperty">
+            <summary>
+            A class used to hold extended property information.
+            </summary>
+            <remarks>
+            Each extended property has a name and a value.
+            </remarks>
+        </member>
+        <member name="F:CardEaseXML.ExtendedProperty.m_name">
+            <summary>
+            The name of the extended property.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.ExtendedProperty.m_value">
+            <summary>
+            The value of the extended property.
+            </summary>
+        </member>
+        <member name="M:CardEaseXML.ExtendedProperty.#ctor(System.String,System.String)">
+            <summary>
+            Creates a new extended property with the specified name and value.
+            </summary>
+            <param name="name">The name of the extended property</param>
+            <param name="value">The value of the extended property</param>
+        </member>
+        <member name="M:CardEaseXML.ExtendedProperty.ToString">
+            <summary>
+            Returns a string detailing the name and value of this extended property.
+            </summary>
+            <returns>A string detailing the and value of this extended property.</returns>
+        </member>
+        <member name="P:CardEaseXML.ExtendedProperty.Name">
+            <summary>
+            The name of the extended property.
+            </summary>
+        </member>
+        <member name="P:CardEaseXML.ExtendedProperty.Value">
+            <summary>
+            The value of the extended property.
+            </summary>
+        </member>
+        <member name="T:CardEaseXML.CardEaseXMLResponseException">
+            <summary>
+            A CardEaseXML exception which is raised during the processing of response
+            data.
+            </summary>
+            <remarks>
+            This indicates a malfunctioning server URL as the response data is
+            badly formed.
+            </remarks>
+        </member>
+        <member name="M:CardEaseXML.CardEaseXMLResponseException.#ctor">
+            <summary>
+            Constructs a new exception with null as its detail message.
+            </summary>
+        </member>
+        <member name="M:CardEaseXML.CardEaseXMLResponseException.#ctor(System.String)">
+            <summary>
+            Constructs a new exception with the specified detail message.
+            </summary>
+            <param name="message">the detail message.  The detail message is saved for later retrieval.</param>
+        </member>
+        <member name="M:CardEaseXML.CardEaseXMLResponseException.#ctor(System.String,System.Exception)">
+            <summary>
+            Constructs a new exception with the specified detail message and cause.
+            </summary>
+            <param name="message">the detail message (which is saved for later retrieval).</param>
+            <param name="cause">the cause (which is saved for later retrieval).</param>
+        </member>
+        <member name="M:CardEaseXML.CardEaseXMLResponseException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Constructs a new exception with the specified info and context.
+            </summary>
+            <param name="info"></param>
+            <param name="context"></param>
+        </member>
+        <member name="T:CardEaseXML.ICCTag">
+            <summary>
+            A class used to hold ICC tag information required for an EMV transaction.
+            </summary>
+            <remarks>
+            Each ICC tag has an associated ID, type and value.
+            <para></para>
+            The ID indicates what value is held, the type indicates the type of the value
+            held and the value is the actual data.
+            </remarks>
+        </member>
+        <member name="F:CardEaseXML.ICCTag.m_id">
+            <summary>
+            The ID of the ICC tag. The type of this cannot be numeric due to
+            IssuerRequest.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.ICCTag.m_type">
+            <summary>
+            The type of the ICC tag value.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.ICCTag.m_value">
+            <summary>
+            The value of the ICC tag.
+            </summary>
+        </member>
+        <member name="M:CardEaseXML.ICCTag.#ctor(System.String,CardEaseXML.ICCTagValueType,System.String)">
+            <summary>
+            Creates a new ICC tag with the specified ID, type and value.
+            </summary>
+            <param name="id">The ID of the ICC tag.  These are specified in hex and defined in the EMV specification.  This is an alphanumeric string. If this is null no ID is specified.</param>
+            <param name="type">The type of the ICC tag.</param>
+            <param name="value">The value of the ICC tag. This is an alphanumeric string. If this is null no value is specified.</param>
+        </member>
+        <member name="M:CardEaseXML.ICCTag.#ctor(System.String,System.String)">
+            <summary>
+            Creates a new ICC tag with the specified id and value.
+            </summary>
+            <remarks>
+            The type defaults to ICCTagValueType.AsciiHex.
+            </remarks>
+            <param name="id">The ID of the ICC tag. These are specified in hex and defined in the EMV specification.  This is an alphanumeric string. If this is null no ID is specified.</param>
+            <param name="value">The value of the ICC tag. This is an alphanumeric string. If this is null no value is specified.</param>
+        </member>
+        <member name="M:CardEaseXML.ICCTag.ToString">
+            <summary>
+            Returns a string detailing the id, type and value of this ICC tag.
+            </summary>
+            <returns>A string detailing the id, type and value of this ICC tag.</returns>
+        </member>
+        <member name="P:CardEaseXML.ICCTag.ID">
+            <summary>
+            The ICC tag ID.
+            </summary>
+            <remarks>
+            These are specified in hex and defined in the EMV specification. For example 0x9f02.  This is an alphanumeric string.
+            </remarks>
+        </member>
+        <member name="P:CardEaseXML.ICCTag.Type">
+            <summary>
+            The ICC tag value type.
+            </summary>
+            <remarks>
+            The data held in the ICC tag value should be
+            of the same type.
+            </remarks>
+        </member>
+        <member name="P:CardEaseXML.ICCTag.Value">
+            <summary>
+            The ICC tag value.
+            </summary>
+            <remarks>
+            This should be of the same type as that specified
+            in the ICC tag type.  This is an alphanumeric string.
+            </remarks>
+        </member>
+        <member name="T:CardEaseXML.PhoneNumberType">
+            <summary>
+            A class to represent type of phone number.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.PhoneNumberType.Home">
+            <summary>
+            A home phone number.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.PhoneNumberType.Mobile">
+            <summary>
+            A mobile phone number.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.PhoneNumberType.Other">
+            <summary>
+            A phone number that does not match any other category.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.PhoneNumberType.Work">
+            <summary>
+            A work phone number.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.PhoneNumberType.Unknown">
+            <summary>
+            A phone number with an unknown type.
+            </summary>
+        </member>
+        <member name="T:CardEaseXML.CertificationAuthority">
+            <summary>
+            A class to hold the information about a certification authority.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.CertificationAuthority.m_description">
+            <summary>
+            The description.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.CertificationAuthority.m_publicKeys">
+            <summary>
+            The public keys.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.CertificationAuthority.m_rid">
+            <summary>
+            The registered identity.
+            </summary>
+        </member>
+        <member name="M:CardEaseXML.CertificationAuthority.#ctor(System.String,System.String)">
+            <summary>
+            Creates a new certification authority with the given description and
+            registered identity.
+            </summary>
+            <param name="description">The description of the certification authority. If null no
+                       description is set.</param>
+            <param name="rid">The registered identity of the certification authority. If
+                       null no registered identity is set.</param>
+        </member>
+        <member name="M:CardEaseXML.CertificationAuthority.AddPublicKey(CardEaseXML.PublicKey)">
+            <summary>
+            Adds a public key to the certification authority.
+            </summary>
+            <param name="publicKey">The public key to add to the certification authority. This
+                       should not be null.</param>
+        </member>
+        <member name="M:CardEaseXML.CertificationAuthority.ToString">
+            <summary>
+            Returns a string version of this certification authority.
+            </summary>
+            <returns>
+            A string version of this certification authority.
+            </returns>
+        </member>
+        <member name="P:CardEaseXML.CertificationAuthority.Description">
+            <summary>
+            The description of the certification authority.
+            </summary>
+            <remarks>
+            This is an
+            alphanumeric string. For example, Visa, Amex etc.
+            </remarks>
+        </member>
+        <member name="P:CardEaseXML.CertificationAuthority.PublicKeys">
+            <summary>
+            The public keys of the certification authority.
+            </summary>
+        </member>
+        <member name="P:CardEaseXML.CertificationAuthority.RID">
+            <summary>
+            The registered identifier of the certification authority.
+            </summary>
+            <remarks>
+            The first
+            five bytes of an applications AID indicates the certification authority
+            (ie. Visa, Amex etc). This is an alphanumeric string.
+            </remarks>
+        </member>
+        <member name="T:CardEaseXML.Product">
+            <summary>
+            A class used to hold product information.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Product.m_amount">
+            <summary>
+            The price of the product.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Product.m_amountUnit">
+            <summary>
+            The unit of the product price.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Product.m_category">
+            <summary>
+            The category of the product.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Product.m_code">
+            <summary>
+            The code of the product.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Product.m_currencyCode">
+            <summary>
+            The currency code of the price.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Product.m_description">
+            <summary>
+            The description of the product.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Product.m_name">
+            <summary>
+            The name of the product.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Product.m_quantity">
+            <summary>
+            The quantity of the product.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Product.m_risk">
+            <summary>
+            The risk of the product.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Product.m_type">
+            <summary>
+            The type of the product.
+            </summary>
+        </member>
+        <member name="M:CardEaseXML.Product.#ctor(System.String,CardEaseXML.AmountUnit,System.String,System.String,System.String,System.String,System.String,System.String,CardEaseXML.ProductRisk,System.String)">
+            <summary>
+            Creates a new product with the fields.
+            </summary>
+            <param name="amount">The price of the product.</param>
+            <param name="amountUnit">The unit of the product price.</param>
+            <param name="category">The category of the product.</param>
+            <param name="code">The code of the product.</param>
+            <param name="currencyCode">The currency of the price.</param>
+            <param name="description">The description of the product.</param>
+            <param name="name">The name of the product.</param>
+            <param name="quantity">The quantity of the product.</param>
+            <param name="risk">The risk of the product.</param>
+            <param name="type">The type of the product.</param>
+        </member>
+        <member name="M:CardEaseXML.Product.ToString">
+            <summary>
+            Returns a string detailing the values of the product.
+            </summary>
+            <returns>Returns a string detailing the values of the product.</returns>
+        </member>
+        <member name="P:CardEaseXML.Product.Amount">
+            <summary>
+            The price of the product.
+            </summary>
+        </member>
+        <member name="P:CardEaseXML.Product.AmountUnit">
+            <summary>
+            The unit of the product price.
+            </summary>
+        </member>
+        <member name="P:CardEaseXML.Product.Category">
+            <summary>
+            The category of the product.
+            </summary>
+        </member>
+        <member name="P:CardEaseXML.Product.Code">
+            <summary>
+            The code of the product.
+            </summary>
+        </member>
+        <member name="P:CardEaseXML.Product.CurrencyCode">
+            <summary>
+            The currency of the price.
+            </summary>
+        </member>
+        <member name="P:CardEaseXML.Product.Description">
+            <summary>
+            The description of the product.
+            </summary>
+        </member>
+        <member name="P:CardEaseXML.Product.Name">
+            <summary>
+            The name of the product.
+            </summary>
+        </member>
+        <member name="P:CardEaseXML.Product.Quantity">
+            <summary>
+            The quantity of the product.
+            </summary>
+        </member>
+        <member name="P:CardEaseXML.Product.Risk">
+            <summary>
+            The risk of the product.
+            </summary>
+        </member>
+        <member name="P:CardEaseXML.Product.Type">
+            <summary>
+            The type of the product.
+            </summary>
+        </member>
+        <member name="T:CardEaseXML.VoidReason">
+            <summary>
+            The reason for which a void request is being made.
+            </summary>
+            <remarks>This must be specified for
+            a void request to be valid.
+            </remarks>
+        </member>
+        <member name="F:CardEaseXML.VoidReason.Empty">
+            <summary>
+            Internal use to indicate no void reason is known.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.VoidReason.CommunicationFailure">
+            <summary>
+            A communication failure has occured.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.VoidReason.PrintFailure">
+            <summary>
+            The terminal failed to print a receipt.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.VoidReason.ResetOrPowerFailure">
+            <summary>
+            A reset or power failure has occurred.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.VoidReason.TransactionFailure">
+            <summary>
+            A transaction has failed to complete.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.VoidReason.VendFailure">
+            <summary>
+            The terminal failed to vend the product.
+            </summary>
+        </member>
+        <member name="T:CardEaseXML.ThreeDSecureCardHolderEnrolled">
+            <summary>
+            The result returned from a 3-D Secure enrollment checking.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.ThreeDSecureCardHolderEnrolled.Empty">
+            <summary>
+            Internal use to indicate no CardHolder Enrollment is known.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.ThreeDSecureCardHolderEnrolled.No">
+            <summary>
+            The card holder is not enrolled.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.ThreeDSecureCardHolderEnrolled.None">
+            <summary>
+            The 3-D Secure enrollment check did not return anything.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.ThreeDSecureCardHolderEnrolled.Unknown">
+            <summary>
+            The 3-D Secure enrollment check returned "unknown" or "unable".
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.ThreeDSecureCardHolderEnrolled.Yes">
+            <summary>
+            The card holder is enrolled.
+            </summary>
+        </member>
+        <member name="T:CardEaseXML.Address">
+            <summary>
+            A class used to hold address information.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Address.m_city">
+            <summary>
+            The town/city of the address.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Address.m_country">
+            <summary>
+            The country of the address.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Address.m_lines">
+            <summary>
+            The address lines of the address.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Address.m_recipient">
+            <summary>
+            The recipient lines of the address.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Address.m_state">
+            <summary>
+            The county/state of the address.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Address.m_zipCode">
+            <summary>
+            The post/zip code of the address.
+            </summary>
+        </member>
+        <member name="M:CardEaseXML.Address.#ctor">
+            <summary>
+            Creates a new empty address.
+            </summary>
+        </member>
+        <member name="M:CardEaseXML.Address.#ctor(System.Collections.ObjectModel.Collection{System.String},System.Collections.ObjectModel.Collection{System.String},System.String,System.String,System.String,System.String)">
+            <summary>
+            Creates a new address with the fields.
+            </summary>
+            <param name="city">The town/city of the address</param>
+            <param name="country">The country of the address</param>
+            <param name="lines">The address lines of the address</param>
+            <param name="recipient">The recipient lines of the address</param>
+            <param name="state">The county/state lines of the address</param>
+            <param name="zipCode">The post/zip code of the address</param>
+        </member>
+        <member name="M:CardEaseXML.Address.#ctor(System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Creates a new address with the fields.
+            </summary>
+            <param name="city">The town/city of the address</param>
+            <param name="country">The country of the address</param>
+            <param name="line">The address line of the address</param>
+            <param name="recipient">The recipient lines of the address</param>
+            <param name="state">The county/state lines of the address</param>
+            <param name="zipCode">The post/zip code of the address</param>
+        </member>
+        <member name="M:CardEaseXML.Address.ToString">
+            <summary>
+            Returns a string detailing the values of the address.
+            </summary>
+            <returns>Returns a string detailing the values of the address.</returns>
+        </member>
+        <member name="P:CardEaseXML.Address.City">
+            <summary>
+            The town/city of the address.
+            </summary>
+        </member>
+        <member name="P:CardEaseXML.Address.Country">
+            <summary>
+            The country of the address.
+            </summary>
+        </member>
+        <member name="P:CardEaseXML.Address.Lines">
+            <summary>
+            The address lines of the address.
+            </summary>
+        </member>
+        <member name="P:CardEaseXML.Address.Recipient">
+            <summary>
+            The recipient lines of the address.
+            </summary>
+        </member>
+        <member name="P:CardEaseXML.Address.State">
+            <summary>
+            The county/state of the address.
+            </summary>
+        </member>
+        <member name="P:CardEaseXML.Address.ZipCode">
+            <summary>
+            The post/zip code of the address.
+            </summary>
+        </member>
+        <member name="P:CardEaseXML.Address.IsEmpty">
+            <summary>
+            Determines whether the address is empty.
+            </summary>
+            <returns>Whether the address is empty.</returns>
+        </member>
+        <member name="T:CardEaseXML.ThreeDSecureTransactionStatus">
+            <summary>
+            The result returned from a 3-D Secure authentication.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.ThreeDSecureTransactionStatus.Empty">
+            <summary>
+            Internal use to indicate no Transaction Status is known.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.ThreeDSecureTransactionStatus.Attempted">
+            <summary>
+            The 3-D Secure authentication returned "attempted".
+            All associated ECI, CAVV/AAV and XID data should also be sent.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.ThreeDSecureTransactionStatus.Failed">
+            <summary>
+            The 3-D Secure authentication returned "failure".
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.ThreeDSecureTransactionStatus.None">
+            <summary>
+            The 3-D Secure authentication did not return a value.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.ThreeDSecureTransactionStatus.Successful">
+            <summary>
+            The 3-D Secure authentication returned "success".
+            All associated ECI, CAVV/AAV and XID data should also be sent.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.ThreeDSecureTransactionStatus.Unknown">
+            <summary>
+            The 3-D Secure authentication returned "unknown" or "unable".
+            </summary>
+        </member>
+        <member name="T:CardEaseXML.EmailAddress">
+            <summary>
+            A class used to hold email address information.
+            </summary>
+            <remarks>
+            Each email address has an address and a type.
+            </remarks>
+        </member>
+        <member name="F:CardEaseXML.EmailAddress.m_address">
+            <summary>
+            The email address.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.EmailAddress.m_type">
+            <summary>
+            The type of email address.
+            </summary>
+        </member>
+        <member name="M:CardEaseXML.EmailAddress.#ctor(System.String,CardEaseXML.EmailAddressType)">
+            <summary>
+            Creates a new email address with the fields.
+            </summary>
+            <param name="address">The email address</param>
+            <param name="type">The type of the email address</param>
+        </member>
+        <member name="M:CardEaseXML.EmailAddress.ToString">
+            <summary>
+            Returns a string detailing the address and type of the email address.
+            </summary>
+            <returns>Returns a string detailing the address and type of the email address.</returns>
+        </member>
+        <member name="P:CardEaseXML.EmailAddress.Address">
+            <summary>
+            The email address.
+            </summary>
+        </member>
+        <member name="P:CardEaseXML.EmailAddress.Type">
+            <summary>
+            The type of the email address.
+            </summary>
+        </member>
+        <member name="T:CardEaseXML.AmountUnit">
+            <summary>
+            The AmountUnit is used to describe the units with which an amount in a request
+            is supplied to the CardEase platform.
+            </summary>
+            <remarks>
+            For example, 1.23 GBP can be specified as 1.23 Major or 123 Minor.
+            </remarks>
+        </member>
+        <member name="F:CardEaseXML.AmountUnit.Major">
+            <summary>
+            The amount is in major units.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.AmountUnit.Minor">
+            <summary>
+            The amount is in minor units.
+            </summary>
+        </member>
+        <member name="T:CardEaseXML.ICCTagValueType">
+            <summary>
+            A class to represent the type of value data held in an EMV ICC tag.
+            </summary>
+            <remarks>
+            The
+            possible values are AsciiHex and String.
+            </remarks>
+        </member>
+        <member name="F:CardEaseXML.ICCTagValueType.AsciiHex">
+            <summary>
+            The format of the ICC value data is ASCII Hex.  For example, FF00.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.ICCTagValueType.String">
+            <summary>
+            The format of the ICC value data is a String. For example, REQ01.
+            </summary>
+        </member>
+        <member name="T:CardEaseXML.XIDFormat">
+            <summary>
+            The format of the XID property
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.XIDFormat.Ascii">
+            <summary>
+            The format of the value data is ASCII. For example, =XYZ.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.XIDFormat.AsciiHex">
+            <summary>
+            The format of the value data is ASCII Hex. For example, FF00.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.XIDFormat.Base64">
+            <summary>
+            The format of the value data is Base64.
+            </summary>
+        </member>
+        <member name="T:CardEaseXML.Response">
+            <summary>
+            A class holding all of the data that constitutes a Response from CardEaseXML.
+            </summary>
+            <remarks>
+            The necessary components of the request should be retrieved (using the
+            "getters").  The response can only be obtained from the Client in
+            response to a Request.
+            </remarks>
+            <seealso cref="T:CardEaseXML.Client"/>
+            <seealso cref="T:CardEaseXML.Request"/>
+        </member>
+        <member name="F:CardEaseXML.Response.m_addressResponseData">
+            <summary>
+            The raw response data received from the address verification.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Response.m_addressResult">
+            <summary>
+            The result of the address verification.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Response.m_authCode">
+            <summary>
+            The authorisation code for an approved transaction.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Response.m_cardEaseReference">
+            <summary>
+            The CardEase system reference for the response.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Response.m_cardHash">
+            <summary>
+            The hash of an existing card to use for manual payment in place of the PAN, ExpiryDate etc.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Response.m_cardReference">
+            <summary>
+            The refernce of an existing card to use for manual payment in place of the PAN, ExpiryDate etc.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Response.m_cardScheme">
+            <summary>
+            The description of the card scheme.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Response.m_cscResponseData">
+            <summary>
+            The raw response data received from the csc verfication.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Response.m_cscResult">
+            <summary>
+            The result of the csc verification.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Response.m_duplicate">
+            <summary>
+            Whether the transaction is a duplicate.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Response.m_errors">
+            <summary>
+            List of errors encountered.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Response.m_expiryDate">
+            <summary>
+            The expiry date associated with the card.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Response.m_expiryDateFormat">
+            <summary>
+            The format of the expiry date associated with the card.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Response.m_iccCertificationAuthorities">
+            <summary>
+            The list of certification authorities.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Response.m_iccPublicKeyClearExisting">
+            <summary>
+            Whether to clear the existing public key list.
+            </summary>        
+        </member>
+        <member name="F:CardEaseXML.Response.m_iccPublicKeyContent">
+            <summary>
+            The content of the public key list.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Response.m_iccPublicKeyReplaceExisting">
+            <summary>
+            Whether to replace the existing public key list.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Response.m_iccPublicKeyType">
+            <summary>
+            The type of public key list.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Response.m_iccTags">
+            <summary>
+            The list of ICC tags associated with the transaction.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Response.m_iccType">
+            <summary>
+            The type of ICC transaction.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Response.m_issueNumber">
+            <summary>
+            The issue number associated with the card.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Response.m_localDateTime">
+            <summary>
+            The date and time at the terminals location
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Response.m_localDateTimeFormat">
+            <summary>
+            The format of the date and time at the terminals location.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Response.m_originatingIPAddressCity">
+            <summary>
+            The city of the originating IP address.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Response.m_originatingIPAddressContinent">
+            <summary>
+            The continent of the originating IP address.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Response.m_originatingIPAddressContinentAlpha2">
+            <summary>
+            The ISO 3166 alpha-2 continent of the originating IP address.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Response.m_originatingIPAddressCountry">
+            <summary>
+            The country of the originating IP address.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Response.m_originatingIPAddressCountryAlpha2">
+            <summary>
+            The ISO 3166 alpha-2 country of the originating IP address.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Response.m_originatingIPAddressCountryCode">
+            <summary>
+            The ISO 3166ode country of the originating IP address.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Response.m_originatingIPAddressIsBlackListed">
+            <summary>
+            Whether the originating IP address is black listed.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Response.m_originatingIPAddressIsKnownProxy">
+            <summary>
+            Whether the originating IP address is a known proxy.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Response.m_originatingIPAddressRegion">
+            <summary>
+            The region of the originating IP address.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Response.m_originatingIPAddressRegionCode">
+            <summary>
+            The region code of the originating IP address.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Response.m_originatingIPAddressZipCode">
+            <summary>
+            The zip code of the originating IP address.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Response.m_pan">
+            <summary>
+            The PAN (Primary Account Number) associated with the card.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Response.m_resultCode">
+            <summary>
+            The result code from CardEase.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Response.m_startDate">
+            <summary>
+            The start date associated with the card.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Response.m_startDateFormat">
+            <summary>
+            The format of the start date associated with the card.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Response.m_userReference">
+            <summary>
+            An optional user reference.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Response.m_zipCodeResponseData">
+            <summary>
+            The raw response data received from the zip code verfication.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Response.m_zipCodeResult">
+            <summary>
+            The result of the zip code verification.
+            </summary>
+        </member>
+        <member name="M:CardEaseXML.Response.#ctor">
+            <summary>
+            A dumb constructor to stop users creating a response themselves.
+            </summary>
+        </member>
+        <member name="M:CardEaseXML.Response.GetAttribute(System.Xml.XmlNode,System.String)">
+            <summary>
+            Gets the value of a named attribute from an XML node.
+            </summary>
+        </member>
+        <member name="M:CardEaseXML.Response.GetTextContent(System.Xml.XmlNode)">
+            <summary>
+            Gets the text value in a node.
+            </summary>
+            <param name="node">The node to examine.</param>
+            <returns></returns>
+        </member>
+        <member name="M:CardEaseXML.Response.ParseAdditionalVerification(System.Xml.XmlNode)">
+            <summary>
+            Parses the result component of the XML response.
+            </summary>
+            <param name="rootNode">The root node of the XML response.</param>
+        </member>
+        <member name="M:CardEaseXML.Response.ParseCardDetails(System.Xml.XmlNode)">
+            <summary>
+            Parses the card details component of the XML response.
+            </summary>
+            <param name="rootNode">The root node of the XML response.</param>
+        </member>
+        <member name="M:CardEaseXML.Response.ParseCertificationAuthority(System.Xml.XmlNode)">
+            <summary>
+            Parses the certification authority component of an XML node.
+            </summary>
+        </member>
+        <member name="M:CardEaseXML.Response.ParseICCPublicKeys(System.Xml.XmlNode)">
+            <summary>
+            Parses the ICC public keys component of the XML response.
+            </summary>
+            <param name="rootNode">The root element of the XML response.</param>
+        </member>
+        <member name="M:CardEaseXML.Response.ParseICCTags(System.Xml.XmlNode)">
+            <summary>
+            Parses the ICC tags component of an XML node.
+            </summary>
+            <param name="iccNode">The ICC node of the XML response.</param>
+        </member>
+        <member name="M:CardEaseXML.Response.ParsePublicKey(System.Xml.XmlNode,CardEaseXML.CertificationAuthority)">
+            <summary>
+            Parses the public key component of an XML node.
+            </summary>
+            <param name="publicKeyNode">The public key node of the XML response.</param>
+            <param name="certificationAuthority">The certification authority to add the public key detail to.</param>
+        </member>
+        <member name="M:CardEaseXML.Response.ParseResponseXML(System.String)">
+            <summary>
+            Parses the XML response.
+            </summary>
+            <param name="xml">The XML to parse.</param>
+            <exception cref="T:CardEaseXML.CardEaseXMLResponseException">If the XML encoding is missing or the XML is badly formed.</exception>
+        </member>
+        <member name="M:CardEaseXML.Response.ParseResult(System.Xml.XmlNode)">
+            <summary>
+            Parses the result component of the XML response.
+            </summary>
+            <param name="rootNode">The root node of the XML response.</param>
+        </member>
+        <member name="M:CardEaseXML.Response.ParseTransactionDetails(System.Xml.XmlNode)">
+            <summary>
+            Parses the transaction details component of the XML response.
+            </summary>
+            <param name="rootNode">The root node of the XML response.</param>
+        </member>
+        <member name="M:CardEaseXML.Response.AddPropertyString(System.Text.StringBuilder,System.String,System.Object)">
+            <summary>
+            Helper function for ToString.
+            Adds a line for a property with its value
+            </summary>
+            <param name="sb">The StringBuilder to append line to</param>
+            <param name="Name">The name of the property</param>
+            <param name="Value">The value of the property</param>
+        </member>
+        <member name="M:CardEaseXML.Response.ToString">
+            <summary>
+            Returns a detailed string showing this response.
+            </summary>
+            <returns>A detailed string showing this response.</returns>
+        </member>
+        <member name="P:CardEaseXML.Response.AddressResponseData">
+            <summary>
+            The raw response data received from the address verification with
+            the issuer.        
+            </summary>
+            <remarks> 
+            The content of this is dependant upon the acquirer, country,
+            protocol etc.  This is an alphanumeric string.
+            This will be available if required in the original request.
+            </remarks>
+        </member>
+        <member name="P:CardEaseXML.Response.AddressResult">
+            <summary>
+            The result of the address verification with the issuer.
+            </summary>
+            <remarks>
+            This will be
+            available if required in the original request.
+            </remarks>
+        </member>
+        <member name="P:CardEaseXML.Response.AuthCode">
+            <summary>
+            The authorisation code found in this response.
+            </summary>
+            <remarks>
+            This will only be
+            present if the transaction was approved.
+            This is an alphanumeric string with a maximum length of 12 characters.
+            </remarks>
+        </member>
+        <member name="P:CardEaseXML.Response.CardEaseReference">
+            <summary>
+            The CardEaseXML reference found in this response.
+            </summary>
+            <remarks>
+            This is a unique
+            reference that can be used with CardEaseXML during follow-up requests
+            related to the original such as confirmations, refunds and voids.  This is
+            an alphanumeric string with a fixed length of 36 characters.
+            </remarks>
+        </member>
+        <member name="P:CardEaseXML.Response.CardHash">
+            <summary>
+            The card hash found in the response that can be used to reference the card in a follow-up transaction.
+            </summary>
+            <remarks>
+            This is an alphanumeric string with a fixed length of 24 characters.
+            Used in conjunction with the CardReference property.
+            The benefit of being able to reference a previously used cards is that 
+            an integrator need not store actual card details on their system for 
+            repeat transactions. This reduces the risk of card infomation
+            being compromised, and reduces the integrators PCI requirements.
+            </remarks>
+            <seealso cref="P:CardEaseXML.Response.CardReference"/>
+        </member>
+        <member name="P:CardEaseXML.Response.CardReference">
+            <summary>
+            The card reference found in the response that can be used to reference the card in a follow-up transaction.
+            </summary>
+            <remarks>
+            This is an alphanumeric string with a fixed length of 36 characters.
+            Used in conjunction with the CardHash property.
+            The benefit of being able to reference a previously used cards is that 
+            an integrator need not store actual card details on their system for 
+            repeat transactions. This reduces the risk of card infomation
+            being compromised, and reduces the integrators PCI requirements.
+            </remarks>
+            <seealso cref="P:CardEaseXML.Response.CardHash"/>
+        </member>
+        <member name="P:CardEaseXML.Response.CardScheme">
+            <summary>
+            The description of the card scheme used in the request.
+            </summary>
+            <remarks>
+            This can be
+            used on a receipt.  This is an alphanumeric string with a maximum length
+            of 50 characters.
+            </remarks>
+        </member>
+        <member name="P:CardEaseXML.Response.CSCResponseData">
+            <summary>
+            The raw response data received from the security code verification
+            with the issuer.
+            </summary>
+            <remarks>
+            This is also referred to as CVV, CVC and CV2. The
+            content of this is dependant upon the acquirer, country, protocol etc.
+            This is an alphanumeric string.
+            This will be available if required in the original request.
+            If the CSC validation fails the authorisation is automatically declined.
+            </remarks>
+        </member>
+        <member name="P:CardEaseXML.Response.CSCResult">
+            <summary>
+            The result of the security code verification with the issuer.
+            </summary>
+            <remarks>
+            This
+            will be available if required in the original request.
+            If the CSC validation fails the authorisation is automatically declined.
+            </remarks>
+        </member>
+        <member name="P:CardEaseXML.Response.Duplicate">
+            <summary>
+            Whether the transaction was recognised as a duplicate.
+            </summary>
+        </member>
+        <member name="P:CardEaseXML.Response.Errors">
+            <summary>
+            A list of the errors that we encountered when trying to process the
+            request.
+            </summary>
+            <remarks>
+            Each error contains an error code and an error message
+            </remarks>
+            <seealso cref="T:CardEaseXML.Error"/>
+        </member>
+        <member name="P:CardEaseXML.Response.ExpiryDate">
+            <summary>
+            The expiry date associated with the card in this response.
+            </summary>
+            <remarks>
+            This will
+            match the expiry date format.
+            This is a character string with a maximum length of 10 characters.
+            </remarks>
+            <seealso cref="P:CardEaseXML.Response.ExpiryDateFormat"/>
+        </member>
+        <member name="P:CardEaseXML.Response.ExpiryDateFormat">
+            <summary>
+            The expiry date format associated with the card in the response.
+            </summary>
+            <remarks>
+            This will match the format of the expiry date and can include separators such as - and /. 
+            This is a character string with a maximum length of 10 characters.
+            The available options are
+            shown in the following table:
+            <list type="table">
+            <listheader>
+            <term>Format</term>
+            <term>Description</term>
+            <term>Example</term>
+            </listheader>
+            <item>
+            <description>yyyy</description>
+            <description>Year with century</description>
+            <description>2004</description>
+            </item>
+            <item>
+            <description>yy</description>
+            <description>Year without century</description>
+            <description>04</description>
+            </item>
+            <item>
+            <description>MM</description>
+            <description>Month of year</description>
+            <description>01</description>
+            </item>
+            <item>
+            <description>dd</description>
+            <description>Day of month</description>
+            <description>27</description>
+            </item>
+            </list>
+            </remarks>
+            <seealso cref="P:CardEaseXML.Response.ExpiryDate"/>
+        </member>
+        <member name="P:CardEaseXML.Response.ICCCertificationAuthorities">
+            <summary>
+            The list of ICC certification authorities found in the response.
+            </summary>
+            <remarks>
+            This will be null if no certification authorities were found in the response.
+            </remarks>
+        </member>
+        <member name="P:CardEaseXML.Response.ICCPublicKeyClearExisting">
+            <summary>
+            The indicator in the response that says whether to clear the existing public key list.
+            </summary>
+            <remarks>
+            This will be null if no indicator was found.
+            </remarks>
+            <seealso cref="P:CardEaseXML.Response.ICCPublicKeyReplaceExisting"/>
+        </member>
+        <member name="P:CardEaseXML.Response.ICCPublicKeyContent">
+            <summary>
+            A description of the public key list content.
+            </summary>
+            <remarks>
+            For example "complete".  This is an alphanumeric string.  This will be null if no description was found.
+            </remarks>
+            <seealso cref="P:CardEaseXML.Response.ICCPublicKeyType"/>
+        </member>
+        <member name="P:CardEaseXML.Response.ICCPublicKeyReplaceExisting">
+            <summary>
+            The indicator in the response that says whether to replace the existing public key list.
+            </summary>
+            <remarks>
+            This will be null if no indicator was found.
+            </remarks>
+            <seealso cref="P:CardEaseXML.Response.ICCPublicKeyClearExisting"/>
+        </member>
+        <member name="P:CardEaseXML.Response.ICCPublicKeyType">
+            <summary>
+            The type of the public key list.  
+            </summary>
+            <remarks>
+            For example "EMV".  This is an alphanumeric string.  This will be null if no type was found.
+            </remarks>
+            <seealso cref="P:CardEaseXML.Response.ICCPublicKeyContent"/>
+        </member>
+        <member name="P:CardEaseXML.Response.ICCTags">
+            <summary>
+            The list of ICC tags found in this response.
+            </summary>
+            <remarks>
+            Each ICC tag has an id,
+            type and value. For example, a tag of 0x9f02/AsciiHex/000000000100 is
+            using to specify the transaction amount. These are mandatory for an EMV
+            transaction.
+            </remarks>
+            <seealso cref="T:CardEaseXML.ICCTag"/>
+        </member>
+        <member name="P:CardEaseXML.Response.ICCType">
+            <summary>
+            The type of ICC transaction associated with this response.
+            </summary>
+            <remarks>
+            This is an alphanumeric string.  This is
+            mandatory for ICC authorisations and by default is "EMV".  An EMV
+            transaction must have associated ICC tags.
+            </remarks>
+            <seealso cref="T:CardEaseXML.ICCTag"/>
+            <seealso cref="P:CardEaseXML.Response.ICCTags"/>
+        </member>
+        <member name="P:CardEaseXML.Response.IssueNumber">
+            <summary>
+            The issue number associated with the card in this response.
+            </summary>
+            <remarks>
+            This is
+            dependant upon the card scheme associated with the card 
+            and will be exactly as found on the card (including and leading 0's).
+            This is a numeric string with a maximum length of 2 characters.
+            </remarks>
+        </member>
+        <member name="P:CardEaseXML.Response.LocalDateTime">
+            <summary>
+            The date and time at the terminal's location.
+            </summary>
+            <remarks>
+            This can be used on a
+            receipt and will match the local date and time format.
+            This is a character string.
+            </remarks>
+            <seealso cref="P:CardEaseXML.Response.LocalDateTimeFormat"/>
+        </member>
+        <member name="P:CardEaseXML.Response.LocalDateTimeFormat">
+            <summary>
+            The local date and time format at the terminal's location.
+            </summary>
+            <remarks>
+            This will
+            match the format of the local date and time and can include separators such as :, - and /.
+            This is a character string. The available options are
+            shown in the following table:
+            <list type="table">
+            <listheader>
+            <term>Format</term>
+            <term>Description</term>
+            <term>Example</term>
+            </listheader>
+            <item>
+            <description>yyyy</description>
+            <description>Year with century</description>
+            <description>2004</description>
+            </item>
+            <item>
+            <description>yy</description>
+            <description>Year without century</description>
+            <description>04</description>
+            </item>
+            <item>
+            <description>MM</description>
+            <description>Month of year</description>
+            <description>01</description>
+            </item>
+            <item>
+            <description>dd</description>
+            <description>Day of month</description>
+            <description>27</description>
+            </item>
+            <item>
+            <description>HH</description>
+            <description>Hour of day (24 hour)</description>
+            <description>17</description>
+            </item>
+            <item>
+            <description>mm</description>
+            <description>Minute of hour</description>
+            <description>53</description>
+            </item>
+            <item>
+            <description>ss</description>
+            <description>Second of minute</description>
+            <description>43</description>
+            </item>
+            </list>
+            </remarks>
+            <seealso cref="P:CardEaseXML.Response.LocalDateTime"/>
+        </member>
+        <member name="P:CardEaseXML.Response.OriginatingIPAddressCity">
+            Gets the city of the originating IP address found in this response.
+            @return The city of the originating IP address found in this response.
+            This will be null if no city was found in this response.
+        </member>
+        <member name="P:CardEaseXML.Response.OriginatingIPAddressContinent">
+            Gets the continent of the originating IP address found in this response.
+            @return The continent of the originating IP address found in this response.
+            This will be null if no continent was found in this response.
+        </member>
+        <member name="P:CardEaseXML.Response.OriginatingIPAddressContinentAlpha2">
+            Gets the ISO 3166 continent alpha-2 of the originating IP address found in this response.
+            @return The ISO 3166 continent alpha-2 of the originating IP address found in this response.
+            This will be null if no ISO 3166 continent alpha-2 was found in this response.
+        </member>
+        <member name="P:CardEaseXML.Response.OriginatingIPAddressCountry">
+            Gets the country of the originating IP address found in this response.
+            @return The country of the originating IP address found in this response.
+            This will be null if no country was found in this response.
+        </member>
+        <member name="P:CardEaseXML.Response.OriginatingIPAddressCountryAlpha2">
+            Gets the ISO 3166 country alpha-2 of the originating IP address found in this response.
+            @return The ISO 3166 country alpha-2 of the originating IP address found in this response.
+            This will be null if no ISO 3166 country alpha-2 was found in this response.
+        </member>
+        <member name="P:CardEaseXML.Response.OriginatingIPAddressCountryCode">
+            Gets the ISO 3166 country code of the originating IP address found in this response.
+            @return The ISO 3166 country code of the originating IP address found in this response.
+            This will be null if no ISO 3166 country code was found in this response.
+        </member>
+        <member name="P:CardEaseXML.Response.OriginatingIPAddressIsBlackListed">
+            Gets whether the originating IP address is black listed.
+            @return Whether the originating IP address is black listed.
+            This will be false if this was not found in the response.
+        </member>
+        <member name="P:CardEaseXML.Response.OriginatingIPAddressIsKnownProxy">
+            Gets whether the originating IP address is a known proxy.
+            @return Whether the originating IP address is a known proxy.
+            This will be false if this was not found in the response.
+        </member>
+        <member name="P:CardEaseXML.Response.OriginatingIPAddressRegion">
+            Gets the region of the originating IP address found in this response.
+            @return The region of the originating IP address found in this response.
+            This will be null if no region was found in this response.
+        </member>
+        <member name="P:CardEaseXML.Response.OriginatingIPAddressRegionCode">
+            Gets the region code of the originating IP address found in this response.
+            @return The region code of the originating IP address found in this response.
+            This will be null if no region code was found in this response.
+        </member>
+        <member name="P:CardEaseXML.Response.OriginatingIPAddressZipCode">
+            Gets the zip code of the originating IP address found in this response.
+            @return The zip code of the originating IP address found in this response.
+            This will be null if no zip code was found in this response.
+        </member>
+        <member name="P:CardEaseXML.Response.PAN">
+            <summary>
+            The masked PAN (Primary Account Number) found in this response.
+            </summary>
+            <remarks>
+            The
+            PAN is masked with x's for security.
+            This is an alphanumeric string with a minimum length of 13 characters and a maximum length of 19 characters.
+            </remarks>
+        </member>
+        <member name="P:CardEaseXML.Response.ResultCode">
+            <summary>
+            The result code that has been obtained from the CardEase platform
+            when processing the source request.
+            </summary>
+        </member>
+        <member name="P:CardEaseXML.Response.StartDate">
+            <summary>
+            The start date associated with the card in this response.
+            </summary>
+            <remarks>
+            This will
+            match the start date format.
+            This is an alphanumeric string with a maximum length of 10 characters.
+            </remarks>
+            <seealso cref="P:CardEaseXML.Response.StartDateFormat"/>
+        </member>
+        <member name="P:CardEaseXML.Response.StartDateFormat">
+            <summary>
+            The start date format associated with the card in this response.
+            </summary>
+            <remarks>
+            This will match the format of the start date and can include separators such as - and /. The available options are
+            shown in the following table:
+            <list type="table">
+            <listheader>
+            <term>Format</term>
+            <term>Description</term>
+            <term>Example</term>
+            </listheader>
+            <item>
+            <description>yyyy</description>
+            <description>Year with century</description>
+            <description>2004</description>
+            </item>
+            <item>
+            <description>yy</description>
+            <description>Year without century</description>
+            <description>04</description>
+            </item>
+            <item>
+            <description>MM</description>
+            <description>Month of year</description>
+            <description>01</description>
+            </item>
+            <item>
+            <description>dd</description>
+            <description>Day of month</description>
+            <description>27</description>
+            </item>
+            </list>
+            </remarks>
+            <seealso cref="P:CardEaseXML.Response.StartDate"/>
+        </member>
+        <member name="P:CardEaseXML.Response.UserReference">
+            <summary>
+            The user reference found in this response.
+            </summary>
+            <remarks>
+            This will be the same as
+            that in the original request. This allows a user to attached their own
+            reference against a request and verify it against this response.
+            This is an alphanumeric string with a maximum length of 50 characters.
+            Use of
+            the user reference is optional for all requests.
+            </remarks>
+        </member>
+        <member name="P:CardEaseXML.Response.ZipCodeResponseData">
+            <summary>
+            The raw response data received from the zip code/post code
+            verification with the issuer.
+            </summary>
+            <remarks>
+            The content of this is dependant upon the
+            acquirer, country, protocol etc. This is an alphanumeric string.
+            This will be available if required in
+            the original request.
+            </remarks>
+        </member>
+        <member name="P:CardEaseXML.Response.ZipCodeResult">
+            <summary>
+            The result of the zip code/post code verification with the issuer.
+            </summary>
+            <remarks>
+            This will be available if required in the original request.
+            </remarks>
+        </member>
+        <member name="T:CardEaseXML.ServerURL">
+            <summary>
+            A URL and associated attributes that can be used for processing CardEaseXML
+            requests.
+            </summary>
+            <remarks>
+            At least one of these needs to be supplied to the Client
+            for processing to take place.
+            </remarks>
+        </member>
+        <member name="F:CardEaseXML.ServerURL.m_timeout">
+            <summary>
+            The read timeout.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.ServerURL.m_url">
+            <summary>
+            The connection URL.
+            </summary>
+        </member>
+        <member name="M:CardEaseXML.ServerURL.#ctor(System.String,System.Int32)">
+            <summary>
+            Constructs a new server URL with specified URL and timeout.
+            </summary>
+            <param name="url">The actual URL of the server URL.  This should be a HTTP URL and in the form: "http://..." or "https://...".  This must not be null.</param>
+            <param name="timeout">The read timeout for the specified server URL in milliseconds.  If zero is specified an infinite timeout is used.  For most requests a timeout of 45 seconds (45000) is recommended.  A timeout of less than 30 seconds is not permitted as some authorisations may take this long.</param>
+        </member>
+        <member name="M:CardEaseXML.ServerURL.#ctor(System.Uri,System.Int32)">
+            <summary>
+            Constructs a new server URL with specified URL and timeout.
+            </summary>
+            <param name="url">The actual URL of the server URL.  This should be a HTTP URL and in the form: "http://..." or "https://...".  This must not be null.</param>
+            <param name="timeout">The read timeout for the specified server URL in milliseconds.  If zero is specified an infinite timeout is used.  For most requests a timeout of 45 seconds (45000) is recommended.  A timeout of less than 30 seconds is not permitted as some authorisations may take this long.</param>
+        </member>
+        <member name="M:CardEaseXML.ServerURL.ToString">
+            <summary>
+            Returns a string describing this server URL and its attributes.
+            </summary>
+            <returns>A string describing this server URL and its attributes.</returns>
+        </member>
+        <member name="P:CardEaseXML.ServerURL.Timeout">
+            <summary>
+            The server URL read timeout.
+            </summary>
+            <remarks>
+            The read timeout for the specified server URL in milliseconds.  If zero
+            is specified an infinite timeout is used.  For most requests a timeout of
+            45 seconds (45000) is recommended.  A timeout of less than 30 seconds is
+            not permitted as some authorisations may take this long.
+            </remarks>
+        </member>
+        <member name="P:CardEaseXML.ServerURL.URL">
+            <summary>
+            The server URL for the connection.
+            </summary>
+            <remarks>
+            This should be a HTTP URL and in the form: "http://..." or "https://...".
+            </remarks>
+        </member>
+        <member name="T:CardEaseXML.ResultCode">
+            <summary>
+            The result code that can be obtained from the CardEase platform when it
+            processes a CardEaseXML request.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="F:CardEaseXML.ResultCode.Empty">
+            <summary>
+            No result code.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.ResultCode.Approved">
+            <summary>
+            The requested transaction was approved.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.ResultCode.Declined">
+            <summary>
+            The requested transaction was declined.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.ResultCode.TestOK">
+            <summary>
+            The requested test transaction was successful.
+            </summary>
+        </member>
+        <member name="T:CardEaseXML.Name">
+            <summary>
+            A class used to hold name information.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Name.m_firstName">
+            <summary>
+            The first name of the person.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Name.m_initials">
+            <summary>
+            The initials of the person.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Name.m_lastName">
+            <summary>
+            The last name of the person.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Name.m_title">
+            <summary>
+            The title of the person.
+            </summary>
+        </member>
+        <member name="M:CardEaseXML.Name.#ctor">
+            <summary>
+            Creates a new empty name.
+            </summary>
+        </member>
+        <member name="M:CardEaseXML.Name.#ctor(System.String,System.String,System.String,System.String)">
+            <summary>
+            Creates a new name with the fields.
+            </summary>
+            <param name="title">The title of the person</param>
+            <param name="firstName">The first name of the person</param>
+            <param name="initials">The initials of the person</param>
+            <param name="lastName">The last name of the person</param>
+        </member>
+        <member name="M:CardEaseXML.Name.ToString">
+            <summary>
+            Returns a string detailing the values of the name.
+            </summary>
+            <returns>Returns a string detailing the values of the name.</returns>
+        </member>
+        <member name="P:CardEaseXML.Name.FirstName">
+            <summary>
+            The first name of the person.
+            </summary>
+        </member>
+        <member name="P:CardEaseXML.Name.Initials">
+            <summary>
+            The initials of the person.
+            </summary>
+        </member>
+        <member name="P:CardEaseXML.Name.LastName">
+            <summary>
+            The last name of the person.
+            </summary>
+        </member>
+        <member name="P:CardEaseXML.Name.Title">
+            <summary>
+            The title of the person.
+            </summary>
+        </member>
+        <member name="P:CardEaseXML.Name.IsEmpty">
+            <summary>
+            Determines whether the name is empty.
+            </summary>
+            <returns>Whether the name is empty.</returns>
+        </member>
+        <member name="T:CardEaseXML.Request">
+            <summary>
+            A class holding all of the data that constitutes a request to CardEaseXML.
+            </summary>
+            <remarks>
+            The necessary components of the request should be specified (using the
+            "setters"). The request can then be submitted to the Client in
+            order to obtain a Response.
+            <para></para>
+            For each request there are a number of optional and mandatory components
+            depending upon the type of the request.
+            <para></para>
+            In brief, these rules are:
+            <list type="bullet">
+            <item>All requests:<list type="bullet">
+            <item>RequestType - the type of the request</item>
+            <item>SoftwareName - the name of the software using the SDK</item>
+            <item>SoftwareVersion - the version of the software using the SDK</item>
+            <item>TerminalID - the ID of the terminal making the request</item>
+            <item>TransactionKey - the transaction key allocated to a terminal or set of
+            terminals</item>
+            </list></item>
+            <item>Auth requests:<list type="bullet">
+            <item>Amount - the transaction amount</item>
+            <item>ICCTags or ManualType or Track2 - to specify the card details</item>
+            </list></item>
+            <item>Conf requests:<list type="bullet">
+            <item>CardEaseReference - the reference of the transaction being confirmed</item>
+            </list></item>
+            <item>Offline requests:<list type="bullet">
+            <item>Amount - the transaction amount</item>
+            <item>ICCTags or ManualType or Track2 - to specify the card details</item>
+            </list></item>
+            <item>Refund requests:<list type="bullet">
+            <item>CardEaseReference - the reference of the transaction being refunded</item>
+            <item>ICCTags or ManualType or Track2 - to specify the card details</item>
+            </list></item>
+            <item>Void requests:<list type="bullet">
+            <item>CardEaseReference - the reference of the transaction being made void</item>
+            <item>VoidReason - the reason for which this transaction is being made void</item>
+            </list></item>
+            </list>
+            If a manual request is being made the PAN, expiry date and expiry date format
+            should be present as a minimum.
+            <seealso cref="T:CardEaseXML.Client"/>
+            <seealso cref="T:CardEaseXML.Response"/>
+            </remarks>
+        </member>
+        <member name="F:CardEaseXML.Request.m_3DSecureCardHolderEnrolled">
+            <summary>
+            The 3-D Secure Card Holder Enrollment.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Request.m_3DSecureECI">
+            <summary>
+            The 3-D Secure Electronic Commerce Indicator.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Request.m_3DSecureIAV">
+            <summary>
+            The 3-D Secure Authentication Verification Value.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Request.m_3DSecureIAVAlgorithm">
+            <summary>
+            The 3-D Secure Authentication Verification algorithm.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Request.m_3DSecureIAVFormat">
+            <summary>
+            The 3-D Secure Authentication Verification Value format.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Request.m_3DSecureTransactionStatus">
+            <summary>
+            The 3-D Secure Transaction Status.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Request.m_3DSecureXID">
+            <summary>
+            The 3-D Secure Transaction Identifier.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Request.m_3DSecureXIDFormat">
+            <summary>
+            The 3-D Secure Transaction Identifier format.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Request.m_address">
+            <summary>
+            The address used for additional verification.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Request.m_amount">
+            <summary>
+            The transaction amount.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Request.m_amountUnit">
+            <summary>
+            The units of the transaction amount.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Request.m_autoConfirm">
+            <summary>
+            Whether the request is automatically confirmed.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Request.m_batchReference">
+            <summary>
+            An optional batch reference to describe a set of transactions.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Request.m_cardEaseReference">
+            <summary>
+            The CardEase reference that has been obtained during previous requests.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Request.m_cardEaseXMLVersion">
+            <summary>
+            The version of CardEaseXML that this client adheres to.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Request.m_cardHash">
+            <summary>
+            The hash of an existing card to use for manual payment in place of the PAN, ExpiryDate etc.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Request.m_cardHolderAddress">
+            <summary>
+            The card holder's address.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Request.m_cardHolderEmailAddresses">
+            <summary>
+            The card holder's email addresses.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Request.m_cardHolderName">
+            <summary>
+            The card holder's name.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Request.m_cardHolderPhoneNumbers">
+            <summary>
+            The card holder's phone numbers.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Request.m_cardReference">
+            <summary>
+            The reference of an existing card to use for manual payment in place of the PAN, ExpiryDate etc.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Request.m_csc">
+            <summary>
+            The security code printed on the card.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Request.m_currencyCode">
+            <summary>
+            The currency code or mnemonic related to the transaction.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Request.m_deliveryAddress">
+            <summary>
+            The delivery address. 
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Request.m_deliveryEmailAddresses">
+            <summary>
+            The delivery email addresses.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Request.m_deliveryName">
+            <summary>
+            The delivery name. 
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Request.m_deliveryPhoneNumbers">
+            <summary>
+            The delivery phone numbers. 
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Request.m_expiryDate">
+            <summary>
+            The expiry date associated with the card.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Request.m_expiryDateFormat">
+            <summary>
+            The format of the expiry date associated with the card.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Request.m_extendedProperties">
+            <summary>
+            The list of extended properties associated with this transaction.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Request.m_iccFallback">
+            <summary>
+            Whether the transaction was a fallback from EMV to magnetic strip.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Request.m_iccManagementFunction">
+            <summary>
+            The ICC management function associated with the ICC management request.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Request.m_iccTags">
+            <summary>
+            The list of ICC tags associated with the transaction.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Request.m_iccType">
+            <summary>
+            The type of ICC transaction.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Request.m_invoiceAddress">
+            <summary>
+            The invoice address.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Request.m_invoiceEmailAddresses">
+            <summary>
+            The invoice email addresses.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Request.m_invoiceName">
+            <summary>
+            The invoice name.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Request.m_invoicePhoneNumbers">
+            <summary>
+            The invoice phone numbers.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Request.m_issueNumber">
+            <summary>
+            The issue number associated with the card.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Request.m_machineReference">
+            <summary>
+            The machine reference for this request.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Request.m_manualType">
+            <summary>
+            The type of manual transaction.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Request.m_offlineDateTime">
+            <summary>
+            The date and/or time of the transaction if processed offline.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Request.m_offlineDateTimeFormat">
+            <summary>
+            The format of the date and/or time of the transaction if processed offline.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Request.m_originatingIPAddress">
+            <summary>
+            The originating IP address of the request (e.g. client browser).
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Request.m_pan">
+            <summary>
+            The PAN (Primary Account Number) associated with the card.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Request.m_products">
+            <summary>
+            The product list associated with this request.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Request.m_requestType">
+            <summary>
+            The type of the request.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Request.m_softwareName">
+            <summary>
+            The name of the software using the SDK.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Request.m_softwareVersion">
+            <summary>
+            The version of the software using the SDK.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Request.m_startDate">
+            <summary>
+            The start date associated with the card.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Request.m_startDateFormat">
+            <summary>
+            The format of the start date associated with the card.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Request.m_terminalID">
+            <summary>
+            The terminal ID associated with the transaction.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Request.m_track1">
+            <summary>
+            The track1 associated with the card.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Request.m_track2">
+            <summary>
+            The track2 associated with the card.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Request.m_track3">
+            <summary>
+            The track3 associated with the card.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Request.m_transactionKey">
+            <summary>
+            The transaction key associated with the transaction.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Request.m_userReference">
+            <summary>
+            An optional user reference.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Request.m_voidReason">
+            <summary>
+            The reason for which a void request is being made.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Request.m_zipCode">
+            <summary>
+            The zip code associated with the card.
+            </summary>
+        </member>
+        <member name="M:CardEaseXML.Request.AddCardHolderEmailAddress(CardEaseXML.EmailAddress)">
+            <summary>
+            Adds an email address to the list of email addresses associated with the card holder.
+            </summary>
+            <param name="emailAddress">The email address to add.  Should not be null.</param>
+            <seealso cref="T:CardEaseXML.EmailAddress"/>
+            <seealso cref="P:CardEaseXML.Request.CardHolderEmailAddresses"/>
+        </member>
+        <member name="M:CardEaseXML.Request.AddCardHolderPhoneNumber(CardEaseXML.PhoneNumber)">
+            <summary>
+            Adds a phone number to the list of phone numbers associated with the card holder.
+            </summary>
+            <param name="phoneNumber">The phone number to add.</param>
+            <seealso cref="T:CardEaseXML.PhoneNumber"/>
+            <seealso cref="P:CardEaseXML.Request.CardHolderPhoneNumbers"/>
+        </member>
+        <member name="M:CardEaseXML.Request.AddDeliveryEmailAddress(CardEaseXML.EmailAddress)">
+            <summary>
+            Adds an email address to the list of email addresses associated with the delivery address.
+            </summary>
+            <param name="emailAddress">The email address to add.</param>
+            <seealso cref="T:CardEaseXML.EmailAddress"/>
+            <seealso cref="P:CardEaseXML.Request.DeliveryEmailAddresses"/>
+        </member>
+        <member name="M:CardEaseXML.Request.AddDeliveryPhoneNumber(CardEaseXML.PhoneNumber)">
+            <summary>
+            Adds a phone number to the list of phone numbers associated with the delivery address.
+            </summary>
+            <param name="phoneNumber">The phone number to add.</param>
+            <seealso cref="T:CardEaseXML.PhoneNumber"/>
+            <seealso cref="P:CardEaseXML.Request.DeliveryPhoneNumbers"/>
+        </member>
+        <member name="M:CardEaseXML.Request.AddExtendedProperty(CardEaseXML.ExtendedProperty)">
+            <summary>
+            Adds an extended property to the list of extended properties associated with this request.
+            </summary>
+            <param name="extendedProperty">The extended property to add to the list of extended properties associated with this request.  This should not be null.</param>
+            <seealso cref="T:CardEaseXML.ExtendedProperty"/>
+            <seealso cref="P:CardEaseXML.Request.ExtendedProperties"/>
+        </member>
+        <member name="M:CardEaseXML.Request.AddICCTag(CardEaseXML.ICCTag)">
+            <summary>
+            Adds an ICC tag to the list of ICC tags associated with this request.
+            </summary>
+            <remarks>
+            Each ICC tag has an id, type and value. For example, a tag of
+            0x9f02/AsciiHex/000000000100 is using to specify the transaction amount.
+            These are mandatory for an EMV transaction.
+            </remarks>
+            <param name="iccTag">The ICC tag to add to the list of ICC tags associated with this request.  This should not be null.</param>
+            <seealso cref="T:CardEaseXML.ICCTag"/>
+            <seealso cref="P:CardEaseXML.Request.ICCTags"/>
+        </member>
+        <member name="M:CardEaseXML.Request.AddInvoiceEmailAddress(CardEaseXML.EmailAddress)">
+            <summary>
+            Adds an email address to the list of email addresses associated with the invoice address.
+            </summary>
+            <param name="emailAddress">The email address to add.  Should not be null.</param>
+            <seealso cref="T:CardEaseXML.EmailAddress"/>
+            <seealso cref="P:CardEaseXML.Request.InvoiceEmailAddresses"/>
+        </member>
+        <member name="M:CardEaseXML.Request.AddInvoicePhoneNumber(CardEaseXML.PhoneNumber)">
+            <summary>
+            Adds a phone number to the list of phone numbers associated with the invoice address.
+            </summary>
+            <param name="phoneNumber">The phone number to add.  Should not be null.</param>
+            <seealso cref="T:CardEaseXML.PhoneNumber"/>
+            <seealso cref="P:CardEaseXML.Request.InvoicePhoneNumbers"/>
+        </member>
+        <member name="M:CardEaseXML.Request.AddProduct(CardEaseXML.Product)">
+            <summary>
+            Adds a product to the list of products associated with this request.
+            </summary>
+            <param name="product">The product to add.  Should not be null.</param>
+            <seealso cref="T:CardEaseXML.Product"/>
+            <seealso cref="P:CardEaseXML.Request.Products"/>
+        </member>
+        <member name="M:CardEaseXML.Request.GenerateRequestXML(System.Xml.XmlWriter)">
+            <summary>
+            Generate XML that represents the content of this request.
+            </summary>
+            <remarks>
+            Before
+            processing is performed, the request data is validated to ensure
+            CardEaseXML standard conformity.
+            </remarks>
+            <param name="writer">The target of the XML data.  This must not be null.</param>
+            <exception cref="T:CardEaseXML.CardEaseXMLRequestException">If the request data is not valid.</exception>
+        </member>
+        <member name="M:CardEaseXML.Request.AddPropertyString(System.Text.StringBuilder,System.String,System.Object)">
+            <summary>
+            Helper function for ToString.
+            Adds a line for a property with its value
+            </summary>
+            <param name="sb">The StringBuilder to append line to</param>
+            <param name="Name">The name of the property</param>
+            <param name="Value">The value of the property</param>
+        </member>
+        <member name="M:CardEaseXML.Request.ToString">
+            <summary>
+            Gets a string version of this requests details.
+            </summary>
+            <returns>A string version of this requests details.</returns>
+        </member>
+        <member name="M:CardEaseXML.Request.Validate">
+            <summary>
+            Validates the information held in this request to ensure that it is
+            suitable for processing.
+            </summary>
+            <remarks>
+            This is called before a request is processed and
+            can also be used for testing purposes.
+            </remarks>
+            <exception cref="T:CardEaseXML.CardEaseXMLRequestException">If the information held in this request is not suitable for processing.</exception>
+        </member>
+        <member name="M:CardEaseXML.Request.IsLetterString(System.String)">
+            <summary>
+            Method to determine if string is a letter string.
+            </summary>
+            <param name="str">The string to check.</param>
+            <returns>If the string is a letter string.</returns>
+        </member>
+        <member name="M:CardEaseXML.Request.IsNumericString(System.String)">
+            <summary>
+            Method to determine if string is a numeric string.
+            </summary>
+            <param name="str">The string to check.</param>
+            <returns>If the string is a numeric string.</returns>
+        </member>
+        <member name="M:CardEaseXML.Request.IsValidDateTimeFormatCharacter(System.Char)">
+            <summary>
+            Method to determine if character is a valid date and time character.
+            </summary>
+            <param name="c">The character to check.</param>
+            <returns>Whether the character is a valid date and time character.</returns>
+        </member>
+        <member name="M:CardEaseXML.Request.IsValidAmount(System.String)">
+            <summary>
+            Determines whether an amount is valid.
+            </summary>
+            <remarks>Accepts 1 1. 1.1 .1</remarks>
+            <param name="amount">The amount to validate.</param>
+            <returns>If the amount is valid.</returns>
+        </member>
+        <member name="M:CardEaseXML.Request.IsValidEmailAddress(System.String)">
+            <summary>
+            Determines whether an email address is valid.
+            </summary>
+            <param name="emailAddress">The email address to check.</param>
+            <returns>If the email address is valid.</returns>
+        </member>
+        <member name="M:CardEaseXML.Request.IsValidLuhn(System.String)">
+            <summary>
+            Determines whether the supplied PAN is valid.  Will also check to see whether the PAN is numeric.
+            </summary>
+            <param name="pan">The PAN to validate.</param>
+            <returns>If the PAN failed the Luhn Check or if the PAN is not numeric.</returns>
+        </member>
+        <member name="P:CardEaseXML.Request.Address">
+            <summary>
+            The address details associated with the card in this request.
+            </summary>
+            <remarks>
+            This
+            can be used for additional verification of the card details with the
+            issuer. The content of this is dependant upon the country in which
+            authorisation is being performed. Typically it is the first line of the
+            address where the card is registered.  This is an alphanumeric string. It is optional.
+            </remarks>		
+        </member>
+        <member name="P:CardEaseXML.Request.Amount">
+            <summary>
+            The amount associated with this request.
+            </summary>
+            <remarks>
+            This may be in major or
+            minor units. For example 1.23 GBP (Major) == 123 GBP (Minor). The amount is
+            mandatory for Auth and Offline requests.
+            </remarks>
+            <seealso cref="P:CardEaseXML.Request.AmountUnit"/>
+        </member>
+        <member name="P:CardEaseXML.Request.AmountUnit">
+            <summary>
+            The units in which the amount associated with this request is
+            specified.
+            </summary>
+            <remarks>
+            This may be Major or Minor. For example 1.23 GBP (Major) == 123
+            GBP (Minor). The default is Minor.
+            </remarks>
+            <seealso cref="P:CardEaseXML.Request.Amount"/>
+        </member>
+        <member name="P:CardEaseXML.Request.AutoConfirm">
+            <summary>
+            Whether an authorisation request is automatically confirmed without
+            a confirmation request.
+            </summary>
+            <remarks>
+            By default is is false, a confirmation request
+            will be required for this transaction.
+            </remarks>
+        </member>
+        <member name="P:CardEaseXML.Request.BatchReference">
+            <summary>
+            The batch reference associated with this request.
+            </summary>
+            <remarks>
+            This allows the user to attach a reference to a transaction
+            to help group similar transactions.
+            </remarks>
+        </member>
+        <member name="P:CardEaseXML.Request.CardEaseReference">
+            <summary>
+            The CardEase reference associated with this request.
+            </summary>
+            <remarks>
+            This is a
+            unique reference that has been obtained from the CardEase platform during
+            previous requests.
+            This is an alphanumeric string with a fixed length of 36 characters.
+            This is mandatory for Conf, Refund and Void
+            requests.
+            </remarks>
+        </member>
+        <member name="P:CardEaseXML.Request.CardEaseXMLVersion">
+            <summary>
+            The version of CardEaseXML that the client supports.
+            </summary>
+            <remarks>
+            The default is
+            to "1.0.0".  This is mandatory for all requests.
+            </remarks>
+        </member>
+        <member name="P:CardEaseXML.Request.CardHash">
+            <summary>
+            The card hash returned from a previous transaction that references the card
+            details that should also be used for this transaction. 
+            </summary>
+            <remarks>
+            This is an alphanumeric string with a fixed length of 24 characters.
+            Used in conjunction with the CardReference property.
+            The benefit of being able to reference a previously used card is that 
+            an integrator need not store actual card details on their system for 
+            repeat transactions. This reduces the risk of card infomation
+            being compromised, and reduces the integrators PCI requirements.
+            </remarks>
+            <seealso cref="P:CardEaseXML.Request.CardReference"/>
+        </member>
+        <member name="P:CardEaseXML.Request.CardHolderAddress">
+            <summary>
+            The card holder's address.
+            </summary>
+        </member>
+        <member name="P:CardEaseXML.Request.CardHolderEmailAddresses">
+            <summary>
+            The card holder's email addresses.
+            </summary>
+        </member>
+        <member name="P:CardEaseXML.Request.CardHolderName">
+            <summary>
+            The card holder's name.
+            </summary>
+        </member>
+        <member name="P:CardEaseXML.Request.CardHolderPhoneNumbers">
+            <summary>
+            The card holder's phone numbers.
+            </summary>
+        </member>
+        <member name="P:CardEaseXML.Request.CardReference">
+            <summary>
+            The card reference returned from a previous transaction that references  
+            the card details that should also be used for this transaction. 
+            </summary>
+            <remarks>
+            This is an alphanumeric string with a fixed length of 36 characters.
+            Used in conjunction with the CardHash property.
+            The benefit of being able to reference a previously used card is that 
+            an integrator need not store actual card details on their system for 
+            repeat transactions. This reduces the risk of card infomation
+            being compromised, and reduces the integrators PCI requirements.
+            </remarks>
+            <seealso cref="P:CardEaseXML.Request.CardHash"/>
+        </member>
+        <member name="P:CardEaseXML.Request.CSC">
+            <summary>
+            The security code associated with the card in this request.
+            </summary>
+            <remarks>
+            This can
+            be used for additional verification with the issuer. This is also
+            referred to as CVV, CVC and CV2.   This is an numeric string with a minimum length of 3 characters and a maximum length of 4 characters.  This is optional.
+            If the CSC validation fails the authorisation is automatically declined.
+            <para></para>
+            On Visa and MasterCard this is the last three digits of the signature
+            strip.
+            <para></para>
+            On Amex this is the four digits printed above the PAN.
+            </remarks>
+        </member>
+        <member name="P:CardEaseXML.Request.CurrencyCode">
+            <summary>
+            The ISO currency code or mnemonic associated with this request
+            amount.
+            </summary>
+            <remarks>
+            For example, GBP or USD. If this is not specified the currency code
+            held against the terminal ID in the CardEase platform is assumed.
+            This is an alphanumeric string with a fixed length of 3 characters.
+            <para></para>
+            Recognised currency codes and mnemonics:
+            <list type="table">
+            <listheader>
+            <term>Currency Code</term>
+            <term>Mnemonic</term>
+            <term>Description</term>
+            </listheader>
+            <item>
+            <description>826</description>
+            <description>GBP</description>
+            <description>United Kingdom, Pound</description>
+            </item>
+            <item>
+            <description>840</description>
+            <description>USD</description>
+            <description>United States, Dollar</description>
+            </item>
+            <item>
+            <description>978</description>
+            <description>EUR</description>
+            <description>European Euro</description>
+            </item>
+            <item>
+            <description>124</description>
+            <description>CAD</description>
+            <description>Canada, Dollar</description>
+            </item>
+            <item>
+            <description>392</description>
+            <description>JPY</description>
+            <description>Japan, Yen</description>
+            </item>
+            <item>
+            <description>208</description>
+            <description>DKK</description>
+            <description>Denmark, Krone</description>
+            </item>
+            <item>
+            <description>756</description>
+            <description>CHF</description>
+            <description>Switzerland, Franc</description>
+            </item>
+            <item>
+            <description>752</description>
+            <description>SEK</description>
+            <description>Sweden, Krona</description>
+            </item>
+            </list>
+            </remarks>
+        </member>
+        <member name="P:CardEaseXML.Request.DeliveryAddress">
+            <summary>
+            The delivery address.
+            </summary>
+        </member>
+        <member name="P:CardEaseXML.Request.DeliveryEmailAddresses">
+            <summary>
+            The delivery email addresses.
+            </summary>
+        </member>
+        <member name="P:CardEaseXML.Request.DeliveryName">
+            <summary>
+            The delivery name.
+            </summary>
+        </member>
+        <member name="P:CardEaseXML.Request.DeliveryPhoneNumbers">
+            <summary>
+            The delivery phone numbers.
+            </summary>
+        </member>
+        <member name="P:CardEaseXML.Request.ExtendedProperties">
+            <summary>
+            The list of extended properties associated with this request.
+            </summary>
+            <seealso cref="T:CardEaseXML.ExtendedProperty"/>
+            <seealso cref="M:CardEaseXML.Request.AddExtendedProperty(CardEaseXML.ExtendedProperty)"/>
+        </member>
+        <member name="P:CardEaseXML.Request.ExpiryDate">
+            <summary>
+            The expiry date associated with the card in this request.
+            </summary>
+            <remarks>
+            This is a character string with a maximum length of 10 characters.
+            This is
+            mandatory for manual authorisation requests (such as Card Not Present).
+            This should match the expiry date format.
+            </remarks>
+            <seealso cref="P:CardEaseXML.Request.ExpiryDateFormat"/>
+            <seealso cref="P:CardEaseXML.Request.StartDate"/>
+            <seealso cref="P:CardEaseXML.Request.StartDateFormat"/>
+            <seealso cref="P:CardEaseXML.Request.ManualType"/>
+        </member>
+        <member name="P:CardEaseXML.Request.ExpiryDateFormat">
+            <summary>
+            The expiry date format associated with the card in this request.
+            </summary>
+            <remarks>
+            This is a character string with a maximum length of 10 characters.
+            This is mandatory for manual authorisation requests (such as Card Not
+            Present). By default this is "yyMM". This should match the format of the
+            expiry date and can include separators such as - and /. The available options are shown in the following table:
+            <list type="table">
+            <listheader>
+            <term>Format</term>
+            <term>Description</term>
+            <term>Example</term>
+            </listheader>
+            <item>
+            <description>yyyy</description>
+            <description>Year with century</description>
+            <description>2004</description>
+            </item>
+            <item>
+            <description>yy</description>
+            <description>Year without century</description>
+            <description>04</description>
+            </item>
+            <item>
+            <description>MM</description>
+            <description>Month of year</description>
+            <description>01</description>
+            </item>
+            <item>
+            <description>dd</description>
+            <description>Day of month</description>
+            <description>27</description>
+            </item>
+            </list>
+            </remarks>
+            <seealso cref="P:CardEaseXML.Request.ExpiryDate"/>
+            <seealso cref="P:CardEaseXML.Request.ManualType"/>
+        </member>
+        <member name="P:CardEaseXML.Request.ICCFallback">
+            <summary>
+            Whether an ICC fallback has occured.
+            </summary>
+            <remarks>
+            Default is false.
+            </remarks>
+        </member>
+        <member name="P:CardEaseXML.Request.ICCManagementFunction">
+            <summary>
+            The ICC management function associated with an ICCManagement
+            request. 
+            </summary>
+            <remarks>
+            This must be set for an ICCManagement request. It is an
+            alphanumeric string.
+            </remarks> 
+            <seealso cref="P:CardEaseXML.Request.RequestType"/>
+        </member>
+        <member name="P:CardEaseXML.Request.ICCTags">
+            <summary>
+            The list of ICC tags associated with this request.
+            </summary>
+            <remarks>
+            Each ICC tag has
+            an id, type and value. For example, a tag of 0x9f02/AsciiHex/000000000100
+            is using to specify the transaction amount. These are mandatory for an
+            EMV transaction.
+            </remarks>
+            <seealso cref="T:CardEaseXML.ICCTag"/>
+            <seealso cref="M:CardEaseXML.Request.AddICCTag(CardEaseXML.ICCTag)"/>
+            <seealso cref="P:CardEaseXML.Request.ICCType"/>
+        </member>
+        <member name="P:CardEaseXML.Request.ICCType">
+            <summary>
+            The type of ICC transaction associated with this request.
+            </summary>
+            <remarks>
+            This is an alphanumeric string.  This is
+            mandatory for ICC authorisations and by default is "EMV". An ICC
+            transaction must have associated ICC tags.
+            </remarks>
+            <seealso cref="T:CardEaseXML.ICCTag"/>
+            <seealso cref="M:CardEaseXML.Request.AddICCTag(CardEaseXML.ICCTag)"/>
+            <seealso cref="P:CardEaseXML.Request.ICCTags"/>
+        </member>
+        <member name="P:CardEaseXML.Request.InvoiceAddress">
+            <summary>
+            The invoice address.
+            </summary>
+        </member>
+        <member name="P:CardEaseXML.Request.InvoiceEmailAddresses">
+            <summary>
+            The invoice email addresses.
+            </summary>
+        </member>
+        <member name="P:CardEaseXML.Request.InvoiceName">
+            <summary>
+            The invoice name.
+            </summary>
+        </member>
+        <member name="P:CardEaseXML.Request.InvoicePhoneNumbers">
+            <summary>
+            The invoice phone numbers.
+            </summary>
+        </member>
+        <member name="P:CardEaseXML.Request.IssueNumber">
+            <summary>
+            The issue number associated with the card in this request.
+            </summary>
+            <remarks>
+            This is a numeric string with a maximum length of 2 characters. The
+            requirement for this is dependant upon the card scheme associated with
+            the card and must be exactly as found on the card (including and leading 0's).
+            </remarks>
+        </member>
+        <member name="P:CardEaseXML.Request.MachineReference">
+            <summary>
+            The machine reference associated with this request.
+            </summary>
+            <remarks>
+            This is
+            mandatory if the TerminalID is a Master Terminal ID used to represent
+            multiple terminals.
+            This is an alphanumeric string with a maximum length of 50 characters.
+            </remarks>
+            <seealso cref="P:CardEaseXML.Request.TerminalID"/>
+        </member>
+        <member name="P:CardEaseXML.Request.ManualType">
+            <summary>
+            The type of manual authorisation being used for this request.
+            </summary>
+            <remarks>
+            By
+            default this is "cnp" (i.e. Card Not Present). This is an alphanumeric string. This is mandatory for
+            manual authorisations.
+            </remarks>
+        </member>
+        <member name="P:CardEaseXML.Request.OfflineDateTime">
+            <summary>
+            The date and/or time when the transaction was processed offline.
+            </summary>
+        </member>
+        <member name="P:CardEaseXML.Request.OfflineDateTimeFormat">
+            <summary>
+            The format of the date and/or time of the transaction if processed offline.
+            </summary>
+            <remarks>
+            This is a character string with a maximum length of 16 characters.
+            By default this is "ddMMyyy hhmmss". This should match the format of the
+            offline date/time and can include separators such as - and /. The available options are shown in the following table:
+            <list type="table">
+            <listheader>
+            <term>Format</term>
+            <term>Description</term>
+            <term>Example</term>
+            </listheader>
+            <item>
+            <description>yyyy</description>
+            <description>Year with century</description>
+            <description>2004</description>
+            </item>
+            <item>
+            <description>yy</description>
+            <description>Year without century</description>
+            <description>04</description>
+            </item>
+            <item>
+            <description>MM</description>
+            <description>Month of year</description>
+            <description>01</description>
+            </item>
+            <item>
+            <description>dd</description>
+            <description>Day of month</description>
+            <description>27</description>
+            </item>
+            <item>
+            <description>hh</description>
+            <description>Hour</description>
+            <description>12</description>
+            </item>
+            <item>
+            <description>mm</description>
+            <description>Minute</description>
+            <description>54</description>
+            </item>
+            <item>
+            <description>ss</description>
+            <description>Second</description>
+            <description>22</description>
+            </item>
+            </list>
+            </remarks>
+            <seealso cref="P:CardEaseXML.Request.OfflineDateTime"/>
+        </member>
+        <member name="P:CardEaseXML.Request.OriginatingIPAddress">
+            <summary>
+            The originating IP address of the request (e.g. client browser).
+            </summary>
+        </member>
+        <member name="P:CardEaseXML.Request.PAN">
+            <summary>
+            The PAN (Primary Account Number) associated with the card in this
+            request.
+            </summary>
+            <remarks>
+            This is a numeric string with a minimum length of 13 characters and a maximum length of 19 characters.
+            This is a requirement for manual authorisation requests (such
+            as Card Not Present).
+            </remarks>
+        </member>
+        <member name="P:CardEaseXML.Request.Products">
+            <summary>
+            The list of products.
+            </summary>
+        </member>
+        <member name="P:CardEaseXML.Request.RequestType">
+            <summary>
+            The type of this request.
+            </summary>
+            <remarks>
+            This can be Auth, Conf, Test and so on. By
+            default this is "Auth". This is mandatory for all requests.
+            </remarks>
+            <seealso cref="P:CardEaseXML.Request.RequestType"/>
+        </member>
+        <member name="P:CardEaseXML.Request.SoftwareName">
+            <summary>
+            The name of the software/firmware using the CardEaseXML SDK.
+            </summary>
+            <remarks>
+            This is an alphanumeric string with a maximum length of 50 characters.  This is
+            mandatory for all requests.
+            </remarks>
+        </member>
+        <member name="P:CardEaseXML.Request.SoftwareVersion">
+            <summary>
+            The version of the software/firmware using the CardEaseXML SDK.
+            </summary>
+            <remarks>
+            This is an alphanumeric string with a maximum length of 20 characters.  This
+            is mandatory for all requests.
+            </remarks>
+        </member>
+        <member name="P:CardEaseXML.Request.StartDate">
+            <summary>
+            The start date associated with the card in this request.
+            </summary>
+            <remarks>
+            This is a character string with a maximum length of 10 characters.
+            This is
+            optional for manual authorisation requests (such as Card Not Present).
+            This should match the start date format.
+            </remarks>
+            <seealso cref="P:CardEaseXML.Request.StartDateFormat"/>
+            <seealso cref="P:CardEaseXML.Request.ExpiryDate"/>
+            <seealso cref="P:CardEaseXML.Request.ExpiryDateFormat"/>
+            <seealso cref="P:CardEaseXML.Request.ManualType"/>
+        </member>
+        <member name="P:CardEaseXML.Request.StartDateFormat">
+            <summary>
+            The start date format associated with the card in this request.
+            </summary>
+            <remarks>
+            This is a character string with a maximum length of 10 characters.
+            This
+            is optional for manual authorisation requests (such as Card Not
+            Present). By default this is "yyMM". This should match the format of the
+            start date and can include separators such as - and /. The available options are shown in the following table:
+            <list type="table">
+            <listheader>
+            <term>Format</term>
+            <term>Description</term>
+            <term>Example</term>
+            </listheader>
+            <item>
+            <description>yyyy</description>
+            <description>Year with century</description>
+            <description>2004</description>
+            </item>
+            <item>
+            <description>yy</description>
+            <description>Year without century</description>
+            <description>04</description>
+            </item>
+            <item>
+            <description>MM</description>
+            <description>Month of year</description>
+            <description>01</description>
+            </item>
+            <item>
+            <description>dd</description>
+            <description>Day of month</description>
+            <description>27</description>
+            </item>
+            </list>
+            </remarks>
+            <seealso cref="P:CardEaseXML.Request.StartDate"/>
+            <seealso cref="P:CardEaseXML.Request.ManualType"/>
+        </member>
+        <member name="P:CardEaseXML.Request.TerminalID">
+            <summary>
+            The terminal ID associated with the machine performing this request.
+            </summary>
+            <remarks>
+            This is mandatory for all requests and is supplied by CreditCall
+            Communications. It is unique across all CardEase products.
+            It is a numeric string with a fixed length of 8 characters.
+            </remarks>
+        </member>
+        <member name="P:CardEaseXML.Request.ThreeDSecureCardHolderEnrolled">
+            <summary>
+            The 3-D Secure Card Holder Enrollment.
+            </summary>
+            <remarks>
+            This is required for
+            authorisations in which the liability shift is possible due to the
+            integration with a 3-D Secure MPI.
+            </remarks>
+            <seealso cref="P:CardEaseXML.Request.ThreeDSecureCardHolderEnrolled"/>
+            <seealso cref="P:CardEaseXML.Request.ThreeDSecureECI"/>
+            <seealso cref="P:CardEaseXML.Request.ThreeDSecureIAV"/>
+            <seealso cref="P:CardEaseXML.Request.ThreeDSecureIAVAlgorithm"/>
+            <seealso cref="P:CardEaseXML.Request.ThreeDSecureTransactionStatus"/>
+            <seealso cref="P:CardEaseXML.Request.ThreeDSecureXID"/>
+        </member>
+        <member name="P:CardEaseXML.Request.ThreeDSecureECI">
+            <summary>
+            The 3-D Secure Electronic Commerce Indicator.
+            </summary>
+            <remarks>
+            This is required for
+            authorisations in which a liability shift is possible due to the
+            integration with a 3-D Secure MPI. It is a numeric string with a length
+            of 2 characters.
+            </remarks>
+            <seealso cref="P:CardEaseXML.Request.ThreeDSecureECI"/>
+            <seealso cref="P:CardEaseXML.Request.ThreeDSecureCardHolderEnrolled"/>
+            <seealso cref="P:CardEaseXML.Request.ThreeDSecureIAV"/>
+            <seealso cref="P:CardEaseXML.Request.ThreeDSecureIAVAlgorithm"/>
+            <seealso cref="P:CardEaseXML.Request.ThreeDSecureTransactionStatus"/>
+            <seealso cref="P:CardEaseXML.Request.ThreeDSecureXID"/>
+        </member>
+        <member name="P:CardEaseXML.Request.ThreeDSecureIAV">
+            <summary>
+            The 3-D Secure Authentication Verification Value.
+            </summary>
+            <remarks>
+            This is
+            required for authorisations in which the liability shift is possible
+            due to the integration with a 3-D Secure MPI. It is an alphanumeric
+            string with a maximum size of 32 characters.
+            <p>
+            With Verified by Visa this is called CAVV.
+            </p>
+            <p>
+            With MasterCard SecureCode this is called AAV.
+            </p>
+            </remarks>
+            <seealso cref="P:CardEaseXML.Request.ThreeDSecureCardHolderEnrolled"/>
+            <seealso cref="P:CardEaseXML.Request.ThreeDSecureECI"/>
+            <seealso cref="P:CardEaseXML.Request.ThreeDSecureIAVAlgorithm"/>
+            <seealso cref="P:CardEaseXML.Request.ThreeDSecureIAVFormat"/>
+            <seealso cref="P:CardEaseXML.Request.ThreeDSecureTransactionStatus"/>
+            <seealso cref="P:CardEaseXML.Request.ThreeDSecureXID"/>
+        </member>
+        <member name="P:CardEaseXML.Request.ThreeDSecureIAVAlgorithm">
+            <summary>
+            The 3-D Secure Authentication Verification algorithm.
+            </summary>
+            <remarks>
+            This is
+            required for authorisations in which the liability shift is possible
+            due to the integration with a 3-D Secure MPI.
+            </remarks>
+            <seealso cref="P:CardEaseXML.Request.ThreeDSecureCardHolderEnrolled"/>
+            <seealso cref="P:CardEaseXML.Request.ThreeDSecureECI"/>
+            <seealso cref="P:CardEaseXML.Request.ThreeDSecureIAV"/>
+            <seealso cref="P:CardEaseXML.Request.ThreeDSecureIAVFormat"/>
+            <seealso cref="P:CardEaseXML.Request.ThreeDSecureTransactionStatus"/>
+            <seealso cref="P:CardEaseXML.Request.ThreeDSecureXID"/>
+        </member>
+        <member name="P:CardEaseXML.Request.ThreeDSecureIAVFormat">
+            <summary>
+            The 3-D Secure Authentication Verification format.
+            </summary>
+            <remarks>
+            This
+            can be either Base64 or AsciiHex. The default is Base64.
+            </remarks>
+            <seealso cref="P:CardEaseXML.Request.ThreeDSecureIAV"/>
+        </member>
+        <member name="P:CardEaseXML.Request.ThreeDSecureTransactionStatus">
+            <summary>
+            The 3-D Secure transaction status.
+            </summary>
+            <remarks>
+            This is required for
+            authorisations in which the liability shift is possible due to the
+            integration with a 3-D Secure MPI.
+            </remarks>
+            <seealso cref="P:CardEaseXML.Request.ThreeDSecureTransactionStatus"/>
+            <seealso cref="P:CardEaseXML.Request.ThreeDSecureCardHolderEnrolled"/>
+            <seealso cref="P:CardEaseXML.Request.ThreeDSecureECI"/>
+            <seealso cref="P:CardEaseXML.Request.ThreeDSecureIAV"/>
+            <seealso cref="P:CardEaseXML.Request.ThreeDSecureIAVAlgorithm"/>
+            <seealso cref="P:CardEaseXML.Request.ThreeDSecureXID"/>
+        </member>
+        <member name="P:CardEaseXML.Request.ThreeDSecureXID">
+            <summary>
+            The 3-D Secure Transaction Identifier.
+            </summary>
+            <remarks>
+            This is required for
+            authorisations in which the liability shift is possible due to the
+            integration with a 3-D Secure MPI. It is an alphanumeric string
+            with a maximum length of of 28 characters.
+            </remarks>
+            <seealso cref="P:CardEaseXML.Request.ThreeDSecureCardHolderEnrolled"/>
+            <seealso cref="P:CardEaseXML.Request.ThreeDSecureECI"/>
+            <seealso cref="P:CardEaseXML.Request.ThreeDSecureIAV"/>
+            <seealso cref="P:CardEaseXML.Request.ThreeDSecureIAVAlgorithm"/>
+            <seealso cref="P:CardEaseXML.Request.ThreeDSecureTransactionStatus"/>
+            <seealso cref="P:CardEaseXML.Request.ThreeDSecureXIDFormat"/>
+        </member>
+        <member name="P:CardEaseXML.Request.ThreeDSecureXIDFormat">
+            <summary>
+            The 3-D Secure Transaction Identifier format.
+            </summary>
+            <remarks>
+            This
+            can be either Base64, Ascii or AsciiHex. The default is Ascii.
+            </remarks>
+            <seealso cref="P:CardEaseXML.Request.ThreeDSecureXID"/>
+        </member>
+        <member name="P:CardEaseXML.Request.Track1">
+            <summary>
+            The track 1 associated with the card in a magnetic stripe
+            authorisation.
+            </summary>
+            <remarks>
+            This is an alphanumeric string with a maximum length of 79 characters.
+            This is optional.
+            </remarks>
+        </member>
+        <member name="P:CardEaseXML.Request.Track2">
+            <summary>
+            The track 2 associated with the card in a magnetic stripe
+            authorisation.
+            </summary>
+            <remarks>
+            This is an alphanumeric string with a maximum length of 40 characters.
+            This should include start and end sentinels (and separator
+            character if provided).  It is mandatory for magnetic stripe
+            authorisation.
+            </remarks>
+        </member>
+        <member name="P:CardEaseXML.Request.Track3">
+            <summary>
+            The track 3 associated with the card in a magnetic stripe
+            authorisation.
+            </summary>
+            <remarks>
+            This is an alphanumeric string with a maximum length of 107 characters.
+            This is optional.
+            </remarks>
+        </member>
+        <member name="P:CardEaseXML.Request.TransactionKey">
+            <summary>
+            The transaction key associated with this request.
+            </summary>
+            <remarks>
+            This is mandatory
+            for all requests and is supplied by CreditCall Communications for a
+            terminal or number of terminals.
+            It must be in exactly the same case as provided by CreditCall.
+            This is an alphanumeric string with a maximum length of 20 characters.
+            </remarks>
+        </member>
+        <member name="P:CardEaseXML.Request.UserReference">
+            <summary>
+            The user reference associated with this request.
+            </summary>
+            <remarks>
+            This allows a user
+            to attach their own reference against a request.
+            This is an alphanumeric string with a maximum length of 50 characters.  This is optional for all
+            requests.
+            </remarks>
+        </member>
+        <member name="P:CardEaseXML.Request.VoidReason">
+            <summary>
+            The reason for which a Void request is being made.
+            </summary>
+            <remarks>
+            This is mandatory
+            for void requests.
+            </remarks>
+            <seealso cref="P:CardEaseXML.Request.VoidReason"/>
+        </member>
+        <member name="P:CardEaseXML.Request.ZipCode">
+            <summary>
+            The zip code/post code details associated with the card in this
+            request.
+            </summary>
+            <remarks>
+            This can be used for additional verification with the issuer.
+            The content of this is dependant upon the country in which authorisation
+            is being performed. This is an alphanumeric string. It is optional.
+            </remarks>
+        </member>
+        <member name="T:CardEaseXML.PublicKey">
+            <summary>
+            A class to hold information about a public key.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.PublicKey.m_algorithm">
+            <summary>
+            The algorithm.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.PublicKey.m_exponent">
+            <summary>
+            The exponent.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.PublicKey.m_hash">
+            <summary>
+            The hash.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.PublicKey.m_hashAlgorithm">
+            <summary>
+            The hash algorithm.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.PublicKey.m_index">
+            <summary>
+            The index.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.PublicKey.m_modulus">
+            <summary>
+            The modulus.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.PublicKey.m_validFromDate">
+            <summary>
+            The valid from date.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.PublicKey.m_validFromDateFormat">
+            <summary>
+            The valid from date format.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.PublicKey.m_validToDate">
+            <summary>
+            The valid to date.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.PublicKey.m_validToDateFormat">
+            <summary>
+            The valid to date format.
+            </summary>
+        </member>
+        <member name="M:CardEaseXML.PublicKey.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Creates a new public key with the given information.
+            </summary>
+            <param name="index">The public key index. This is an alphanumeric string. If null
+                       no index is set.</param>
+            <param name="hash">The public key hash. This is an alphanumeric string. If null
+                       no hash is set.</param>
+            <param name="hashAlgorithm">The public key hash algorithm. This is an alphanumeric string.
+                       If null no hash algorithm is set.</param>
+        </member>
+        <member name="M:CardEaseXML.PublicKey.ToString">
+            <summary>
+            Returns a string version of this public key.
+            </summary>
+            <returns>A string version of this public key.</returns>
+        </member>
+        <member name="P:CardEaseXML.PublicKey.Algorithm">
+            <summary>
+            The public key algorithm.
+            </summary>
+            <remarks>
+            This is an alphanumeric string. For
+            example "RSA".
+            </remarks>
+        </member>
+        <member name="P:CardEaseXML.PublicKey.Exponent">
+            <summary>
+            The public key exponent.
+            </summary>
+            <remarks>
+            This is an alphanumeric string.
+            </remarks>
+        </member>
+        <member name="P:CardEaseXML.PublicKey.Hash">
+            <summary>
+            The public key hash.
+            </summary>
+            <remarks>
+            This is an alphanumeric string.
+            </remarks>
+        </member>
+        <member name="P:CardEaseXML.PublicKey.HashAlgorithm">
+            <summary>
+            The public key hash algorithm.
+            </summary>
+            <remarks>
+            This is an alphanumeric string. For example "SHA1".
+            </remarks>
+        </member>
+        <member name="P:CardEaseXML.PublicKey.Index">
+            <summary>
+            The public key index.
+            </summary>
+            <remarks>
+            This is a alphanumeric string.
+            </remarks>
+        </member>
+        <member name="P:CardEaseXML.PublicKey.Modulus">
+            <summary>
+            The public key modulus. 
+            </summary>
+            <remarks>
+            This is an alphanumeric string.
+            </remarks>
+        </member>
+        <member name="P:CardEaseXML.PublicKey.ValidFromDate">
+            <summary>
+            The public key valid from date.
+            </summary>
+            <remarks>
+            This will match the valid from date format.
+            This is a character string.
+            </remarks>
+        </member>
+        <member name="P:CardEaseXML.PublicKey.ValidFromDateFormat">
+            <summary>
+            The public key valid from format.
+            </summary>
+            <remarks>
+            This will match the format of the valid from date and can include separators such as - and /.
+            This is a character string.
+            The available options are
+            shown in the following table:
+            <list type="table">
+            <listheader>
+            <term>Format</term>
+            <term>Description</term>
+            <term>Example</term>
+            </listheader>
+            <item>
+            <description>yyyy</description>
+            <description>Year with century</description>
+            <description>2004</description>
+            </item>
+            <item>
+            <description>yy</description>
+            <description>Year without century</description>
+            <description>04</description>
+            </item>
+            <item>
+            <description>MM</description>
+            <description>Month of year</description>
+            <description>01</description>
+            </item>
+            <item>
+            <description>dd</description>
+            <description>Day of month</description>
+            <description>27</description>
+            </item>
+            </list>
+            </remarks>
+        </member>
+        <member name="P:CardEaseXML.PublicKey.ValidToDate">
+            <summary>
+            The public key valid to date.
+            </summary>
+            <remarks>
+            This will match the valid to date format.
+            This is a character string.
+            </remarks>
+        </member>
+        <member name="P:CardEaseXML.PublicKey.ValidToDateFormat">
+            <summary>
+            The public key valid to date format. 
+            </summary>
+            <remarks>
+            This will match the format of the valid from date and can include separators such as - and /.
+            This is a character string.
+            The available options are
+            shown in the following table:
+            <list type="table">
+            <listheader>
+            <term>Format</term>
+            <term>Description</term>
+            <term>Example</term>
+            </listheader>
+            <item>
+            <description>yyyy</description>
+            <description>Year with century</description>
+            <description>2004</description>
+            </item>
+            <item>
+            <description>yy</description>
+            <description>Year without century</description>
+            <description>04</description>
+            </item>
+            <item>
+            <description>MM</description>
+            <description>Month of year</description>
+            <description>01</description>
+            </item>
+            <item>
+            <description>dd</description>
+            <description>Day of month</description>
+            <description>27</description>
+            </item>
+            </list>
+            </remarks>
+        </member>
+        <member name="T:CardEaseXML.EmailAddressType">
+            <summary>
+            A class to represent type of email address.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.EmailAddressType.Home">
+            <summary>
+            A home email address.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.EmailAddressType.Other">
+            <summary>
+            An email address that does not fit another category.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.EmailAddressType.Work">
+            <summary>
+            A work email address.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.EmailAddressType.Unknown">
+            <summary>
+            An email address with an unknown type.
+            </summary>
+        </member>
+        <member name="T:CardEaseXML.Client">
+            <summary>
+            This class is used to process requests by sending them
+            to CardEaseXML servers.
+            </summary>
+            <remarks>
+            This client supports .NET 2.0.
+            <para></para>
+            To use the Client a Request object should be created and populated
+            with the necessary transaction information such as the request type and
+            terminal id, as well as any optional information that is required such as a
+            user reference or address verification information.
+            <para></para>
+            Due to the redundancy available in the CardEase platform, the client can
+            communicate with any number of CardEaseXML servers until a successful
+            connection is made. Therefore, it is necessary to specify the
+            ServerURLs with which you would like the client to communicate
+            with in the order that you would like the communication to occur. Each of the
+            servers will be contacted in turn until a successful request is made.
+            <para></para>
+            If a connection is successful processing stops and the Response can be
+            retrieved. If a connection is unsuccessful the next host is tried until there
+            are no more available. If the Client runs out of servers to
+            contact, the request fails.
+            <para></para>
+            A successful request will obtain a Response object from the CardEase
+            platform. The response should be examined for error information and the
+            results of the specified transaction.
+            <seealso cref="P:CardEaseXML.Client.Request"/> 
+            <seealso cref="P:CardEaseXML.Client.Response"/> 
+            <seealso cref="T:CardEaseXML.ServerURL"/> 
+            </remarks>
+        </member>
+        <member name="F:CardEaseXML.Client.SDK_NAME">
+            <summary>
+            The internal name of the SDK.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Client.SDK_VERSION">
+            <summary>
+            The interal version of the SDK.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Client.m_serverURLs">
+            <summary>
+            The list of servers to communicate with.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Client.m_proxyHost">
+            <summary>
+            The hostname of the HTTP/HTTPS proxy.
+            </summary>summary>
+        </member>
+        <member name="F:CardEaseXML.Client.m_proxyPassword">
+            <summary>
+            The password of the HTTP/HTTPS proxy.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Client.m_proxyPort">
+            <summary>
+            The port number of the HTTP/HTTPS proxy.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Client.m_proxyUserName">
+            <summary>
+            The username of the HTTP/HTTPS proxy.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Client.m_request">
+            <summary>
+            The request to send to the CardEaseXML server.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Client.m_response">
+            <summary>
+            The response retrieved from the CardEaseXML server.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Client.m_responseXML">
+            <summary>
+            The response XML.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.Client.m_xmlEncoding">
+            <summary>
+            The XML encoding used in communication with the CardEaseXML server.
+            </summary>
+        </member>
+        <member name="M:CardEaseXML.Client.AddServerURL(CardEaseXML.ServerURL)">
+            <summary>
+            Adds a CardEaseXML server URL to the list used for communication.
+            </summary>
+            <remarks>
+            During
+            processing of a request each of these are used in turn until
+            communication is successful.
+            </remarks>
+            <param name="serverURL">The server URL to add to the end of the server URL list.  This should not be null.</param>
+            <seealso cref="P:CardEaseXML.Client.ServerURLs"/>
+        </member>
+        <member name="M:CardEaseXML.Client.AddServerURL(System.String,System.Int32)">
+            <summary>
+            Adds a CardEaseXML server URL to the list used for communication.
+            </summary>
+            <remarks>
+            During
+            processing of a request each of these are used in turn until
+            communication is successful.
+            </remarks>
+            <param name="url">The actual URL of the server URL.  This should be a HTTP URL and in the form: "http://..." or "https://...".  This must not be null.</param>
+            <param name="timeout">The read timeout for the specified server URL in milliseconds.  If zero is specified an infinite timeout is used.  For most requests a timeout of 45 seconds (45000) is recommended.</param>
+            <seealso cref="P:CardEaseXML.Client.ServerURLs"/>
+        </member>
+        <member name="M:CardEaseXML.Client.AddServerURL(System.Uri,System.Int32)">
+            <summary>
+            Adds a CardEaseXML server URL to the list used for communication.
+            </summary>
+            <remarks>
+            During
+            processing of a request each of these are used in turn until
+            communication is successful.
+            </remarks>
+            <param name="url">The actual URL of the server URL.  This should be a HTTP URL and in the form: "http://..." or "https://...".  This must not be null.</param>
+            <param name="timeout">The read timeout for the specified server URL in milliseconds.  If zero is specified an infinite timeout is used.  For most requests a timeout of 45 seconds (45000) is recommended.</param>
+            <seealso cref="P:CardEaseXML.Client.ServerURLs"/>
+        </member>
+        <member name="M:CardEaseXML.Client.SetProxySettings(System.String,System.Int32,System.String,System.String)">
+            <summary>
+            Sets proxy settings required to connect to any of the CardEaseXML server
+            URLs.
+            </summary>
+            <remarks>
+            By default the port number is 80.
+            </remarks>
+            <param name="proxyHost">The hostname of the proxy.  If null is specified the proxy host is removed.</param>
+            <param name="proxyPort">The port number of the proxy.</param>
+            <param name="proxyUserName">The username of the proxy.  If null is specified the proxy username is removed.</param>
+            <param name="proxyPassword">The password of the proxy.  If null is specified the proxy password is removed.</param>
+            <seealso cref="P:CardEaseXML.Client.ProxyHost"/>
+            <seealso cref="P:CardEaseXML.Client.ProxyPassword"/>
+            <seealso cref="P:CardEaseXML.Client.ProxyPort"/>
+            <seealso cref="P:CardEaseXML.Client.ProxyUserName"/>
+        </member>
+        <member name="M:CardEaseXML.Client.ProcessRequest">
+            <summary>
+            This method uses all of the internal settings to process a CardEaseXML
+            request.
+            <para></para>
+            A request and server URL must be set before processing can begin.
+            <para></para>
+            In turn each of the CardEaseXML server URLs are connected to and the
+            transaction is attempted. If a communication error occurs the next server
+            URL is used and so on. This continues until the list of server URLs is
+            exhausted. If communication totally fails a
+            CardEaseXMLCommunicationException is thrown detailing the last connection
+            failure.
+            <para></para>
+            If a proxy host has been set this communication is attempted through a
+            proxy with the optional proxy username and password.
+            </summary>
+            <exception cref="T:CardEaseXML.CardEaseXMLCommunicationException">There was a problem with communication.</exception>
+            <exception cref="T:CardEaseXML.CardEaseXMLRequestException">There was a problem with the request.</exception>
+            <exception cref="T:CardEaseXML.CardEaseXMLResponseException">There was a problem with the response.</exception>
+            <returns>The CardEaseXML response.</returns>
+        </member>
+        <member name="M:CardEaseXML.Client.ProcessRequest(CardEaseXML.Request)">
+            <summary>
+            This method uses all of the internal settings to process a CardEaseXML
+            request.
+            <para></para>
+            A request and server URL must be set before processing can begin.
+            <para></para>
+            In turn each of the CardEaseXML server URLs are connected to and the
+            transaction is attempted. If a communication error occurs the next server
+            URL is used and so on. This continues until the list of server URLs is
+            exhausted. If communication totally fails a
+            CardEaseXMLCommunicationException is thrown detailing the last connection
+            failure.
+            <para></para>
+            If a proxy host has been set this communication is attempted through a
+            proxy with the optional proxy username and password.
+            </summary>
+            <param name="request">The CardEaseXML request.</param>
+            <exception cref="T:CardEaseXML.CardEaseXMLCommunicationException">There was a problem with communication.</exception>
+            <exception cref="T:CardEaseXML.CardEaseXMLRequestException">There was a problem with the request.</exception>
+            <exception cref="T:CardEaseXML.CardEaseXMLResponseException">There was a problem with the response.</exception>
+            <returns>The CardEaseXML response.</returns>
+        </member>
+        <member name="P:CardEaseXML.Client.CardEaseXMLSDKName">
+            <summary>
+            The internal name of this CardEaseXML SDK.
+            </summary>
+        </member>
+        <member name="P:CardEaseXML.Client.CardEaseXMLSDKVersion">
+            <summary>
+            The internal version of this CardEaseXML SDK.
+            </summary>
+        </member>
+        <member name="P:CardEaseXML.Client.ServerURLs">
+            <summary>
+            The list of CardEaseXML server URLs which will be used for
+            communication.
+            </summary>
+            <remarks>
+            During processing of a request each of these are used in
+            turn until communication is successful.
+            </remarks>
+            <seealso cref="M:CardEaseXML.Client.AddServerURL(CardEaseXML.ServerURL)"/>
+        </member>
+        <member name="P:CardEaseXML.Client.ProxyHost">
+            <summary>
+            The proxy host required to connect to the CardEaseXML server URLs.
+            </summary>
+            <remarks>
+            This must be specified in order for a proxy to be used.
+            </remarks>
+            <seealso cref="M:CardEaseXML.Client.SetProxySettings(System.String,System.Int32,System.String,System.String)"/>
+        </member>
+        <member name="P:CardEaseXML.Client.ProxyPassword">
+            <summary>
+            The proxy password required to connect to the CardEaseXML server
+            URLs.
+            </summary>
+            <remarks>
+            The proxy password will only be used if the proxy username and
+            proxy host are also specified.
+            </remarks>
+            <seealso cref="M:CardEaseXML.Client.SetProxySettings(System.String,System.Int32,System.String,System.String)"/>
+        </member>
+        <member name="P:CardEaseXML.Client.ProxyPort">
+            <summary>
+            The proxy port required to connect to the CardEaseXML server URLs.
+            </summary>
+            <remarks>
+            The default is port 80.
+            </remarks>
+            <seealso cref="M:CardEaseXML.Client.SetProxySettings(System.String,System.Int32,System.String,System.String)"/>
+        </member>
+        <member name="P:CardEaseXML.Client.ProxyUserName">
+            <summary>
+            The proxy username required to connect to the CardEaseXML server
+            URLs.
+            </summary>
+            <remarks>
+            The proxy username will only be used if the proxy password and
+            proxy host are also specified.
+            </remarks>
+            <seealso cref="M:CardEaseXML.Client.SetProxySettings(System.String,System.Int32,System.String,System.String)"/>
+        </member>
+        <member name="P:CardEaseXML.Client.ResponseXML">
+            <summary>
+            The response XML.  This is used for debugging and should not be browsable.
+            </summary>
+        </member>
+        <member name="P:CardEaseXML.Client.Request">
+            <summary>
+            The request which will be used when communicating with the
+            CardEaseXML server URLs.
+            </summary>
+        </member>
+        <member name="P:CardEaseXML.Client.Response">
+            <summary>
+            The response last obtained from the CardEaseXML server.
+            </summary>
+        </member>
+        <member name="P:CardEaseXML.Client.XMLEncoding">
+            <summary>
+            The XML encoding used to communicate with the CardEaseXML server.
+            </summary>
+            <remarks>
+            By
+            default this is "UTF-8" (Encoding.UTF_8).
+            </remarks>
+        </member>
+        <member name="T:CardEaseXML.VerificationResult">
+            <summary>
+            The verification result that can be obtained from the CardEase platform when
+            it verifies certain components during a CardEaseXML request.
+            </summary>
+            <remarks>The components
+            can include address, security code and zip code/post code.
+            </remarks>
+        </member>
+        <member name="F:CardEaseXML.VerificationResult.Empty">
+            <summary>
+            The verification result is unknown.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.VerificationResult.Matched">
+            <summary>
+            The specified information matches the issuer records.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.VerificationResult.NotChecked">
+            <summary>
+            The specified information was not checked against issuer records.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.VerificationResult.NotMatched">
+            <summary>
+            The specified information did not match the issuer records.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.VerificationResult.NotSupplied">
+            <summary>
+            The specified information was not supplied for checking.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.VerificationResult.PartialMatch">
+            <summary>
+            The specified information partially matched the issuer records.
+            </summary>
+        </member>
+        <member name="T:CardEaseXML.ErrorCode">
+            <summary>
+            The possible error codes that can be returned from a CardEaseXML request.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.ErrorCode.Empty">
+            <summary>
+            No error code.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.ErrorCode.AmountInvalid">
+            <summary>
+            The specified amount in the request is invalid.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.ErrorCode.AmountMissing">
+            <summary>
+            The request does not contain an amount.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.ErrorCode.AmountTooLarge">
+            <summary>
+            The specified amount in the request is too large.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.ErrorCode.AmountTooSmall">
+            <summary>
+            The specified amount in the request is too small.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.ErrorCode.CardBanned">
+            <summary>
+            The specified card in the request has been banned.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.ErrorCode.CardDetailsNotFound">
+            <summary>
+            The card details referenced by the CardReference and CardHash
+            could not be found.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.ErrorCode.CardDetailsUnavailable">
+            <summary>
+            The card details referenced by the CardReference and CardHash
+            are unavailable.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.ErrorCode.CardEaseReferenceInvalid">
+            <summary>
+            The specified CardEase reference in the request is invalid.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.ErrorCode.CardEaseReferenceMissing">
+            <summary>
+            The request does not contain a CardEase reference.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.ErrorCode.CardHashInvalid">
+            <summary>
+            The specified card hash in the request is not valid.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.ErrorCode.CardReferenceInvalid">
+            <summary>
+            The specified card reference in the request is not valid.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.ErrorCode.CardSchemeNotSupported">
+            <summary>
+            The specified card scheme in the request is not supported.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.ErrorCode.CardUsageExceeded">
+            <summary>
+            The specified card usage in the request has been exceeded.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.ErrorCode.ExpiredCard">
+            <summary>
+            The specified card in the request has expired.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.ErrorCode.ExpiryDateInvalid">
+            <summary>
+            The specified expiry date in the request is invalid.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.ErrorCode.ExpiryDateMissing">
+            <summary>
+            The request does not contain an expiry date.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.ErrorCode.InvalidData">
+            <summary>
+            An invalid piece of information was sent in the request.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.ErrorCode.InvalidMessageType">
+            <summary>
+            The specified request type is invalid.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.ErrorCode.InvalidXMLRequest">
+            <summary>
+            The request XML is invalid.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.ErrorCode.IssueNoInvalid">
+            <summary>
+            The specified issue number in the request is invalid.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.ErrorCode.IssueNoMissing">
+            <summary>
+            The request does not contain an issue number.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.ErrorCode.MessageTypeMissing">
+            <summary>
+            The message type in the request is missing.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.ErrorCode.MessageTypeInvalid">
+            <summary>
+            The specified message type in the request is invalid.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.ErrorCode.NotAllowed">
+            <summary>
+            The specified transaction in the request is not allowed.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.ErrorCode.PANFailsLuhnCheck">
+            <summary>
+            The specified PAN in the request fails the Luhn check.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.ErrorCode.PANInvalid">
+            <summary>
+            The specified PAN in the request is invalid.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.ErrorCode.PANMissing">
+            <summary>
+            The request does not contain a PAN.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.ErrorCode.PANTooLong">
+            <summary>
+            The specified PAN in the request is too long.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.ErrorCode.PANTooShort">
+            <summary>
+            The specified PAN in the request is too short.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.ErrorCode.PreValidCard">
+            <summary>
+            The specified card in the request is not yet effective.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.ErrorCode.StartDateInvalid">
+            <summary>
+            The specified start date in the request is invalid.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.ErrorCode.StartDateMissing">
+            <summary>
+            The request does not contain a start date.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.ErrorCode.TemporarilyUnavailable">
+            <summary>
+            The CardEase platform is temporarily unavailable.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.ErrorCode.TerminalIDDisabled">
+            <summary>
+            The specified terminal id in the request is disabled.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.ErrorCode.TerminalIDInvalid">
+            <summary>
+            The specified terminal id in the request is invalid.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.ErrorCode.TerminalIDMissing">
+            <summary>
+            The request does not contain a terminal id.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.ErrorCode.TerminalIDUnknown">
+            <summary>
+            The specified terminal id in the request is unknown.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.ErrorCode.TerminalUsageExceeded">
+            <summary>
+            The specified terminal id usage in the request has been exceeded.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.ErrorCode.TransactionAlreadyRefunded">
+            <summary>
+            The transaction has already been refunded in full.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.ErrorCode.TransactionAlreadySettled">
+            <summary>
+            The specified transaction in the request has already been settled.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.ErrorCode.TransactionAlreadyVoided">
+            <summary>
+            The specified transaction in the request has already been voided.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.ErrorCode.TransactionKeyIncorrect">
+            <summary>
+            The specified transaction key in the request is incorrect.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.ErrorCode.TransactionKeyInvalid">
+            <summary>
+            The specified transaction key in the request is invalid.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.ErrorCode.TransactionKeyMissing">
+            <summary>
+            The specified transaction key in the request is missing.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.ErrorCode.TransactionNotFound">
+            <summary>
+            The specified transaction in the request was not found.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.ErrorCode.TransactionOriginallyDeclined">
+            <summary>
+            The specified transaction in the request was originally declined.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.ErrorCode.XMLDecryptionError">
+            <summary>
+            It is not possible to decrypt the XML.
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.ErrorCode.XMLElementMissing">
+            <summary>
+            The request does not contain all of the expected XML elements.
+            </summary>
+        </member>
+        <member name="T:CardEaseXML.PhoneNumber">
+            <summary>
+            A class used to hold phone number information.
+            </summary>
+            <remarks>
+            Each phone number has a number and a type.
+            </remarks>
+        </member>
+        <member name="F:CardEaseXML.PhoneNumber.m_number">
+            <summary>
+            The phone number
+            </summary>
+        </member>
+        <member name="F:CardEaseXML.PhoneNumber.m_type">
+            <summary>
+            The type of phone number.
+            </summary>
+        </member>
+        <member name="M:CardEaseXML.PhoneNumber.#ctor(System.String,CardEaseXML.PhoneNumberType)">
+            <summary>
+            Creates a new phone number with the fields.
+            </summary>
+            <param name="number">The phone number</param>
+            <param name="type">The type of the email address</param>
+        </member>
+        <member name="M:CardEaseXML.PhoneNumber.ToString">
+            <summary>
+            Returns a string detailing the number and type of the phone number.
+            </summary>
+            <returns>Returns a string detailing the number and type of the phone number.</returns>
+        </member>
+        <member name="P:CardEaseXML.PhoneNumber.Number">
+            <summary>
+            The phone number.
+            </summary>
+        </member>
+        <member name="P:CardEaseXML.PhoneNumber.Type">
+            <summary>
+            The type of the phone number.
+            </summary>
+        </member>
+    </members>
+</doc>

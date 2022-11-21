@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="SendPushWPNotificationsTo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strToastText1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strToastText2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strToastParam" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strTileTitle" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="iTileCount" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strBackgroundImage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendPushWPNotificationsToResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SendPushWPNotificationsToResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendPushAndroidNotificationsTo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAndroidRawData" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendPushAndroidNotificationsToResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SendPushAndroidNotificationsToResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CalculateMessageWithHash">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CalculateMessageWithHashResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CalculateMessageWithHashResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CalculateMessageWithHashJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="jsonIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CalculateMessageWithHashJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CalculateMessageWithHashJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CalculateHash">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strInput" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strHash" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CalculateHashResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CalculateHashResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="boolean" type="s:boolean" />
+      <s:element name="string" nillable="true" type="s:string" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="SendPushWPNotificationsToSoapIn">
+    <wsdl:part name="parameters" element="tns:SendPushWPNotificationsTo" />
+  </wsdl:message>
+  <wsdl:message name="SendPushWPNotificationsToSoapOut">
+    <wsdl:part name="parameters" element="tns:SendPushWPNotificationsToResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendPushAndroidNotificationsToSoapIn">
+    <wsdl:part name="parameters" element="tns:SendPushAndroidNotificationsTo" />
+  </wsdl:message>
+  <wsdl:message name="SendPushAndroidNotificationsToSoapOut">
+    <wsdl:part name="parameters" element="tns:SendPushAndroidNotificationsToResponse" />
+  </wsdl:message>
+  <wsdl:message name="CalculateMessageWithHashSoapIn">
+    <wsdl:part name="parameters" element="tns:CalculateMessageWithHash" />
+  </wsdl:message>
+  <wsdl:message name="CalculateMessageWithHashSoapOut">
+    <wsdl:part name="parameters" element="tns:CalculateMessageWithHashResponse" />
+  </wsdl:message>
+  <wsdl:message name="CalculateMessageWithHashJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:CalculateMessageWithHashJSON" />
+  </wsdl:message>
+  <wsdl:message name="CalculateMessageWithHashJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:CalculateMessageWithHashJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="CalculateHashSoapIn">
+    <wsdl:part name="parameters" element="tns:CalculateHash" />
+  </wsdl:message>
+  <wsdl:message name="CalculateHashSoapOut">
+    <wsdl:part name="parameters" element="tns:CalculateHashResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendPushWPNotificationsToHttpGetIn">
+    <wsdl:part name="strUser" type="s:string" />
+    <wsdl:part name="strToastText1" type="s:string" />
+    <wsdl:part name="strToastText2" type="s:string" />
+    <wsdl:part name="strToastParam" type="s:string" />
+    <wsdl:part name="strTileTitle" type="s:string" />
+    <wsdl:part name="iTileCount" type="s:string" />
+    <wsdl:part name="strBackgroundImage" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SendPushWPNotificationsToHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="SendPushAndroidNotificationsToHttpGetIn">
+    <wsdl:part name="strUser" type="s:string" />
+    <wsdl:part name="strAndroidRawData" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SendPushAndroidNotificationsToHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="CalculateMessageWithHashHttpGetIn">
+    <wsdl:part name="xmlIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CalculateMessageWithHashHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="CalculateMessageWithHashJSONHttpGetIn">
+    <wsdl:part name="jsonIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CalculateMessageWithHashJSONHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="CalculateHashHttpGetIn">
+    <wsdl:part name="strInput" type="s:string" />
+    <wsdl:part name="strHash" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CalculateHashHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="SendPushWPNotificationsToHttpPostIn">
+    <wsdl:part name="strUser" type="s:string" />
+    <wsdl:part name="strToastText1" type="s:string" />
+    <wsdl:part name="strToastText2" type="s:string" />
+    <wsdl:part name="strToastParam" type="s:string" />
+    <wsdl:part name="strTileTitle" type="s:string" />
+    <wsdl:part name="iTileCount" type="s:string" />
+    <wsdl:part name="strBackgroundImage" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SendPushWPNotificationsToHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="SendPushAndroidNotificationsToHttpPostIn">
+    <wsdl:part name="strUser" type="s:string" />
+    <wsdl:part name="strAndroidRawData" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SendPushAndroidNotificationsToHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="CalculateMessageWithHashHttpPostIn">
+    <wsdl:part name="xmlIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CalculateMessageWithHashHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="CalculateMessageWithHashJSONHttpPostIn">
+    <wsdl:part name="jsonIn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CalculateMessageWithHashJSONHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="CalculateHashHttpPostIn">
+    <wsdl:part name="strInput" type="s:string" />
+    <wsdl:part name="strHash" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CalculateHashHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:portType name="integraExternalServicesSoap">
+    <wsdl:operation name="SendPushWPNotificationsTo">
+      <wsdl:input message="tns:SendPushWPNotificationsToSoapIn" />
+      <wsdl:output message="tns:SendPushWPNotificationsToSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendPushAndroidNotificationsTo">
+      <wsdl:input message="tns:SendPushAndroidNotificationsToSoapIn" />
+      <wsdl:output message="tns:SendPushAndroidNotificationsToSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CalculateMessageWithHash">
+      <wsdl:input message="tns:CalculateMessageWithHashSoapIn" />
+      <wsdl:output message="tns:CalculateMessageWithHashSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CalculateMessageWithHashJSON">
+      <wsdl:input message="tns:CalculateMessageWithHashJSONSoapIn" />
+      <wsdl:output message="tns:CalculateMessageWithHashJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CalculateHash">
+      <wsdl:input message="tns:CalculateHashSoapIn" />
+      <wsdl:output message="tns:CalculateHashSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="integraExternalServicesHttpGet">
+    <wsdl:operation name="SendPushWPNotificationsTo">
+      <wsdl:input message="tns:SendPushWPNotificationsToHttpGetIn" />
+      <wsdl:output message="tns:SendPushWPNotificationsToHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendPushAndroidNotificationsTo">
+      <wsdl:input message="tns:SendPushAndroidNotificationsToHttpGetIn" />
+      <wsdl:output message="tns:SendPushAndroidNotificationsToHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CalculateMessageWithHash">
+      <wsdl:input message="tns:CalculateMessageWithHashHttpGetIn" />
+      <wsdl:output message="tns:CalculateMessageWithHashHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CalculateMessageWithHashJSON">
+      <wsdl:input message="tns:CalculateMessageWithHashJSONHttpGetIn" />
+      <wsdl:output message="tns:CalculateMessageWithHashJSONHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CalculateHash">
+      <wsdl:input message="tns:CalculateHashHttpGetIn" />
+      <wsdl:output message="tns:CalculateHashHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="integraExternalServicesHttpPost">
+    <wsdl:operation name="SendPushWPNotificationsTo">
+      <wsdl:input message="tns:SendPushWPNotificationsToHttpPostIn" />
+      <wsdl:output message="tns:SendPushWPNotificationsToHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendPushAndroidNotificationsTo">
+      <wsdl:input message="tns:SendPushAndroidNotificationsToHttpPostIn" />
+      <wsdl:output message="tns:SendPushAndroidNotificationsToHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CalculateMessageWithHash">
+      <wsdl:input message="tns:CalculateMessageWithHashHttpPostIn" />
+      <wsdl:output message="tns:CalculateMessageWithHashHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CalculateMessageWithHashJSON">
+      <wsdl:input message="tns:CalculateMessageWithHashJSONHttpPostIn" />
+      <wsdl:output message="tns:CalculateMessageWithHashJSONHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CalculateHash">
+      <wsdl:input message="tns:CalculateHashHttpPostIn" />
+      <wsdl:output message="tns:CalculateHashHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="integraExternalServicesSoap" type="tns:integraExternalServicesSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SendPushWPNotificationsTo">
+      <soap:operation soapAction="http://tempuri.org/SendPushWPNotificationsTo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendPushAndroidNotificationsTo">
+      <soap:operation soapAction="http://tempuri.org/SendPushAndroidNotificationsTo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalculateMessageWithHash">
+      <soap:operation soapAction="http://tempuri.org/CalculateMessageWithHash" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalculateMessageWithHashJSON">
+      <soap:operation soapAction="http://tempuri.org/CalculateMessageWithHashJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalculateHash">
+      <soap:operation soapAction="http://tempuri.org/CalculateHash" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="integraExternalServicesSoap12" type="tns:integraExternalServicesSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SendPushWPNotificationsTo">
+      <soap12:operation soapAction="http://tempuri.org/SendPushWPNotificationsTo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendPushAndroidNotificationsTo">
+      <soap12:operation soapAction="http://tempuri.org/SendPushAndroidNotificationsTo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalculateMessageWithHash">
+      <soap12:operation soapAction="http://tempuri.org/CalculateMessageWithHash" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalculateMessageWithHashJSON">
+      <soap12:operation soapAction="http://tempuri.org/CalculateMessageWithHashJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalculateHash">
+      <soap12:operation soapAction="http://tempuri.org/CalculateHash" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="integraExternalServicesHttpGet" type="tns:integraExternalServicesHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="SendPushWPNotificationsTo">
+      <http:operation location="/SendPushWPNotificationsTo" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendPushAndroidNotificationsTo">
+      <http:operation location="/SendPushAndroidNotificationsTo" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalculateMessageWithHash">
+      <http:operation location="/CalculateMessageWithHash" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalculateMessageWithHashJSON">
+      <http:operation location="/CalculateMessageWithHashJSON" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalculateHash">
+      <http:operation location="/CalculateHash" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="integraExternalServicesHttpPost" type="tns:integraExternalServicesHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="SendPushWPNotificationsTo">
+      <http:operation location="/SendPushWPNotificationsTo" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendPushAndroidNotificationsTo">
+      <http:operation location="/SendPushAndroidNotificationsTo" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalculateMessageWithHash">
+      <http:operation location="/CalculateMessageWithHash" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalculateMessageWithHashJSON">
+      <http:operation location="/CalculateMessageWithHashJSON" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalculateHash">
+      <http:operation location="/CalculateHash" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="integraExternalServices">
+    <wsdl:port name="integraExternalServicesSoap" binding="tns:integraExternalServicesSoap">
+      <soap:address location="http://eagle760.startdedicated.com/integraMobileWS/integraExternalServices.asmx" />
+    </wsdl:port>
+    <wsdl:port name="integraExternalServicesSoap12" binding="tns:integraExternalServicesSoap12">
+      <soap12:address location="http://eagle760.startdedicated.com/integraMobileWS/integraExternalServices.asmx" />
+    </wsdl:port>
+    <wsdl:port name="integraExternalServicesHttpGet" binding="tns:integraExternalServicesHttpGet">
+      <http:address location="http://eagle760.startdedicated.com/integraMobileWS/integraExternalServices.asmx" />
+    </wsdl:port>
+    <wsdl:port name="integraExternalServicesHttpPost" binding="tns:integraExternalServicesHttpPost">
+      <http:address location="http://eagle760.startdedicated.com/integraMobileWS/integraExternalServices.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

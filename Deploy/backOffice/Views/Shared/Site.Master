@@ -1,0 +1,203 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="backOffice.Views.Shared.Site" %>
+<%@ Import Namespace="System.Globalization" %>
+<%@ Import Namespace="backOffice.Properties" %>
+<%@ Import Namespace="integraMobile.Domain" %>
+<%@ Import Namespace="backOffice.Helper" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title><asp:ContentPlaceHolder ID="TitleContent" runat="server" /></title>
+    <link rel="stylesheet" href="../../Content/reset1.css" type="text/css">
+            
+    <link href="<%= Url.Content("~/Content/backOffice.css") %>" rel="stylesheet" type="text/css" />
+    <link href="<%= Url.Content("~/Content/kendo/kendo.common.min.css") %>" rel="stylesheet" type="text/css" />
+    <link href="<%= Url.Content("~/Content/kendo/kendo.default.min.css") %>" rel="stylesheet" type="text/css" />    
+    <link href="<%= Url.Content("~/Content/kendo/kendo.silver.min.css") %>" rel="stylesheet" type="text/css" />
+    <link href="<%= Url.Content("~/Content/kendoExt/kendo.ext.css") %>" rel="stylesheet" type="text/css" />
+    <link href="<%= Url.Content("~/Content/kendo/kendo.dataviz.min.css") %>" rel="stylesheet" type="text/css" />
+    <link href="<%= Url.Content("~/Content/kendo/kendo.dataviz.default.min.css") %>" rel="stylesheet" type="text/css" />
+    <link href="<%= Url.Content("~/Content/menu.css") %>" rel="stylesheet" type="text/css" />    
+    <link href="<%= Url.Content("~/Content/grid.css") %>" rel="stylesheet" type="text/css" />    
+    <script src="<%= Url.Content("~/Scripts/kendo/jquery.min.js") %>"></script>
+    <script src="<%= Url.Content("~/Scripts/kendo/kendo.all.min.js") %>"></script>
+    <script src="<%= Url.Content("~/Scripts/kendo/kendo.aspnetmvc.min.js") %>"></script>
+    <script src="<%= Url.Content("~/Scripts/kendoExt/kendo.web.ext.js") %>"></script>
+    <script src="<%= Url.Content("~/Scripts/jquery.cookie.js") %>"></script>
+    <script src="<%= Url.Content("~/Scripts/msgbox.js") %>"></script>
+    
+    <link href='https://fonts.googleapis.com/css?family=Maven+Pro:400,500' rel='stylesheet' type='text/css'>
+
+    <%
+        var culture = System.Threading.Thread.CurrentThread.CurrentCulture;
+    %>
+    <script src="<%= Url.Content("~/Scripts/kendo/cultures/kendo.culture." + culture + ".min.js") %>"></script>
+
+    <%-- Set the current culture --%>
+    <script>
+        kendo.culture("<%= culture %>");
+    </script>
+
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server"/>	
+
+    <style>
+
+
+    </style>
+
+    <script>
+
+        $(document).ready(function () {
+            //var menu = $("#Menu").data("kendoMenu");
+        });
+
+        function siteMaster_OnMenuSelect(e) {
+            /*var text = $(e.item)
+                .clone()
+                .find("ul")
+                .remove()
+                .end()
+                .text();
+
+            $(e.item).parent().parent().parent().children()[0].innerText = text;*/            
+        }
+
+    </script>
+</head>
+
+<body  >
+    <div id="header">        
+        <div class="headerRight">
+
+        </div>
+    </div>
+    <div id="cuerpo">
+
+    <%
+        var culture = CurrentCultureName();
+        
+        Html.Kendo().Menu()
+          .Name("Menu")          
+          .Items(items =>
+          {
+              /*items.Add()
+                  .Text("Products")
+                  .Items(children =>
+                   {
+                       children.Add().Text("Furniture")
+                               .Items(innerChildren =>
+                               {
+                                   innerChildren.Add().Text("Tables & Chairs");
+                                   innerChildren.Add().Text("Sofas");
+                                   innerChildren.Add().Text("Occasional Furniture");
+                                   innerChildren.Add().Text("Childerns Furniture");
+                                   innerChildren.Add().Text("Beds");
+                               });
+                   });
+            */
+              if (Helper.MenuOptionEnabled("Operation#OperationsExt"))
+              {
+                  items.Add()
+                      .Text(Resources.Menu_Operations)
+                      .ImageUrl(Url.Content("~/Content/img/menu/operations.png"))
+                      .ImageHtmlAttributes(new { @class = "menuIcon" })
+                      .Action("OperationsExt", "Operation");
+              }
+              if (Helper.MenuOptionEnabled("Operation#OperationsExtNoRecharge"))
+              {
+                  items.Add()
+                      .Text(Resources.Menu_Operations)
+                      .ImageUrl(Url.Content("~/Content/img/menu/operations.png"))
+                      .ImageHtmlAttributes(new { @class = "menuIcon" })
+                      .Action("OperationsExtNoRecharge", "Operation");
+              }
+              if (Helper.MenuOptionEnabled("Operation#ExternalOperations"))
+              {
+                  items.Add()
+                      .Text(Resources.Menu_ExternalOperations)
+                      .ImageUrl(Url.Content("~/Content/img/menu/operations.png"))
+                      .ImageHtmlAttributes(new { @class = "menuIcon" })
+                      .Action("ExternalOperations", "Operation");
+              }              
+              if (Helper.MenuOptionEnabled("Invoice#Invoices"))
+              {
+                  items.Add()
+                      .Text(Resources.Menu_Invoices)
+                      .ImageUrl(Url.Content("~/Content/img/menu/invoices.png"))
+                      .ImageHtmlAttributes(new { @class = "menuIcon" })
+                      .Action("Invoices", "Invoice");
+              }
+              if (Helper.MenuOptionEnabled("User#Users"))
+              {
+                  items.Add()
+                      .Text(Resources.Menu_Users)
+                      .ImageUrl(Url.Content("~/Content/img/menu/users.png"))
+                      .ImageHtmlAttributes(new { @class = "menuIcon" })
+                      .Action("Users", "User");
+              }
+              if (Helper.MenuOptionEnabled("CustomerInscription#CustomerInscriptions"))
+              {
+                  items.Add()
+                      .Text(Resources.Menu_CustomerInscriptions)
+                      .ImageUrl(Url.Content("~/Content/img/menu/customerinscriptions.png"))
+                      .ImageHtmlAttributes(new { @class = "menuIcon" })
+                      .Action("CustomerInscriptions", "CustomerInscription");
+              }
+              if (Helper.MenuOptionEnabled("User#UserSecurityOperations"))
+              {
+                  items.Add()
+                      .Text(Resources.Menu_UserSecurityOperations)
+                      .ImageUrl(Url.Content("~/Content/img/menu/usersecurityoperations.png"))
+                      .ImageHtmlAttributes(new { @class = "menuIcon" })
+                      .Action("UserSecurityOperations", "User");
+              }
+              if (Helper.MenuOptionEnabled("Tools#EmailTool"))
+              {
+                  items.Add()
+                      .Text(Resources.Menu_EmailTool)
+                      .ImageUrl(Url.Content("~/Content/img/menu/emailtool.png"))
+                      .ImageHtmlAttributes(new { @class = "menuIcon" })
+                      .Action("EmailTool", "Tools");
+              }              
+              if (Helper.MenuOptionEnabled("Dashboard#Dashboard"))
+              {
+                  items.Add()
+                      .Text(Resources.Menu_Dashboard)
+                      .ImageUrl(Url.Content("~/Content/img/menu/dashboard.png"))
+                      .ImageHtmlAttributes(new { @class = "menuIcon" })
+                      .Action("Dashboard", "Dashboard");
+              }              
+              items.Add()
+                  .Text(System.Threading.Thread.CurrentThread.CurrentCulture.TwoLetterISOLanguageName.ToUpper())
+                  .LinkHtmlAttributes(new { @class = "menuLang" })
+                  //.ImageUrl(Url.Content("~/Content/img/icon_lib/Extra/lang.png"))
+                  //.ImageHtmlAttributes(new { @class = "menuIconSmall" })
+                  .Items(children =>
+                  {
+                      children.Add()
+                            .Text("English")
+                            .Action("ChangeCulture", "Home", new { lang = "en-US", returnUrl = this.Request.RawUrl })
+                            .ImageUrl(Url.Content("~/Content/img/flags/US.GIF"))
+                            .Selected(System.Threading.Thread.CurrentThread.CurrentCulture.Name == "en-US");                            
+                      children.Add()
+                            .Text("Español")
+                            .Action("ChangeCulture", "Home", new { lang = "es-ES", returnUrl = this.Request.RawUrl })
+                            .ImageUrl(Url.Content("~/Content/img/flags/ES.GIF"))
+                            .Selected(System.Threading.Thread.CurrentThread.CurrentCulture.Name == "es-ES");
+                  });
+          })
+          .Events(ev =>
+          {
+              ev.Select("siteMaster_OnMenuSelect");
+          })
+          .Render();
+        %>
+	
+	    <div id="centro" class="centro">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+        </div>
+	
+    </div>
+</body>
+</html>  

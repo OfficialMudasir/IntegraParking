@@ -1,0 +1,73 @@
+﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="manifest" href="~/manifest.webmanifest">
+
+    <title><asp:ContentPlaceHolder ID="TitleContent" runat="server" /></title>
+   
+    <link rel="stylesheet" href="~/Content/CSS/reset.css" type="text/css" />
+    <link rel="stylesheet" href="~/Content/CSS/estilooo.css" type="text/css" />
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,600,400italic,700italic' rel='stylesheet' type='text/css'>
+
+    <script language="javascript">
+        function GetTimeZoneOffset() {
+            
+            if (document.getElementById('utcoffset')) {
+                document.getElementById('utcoffset').value = 0;
+            }
+
+            try
+            {
+                var d = new Date()
+                var n = d.getTimezoneOffset();
+
+                if (document.getElementById('utcoffset')) {
+                    document.getElementById('utcoffset').value = n;
+                }
+            }
+            catch(e)
+            {}
+        }
+
+    </script>
+
+</head>
+
+<body onload="GetTimeZoneOffset();">
+
+    <div id="cuerpo">
+        <div class="header" id="headerindex">
+          <div id="menucontainer">
+            <div class="left">
+            <ul>
+             <% Html.RenderPartial("CultureChooserUserControl"); %>
+            </ul>
+ 
+            </div>
+            <div class="right">
+            <ul>
+              <li><%: Html.ActionLink(Resources.SiteMaster_Home, "Index", "Home")%></li>
+              <li><a href=""><%=Resources.SiteMaster_Contact %></a></li>
+            </ul>
+            </div>
+          </div>
+        </div>
+        <div class="main">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+    <div class="footer">
+          
+  </div>
+
+
+   
+</body>
+</html>

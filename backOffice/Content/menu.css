@@ -1,0 +1,49 @@
+﻿#Menu {
+    background-color: white;
+    border-top-color: white;
+    border-right-style: none;
+}
+               
+#Menu > .k-state-highlight {
+    background: #73b5ca !important;
+}
+
+#Menu > .k-state-default {
+    background: #aaaaaf;            
+}
+
+#Menu > .k-last {
+    float: right;
+    border-left-width: 0px;
+    border-right-width: 0;
+    background: white;
+    vertical-align: bottom;
+}
+
+#Menu .k-group {
+    background: #aaaaaf;
+}
+
+#Menu .k-link:link,
+#Menu .k-link:visited,
+#Menu .k-nav-current.k-state-hover .k-link {
+    color: white;
+}
+
+.menuIcon {
+    height: 38px;
+    width: 38px;
+}
+.menuIconSmall {
+    height: 24px;
+    width: 24px;    
+}
+.menuLang {
+    font-weight: bold;
+}
+
+
+.subMenuIcon {
+    height: 16px;
+    width: 16px;
+}

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://www.parkaregroup.com/PublisherService/M.1.3" elementFormDefault="qualified" targetNamespace="http://www.parkaregroup.com/PublisherService/M.1.3" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://ser-web.madmovilidad.es/PublisherService/PublisherService.svc?xsd=xsd0" namespace="http://www.parkaregroup.com/PublisherService/1.0" />
+  <xs:import schemaLocation="http://ser-web.madmovilidad.es/PublisherService/PublisherService.svc?xsd=xsd3" namespace="http://www.parkaregroup.com/PublisherService/1.1" />
+  <xs:import schemaLocation="http://ser-web.madmovilidad.es/PublisherService/PublisherService.svc?xsd=xsd9" namespace="http://www.parkaregroup.com/PublisherService/1.3" />
+  <xs:element name="GetTransactionInfoPD">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://www.parkaregroup.com/PublisherService/1.0" minOccurs="0" name="authSession" nillable="true" type="q1:AuthSession" />
+        <xs:element xmlns:q2="http://www.parkaregroup.com/PublisherService/1.0" minOccurs="0" name="Selector" nillable="true" type="q2:EntityFilterBase" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTransactionInfoPDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://www.parkaregroup.com/PublisherService/1.1" minOccurs="0" name="GetTransactionInfoPDResult" nillable="true" type="q3:ValCodeStatResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTransactionInfoMB">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://www.parkaregroup.com/PublisherService/1.0" minOccurs="0" name="authSession" nillable="true" type="q4:AuthSession" />
+        <xs:element xmlns:q5="http://www.parkaregroup.com/PublisherService/1.0" minOccurs="0" name="Selector" nillable="true" type="q5:EntityFilterBase" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTransactionInfoMBResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://www.parkaregroup.com/PublisherService/1.1" minOccurs="0" name="GetTransactionInfoMBResult" nillable="true" type="q6:ValCodeStatResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateTrafficFinePhotos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://www.parkaregroup.com/PublisherService/1.0" minOccurs="0" name="authSession" nillable="true" type="q7:AuthSession" />
+        <xs:element xmlns:q8="http://www.parkaregroup.com/PublisherService/1.0" minOccurs="0" name="city" nillable="true" type="q8:EntityFilterCity" />
+        <xs:element xmlns:q9="http://www.parkaregroup.com/PublisherService/1.3" minOccurs="0" name="request" nillable="true" type="q9:PhotosUpdateRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateTrafficFinePhotosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://www.parkaregroup.com/PublisherService/1.3" minOccurs="0" name="UpdateTrafficFinePhotosResult" nillable="true" type="q10:PhotosResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteTrafficFinePhotos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://www.parkaregroup.com/PublisherService/1.0" minOccurs="0" name="authSession" nillable="true" type="q11:AuthSession" />
+        <xs:element xmlns:q12="http://www.parkaregroup.com/PublisherService/1.0" minOccurs="0" name="city" nillable="true" type="q12:EntityFilterCity" />
+        <xs:element xmlns:q13="http://www.parkaregroup.com/PublisherService/1.3" minOccurs="0" name="request" nillable="true" type="q13:PhotosDeleteRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteTrafficFinePhotosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://www.parkaregroup.com/PublisherService/1.3" minOccurs="0" name="DeleteTrafficFinePhotosResult" nillable="true" type="q14:PhotosResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTrafficFinePhotos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://www.parkaregroup.com/PublisherService/1.0" minOccurs="0" name="authSession" nillable="true" type="q15:AuthSession" />
+        <xs:element xmlns:q16="http://www.parkaregroup.com/PublisherService/1.0" minOccurs="0" name="city" nillable="true" type="q16:EntityFilterCity" />
+        <xs:element minOccurs="0" name="expedientNumber" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTrafficFinePhotosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://www.parkaregroup.com/PublisherService/1.3" minOccurs="0" name="GetTrafficFinePhotosResult" nillable="true" type="q17:PhotosResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,31 @@
+11/11/2022 3:55:52 PM - Random Log
+11/11/2022 3:55:52 PM - Entering into condition : Line  351
+11/11/2022 3:55:55 PM - Parsed ImageList success
+11/11/2022 3:56:04 PM - Entering into SaveAppeal 1 Method
+11/11/2022 3:56:04 PM - Entering into Else condition from External Services.cs class : Ticket number = 3048123, Plate number = CPYL553, Installation List = 0
+11/11/2022 3:56:31 PM - Appeal Response Updated
+11/11/2022 3:58:06 PM - Message : Object reference not set to an instance of an object. and Stack Trace :    at integraMobile.Controllers.AppealController.SaveAppealInformation(AppealReturnModel appealReturnModel) in D:\IntegraMobileDev\PayByPhoneWeb.Appeal\Integra\integraMobile\Controllers\AppealController.cs:line 346
+11/11/2022 4:03:45 PM - Random Log
+11/11/2022 4:03:45 PM - Entering into condition : Line  351
+11/11/2022 4:03:45 PM - Parsed ImageList success
+11/11/2022 4:03:45 PM - Entering into SaveAppeal 1 Method
+11/11/2022 4:03:45 PM - Entering into Else condition from External Services.cs class : Ticket number = 3048123, Plate number = CPYL553, Installation List = 0
+11/11/2022 4:03:57 PM - Appeal Response Updated
+11/11/2022 4:04:46 PM - Random Log
+11/11/2022 4:04:46 PM - Entering into condition : Line  351
+11/11/2022 4:04:46 PM - Parsed ImageList success
+11/11/2022 4:04:46 PM - Entering into SaveAppeal 1 Method
+11/11/2022 4:04:46 PM - Entering into Else condition from External Services.cs class : Ticket number = 3048123, Plate number = CPYL553, Installation List = 0
+11/11/2022 4:04:50 PM - Appeal Response Updated
+11/11/2022 4:10:02 PM - Random Log
+11/11/2022 4:10:02 PM - Entering into condition : Line  351
+11/11/2022 4:10:02 PM - Parsed ImageList success
+11/11/2022 4:10:02 PM - Entering into SaveAppeal 1 Method
+11/11/2022 4:10:02 PM - Entering into Else condition from External Services.cs class : Ticket number = 3048123, Plate number = CPYL553, Installation List = 0
+11/11/2022 4:10:07 PM - Appeal Response Updated
+11/11/2022 4:10:47 PM - Random Log
+11/11/2022 4:10:47 PM - Entering into condition : Line  351
+11/11/2022 4:10:47 PM - Parsed ImageList success
+11/11/2022 4:10:47 PM - Entering into SaveAppeal 1 Method
+11/11/2022 4:10:47 PM - Entering into Else condition from External Services.cs class : Ticket number = 3048123, Plate number = CPYL553, Installation List = 0
+11/11/2022 4:10:51 PM - Appeal Response Updated

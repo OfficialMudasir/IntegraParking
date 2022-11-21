@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="DBBench" namespace="DBBench.Oracle" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="OraTestTable" table="TEST_TABLE" schema="`C##TESTDBUSER`">
+    <id name="OraId" type="Decimal">
+      <column name="ID" not-null="true" scale="0" sql-type="NUMBER" />
+      <generator class="trigger-identity" />
+    </id>
+    <property name="OraStringField" type="String">
+      <column name="STRING_FIELD" not-null="false" length="4000" sql-type="VARCHAR2(4000 CHAR)" />
+    </property>
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,358 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{931B7F94-C30B-4FA2-B671-603CBFE108C8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>integraMobile.Reports</RootNamespace>
+    <AssemblyName>integraMobile.Reports</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Telerik.Reporting, Version=10.1.16.615, Culture=neutral, PublicKeyToken=a9d7983dfcc261be, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\dbPIC\trunk\02_Dev\02_CC\02_Src\BackOffice\Lib\Kendo\Reporting R2 2016\dlls\Telerik.Reporting.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Reporting.Adomd, Version=10.1.16.615, Culture=neutral, PublicKeyToken=a9d7983dfcc261be, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\dbPIC\trunk\02_Dev\02_CC\02_Src\BackOffice\Lib\Kendo\Reporting R2 2016\dlls\Telerik.Reporting.Adomd.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Reporting.Cache.Database, Version=10.1.16.615, Culture=neutral, PublicKeyToken=a9d7983dfcc261be, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\dbPIC\trunk\02_Dev\02_CC\02_Src\BackOffice\Lib\Kendo\Reporting R2 2016\dlls\Telerik.Reporting.Cache.Database.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Reporting.OpenXmlRendering, Version=10.1.16.615, Culture=neutral, PublicKeyToken=a9d7983dfcc261be, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\dbPIC\trunk\02_Dev\02_CC\02_Src\BackOffice\Lib\Kendo\Reporting R2 2016\dlls\Telerik.Reporting.OpenXmlRendering.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Reporting.Service, Version=10.1.16.615, Culture=neutral, PublicKeyToken=a9d7983dfcc261be, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\dbPIC\trunk\02_Dev\02_CC\02_Src\BackOffice\Lib\Kendo\Reporting R2 2016\dlls\Telerik.Reporting.Service.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Reporting.Services.ServiceStack, Version=10.1.16.615, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\dbPIC\trunk\02_Dev\02_CC\02_Src\BackOffice\Lib\Kendo\Reporting R2 2016\dlls\Telerik.Reporting.Services.ServiceStack.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Reporting.Services.WebApi, Version=10.1.16.615, Culture=neutral, PublicKeyToken=a9d7983dfcc261be, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\dbPIC\trunk\02_Dev\02_CC\02_Src\BackOffice\Lib\Kendo\Reporting R2 2016\dlls\Telerik.Reporting.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Reporting.XpsRendering, Version=10.1.16.615, Culture=neutral, PublicKeyToken=a9d7983dfcc261be, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\dbPIC\trunk\02_Dev\02_CC\02_Src\BackOffice\Lib\Kendo\Reporting R2 2016\dlls\Telerik.Reporting.XpsRendering.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Finantial\Balance.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Finantial\Balance.Designer.cs">
+      <DependentUpon>Balance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finantial\Bank.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Finantial\Bank.Designer.cs">
+      <DependentUpon>Bank.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finantial\Benefits.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Finantial\Benefits.Designer.cs">
+      <DependentUpon>Benefits.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finantial\Deposits2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Finantial\Deposits2.designer.cs">
+      <DependentUpon>Deposits2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finantial\Deposits3.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Finantial\Deposits3.designer.cs">
+      <DependentUpon>Deposits3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finantial\GeneralDataInstallation.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Finantial\GeneralDataInstallation.Designer.cs">
+      <DependentUpon>GeneralDataInstallation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finantial\GeneralData.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Finantial\GeneralData.Designer.cs">
+      <DependentUpon>GeneralData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finantial\LiquidationCashRechargesSub.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Finantial\LiquidationCashRechargesSub.Designer.cs">
+      <DependentUpon>LiquidationCashRechargesSub.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finantial\LiquidationDetail2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Finantial\LiquidationDetail2.designer.cs">
+      <DependentUpon>LiquidationDetail2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finantial\Deposits.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Finantial\Deposits.designer.cs">
+      <DependentUpon>Deposits.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finantial\FinantialReportsIndex.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Finantial\FinantialReportsIndex.designer.cs">
+      <DependentUpon>FinantialReportsIndex.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finantial\LiquidationDetail.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Finantial\LiquidationDetail.designer.cs">
+      <DependentUpon>LiquidationDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finantial\LiquidationDetail3.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Finantial\LiquidationDetail3.designer.cs">
+      <DependentUpon>LiquidationDetail3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finantial\RegisteredUsers.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Finantial\RegisteredUsers.Designer.cs">
+      <DependentUpon>RegisteredUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Invoicing\iparkme_invoice.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Invoicing\iparkme_invoice.Designer.cs">
+      <DependentUpon>iparkme_invoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Invoicing\eysa_invoice.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Invoicing\eysa_invoice.Designer.cs">
+      <DependentUpon>eysa_invoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Invoicing\InvoiceOperations.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Invoicing\InvoiceOperations.Designer.cs">
+      <DependentUpon>InvoiceOperations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Invoicing\InvoiceRecharges.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Invoicing\InvoiceRecharges.Designer.cs">
+      <DependentUpon>InvoiceRecharges.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Invoicing\InvoiceServiceCharges.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Invoicing\InvoiceServiceCharges.Designer.cs">
+      <DependentUpon>InvoiceServiceCharges.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Invoicing\InvoiceTicketPayments.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Invoicing\InvoiceTicketPayments.Designer.cs">
+      <DependentUpon>InvoiceTicketPayments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="ReportHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Finantial\Balance.resx">
+      <DependentUpon>Balance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finantial\Bank.resx">
+      <DependentUpon>Bank.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finantial\Benefits.resx">
+      <DependentUpon>Benefits.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finantial\Deposits.resx">
+      <DependentUpon>Deposits.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finantial\Deposits2.resx">
+      <DependentUpon>Deposits2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finantial\Deposits3.resx">
+      <DependentUpon>Deposits3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finantial\GeneralDataInstallation.resx">
+      <DependentUpon>GeneralDataInstallation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finantial\GeneralData.resx">
+      <DependentUpon>GeneralData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finantial\LiquidationCashRechargesSub.resx">
+      <DependentUpon>LiquidationCashRechargesSub.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finantial\LiquidationDetail2.resx">
+      <DependentUpon>LiquidationDetail2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finantial\FinantialReportsIndex.ca-ES.resx">
+      <DependentUpon>FinantialReportsIndex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finantial\FinantialReportsIndex.en-US.resx">
+      <DependentUpon>FinantialReportsIndex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finantial\FinantialReportsIndex.resx">
+      <DependentUpon>FinantialReportsIndex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finantial\LiquidationDetail.resx">
+      <DependentUpon>LiquidationDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finantial\LiquidationDetail3.resx">
+      <DependentUpon>LiquidationDetail3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finantial\RegisteredUsers.resx">
+      <DependentUpon>RegisteredUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Invoicing\iparkme_invoice.resx">
+      <DependentUpon>iparkme_invoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Invoicing\eysa_invoice.resx">
+      <DependentUpon>eysa_invoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Invoicing\InvoiceOperations.resx">
+      <DependentUpon>InvoiceOperations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Invoicing\InvoiceRecharges.resx">
+      <DependentUpon>InvoiceRecharges.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Invoicing\InvoiceServiceCharges.resx">
+      <DependentUpon>InvoiceServiceCharges.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Invoicing\InvoiceTicketPayments.resx">
+      <DependentUpon>InvoiceTicketPayments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Locale\ca-ES\Balance.resx" />
+    <EmbeddedResource Include="Locale\ca-ES\Bank.resx" />
+    <EmbeddedResource Include="Locale\ca-ES\Benefits.resx" />
+    <EmbeddedResource Include="Locale\ca-ES\Deposits.resx" />
+    <EmbeddedResource Include="Locale\ca-ES\Deposits2.resx" />
+    <EmbeddedResource Include="Locale\ca-ES\Deposits3.resx" />
+    <EmbeddedResource Include="Locale\ca-ES\eysa_invoice.resx" />
+    <EmbeddedResource Include="Locale\ca-ES\FinantialReportsIndex.resx" />
+    <EmbeddedResource Include="Locale\ca-ES\InvoiceOperations.resx" />
+    <EmbeddedResource Include="Locale\ca-ES\InvoiceRecharges.resx" />
+    <EmbeddedResource Include="Locale\ca-ES\InvoiceServiceCharges.resx" />
+    <EmbeddedResource Include="Locale\ca-ES\InvoiceTicketPayments.resx" />
+    <EmbeddedResource Include="Locale\ca-ES\LiquidationDetail3Sub.resx" />
+    <EmbeddedResource Include="Locale\ca-ES\LiquidationDetailSub.resx" />
+    <EmbeddedResource Include="Locale\ca-ES\LiquidationDetail.resx" />
+    <EmbeddedResource Include="Locale\en-US\Balance.resx" />
+    <EmbeddedResource Include="Locale\en-US\Bank.resx" />
+    <EmbeddedResource Include="Locale\en-US\Benefits.resx" />
+    <EmbeddedResource Include="Locale\en-US\Deposits.resx" />
+    <EmbeddedResource Include="Locale\en-US\Deposits2.resx" />
+    <EmbeddedResource Include="Locale\en-US\Deposits3.resx" />
+    <EmbeddedResource Include="Locale\en-US\eysa_invoice.resx" />
+    <EmbeddedResource Include="Locale\en-US\FinantialReportsIndex.resx" />
+    <EmbeddedResource Include="Locale\en-US\InvoiceOperations.resx" />
+    <EmbeddedResource Include="Locale\en-US\InvoiceRecharges.resx" />
+    <EmbeddedResource Include="Locale\en-US\InvoiceServiceCharges.resx" />
+    <EmbeddedResource Include="Locale\en-US\InvoiceTicketPayments.resx" />
+    <EmbeddedResource Include="Locale\en-US\LiquidationDetail3Sub.resx" />
+    <EmbeddedResource Include="Locale\en-US\LiquidationDetailSub.resx" />
+    <EmbeddedResource Include="Locale\en-US\LiquidationDetail.resx" />
+    <EmbeddedResource Include="Locale\es-ES\Balance.resx" />
+    <EmbeddedResource Include="Locale\es-ES\Bank.resx" />
+    <EmbeddedResource Include="Locale\es-ES\Benefits.resx" />
+    <EmbeddedResource Include="Locale\es-ES\Deposits.resx" />
+    <EmbeddedResource Include="Locale\es-ES\Deposits2.resx" />
+    <EmbeddedResource Include="Locale\es-ES\Deposits3.resx" />
+    <EmbeddedResource Include="Locale\es-ES\eysa_invoice.resx" />
+    <EmbeddedResource Include="Locale\es-ES\FinantialReportsIndex.resx" />
+    <EmbeddedResource Include="Locale\es-ES\InvoiceOperations.resx" />
+    <EmbeddedResource Include="Locale\es-ES\InvoiceRecharges.resx" />
+    <EmbeddedResource Include="Locale\es-ES\InvoiceServiceCharges.resx" />
+    <EmbeddedResource Include="Locale\es-ES\InvoiceTicketPayments.resx" />
+    <EmbeddedResource Include="Locale\es-ES\LiquidationDetail3Sub.resx" />
+    <EmbeddedResource Include="Locale\es-ES\LiquidationDetailSub.resx" />
+    <EmbeddedResource Include="Locale\es-ES\LiquidationDetail.resx" />
+    <EmbeddedResource Include="Properties\licenses.licx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\..\..\dbPIC\trunk\02_Dev\02_CC\02_Src\BackOffice\Common\backOffice.Infrastructure\backOffice.Infrastructure.csproj">
+      <Project>{b505da11-b18a-4716-a4d4-b08a26e7c000}</Project>
+      <Name>backOffice.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\..\..\dbPIC\trunk\02_Dev\02_CC\02_Src\Infrastructure\Common\Common.csproj">
+      <Project>{9d356047-4d2a-4f59-90c0-592c96670119}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\..\..\dbPIC\trunk\02_Dev\02_CC\02_Src\PIC.Domain\PIC.Domain.csproj">
+      <Project>{363051f8-1e99-447e-a542-b6d19f1f14b2}</Project>
+      <Name>PIC.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="iCurrencyChange" EntityNamespace="CurrencyChanger.WS.Domain" Class="iCurrencyChangeDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=KIKE-HP\SQLEXPRESS;Initial Catalog=iCurrencyChange;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="iCurrencyChangeConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.CURRENCIES" Member="CURRENCies">
+    <Type Name="CURRENCy">
+      <Column Name="CUR_ID" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CUR_NAME" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CUR_ISO_CODE" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="CUR_ISO_CODE_NUM" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="CUR_MINOR_UNIT" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CUR_SYMBOL" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="CUR_FACT" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Association Name="CURRENCy_CURRENCY_CHANGE" Member="CURRENCY_CHANGEs" ThisKey="CUR_ID" OtherKey="CUCH_DST_CUR_ID" Type="CURRENCY_CHANGE" />
+      <Association Name="CURRENCy_CURRENCY_CHANGE1" Member="CURRENCY_CHANGEs1" ThisKey="CUR_ID" OtherKey="CUCH_SRC_CUR_ID" Type="CURRENCY_CHANGE" />
+      <Association Name="CURRENCy_CURRENCY_CHANGES_HI" Member="CURRENCY_CHANGES_HIs" ThisKey="CUR_ID" OtherKey="CUCHH_DST_CUR_ID" Type="CURRENCY_CHANGES_HI" />
+      <Association Name="CURRENCy_CURRENCY_CHANGES_HI1" Member="CURRENCY_CHANGES_HIs1" ThisKey="CUR_ID" OtherKey="CUCHH_SRC_CUR_ID" Type="CURRENCY_CHANGES_HI" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PARAMETERS" Member="PARAMETERs">
+    <Type Name="PARAMETER">
+      <Column Name="PAR_ID" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PAR_NAME" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="PAR_VALUE" Type="System.String" DbType="VarChar(1024)" CanBeNull="true" />
+      <Column Name="PAR_DESCRIPTION" Type="System.String" DbType="VarChar(1024)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CURRENCY_CHANGES" Member="CURRENCY_CHANGEs">
+    <Type Name="CURRENCY_CHANGE">
+      <Column Name="CUCH_ID" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CUCH_SRC_CUR_ID" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="CUCH_DST_CUR_ID" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="CUCH_CHANGE" Type="System.Decimal" DbType="Decimal(18,6) NOT NULL" CanBeNull="false" />
+      <Column Name="CUCH_CHANGE_UTC_DATE" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="CURRENCy_CURRENCY_CHANGE" Member="CURRENCy" ThisKey="CUCH_DST_CUR_ID" OtherKey="CUR_ID" Type="CURRENCy" IsForeignKey="true" />
+      <Association Name="CURRENCy_CURRENCY_CHANGE1" Member="CURRENCy1" ThisKey="CUCH_SRC_CUR_ID" OtherKey="CUR_ID" Type="CURRENCy" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CURRENCY_CHANGES_HIS" Member="CURRENCY_CHANGES_HIs">
+    <Type Name="CURRENCY_CHANGES_HI">
+      <Column Name="CUCHH_ID" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CUCHH_SRC_CUR_ID" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="CUCHH_DST_CUR_ID" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="CUCHH_CHANGE" Type="System.Decimal" DbType="Decimal(18,6) NOT NULL" CanBeNull="false" />
+      <Column Name="CUCHH_CHANGE_UTC_INIDATE" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="CUCHH_CHANGE_UTC_ENDDATE" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="CURRENCy_CURRENCY_CHANGES_HI" Member="CURRENCy" ThisKey="CUCHH_DST_CUR_ID" OtherKey="CUR_ID" Type="CURRENCy" IsForeignKey="true" />
+      <Association Name="CURRENCy_CURRENCY_CHANGES_HI1" Member="CURRENCy1" ThisKey="CUCHH_SRC_CUR_ID" OtherKey="CUR_ID" Type="CURRENCy" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

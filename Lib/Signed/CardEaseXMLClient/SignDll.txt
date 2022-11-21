@@ -1,0 +1,3 @@
+ildasm /all /out=Webpay.Transbank.Library.il Webpay.Transbank.Library.dll
+sn -k Webpay.Transbank.Library.snk
+ilasm /dll /key=Webpay.Transbank.Library.snk Webpay.Transbank.Library.il

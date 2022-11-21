@@ -1,0 +1,3278 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Telerik.ReportViewer.Silverlight</name>
+    </assembly>
+    <members>
+        <member name="P:Telerik.Reporting.Processing.ActionInfo.Action">
+            <summary>
+            The Action that will be executed.
+            </summary>
+        </member>
+        <member name="M:Telerik.Reporting.Processing.DocumentMapProvider.BuildDocumentMap(System.Object,System.Collections.Generic.IEnumerable{Telerik.Reporting.Service.BookmarkNode},System.Boolean)">
+            <summary>
+            Builds document map structure from the bookmarks.
+            </summary>
+            <param name="root">Node where all generated nodes will be added.</param>
+            <param name="bookmarks">Source bookmarks.</param>
+            <param name="documentMapAvailable">Indicates whether there are document map nodes 
+            among the bookmarks.</param>
+        </member>
+        <member name="P:Telerik.Reporting.Processing.SinglePositionActionInfo.ZOrder">
+            <summary>
+            Z-order of the Action. Determines which of two overlapping actions is hit.
+            </summary>
+        </member>
+        <member name="T:Telerik.Reporting.IAction">
+            <summary>
+            Represents an interactive action associated with a report item.
+            </summary>
+        </member>
+        <member name="T:Telerik.ReportViewer.Silverlight.TextResources">
+            <summary>
+            Provides the default tooltips and messages for the viewer.
+            </summary>
+        </member>
+        <member name="T:Telerik.ReportViewer.Silverlight.ITextResources">
+            <summary>
+            This interface is used for customization or localization of all text resources, 
+            as alternative to localization/customization with .resx files.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ITextResources.AllFiles">
+            <summary>
+            Specifies the text for the AllFiles filter in the SaveFileDialog.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ITextResources.BackToolTip">
+            <summary>
+            Specifies the tooltip for the Back button.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ITextResources.CancellingPrintMessage">
+            <summary>
+            Specifies the text for the message that is displayed
+            when printing is cancelled.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ITextResources.CancelExportButtonText">
+            <summary>
+            Specifies the text for the Export Cancel button.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ITextResources.CancelPrintButtonText">
+            <summary>
+            Specifies the text for the Print Cancel button.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ITextResources.CannotConvertTypeError">
+            <summary>
+            Specifies the message for the type conversion error.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ITextResources.CurrentPageToolTip">
+            <summary>
+            Specifies the tooltip for the CurrentPage label.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ITextResources.DocumentMapToolTip">
+            <summary>
+            Specifies the tooltips for the toggle document map area button. 
+            The two texts are separated by '|'.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ITextResources.DocumentReadyForPrintMessage">
+            <summary>
+            Specifies the text for the message that is displayed when the document 
+            is ready for printing.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ITextResources.ExportingProgressMessage">
+            <summary>
+            Specifies the text for the export progress message.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ITextResources.ExportToolTip">
+            <summary>
+            Specifies the tooltip for the Export button.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ITextResources.FileReadyToSaveMessage">
+            <summary>
+            Specifies the text for the message that is displayed when the file is 
+            ready to be saved.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ITextResources.FirstPageToolTip">
+            <summary>
+            Specifies the tooltip for the FirstPage button.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ITextResources.ForwardToolTip">
+            <summary>
+            Specifies the tooltip for the Forward button.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ITextResources.LabelOf">
+            <summary>
+            Specifies the label 'of' in the viewer toolbar.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ITextResources.LastPageToolTip">
+            <summary>
+            Specifies the tooltip for the LastPage button.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ITextResources.LoadingPageMessage">
+            <summary>
+            Specifies the transitional loading page message.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ITextResources.MultipleValuesNotSupportedError">
+            <summary>
+            Specifies the text for the message that is displayed when the
+            parameter does not support multiple values.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ITextResources.NextPageToolTip">
+            <summary>
+            Specifies the tooltip for the NextPage button.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ITextResources.NoPageToDisplay">
+            <summary>
+            Specifies the text which appears if there are no pages to display.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ITextResources.NoReportError">
+            <summary>
+            Specifies the error message for missing report.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ITextResources.PageNumberGreaterThanRangeError">
+            <summary>
+            Specifies the error message for the case when the page number 
+            is greater than the count of pages.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ITextResources.PageNumberLessThanRangeError">
+            <summary>
+            Specifies the error message for the case when the page number is less than 1.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ITextResources.ParametersToolTip">
+            <summary>
+            Specifies the tooltips for the toggle parameters area button. 
+            The two texts are separated by '|'.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ITextResources.PreparingForPrintMessage">
+            <summary>
+            Specifies the text for the message that is displayed when the report
+            is being prepared for printing.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ITextResources.PreviousPageToolTip">
+            <summary>
+            Specifies the tooltip for the PreviousPage button.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ITextResources.PreviewButtonText">
+            <summary>
+            Specifies the text for the Preview button.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ITextResources.PrintingRequiresBrowserError">
+            <summary>
+            Specifies the text for the message that is displayed when 
+            trying to print Out-of-Browser.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ITextResources.PrintPreviewToolTip">
+            <summary>
+            Specifies the tooltip for the Print Preview.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ITextResources.PrintProgressMessage">
+            <summary>
+            Specifies the text for the message that show which page
+            is currently being printed.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ITextResources.PrintButtonText">
+            <summary>
+            Specifies the text for the dialog Print button.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ITextResources.PrintToolTip">
+            <summary>
+            Specifies the tooltip for the Print button.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ITextResources.ProcessingReportMessage">
+            <summary>
+            Specifies the text for the wait message shown while the report is being processed.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ITextResources.RefreshToolTip">
+            <summary>
+            Specifies the tooltip for the Refresh button.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ITextResources.ReportParametersAreaValidationError">
+            <summary>
+            Specifies the error message for the case when the report parameters
+            are set from the parameters area in the report viewer.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ITextResources.ReportParametersNullText">
+            <summary>
+            Specifies the checkbox text for the parameters area for the case
+            when nulls are allowed as parameters.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ITextResources.ReportParametersSelectAllText">
+            <summary>
+            Specifies the &lt;select all&gt; text for a multivalue parameter editor.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ITextResources.ReportParametersValidationError">
+            <summary>
+            Specifies the error message for the case when the report parameters
+            are wrong or missing.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ITextResources.InvalidValueForParameter">
+            <summary>
+            Specifies the text for the tooltip shown when validating parameter results in an invalid value
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ITextResources.SaveButtonText">
+            <summary>
+            Specifies the text for the dialog Save button.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ITextResources.StartingPrintMessage">
+            <summary>
+            Specifies the text for the message that is displayed
+            when printing is started.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ITextResources.TotalPagesToolTip">
+            <summary>
+            Specifies the tooltip for the TotalPages button.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ITextResources.UnableToExportError">
+            <summary>
+            Specifies the text for the message that is displayed when the report is not 
+            exported.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ITextResources.UpdatingParametersDoneMessage">
+            <summary>
+            Specifies the text for the message that is displayed when the updating of
+            parameters is finished.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ITextResources.UpdatingParametersMessage">
+            <summary>
+            Specifies the transitional updating parameters message.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ITextResources.ZoomToolTip">
+            <summary>
+            Specifies the tooltip for the Zoom select.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ITextResources.ZoomToPageWidth">
+            <summary>
+            Specifies the name for the PageWidth zoom mode.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ITextResources.ZoomToWholePage">
+            <summary>
+            Specifies the name for the WholePage zoom mode.
+            </summary>
+        </member>
+        <member name="M:Telerik.ReportViewer.Silverlight.TextResources.ToString">
+            <summary>
+            In design time, for the property window
+            to display something more meaningful than
+            the type name.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.TextResources.AllFiles">
+            <summary>
+            Specifies the text for the AllFiles filter in the SaveFileDialog.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.TextResources.BackToolTip">
+            <summary>
+            Specifies the tooltip for the Back button.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.TextResources.CancellingPrintMessage">
+            <summary>
+            Specifies the text for the message that is displayed
+            when printing is cancelled.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.TextResources.CancelExportButtonText">
+            <summary>
+            Specifies the text for each Cancel button.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.TextResources.CancelPrintButtonText">
+            <summary>
+            Specifies the text for each Cancel button.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.TextResources.CannotConvertTypeError">
+            <summary>
+            Specifies the message for the type conversion error.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.TextResources.CurrentPageToolTip">
+            <summary>
+            Specifies the tooltip for the CurrentPage label.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.TextResources.DocumentMapToolTip">
+            <summary>
+            Specifies the tooltips for the toggle document map area button. 
+            The two texts are separated by '|'.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.TextResources.DocumentReadyForPrintMessage">
+            <summary>
+            Specifies the text for the message that is displayed when the document 
+            is ready for printing.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.TextResources.ExportingProgressMessage">
+            <summary>
+            Specifies the text for the export progress message.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.TextResources.ExportToolTip">
+            <summary>
+            Specifies the tooltip for the Export button.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.TextResources.FileReadyToSaveMessage">
+            <summary>
+            Specifies the text for the message that is displayed when the file is 
+            ready to be saved.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.TextResources.FirstPageToolTip">
+            <summary>
+            Specifies the tooltip for the FirstPage button.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.TextResources.ForwardToolTip">
+            <summary>
+            Specifies the tooltip for the Forward button.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.TextResources.LabelOf">
+            <summary>
+            Specifies the label 'of' in the viewer toolbar.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.TextResources.LastPageToolTip">
+            <summary>
+            Specifies the tooltip for the LastPage button.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.TextResources.LoadingPageMessage">
+            <summary>
+            Specifies the transitional loading page message.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.TextResources.MultipleValuesNotSupportedError">
+            <summary>
+            Specifies the text for the message that is displayed when the
+            parameter does not support multiple values.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.TextResources.NextPageToolTip">
+            <summary>
+            Specifies the tooltip for the NextPage button.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.TextResources.NoPageToDisplay">
+            <summary>
+            Specifies the text which appears if there are no pages to display.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.TextResources.NoReportError">
+            <summary>
+            Specifies the error message for missing report.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.TextResources.PageNumberGreaterThanRangeError">
+            <summary>
+            Specifies the error message for the case when the page number 
+            is greater than the count of pages.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.TextResources.PageNumberLessThanRangeError">
+            <summary>
+            Specifies the error message for the case when the page number is less than 1.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.TextResources.ParametersToolTip">
+            <summary>
+            Specifies the tooltips for the toggle parameters area button. 
+            The two texts are separated by '|'.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.TextResources.PreparingForPrintMessage">
+            <summary>
+            Specifies the text for the message that is displayed when the report
+            is being prepared for printing.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.TextResources.PreviousPageToolTip">
+            <summary>
+            Specifies the tooltip for the PreviousPage button.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.TextResources.PreviewButtonText">
+            <summary>
+            Specifies the text for the Preview button.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.TextResources.PrintingRequiresBrowserError">
+            <summary>
+            Specifies the text for the message that is displayed when 
+            trying to print Out-of-Browser.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.TextResources.PrintPreviewToolTip">
+            <summary>
+            Specifies the tooltip for the Print Preview.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.TextResources.PrintProgressMessage">
+            <summary>
+            Specifies the text for the message that show which page
+            is currently being printed.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.TextResources.PrintButtonText">
+            <summary>
+            Specifies the text for the dialog Print button.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.TextResources.PrintToolTip">
+            <summary>
+            Specifies the tooltip for the Print button.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.TextResources.ProcessingReportMessage">
+            <summary>
+            Specifies the text for the wait message shown while the report is being processed.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.TextResources.RefreshToolTip">
+            <summary>
+            Specifies the tooltip for the Refresh button.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.TextResources.ReportParametersAreaValidationError">
+            <summary>
+            Specifies the error message for the case when the report parameters
+            are set from the parameters area in the report viewer.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.TextResources.ReportParametersNullText">
+            <summary>
+            Specifies the checkbox text for the parameters area for the case
+            when nulls are allowed as parameters.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.TextResources.InvalidValueForParameter">
+            <summary>
+            Specifies the text for the tooltip shown when validating parameter results in an invalid value
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.TextResources.ReportParametersSelectAllText">
+            <summary>
+            Specifies the &lt;select all&gt; text for a multivalue parameter editor.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.TextResources.ReportParametersValidationError">
+            <summary>
+            Specifies the error message for the case when the report parameters
+            are wrong or missing.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.TextResources.SaveButtonText">
+            <summary>
+            Specifies the text for the dialog Save button.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.TextResources.StartingPrintMessage">
+            <summary>
+            Specifies the text for the message that is displayed
+            when printing is started.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.TextResources.SwitchToPrintPreviewMessage">
+            <summary>
+            Specifies the tooltip of the Print button that is displayed when trying to print
+            from Interactive View.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.TextResources.TotalPagesToolTip">
+            <summary>
+            Specifies the tooltip for the TotalPages button.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.TextResources.UnableToExportError">
+            <summary>
+            Specifies the text for the message that is displayed when the report is not 
+            exported.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.TextResources.UpdatingParametersDoneMessage">
+            <summary>
+            Specifies the text for the message that is displayed when the updating of
+            parameters is finished.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.TextResources.UpdatingParametersMessage">
+            <summary>
+            Specifies the transitional updating parameters message.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.TextResources.ZoomToolTip">
+            <summary>
+            Specifies the tooltip for the Zoom select.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.TextResources.ZoomToPageWidth">
+            <summary>
+            Specifies the name for the PageWidth zoom mode.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.TextResources.ZoomToWholePage">
+            <summary>
+            Specifies the name for the WholePage zoom mode.
+            </summary>
+        </member>
+        <member name="T:Telerik.ReportViewer.Common.DocumentMapNodeModel">
+            <summary>
+            Represents a node in the DocumentMap hierarchy. Used from SL and WPF viewers
+            </summary>
+        </member>
+        <member name="T:Telerik.ReportViewer.Silverlight.ObservableObject">
+            <summary>
+            Represents an observable object.
+            </summary>
+        </member>
+        <member name="M:Telerik.ReportViewer.Silverlight.ObservableObject.OnPropertyChanged(System.String)">
+            <summary>
+            Raises the PropertyChanged event.
+            </summary>
+            <param name="propertyName"></param>
+        </member>
+        <member name="E:Telerik.ReportViewer.Silverlight.ObservableObject.PropertyChanged">
+            <summary>
+            Occurs when a property value changes.
+            </summary>
+        </member>
+        <member name="M:Telerik.ReportViewer.Common.DocumentMapNodeModel.#ctor(Telerik.Reporting.Service.BookmarkNode)">
+            <summary>
+            Creates a new instance of DocumentMapNodeModel.
+            </summary>
+            <param name="bookmark"></param>
+        </member>
+        <member name="P:Telerik.ReportViewer.Common.DocumentMapNodeModel.Children">
+            <summary>
+            The list of all child <see cref="T:Telerik.Reporting.Service.BookmarkNode"/>s.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Common.DocumentMapNodeModel.Label">
+            <summary>
+            The text of the current <see cref="T:Telerik.Reporting.Service.BookmarkNode"/> when displayed in the report viewer's Document Map.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Common.DocumentMapNodeModel.Text">
+            <summary>
+            The text of the current <see cref="T:Telerik.Reporting.Service.BookmarkNode"/> when displayed in the report viewer's Document Map.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Common.DocumentMapNodeModel.BookmarkId">
+            <summary>
+            The identifier of the <see cref="T:Telerik.Reporting.Service.BookmarkNode"/> this model points to.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Common.DocumentMapNodeModel.Page">
+            <summary>
+            The number of the page where the current bookmark appears.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Common.DocumentMapNodeModel.X">
+            <summary>
+            The X-coordinate of the location in the page of the current bookmark.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Common.DocumentMapNodeModel.Y">
+            <summary>
+            The Y-coordinate of the location in the page of the current bookmark.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Common.DocumentMapNodeModel.IsExpanded">
+            <summary>
+            Determines if the corresponding UI node is expanded.
+            </summary>
+        </member>
+        <member name="T:Telerik.ReportViewer.Xaml.Interactivity">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Telerik.ReportViewer.Xaml.Interactivity.ActionProperty">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Telerik.ReportViewer.Xaml.Interactivity.GetAction(System.Windows.DependencyObject)">
+            <summary>
+            
+            </summary>
+            <param name="d"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.ReportViewer.Xaml.Interactivity.SetAction(System.Windows.DependencyObject,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="d"></param>
+            <param name="value"></param>
+        </member>
+        <member name="T:Telerik.ReportViewer.Common.NavigateToBookmarkAction">
+            <summary>
+            Represents a bookmark navigation action defined in the document hierarchy.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Common.NavigateToBookmarkAction.TargetBookmarkId">
+            <summary>
+            Target bookmark Id
+            </summary>
+        </member>
+        <member name="T:Telerik.ReportViewer.Common.NavigateToReportAction">
+            <summary>
+            Represents a report navigation action defined in the document hierarchy.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Common.NavigateToReportAction.ReportDocumentType">
+            <summary>
+            Assembly qualified name of the target report type
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Common.NavigateToReportAction.Parameters">
+            <summary>
+            Parameter values
+            </summary>
+        </member>
+        <member name="T:Telerik.ReportViewer.Common.NavigateToUrlAction">
+            <summary>
+            Represents a url navigation action defined in the document hierarchy.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Common.NavigateToUrlAction.Url">
+            <summary>
+            Url
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Common.NavigateToUrlAction.Target">
+            <summary>
+            Target
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Common.ServerAction.Identifier">
+            <summary>
+            Action identifier
+            </summary>
+        </member>
+        <member name="T:Telerik.ReportViewer.Silverlight.ApplyParametersEventHandler">
+            <summary>
+            Represents the method that will handle the <see cref="E:Telerik.ReportViewer.Silverlight.ReportViewer.ApplyParameters"/> event.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="args">An <see cref="T:Telerik.ReportViewer.Silverlight.ApplyParametersEventArgs"/> object that contains the event data.</param>
+        </member>
+        <member name="T:Telerik.ReportViewer.Silverlight.ApplyParametersEventArgs">
+            <summary>
+            Provides data for the <see cref="E:Telerik.ReportViewer.Silverlight.ReportViewer.ApplyParameters"/> event. 
+            </summary>
+        </member>
+        <member name="T:Telerik.ReportViewer.Silverlight.CancelEventArgs">
+            <summary>
+            Provides data for an event that can be canceled.
+            </summary>
+        </member>
+        <member name="M:Telerik.ReportViewer.Silverlight.CancelEventArgs.#ctor">
+            <summary>
+            Initializes a new instance of the CancelEventArgs class.
+            </summary>
+        </member>
+        <member name="M:Telerik.ReportViewer.Silverlight.CancelEventArgs.#ctor(System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.ReportViewer.Silverlight.CancelEventArgs"/> class with the <see cref="P:Telerik.ReportViewer.Silverlight.CancelEventArgs.Cancel"/> property set to the given value.
+            </summary>
+            <param name="cancel"><b>true</b> to cancel the event; otherwise, <b>false</b>.</param>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.CancelEventArgs.Cancel">
+            <summary>
+            Gets or sets a value indicating whether the event should be canceled.
+            </summary>
+        </member>
+        <member name="M:Telerik.ReportViewer.Silverlight.ApplyParametersEventArgs.#ctor(Telerik.Reporting.Service.NameValueDictionary,System.Boolean)">
+            <summary>
+            Initializes a new instance of the ApplyParametersEventArgs class.
+            </summary>
+            <param name="parameterValues">Change the values</param>
+            <param name="cancel"><b>true</b> to cancel the rendering operation which requests parameter values;
+            otherwise, <b>false</b>.</param>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ApplyParametersEventArgs.ParameterValues">
+            <summary>
+            Gets a <see cref="T:Telerik.Reporting.Service.NameValueDictionary"/> representing the values of the report parameters
+            that will be used when the report is rendered.
+            </summary>
+            <remarks>
+            When exposed in the <see cref="E:Telerik.ReportViewer.Silverlight.ReportViewer.ApplyParameters"/> event 
+            you may change/add the parameter values in order to customize the render operation.
+            </remarks>
+        </member>
+        <member name="T:Telerik.ReportViewer.Silverlight.ReportViewerModel">
+            <summary>
+            Represents the report viewer model created and used internally from the <see cref="T:Telerik.ReportViewer.Silverlight.ReportViewer"/>.
+            </summary>
+            <remarks>
+            Used from the <see cref="T:Telerik.ReportViewer.Silverlight.ReportViewer"/> template.
+            </remarks>
+        </member>
+        <member name="M:Telerik.ReportViewer.Silverlight.ReportViewerModel.ExportReport(System.String,Telerik.Reporting.Service.NameValueDictionary)">
+            <summary>
+            Exports the report in the specified format.
+            </summary>
+            <param name="format">Export format to be used.</param>
+            <param name="deviceInfo">Contains parameters to pass to the rendering extension.</param>
+        </member>
+        <member name="M:Telerik.ReportViewer.Silverlight.ReportViewerModel.#ctor(Telerik.ReportViewer.Silverlight.IReportViewer)">
+            <summary>
+            Creates a new instance of the ReportViewerModel class.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ReportViewerModel.IsPrintPreviewChecked">
+            <summary>
+            Specifies whether the PrintPreview mode is toggled.
+            </summary>
+            <remarks>
+            Used from the <see cref="T:Telerik.ReportViewer.Silverlight.ReportViewer"/> template.
+            </remarks>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ReportViewerModel.ViewMode">
+            <summary>
+            Specifies whether the viewer is in interactive or print preview mode.
+            </summary>
+            <remarks>
+            Used from the <see cref="T:Telerik.ReportViewer.Silverlight.ReportViewer"/> template.
+            </remarks>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ReportViewerModel.ExportProgress">
+            <summary>
+            Gets or sets the text displayed during the export action.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ReportViewerModel.TextResources">
+            <summary>
+            Gets or sets all the tooltips and messages.
+            </summary>
+            <remarks>
+            Used from the <see cref="T:Telerik.ReportViewer.Silverlight.ReportViewer"/> template.
+            </remarks>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ReportViewerModel.DocumentMapToolTip">
+            <summary>
+            Gets the Document Map tooltip
+            </summary>
+            <remarks>
+            Used from the <see cref="T:Telerik.ReportViewer.Silverlight.ReportViewer"/> template.
+            </remarks>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ReportViewerModel.ParametersToolTip">
+            <summary>
+            Gets the Parameters tooltip
+            </summary>
+            <remarks>
+            Used from the <see cref="T:Telerik.ReportViewer.Silverlight.ReportViewer"/> template.
+            </remarks>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ReportViewerModel.PrintPreviewToolTip">
+            <summary>
+            Gets the Print Preview/Interactive view tooltip
+            </summary>
+            <remarks>
+            Used from the <see cref="T:Telerik.ReportViewer.Silverlight.ReportViewer"/> template.
+            </remarks>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ReportViewerModel.State">
+            <summary>
+            Gets or sets the report viewer state.
+            </summary>
+            <remarks>
+            Used from the <see cref="T:Telerik.ReportViewer.Silverlight.ReportViewer"/> template.
+            </remarks>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ReportViewerModel.PageNumberModel">
+            <summary>
+            For internal use only
+            </summary>
+            <remarks>
+            Used from the <see cref="T:Telerik.ReportViewer.Silverlight.ReportViewer"/> template.
+            </remarks>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ReportViewerModel.PageNumber">
+            <summary>
+            Gets or sets the current page number.
+            </summary>
+            <remarks>
+            Used from the <see cref="T:Telerik.ReportViewer.Silverlight.ReportViewer"/> template.
+            </remarks>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ReportViewerModel.PageCount">
+            <summary>
+            Specifies the total number of the report pages.
+            </summary>
+            <remarks>
+            Used from the <see cref="T:Telerik.ReportViewer.Silverlight.ReportViewer"/> template.
+            </remarks>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ReportViewerModel.IsMoveToPageEnabled">
+            <summary>
+            Specifies whether there is another page you can navigate to.
+            </summary>
+            <remarks>
+            Used from the <see cref="T:Telerik.ReportViewer.Silverlight.ReportViewer"/> template.
+            </remarks>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ReportViewerModel.IsExportEnabled">
+            <summary>
+            Specifies whether the export is enabled.
+            </summary>
+            <remarks>
+            Used from the <see cref="T:Telerik.ReportViewer.Silverlight.ReportViewer"/> template.
+            </remarks>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ReportViewerModel.RenderingExtensions">
+            <summary>
+            Represents a list of rendering extension infos.
+            </summary>
+            <remarks>
+            Used from the <see cref="T:Telerik.ReportViewer.Silverlight.ReportViewer"/> template.
+            </remarks>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ReportViewerModel.Parameters">
+            <summary>
+            Gets or sets a list of report parameters.
+            </summary>
+            <remarks>
+            Used from the <see cref="T:Telerik.ReportViewer.Silverlight.ReportViewer"/> template.
+            </remarks>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ReportViewerModel.ParameterModels">
+            <summary>
+            Gets or sets a list of parameter models.
+            </summary>
+            <remarks>
+            Used from the <see cref="T:Telerik.ReportViewer.Silverlight.ReportViewer"/> template.
+            </remarks>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ReportViewerModel.HasParameters">
+            <summary>
+            Specifies whether there are parameters or not.
+            </summary>
+            <remarks>
+            Used from the <see cref="T:Telerik.ReportViewer.Silverlight.ReportViewer"/> template.
+            </remarks>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ReportViewerModel.IsParametersAreaVisible">
+            <summary>
+            Specifies whether the parameters area is visible.
+            </summary>
+            <remarks>
+            Used from the <see cref="T:Telerik.ReportViewer.Silverlight.ReportViewer"/> template.
+            </remarks>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ReportViewerModel.IsToggleParametersAreaEnabled">
+            <summary>
+            Specifies whether the toggle parameters area button is enabled.
+            </summary>
+            <remarks>
+            Used from the <see cref="T:Telerik.ReportViewer.Silverlight.ReportViewer"/> template.
+            </remarks>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ReportViewerModel.ZoomMode">
+            <summary>
+            Specifies the current zoom behavior of the viewer.
+            </summary>
+            <remarks>
+            Used from the <see cref="T:Telerik.ReportViewer.Silverlight.ReportViewer"/> template.
+            </remarks>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ReportViewerModel.Zoom">
+            <summary>
+            Specifies the scale factor.
+            </summary>
+            <remarks>
+            Used from the <see cref="T:Telerik.ReportViewer.Silverlight.ReportViewer"/> template.
+            </remarks>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ReportViewerModel.AvailableZoomValues">
+            <summary>
+            Specifies the available zoom values
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ReportViewerModel.ZoomText">
+            <summary>
+            Gets or sets the zoom value as text.
+            </summary>
+            <remarks>
+            Used from the <see cref="T:Telerik.ReportViewer.Silverlight.ReportViewer"/> template.
+            </remarks>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ReportViewerModel.PageTransform">
+            <summary>
+            Specifies the page transform.
+            </summary>
+            <remarks>
+            Used from the <see cref="T:Telerik.ReportViewer.Silverlight.ReportViewer"/> template.
+            </remarks>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ReportViewerModel.ProgressMessage">
+            <summary>
+            Specifies the text of the progress message.
+            </summary>
+            <remarks>
+            Used from the <see cref="T:Telerik.ReportViewer.Silverlight.ReportViewer"/> template.
+            </remarks>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ReportViewerModel.PrintProgress">
+            <summary>
+            Specifies the print progress.
+            </summary>
+            Used from the <see cref="T:Telerik.ReportViewer.Silverlight.ReportViewer"/> template.
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ReportViewerModel.ErrorMessage">
+            <summary>
+            Gets or sets the error message.
+            </summary>
+            Used from the <see cref="T:Telerik.ReportViewer.Silverlight.ReportViewer"/> template.
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ReportViewerModel.PageRoot">
+            <summary>
+            Specifies the page root.
+            </summary>
+            Used from the <see cref="T:Telerik.ReportViewer.Silverlight.ReportViewer"/> template.
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ReportViewerModel.BookmarkTarget">
+            <summary>
+            Specifies the bookmark target.
+            </summary>
+            Used from the <see cref="T:Telerik.ReportViewer.Silverlight.ReportViewer"/> template.
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ReportViewerModel.PageWidth">
+            <summary>
+            Gets the current page width.
+            </summary>
+            Used from the <see cref="T:Telerik.ReportViewer.Silverlight.ReportViewer"/> template.
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ReportViewerModel.PageHeight">
+            <summary>
+            Gets the current page height.
+            </summary>
+            Used from the <see cref="T:Telerik.ReportViewer.Silverlight.ReportViewer"/> template.
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ReportViewerModel.MoveToFirstPageCommand">
+            <summary>
+            Gets the MoveToFirstPage command.
+            </summary>
+            Used from the <see cref="T:Telerik.ReportViewer.Silverlight.ReportViewer"/> template.
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ReportViewerModel.MoveToLastPageCommand">
+            <summary>
+            Gets the MoveToLastPage command.
+            </summary>
+            Used from the <see cref="T:Telerik.ReportViewer.Silverlight.ReportViewer"/> template.
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ReportViewerModel.MoveToNextPageCommand">
+            <summary>
+            Gets the MoveToNextPage command.
+            </summary>
+            Used from the <see cref="T:Telerik.ReportViewer.Silverlight.ReportViewer"/> template.
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ReportViewerModel.MoveToPreviousPageCommand">
+            <summary>
+            Gets the MoveToPreviousPage command.
+            </summary>
+            Used from the <see cref="T:Telerik.ReportViewer.Silverlight.ReportViewer"/> template.
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ReportViewerModel.PrintReportCommand">
+            <summary>
+            Gets the PrintReport command.
+            </summary>
+            Used from the <see cref="T:Telerik.ReportViewer.Silverlight.ReportViewer"/> template.
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ReportViewerModel.PrintDocumentCommand">
+            <summary>
+            Gets the PrintDocument command.
+            </summary>
+            Used from the <see cref="T:Telerik.ReportViewer.Silverlight.ReportViewer"/> template.
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ReportViewerModel.CancelPrintDocumentCommand">
+            <summary>
+            Gets the CancelPrintDocument command.
+            </summary>
+            Used from the <see cref="T:Telerik.ReportViewer.Silverlight.ReportViewer"/> template.
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ReportViewerModel.ApplyReportParametersCommand">
+            <summary>
+            Gets the ApplyReportParamters command.
+            </summary>
+            Used from the <see cref="T:Telerik.ReportViewer.Silverlight.ReportViewer"/> template.
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ReportViewerModel.RefreshReportCommand">
+            <summary>
+            Gets the RefreshReport command.
+            </summary>
+            Used from the <see cref="T:Telerik.ReportViewer.Silverlight.ReportViewer"/> template.
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ReportViewerModel.TogglePrintPreviewCommand">
+            <summary>
+            Gets the TogglePrintPreviewCommand command.
+            </summary>
+            Used from the <see cref="T:Telerik.ReportViewer.Silverlight.ReportViewer"/> template.
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ReportViewerModel.SaveExportCommand">
+            <summary>
+            Gets the SaveExport command.
+            </summary>
+            Used from the <see cref="T:Telerik.ReportViewer.Silverlight.ReportViewer"/> template.
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ReportViewerModel.CancelExportCommand">
+            <summary>
+            Gets the CancelExport command.
+            </summary>
+            Used from the <see cref="T:Telerik.ReportViewer.Silverlight.ReportViewer"/> template.
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ReportViewerModel.NavigateBackCommand">
+            <summary>
+            Gets the NavigateBack command.
+            </summary>
+            Used from the <see cref="T:Telerik.ReportViewer.Silverlight.ReportViewer"/> template.
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ReportViewerModel.NavigateForwardCommand">
+            <summary>
+            Gets the NavigateForward command.
+            </summary>
+            Used from the <see cref="T:Telerik.ReportViewer.Silverlight.ReportViewer"/> template.
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ReportViewerModel.NavigateToSpecificPageCommand">
+            <summary>
+            Gets the NavigateToSpecificPageCommand command.
+            </summary>
+            Used from the <see cref="T:Telerik.ReportViewer.Silverlight.ReportViewer"/> template.
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ReportViewerModel.IsPreviewButtonVisible">
+            <summary>
+            Determines the preview button visibility state
+            </summary>
+            Used from the <see cref="T:Telerik.ReportViewer.Silverlight.ReportViewer"/> template.
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ReportViewerModel.ExportReportCommand">
+            <summary>
+            Gets the ExportReport command.
+            </summary>
+            Used from the <see cref="T:Telerik.ReportViewer.Silverlight.ReportViewer"/> template.
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ReportViewerModel.DocumentMapNodes">
+            <summary>
+            Gets or sets a list of document map nodes.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ReportViewerModel.SelectedDocumentMapNode">
+            <summary>
+            Gets or sets the selected node of the document map.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ReportViewerModel.IsDocumentMapVisible">
+            <summary>
+            Indicates whether the document map is visible or not.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ReportViewerModel.DocumentMapWidth">
+            <summary>
+            Gets or sets the width of the document map column
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ReportViewerModel.IsToggleDocumentMapEnabled">
+            <summary>
+            Indicates whether the toggle document map button is enabled or not.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ReportViewerModel.HasDocumentMap">
+            <summary>
+            Indicates whether there is a document map or not.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ReportViewerModel.UpdateParametersProgress">
+            <summary>
+            Gets or sets the text of the update parameters progress message.
+            </summary>
+        </member>
+        <member name="T:Telerik.ReportViewer.Silverlight.ReportViewerModel.ReportViewerCommand">
+            <summary>
+            Represents a base class for the report viewer's commands.
+            </summary>
+        </member>
+        <member name="T:Telerik.ReportViewer.Silverlight.ReportViewerModel.Command">
+            <summary>
+            Represents a base class for a command.
+            </summary>
+        </member>
+        <member name="M:Telerik.ReportViewer.Silverlight.ReportViewerModel.Command.Execute(System.Object)">
+            <summary>
+            Defines the method to be called when the command is invoked.
+            </summary>
+            <param name="parameter">Data used by the command. If the command does not require data to be passed, this object can be set to nullNothingnullptra null reference (Nothing in Visual Basic).</param>
+        </member>
+        <member name="M:Telerik.ReportViewer.Silverlight.ReportViewerModel.Command.OnCanExecuteChanged">
+            <summary>
+            Raises the CanExcute .
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ReportViewerModel.Command.IsEnabled">
+            <summary>
+            Specifies whether the command is enabled.
+            </summary>
+        </member>
+        <member name="M:Telerik.ReportViewer.Silverlight.ReportViewerModel.ReportViewerCommand.#ctor(Telerik.ReportViewer.Silverlight.ReportViewerModel)">
+            <summary>
+            Initializes a new instance of the ReportViewerCommand class.
+            </summary>
+            <param name="viewerModel"></param>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ReportViewerModel.ReportViewerCommand.ViewerModel">
+            <summary>
+            Gets the report viewer model.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ReportViewerModel.PrintDocumentCommandImpl.IsAvailable">
+            <summary>
+            Determines the print dialog's print document button visibility
+            </summary>
+        </member>
+        <member name="T:Telerik.ReportViewer.Silverlight.CancelEventHandler">
+            <summary>
+            Represents the method that handles an event that can be canceled.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="args">A <see cref="T:Telerik.ReportViewer.Silverlight.CancelEventArgs"/> object that contains the event data.</param>
+        </member>
+        <member name="T:Telerik.ReportViewer.Silverlight.DialogBox">
+            <summary>
+            Represents a dialog box control.
+            </summary>
+        </member>
+        <member name="M:Telerik.ReportViewer.Silverlight.DialogBox.#ctor">
+            <summary>
+            Creates a new instance of the DialogBox class.
+            </summary>
+        </member>
+        <member name="T:Telerik.ReportViewer.Silverlight.ErrorEventHandler">
+            <summary>
+            Represents the method that will handle the Error event.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="args">An ErrorEventArgs object that contains the event data.</param>
+        </member>
+        <member name="T:Telerik.ReportViewer.Silverlight.ErrorEventArgs">
+            <summary>
+            Provides data for the Error event. 
+            </summary>
+        </member>
+        <member name="M:Telerik.ReportViewer.Silverlight.ErrorEventArgs.#ctor(System.Exception)">
+            <summary>
+            Initializes a new instance of the ErrorEventArgs class.
+            </summary>
+            <param name="exception">An <see cref="P:Telerik.ReportViewer.Silverlight.ErrorEventArgs.Exception"/> that represents the error that occurred.</param>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ErrorEventArgs.Exception">
+            <summary>
+            Gets the <see cref="P:Telerik.ReportViewer.Silverlight.ErrorEventArgs.Exception"/> occurred in the report viewer.
+            </summary>
+        </member>
+        <member name="T:Telerik.ReportViewer.Silverlight.ExportBeginEventHandler">
+            <summary>
+            Represents the method that will handle the <see cref="E:Telerik.ReportViewer.Silverlight.ReportViewer.ExportBegin"/> event.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="args">An <see cref="T:Telerik.ReportViewer.Silverlight.ExportBeginEventArgs"/> object that contains the event data.</param>
+        </member>
+        <member name="T:Telerik.ReportViewer.Silverlight.ExportBeginEventArgs">
+            <summary>
+            Provides data for the <see cref="E:Telerik.ReportViewer.Silverlight.ReportViewer.ExportBegin"/> event. 
+            </summary>
+        </member>
+        <member name="M:Telerik.ReportViewer.Silverlight.ExportBeginEventArgs.#ctor(System.String,Telerik.Reporting.Service.NameValueDictionary)">
+            <summary>
+            Initializes a new instance of the ExportBeginEventArgs class.
+            </summary>
+            <param name="format">The export format that will be used for the export operation.</param>
+            <param name="deviceInfo">The device info collection that will be used for the export operation.</param>
+        </member>
+        <member name="M:Telerik.ReportViewer.Silverlight.ExportBeginEventArgs.#ctor(System.String,Telerik.Reporting.Service.NameValueDictionary,System.Boolean)">
+            <summary>
+            Initializes a new instance of the ExportBeginEventArgs class.
+            </summary>
+            <param name="format">The export format that will be used for the export operation.</param>
+            <param name="deviceInfo">The device info collection that will be used for the export operation.</param>
+            <param name="cancel"><b>true</b> to cancel the event; otherwise, <b>false</b>.</param>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ExportBeginEventArgs.DeviceInfo">
+            <summary>
+            Gets the device info.
+            </summary>
+            <returns>
+            The device info collection that will be used for the export operation. 
+            Add your device information settings to the collection.
+            </returns>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ExportBeginEventArgs.Format">
+            <summary>
+            Gets the export format that will be used for the export operation.
+            </summary>
+        </member>
+        <member name="T:Telerik.ReportViewer.Silverlight.ExtensionInfoModel">
+            <summary>
+            ExtensionInfo wrapper for data-binding
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ExtensionInfoModel.Name">
+            <summary>
+            Gets the extension info name
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ExtensionInfoModel.LocalizedName">
+            <summary>
+            Gets the extension info localized name
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ExtensionInfoModel.ExportReportCommand">
+            <summary>
+            Gets the ExportReport command
+            </summary>
+        </member>
+        <member name="T:Telerik.ReportViewer.Silverlight.KeyDown">
+            <summary>
+            Enables binding an ICommand to the FrameworkElement.KeyDown event
+            </summary>
+        </member>
+        <member name="F:Telerik.ReportViewer.Silverlight.KeyDown.CommandProperty">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Telerik.ReportViewer.Silverlight.KeyDown.GetCommand(System.Windows.DependencyObject)">
+            <summary>
+            
+            </summary>
+            <param name="d"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.ReportViewer.Silverlight.KeyDown.SetCommand(System.Windows.DependencyObject,System.Windows.Input.ICommand)">
+            <summary>
+            
+            </summary>
+            <param name="d"></param>
+            <param name="value"></param>
+        </member>
+        <member name="T:Telerik.ReportViewer.Silverlight.TextBoxEx">
+            <summary>
+            TextBox that autoupdates DataBound Text property in TwoWay binding
+            </summary>
+        </member>
+        <member name="M:Telerik.ReportViewer.Silverlight.TextBoxEx.#ctor">
+            <summary>
+            The default constructor
+            </summary>
+        </member>
+        <member name="T:Telerik.ReportViewer.Silverlight.ErrorStatus">
+            <summary>
+            Represents a error status control
+            </summary>
+        </member>
+        <member name="M:Telerik.ReportViewer.Silverlight.ErrorStatus.#ctor">
+            <summary>
+            Creates a new instance of the ErrorStatus class.
+            </summary>
+        </member>
+        <member name="F:Telerik.ReportViewer.Silverlight.ErrorStatus.CurrentDataContextProperty">
+            <summary>
+            Helper dependency property identifying the DataContext changes. Internal use only.
+            </summary>
+        </member>
+        <member name="F:Telerik.ReportViewer.Silverlight.ErrorStatus.PropertyNameProperty">
+            <summary>
+            Defines the ReportName dependency property.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ErrorStatus.PropertyName">
+            <summary>
+            Specifies the name of the property which errors should be displayed by the error status.
+            </summary>
+        </member>
+        <member name="T:Telerik.ReportViewer.Silverlight.IReportServiceClientFactory">
+            <summary>
+            Enables users to write activation code for <see cref="T:Telerik.Reporting.Service.SilverlightClient.ReportServiceClient"/>.
+            </summary>
+            <remarks>For additional information and example see <see cref="P:Telerik.ReportViewer.Silverlight.ReportViewer.ReportServiceClientFactory"/>.</remarks>
+            <seealso cref="P:Telerik.ReportViewer.Silverlight.ReportViewer.ReportServiceClientFactory"/>
+        </member>
+        <member name="M:Telerik.ReportViewer.Silverlight.IReportServiceClientFactory.Create(System.Uri)">
+            <summary>
+            Creates a new instance of <see cref="T:Telerik.Reporting.Service.SilverlightClient.ReportServiceClient"/>.
+            </summary>
+            <param name="remoteAddress">The absolute address of the service.</param>
+            <returns>A new instance of <see cref="T:Telerik.Reporting.Service.SilverlightClient.ReportServiceClient"/>.</returns>
+            <remarks>For additional information and example see <see cref="P:Telerik.ReportViewer.Silverlight.ReportViewer.ReportServiceClientFactory"/>.</remarks>
+            <seealso cref="P:Telerik.ReportViewer.Silverlight.ReportViewer.ReportServiceClientFactory"/>
+        </member>
+        <member name="T:Telerik.ReportViewer.Silverlight.IReportViewer">
+            <summary>
+            Enables the report viewer model to command the report viewer view.
+            </summary>
+        </member>
+        <member name="M:Telerik.ReportViewer.Silverlight.IReportViewer.OnApplyParameters(Telerik.Reporting.Service.NameValueDictionary)">
+            <summary>
+            This method is called to trigger the ApplyParameters event. 
+            Override this method in order to perform additional tasks before rendering the report. 
+            When overridden, make sure you call the base method implementation.
+            </summary>
+            <param name="parameterValues">A <see cref="T:Telerik.Reporting.Service.NameValueDictionary"/> with parameter values for the current report to render.</param>
+            <returns>Return false to cancel the rendering operation otherwise return true.</returns>
+        </member>
+        <member name="M:Telerik.ReportViewer.Silverlight.IReportViewer.OnPrintBegin">
+            <summary>
+            This method is called to trigger the <see cref="E:Telerik.ReportViewer.Silverlight.ReportViewer.PrintBegin"/> event.
+            </summary>
+            <returns>Return false to cancel the print operation otherwise return true.</returns>
+        </member>
+        <member name="M:Telerik.ReportViewer.Silverlight.IReportViewer.OnPrintEnd">
+            <summary>
+            This method is called to trigger the <see cref="E:Telerik.ReportViewer.Silverlight.ReportViewer.PrintEnd"/> event.
+            </summary>
+        </member>
+        <member name="M:Telerik.ReportViewer.Silverlight.IReportViewer.OnExportBegin(System.String,Telerik.Reporting.Service.NameValueDictionary)">
+            <summary>
+            This method is called to trigger the <see cref="E:Telerik.ReportViewer.Silverlight.ReportViewer.ExportBegin"/> event.
+            </summary>
+            <param name="format">A <see cref="T:System.String"/> specifying the rendering format.</param>
+            <param name="deviceInfo">A <see cref="T:Telerik.Reporting.Service.NameValueDictionary"/> with device info for the current rendering extension.</param>
+            <returns>Return false to cancel the export operation otherwise return true.</returns>
+        </member>
+        <member name="M:Telerik.ReportViewer.Silverlight.IReportViewer.OnExportEnd">
+            <summary>
+            This method is called to trigger the <see cref="E:Telerik.ReportViewer.Silverlight.ReportViewer.ExportEnd"/> event.
+            </summary>
+        </member>
+        <member name="M:Telerik.ReportViewer.Silverlight.IReportViewer.OnRenderingBegin">
+            <summary>
+            This method is called to trigger the <see cref="E:Telerik.ReportViewer.Silverlight.ReportViewer.RenderingBegin"/> event.
+            </summary>
+            <returns>Return false to cancel the rendering operation otherwise return true.</returns>
+        </member>
+        <member name="M:Telerik.ReportViewer.Silverlight.IReportViewer.OnRenderingEnd">
+            <summary>
+            This method is called to trigger the <see cref="E:Telerik.ReportViewer.Silverlight.ReportViewer.RenderingEnd"/> event.
+            </summary>
+        </member>
+        <member name="M:Telerik.ReportViewer.Silverlight.IReportViewer.OnUpdateUI">
+            <summary>
+            This method is called to trigger the <see cref="E:Telerik.ReportViewer.Silverlight.ReportViewer.UpdateUI"/> event.
+            </summary>
+        </member>
+        <member name="M:Telerik.ReportViewer.Silverlight.IReportViewer.OnError(System.Exception)">
+            <summary>
+            This method is called to trigger the <see cref="E:Telerik.ReportViewer.Silverlight.ReportViewer.Error"/> event.
+            </summary>
+            <param name="exception">The <see cref="T:System.Exception"/> thrown when there is an error.</param>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.IReportViewer.PageViewportSize">
+            <summary>
+            Returns the size of the page viewport.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.IReportViewer.UseNativePrinting">
+            <summary>
+            Specifies whether to use native Silverlight printing or not.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.IReportViewer.UseDefaultPrinter">
+            <summary>
+            Specifies whether or not to automatically print to the default printer for 
+            the computer without showing a print dialog. Requires elevated permissions.
+            If the application is partially trusted the property is ignored.
+            </summary>
+        </member>
+        <member name="T:Telerik.ReportViewer.Silverlight.MultivalueAvailableValuesParameterModel">
+            <summary>
+            </summary>
+        </member>
+        <member name="T:Telerik.ReportViewer.Silverlight.ParameterModel">
+            <summary>
+            Represents the report parameter model to associate the parameter editor UI with.
+            </summary>
+        </member>
+        <member name="M:Telerik.ReportViewer.Silverlight.ParameterModel.GetInvalidValueValidationError(Telerik.Reporting.Service.Parameter)">
+            <summary>
+            Returns localized error message if validation fails. Otherwise returns null
+            </summary>
+            <param name="parameter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.ReportViewer.Silverlight.ParameterModel.HasValidValue">
+            <summary>
+            Returns <see cref="M:Telerik.Reporting.Processing.Parameter.HasValidValue"/>.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ParameterModel.AvailableValues">
+            <summary>
+            Gets a list of the available <see cref="T:Telerik.ReportViewer.Silverlight.ParameterValueModel"/>s.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ParameterModel.Value">
+            <summary>
+            Gets or sets the <see cref="P:Telerik.Reporting.Processing.Parameter.Value"/>.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ParameterModel.SafeValue">
+            <summary>
+            Prevent user input to be considered as expression
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ParameterModel.TextResources">
+            <summary>
+            Gets or sets all the tooltips and messages
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ParameterModel.Name">
+            <summary>
+            Gets the <see cref="P:Telerik.Reporting.Processing.Parameter.Name"/>.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ParameterModel.ID">
+            <summary>
+            Gets the <see cref="P:Telerik.Reporting.Processing.Parameter.ID"/>.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ParameterModel.Type">
+            <summary>
+            Gets the <see cref="P:Telerik.Reporting.Processing.Parameter.Type"/>.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ParameterModel.Text">
+            <summary>
+            Gets the <see cref="P:Telerik.Reporting.Processing.Parameter.Text"/>.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ParameterModel.AllowNull">
+            <summary>
+            Gets the <see cref="P:Telerik.Reporting.Processing.Parameter.AllowNull"/>.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ParameterModel.IsNull">
+            <summary>
+            Specifies whether the 'null' value is selected.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ParameterModel.IsEnabled">
+            <summary>
+            Specifies whether the parameter editor is enabled or not.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ParameterModel.Multivalue">
+            <summary>
+            Gets the <see cref="P:Telerik.Reporting.Processing.Parameter.Multivalue"/>.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ParameterModel.AutoRefresh">
+            <summary>
+            Gets the <see cref="P:Telerik.Reporting.Processing.Parameter.AutoRefresh"/>.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ParameterModel.SelectedSingleValue">
+            <summary>
+            Gets or sets a single selected value.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.MultivalueAvailableValuesParameterModel.AvailableValues">
+            <summary>
+            Gets a list of the available <see cref="T:Telerik.ReportViewer.Silverlight.ParameterValueModel"/>s plus the <see cref="T:Telerik.ReportViewer.Silverlight.MultivalueAvailableValuesParameterModel.SelectAllItem"/>.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.MultivalueAvailableValuesParameterModel.Value">
+            <summary>
+            Gets or sets the <see cref="P:Telerik.Reporting.Processing.Parameter.Value"/>.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.MultivalueAvailableValuesParameterModel.SelectedLabels">
+            <summary>
+            Gets an enumerable of strings that contains the labels of all selected values.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.MultivalueAvailableValuesParameterModel.IsDropDownOpen">
+            <summary>
+            Gets or sets the value that indicates whether the Multivalue/AvailableValues editor is currently open. 
+            </summary>
+        </member>
+        <member name="T:Telerik.ReportViewer.Silverlight.MultivalueAvailableValuesParameterModel.SelectAllItem">
+            <summary>
+            Represents the SelectAll item in a Multivalue/AvailableValues editor
+            </summary>
+        </member>
+        <member name="T:Telerik.ReportViewer.Silverlight.ParameterValueModel">
+            <summary>
+            Represents the parameter value model.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ParameterValueModel.IsSelected">
+            <summary>
+            Specifies whether the parameter value is selected.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ParameterValueModel.Name">
+            <summary>
+            Gets the <see cref="P:Telerik.Reporting.Processing.ParameterValue.Name"/>.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ParameterValueModel.Value">
+            <summary>
+            Gets <see cref="P:Telerik.Reporting.Processing.ParameterValue.Value"/>
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ParameterValueModel.Owner">
+            <summary>
+            Gets the owner parameter model.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.MultivalueAvailableValuesParameterModel.SelectAllItem.IsSelected">
+            <summary>
+            Specifies whether the item is selected.
+            </summary>
+        </member>
+        <member name="T:Telerik.ReportViewer.Silverlight.ParameterModelCollection">
+            <summary>
+            Represents a collection of parameter models.
+            </summary>
+        </member>
+        <member name="M:Telerik.ReportViewer.Silverlight.ParameterModelCollection.InsertItem(System.Int32,Telerik.ReportViewer.Silverlight.ParameterModel)">
+            <summary>
+            Inserts a ParameterModel item at the specified index.
+            </summary>
+            <param name="index"></param>
+            <param name="item"></param>
+        </member>
+        <member name="T:Telerik.ReportViewer.Silverlight.SingleStringValueParameterModel">
+            <summary>
+            Represents a model for a parameter of type 'string' with a single value.
+            </summary>
+        </member>
+        <member name="M:Telerik.ReportViewer.Silverlight.SingleStringValueParameterModel.#ctor(Telerik.Reporting.Service.Parameter,Telerik.ReportViewer.Silverlight.ITextResources)">
+            <summary>
+            Creates an instance of the <see cref="T:Telerik.ReportViewer.Silverlight.SingleStringValueParameterModel"/> class.
+            </summary>
+            <param name="p"></param>
+            <param name="textResources"></param>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.SingleStringValueParameterModel.IsNull">
+            <summary>
+            Specifies whether the 'null' value is selected.
+            </summary>
+        </member>
+        <member name="T:Telerik.ReportViewer.Silverlight.RenderBeginEventHandler">
+            <summary>
+            Represents the method that will handle the RenderBegin event.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="args">An <see cref="T:Telerik.ReportViewer.Silverlight.RenderBeginEventArgs"/> object that contains the event data.</param>
+        </member>
+        <member name="T:Telerik.ReportViewer.Silverlight.RenderBeginEventArgs">
+            <summary>
+            Provides data for the RenderBegin event. 
+            </summary>
+        </member>
+        <member name="M:Telerik.ReportViewer.Silverlight.RenderBeginEventArgs.#ctor(Telerik.Reporting.Service.NameValueDictionary,System.Boolean)">
+            <summary>
+            Initializes a new instance of the RenderBeginEventArgs class.
+            </summary>
+            <param name="parameterValues"></param>
+            <param name="cancel"></param>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.RenderBeginEventArgs.ParameterValues">
+            <summary>
+            Gets a <see cref="T:Telerik.Reporting.Service.NameValueDictionary"/> for the values of the report parameters.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.RenderBeginEventArgs.Cancel">
+            <summary>
+            Gets or sets a value indicating whether the event should be canceled.
+            </summary>
+        </member>
+        <member name="T:Telerik.ReportViewer.Silverlight.ReportParameterEditorTemplateSelector">
+            <summary>
+            Represents a selector for the report parameter editor templates.
+            </summary>
+        </member>
+        <member name="M:Telerik.ReportViewer.Silverlight.ReportParameterEditorTemplateSelector.SelectTemplate(System.Object,System.Windows.DependencyObject)">
+            <summary>
+            Gets the proper editor template for the given parameter model.
+            </summary>
+            <param name="item">An instance of <see cref="T:Telerik.ReportViewer.Silverlight.ParameterModel"/>.</param>
+            <param name="container"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ReportParameterEditorTemplateSelector.Templates">
+            <summary>
+            Gets a list of <see cref="T:System.Windows.DataTemplate"/>.
+            </summary>
+        </member>
+        <member name="T:Telerik.ReportViewer.Silverlight.ReportParametersControl">
+            <summary>
+            Represents a control that holds a collection of <see cref="T:Telerik.ReportViewer.Silverlight.ReportParameterTemplate"/>.
+            </summary>
+        </member>
+        <member name="F:Telerik.ReportViewer.Silverlight.ReportParametersControl.ItemTemplateSelectorProperty">
+            <summary>
+            Represents the <see cref="P:Telerik.ReportViewer.Silverlight.ReportParametersControl.ParameterTemplateSelector"/> property.
+            </summary>
+        </member>
+        <member name="M:Telerik.ReportViewer.Silverlight.ReportParametersControl.PrepareContainerForItemOverride(System.Windows.DependencyObject,System.Object)">
+            <summary>
+            Prepares the specified element to display the specified item.
+            </summary>
+            <param name="element"></param>
+            <param name="item"></param>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ReportParametersControl.ParameterTemplateSelector">
+            <summary>
+            Gets or sets <see cref="T:Telerik.ReportViewer.Silverlight.ReportParameterEditorTemplateSelector"/>.
+            </summary>
+        </member>
+        <member name="T:Telerik.ReportViewer.Silverlight.ReportParameterTemplate">
+            <summary>
+            Represents a report parameter editor data template.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ReportParameterTemplate.Multivalue">
+            <summary>
+            Specifies whether the template can be used for multivalue parameters.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ReportParameterTemplate.AvailableValues">
+            <summary>
+            Specifies whether the template can be used for parameters with available values.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ReportParameterTemplate.Type">
+            <summary>
+            Specifies the parameter type for which this template should be used.
+            </summary>
+        </member>
+        <member name="T:Telerik.ReportViewer.Silverlight.ReportViewer">
+            <summary>
+            Represents the Silverlight ReportViewer control.
+            </summary>
+        </member>
+        <member name="F:Telerik.ReportViewer.Silverlight.ReportViewer.ReportProperty">
+            <summary>
+            Defines the Report dependency property.
+            </summary>
+        </member>
+        <member name="F:Telerik.ReportViewer.Silverlight.ReportViewer.ReportServiceUriProperty">
+            <summary>
+            Defines the ReportServiceUri property.
+            </summary>
+        </member>
+        <member name="F:Telerik.ReportViewer.Silverlight.ReportViewer.ReportServiceClientFactoryProperty">
+            <summary>
+            Defines the ReportServiceClientFactory property.
+            </summary>
+        </member>
+        <member name="F:Telerik.ReportViewer.Silverlight.ReportViewer.ZoomPercentProperty">
+            <summary>
+            Defines the ZoomPercent property.
+            </summary>
+        </member>
+        <member name="F:Telerik.ReportViewer.Silverlight.ReportViewer.ZoomModeProperty">
+            <summary>
+            Defines the ZoomMode property.
+            </summary>
+        </member>
+        <member name="F:Telerik.ReportViewer.Silverlight.ReportViewer.UseNativePrintingProperty">
+            <summary>
+            Defines the UseNativePrinting property.
+            </summary>
+        </member>
+        <member name="F:Telerik.ReportViewer.Silverlight.ReportViewer.UseDefaultPrinterProperty">
+            <summary>
+            Defines the UseDefaultPrinter property.
+            </summary>
+        </member>
+        <member name="F:Telerik.ReportViewer.Silverlight.ReportViewer.ViewModeProperty">
+            <summary>
+            Defines the ViewMode property.
+            </summary>
+        </member>
+        <member name="F:Telerik.ReportViewer.Silverlight.ReportViewer.TextResourcesProperty">
+            <summary>
+            Defines the TextResources property.
+            </summary>
+        </member>
+        <member name="M:Telerik.ReportViewer.Silverlight.ReportViewer.CanMoveToPage(System.Int32)">
+            <summary>
+            Determines whether the viewer can be navigated to a specified page.
+            </summary>
+            <param name="pageIndex">The page number to determine navigation possibility.</param>
+            <returns>Returns true if the viewer can be moved to the specified page.</returns>
+            <example>
+            <code lang="C#" source="CodeSnippets\SilverlightCS\API\Telerik\ReportViewer\Silverlight\ApiExamples.cs" region="SilverlightCanMoveToPageCurrentPageSnippet" />
+            <code lang="VB" source="CodeSnippets\SilverlightVB\API\Telerik\ReportViewer\Silverlight\ApiExamples.vb" region="SilverlightCanMoveToPageCurrentPageSnippet" />
+            </example>
+        </member>
+        <member name="M:Telerik.ReportViewer.Silverlight.ReportViewer.PrintReport">
+            <summary>
+            Opens the print dialog for the report
+            </summary>
+            <example>
+            <code lang="C#" source="CodeSnippets\SilverlightCS\API\Telerik\ReportViewer\Silverlight\ApiExamples.cs" region="SilverlightPrintReportSnippet" />
+            <code lang="VB" source="CodeSnippets\SilverlightVB\API\Telerik\ReportViewer\Silverlight\ApiExamples.vb" region="SilverlightPrintReportSnippet" />
+            </example>
+        </member>
+        <member name="M:Telerik.ReportViewer.Silverlight.ReportViewer.ExportReport(System.String,Telerik.Reporting.Service.NameValueDictionary)">
+            <summary>
+            Exports the report in the specified format.
+            </summary>
+            <param name="format">Export format</param>
+            <param name="deviceInfo">Contains parameters to pass to the rendering extension.</param>
+            <example>
+            <code lang="C#" source="CodeSnippets\SilverlightCS\API\Telerik\ReportViewer\Silverlight\ApiExamples.cs" region="SilverlightExportReportSnippet" />
+            <code lang="VB" source="CodeSnippets\SilverlightVB\API\Telerik\ReportViewer\Silverlight\ApiExamples.vb" region="SilverlightExportReportSnippet" />
+            </example>
+        </member>
+        <member name="M:Telerik.ReportViewer.Silverlight.ReportViewer.NavigateBack">
+            <summary>
+            Navigates the viewer back one step in the navigation history.
+            </summary>
+            <remarks>
+            Check <see cref="P:Telerik.ReportViewer.Silverlight.ReportViewer.NavigateBackEnabled"/> if this operation is enabled. 
+            If not, exception is thrown.<br/>
+            The <see cref="P:Report"/> property will reflect the change in the
+            currently shown report.
+            </remarks>
+            <example>
+            <code lang="C#" source="CodeSnippets\SilverlightCS\API\Telerik\ReportViewer\Silverlight\ApiExamples.cs" region="SilverlightNavigateBackSnippet"/>
+            <code lang="VB" source="CodeSnippets\SilverlightVB\API\Telerik\ReportViewer\Silverlight\ApiExamples.vb" region="SilverlightNavigateBackSnippet"/>
+            </example>
+        </member>
+        <member name="M:Telerik.ReportViewer.Silverlight.ReportViewer.NavigateForward">
+            <summary>
+            Navigates the viewer forward one step in the navigation history.
+            </summary>
+            <remarks>
+            Check <see cref="P:Telerik.ReportViewer.Silverlight.ReportViewer.NavigateForwardEnabled"/> if this operation is enabled. 
+            If not, exception is thrown.<br/>
+            The <see cref="P:Report"/> property will reflect the change in the
+            currently shown report.
+            </remarks>
+            <example>
+            <code lang="C#" source="CodeSnippets\SilverlightCS\API\Telerik\ReportViewer\Silverlight\ApiExamples.cs" region="SilverlightNavigateForwardSnippet"/>
+            <code lang="VB" source="CodeSnippets\SilverlightVB\API\Telerik\ReportViewer\Silverlight\ApiExamples.vb" region="SilverlightNavigateForwardSnippet"/>
+            </example>
+        </member>
+        <member name="M:Telerik.ReportViewer.Silverlight.ReportViewer.OnRenderBegin(Telerik.Reporting.Service.NameValueDictionary)">
+            <summary>
+            This method is called to trigger the RenderBegin method. Override this method in order to perform additional tasks before rendering the report. 
+            When overridden, make sure you call the base method implementation.
+            </summary>
+            <param name="parameterValues">A <see cref="T:Telerik.Reporting.Service.NameValueDictionary"/> with parameter values for the current report to render.</param>
+            <returns>Return false to cancel the rendering operation otherwise return true.</returns>
+        </member>
+        <member name="M:Telerik.ReportViewer.Silverlight.ReportViewer.OnApplyParameters(Telerik.ReportViewer.Silverlight.ApplyParametersEventArgs)">
+            <summary>
+            This method is called to trigger the ApplyParameters event. 
+            Override this method in order to change / add the parameter values 
+            that will be used in the upcoming render operation.
+            </summary>
+            <remarks>
+            When overridden, make sure you call the base method implementation.
+            </remarks>
+            <param name="e">An <see cref="T:Telerik.ReportViewer.Silverlight.ApplyParametersEventArgs"/> object that contains the event data.</param>
+        </member>
+        <member name="M:Telerik.ReportViewer.Silverlight.ReportViewer.OnPrintBegin(Telerik.ReportViewer.Silverlight.CancelEventArgs)">
+            <summary>
+            Raises the <see cref="E:Telerik.ReportViewer.Silverlight.ReportViewer.PrintBegin"/> event.
+            </summary>
+            <remarks>
+            When overridden, make sure you call the base method implementation.
+            </remarks>
+            <param name="e">An <see cref="T:Telerik.ReportViewer.Silverlight.CancelEventArgs"/> object that contains the event data.</param>
+        </member>
+        <member name="M:Telerik.ReportViewer.Silverlight.ReportViewer.OnPrintEnd(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:Telerik.ReportViewer.Silverlight.ReportViewer.PrintEnd"/> event.
+            </summary>
+            <remarks>
+            When overridden, make sure you call the base method implementation.
+            </remarks>
+            <param name="e">An <see cref="T:System.EventArgs"/> object that contains the event data.</param>
+        </member>
+        <member name="M:Telerik.ReportViewer.Silverlight.ReportViewer.OnExportBegin(Telerik.ReportViewer.Silverlight.ExportBeginEventArgs)">
+            <summary>
+            Raises the <see cref="E:Telerik.ReportViewer.Silverlight.ReportViewer.ExportBegin"/> event.
+            </summary>
+            <remarks>
+            When overridden, make sure you call the base method implementation.
+            </remarks>
+            <param name="e">An <see cref="T:Telerik.ReportViewer.Silverlight.ExportBeginEventArgs"/> object that contains the event data.</param>
+        </member>
+        <member name="M:Telerik.ReportViewer.Silverlight.ReportViewer.OnExportEnd(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:Telerik.ReportViewer.Silverlight.ReportViewer.ExportEnd"/> event.
+            </summary>
+            <remarks>
+            When overridden, make sure you call the base method implementation.
+            </remarks>
+            <param name="e">An <see cref="T:System.EventArgs"/> object that contains the event data.</param>
+        </member>
+        <member name="M:Telerik.ReportViewer.Silverlight.ReportViewer.OnRenderingBegin(Telerik.ReportViewer.Silverlight.CancelEventArgs)">
+            <summary>
+            Raises the <see cref="E:Telerik.ReportViewer.Silverlight.ReportViewer.RenderingBegin"/> event.
+            </summary>
+            <remarks>
+            When overridden, make sure you call the base method implementation.
+            </remarks>
+            <param name="e">An <see cref="T:Telerik.ReportViewer.Silverlight.CancelEventArgs"/> object that contains the event data.</param>
+        </member>
+        <member name="M:Telerik.ReportViewer.Silverlight.ReportViewer.OnRenderingEnd(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:Telerik.ReportViewer.Silverlight.ReportViewer.RenderingEnd"/> event.
+            </summary>
+            <remarks>
+            When overridden, make sure you call the base method implementation.
+            </remarks>
+            <param name="e">An <see cref="T:System.EventArgs"/> object that contains the event data.</param>
+        </member>
+        <member name="M:Telerik.ReportViewer.Silverlight.ReportViewer.OnUpdateUI(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:Telerik.ReportViewer.Silverlight.ReportViewer.UpdateUI"/> event.
+            </summary>
+            <remarks>
+            When overridden, make sure you call the base method implementation.
+            </remarks>
+            <param name="e">An <see cref="T:System.EventArgs"/> object that contains the event data.</param>
+        </member>
+        <member name="M:Telerik.ReportViewer.Silverlight.ReportViewer.OnError(Telerik.ReportViewer.Silverlight.ErrorEventArgs)">
+            <summary>
+            Raises the <see cref="E:Telerik.ReportViewer.Silverlight.ReportViewer.Error"/> event.
+            </summary>
+            <remarks>
+            When overridden, make sure you call the base method implementation.
+            </remarks>
+            <param name="e">An <see cref="T:Telerik.ReportViewer.Silverlight.ErrorEventArgs"/> object that contains the event data.</param>
+        </member>
+        <member name="F:Telerik.ReportViewer.Silverlight.ReportViewer.ReportSourceUriProperty">
+            <summary>
+            Defines the ReportSourceUri property. 
+            </summary>
+        </member>
+        <member name="M:Telerik.ReportViewer.Silverlight.ReportViewer.#ctor">
+            <summary>
+            Initializes a new instance of the ReportViewer class.
+            </summary>
+        </member>
+        <member name="M:Telerik.ReportViewer.Silverlight.ReportViewer.OnApplyTemplate">
+            <summary>
+            Invoked whenever application code or internal processes call ApplyTemplate.
+            </summary>
+        </member>
+        <member name="M:Telerik.ReportViewer.Silverlight.ReportViewer.RefreshReport">
+            <summary>
+            Refreshes the current report in the viewer. Last used parameter values are used.
+            </summary>
+            <example>
+            <code lang="C#" source="CodeSnippets\SilverlightCS\API\Telerik\ReportViewer\Silverlight\ApiExamples.cs" region="SilverlightRefreshReportSnippet" />
+            <code lang="VB" source="CodeSnippets\SilverlightVB\API\Telerik\ReportViewer\Silverlight\ApiExamples.vb" region="SilverlightRefreshReportSnippet" />
+            </example>
+        </member>
+        <member name="M:Telerik.ReportViewer.Silverlight.ReportViewer.EnsureAbsoluteUri(System.Uri)">
+            <summary>
+            Determines whether the given <see cref="T:System.Uri"/> is absolute. 
+            If not, creates a new absolute <see cref="T:System.Uri"/> based on the combination of 
+            <see cref="P:System.Windows.Interop.SilverlightHost.Source"/> for the current application and the given relative URI.
+            </summary>
+            <param name="uri">The <see cref="T:System.Uri"/> that is being checked.</param>
+            <returns>An absolute <see cref="T:System.Uri"/>.</returns>
+            <remarks>
+            <para>
+            If the URI is <b>absolute</b>, the same instance is returned.
+            </para>
+            <para>
+            If the URI is <b>relative</b>, a new absolute <see cref="T:System.Uri"/> based on the combination of 
+            <see cref="P:System.Windows.Interop.SilverlightHost.Source"/> of the current application and the given relative URI is created.
+            The <see cref="P:System.Windows.Interop.SilverlightHost.Source"/> usually points to the application package (XAP).
+            </para>
+            </remarks>
+            <example>
+            The following example shows some common scenarios and the absolute Uris returned. 
+            Consider that the <see cref="P:System.Windows.Interop.SilverlightHost.Source"/> Uri points to <c>http://mydomain/MyWebSite/ClientBin/MyApp.xap</c>:
+            <code lang="C#">
+            //Absolute Uri (no change):
+            EnsureAbsoluteUri(new Uri("http://mydomain/MyWebSite/ReportService.svc", UriKind.Absolute));    // http://mydomain/MyWebSite/ReportService.svc
+            //Relative Uris:
+            EnsureAbsoluteUri(new Uri("ReportService.svc", UriKind.Relative)); // http://mydomain/MyWebSite/ClientBin/ReportService.svc
+            EnsureAbsoluteUri(new Uri("../ReportService.svc", UriKind.Relative)); // http://mydomain/MyWebSite/ReportService.svc 
+            EnsureAbsoluteUri(new Uri("/ReportService.svc", UriKind.Relative)); // http://mydomain/ReportService.svc
+            </code>
+            <code lang="Visual Basic">
+            'Absolute Uri (no change):
+            EnsureAbsoluteUri(New Uri("http://mydomain/MyWebSite/ReportService.svc", UriKind.Absolute))    ' http://mydomain/MyWebSite/ReportService.svc
+            'Relative Uris:
+            EnsureAbsoluteUri(New Uri("ReportService.svc", UriKind.Relative)) ' http://mydomain/MyWebSite/ClientBin/ReportService.svc
+            EnsureAbsoluteUri(New Uri("../ReportService.svc", UriKind.Relative)) ' http://mydomain/MyWebSite/ReportService.svc 
+            EnsureAbsoluteUri(New Uri("/ReportService.svc", UriKind.Relative)) ' http://mydomain/ReportService.svc
+            </code>
+            </example>
+        </member>
+        <member name="E:Telerik.ReportViewer.Silverlight.ReportViewer.RenderBegin">
+            <summary>
+            Occurs when the viewer's Report property is changed, a parameter value is changed or refresh/print is triggered from the viewer UI.
+            </summary>
+        </member>
+        <member name="E:Telerik.ReportViewer.Silverlight.ReportViewer.ApplyParameters">
+            <summary>
+            Occurs when the viewer's Report property is changed,
+            a parameter value is changed
+            or refresh / preview is triggered from the viewer UI.
+            </summary>
+            <remarks>
+            Use this event to change / add the parameter values 
+            that will be used in the upcoming render operation.
+            </remarks>
+            <example>
+            This example illustrates how to wire the ApplyParameters event 
+            and set values for specific parameters in the event handler.
+            <code lang="C#" source="CodeSnippets\SilverlightCS\API\Telerik\ReportViewer\Silverlight\ApiExamples.cs" region="SilverlightApplyParametersEventSnippet" />
+            <code lang="VB" source="CodeSnippets\SilverlightVB\API\Telerik\ReportViewer\Silverlight\ApiExamples.vb" region="SilverlightApplyParametersEventSnippet" />
+            </example>
+        </member>
+        <member name="E:Telerik.ReportViewer.Silverlight.ReportViewer.PrintBegin">
+            <summary>
+            Occurs when the report in the viewer control starts printing. 
+            </summary>
+            <example>
+            This example illustrates how to wire the PrintBegin event and
+            how to cancel it if needed.
+            <code lang="C#" source="CodeSnippets\SilverlightCS\API\Telerik\ReportViewer\Silverlight\ApiExamples.cs" region="SilverlightPrintBeginEventSnippet" />
+            <code lang="VB" source="CodeSnippets\SilverlightVB\API\Telerik\ReportViewer\Silverlight\ApiExamples.vb" region="SilverlightPrintBeginEventSnippet" />
+            </example>
+        </member>
+        <member name="E:Telerik.ReportViewer.Silverlight.ReportViewer.PrintEnd">
+            <summary>
+            Occurs when the report printing in the viewer control is finished. 
+            </summary>
+            <example>
+            This example illustrates how to wire the PrintEnd event.
+            <code lang="C#" source="CodeSnippets\SilverlightCS\API\Telerik\ReportViewer\Silverlight\ApiExamples.cs" region="SilverlightPrintEndEventSnippet" />
+            <code lang="VB" source="CodeSnippets\SilverlightVB\API\Telerik\ReportViewer\Silverlight\ApiExamples.vb" region="SilverlightPrintEndEventSnippet" />
+            </example>
+        </member>
+        <member name="E:Telerik.ReportViewer.Silverlight.ReportViewer.RenderingBegin">
+            <summary>
+            Occurs when the report rendering in the viewer control is started.
+            </summary>
+            <example>
+            This example illustrates how to wire the RenderingBegin event and
+            how to cancel it if needed.
+            <code lang="C#" source="CodeSnippets\SilverlightCS\API\Telerik\ReportViewer\Silverlight\ApiExamples.cs" region="SilverlightRenderingBeginEventSnippet" />
+            <code lang="VB" source="CodeSnippets\SilverlightVB\API\Telerik\ReportViewer\Silverlight\ApiExamples.vb" region="SilverlightRenderingBeginEventSnippet" />
+            </example>
+        </member>
+        <member name="E:Telerik.ReportViewer.Silverlight.ReportViewer.RenderingEnd">
+            <summary>
+            Occurs when the report rendering in the viewer control is finished. 
+            </summary>
+            <example>
+            This example illustrates how to wire the RenderingEnd event.
+            <code lang="C#" source="CodeSnippets\SilverlightCS\API\Telerik\ReportViewer\Silverlight\ApiExamples.cs" region="SilverlightRenderingEndEventSnippet" />
+            <code lang="VB" source="CodeSnippets\SilverlightVB\API\Telerik\ReportViewer\Silverlight\ApiExamples.vb" region="SilverlightRenderingEndEventSnippet" />
+            </example>
+        </member>
+        <member name="E:Telerik.ReportViewer.Silverlight.ReportViewer.ExportBegin">
+            <summary>
+            Occurs when the report in the viewer control starts exporting. 
+            </summary>
+            <example>
+            This example illustrates how to wire the ExportBegin event, cancel it if needed and 
+            perform some logic based on the export format.
+            <code lang="C#" source="CodeSnippets\SilverlightCS\API\Telerik\ReportViewer\Silverlight\ApiExamples.cs" region="SilverlightExportBeginEventSnippet" />
+            <code lang="VB" source="CodeSnippets\SilverlightVB\API\Telerik\ReportViewer\Silverlight\ApiExamples.vb" region="SilverlightExportBeginEventSnippet" />
+            </example>
+        </member>
+        <member name="E:Telerik.ReportViewer.Silverlight.ReportViewer.ExportEnd">
+            <summary>
+            Occurs when the report exporting in the viewer control is finished. 
+            </summary>
+            <example>
+            This example illustrates how to wire the ExportEnd event.
+            <code lang="C#" source="CodeSnippets\SilverlightCS\API\Telerik\ReportViewer\Silverlight\ApiExamples.cs" region="SilverlightExportEndEventSnippet" />
+            <code lang="VB" source="CodeSnippets\SilverlightVB\API\Telerik\ReportViewer\Silverlight\ApiExamples.vb" region="SilverlightExportEndEventSnippet" />
+            </example>
+        </member>
+        <member name="E:Telerik.ReportViewer.Silverlight.ReportViewer.UpdateUI">
+            <summary>
+            Occurs when the UI of the report viewer control is updated. 
+            </summary>
+            <example>
+            This example illustrates how to wire the UpdateUI event.
+            <code lang="C#" source="CodeSnippets\SilverlightCS\API\Telerik\ReportViewer\Silverlight\ApiExamples.cs" region="SilverlightUpdateUIEventSnippet" />
+            <code lang="VB" source="CodeSnippets\SilverlightVB\API\Telerik\ReportViewer\Silverlight\ApiExamples.vb" region="SilverlightUpdateUIEventSnippet" />
+            </example>
+        </member>
+        <member name="E:Telerik.ReportViewer.Silverlight.ReportViewer.Error">
+            <summary>
+            Occurs when there is an error in the report viewer control. 
+            </summary>
+            <example>
+            This example illustrates how to wire the Error event and
+            use the event arguments to check the exception.
+            <code lang="C#" source="CodeSnippets\SilverlightCS\API\Telerik\ReportViewer\Silverlight\ApiExamples.cs" region="SilverlightErrorEventSnippet" />
+            <code lang="VB" source="CodeSnippets\SilverlightVB\API\Telerik\ReportViewer\Silverlight\ApiExamples.vb" region="SilverlightErrorEventSnippet" />
+            </example>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ReportViewer.ZoomPercent">
+            <summary>
+            Gets or sets the zoom percentage to use when displaying the report.
+            </summary>
+            <example>
+            <code lang="VB" source="CodeSnippets\SilverlightVB\API\Telerik\ReportViewer\Silverlight\ApiExamples.vb" region="SilverlightZoomPercentSnippet" />
+            <code lang="C#" source="CodeSnippets\SilverlightCS\API\Telerik\ReportViewer\Silverlight\ApiExamples.cs" region="SilverlightZoomPercentSnippet" />
+            </example>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ReportViewer.ZoomMode">
+            <summary>
+            Gets or sets the zoom mode of the control.
+            </summary>
+            <example>
+            <code lang="VB" source="CodeSnippets\SilverlightVB\API\Telerik\ReportViewer\Silverlight\ApiExamples.vb" region="SilverlightZoomModeSnippet" />
+            <code lang="C#" source="CodeSnippets\SilverlightCS\API\Telerik\ReportViewer\Silverlight\ApiExamples.cs" region="SilverlightZoomModeSnippet" />
+            </example>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ReportViewer.Report">
+            <summary>
+            Specifies the assembly qualified name of the report class which should be displayed by the viewer.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ReportViewer.ReportServerUri">
+            <summary>
+            Specifies the <see cref="T:System.Uri"/> to the Telerik WCF Report service. The <b>Uri</b> may be
+            absolute or relative. For complete information on how the relative Uris are resolved
+            to absolute please see <see cref="M:Telerik.ReportViewer.Silverlight.ReportViewer.EnsureAbsoluteUri(System.Uri)"/> method.
+            </summary>
+            <seealso cref="M:Telerik.ReportViewer.Silverlight.ReportViewer.EnsureAbsoluteUri(System.Uri)"/>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ReportViewer.ReportServiceUri">
+            <summary>
+            Specifies the <see cref="T:System.Uri"/> to the Telerik WCF Report service. The <b>Uri</b> may be
+            absolute or relative. For complete information on how the relative Uris are resolved
+            to absolute please see <see cref="M:Telerik.ReportViewer.Silverlight.ReportViewer.EnsureAbsoluteUri(System.Uri)"/> method.
+            </summary>
+            <seealso cref="M:Telerik.ReportViewer.Silverlight.ReportViewer.EnsureAbsoluteUri(System.Uri)"/>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ReportViewer.UseNativePrinting">
+            <summary>
+            Specifies whether to use native Silverlight printing or not.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ReportViewer.UseDefaultPrinter">
+            <summary>
+            Specifies whether or not to automatically print to the default printer for 
+            the computer without showing a print dialog. Requires elevated permissions.
+            If the application is partially trusted the property is ignored.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ReportViewer.TextResources">
+            <summary>
+            Gets or sets the tooltips and the messages of the control.
+            </summary>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ReportViewer.ReportServiceClientFactory">
+            <summary>
+            Gets or sets the <see cref="T:Telerik.ReportViewer.Silverlight.IReportServiceClientFactory"/> that <b>ReportViewer</b> will use the next
+            time a new instance of <b>ReportServiceClient</b> is required.
+            </summary>
+            <remarks>The ReportViewer usually passes absolute Uri to the <see cref="M:Telerik.ReportViewer.Silverlight.IReportServiceClientFactory.Create(System.Uri)"/> method. 
+            For more information on how <see cref="P:Telerik.ReportViewer.Silverlight.ReportViewer.ReportServiceUri"/> is resolved to absolute see <see cref="M:Telerik.ReportViewer.Silverlight.ReportViewer.EnsureAbsoluteUri(System.Uri)"/>.</remarks>
+            <example>
+            This example illustrates how to implement and use a custom <see cref="T:Telerik.ReportViewer.Silverlight.IReportServiceClientFactory"/>.
+            <code lang="C#" source="CodeSnippets\SilverlightCS\API\Telerik\ReportViewer\Silverlight\CustomBindingsSnippets.cs" region="UsingCustomBindings"/>
+            <code lang="VB" source="CodeSnippets\SilverlightVB\API\Telerik\ReportViewer\Silverlight\CustomBindingsSnippets.vb" region="UsingCustomBindings"/>
+            </example>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ReportViewer.ViewMode">
+            <summary>
+            Specifies whether the viewer is in interactive or print preview mode.
+            </summary>
+            <example>
+            <code lang="VB" source="CodeSnippets\SilverlightVB\API\Telerik\ReportViewer\Silverlight\ApiExamples.vb" region="SilverlightViewModeSnippet" />
+            <code lang="C#" source="CodeSnippets\SilverlightCS\API\Telerik\ReportViewer\Silverlight\ApiExamples.cs" region="SilverlightViewModeSnippet" />
+            </example>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ReportViewer.CurrentPage">
+            <summary>
+            Gets or sets the current page in the viewer.
+            </summary>
+            <example>
+            <code lang="C#" source="CodeSnippets\SilverlightCS\API\Telerik\ReportViewer\Silverlight\ApiExamples.cs" region="SilverlightCanMoveToPageCurrentPageSnippet" />
+            <code lang="VB" source="CodeSnippets\SilverlightVB\API\Telerik\ReportViewer\Silverlight\ApiExamples.vb" region="SilverlightCanMoveToPageCurrentPageSnippet" />
+            </example>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ReportViewer.DocumentMapVisible">
+            <summary>
+            Gets or sets a value that indicates whether the document map is displayed if any bookmark is defined.
+            </summary>
+            <example>
+            <code lang="VB" source="CodeSnippets\SilverlightVB\API\Telerik\ReportViewer\Silverlight\ApiExamples.vb" region="SilverlightDocumentMapSnippet" />
+            <code lang="C#" source="CodeSnippets\SilverlightCS\API\Telerik\ReportViewer\Silverlight\ApiExamples.cs" region="SilverlightDocumentMapSnippet" />
+            </example>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ReportViewer.NavigateBackEnabled">
+            <summary>
+            Determines if navigate back in report viewer history operation is enabled
+            </summary>
+            <example>
+            <code lang="VB" source="CodeSnippets\SilverlightVB\API\Telerik\ReportViewer\Silverlight\ApiExamples.vb" region="SilverlightNavigateBackSnippet" />
+            <code lang="C#" source="CodeSnippets\SilverlightCS\API\Telerik\ReportViewer\Silverlight\ApiExamples.cs" region="SilverlightNavigateBackSnippet" />
+            </example>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ReportViewer.NavigateForwardEnabled">
+            <summary>
+            Determines if navigate forward in report viewer history operation is enabled
+            </summary>
+            <example>
+            <code lang="VB" source="CodeSnippets\SilverlightVB\API\Telerik\ReportViewer\Silverlight\ApiExamples.vb" region="SilverlightNavigateForwardSnippet" />
+            <code lang="C#" source="CodeSnippets\SilverlightCS\API\Telerik\ReportViewer\Silverlight\ApiExamples.cs" region="SilverlightNavigateForwardSnippet" />
+            </example>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ReportViewer.ParametersAreaVisible">
+            <summary>
+            Gets or sets a value that indicates whether the parameters area is displayed if any parameter editor exists.
+            </summary>
+            <example>
+            <code lang="VB" source="CodeSnippets\SilverlightVB\API\Telerik\ReportViewer\Silverlight\ApiExamples.vb" region="SilverlightParametersAreaSnippet" />
+            <code lang="C#" source="CodeSnippets\SilverlightCS\API\Telerik\ReportViewer\Silverlight\ApiExamples.cs" region="SilverlightParametersAreaSnippet" />
+            </example>
+        </member>
+        <member name="P:Telerik.ReportViewer.Silverlight.ReportViewer.TotalPages">
+            <summary>
+            Gets the count of the available pages in the viewer.
+            </summary>
+            <example>
+            <code lang="VB" source="CodeSnippets\SilverlightVB\API\Telerik\ReportViewer\Silverlight\ApiExamples.vb" region="SilverlightTotalPagesSnippet" />
+            <code lang="C#" source="CodeSnippets\SilverlightCS\API\Telerik\ReportViewer\Silverlight\ApiExamples.cs" region="SilverlightTotalPagesSnippet" />
+            </example>
+        </member>
+        <member name="T:Telerik.ReportViewer.Silverlight.ReportViewer.TemplateParts">
+            <summary>
+            Specifies the template parts names.
+            </summary>
+        </member>
+        <member name="F:Telerik.ReportViewer.Silverlight.ReportViewer.TemplateParts.PageScrollViewer">
+            <summary>
+            Specifies the name of the page scroll viewer template part.
+            </summary>
+        </member>
+        <member name="F:Telerik.ReportViewer.Silverlight.ReportViewer.TemplateParts.PageContainer">
+            <summary>
+            Specifies the name of the page container template part.
+            </summary>
+        </member>
+        <member name="F:Telerik.ReportViewer.Silverlight.ReportViewer.TemplateParts.LayoutRoot">
+            <summary>
+            Specifies the name of the layout root template part.
+            </summary>
+        </member>
+        <member name="F:Telerik.ReportViewer.Silverlight.ReportViewer.TemplateParts.PageContentControl">
+            <summary>
+            Specifies the name of the page content template part.
+            </summary>
+        </member>
+        <member name="T:Telerik.ReportViewer.Silverlight.ViewMode">
+            <summary>
+            Specifies the page view mode for the ReportViewer control.
+            </summary>
+        </member>
+        <member name="F:Telerik.ReportViewer.Silverlight.ViewMode.Interactive">
+            <summary>
+            Enables <strong>Interactive</strong> page view.
+            </summary>
+        </member>
+        <member name="F:Telerik.ReportViewer.Silverlight.ViewMode.PrintPreview">
+            <summary>
+            Enables <strong>PrintPreview</strong> page view.
+            </summary>
+        </member>
+        <member name="T:Telerik.ReportViewer.Silverlight.ReportViewerStates">
+            <summary>
+            Defines the names of the report viewer visual states.
+            </summary>
+        </member>
+        <member name="F:Telerik.ReportViewer.Silverlight.ReportViewerStates.DocumentMapStateGroup">
+            <summary>
+            Specifies the name of the document map visual state group.
+            </summary>
+        </member>
+        <member name="F:Telerik.ReportViewer.Silverlight.ReportViewerStates.DocumentMapVisible">
+            <summary>
+            Specifies the name of the document map's visible state.
+            </summary>
+        </member>
+        <member name="F:Telerik.ReportViewer.Silverlight.ReportViewerStates.DocumentMapCollapsed">
+            <summary>
+            Specifies the name of the document map collapsed state.
+            </summary>
+        </member>
+        <member name="F:Telerik.ReportViewer.Silverlight.ReportViewerStates.ParametersAreaStateGroup">
+            <summary>
+            Specifies the name of the parameters area states group.
+            </summary>
+        </member>
+        <member name="F:Telerik.ReportViewer.Silverlight.ReportViewerStates.ParametersAreaVisible">
+            <summary>
+            Specifies the name of the parameters area visible state.
+            </summary>
+        </member>
+        <member name="F:Telerik.ReportViewer.Silverlight.ReportViewerStates.ParametersAreaCollapsed">
+            <summary>
+            Specifies the name of the parameters area collapsed state.
+            </summary>
+        </member>
+        <member name="F:Telerik.ReportViewer.Silverlight.ReportViewerStates.ViewerStateGroup">
+            <summary>
+            Specifies the name of the viewer visual states group.
+            </summary>
+        </member>
+        <member name="F:Telerik.ReportViewer.Silverlight.ReportViewerStates.ViewerWorkInProgress">
+            <summary>
+            Specifies the name of the InProgress visual state.
+            </summary>
+        </member>
+        <member name="F:Telerik.ReportViewer.Silverlight.ReportViewerStates.ViewerError">
+            <summary>
+            Specifies the name of the Error visual state.
+            </summary>
+        </member>
+        <member name="F:Telerik.ReportViewer.Silverlight.ReportViewerStates.ViewerPage">
+            <summary>
+            Specifies the name of the visual state when a page is displayed.
+            </summary>
+        </member>
+        <member name="F:Telerik.ReportViewer.Silverlight.ReportViewerStates.ExportReportStateGroup">
+            <summary>
+            Specifies the name of the Export state visual group.
+            </summary>
+        </member>
+        <member name="F:Telerik.ReportViewer.Silverlight.ReportViewerStates.ExportNoExport">
+            <summary>
+            Specifies the name of the visual state when there is no export.
+            </summary>
+        </member>
+        <member name="F:Telerik.ReportViewer.Silverlight.ReportViewerStates.ExportInProgress">
+            <summary>
+            Specifies the name of the visual state when export is in progress.
+            </summary>
+        </member>
+        <member name="F:Telerik.ReportViewer.Silverlight.ReportViewerStates.ExportComplete">
+            <summary>
+            Specifies the name of the visual state when export is complete.
+            </summary>
+        </member>
+        <member name="F:Telerik.ReportViewer.Silverlight.ReportViewerStates.PrintReportStateGroup">
+            <summary>
+            Specifies the name of the Print state visual group.
+            </summary>
+        </member>
+        <member name="F:Telerik.ReportViewer.Silverlight.ReportViewerStates.PrintNoPrint">
+            <summary>
+            Specifies the name of the visual state when there is no print.
+            </summary>
+        </member>
+        <member name="F:Telerik.ReportViewer.Silverlight.ReportViewerStates.PrintInProgress">
+            <summary>
+            Specifies the name of the visual state when print is in progress.
+            </summary>
+        </member>
+        <member name="F:Telerik.ReportViewer.Silverlight.ReportViewerStates.PrintComplete">
+            <summary>
+            Specifies the name of the visual state when print is complete.
+            </summary>
+        </member>
+        <member name="F:Telerik.ReportViewer.Silverlight.ReportViewerStates.UpdateParametersStateGroup">
+            <summary>
+            Specifies the name of the update parameters visual state group.
+            </summary>
+        </member>
+        <member name="F:Telerik.ReportViewer.Silverlight.ReportViewerStates.UpdateParametersComplete">
+            <summary>
+            Specifies the name of the visual state when parameters update is complete.
+            </summary>
+        </member>
+        <member name="F:Telerik.ReportViewer.Silverlight.ReportViewerStates.UpdateParametersInProgress">
+            <summary>
+            Specifies the name of the visual state when parameters update is in progress.
+            </summary>
+        </member>
+        <member name="T:Telerik.ReportViewer.Silverlight.VisibilityConverter">
+            <summary>
+            A value converter for visibility and boolean values.
+            </summary>
+        </member>
+        <member name="M:Telerik.ReportViewer.Silverlight.VisibilityConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts <see cref="T:System.Windows.Visibility"/> value.
+            </summary>
+            <param name="value"></param>
+            <param name="targetType"></param>
+            <param name="parameter"></param>
+            <param name="culture"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.ReportViewer.Silverlight.VisibilityConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts <see cref="T:System.Windows.Visibility"/> value.
+            </summary>
+            <param name="value"></param>
+            <param name="targetType"></param>
+            <param name="parameter"></param>
+            <param name="culture"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Telerik.ReportViewer.Silverlight.MultivalueParameterConverter">
+            <summary>
+            A value converter for multi-value parameters
+            </summary>
+        </member>
+        <member name="M:Telerik.ReportViewer.Silverlight.MultivalueParameterConverter.#ctor">
+            <summary>
+            Creates new instance of MultivalueParameterConverter.
+            </summary>
+        </member>
+        <member name="M:Telerik.ReportViewer.Silverlight.MultivalueParameterConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts a multi-value to single string value.
+            </summary>
+            <param name="value"></param>
+            <param name="targetType"></param>
+            <param name="parameter"></param>
+            <param name="culture"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.ReportViewer.Silverlight.MultivalueParameterConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts a single string value to multi-value.
+            </summary>
+            <param name="value"></param>
+            <param name="targetType"></param>
+            <param name="parameter"></param>
+            <param name="culture"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Telerik.ReportViewer.Silverlight.ZoomConverter">
+            <summary>
+            Formats a number as % string and vice-versa
+            </summary>
+        </member>
+        <member name="M:Telerik.ReportViewer.Silverlight.ZoomConverter.#ctor">
+            <summary>
+            This is the default constructor
+            </summary>
+        </member>
+        <member name="M:Telerik.ReportViewer.Silverlight.ZoomConverter.#ctor(Telerik.ReportViewer.Silverlight.ITextResources)">
+            <summary>
+            Creates an instance of the ZoomConverter class.
+            </summary>
+            <param name="textResources"></param>
+        </member>
+        <member name="M:Telerik.ReportViewer.Silverlight.ZoomConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts a number as % string.
+            </summary>
+            <param name="value"></param>
+            <param name="targetType"></param>
+            <param name="parameter"></param>
+            <param name="culture"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.ReportViewer.Silverlight.ZoomConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts a number as % string.
+            </summary>
+            <param name="value"></param>
+            <param name="targetType"></param>
+            <param name="parameter"></param>
+            <param name="culture"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Telerik.ReportViewer.Silverlight.ScaleFactorConverter">
+            <summary>
+            Converts number to percent value.
+            </summary>
+        </member>
+        <member name="M:Telerik.ReportViewer.Silverlight.ScaleFactorConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts number to percent value.
+            </summary>
+            <param name="value"></param>
+            <param name="targetType"></param>
+            <param name="parameter"></param>
+            <param name="culture"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.ReportViewer.Silverlight.ScaleFactorConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts number to percent value.
+            </summary>
+            <param name="value"></param>
+            <param name="targetType"></param>
+            <param name="parameter"></param>
+            <param name="culture"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Telerik.ReportViewer.Silverlight.ZoomModeConverter">
+            <summary>
+            Converts the <see cref="T:Telerik.ReportViewer.Silverlight.ZoomMode"/> enumeration to and from a string.
+            </summary>
+        </member>
+        <member name="M:Telerik.ReportViewer.Silverlight.ZoomModeConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+            <summary>
+            Returns whether this converter can convert an object of the given type to the type of this converter, using the specified context.
+            </summary>
+            <param name="context"></param>
+            <param name="sourceType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.ReportViewer.Silverlight.ZoomModeConverter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+            <summary>
+            Returns whether this converter can convert the object to the specified type, using the specified context.
+            </summary>
+            <param name="context"></param>
+            <param name="destinationType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.ReportViewer.Silverlight.ZoomModeConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)">
+            <summary>
+            Converts the given object to the type of this converter, using the specified context and culture information.
+            </summary>
+            <param name="context"></param>
+            <param name="culture"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.ReportViewer.Silverlight.ZoomModeConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)">
+            <summary>
+            Converts the given value object to the specified type, using the specified context and culture information.
+            </summary>
+            <param name="context"></param>
+            <param name="culture"></param>
+            <param name="value"></param>
+            <param name="destinationType"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Telerik.ReportViewer.Silverlight.ZoomMode">
+            <summary>
+            Specifies the zoom mode for the ReportViewer control.
+            </summary>
+        </member>
+        <member name="F:Telerik.ReportViewer.Silverlight.ZoomMode.FullPage">
+            <summary>
+            Sets the zoom mode to full page.
+            </summary>
+        </member>
+        <member name="F:Telerik.ReportViewer.Silverlight.ZoomMode.PageWidth">
+            <summary>
+            Sets the zoom mode to page width.  
+            </summary>
+        </member>
+        <member name="F:Telerik.ReportViewer.Silverlight.ZoomMode.Percent">
+            <summary>
+            Sets the zoom mode to a percentage.  
+            </summary>
+        </member>
+        <member name="T:Telerik.Reporting.Processing.Parameter">
+            <summary>
+            Represents a processing instance of a ReportParameter.
+            </summary>
+        </member>
+        <member name="M:Telerik.Reporting.Processing.Parameter.#ctor">
+            <summary>
+            Initializes a new instance of the Parameter class.
+            </summary>
+        </member>
+        <member name="P:Telerik.Reporting.Processing.Parameter.Name">
+            <summary>
+            Gets or sets the Name of the parameters
+            </summary>
+        </member>
+        <member name="P:Telerik.Reporting.Processing.Parameter.Type">
+            <summary>
+            Gets or sets the type of the parameter.
+            </summary>
+            <remarks>
+            The string that represents the parameter type should be the <see cref="P:System.Type.FullName"/> 
+            of the CLR type corresponding to the ReportParameterType.
+            </remarks>
+        </member>
+        <member name="P:Telerik.Reporting.Processing.Parameter.Text">
+            <summary>
+            Gets or sets the text for the parameter to be displayed in the report viewer.
+            </summary>
+        </member>
+        <member name="P:Telerik.Reporting.Processing.Parameter.Multivalue">
+            <summary>
+            Determines if the parameter can hold more then one value.
+            </summary>
+        </member>
+        <member name="P:Telerik.Reporting.Processing.Parameter.AllowNull">
+            <summary>
+            Determines if the parameter allows no value to be passed from it's editor.
+            </summary>
+        </member>
+        <member name="P:Telerik.Reporting.Processing.Parameter.AllowBlank">
+            <summary>
+            Determines if the parameter allows an empty string to be passed. Only for parameters of type string.
+            </summary>
+        </member>
+        <member name="P:Telerik.Reporting.Processing.Parameter.IsVisible">
+            <summary>
+            Determines if the parameter should be displayed in the report viewer.
+            </summary>
+        </member>
+        <member name="P:Telerik.Reporting.Processing.Parameter.AutoRefresh">
+            <summary>
+            Determines whether the report viewer should auto-update the report
+            when the parameter value is changed.
+            </summary>
+        </member>
+        <member name="P:Telerik.Reporting.Processing.Parameter.HasChildParameters">
+            <summary>
+            Gets or sets a value indicating whether other parameters depend on the current parameter.
+            </summary>
+        </member>
+        <member name="P:Telerik.Reporting.Processing.Parameter.ChildParameters">
+            <summary>
+            Gets or sets IDs of all parameters that depend on the current parameter.
+            </summary>
+        </member>
+        <member name="P:Telerik.Reporting.Processing.Parameter.AvailableValues">
+            <summary>
+            Gets or sets the list of the available values for the current parameter.
+            </summary>
+        </member>
+        <member name="P:Telerik.Reporting.Processing.Parameter.Value">
+            <summary>
+            Gets or sets the value of the parameter.
+            </summary>
+            <remarks>
+            Value should of the allowed types, or <see cref="T:System.Collections.IEnumerable"/> containing values of the allowed types.
+            </remarks>
+        </member>
+        <member name="P:Telerik.Reporting.Processing.Parameter.ID">
+            <summary>
+            Gets or sets the ID of the parameter.
+            </summary>
+        </member>
+        <member name="P:Telerik.Reporting.Processing.Parameter.Label">
+            <summary>
+            Gets the label of the parameter. Returns a string that contains the label
+            of the current parameter's <see cref="P:Telerik.Reporting.Processing.Parameter.Value"/> or an array of strings that contains
+            the labels of all values when <b>multivalue</b> parameter.
+            </summary>
+        </member>
+        <member name="T:Telerik.Reporting.Processing.ParameterValue">
+            <summary>
+            Represents a parameter value.
+            </summary>
+        </member>
+        <member name="P:Telerik.Reporting.Processing.ParameterValue.Name">
+            <summary>
+            Gets or sets the name of the ParameterValue.
+            </summary>
+        </member>
+        <member name="P:Telerik.Reporting.Processing.ParameterValue.Value">
+            <summary>
+            Gets or sets the value of the ParameterValue.
+            </summary>
+        </member>
+        <member name="T:Telerik.Reporting.Service.ExtensionInfo">
+            <summary>
+            Represents a <see cref="!:Telerik.Reporting.IExtension"/> on the server
+            </summary>
+        </member>
+        <member name="P:Telerik.Reporting.Service.ExtensionInfo.Name">
+            <summary>
+            The name of the extension.
+            </summary>
+            <seealso cref="!:Telerik.Reporting.Interfaces.Attributes.ExtensionNameAttribute"/>
+        </member>
+        <member name="P:Telerik.Reporting.Service.ExtensionInfo.LocalizedName">
+            <summary>
+            The localized name of the extension.
+            </summary>
+            <seealso cref="!:Telerik.Reporting.Interfaces.Attributes.ExtensionLocalizedDescriptionAttribute"/>
+        </member>
+        <member name="T:Telerik.Reporting.Service.ReportInfo">
+            <summary>
+            Represents a <see cref="!:Telerik.Reporting.Report"/> on the server 
+            </summary>
+        </member>
+        <member name="P:Telerik.Reporting.Service.ReportInfo.Name">
+            <summary>
+            The <see cref="P:System.Type.Name"/> of the Report class.
+            </summary>
+        </member>
+        <member name="P:Telerik.Reporting.Service.ReportInfo.FullName">
+            <summary>
+            The <see cref="P:System.Type.AssemblyQualifiedName"/> of the Report class.
+            </summary>
+        </member>
+        <member name="P:Telerik.Reporting.Service.ReportInfo.Description">
+            <summary>
+            The description of the Report, if any.
+            </summary>
+            <remarks>
+            The description of the Report is attached through the <see cref="T:System.ComponentModel.DescriptionAttribute"/>.
+            </remarks>
+        </member>
+        <member name="T:Telerik.Reporting.Service.ServiceOperationResultBase">
+            <summary>
+            Represents the result of a service operation
+            </summary>
+        </member>
+        <member name="M:Telerik.Reporting.Service.ServiceOperationResultBase.ThrowOnError">
+            <summary>
+            Throws an <see cref="T:Telerik.Reporting.Service.ReportServiceOperationException"/> if the current operation has ended with an error.
+            </summary>
+        </member>
+        <member name="M:Telerik.Reporting.Service.ServiceOperationResultBase.RaiseExceptionIfNecessary">
+            <summary>
+            Throws an <see cref="T:Telerik.Reporting.Service.ReportServiceOperationException"/> if the current operation has ended with an error.
+            </summary>
+        </member>
+        <member name="P:Telerik.Reporting.Service.ServiceOperationResultBase.Error">
+            <summary>
+            Gets or sets the current error message for the current service operation.
+            </summary>
+        </member>
+        <member name="P:Telerik.Reporting.Service.ServiceOperationResultBase.HasError">
+            <summary>
+            Indicates whether the current operation has ended with error.
+            </summary>
+        </member>
+        <member name="T:Telerik.Reporting.Service.ReportServiceOperationException">
+            <summary>
+            Represents an error occurred during a Report Service operation.
+            </summary>
+        </member>
+        <member name="M:Telerik.Reporting.Service.ReportServiceOperationException.#ctor">
+            <summary>
+            Creates an instance of the <see cref="T:Telerik.Reporting.Service.ReportServiceOperationException"/> class.
+            </summary>
+        </member>
+        <member name="M:Telerik.Reporting.Service.ReportServiceOperationException.#ctor(System.String)">
+            <summary>
+            Creates an instance of the <see cref="T:Telerik.Reporting.Service.ReportServiceOperationException"/> class.
+            </summary>
+            <param name="message">The message that describes the error.</param>
+        </member>
+        <member name="T:Telerik.Reporting.Service.RenderingSessionInfo">
+            <summary>
+            Represents the result of a RenderAndCache service operation. This class is intended for internal use only.
+            </summary>
+        </member>
+        <member name="P:Telerik.Reporting.Service.RenderingSessionInfo.InstanceID">
+            <summary>
+            Gets or sets the unique identifier of the current rendering session.
+            </summary>
+        </member>
+        <member name="P:Telerik.Reporting.Service.RenderingSessionInfo.PageCount">
+            <summary>
+            Gets or sets the count of the generated pages for the current rendering session.
+            </summary>
+        </member>
+        <member name="P:Telerik.Reporting.Service.RenderingSessionInfo.Bookmarks">
+            <summary>
+            Gets or sets a list of the <see cref="T:Telerik.Reporting.Service.BookmarkNode"/>s for the current rendering session.
+            </summary>
+        </member>
+        <member name="P:Telerik.Reporting.Service.RenderingSessionInfo.Actions">
+            <summary>
+            Gets or sets a list of the <see cref="T:Telerik.Reporting.Service.ActionInfo"/>s for the current rendering session.
+            </summary>
+        </member>
+        <member name="P:Telerik.Reporting.Service.RenderingSessionInfo.HasDocumentMap">
+            <summary>
+            Gets or sets a value indicating whether a document map is available for the current report.
+            </summary>
+        </member>
+        <member name="P:Telerik.Reporting.Service.RenderingSessionInfo.Report">
+            <summary>
+            Gets or sets the assembly qualified name of the rendered report.
+            </summary>
+        </member>
+        <member name="P:Telerik.Reporting.Service.RenderingSessionInfo.DocumentName">
+            <summary>
+            Gets or sets the report document name of the rendered report.
+            </summary>
+        </member>
+        <member name="P:Telerik.Reporting.Service.RenderingSessionInfo.Parameters">
+            <summary>
+            Gets or sets a list of <see cref="T:Telerik.Reporting.Service.Parameter"/>s for the current report.
+            </summary>
+        </member>
+        <member name="P:Telerik.Reporting.Service.RenderingSessionInfo.PageNumber">
+            <summary>
+            Gets or sets the page that is initially shown in the viewer.
+            </summary>
+        </member>
+        <member name="P:Telerik.Reporting.Service.RenderingSessionInfo.NavigateBackEnabled">
+            <summary>
+            Determines if the NavigateBack command is enabled.
+            </summary>
+        </member>
+        <member name="P:Telerik.Reporting.Service.RenderingSessionInfo.NavigateForwardEnabled">
+            <summary>
+            Determines if the NavigateForward command is enabled.
+            </summary>
+        </member>
+        <member name="T:Telerik.Reporting.Service.RenderingResult">
+            <summary>
+            Represents the result of the Render service operation.
+            </summary>
+        </member>
+        <member name="P:Telerik.Reporting.Service.RenderingResult.DocumentBytes">
+            <summary>
+            Byte array that contains the rendered report.
+            </summary>
+        </member>
+        <member name="P:Telerik.Reporting.Service.RenderingResult.DocumentName">
+            <summary>
+            Gets or sets the name of the created document.
+            </summary>
+        </member>
+        <member name="P:Telerik.Reporting.Service.RenderingResult.Extension">
+            <summary>
+            Gets or sets the file extension of the document.
+            </summary>
+        </member>
+        <member name="P:Telerik.Reporting.Service.RenderingResult.MimeType">
+            <summary>
+            Gets or sets the MIME type of the document.
+            </summary>
+        </member>
+        <member name="T:Telerik.Reporting.Service.PageInfo">
+            <summary>
+            Represents the result of the GetPage service operation.
+            </summary>
+        </member>
+        <member name="P:Telerik.Reporting.Service.PageInfo.PageNumber">
+            <summary>
+            Gets or sets the serial number of the current report page.
+            </summary>
+        </member>
+        <member name="P:Telerik.Reporting.Service.PageInfo.Buffer">
+            <summary>
+            Gets or sets the Byte array that contains the current report page.
+            </summary>
+        </member>
+        <member name="T:Telerik.Reporting.Service.NameValueDictionary">
+            <summary>
+            Represents a <see cref="T:System.Collections.Generic.Dictionary`2"/> with <see cref="T:System.String"/> key and <see cref="T:System.Object"/> value.
+            </summary>
+        </member>
+        <member name="T:Telerik.Reporting.Service.Parameter">
+            <summary>
+            Represents a <see cref="!:ReportParameter"/> ready to be displayed by a report viewer. <see cref="T:Telerik.Reporting.Service.Parameter"/> is intended for internal use only.
+            </summary>
+        </member>
+        <member name="T:Telerik.Reporting.Service.BookmarkNode">
+            <summary>
+            Represents a bookmark in the document hierarchy.
+            </summary>
+        </member>
+        <member name="P:Telerik.Reporting.Service.BookmarkNode.Children">
+            <summary>
+            The list of all child <see cref="T:Telerik.Reporting.Service.BookmarkNode"/>s.
+            </summary>
+        </member>
+        <member name="P:Telerik.Reporting.Service.BookmarkNode.Id">
+            <summary>
+            Gets or sets a list of the <see cref="T:Telerik.Reporting.Service.BookmarkNode"/> this <see cref="T:Telerik.Reporting.Service.BookmarkNode"/> points to.
+            </summary>
+        </member>
+        <member name="P:Telerik.Reporting.Service.BookmarkNode.Text">
+            <summary>
+            The label of the current <see cref="T:Telerik.Reporting.Service.BookmarkNode"/> when displayed in the report viewer's Document Map.
+            </summary>
+        </member>
+        <member name="P:Telerik.Reporting.Service.BookmarkNode.Page">
+            <summary>
+            The number of the page where the current bookmark appears.
+            </summary>
+        </member>
+        <member name="P:Telerik.Reporting.Service.BookmarkNode.X">
+            <summary>
+            The X-coordinate of the location in the page of the current bookmark.
+            </summary>
+        </member>
+        <member name="P:Telerik.Reporting.Service.BookmarkNode.Y">
+            <summary>
+            The Y-coordinate of the location in the page of the current bookmark.
+            </summary>
+        </member>
+        <member name="T:Telerik.Reporting.Service.ActionInfo">
+            <summary>
+            Represents an interactive action and its coordinates defined in the document hierarchy.
+            </summary>
+        </member>
+        <member name="P:Telerik.Reporting.Service.ActionInfo.Id">
+            <summary>
+            The id of the action.
+            </summary>
+        </member>
+        <member name="P:Telerik.Reporting.Service.ActionInfo.Action">
+            <summary>
+            The action that will be executed.
+            </summary>
+        </member>
+        <member name="T:Telerik.Reporting.Service.ActionType">
+            <summary>
+            Specifies the type of an interactive action. 
+            </summary>
+        </member>
+        <member name="F:Telerik.Reporting.Service.ActionType.BookmarkNavigation">
+            <summary>
+            The action navigates to a bookmark.
+            </summary>
+        </member>
+        <member name="F:Telerik.Reporting.Service.ActionType.UrlNavigation">
+            <summary>
+            The action navigates to an URL.
+            </summary>
+        </member>
+        <member name="F:Telerik.Reporting.Service.ActionType.ServerAction">
+            <summary>
+            The action that is handled on the server.
+            </summary>
+        </member>
+        <member name="T:Telerik.Reporting.Service.Action">
+            <summary>
+            Represents an interactive action.
+            </summary>
+        </member>
+        <member name="P:Telerik.Reporting.Service.Action.Type">
+            <summary>
+            The type of the action
+            </summary>
+        </member>
+        <member name="P:Telerik.Reporting.Service.Action.TargetBookmarkId">
+            <summary>
+            The target bookmark of the action.
+            </summary>
+        </member>
+        <member name="P:Telerik.Reporting.Service.Action.ReportDocumentType">
+            <summary>
+            The assembly qualified name of the target report type.
+            </summary>
+        </member>
+        <member name="P:Telerik.Reporting.Service.Action.Parameters">
+            <summary>
+            The report parameters values that are passed to the target report when the
+            action is triggered.
+            </summary>
+        </member>
+        <member name="P:Telerik.Reporting.Service.Action.Url">
+            <summary>
+            The URL of the action.
+            </summary>
+        </member>
+        <member name="P:Telerik.Reporting.Service.Action.Target">
+            <summary>
+            The Target of the action.
+            </summary>
+        </member>
+        <member name="P:Telerik.Reporting.Service.Action.ServerActionIdentifier">
+            <summary>
+            The unique identifier of the action
+            </summary>
+        </member>
+        <member name="T:Telerik.Reporting.Service.SilverlightClient.IReportService">
+            <summary>
+            The Telerik Report Service interface.
+            </summary>
+        </member>
+        <member name="M:Telerik.Reporting.Service.SilverlightClient.IReportService.BeginListAvailableReports(System.AsyncCallback,System.Object)">
+            <summary>
+            Starts an asynchronous ListAvailableReports operation.
+            </summary>
+            <param name="callback">An optional asynchronous callback, to be called when the ListAvailableReports is complete.</param>
+            <param name="state">A user-provided object that distinguishes this particular asynchronous ListAvailableReports request from other requests.</param>
+            <returns>An <see cref="T:System.IAsyncResult"/> that represents the asynchronous ListAvailableReports, which could still be pending.</returns>
+        </member>
+        <member name="M:Telerik.Reporting.Service.SilverlightClient.IReportService.EndListAvailableReports(System.IAsyncResult)">
+            <summary>
+            Waits for the pending asynchronous ListAvailableReports to complete.
+            </summary>
+            <param name="result">The reference to the pending asynchronous request to finish.</param>
+            <returns>A list with available <see cref="T:Telerik.Reporting.Service.ReportInfo"/></returns>
+        </member>
+        <member name="M:Telerik.Reporting.Service.SilverlightClient.IReportService.BeginListRenderingExtensions(System.AsyncCallback,System.Object)">
+            <summary>
+            Starts an asynchronous ListRenderingExtensions operation. 
+            </summary>
+            <param name="callback">An optional asynchronous callback, to be called when the ListRenderingExtensions is complete.</param>
+            <param name="state">A user-provided object that distinguishes this particular asynchronous ListRenderingExtensions request from other requests.</param>
+            <returns>An <see cref="T:System.IAsyncResult"/> that represents the asynchronous ListRenderingExtensions, which could still be pending.</returns>
+        </member>
+        <member name="M:Telerik.Reporting.Service.SilverlightClient.IReportService.EndListRenderingExtensions(System.IAsyncResult)">
+            <summary>
+            Waits for the pending asynchronous ListRenderingExtensions to complete.
+            </summary>
+            <param name="result">The reference to the pending asynchronous request to finish.</param>
+            <returns>A list with available <see cref="T:Telerik.Reporting.Service.ExtensionInfo"/></returns>
+        </member>
+        <member name="M:Telerik.Reporting.Service.SilverlightClient.IReportService.BeginRenderAndCache(System.String,System.String,Telerik.Reporting.Service.NameValueDictionary,Telerik.Reporting.Service.NameValueDictionary,System.AsyncCallback,System.Object)">
+            <summary>
+            Starts an asynchronous RenderAndCache operation. This operation is intended for internal use only.
+            </summary>
+            <param name="format">The render format.</param>
+            <param name="report">The <see cref="P:System.Type.AssemblyQualifiedName"/> of the report type to render.</param>
+            <param name="deviceInfo">A <see cref="T:Telerik.Reporting.Service.NameValueDictionary"/> with setting for the current render format.</param>
+            <param name="parameters">A <see cref="T:Telerik.Reporting.Service.NameValueDictionary"/> with values for the report parameters.</param>
+            <param name="callback">An optional asynchronous callback, to be called when the RenderAndCache is complete.</param>
+            <param name="state">A user-provided object that distinguishes this particular asynchronous RenderAndCache request from other requests.</param>
+            <returns>An <see cref="T:System.IAsyncResult"/> that represents the asynchronous RenderAndCache, which could still be pending.</returns>
+        </member>
+        <member name="M:Telerik.Reporting.Service.SilverlightClient.IReportService.EndRenderAndCache(System.IAsyncResult)">
+            <summary>
+            Waits for the pending asynchronous RenderAndCache to complete.
+            </summary>
+            <param name="result">The reference to the pending asynchronous request to finish.</param>
+            <returns>A <see cref="T:Telerik.Reporting.Service.RenderingSessionInfo"/>.</returns>
+        </member>
+        <member name="M:Telerik.Reporting.Service.SilverlightClient.IReportService.BeginRender(System.String,System.String,Telerik.Reporting.Service.NameValueDictionary,Telerik.Reporting.Service.NameValueDictionary,System.AsyncCallback,System.Object)">
+            <summary>
+            Starts an asynchronous Render operation.
+            </summary>
+            <param name="format">The render format.</param>
+            <param name="report">The <see cref="P:System.Type.AssemblyQualifiedName"/> of the report type to render.</param>
+            <param name="deviceInfo">A <see cref="T:Telerik.Reporting.Service.NameValueDictionary"/> with setting for the current render format.</param>
+            <param name="parameters">A <see cref="T:Telerik.Reporting.Service.NameValueDictionary"/> with values for the report parameters.</param>
+            <param name="callback">An optional asynchronous callback, to be called when the Render is complete.</param>
+            <param name="state">A user-provided object that distinguishes this particular asynchronous Render request from other requests.</param>
+            <returns>An <see cref="T:System.IAsyncResult"/> that represents the asynchronous Render, which could still be pending.</returns>
+        </member>
+        <member name="M:Telerik.Reporting.Service.SilverlightClient.IReportService.EndRender(System.IAsyncResult)">
+            <summary>
+            Waits for the pending asynchronous Render to complete.
+            </summary>
+            <param name="result">The reference to the pending asynchronous request to finish.</param>
+            <returns>A <see cref="T:Telerik.Reporting.Service.RenderingResult"/>.</returns>
+        </member>
+        <member name="M:Telerik.Reporting.Service.SilverlightClient.IReportService.BeginGetPage(System.String,System.Int32,System.AsyncCallback,System.Object)">
+            <summary>
+            Starts an asynchronous GetPage operation. This operation is intended for internal use only.
+            </summary>
+            <param name="instanceID">The unique identifier of the rendering session as returned by a previous call to RenderAndCache operation.</param>
+            <param name="pageNumber">The serial number of the page to retrieve.</param>
+            <param name="callback">An optional asynchronous callback, to be called when the GetPage is complete.</param>
+            <param name="state">A user-provided object that distinguishes this particular asynchronous GetPage request from other requests.</param>
+            <returns>An <see cref="T:System.IAsyncResult"/> that represents the asynchronous GetPage, which could still be pending.</returns>
+        </member>
+        <member name="M:Telerik.Reporting.Service.SilverlightClient.IReportService.EndGetPage(System.IAsyncResult)">
+            <summary>
+            Waits for the pending asynchronous GetPage to complete.
+            </summary>
+            <param name="result">The reference to the pending asynchronous request to finish.</param>
+            <returns>A <see cref="T:Telerik.Reporting.Service.PageInfo"/>.</returns>
+        </member>
+        <member name="M:Telerik.Reporting.Service.SilverlightClient.IReportService.BeginGetReportParameters(System.String,Telerik.Reporting.Service.NameValueDictionary,Telerik.Reporting.Service.NameValueDictionary,System.AsyncCallback,System.Object)">
+            <summary>
+            Starts an asynchronous GetReportParameters operation. This operation is intended for internal use only.
+            </summary>
+            <param name="report">The <see cref="P:System.Type.AssemblyQualifiedName"/> of the report type to render.</param>
+            <param name="deviceInfo">A <see cref="T:Telerik.Reporting.Service.NameValueDictionary"/> with settings for the current device.</param>
+            <param name="parameters">A <see cref="T:Telerik.Reporting.Service.NameValueDictionary"/> with values for the report parameters.</param>
+            <param name="callback">An optional asynchronous callback, to be called when the GetReportParameters is complete.</param>
+            <param name="state">A user-provided object that distinguishes this particular asynchronous GetReportParameters request from other requests.</param>
+            <returns>An <see cref="T:System.IAsyncResult"/> that represents the asynchronous GetReportParameters, which could still be pending.</returns>
+        </member>
+        <member name="M:Telerik.Reporting.Service.SilverlightClient.IReportService.EndGetReportParameters(System.IAsyncResult)">
+            <summary>
+            Waits for the pending asynchronous GetReportParameters to complete.
+            </summary>
+            <param name="result">The reference to the pending asynchronous request to finish.</param>
+            <returns>A list of <see cref="T:Telerik.Reporting.Service.Parameter"/>.</returns>
+        </member>
+        <member name="T:Telerik.Reporting.Service.SilverlightClient.ReportServiceClient">
+            <summary>
+            The proxy to the Telerik Report Service.
+            </summary>
+        </member>
+        <member name="M:Telerik.Reporting.Service.SilverlightClient.ReportServiceClient.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.ServiceModel.ClientBase`1"/> class using the default target endpoint from the application configuration file. 
+            </summary>
+            <exception cref="T:System.InvalidOperationException">Either there is no default endpoint information in the configuration file, more than one endpoint in the file, or no configuration file.</exception>
+        </member>
+        <member name="M:Telerik.Reporting.Service.SilverlightClient.ReportServiceClient.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the ReportServiceClient class using the configuration information specified in the application configuration file by endpointConfigurationName. 
+            </summary>
+            <param name="endpointConfigurationName">The name of the endpoint in the application configuration file.</param>
+        </member>
+        <member name="M:Telerik.Reporting.Service.SilverlightClient.ReportServiceClient.#ctor(System.ServiceModel.Channels.Binding,System.ServiceModel.EndpointAddress)">
+            <summary>
+            Initializes a new instance of the ReportServiceClient class using a specified binding and target address. 
+            </summary>
+            <param name="binding">The binding used to configure the way that calls are made to the service.</param>
+            <param name="remoteAddress">The address of the service endpoint.</param>
+        </member>
+        <member name="M:Telerik.Reporting.Service.SilverlightClient.ReportServiceClient.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.ServiceModel.ClientBase`1"/> class.
+            </summary>
+            <param name="endpointConfigurationName">The name of the endpoint in the application configuration file.</param>
+            <param name="remoteAddress">The address of the service.</param>
+            <exception cref="T:System.ArgumentNullException">The endpoint is null.</exception>
+            <exception cref="T:System.ArgumentNullException">The remote address is null.</exception>
+            <exception cref="T:System.InvalidOperationException">The endpoint cannot be found or the endpoint contract is not valid.</exception>
+        </member>
+        <member name="M:Telerik.Reporting.Service.SilverlightClient.ReportServiceClient.#ctor(System.String,System.ServiceModel.EndpointAddress)">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.ServiceModel.ClientBase`1"/> class using the specified target address and endpoint information. 
+            </summary>
+            <param name="endpointConfigurationName">The name of the endpoint in the application configuration file.</param>
+            <param name="remoteAddress">The address of the service.</param>
+            <exception cref="T:System.ArgumentNullException">The endpoint is null.</exception>
+            <exception cref="T:System.ArgumentNullException">The remote address is null.</exception>
+            <exception cref="T:System.InvalidOperationException">The endpoint cannot be found or the endpoint contract is not valid.</exception>
+        </member>
+        <member name="M:Telerik.Reporting.Service.SilverlightClient.ReportServiceClient.#ctor(System.Uri)">
+            <summary>
+            Initializes a new instance of the ReportServiceClient class using a specified binding and target address and BasicHttpBinding. 
+            </summary>
+            <param name="reportServiceUri">The address of the service endpoint.</param>
+        </member>
+        <member name="M:Telerik.Reporting.Service.SilverlightClient.ReportServiceClient.GetPageAsync(System.String,System.Int32)">
+            <summary>
+            Starts an asynchronous GetPage operation. This operation is intended for internal use only.
+            </summary>
+            <param name="instanceID">The unique identifier of the rendering session as returned by a previous call to RenderAndCache operation.</param>
+            <param name="pageNumber">The serial number of the page to retrieve.</param>
+        </member>
+        <member name="M:Telerik.Reporting.Service.SilverlightClient.ReportServiceClient.GetPageAsync(System.String,System.Int32,System.Object)">
+            <summary>
+            Starts an asynchronous GetPage operation. This operation is intended for internal use only.
+            </summary>
+            <param name="instanceID">The unique identifier of the rendering session as returned by a previous call to RenderAndCache operation.</param>
+            <param name="pageNumber">The serial number of the page to retrieve.</param>
+            <param name="userState">A user-provided object that distinguishes this particular asynchronous GetPage request from other requests.</param>
+        </member>
+        <member name="M:Telerik.Reporting.Service.SilverlightClient.ReportServiceClient.GetReportParametersAsync(System.String,Telerik.Reporting.Service.NameValueDictionary,Telerik.Reporting.Service.NameValueDictionary)">
+            <summary>
+            Starts an asynchronous GetReportParameters operation. This operation is intended for internal use only.
+            </summary>
+            <param name="report">The <see cref="P:System.Type.AssemblyQualifiedName"/> of the report type to render.</param>
+            <param name="deviceInfo">A <see cref="T:Telerik.Reporting.Service.NameValueDictionary"/> with settings for the current device.</param>
+            <param name="parameters">A <see cref="T:Telerik.Reporting.Service.NameValueDictionary"/> with values for the report parameters.</param>
+        </member>
+        <member name="M:Telerik.Reporting.Service.SilverlightClient.ReportServiceClient.GetReportParametersAsync(System.String,Telerik.Reporting.Service.NameValueDictionary,Telerik.Reporting.Service.NameValueDictionary,System.Object)">
+            <summary>
+            Starts an asynchronous GetReportParameters operation. This operation is intended for internal use only.
+            </summary>
+            <param name="report">The <see cref="P:System.Type.AssemblyQualifiedName"/> of the report type to render.</param>
+            <param name="deviceInfo">A <see cref="T:Telerik.Reporting.Service.NameValueDictionary"/> with settings for the current device.</param>
+            <param name="parameters">A <see cref="T:Telerik.Reporting.Service.NameValueDictionary"/> with values for the report parameters.</param>
+            <param name="userState">A user-provided object that distinguishes this particular asynchronous GetReportParameters request from other requests.</param>
+        </member>
+        <member name="M:Telerik.Reporting.Service.SilverlightClient.ReportServiceClient.ListAvailableReportsAsync">
+            <summary>
+            Starts an asynchronous ListAvailableReports operation.
+            </summary>
+        </member>
+        <member name="M:Telerik.Reporting.Service.SilverlightClient.ReportServiceClient.ListAvailableReportsAsync(System.Object)">
+            <summary>
+            Starts an asynchronous ListAvailableReports operation.
+            </summary>
+            <param name="userState">A user-provided object that distinguishes this particular asynchronous ListAvailableReports request from other requests.</param>
+        </member>
+        <member name="M:Telerik.Reporting.Service.SilverlightClient.ReportServiceClient.ListRenderingExtensionsAsync">
+            <summary>
+            Starts an asynchronous ListRenderingExtensions operation. 
+            </summary>
+        </member>
+        <member name="M:Telerik.Reporting.Service.SilverlightClient.ReportServiceClient.ListRenderingExtensionsAsync(System.Object)">
+            <summary>
+            Starts an asynchronous ListRenderingExtensions operation. 
+            </summary>
+            <param name="userState">A user-provided object that distinguishes this particular asynchronous ListRenderingExtensions request from other requests.</param>
+        </member>
+        <member name="M:Telerik.Reporting.Service.SilverlightClient.ReportServiceClient.RenderAsync(System.String,System.String,Telerik.Reporting.Service.NameValueDictionary,Telerik.Reporting.Service.NameValueDictionary)">
+            <summary>
+            Starts an asynchronous Render operation.
+            </summary>
+            <param name="format">The render format.</param>
+            <param name="report">The <see cref="P:System.Type.AssemblyQualifiedName"/> of the report type to render.</param>
+            <param name="deviceInfo">A <see cref="T:Telerik.Reporting.Service.NameValueDictionary"/> with settings for the current render format.</param>
+            <param name="parameters">A <see cref="T:Telerik.Reporting.Service.NameValueDictionary"/> with values for the report parameters.</param>
+        </member>
+        <member name="M:Telerik.Reporting.Service.SilverlightClient.ReportServiceClient.RenderAsync(System.String,System.String,Telerik.Reporting.Service.NameValueDictionary,Telerik.Reporting.Service.NameValueDictionary,System.Object)">
+            <summary>
+            Starts an asynchronous Render operation.
+            </summary>
+            <param name="format">The render format.</param>
+            <param name="report">The <see cref="P:System.Type.AssemblyQualifiedName"/> of the report type to render.</param>
+            <param name="deviceInfo">A <see cref="T:Telerik.Reporting.Service.NameValueDictionary"/> with settings for the current render format.</param>
+            <param name="parameters">A <see cref="T:Telerik.Reporting.Service.NameValueDictionary"/> with values for the report parameters.</param>
+            <param name="userState">A user-provided object that distinguishes this particular asynchronous Render request from other requests.</param>
+        </member>
+        <member name="M:Telerik.Reporting.Service.SilverlightClient.ReportServiceClient.RenderAndCacheAsync(System.String,System.String,Telerik.Reporting.Service.NameValueDictionary,Telerik.Reporting.Service.NameValueDictionary)">
+            <summary>
+            Starts an asynchronous RenderAndCache operation. This operation is intended for internal use only.
+            </summary>
+            <param name="format">The render format.</param>
+            <param name="report">The <see cref="P:System.Type.AssemblyQualifiedName"/> of the report type to render.</param>
+            <param name="deviceInfo">A <see cref="T:Telerik.Reporting.Service.NameValueDictionary"/> with setting for the current render format.</param>
+            <param name="parameters">A <see cref="T:Telerik.Reporting.Service.NameValueDictionary"/> with values for the report parameters.</param>
+        </member>
+        <member name="M:Telerik.Reporting.Service.SilverlightClient.ReportServiceClient.RenderAndCacheAsync(System.String,System.String,Telerik.Reporting.Service.NameValueDictionary,Telerik.Reporting.Service.NameValueDictionary,System.Object)">
+            <summary>
+            Starts an asynchronous RenderAndCache operation. This operation is intended for internal use only.
+            </summary>
+            <param name="format">The render format.</param>
+            <param name="report">The <see cref="P:System.Type.AssemblyQualifiedName"/> of the report type to render.</param>
+            <param name="deviceInfo">A <see cref="T:Telerik.Reporting.Service.NameValueDictionary"/> with settings for the current render format.</param>
+            <param name="parameters">A <see cref="T:Telerik.Reporting.Service.NameValueDictionary"/> with values for the report parameters.</param>
+            <param name="userState">A user-provided object that distinguishes this particular asynchronous RenderAndCache request from other requests.</param>
+        </member>
+        <member name="E:Telerik.Reporting.Service.SilverlightClient.ReportServiceClient.GetPageCompleted">
+            <summary>
+            Occurs when the GetPage operation is completed. This event is intended for internal use only.
+            </summary>
+        </member>
+        <member name="E:Telerik.Reporting.Service.SilverlightClient.ReportServiceClient.GetReportParametersCompleted">
+            <summary>
+            Occurs when the GetReportParameters operation is completed. This event is intended for internal use only.
+            </summary>
+        </member>
+        <member name="E:Telerik.Reporting.Service.SilverlightClient.ReportServiceClient.ListAvailableReportsCompleted">
+            <summary>
+            Occurs when the ListAvailableReports operation is completed.
+            </summary>
+        </member>
+        <member name="E:Telerik.Reporting.Service.SilverlightClient.ReportServiceClient.ListRenderingExtensionsCompleted">
+            <summary>
+            Occurs when the ListRenderingExtensions operation is completed.
+            </summary>
+        </member>
+        <member name="E:Telerik.Reporting.Service.SilverlightClient.ReportServiceClient.RenderCompleted">
+            <summary>
+            Occurs when the Render operation is completed.
+            </summary>
+        </member>
+        <member name="E:Telerik.Reporting.Service.SilverlightClient.ReportServiceClient.RenderAndCacheCompleted">
+            <summary>
+            Occurs when the RenderAndCache operation is completed. This event is intended for internal use only.
+            </summary>
+        </member>
+        <member name="T:Telerik.Reporting.Service.SilverlightClient.GetPageEventArgs">
+            <summary>
+            Provides data from the <see cref="E:Telerik.Reporting.Service.SilverlightClient.ReportServiceClient.GetPageCompleted"/> event.
+            </summary>
+        </member>
+        <member name="P:Telerik.Reporting.Service.SilverlightClient.GetPageEventArgs.PageInfo">
+            <summary>
+            A <see cref="P:Telerik.Reporting.Service.SilverlightClient.GetPageEventArgs.PageInfo"/>.
+            </summary>
+        </member>
+        <member name="T:Telerik.Reporting.Service.SilverlightClient.GetReportParametersEventArgs">
+            <summary>
+            Provides data from the <see cref="E:Telerik.Reporting.Service.SilverlightClient.ReportServiceClient.GetReportParametersCompleted"/> event.
+            </summary>
+        </member>
+        <member name="P:Telerik.Reporting.Service.SilverlightClient.GetReportParametersEventArgs.Parameters">
+            <summary>
+            A list of <see cref="T:Telerik.Reporting.Service.Parameter"/>s.
+            </summary>
+        </member>
+        <member name="T:Telerik.Reporting.Service.SilverlightClient.ListAvailableReportsEventArgs">
+            <summary>
+            Provides data from the <see cref="E:Telerik.Reporting.Service.SilverlightClient.ReportServiceClient.ListAvailableReportsCompleted"/> event.
+            </summary>
+        </member>
+        <member name="P:Telerik.Reporting.Service.SilverlightClient.ListAvailableReportsEventArgs.Reports">
+            <summary>
+            A list of <see cref="T:Telerik.Reporting.Service.ReportInfo"/>s.
+            </summary>
+        </member>
+        <member name="T:Telerik.Reporting.Service.SilverlightClient.ListRenderingExtensionsEventArgs">
+            <summary>
+            Provides data from the <see cref="E:Telerik.Reporting.Service.SilverlightClient.ReportServiceClient.ListRenderingExtensionsCompleted"/> event.
+            </summary>
+        </member>
+        <member name="P:Telerik.Reporting.Service.SilverlightClient.ListRenderingExtensionsEventArgs.Extensions">
+            <summary>
+            A list of <see cref="T:Telerik.Reporting.Service.ExtensionInfo"/>s.
+            </summary>
+        </member>
+        <member name="T:Telerik.Reporting.Service.SilverlightClient.RenderEventArgs">
+            <summary>
+            Provides data from the <see cref="E:Telerik.Reporting.Service.SilverlightClient.ReportServiceClient.RenderCompleted"/> event.
+            </summary>
+        </member>
+        <member name="P:Telerik.Reporting.Service.SilverlightClient.RenderEventArgs.RenderingResult">
+            <summary>
+            A <see cref="P:Telerik.Reporting.Service.SilverlightClient.RenderEventArgs.RenderingResult"/>.
+            </summary>
+        </member>
+        <member name="T:Telerik.Reporting.Service.SilverlightClient.RenderAndCacheEventArgs">
+            <summary>
+            Provides data from the <see cref="E:Telerik.Reporting.Service.SilverlightClient.ReportServiceClient.RenderAndCacheCompleted"/> event.
+            </summary>
+        </member>
+        <member name="P:Telerik.Reporting.Service.SilverlightClient.RenderAndCacheEventArgs.RenderingResult">
+            <summary>
+            A <see cref="T:Telerik.Reporting.Service.RenderingSessionInfo"/>.
+            </summary>
+        </member>
+    </members>
+</doc>

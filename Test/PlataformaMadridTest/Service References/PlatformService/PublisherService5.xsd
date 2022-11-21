@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/PublisherService.PayTransaction.Contracts.PayTransactionAuth" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/PublisherService.PayTransaction.Contracts.PayTransactionAuth" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://217.124.242.5/PublisherService/PublisherService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:simpleType name="PayTransactionAuthResponse.AuthResultDescription">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Authoritzed" />
+      <xs:enumeration value="Rejected" />
+      <xs:enumeration value="Blocked" />
+      <xs:enumeration value="InvalidSpace" />
+      <xs:enumeration value="InvalidLogin" />
+      <xs:enumeration value="Expired" />
+      <xs:enumeration value="InvalidFunctionSyntax">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">95</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="InvalidFunctionParameterCount">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">96</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="InvalidFunctionException">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">97</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="InvalidFunctionUnknown">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">98</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="InvalidSystemNotConfigured">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">99</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PayTransactionAuthResponse.AuthResultDescription" nillable="true" type="tns:PayTransactionAuthResponse.AuthResultDescription" />
+</xs:schema>

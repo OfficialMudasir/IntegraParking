@@ -1,0 +1,695 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="QueryLogin">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryLoginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryLoginResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryCity">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryCityResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryCityResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryRecharge">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryRechargeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryRechargeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConfirmRecharge">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConfirmRechargeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConfirmRechargeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryParkingTariffs">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryParkingTariffsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryParkingTariffsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryParkingOperation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryParkingOperationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryParkingOperationResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryParkingOperationWithTimeSteps">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryParkingOperationWithTimeStepsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryParkingOperationWithTimeStepsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryParkingOperationForMinutes">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryParkingOperationForMinutesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="QueryParkingOperationForMinutesResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConfirmParkingOperation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConfirmParkingOperationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ConfirmParkingOperationResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryUnParkingOperation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryUnParkingOperationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryUnParkingOperationResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryUnParkingOperationQuantity">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryUnParkingOperationQuantityResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="QueryUnParkingOperationQuantityResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConfirmUnParkingOperation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConfirmUnParkingOperationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ConfirmUnParkingOperationResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryFinePaymentQuantity">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryFinePaymentQuantityResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="QueryFinePaymentQuantityResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConfirmFinePayment">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConfirmFinePaymentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ConfirmFinePaymentResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConfirmUserData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlIn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConfirmUserDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConfirmUserDataResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CalculateHash">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strInput" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CalculateHashResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CalculateHashResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="QueryLoginSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryLogin" />
+  </wsdl:message>
+  <wsdl:message name="QueryLoginSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryCitySoapIn">
+    <wsdl:part name="parameters" element="tns:QueryCity" />
+  </wsdl:message>
+  <wsdl:message name="QueryCitySoapOut">
+    <wsdl:part name="parameters" element="tns:QueryCityResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryRechargeSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryRecharge" />
+  </wsdl:message>
+  <wsdl:message name="QueryRechargeSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryRechargeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConfirmRechargeSoapIn">
+    <wsdl:part name="parameters" element="tns:ConfirmRecharge" />
+  </wsdl:message>
+  <wsdl:message name="ConfirmRechargeSoapOut">
+    <wsdl:part name="parameters" element="tns:ConfirmRechargeResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryParkingTariffsSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryParkingTariffs" />
+  </wsdl:message>
+  <wsdl:message name="QueryParkingTariffsSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryParkingTariffsResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryParkingOperationSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryParkingOperation" />
+  </wsdl:message>
+  <wsdl:message name="QueryParkingOperationSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryParkingOperationResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryParkingOperationWithTimeStepsSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryParkingOperationWithTimeSteps" />
+  </wsdl:message>
+  <wsdl:message name="QueryParkingOperationWithTimeStepsSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryParkingOperationWithTimeStepsResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryParkingOperationForMinutesSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryParkingOperationForMinutes" />
+  </wsdl:message>
+  <wsdl:message name="QueryParkingOperationForMinutesSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryParkingOperationForMinutesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConfirmParkingOperationSoapIn">
+    <wsdl:part name="parameters" element="tns:ConfirmParkingOperation" />
+  </wsdl:message>
+  <wsdl:message name="ConfirmParkingOperationSoapOut">
+    <wsdl:part name="parameters" element="tns:ConfirmParkingOperationResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryUnParkingOperationSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryUnParkingOperation" />
+  </wsdl:message>
+  <wsdl:message name="QueryUnParkingOperationSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryUnParkingOperationResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryUnParkingOperationQuantitySoapIn">
+    <wsdl:part name="parameters" element="tns:QueryUnParkingOperationQuantity" />
+  </wsdl:message>
+  <wsdl:message name="QueryUnParkingOperationQuantitySoapOut">
+    <wsdl:part name="parameters" element="tns:QueryUnParkingOperationQuantityResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConfirmUnParkingOperationSoapIn">
+    <wsdl:part name="parameters" element="tns:ConfirmUnParkingOperation" />
+  </wsdl:message>
+  <wsdl:message name="ConfirmUnParkingOperationSoapOut">
+    <wsdl:part name="parameters" element="tns:ConfirmUnParkingOperationResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryFinePaymentQuantitySoapIn">
+    <wsdl:part name="parameters" element="tns:QueryFinePaymentQuantity" />
+  </wsdl:message>
+  <wsdl:message name="QueryFinePaymentQuantitySoapOut">
+    <wsdl:part name="parameters" element="tns:QueryFinePaymentQuantityResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConfirmFinePaymentSoapIn">
+    <wsdl:part name="parameters" element="tns:ConfirmFinePayment" />
+  </wsdl:message>
+  <wsdl:message name="ConfirmFinePaymentSoapOut">
+    <wsdl:part name="parameters" element="tns:ConfirmFinePaymentResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConfirmUserDataSoapIn">
+    <wsdl:part name="parameters" element="tns:ConfirmUserData" />
+  </wsdl:message>
+  <wsdl:message name="ConfirmUserDataSoapOut">
+    <wsdl:part name="parameters" element="tns:ConfirmUserDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="CalculateHashSoapIn">
+    <wsdl:part name="parameters" element="tns:CalculateHash" />
+  </wsdl:message>
+  <wsdl:message name="CalculateHashSoapOut">
+    <wsdl:part name="parameters" element="tns:CalculateHashResponse" />
+  </wsdl:message>
+  <wsdl:portType name="integraMobileWSSoap">
+    <wsdl:operation name="QueryLogin">
+      <wsdl:input message="tns:QueryLoginSoapIn" />
+      <wsdl:output message="tns:QueryLoginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryCity">
+      <wsdl:input message="tns:QueryCitySoapIn" />
+      <wsdl:output message="tns:QueryCitySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryRecharge">
+      <wsdl:input message="tns:QueryRechargeSoapIn" />
+      <wsdl:output message="tns:QueryRechargeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmRecharge">
+      <wsdl:input message="tns:ConfirmRechargeSoapIn" />
+      <wsdl:output message="tns:ConfirmRechargeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryParkingTariffs">
+      <wsdl:input message="tns:QueryParkingTariffsSoapIn" />
+      <wsdl:output message="tns:QueryParkingTariffsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryParkingOperation">
+      <wsdl:input message="tns:QueryParkingOperationSoapIn" />
+      <wsdl:output message="tns:QueryParkingOperationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryParkingOperationWithTimeSteps">
+      <wsdl:input message="tns:QueryParkingOperationWithTimeStepsSoapIn" />
+      <wsdl:output message="tns:QueryParkingOperationWithTimeStepsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryParkingOperationForMinutes">
+      <wsdl:input message="tns:QueryParkingOperationForMinutesSoapIn" />
+      <wsdl:output message="tns:QueryParkingOperationForMinutesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmParkingOperation">
+      <wsdl:input message="tns:ConfirmParkingOperationSoapIn" />
+      <wsdl:output message="tns:ConfirmParkingOperationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryUnParkingOperation">
+      <wsdl:input message="tns:QueryUnParkingOperationSoapIn" />
+      <wsdl:output message="tns:QueryUnParkingOperationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryUnParkingOperationQuantity">
+      <wsdl:input message="tns:QueryUnParkingOperationQuantitySoapIn" />
+      <wsdl:output message="tns:QueryUnParkingOperationQuantitySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmUnParkingOperation">
+      <wsdl:input message="tns:ConfirmUnParkingOperationSoapIn" />
+      <wsdl:output message="tns:ConfirmUnParkingOperationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryFinePaymentQuantity">
+      <wsdl:input message="tns:QueryFinePaymentQuantitySoapIn" />
+      <wsdl:output message="tns:QueryFinePaymentQuantitySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmFinePayment">
+      <wsdl:input message="tns:ConfirmFinePaymentSoapIn" />
+      <wsdl:output message="tns:ConfirmFinePaymentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmUserData">
+      <wsdl:input message="tns:ConfirmUserDataSoapIn" />
+      <wsdl:output message="tns:ConfirmUserDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CalculateHash">
+      <wsdl:input message="tns:CalculateHashSoapIn" />
+      <wsdl:output message="tns:CalculateHashSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="integraMobileWSSoap" type="tns:integraMobileWSSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="QueryLogin">
+      <soap:operation soapAction="http://tempuri.org/QueryLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryCity">
+      <soap:operation soapAction="http://tempuri.org/QueryCity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryRecharge">
+      <soap:operation soapAction="http://tempuri.org/QueryRecharge" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmRecharge">
+      <soap:operation soapAction="http://tempuri.org/ConfirmRecharge" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryParkingTariffs">
+      <soap:operation soapAction="http://tempuri.org/QueryParkingTariffs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryParkingOperation">
+      <soap:operation soapAction="http://tempuri.org/QueryParkingOperation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryParkingOperationWithTimeSteps">
+      <soap:operation soapAction="http://tempuri.org/QueryParkingOperationWithTimeSteps" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryParkingOperationForMinutes">
+      <soap:operation soapAction="http://tempuri.org/QueryParkingOperationForMinutes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmParkingOperation">
+      <soap:operation soapAction="http://tempuri.org/ConfirmParkingOperation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryUnParkingOperation">
+      <soap:operation soapAction="http://tempuri.org/QueryUnParkingOperation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryUnParkingOperationQuantity">
+      <soap:operation soapAction="http://tempuri.org/QueryUnParkingOperationQuantity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmUnParkingOperation">
+      <soap:operation soapAction="http://tempuri.org/ConfirmUnParkingOperation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryFinePaymentQuantity">
+      <soap:operation soapAction="http://tempuri.org/QueryFinePaymentQuantity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmFinePayment">
+      <soap:operation soapAction="http://tempuri.org/ConfirmFinePayment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmUserData">
+      <soap:operation soapAction="http://tempuri.org/ConfirmUserData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalculateHash">
+      <soap:operation soapAction="http://tempuri.org/CalculateHash" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="integraMobileWSSoap12" type="tns:integraMobileWSSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="QueryLogin">
+      <soap12:operation soapAction="http://tempuri.org/QueryLogin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryCity">
+      <soap12:operation soapAction="http://tempuri.org/QueryCity" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryRecharge">
+      <soap12:operation soapAction="http://tempuri.org/QueryRecharge" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmRecharge">
+      <soap12:operation soapAction="http://tempuri.org/ConfirmRecharge" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryParkingTariffs">
+      <soap12:operation soapAction="http://tempuri.org/QueryParkingTariffs" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryParkingOperation">
+      <soap12:operation soapAction="http://tempuri.org/QueryParkingOperation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryParkingOperationWithTimeSteps">
+      <soap12:operation soapAction="http://tempuri.org/QueryParkingOperationWithTimeSteps" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryParkingOperationForMinutes">
+      <soap12:operation soapAction="http://tempuri.org/QueryParkingOperationForMinutes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmParkingOperation">
+      <soap12:operation soapAction="http://tempuri.org/ConfirmParkingOperation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryUnParkingOperation">
+      <soap12:operation soapAction="http://tempuri.org/QueryUnParkingOperation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryUnParkingOperationQuantity">
+      <soap12:operation soapAction="http://tempuri.org/QueryUnParkingOperationQuantity" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmUnParkingOperation">
+      <soap12:operation soapAction="http://tempuri.org/ConfirmUnParkingOperation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryFinePaymentQuantity">
+      <soap12:operation soapAction="http://tempuri.org/QueryFinePaymentQuantity" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmFinePayment">
+      <soap12:operation soapAction="http://tempuri.org/ConfirmFinePayment" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmUserData">
+      <soap12:operation soapAction="http://tempuri.org/ConfirmUserData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalculateHash">
+      <soap12:operation soapAction="http://tempuri.org/CalculateHash" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="integraMobileWS">
+    <wsdl:port name="integraMobileWSSoap" binding="tns:integraMobileWSSoap">
+      <soap:address location="http://eagle760.startdedicated.com/integraMobileWS/integraMobileWS.asmx" />
+    </wsdl:port>
+    <wsdl:port name="integraMobileWSSoap12" binding="tns:integraMobileWSSoap12">
+      <soap12:address location="http://eagle760.startdedicated.com/integraMobileWS/integraMobileWS.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

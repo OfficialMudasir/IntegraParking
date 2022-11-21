@@ -1,0 +1,381 @@
+body {
+	background: #EFEFF4;
+	font: 15px sans-serif;
+	margin: 0;
+	padding:0;
+	text-align: left;
+}
+img {
+	border: 0;
+}
+#ekashu_3d_logo_mastercard {
+	position: absolute;
+	right: 0px;
+	top: 10px;
+}
+#ekashu_3d_logo_visa {
+	position: absolute;
+	right: 100px;
+	top: 10px;
+}
+#ekashu_amount {
+	display: none;
+	font-size: 16pt;
+	font-weight: bold;
+	color: #1c2a96;
+	margin-bottom: 2px;
+}
+.ekashu_return_url a {
+	display: none;
+	color: #66bb66;
+	font-size: 16pt;
+	font-weight: bold;
+	text-align: left;
+	width: 200px;
+}
+.ekashu_card_logo_verification_text a {
+	color: #1c2a96;
+	position: relative;
+	text-decoration: none;
+}
+#ekashu_card_logos_accepted {
+	display: none;
+	float: left;
+	font-size: 0;
+	padding: 0 5px 2px 5px;
+	width: 231px;
+}
+#ekashu_card_logos_accepted img {
+	display: none;
+	float: left;
+	margin: 1px;
+}
+#ekashu_card_logos_verification {
+	border: 2px solid #DCDCDC;
+	float: left;
+	padding: 5px 0 2px 5px;
+	width: 236px;
+}
+#ekashu_card_logos_verification_images {
+	float: left;
+	padding: 0 5px 0 0;
+	position : relative;
+}
+.ekashu_clear_float {
+	clear: both;
+}
+.ekashu_content_card_verification_value,
+.ekashu_content_issue_number {
+	padding: 10px;
+	width: 210px;
+}
+.ekashu_description {
+	color: #1c2a96;
+	font-size: 16pt;
+	font-weight: bold;
+	margin-bottom: 2px;
+}
+.ekashu_error {
+	background: #FFF;
+	border-radius: 5px;
+	color: #FF4444;
+	font-size: 14px;
+	font-weight: bold;
+	margin: 10px;
+	padding: 10px;
+	position: relative;
+	text-align: center;
+}
+.ekashu_error+.ekashu_error {
+	margin: 10px 10px 0;
+}
+.ekashu_errors {
+
+}
+.ekashu_errors_top {
+	background: url(images/etl.gif) no-repeat;
+	height: 20px;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 20px;
+}
+.ekashu_errors_bottom {
+	background: url(images/ebr.gif) no-repeat;
+	bottom: 0;
+	height: 20px;
+	position: absolute;
+	right: 0;
+	width: 20px;
+}
+.ekashu_failure_return_url {
+	display: none;
+	margin-bottom: 20px;
+	text-align: left;
+}
+.ekashu_failure_return_url a {
+	color: #80D5FE;
+	display: none;
+	font-size: 16pt;
+	font-weight: bold;
+	white-space: nowrap;
+}
+.ekashu_footer {
+	border-top: 3px solid #1c2a96;
+	display: none;
+}
+#ekashu_header_collect_data {
+	display: none;
+}
+.ekashu_header {
+	background-position: 20px 0;
+	border-bottom: 3px solid #1c2a96;
+	font-size: 18pt;
+	height: 25px;
+	margin-bottom: 5px;
+	position: relative;
+}
+.ekashu_section {
+	background: #FFF;
+	position: relative;
+}
+.ekashu_section_bottom {
+	background: url(images/br.gif) no-repeat;
+	bottom: 0;
+	height: 20px;
+	position: absolute;
+	right: 0;
+	width: 20px;
+}
+.ekashu_section_text {
+	margin: 20px 0;
+}
+.ekashu_section_title {
+	background: #EFEFF4;
+	border-bottom: 1px solid #C8C7CC;
+	color: #6d6d72;
+	font-size: 14px;
+	padding: 35px 15px 10px;
+	overflow: hidden;
+	position: relative;
+	text-transform: uppercase;
+	white-space: nowrap;
+}
+.ekashu_section_top {
+	background: url(images/tl.gif) no-repeat;
+	height: 20px;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 20px;
+}
+#ekashu_seller_name {
+	color: #1c2a96;
+	display: none;
+	font-size: 16pt;
+	font-weight: bold;
+	margin-bottom: 2px;
+}
+.ekashu_section .ekashu_field:nth-of-type(11) {
+	border: 0;
+}
+.ekashu_field,
+.ekashu_field_error  {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-flex: 1;
+	-ms-flex: 1;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	-webkit-justify-content: space-between;
+	justify-content: space-between;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+	border-bottom: 1px solid #C8C7CC;
+	margin: 0 0 0 15px;
+	min-height: 44px;
+	padding: 8px 15px 7px 0;
+}
+.ekashu_field_error .ekashu_input input,
+.ekashu_field_error .ekashu_select select {
+	border: 2px solid #FF4444;
+}
+
+.ekashu_label {
+	color: #000;
+	position: relative;
+	overflow: hidden;
+}
+.ekashu_mandatory{
+	color: #1c2a96;
+	display: none;
+	font-family: monospace;
+	font-weight: bold;
+	margin: 5px 5px 5px 0;
+}
+.ekashu_input,
+.ekashu_select {
+	margin: -8px 0 -7px 0;
+	text-align: right;
+}
+.ekashu_input input,
+.ekashu_select select {
+	border: 1px solid #C8C7CC;
+	border-radius: 5px;
+	font-size: 14px;
+	margin: 0;
+	padding: 5px;
+	text-align: center;
+}
+#ekashu_submit_continue {
+	background: #EFEFF4;
+	border-top: 1px solid #C8C7CC;
+	padding: 15px 10px;
+}
+#ekashu_submit_continue input {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-ms-appearance: none;
+	appearance: none;
+	background: #FFF;
+	border: 0;
+	border-radius: 5px;
+	color: #007aff;
+	cursor: pointer;
+	display: block;
+	font-family: inherit;
+	font-size: 14px;
+	height: 43px;
+	line-height: 43px;
+	margin: 0;
+	overflow: hidden;
+	padding: 0 10px;
+	position: relative;
+	text-decoration: none;
+	text-align: center;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	width: 100%;
+}
+#ekashu_submit_cardeasexml,
+#ekashu_submit_paypal {
+	height: 30px;
+	margin-bottom: 20px;
+	text-align: left;
+}
+#ekashu_input_expires_end_month {
+	width: 60px;
+}
+#ekashu_input_expires_end_year {
+	width: 70px;
+}
+#ekashu_verification_value {
+	width: 123px;
+}
+#ekashu_option_invoice_address_is_card_address_options,
+#ekashu_option_delivery_address_is_card_address_options {
+	float: left;
+	padding-bottom: 15px;
+}
+#ekashu_input_card_first_name input,
+#ekashu_input_delivery_first_name input,
+#ekashu_input_invoice_first_name input {
+	width: 136px;
+}
+#ekashu_input_invoice_phone_number_type,
+#ekashu_input_invoice_title,
+#ekashu_input_delivery_phone_number_type,
+#ekashu_input_delivery_title,
+#ekashu_input_card_phone_number_type,
+#ekashu_input_card_title {
+	width: 75px;
+}
+#ekashu_input_valid_from_year, #ekashu_input_valid_from_month {
+	display: none;
+	width: 60px;
+}
+.ekashu_issue_number_text a {
+	display: block;
+	color: #1c2a96;
+	float: right;
+	padding: 3px;
+	text-decoration: none;
+}
+#ekashu_content_issue_number,
+#ekashu_content_card_verification_value {
+	font-size: 20pt;
+	font-weight: bold;
+	width: 100%;
+}
+#ekashu_field_valid_from {
+	display: none;
+}
+.ekashu_header_text,
+#ekashu_label_delivery_address_is_card_address,
+#ekashu_label_invoice_address_is_card_address {
+	float: left;
+}
+.ekashu_monospace {
+	font-family: "courier new", courier, monospace;
+}
+.ekashu_notification_text {
+	margin-bottom: 20px;
+	text-align: left;
+}
+.ekashu_notification_title {
+	font-size: 24pt;
+	margin-bottom: 20px;
+	text-align: left;
+}
+#ekashu_paypal_logos_accepted {
+	float: left;
+	padding: 0 7px 2px 5px;
+	width: 231px;
+}
+#ekashu_title {
+	color: #000;
+	display: block;
+	font-size: 16pt;
+	font-weight: bold;
+	margin-bottom: 2px;
+}
+.ekashu_card_logos {
+	display: none;
+}
+#ekashu_field_card_email_address {
+	display:none;
+}
+#ekashu_field_card_title {
+	display: none;
+}
+#ekashu_field_card_phone_number {
+	display: none;
+}
+#ekashu_field_card_phone_number_type {
+	display: none;
+}
+#ekashu_input_card_first_name input, 
+#ekashu_input_delivery_first_name input, 
+#ekashu_input_invoice_first_name input {
+	width: 227px;
+}
+#ekashu_field_card_address_1,
+#ekashu_field_card_address_2, 
+#ekashu_field_card_city, 
+#ekashu_field_card_state, 
+#ekashu_field_card_zip_code, 
+#ekashu_field_card_country,
+#ekashu_section_top_card,
+#ekashu_section_bottom_card {
+	display: none;
+}

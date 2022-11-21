@@ -1,0 +1,1032 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Boolean_false" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="Boolean_true" xml:space="preserve">
+    <value>Si</value>
+  </data>
+  <data name="ChargeOperationsTypes_BalanceRecharge" xml:space="preserve">
+    <value>Recàrregues</value>
+  </data>
+  <data name="ChargeOperationsTypes_Discount" xml:space="preserve">
+    <value>Descomptes</value>
+  </data>
+  <data name="ChargeOperationsTypes_ExtensionOperation" xml:space="preserve">
+    <value>Ampliacions</value>
+  </data>
+  <data name="ChargeOperationsTypes_ParkingOperation" xml:space="preserve">
+    <value>Aparcaments</value>
+  </data>
+  <data name="ChargeOperationsTypes_ParkingRefund" xml:space="preserve">
+    <value>Desaparcaments</value>
+  </data>
+  <data name="ChargeOperationsTypes_ServiceCharge" xml:space="preserve">
+    <value>Càrregs Serveis</value>
+  </data>
+  <data name="ChargeOperationsTypes_TicketPayment" xml:space="preserve">
+    <value>Anul·lacions de Denúncia</value>
+  </data>
+  <data name="DashboardDataModel_Currency" xml:space="preserve">
+    <value>Moneda:</value>
+  </data>
+  <data name="DashboardDataModel_CustomEndDate" xml:space="preserve">
+    <value>Fins:</value>
+  </data>
+  <data name="DashboardDataModel_CustomEndTime" xml:space="preserve">
+    <value>Fins Hora:</value>
+  </data>
+  <data name="DashboardDataModel_CustomIniDate" xml:space="preserve">
+    <value>Des de:</value>
+  </data>
+  <data name="DashboardDataModel_CustomIniTime" xml:space="preserve">
+    <value>Des de l'Hora:</value>
+  </data>
+  <data name="DashboardDataModel_DateFilter" xml:space="preserve">
+    <value>Filtre:</value>
+  </data>
+  <data name="DashboardDataModel_DateGroup" xml:space="preserve">
+    <value>Agrupació:</value>
+  </data>
+  <data name="DashboardDataModel_DateGroupPattern" xml:space="preserve">
+    <value>Patró</value>
+  </data>
+  <data name="DashboardDataModel_Installations" xml:space="preserve">
+    <value>Instal·lacions:</value>
+  </data>
+  <data name="Dashboard_FilterNotify_ApplyButton" xml:space="preserve">
+    <value>Aplicar</value>
+  </data>
+  <data name="Dashboard_FilterNotify_CancelButton" xml:space="preserve">
+    <value>Cancel·lar</value>
+  </data>
+  <data name="Dashboard_FilterNotify_Text" xml:space="preserve">
+    <value>El filtre ha canviat. Aplicar els canvis?</value>
+  </data>
+  <data name="Dashboard_Serie1InscriptionAmountAvg" xml:space="preserve">
+    <value>Promig primera recàrrega</value>
+  </data>
+  <data name="Dashboard_Serie2InscriptionAmountAvg" xml:space="preserve">
+    <value>Promig recàrrega per usuari</value>
+  </data>
+  <data name="Dashboard_SerieBalanceRechargeAmountAvg" xml:space="preserve">
+    <value>Valor promig recàrregues</value>
+  </data>
+  <data name="Dashboard_SerieExtensionOperationsAmountAvg" xml:space="preserve">
+    <value>Valor promig ampliacions</value>
+  </data>
+  <data name="Dashboard_SerieExtensionOperationsTimeAvg" xml:space="preserve">
+    <value>Duració promitja ampliació</value>
+  </data>
+  <data name="Dashboard_SerieInscriptionsCount" xml:space="preserve">
+    <value>Número Altes</value>
+  </data>
+  <data name="Dashboard_SerieOperationsAmountAvg" xml:space="preserve">
+    <value>Valor promig operació</value>
+  </data>
+  <data name="Dashboard_SerieOperationsTimeAvg" xml:space="preserve">
+    <value>Duració promitja operació</value>
+  </data>
+  <data name="Dashboard_SerieOperationsUser" xml:space="preserve">
+    <value>Promig {0} per usuari operatiu:</value>
+  </data>
+  <data name="Dashboard_SerieOperationsUserAll" xml:space="preserve">
+    <value>Promig {0} per usuari:</value>
+  </data>
+  <data name="Dashboard_SerieParkingOperationsAmountAvg" xml:space="preserve">
+    <value>Valor promig aparcament</value>
+  </data>
+  <data name="Dashboard_SerieParkingOperationsTimeAvg" xml:space="preserve">
+    <value>Duració promitja aparcament</value>
+  </data>
+  <data name="Dashboard_SerieParkingRefundsAmountAvg" xml:space="preserve">
+    <value>Valor promig desaparcaments</value>
+  </data>
+  <data name="Dashboard_SerieParkingRefunsTimeAvg" xml:space="preserve">
+    <value>Duració promitja desaparcaments</value>
+  </data>
+  <data name="Dashboard_SerieRechargesAmount" xml:space="preserve">
+    <value>Valor Recàrregues</value>
+  </data>
+  <data name="Dashboard_SerieRechargesCount" xml:space="preserve">
+    <value>Número Recàrregues</value>
+  </data>
+  <data name="Dashboard_TabInscriptions_Text" xml:space="preserve">
+    <value>Altes</value>
+  </data>
+  <data name="Dashboard_TabOperations_Text" xml:space="preserve">
+    <value>Operacions</value>
+  </data>
+  <data name="Dashboard_TabRecharges_Text" xml:space="preserve">
+    <value>Recàrregues</value>
+  </data>
+  <data name="Dashboard_TabSystemUse_Text" xml:space="preserve">
+    <value>Ús del Sistema</value>
+  </data>
+  <data name="Dashboard_TabToday_Text" xml:space="preserve">
+    <value>Situació Actual</value>
+  </data>
+  <data name="Dashboard_Title" xml:space="preserve">
+    <value>Quadre de comandament</value>
+  </data>
+  <data name="Dashboard_TreeTitle" xml:space="preserve">
+    <value>Instal·lacions i grups</value>
+  </data>
+  <data name="Dashboard_YAxisAmount" xml:space="preserve">
+    <value>Valor</value>
+  </data>
+  <data name="Dashboard_YAxisAmountAvg" xml:space="preserve">
+    <value>Valor Promig</value>
+  </data>
+  <data name="Dashboard_YAxisCount" xml:space="preserve">
+    <value>Número Operacions</value>
+  </data>
+  <data name="Dashboard_YAxisCountInscriptions" xml:space="preserve">
+    <value>Número Altes</value>
+  </data>
+  <data name="Dashboard_YAxisTime" xml:space="preserve">
+    <value>Duració (hh:mm)</value>
+  </data>
+  <data name="Dashboard_YAxisTimeAvg" xml:space="preserve">
+    <value>Duració Promitja (hh:mm)</value>
+  </data>
+  <data name="DateFilterType_currentHalf" xml:space="preserve">
+    <value>Mig any actual</value>
+  </data>
+  <data name="DateFilterType_currentMonth" xml:space="preserve">
+    <value>Mes actual</value>
+  </data>
+  <data name="DateFilterType_currentQuarter" xml:space="preserve">
+    <value>Trimestre actual</value>
+  </data>
+  <data name="DateFilterType_currentWeek" xml:space="preserve">
+    <value>Setmana actual</value>
+  </data>
+  <data name="DateFilterType_currentYear" xml:space="preserve">
+    <value>Any actual</value>
+  </data>
+  <data name="DateFilterType_custom" xml:space="preserve">
+    <value>Especificar dates</value>
+  </data>
+  <data name="DateFilterType_lastHalf" xml:space="preserve">
+    <value>Últims 6 mesos</value>
+  </data>
+  <data name="DateFilterType_lastMonth" xml:space="preserve">
+    <value>Últim mes</value>
+  </data>
+  <data name="DateFilterType_lastQuarter" xml:space="preserve">
+    <value>Últims 3 mesos</value>
+  </data>
+  <data name="DateFilterType_lastWeek" xml:space="preserve">
+    <value>Última setmana</value>
+  </data>
+  <data name="DateFilterType_lastYear" xml:space="preserve">
+    <value>Últim any</value>
+  </data>
+  <data name="DateGroupType_day" xml:space="preserve">
+    <value>Dia</value>
+  </data>
+  <data name="DateGroupType_half" xml:space="preserve">
+    <value>6 mesos</value>
+  </data>
+  <data name="DateGroupType_hour" xml:space="preserve">
+    <value>Hora</value>
+  </data>
+  <data name="DateGroupType_month" xml:space="preserve">
+    <value>Mes</value>
+  </data>
+  <data name="DateGroupType_quarter" xml:space="preserve">
+    <value>3 mesos</value>
+  </data>
+  <data name="DateGroupType_week" xml:space="preserve">
+    <value>Setmana</value>
+  </data>
+  <data name="DateGroupType_weekday" xml:space="preserve">
+    <value>Dia de la setmana</value>
+  </data>
+  <data name="DateGroupType_year" xml:space="preserve">
+    <value>Any</value>
+  </data>
+  <data name="EmailToolDataModel_Attachments" xml:space="preserve">
+    <value>Fitxers adjunts</value>
+  </data>
+  <data name="EmailToolDataModel_Body" xml:space="preserve">
+    <value>Cos</value>
+  </data>
+  <data name="EmailToolDataModel_Password" xml:space="preserve">
+    <value>Parauls de Pas</value>
+  </data>
+  <data name="EmailToolDataModel_Recipients" xml:space="preserve">
+    <value>E-mails</value>
+  </data>
+  <data name="EmailToolDataModel_Subject" xml:space="preserve">
+    <value>Assumpte</value>
+  </data>
+  <data name="EmailTool_AddRecipients" xml:space="preserve">
+    <value>Afegir</value>
+  </data>
+  <data name="EmailTool_AddRecipients_Accept" xml:space="preserve">
+    <value>Acceptar</value>
+  </data>
+  <data name="EmailTool_AddRecipients_Cancel" xml:space="preserve">
+    <value>Cancel·lar</value>
+  </data>
+  <data name="EmailTool_AddRecipients_Error" xml:space="preserve">
+    <value>Error al afegir els e-mails</value>
+  </data>
+  <data name="EmailTool_AddRecipients_Title" xml:space="preserve">
+    <value>Afegir e-mails</value>
+  </data>
+  <data name="EmailTool_DeleteAllRecipients" xml:space="preserve">
+    <value>Borrar tots els e-mails</value>
+  </data>
+  <data name="EmailTool_DeleteAllRecipients_Error" xml:space="preserve">
+    <value>Error a l'eliminar tots els e-mails</value>
+  </data>
+  <data name="EmailTool_DeleteEllRecipients_Confirm" xml:space="preserve">
+    <value>Està d'acord en eliminar tots els e-mails de la llista?</value>
+  </data>
+  <data name="EmailTool_DeleteEllRecipients_Title" xml:space="preserve">
+    <value>Eliminar tots els e-mails</value>
+  </data>
+  <data name="EmailTool_DeleteRecipient_Error" xml:space="preserve">
+    <value>Error a l'eliminar e-mail</value>
+  </data>
+  <data name="EmailTool_DeleteRecipient_Title" xml:space="preserve">
+    <value>Eliminar e-mail</value>
+  </data>
+  <data name="EmailTool_Installations" xml:space="preserve">
+    <value>Usuaris que hagin operat a la instal·lació:</value>
+  </data>
+  <data name="EmailTool_InstallationsAll" xml:space="preserve">
+    <value>Totes</value>
+  </data>
+  <data name="EmailTool_PasteRecipients" xml:space="preserve">
+    <value>Enganzar e-mails des del porta portapapers</value>
+  </data>
+  <data name="EmailTool_SelectAllFilteredUsers" xml:space="preserve">
+    <value>Seleccionar tots els usuaris filtrats (totes las pàgines)</value>
+  </data>
+  <data name="EmailTool_SelectAllUsers" xml:space="preserve">
+    <value>Seleccionar tots els usuaris de la pàgina actual</value>
+  </data>
+  <data name="EmailTool_Send" xml:space="preserve">
+    <value>Enviar</value>
+  </data>
+  <data name="EmailTool_SendEmails_Error" xml:space="preserve">
+    <value>Error a l'enviar els e-mails</value>
+  </data>
+  <data name="EmailTool_SendEmails_InvalidPwd" xml:space="preserve">
+    <value>Clau de pas incorrecta</value>
+  </data>
+  <data name="EmailTool_SendEmails_NoRecipients" xml:space="preserve">
+    <value>Llista e-mails buida</value>
+  </data>
+  <data name="EmailTool_SendEmails_Success" xml:space="preserve">
+    <value>E-mails enviats correctament</value>
+  </data>
+  <data name="EmailTool_SendEmails_Title" xml:space="preserve">
+    <value>Enviar e-mails</value>
+  </data>
+  <data name="EmailTool_Title" xml:space="preserve">
+    <value>Enviament d'e-mails</value>
+  </data>
+  <data name="EmailTool_Users" xml:space="preserve">
+    <value>Usuaris</value>
+  </data>
+  <data name="ErrorsMsg_InvalidFormat" xml:space="preserve">
+    <value>Format invàlid</value>
+  </data>
+  <data name="ErrorsMsg_InvalidLength" xml:space="preserve">
+    <value>Longitud incorrecta</value>
+  </data>
+  <data name="ErrorsMsg_InvalidLengthWithMinimum" xml:space="preserve">
+    <value>Longitud incorrecta</value>
+  </data>
+  <data name="ErrorsMsg_RequiredField" xml:space="preserve">
+    <value>Camp {0} obligatori</value>
+  </data>
+  <data name="Grid_FilterInfo_Title" xml:space="preserve">
+    <value>No hi ha cap filtre actiu.</value>
+  </data>
+  <data name="InvoiceDataModel_Amount" xml:space="preserve">
+    <value>Valor</value>
+  </data>
+  <data name="InvoiceDataModel_CurrencyId" xml:space="preserve">
+    <value>Moneda</value>
+  </data>
+  <data name="InvoiceDataModel_CurrencyIsoCode" xml:space="preserve">
+    <value>Abrev. Moneda</value>
+  </data>
+  <data name="InvoiceDataModel_Date" xml:space="preserve">
+    <value>Data</value>
+  </data>
+  <data name="InvoiceDataModel_Date_Time" xml:space="preserve">
+    <value>Hora</value>
+  </data>
+  <data name="InvoiceDataModel_DownloadURL" xml:space="preserve">
+    <value>Enllaç de decàrrega</value>
+  </data>
+  <data name="InvoiceDataModel_InvoiceId" xml:space="preserve">
+    <value>Codi</value>
+  </data>
+  <data name="InvoiceDataModel_InvoiceNumber" xml:space="preserve">
+    <value>Número</value>
+  </data>
+  <data name="InvoiceDataModel_UserId" xml:space="preserve">
+    <value>Usuari</value>
+  </data>
+  <data name="InvoiceExport_PDFFilename" xml:space="preserve">
+    <value>factures</value>
+  </data>
+  <data name="InvoiceExport_XLSFilename" xml:space="preserve">
+    <value>factures</value>
+  </data>
+  <data name="Invoices_Title" xml:space="preserve">
+    <value>Factures</value>
+  </data>
+  <data name="Invoice_PDF_Amount" xml:space="preserve">
+    <value>Import</value>
+  </data>
+  <data name="Invoice_PDF_BaseAmount" xml:space="preserve">
+    <value>Base Imposable</value>
+  </data>
+  <data name="Invoice_PDF_Date" xml:space="preserve">
+    <value>Data:</value>
+  </data>
+  <data name="Invoice_PDF_Detail" xml:space="preserve">
+    <value>Cancepte</value>
+  </data>
+  <data name="Invoice_PDF_DNI_NIF" xml:space="preserve">
+    <value>DNI/NIF :</value>
+  </data>
+  <data name="Invoice_PDF_InvoiceNumber" xml:space="preserve">
+    <value>Fact. nº:</value>
+  </data>
+  <data name="Invoice_PDF_NIF" xml:space="preserve">
+    <value>NIF: </value>
+  </data>
+  <data name="Invoice_PDF_Total" xml:space="preserve">
+    <value>TOTAL</value>
+  </data>
+  <data name="Invoice_PDF_Units" xml:space="preserve">
+    <value>Unitats</value>
+  </data>
+  <data name="Invoice_PDF_Unit_Amount" xml:space="preserve">
+    <value>Preu</value>
+  </data>
+  <data name="Invoice_PDF_VAT" xml:space="preserve">
+    <value>I.V.A.</value>
+  </data>
+  <data name="Invoice_Start_Date" xml:space="preserve">
+    <value>Data de Inici</value>
+  </data>
+  <data name="OperationController.OperationDelete.AccessDenied" xml:space="preserve">
+    <value>L'usuari actual no té permisos per eliminar l'operació</value>
+  </data>
+  <data name="UserDataModel_AlternativePhoneCountryID" xml:space="preserve">
+    <value>País Telèfon Fix</value>
+  </data>
+  <data name="UserDataModel_AlternativePhoneNumber" xml:space="preserve">
+    <value>Telèfono Fix</value>
+  </data>
+  <data name="UserDataModel_Balance" xml:space="preserve">
+    <value>Saldo Actual</value>
+  </data>
+  <data name="UserDataModel_BalanceCurrencyId" xml:space="preserve">
+    <value>Moneda Saldo Actual</value>
+  </data>
+  <data name="UserDataModel_BalanceCurrencyIsoCode" xml:space="preserve">
+    <value>Abrev. Moneda Saldo Actual</value>
+  </data>
+  <data name="UserDataModel_City" xml:space="preserve">
+    <value>Ciutat:</value>
+  </data>
+  <data name="UserDataModel_CountryId" xml:space="preserve">
+    <value>País</value>
+  </data>
+  <data name="UserDataModel_DocId" xml:space="preserve">
+    <value>DNI/Passaport</value>
+  </data>
+  <data name="UserDataModel_DoorInStreetNumber" xml:space="preserve">
+    <value>Porta</value>
+  </data>
+  <data name="UserDataModel_Email" xml:space="preserve">
+    <value>e-mail</value>
+  </data>
+  <data name="UserDataModel_Enabled" xml:space="preserve">
+    <value>Habilitat</value>
+  </data>
+  <data name="UserDataModel_InsertionUTCDate" xml:space="preserve">
+    <value>Data Inserció (UTC)</value>
+  </data>
+  <data name="UserDataModel_InsertionUTCDate_Time" xml:space="preserve">
+    <value>Hora Inserció (UTC)</value>
+  </data>
+  <data name="UserDataModel_LetterInStreetNumber" xml:space="preserve">
+    <value>Lletra</value>
+  </data>
+  <data name="UserDataModel_LevelInStreetNumber" xml:space="preserve">
+    <value>Pis</value>
+  </data>
+  <data name="UserDataModel_MainPhoneCountryId" xml:space="preserve">
+    <value>País Telèfon Mòbil</value>
+  </data>
+  <data name="UserDataModel_MainPhoneNumber" xml:space="preserve">
+    <value>Telèfon Mòbil</value>
+  </data>
+  <data name="UserDataModel_Name" xml:space="preserve">
+    <value>Nom</value>
+  </data>
+  <data name="UserDataModel_PaymentMeanSubTypeId" xml:space="preserve">
+    <value>Tipus Targeta</value>
+  </data>
+  <data name="UserDataModel_PaymentMeanTypeId" xml:space="preserve">
+    <value>Medi Pagament</value>
+  </data>
+  <data name="UserDataModel_PaymentSuscriptionTypeId" xml:space="preserve">
+    <value>Tipus Suscripció</value>
+  </data>
+  <data name="UserDataModel_Plates" xml:space="preserve">
+    <value>Matrícules</value>
+  </data>
+  <data name="UserDataModel_StairInStreetNumber" xml:space="preserve">
+    <value>Escala</value>
+  </data>
+  <data name="UserDataModel_State" xml:space="preserve">
+    <value>Província</value>
+  </data>
+  <data name="UserDataModel_StreetName" xml:space="preserve">
+    <value>Nom del Carrer</value>
+  </data>
+  <data name="UserDataModel_StreetNumber" xml:space="preserve">
+    <value>Número</value>
+  </data>
+  <data name="UserDataModel_Surname1" xml:space="preserve">
+    <value>Primer Congnom</value>
+  </data>
+  <data name="UserDataModel_Surname2" xml:space="preserve">
+    <value>Segon Cognom</value>
+  </data>
+  <data name="UserDataModel_UserId" xml:space="preserve">
+    <value>Codi</value>
+  </data>
+  <data name="UserDataModel_Username" xml:space="preserve">
+    <value>Nom d'usuari</value>
+  </data>
+  <data name="UserDataModel_ZipCode" xml:space="preserve">
+    <value>Codi Postal</value>
+  </data>
+  <data name="ChargeOperationsType_BalanceRecharge" xml:space="preserve">
+    <value>Recàrrega</value>
+  </data>
+  <data name="ChargeOperationsType_Discount" xml:space="preserve">
+    <value>Descompte</value>
+  </data>
+  <data name="ChargeOperationsType_ExtensionOperation" xml:space="preserve">
+    <value>Ampliació</value>
+  </data>
+  <data name="ChargeOperationsType_OffstreetEntry" xml:space="preserve">
+    <value>Entrada Aparcament</value>
+  </data>
+  <data name="ChargeOperationsType_OffstreetExit" xml:space="preserve">
+    <value>Sortida Aparcament</value>
+  </data>
+  <data name="ChargeOperationsType_OffstreetOverduePayment" xml:space="preserve">
+    <value>Pagament Retardat Aparcament</value>
+  </data>
+  <data name="ChargeOperationsType_ParkingOperation" xml:space="preserve">
+    <value>Aparcament</value>
+  </data>
+  <data name="ChargeOperationsType_ParkingRefund" xml:space="preserve">
+    <value>Desaparcament</value>
+  </data>
+  <data name="ChargeOperationsType_ServiceCharge" xml:space="preserve">
+    <value>Càrreg de Serveis</value>
+  </data>
+  <data name="ChargeOperationsType_TicketPayment" xml:space="preserve">
+    <value>Anul·lació Denúncia</value>
+  </data>
+  <data name="OperationExt_Deleted_EmailBody_BalanceAfter" xml:space="preserve">
+    <value>Saldo actual:</value>
+  </data>
+  <data name="OperationExt_Deleted_EmailBody_BalanceBefore" xml:space="preserve">
+    <value>Saldo previ:</value>
+  </data>
+  <data name="OperationExt_Deleted_EmailBody_Discount" xml:space="preserve">
+    <value>&lt;br&gt;Descompte aplicat: {0}</value>
+  </data>
+  <data name="OperationExt_Delete_Button_Text" xml:space="preserve">
+    <value>Eliminar</value>
+  </data>
+  <data name="OperationExt_Delete_Button_Title" xml:space="preserve">
+    <value>Eliminar l'operació</value>
+  </data>
+  <data name="OperationExt_Delete_Confirm" xml:space="preserve">
+    <value>Està d'acord en eliminar l'operació de &lt;b&gt;{0}&lt;/b&gt; (ID: {1}, Usuari:{2})?</value>
+  </data>
+  <data name="OperationExt_Delete_Error" xml:space="preserve">
+    <value>Error al eliminar l'operació</value>
+  </data>
+  <data name="OperationExt_Delete_Extension_EmailBody" xml:space="preserve">
+    <value>Dades de l'ampliació d'aparacament eliminada:&lt;br&gt;&lt;br&gt;Usuari: {12}&lt;br&gt;ID: {0}&lt;br&gt;Matr&amp;iacute;cula: {1}&lt;br&gt;Ciutat: {2}&lt;br&gt;Zona: {3}&lt;br&gt;Tarifa: {4}&lt;br&gt;Data d'emissi&amp;oacute;: {5:HH:mm:ss dd/MM/yyyy}&lt;br&gt;Aparcament Comença:  {6:HH:mm:ss dd/MM/yyyy}&lt;br&gt;Aparcament Finalitza:  {7:HH:mm:ss dd/MM/yyyy}&lt;br&gt;Quantitat Pagada: {8}{15}{14} &lt;br&gt;&lt;br&gt;&lt;b&gt;{9}&lt;/b&gt;&lt;br&gt;&lt;b&gt;{13}&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;a href="{10}"&gt;&lt;img src="{11}" border="0" alt="{10}"&gt;&lt;/a&gt;&lt;br&gt;&lt;br&gt;</value>
+  </data>
+  <data name="OperationExt_Delete_Extension_EmailHeader" xml:space="preserve">
+    <value>EYSAMobile: Ampliació d'aparcament eliminada</value>
+  </data>
+  <data name="OperationExt_Delete_Parking_EmailBody" xml:space="preserve">
+    <value>Dades de l'aparcament eliminat:&lt;br&gt;&lt;br&gt;Usuari: {12}&lt;br&gt;ID: {0}&lt;br&gt;Matr&amp;iacute;cula: {1}&lt;br&gt;Ciutat: {2}&lt;br&gt;Zona: {3}&lt;br&gt;Tarifa: {4}&lt;br&gt;Data d'emissi&amp;oacute;: {5:HH:mm:ss dd/MM/yyyy}&lt;br&gt;Aparcament Comença:  {6:HH:mm:ss dd/MM/yyyy}&lt;br&gt;Aparcament Finalitza:  {7:HH:mm:ss dd/MM/yyyy}&lt;br&gt;Quantitat Pagada: {8}{15}{14} &lt;br&gt;&lt;br&gt;&lt;b&gt;{9}&lt;/b&gt;&lt;br&gt;&lt;b&gt;{13}&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;a href="{10}"&gt;&lt;img src="{11}" border="0" alt="{10}"&gt;&lt;/a&gt;&lt;br&gt;&lt;br&gt;</value>
+  </data>
+  <data name="OperationExt_Delete_Parking_EmailHeader" xml:space="preserve">
+    <value>EYSAMobile: Aparcament eliminat</value>
+  </data>
+  <data name="OperationExt_Delete_Recharge_EmailBody" xml:space="preserve">
+    <value>Dades de la recàrrega eliminada:&lt;br&gt;&lt;br&gt;Usuari: {6}&lt;br&gt;ID: {0}&lt;br&gt;Data de recàrrega: {1:HH:mm:ss dd/MM/yyyy}&lt;br&gt;Quantitat Recarregada: {2}{8}&lt;br&gt;&lt;br&gt;&lt;b&gt;{3}&lt;/b&gt;&lt;br&gt;&lt;b&gt;{7}&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;a href="{4}"&gt;&lt;img src="{5}" border="0" alt="{4}"&gt;&lt;/a&gt;&lt;br&gt;&lt;br&gt;</value>
+  </data>
+  <data name="OperationExt_Delete_Recharge_EmailHeader" xml:space="preserve">
+    <value>EYSAMobile: Recàrrega eliminada</value>
+  </data>
+  <data name="OperationExt_Delete_ServiceCharge_EmailBody" xml:space="preserve">
+    <value>Dades del càrreg de serveis eliminat:&lt;br&gt;&lt;br&gt;Usuari: {6}&lt;br&gt;ID: {0}&lt;br&gt;Data del càrreg: {1:HH:mm:ss dd/MM/yyyy}&lt;br&gt;Quantitat: {2}{8}&lt;br&gt;&lt;br&gt;&lt;b&gt;{3}&lt;/b&gt;&lt;br&gt;&lt;b&gt;{7}&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;a href="{4}"&gt;&lt;img src="{5}" border="0" alt="{4}"&gt;&lt;/a&gt;&lt;br&gt;&lt;br&gt;</value>
+  </data>
+  <data name="OperationExt_Delete_ServiceCharge_EmailHeader" xml:space="preserve">
+    <value>EYSAMobile: Càrreg de serveis eliminat</value>
+  </data>
+  <data name="OperationExt_Delete_Success" xml:space="preserve">
+    <value>Operació eliminada correctament</value>
+  </data>
+  <data name="OperationExt_Delete_TicketPayment_EmailBody" xml:space="preserve">
+    <value>Dades de l'anul·lació de denúncia:&lt;br&gt;&lt;br&gt;Usuari: {10}&lt;br&gt;ID: {0}&lt;br&gt;Botllet&amp;iacute;: {1}&lt;br&gt;Matr&amp;iacute;cula: {2}&lt;br&gt;Ciutat: {3}&lt;br&gt;Data d'anul·laci&amp;oacute;: {4:HH:mm:ss dd/MM/yyyy}&lt;br&gt;Descripci&amp;oacute;: {5}&lt;br&gt;Quantitat Pagada: {6}&lt;br&gt;&lt;br&gt;&lt;b&gt;{7}&lt;/b&gt;&lt;br&gt;&lt;b&gt;{11}&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;a href="{8}"&gt;&lt;img src="{9}" border="0" alt="{8}"&gt;&lt;/a&gt;&lt;br&gt;&lt;br&gt;</value>
+  </data>
+  <data name="OperationExt_Delete_TicketPayment_EmailHeader" xml:space="preserve">
+    <value>EYSAMobile: Anul·lació de denúncia eliminada</value>
+  </data>
+  <data name="OperationExt_Delete_Title" xml:space="preserve">
+    <value>Eliminar Operació</value>
+  </data>
+  <data name="OperationExt_Delete_UnParking_EmailBody" xml:space="preserve">
+    <value>Dades del desaparcament eliminat:&lt;br&gt;&lt;br&gt;Usuari: {12}&lt;br&gt;ID: {0}&lt;br&gt;Matr&amp;iacute;cula: {1}&lt;br&gt;Ciutat: {2}&lt;br&gt;Data d'emissi&amp;oacute;: {5:HH:mm:ss dd/MM/yyyy}&lt;br&gt;Aparcamento Comença:  {6:HH:mm:ss dd/MM/yyyy}&lt;br&gt;Aparcament Finalitza:  {7:HH:mm:ss dd/MM/yyyy}&lt;br&gt;Quantitat Retornada: {8}{15}{14} &lt;br&gt;&lt;br&gt;&lt;b&gt;{9}&lt;/b&gt;&lt;br&gt;&lt;b&gt;{13}&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;a href="{10}"&gt;&lt;img src="{11}" border="0" alt="{10}"&gt;&lt;/a&gt;&lt;br&gt;&lt;br&gt;</value>
+  </data>
+  <data name="OperationExt_Delete_UnParking_EmailHeader" xml:space="preserve">
+    <value>EYSAMobile: Desaparcament eliminat</value>
+  </data>
+  <data name="Reports.Title" xml:space="preserve">
+    <value>Informes</value>
+  </data>
+  <data name="UserController.UserDisable.AccessDenied" xml:space="preserve">
+    <value>L'usuari actual no té permisos per eliminar l'usuari</value>
+  </data>
+  <data name="Dashboard_Invitations_Accepted" xml:space="preserve">
+    <value>Invitacions Acceptades</value>
+  </data>
+  <data name="Dashboard_Invitations_AcceptedTotal" xml:space="preserve">
+    <value>Invitacions Acceptades Totals</value>
+  </data>
+  <data name="Dashboard_Invitations_Acums_Accepted" xml:space="preserve">
+    <value>Acumulat Invitacions Acceptades</value>
+  </data>
+  <data name="Dashboard_Invitations_Acums_AcceptedTotal" xml:space="preserve">
+    <value>Acumulat Invitacions Acceptades Totals</value>
+  </data>
+  <data name="Dashboard_Invitations_Acums_Pending" xml:space="preserve">
+    <value>Acumulat Invitacions Pendents d'Acceptar</value>
+  </data>
+  <data name="Dashboard_Invitations_Acums_Sended" xml:space="preserve">
+    <value>Acumulat Invitacions Enviades</value>
+  </data>
+  <data name="Dashboard_Invitations_Pending" xml:space="preserve">
+    <value>Invitacions Pendents d'Acceptar</value>
+  </data>
+  <data name="Dashboard_Invitations_Sended" xml:space="preserve">
+    <value>Invitacions Enviades</value>
+  </data>
+  <data name="Dashboard_TabInvitations_Text" xml:space="preserve">
+    <value>Invitacions</value>
+  </data>
+  <data name="Dashboard_YAxisCount_Invitations" xml:space="preserve">
+    <value>Número Invitacions</value>
+  </data>
+  <data name="Dashboard_YAxisCount_InvitationsAcum" xml:space="preserve">
+    <value>Acumulat Invitacions</value>
+  </data>
+  <data name="Dashboard_SerieBalanceRechargeAutomaticAmountAvg" xml:space="preserve">
+    <value>Valor Promitg Recàrregues Automàtiques</value>
+  </data>
+  <data name="Dashboard_SerieBalanceRechargeChangePMAmountAvg" xml:space="preserve">
+    <value>Valor Promitg Recàrregues Canvi Mètode Pagament</value>
+  </data>
+  <data name="Dashboard_SerieBalanceRechargeRegularAmountAvg" xml:space="preserve">
+    <value>Valor Promitg Recàrregues Normals</value>
+  </data>
+  <data name="Dashboard_SerieBalanceRechargeUserCreationAmountAvg" xml:space="preserve">
+    <value>Valor Promitg Recàrregues Inicials</value>
+  </data>
+  <data name="Dashboard_SerieRechargesAutomaticCount" xml:space="preserve">
+    <value>Número Recàrregues Automàtiques</value>
+  </data>
+  <data name="Dashboard_SerieRechargesChangePMCount" xml:space="preserve">
+    <value>Número Recàrregues Canvi Mètode Pagament</value>
+  </data>
+  <data name="Dashboard_SerieRechargesRegularCount" xml:space="preserve">
+    <value>Número Recàrregues Normals</value>
+  </data>
+  <data name="Dashboard_SerieRechargesUserCreationCount" xml:space="preserve">
+    <value>Número Recàrregues Inicials</value>
+  </data>
+  <data name="Dashboard_YAxisCountInscriptionsPlatform" xml:space="preserve">
+    <value>Número Altes</value>
+  </data>
+  <data name="Dashboard_TabInscriptionsPlatform_Text" xml:space="preserve">
+    <value>Altes per Plataforma</value>
+  </data>
+  <data name="Dashboard_YAxisCountInscriptionsPlatformAcums" xml:space="preserve">
+    <value>Acumulat Número Altes</value>
+  </data>
+  <data name="BalanceTransfer.AddRecipients" xml:space="preserve">
+    <value>Afegir</value>
+  </data>
+  <data name="BalanceTransfer.AddRecipients.Accept" xml:space="preserve">
+    <value>Acceptar</value>
+  </data>
+  <data name="BalanceTransfer.AddRecipients.Cancel" xml:space="preserve">
+    <value>Cancel·lar</value>
+  </data>
+  <data name="BalanceTransfer.AddRecipients.Error" xml:space="preserve">
+    <value>Error al afegir destinataris</value>
+  </data>
+  <data name="BalanceTransfer.AddRecipients.StatusInfo" xml:space="preserve">
+    <value>Emails afegits: {0}</value>
+  </data>
+  <data name="BalanceTransfer.AddRecipients.Title" xml:space="preserve">
+    <value>Afegir Destinatari</value>
+  </data>
+  <data name="BalanceTransfer.DeleteAllRecipients" xml:space="preserve">
+    <value>Eliminar Tots</value>
+  </data>
+  <data name="BalanceTransfer.DeleteAllRecipients.Error" xml:space="preserve">
+    <value>Error a l'eliminar tots els destinataris</value>
+  </data>
+  <data name="BalanceTransfer.DeleteAllRecipients.Title" xml:space="preserve">
+    <value>Eliminar tots els destinataris</value>
+  </data>
+  <data name="BalanceTransfer.DeleteEllRecipients.Confirm" xml:space="preserve">
+    <value>Confirme en eliminar tots els destinataris?</value>
+  </data>
+  <data name="BalanceTransfer.DeleteRecipient.Error" xml:space="preserve">
+    <value>Error a l'eliminar el destinatari</value>
+  </data>
+  <data name="BalanceTransfer.DeleteRecipient.Title" xml:space="preserve">
+    <value>Eliminar destinatari</value>
+  </data>
+  <data name="BalanceTransfer.Installations" xml:space="preserve">
+    <value>Instal·lacions</value>
+  </data>
+  <data name="BalanceTransfer.InstallationsAll" xml:space="preserve">
+    <value>Totes</value>
+  </data>
+  <data name="BalanceTransfer.Recipients" xml:space="preserve">
+    <value>Destinataris</value>
+  </data>
+  <data name="BalanceTransfer.SelectAllFilteredUsers" xml:space="preserve">
+    <value>Seleccionar tots els usuaris filtrats (totes les pàgines)</value>
+  </data>
+  <data name="BalanceTransfer.SelectAllUsers" xml:space="preserve">
+    <value>Seleccionar tots els usuaris de la pàgina actual</value>
+  </data>
+  <data name="BalanceTransfer.Title" xml:space="preserve">
+    <value>Transferènies de Saldo</value>
+  </data>
+  <data name="BalanceTransfer.Transfer" xml:space="preserve">
+    <value>Transferir</value>
+  </data>
+  <data name="BalanceTransfer.Transfer.Error" xml:space="preserve">
+    <value>Error al transferir el saldo</value>
+  </data>
+  <data name="BalanceTransfer.Transfer.InvalidSourceUser" xml:space="preserve">
+    <value>Usuari origen incorrecte</value>
+  </data>
+  <data name="BalanceTransfer.Transfer.NoRecipients" xml:space="preserve">
+    <value>No hi ha cap usuari destí seleccionat</value>
+  </data>
+  <data name="BalanceTransfer.Transfer.NotEnoughBalance" xml:space="preserve">
+    <value>Saldo insuficient</value>
+  </data>
+  <data name="BalanceTransfer.Transfer.Success" xml:space="preserve">
+    <value>Transferència realitzada correctament</value>
+  </data>
+  <data name="BalanceTransfer.Transfer.Title" xml:space="preserve">
+    <value>Transferència de Saldo</value>
+  </data>
+  <data name="BalanceTransfer.TransferStatus.Result_Error_Generic" xml:space="preserve">
+    <value>Error al realitzar transferència</value>
+  </data>
+  <data name="BalanceTransfer.TransferStatus.Result_Error_InvalidAuthentication" xml:space="preserve">
+    <value>Paraula de pas incorrecte</value>
+  </data>
+  <data name="BalanceTransfer.TransferStatus.Result_Error_InvalidUserReceiverEmail" xml:space="preserve">
+    <value>Email usuari desti incorrecte</value>
+  </data>
+  <data name="BalanceTransfer.TransferStatus.Result_Error_Invalid_Input_Parameter" xml:space="preserve">
+    <value>Paràmetre d'entrada incorrecte</value>
+  </data>
+  <data name="BalanceTransfer.TransferStatus.Result_Error_Invalid_User" xml:space="preserve">
+    <value>Usuari incorrecte</value>
+  </data>
+  <data name="BalanceTransfer.TransferStatus.Result_Error_Not_Enough_Balance" xml:space="preserve">
+    <value>L'usuari no té suficient saldo</value>
+  </data>
+  <data name="BalanceTransfer.TransferStatus.Result_Error_Recharge_Failed" xml:space="preserve">
+    <value>Recàrrega fallida</value>
+  </data>
+  <data name="BalanceTransfer.TransferStatus.Result_Error_TransferingBalance" xml:space="preserve">
+    <value>Error transferint saldo</value>
+  </data>
+  <data name="BalanceTransfer.TransferStatus.Result_Error_UserReceiverDisabled" xml:space="preserve">
+    <value>Usuari destí desactivat</value>
+  </data>
+  <data name="BalanceTransfer.Users" xml:space="preserve">
+    <value>Usuaris</value>
+  </data>
+  <data name="BalanceTransferDataModel.Amount" xml:space="preserve">
+    <value>Valor Transferència</value>
+  </data>
+  <data name="BalanceTransferDataModel.Password" xml:space="preserve">
+    <value>Paraula de Pas</value>
+  </data>
+  <data name="BalanceTransferDataModel.SourceEmail" xml:space="preserve">
+    <value>Usuari Origen</value>
+  </data>
+  <data name="ErrorsMsg_InvalidField" xml:space="preserve">
+    <value>Camp {0} incorrecte</value>
+  </data>
+  <data name="CashRecharge.Accept.Button" xml:space="preserve">
+    <value>Acceptar</value>
+  </data>
+  <data name="CashRecharge.Accept.Button.Title" xml:space="preserve">
+    <value>Acceptar</value>
+  </data>
+  <data name="CashRecharge.Recharge" xml:space="preserve">
+    <value>Recarregar</value>
+  </data>
+  <data name="CashRecharge.Recharge.DifferentEmails" xml:space="preserve">
+    <value>E-mails diferents</value>
+  </data>
+  <data name="CashRecharge.Recharge.Error" xml:space="preserve">
+    <value>Error al realitzar la recàrrega</value>
+  </data>
+  <data name="CashRecharge.Recharge.InvalidUser" xml:space="preserve">
+    <value>Usuari incorrecte</value>
+  </data>
+  <data name="CashRecharge.Recharge.OperatorRequired" xml:space="preserve">
+    <value>És necessari que tingui assignat un operador financer per poder realitzar la recàrrega</value>
+  </data>
+  <data name="CashRecharge.Recharge.Title" xml:space="preserve">
+    <value>Realitzar la recàrrega en efectiu</value>
+  </data>
+  <data name="CashRecharge.Recharge.Title1" xml:space="preserve">
+    <value>Recàrrega en Efectiu</value>
+  </data>
+  <data name="CashRecharge.Summary.Amount" xml:space="preserve">
+    <value>Import a recarregar:</value>
+  </data>
+  <data name="CashRecharge.Summary.Cancel.Button" xml:space="preserve">
+    <value>Cancel·lar</value>
+  </data>
+  <data name="CashRecharge.Summary.Cancel.Button.Title" xml:space="preserve">
+    <value>Cancel·lar recàrrega</value>
+  </data>
+  <data name="CashRecharge.Summary.Email" xml:space="preserve">
+    <value>E-mail de l'usuari:</value>
+  </data>
+  <data name="CashRecharge.Summary.FEE" xml:space="preserve">
+    <value>Cost del servei:</value>
+  </data>
+  <data name="CashRecharge.Summary.Info" xml:space="preserve">
+    <value>Resum de la recàrrega en efectiu</value>
+  </data>
+  <data name="CashRecharge.Summary.Recharge.Button" xml:space="preserve">
+    <value>Recarregar</value>
+  </data>
+  <data name="CashRecharge.Summary.Recharge.Button.Title" xml:space="preserve">
+    <value>Confirmar la recàrrega</value>
+  </data>
+  <data name="CashRecharge.Summary.Success" xml:space="preserve">
+    <value>Operació de recàrrega realitzada correctament !!</value>
+  </data>
+  <data name="CashRecharge.Summary.TotalAmount" xml:space="preserve">
+    <value>Import abonat:</value>
+  </data>
+  <data name="CashRecharge.Summary.VAT" xml:space="preserve">
+    <value>IVA associat:</value>
+  </data>
+  <data name="CashRechargeDataModel.Email" xml:space="preserve">
+    <value>E-mail</value>
+  </data>
+  <data name="CashRechargeDataModel.EmailRepeat" xml:space="preserve">
+    <value>Repetir e-mail</value>
+  </data>
+  <data name="CashRechargeDataModel.Installation" xml:space="preserve">
+    <value>Ciutat</value>
+  </data>
+  <data name="CashRechargeDataModel.TotalAmount" xml:space="preserve">
+    <value>Import</value>
+  </data>
+  <data name="Dashboard_TabUserInstallations_Text" xml:space="preserve">
+    <value>Usuaris per Instal·lació</value>
+  </data>
+  <data name="Dashboard_UsersInstallationsFirstOperation_NoInstallation" xml:space="preserve">
+    <value>Sense instal·lació</value>
+  </data>
+  <data name="Dashboard_UsersInstallationsFistOperation_Title" xml:space="preserve">
+    <value>Usuaris per Instal·lació Primera Operació</value>
+  </data>
+  <data name="Dashboard_UsersInstallations_Others" xml:space="preserve">
+    <value>Altres</value>
+  </data>
+  <data name="Dashboard_UsersInstallations_Title" xml:space="preserve">
+    <value>Usuaris per Instal·lació LADA</value>
+  </data>
+  <data name="DashboardDataModel_UserInstallation" xml:space="preserve">
+    <value>Ciutat</value>
+  </data>
+  <data name="Dashboard_UnknownInstallation" xml:space="preserve">
+    <value>Desconeguda</value>
+  </data>
+  <data name="UserInstallationType_FirstOperation" xml:space="preserve">
+    <value>Primera Operació</value>
+  </data>
+  <data name="UserInstallationType_LadaKey" xml:space="preserve">
+    <value>Clau Lada</value>
+  </data>
+  <data name="VwShopkeeperUsers.Approve.Button.Text" xml:space="preserve">
+    <value>Aprovar</value>
+  </data>
+  <data name="VwShopkeeperUsers.Approve.Button.Title" xml:space="preserve">
+    <value>Acceptar usuari com a comerciant</value>
+  </data>
+  <data name="VwShopkeeperUsers.Disable.Button.Text" xml:space="preserve">
+    <value>Deshabilitar</value>
+  </data>
+  <data name="VwShopkeeperUsers.Disable.Button.Title" xml:space="preserve">
+    <value>Deshabilitar comerciant</value>
+  </data>
+  <data name="VwShopkeeperUsers.Refuse.Button.Text" xml:space="preserve">
+    <value>Denegar</value>
+  </data>
+  <data name="VwShopkeeperUsers.Refuse.Button.Title" xml:space="preserve">
+    <value>Denegar usuari com a comerciant</value>
+  </data>
+  <data name="CommerceSubscriptionConfirm_Header" xml:space="preserve">
+    <value>Confirmación suscripción programa de Comerciantes de iParkMe</value>
+  </data>
+  <data name="UserController.ShopkeeperUser_ChangeStatus.AccessDenied" xml:space="preserve">
+    <value>No té els permisos necessàris per canviar l'estat de l'usuari</value>
+  </data>
+  <data name="UserController.ShopkeeperUser_ChangeStatus.Error" xml:space="preserve">
+    <value>Error canviant l'estat de l'usuari</value>
+  </data>
+  <data name="VwShopkeeperUsers.Approve.Confirm" xml:space="preserve">
+    <value>Conforme en aprovar la solicitud de comerciant?</value>
+  </data>
+  <data name="VwShopkeeperUsers.Approve.Error" xml:space="preserve">
+    <value>Error al aprovar la solicitud</value>
+  </data>
+  <data name="VwShopkeeperUsers.Approve.Title" xml:space="preserve">
+    <value>Aprovar Solicitud Comerciant</value>
+  </data>
+  <data name="VwShopkeeperUsers.Disable.Confirm" xml:space="preserve">
+    <value>Conforme en desactivar el comerciant?</value>
+  </data>
+  <data name="VwShopkeeperUsers.Disable.Error" xml:space="preserve">
+    <value>Error al desactivar el comerciant</value>
+  </data>
+  <data name="VwShopkeeperUsers.Disable.Title" xml:space="preserve">
+    <value>Desactivar Comerciant</value>
+  </data>
+  <data name="VwShopkeeperUsers.Refuse.Confirm" xml:space="preserve">
+    <value>Conforme en refusar la solicitud de comerciant?</value>
+  </data>
+  <data name="VwShopkeeperUsers.Refuse.Error" xml:space="preserve">
+    <value>Error al refusar la solicitud</value>
+  </data>
+  <data name="VwShopkeeperUsers.Refuse.Title" xml:space="preserve">
+    <value>Refusar Solicitud</value>
+  </data>
+</root>

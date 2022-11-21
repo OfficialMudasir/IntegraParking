@@ -1,0 +1,114 @@
+﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+<%@ Import Namespace="System.Globalization" %>
+<%@ Import Namespace="integraMobile.Domain" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title><asp:ContentPlaceHolder ID="TitleContent" runat="server" /></title>
+<link rel="stylesheet" href="../../Content/CSS/reset1.css" type="text/css">
+<link rel="stylesheet" href="../../Content/CSS/estilotablas.css" type="text/css">
+<link href='http://fonts.googleapis.com/css?family=Maven+Pro:400,500' rel='stylesheet' type='text/css'>
+<asp:ContentPlaceHolder ID="HeadContent" runat="server"/>	
+
+    <script language="javascript">
+        function GetTimeZoneOffset() {
+
+            if (document.getElementById('utcoffset')) {
+                document.getElementById('utcoffset').value = 0;
+            }
+
+            try {
+                var d = new Date()
+                var n = d.getTimezoneOffset();
+
+                if (document.getElementById('utcoffset')) {
+                    document.getElementById('utcoffset').value = n;
+                }
+            }
+            catch (e)
+            { }
+        }
+
+    </script>
+</head>
+
+<body  onload="GetTimeZoneOffset();">
+<%  NumberFormatInfo provider = new NumberFormatInfo();
+    provider.NumberDecimalSeparator = ".";
+%>
+<div id="cuerpo">
+
+<div class="" id="cabeceraFacturacion">
+<div id="menufact">	
+    	    <ul>
+            <li><a href="LogOff"><img src="../Content/img/Inc_supClose.jpg"/></a></li>
+            <li><a href="#"><img src="../Content/img/Inc_supList.jpg"/></a></li>
+            <li><a href="#"><img src="../Content/img/Inc_supRech.png"/></a></li>
+            <li><div class="usersaldo">
+                <%USER oUser = (USER)ViewData["oUser"];
+                  if (oUser!=null)
+                  { 
+                      if ((oUser.USR_SUSCRIPTION_TYPE.Value == (int)PaymentSuscryptionType.pstPrepay)||(oUser.USR_BALANCE>0))
+                      {                                                                                  
+                       %>
+                        <%=string.Format(provider, "{0:0.00} {1}", Convert.ToDouble(oUser.USR_BALANCE)/100.0,ViewData["CurrencyISOCode"]) %>
+                     <%}
+                  } %>
+            </div></li>
+            <li><a href="#"><img src="../Content/img/Inc_supUser.png"/></a></li>
+            <li><div class="username">  <%=ViewData["UserNameAndSurname"]%> </div></li>
+
+    		</ul>
+    </div>
+</div>
+
+<!-- <div ID="cabecera"></div> -->
+       <div id="botonesMenu">
+			<div class="div25-leftBotones <%= (!string.IsNullOrEmpty((ConfigurationManager.AppSettings["WebParkingUrl"] ?? "")) ? "WebParking" : "")  %>">
+				<a href="UserData"><img src="../Content/img/Usuario.png"/></a>
+                <p class="apartado"><%=Resources.Account_Main_BttnUserData%></p>
+			</div>	
+            
+			<div class="div25-leftBotones <%= (!string.IsNullOrEmpty((ConfigurationManager.AppSettings["WebParkingUrl"] ?? "")) ? "WebParking" : "")  %>">
+                <%if (oUser!=null)
+                  { 
+                      if (oUser.USR_SUSCRIPTION_TYPE.Value == (int)PaymentSuscryptionType.pstPrepay)
+                      {                                                                                  
+                       %>
+				            <a href="RechargeINT"><img src="../Content/img/Recarga.png"/></a>
+                    <%}else{ %>
+				            <a href="#"><img src="../Content/img/estadoinactivo/Recarga.png"/></a>                
+                     <%}
+                  } %> 
+
+                <p class="apartado"><%=Resources.Account_Main_BttnBalanceAndRecharge%></p>
+			</div>
+            		
+			<div class="div25-leftBotones <%= (!string.IsNullOrEmpty((ConfigurationManager.AppSettings["WebParkingUrl"] ?? "")) ? "WebParking" : "")  %>">
+				<a href="Main"><img src="../Content/img/Operaciones.png"/></a>
+                <p class="apartado"><%=Resources.Account_Main_BttnOperations%></p>
+			</div>
+            <div class="div25-leftBotones <%= (!string.IsNullOrEmpty((ConfigurationManager.AppSettings["WebParkingUrl"] ?? "")) ? "WebParking" : "") %>">
+				<a href="Invoices"><img src="../Content/img/Facturacion.png"/></a>
+                <p class="apartado"><%=Resources.Account_Main_BttnInvoices%></p>
+			</div>		
+            <% if (!string.IsNullOrEmpty((ConfigurationManager.AppSettings["WebParkingUrl"] ?? ""))) { %>
+                <div class="div25-leftBotones WebParking">
+				    <a href="WebParking" target="_blank"><img class="WebParking" src="../Content/img/WebParking.png"/></a>
+                    <p class="apartado"><%=Resources.Account_Main_BttnWebParking%></p>
+			    </div>		
+           <% } %>
+		</div>
+
+
+
+	
+	<div id="centro" class="centro">
+        <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+    </div>
+	
+</div>
+</body>
+</html>  

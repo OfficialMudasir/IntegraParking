@@ -1,0 +1,475 @@
+﻿.grid {
+    border-style: none;
+}
+
+.grid .k-grid-toolbar
+{
+    background-color: #f3f3f3 !important;
+    /*min-height: 27px;*/
+    /*padding: 2em 0em 1em 0em;*/
+	height: 30px;
+}
+
+.grid .k-state-selected, .grid .k-alt.k-state-selected {    
+   /* background-image: none,-webkit-linear-gradient(top,#72b5c9 0,#72b5c9 100%);*/
+   background:none;
+   background-color:#6CAA25; /*#355311*/
+   /*border-color: #72b5c9;*/
+   border:none;
+}
+
+.grid .k-header {
+    background-color:#999999 ;/*#a9d4e1*/
+}
+
+.grid .k-alt {
+    background-color: #F3F3F3; /*#edeaea*/
+}
+
+.type-label
+{
+    vertical-align: middle;
+    padding-right: .5em;
+}
+#type
+{
+    vertical-align: middle;
+}
+
+.k-grid tbody tr{
+    height: 25px;
+}
+ 
+.k-grid td{
+    white-space: nowrap;
+}
+
+.gridFilterLeft {
+    float: left;
+}
+
+.gridFilterRight {
+    float: right;
+    display: inline-flex;
+}
+.gridFilterRight h3 {
+    font-weight:normal;
+    margin-top: 15px;
+}
+.gridFilterRight h2 {
+    font-weight:bold;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.imageToolbar
+{
+	display:inline-block;
+	height: 28px;
+	width: 28px;
+	background: transparent url(images/icon_lib/128x128/stop.png) no-repeat 50% 50%;
+	background-size: contain;
+	border:none;	
+}
+
+.exportXls {
+    background-image: Url(images/grid/exportExcel2.png);
+    /*height: 24px;*/
+}
+.exportPdf {
+    background-image: Url(images/grid/exportPdf2.png);
+    /*height: 24px;*/
+}
+.clear {
+    background-image: Url(images/grid/clearState.png);
+    /*height: 24px;*/
+}
+.filterDisabled {
+    /*background-image: Url(images/grid/filterInfo.png);*/
+    /*height: 24px;
+    width: 16px;
+    height: 16px;
+    background: transparent url(images/grid/filters16.png) no-repeat 50% 50%;
+    background-size: contain;
+    overflow: hidden;
+    display: inline-block;
+    font-size: 0;
+    line-height: 0;
+    vertical-align: top;
+    margin: 2px 0 0 3px;
+    -webkit-border-radius: 5px;
+    -mox-border-radius: 5px;
+    border-radius: 5px;*/
+}
+
+.filterEnabled2 {
+    /*background-image: Url(images/grid/filterInfoActive.png);*/
+    width: 16px;
+    height: 16px;
+    background: transparent url(images/grid/filtersActive16.png) no-repeat 50% 50%;
+    background-size: contain;
+    overflow: hidden;
+    display: inline-block;
+    font-size: 0;
+    line-height: 0;
+    vertical-align: top;
+    margin: 2px 0 0 3px;
+    -webkit-border-radius: 5px;
+    -mox-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.k-state-selected,
+.k-button:active,
+.k-draghandle.k-state-selected:hover {
+  background-image: none;
+  /* estils per defecte de comportaments hover active selected  */
+  /*background-image: none, -webkit-linear-gradient(top, #72b5c9 0px, #53aae2 100%);
+  background-image: none, -moz-linear-gradient(top, #72b5c9 0px, #53aae2 100%);
+  background-image: none, -o-linear-gradient(top, #72b5c9 0px, #53aae2 100%);
+  background-image: none, linear-gradient(to bottom, #72b5c9 0px, #53aae2 100%);*/
+}
+
+
+.k-animation-container {
+    /*width: 700px !important;
+    height: 400px !important;*/
+	left:20px;
+	top:12px;
+	background:none;
+}
+.k-tooltip {
+    width: 1000px !important; /*900px*/
+    height: auto !important; /*400px*/
+	left:20px;
+	top:12px;
+	background:none;
+}
+
+.k-tooltip-content 
+{
+    height: 90% !important;    
+    padding: 5px 0px 0px 0px !important;
+
+}
+.filter-field2 .k-tooltip {
+    width: auto !important;
+    height: auto !important;
+}
+
+/*.k-animation-container {
+    z-index: 9999999 !important;
+}*/
+
+.k-tooltip ul {    
+    text-align: left !important;
+}
+
+.edit-form-errors
+{
+    max-height: 100px;
+    height: auto;
+    overflow-y: auto;
+    background-color: red;
+    color: white;
+}
+.grid-load-error {
+    margin-left:2em;
+    float:right;
+    color: red;
+}
+
+.profiles16-icon {
+   /* width: 16px;
+    height: 17px;*/
+   /* background: transparent url(images/grid/profiles16.png) no-repeat 50% 50%;*/
+   /* background: transparent url(images/grid/profiles16.gif) no-repeat 50% 50%;
+    background-size: contain;
+    overflow: hidden;
+    display: inline-block;
+    font-size: 0;
+    line-height: 0;
+    vertical-align: top;
+    margin: 2px 0 0 3px;*/
+   /* -webkit-border-radius: 5px;
+    -mox-border-radius: 5px;
+    border-radius: 5px;*/
+}
+
+/*  MENUS añadir, vistas, configuracion */
+.tbrAdd, .tbrProfiles, .tbrFilter{
+    cursor: pointer;
+	padding:6px 5px 5px 15px;/*8px 5px 10px 15px;*/
+	background-color:#999999;
+	color:#FFFFFF;
+	border:#999999 solid 2px;
+	margin:0 6px 0 0;/*0 3px 0 3px;*/
+}
+.tbrAdd{ /*hack per fer desapareixer el text*/
+	font-size: 0px;
+	padding: 18px 0px 8px 10px;
+	margin:0 3px 0 0;
+}
+.tbrProfiles{
+	background: url(images/grid/icona_vistes_off.gif) no-repeat #999 7px 5px; /*10px 9px*/
+}
+.tbrFilter{
+	background:url(images/grid/icona_configuracio_vistes_off.gif) no-repeat #999 7px 5px;
+}
+.tbrFilter.filterEnabled {    
+    background:url(images/grid/icona_configuracio_vistes_transp_on.gif) no-repeat #999 7px 5px;
+}
+
+.tbrAdd:hover, .tbrProfiles:hover, .tbrFilter:hover{
+    cursor: pointer;
+	background-color:#FFF;
+	color:#355311;
+	border:#999999 solid 2px;
+	border-bottom:#FFFFFF solid 2px;
+	margin:0 6px 0 0; /*0 3px 0 3px;*/
+}
+.tbrAdd:hover{
+	margin:0 3px 0 0px;
+}
+.tbrProfiles.k-state-border-down, .tbrFilter.k-state-border-down{
+	color:#355311;
+	border:#999999 solid 2px;
+	border-bottom:#FFFFFF solid 2px;
+    z-index: 99999;
+    position: relative;
+}
+
+.tbrProfiles:hover, .tbrProfiles.k-state-border-down{
+	background: url(images/grid/icona_vistes_on.gif) no-repeat #FFF 7px 5px;/*10px 9px;*/
+}
+
+.tbrFilter:hover, .tbrFilter.k-state-border-down{
+	background: url(images/grid/icona_configuracio_vistes_on.gif) no-repeat #FFF 7px 5px;
+}
+
+.tbrAdd .k-icon{
+    cursor: pointer;
+    margin-right: 10px;
+	background:url(images/icona_afegir_off.gif) no-repeat;
+	height:26px;
+}
+.tbrAdd:hover .k-icon{
+    cursor: pointer;
+    margin-right: 10px;
+	background:url(images/icona_afegir_on.gif) no-repeat;
+}
+
+.tbrProfiles .k-icon, .tbrFilter .k-icon{
+	background:none;
+}
+
+
+
+.grid .k-autocomplete.k-header {
+    background-color: #f3f3f4 !important;
+}
+
+.k-button:active,
+.k-button.k-state-active {
+  color: #ffffff;
+  background-color: transparent;/*#35544B;*/
+  border-color: transparent;/*#35544B;*/
+}
+.k-button:active:hover,
+.k-button.k-state-active:hover {
+  color: #ffffff;
+  border-color: transparent; /*#35544B;*/
+  background-color: transparent;/* #30413c;*/
+}
+
+.k-button:focus:active:not(.k-state-disabled):not([disabled]) {
+  -webkit-box-shadow: inset 0 0 15px 5px #35544B;
+  box-shadow: inset 0 0 15px 5px #35544B;
+}
+/*mides dels botons de la barra de filtres*/
+/*.k-button.k-button-icon {
+	width:26px;
+	margin:0px;
+	padding:0px;
+	border-radius:0px;*/
+}
+/* extra CSS grid */
+
+/* barra menu filtres*/
+.gridFilterLeft {
+/*background-color:#FFFFFF;*/
+color:#333333;
+}
+
+
+/*icona desar perfil*/
+.gridFilterLeft .save16-icon {
+	width:26px;
+	height:26px;
+	background:url(images/save_profile.gif) no-repeat 50% 50%;
+	-webkit-border-radius: 0px;
+	-mox-border-radius: 0px;
+	border-radius: 0px;
+	top: 0px;
+}
+
+/*reset botons*/
+.gridFilterLeft button, .gridFilterLeft button:hover {
+background:none;
+border:none;
+/*per botons add i save*/
+width:26px;
+/*margin-left:5px;*/
+padding:0px;
+border-radius: 0px;
+-webkit-border-radius: 0px;
+-mox-border-radius: 0px;
+}
+
+/*icona nou perfil*/
+/*.gridFilterLeft .btnUnits_AddProfile .k-icon .k-add{*/
+/*.gridFilterLeft .btnUnits_AddProfile .k-button .k-icon .k-add{:not(.gridFilterLeft .tbrAdd)*/
+/*.gridFilterLeft .k-add, .gridFilterLeft .k-add:hover {
+	width:26px;
+	height:26px;
+	background:url(images/new_profile.gif) no-repeat 50% 50%;
+	-webkit-border-radius: 0px;
+	-mox-border-radius: 0px;
+	border-radius: 0px;
+	margin-top: 1px;
+}*/
+
+/* botons afegir perfil que contenen AddProfile*/
+[id$='AddProfile'] .k-add, [id$='AddProfile'] .k-add:hover, [id$='AddProfile'] .k-add .k-state-active{
+	width:26px;
+	height:26px;
+	background:url(images/new_profile.gif) no-repeat 50% 50%;
+	-webkit-border-radius: 0px;
+	-mox-border-radius: 0px;
+	border-radius: 0px;
+	/*margin-top: 1px;*/
+
+}
+
+
+/* estil a partir de role*/
+
+div [role="tooltip"] {
+background-color:#999999;
+left:20px;
+top:0px;
+}
+
+/* reset de colors per a grid tooltip amb hack per als alerts per a que no es desmarxi tot */
+.k-widget.k-tooltip:not([role="alert"]) {
+border: solid 2px #999999;
+/*border-top:none;*/
+background-color:#FFFFFF;
+color:#666666;
+left: 20px;
+top: -2px; /*pujem un parell de pixels per a que la vora blanca del menu tapi la vora grisa del tooltip*/
+
+/* hack per a mides de vistes i configuracio*/
+max-height: calc(100vh - 300px);/*300 px es la mida del header i footer*/
+
+min-height: calc(100vh - 300px);/*300px;*/
+overflow-y: auto;
+overflow-x: auto;
+border-radius: 0px;
+}
+
+.treeUnits_Filter .k-delete {
+background:url(images/delete_filter.gif) no-repeat 50% 50%;}
+
+/*icona triangular indicativa del menu desplegat*/
+.k-callout, .k-callout-n {display:none;}
+
+/* estil titol vista actual*/
+.Units_CurrentProfileName {
+font-size:18px;
+font-stretch:extra-condensed;
+font-family:Geneva, Arial, Helvetica, sans-serif;
+}
+
+/*menu vistes usuari / configuracion vistas*/
+.tooltipFilter:hover {
+/*background-color:#FF0000;*/
+}
+
+/* icona de cerca de vistes */
+
+/* icona de cerca */
+/*.divFindProfiles .k-i-search, .divFindProfiles .k-i-search:hover{
+background: url(../../../Content/img/icona_cerca.png) no-repeat;
+width: 24px;
+height: 26px;
+right: 0px;
+top: 9px;
+}*/
+
+/*avis camp obligatori*/
+/*.k-widget.k-tooltip-validation {
+  border-color: #FFFFFF;
+  background-color: #6CAA25;
+  color: #FFFFFF;
+  position: relative;
+}*/
+
+/*formulari pop up d'insercio de dades*/
+.k-primary {
+background:none;
+color: black;
+border-color: #cccccc;
+background-color: #f3f3f3;
+}
+.k-primary:hover {
+	background:none;
+	background-color: #CCCCCC;
+	color:black;
+	border-color: #cccccc;
+}
+
+.k-edit-form-container .k-widget.k-tooltip-validation {
+  position: static;
+  float:left;
+  /*border-color: #FFFFFF;
+  background-color: #6CAA25;
+  color: #FFFFFF;*/
+  margin: 5px 0;  
+  width: 135px !important;
+  /*background-color: #fff4c9 !important;*/
+}
+.k-edit-form-container .k-warning {
+    height: 16px;
+}
+
+.k-loading-mask {    
+    z-index: 12001;
+}
+
+.grid-tooltip.k-tooltip {
+    width: auto !important;
+    height: auto !important;
+    min-height: 20px !important;
+    min-width: 100px !important;
+    max-width: none !important;
+}
+.grid-tooltip .k-tooltip-content 
+{
+    height: auto !important;    
+    padding: 0px 0px 0px 0px !important;
+    min-height: 20px !important;
+    min-width: 100px !important;
+    max-width: none !important;
+}
+
+.grid .k-tabstrip.k-header {
+    background-color: white !important;    
+}
+.grid .k-tabstrip.k-header .k-tabstrip-items .k-link {
+    color: #515967 !important;
+}
+
+.displayNone {    
+    visibility: hidden !important;
+}

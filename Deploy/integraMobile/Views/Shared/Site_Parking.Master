@@ -1,0 +1,112 @@
+<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+
+<!doctype html>
+<html lang="<% Response.Write(System.Threading.Thread.CurrentThread.CurrentUICulture); %>">
+<head>
+	<title><asp:ContentPlaceHolder ID="TitleContent" runat="server" /></title>
+	<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">   
+
+    <!-- Font Awesome CSS CDN -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link href="../Content/Parking/css/blinkay_styles.css?v=1.5" rel="stylesheet" type="text/css">
+    <link href="../Content/Parking/css/main.css?v=1.5" rel="stylesheet" type="text/css">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="../Content/Parking/img/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../Content/Parking/img/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../Content/Parking/img/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../Content/Parking/img/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../Content/Parking/img/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../Content/Parking/img/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../Content/Parking/img/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../Content/Parking/img/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../Content/Parking/img/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../Content/Parking/img/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../Content/Parking/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../Content/Parking/img/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../Content/Parking/img/favicon-16x16.png">
+    <link rel="manifest" href="../Content/Parking/img/manifest.json">
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="msapplication-TileImage" content="../Content/Parking/img/ms-icon-144x144.png">
+    <meta name="theme-color" content="#FFFFFF">
+
+    <asp:ContentPlaceHolder ID="Theme" runat="server" />
+
+    <!--<script src="https://www.google.com/recaptcha/api.js?render=<%= ConfigurationManager.AppSettings["RecaptchaId"] %>"></script>-->
+    <!--<script src="https://www.google.com/recaptcha/enterprise.js" async defer></script>-->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+</head>
+
+<body class="theme-light">
+    <span class="css-1ozk4ba">
+        <span class="css-icssl9 bk-bg-secondary"></span>
+        <span class="css-1d6rj9n bk-bg-secondary"></span>
+        <span class="css-icssl9 bk-bg-secondary"></span>
+    </span>
+    <div class="wrapper">
+        <header class="navbar sticky-top flex-md-nowrap p-1 bk-bg-secondary">
+            <asp:ContentPlaceHolder ID="Logo" runat="server" />            
+            <button id="toggle" class="navbar-toggler position-absolute top-1 end-0" type="button" data-bs-toggle="collapse" data-bs-target="#skin-select" aria-controls="skin-select" aria-expanded="true" aria-label="Toggle navigation">
+                <i class="fas fa-bars bk-color-white"></i>
+            </button>            
+            <div class="dropdown position-absolute top-1 start-0 p-3">
+                <a href="#" id="GoBack" onclick="Back();"><i class="fas fa-arrow-left bk-color-white"></i></a>
+            </div>
+        </header>
+        <aside id="skin-select" class="sidebar-nav sidebar-mobile slide-in">
+              <div class="sidebar-nav-content">
+                  <ul class="nav-left">
+                    <li class="nav-item">
+                      <a class="nav-link p-0 mb-3 bk-color-white" aria-current="page" href="#">
+                       Legal Terms
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link p-0 mb-3 bk-color-white" href="#">
+                       Privacy Settings
+                      </a>
+                    </li>
+                  </ul>
+              </div>
+        </aside>
+	
+        <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+
+    </div>
+
+
+    <script>
+        var $slider = document.getElementById('skin-select');
+        var $toggle = document.getElementById('toggle');
+
+        $toggle.addEventListener('click', function () {
+            var isOpen = $slider.classList.contains('slide-in');
+
+            $slider.setAttribute('class', isOpen ? 'sidebar-nav bk-bg-primary slide-out' : 'sidebar-nav bk-bg-primary slide-in');
+        });
+
+      </script>
+    
+    <script src="../Content/Parking/assets/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <!-- jQuery CDN - Slim version (=without AJAX)
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+
+    <asp:ContentPlaceHolder ID="Scripts" runat="server" />
+    <% Html.RenderPartial("GoogleAnalytics"); %>
+</body>
+</html>

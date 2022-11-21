@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://www.pagatelia.com/apipayments/ApiPayment.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Pagatelia.ApiExternalPayments.WebService.Model" />
+  <xs:import schemaLocation="https://www.pagatelia.com/apipayments/ApiPayment.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Pagatelia.ApiExternalPayments.WebService" />
+  <xs:element name="DoLogin">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userLogin" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="date" type="xs:dateTime" />
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Pagatelia.ApiExternalPayments.WebService.Model" minOccurs="0" name="gps" nillable="true" type="q1:GPS" />
+        <xs:element minOccurs="0" name="version" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="hash" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoLoginResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Pagatelia.ApiExternalPayments.WebService" minOccurs="0" name="DoLoginResult" nillable="true" type="q2:DoLoginResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoRecharge">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userLogin" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="imei" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="wifimac" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idSession" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idRecharge" nillable="true" type="xs:string" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Pagatelia.ApiExternalPayments.WebService.Model" minOccurs="0" name="gps" nillable="true" type="q3:GPS" />
+        <xs:element minOccurs="0" name="amount" type="xs:decimal" />
+        <xs:element minOccurs="0" name="version" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="hash" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoRechargeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Pagatelia.ApiExternalPayments.WebService" minOccurs="0" name="DoRechargeResult" nillable="true" type="q4:DoRechargeResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

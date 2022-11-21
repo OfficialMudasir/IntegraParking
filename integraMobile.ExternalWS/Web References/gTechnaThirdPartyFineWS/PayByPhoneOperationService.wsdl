@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://ws.paybyphone.cc.gti.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="PayByPhoneOperationService" targetNamespace="http://ws.paybyphone.cc.gti.com/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="PayByPhoneOperationPortBinding_MTOM_Policy">
+    <ns1:OptimizedMimeSerialization xmlns:ns1="http://schemas.xmlsoap.org/ws/2004/09/policy/optimizedmimeserialization" wsp:Optional="true">
+    </ns1:OptimizedMimeSerialization>
+  </wsp:Policy>
+  <types>
+    <xs:schema targetNamespace="http://ws.paybyphone.cc.gti.com/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="PayTicket" type="tns:PayTicket" />
+      <xs:element name="PayTicketResponse" type="tns:PayTicketResponse" />
+      <xs:element name="QueryTicketList" type="tns:QueryTicketList" />
+      <xs:element name="QueryTicketListResponse" type="tns:QueryTicketListResponse" />
+      <xs:element name="QueryTicketStatus" type="tns:QueryTicketStatus" />
+      <xs:element name="QueryTicketStatusResponse" type="tns:QueryTicketStatusResponse" />
+      <xs:complexType name="QueryTicketList">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ticket_list_request" type="tns:ticket_list_request" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ticket_list_request">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="plate_query" type="tns:plate_query" />
+          <xs:element name="date" type="xs:string" />
+          <xs:element minOccurs="0" name="city_code" type="xs:string" />
+          <xs:element name="ah" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="plate_query">
+        <xs:sequence>
+          <xs:element name="plate" type="xs:string" />
+          <xs:element minOccurs="0" name="state" type="xs:string" />
+          <xs:element minOccurs="0" name="tickets">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element minOccurs="0" maxOccurs="unbounded" name="ticket" type="tns:ticket" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ticket">
+        <xs:sequence>
+          <xs:element name="ticketno" type="xs:string" />
+          <xs:element name="article" type="xs:string" />
+          <xs:element name="infraction" type="xs:string" />
+          <xs:element name="fine" type="xs:int" />
+          <xs:element name="status" type="xs:string" />
+          <xs:element name="payable" type="xs:boolean" />
+          <xs:element name="inf_date" type="xs:string" />
+          <xs:element minOccurs="0" name="exp_date" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="QueryTicketListResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ticket_list_response" type="tns:ticket_list_response" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ticket_list_response">
+        <xs:sequence>
+          <xs:element name="result_code" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="plate_query" type="tns:plate_query" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="PayTicket">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ticket_payment_request" type="tns:ticket_payment_request" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ticket_payment_request">
+        <xs:sequence>
+          <xs:element name="ticketno" type="xs:string" />
+          <xs:element name="date" type="xs:string" />
+          <xs:element name="amount" type="xs:int" />
+          <xs:element name="ah" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="PayTicketResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ticket_payment_response" type="tns:ticket_payment_response" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ticket_payment_response">
+        <xs:sequence>
+          <xs:element name="result_code" type="xs:int" />
+          <xs:element minOccurs="0" name="transaction_no" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="QueryTicketStatus">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ticket_status_request" type="tns:ticket_status_request" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ticket_status_request">
+        <xs:sequence>
+          <xs:element name="ticketno" type="xs:string" />
+          <xs:element name="date" type="xs:string" />
+          <xs:element name="ah" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="QueryTicketStatusResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ticket_status_response" type="tns:ticket_status_response" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ticket_status_response">
+        <xs:sequence>
+          <xs:element name="result_code" type="xs:int" />
+          <xs:element name="ticketno" type="xs:string" />
+          <xs:element name="article" type="xs:string" />
+          <xs:element name="infraction" type="xs:string" />
+          <xs:element minOccurs="0" name="status" type="xs:string" />
+          <xs:element minOccurs="0" name="plate" type="xs:string" />
+          <xs:element minOccurs="0" name="state" type="xs:string" />
+          <xs:element minOccurs="0" name="inf_date" type="xs:string" />
+          <xs:element minOccurs="0" name="exp_date" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </types>
+  <message name="QueryTicketList">
+    <part name="parameters" element="tns:QueryTicketList" />
+  </message>
+  <message name="QueryTicketListResponse">
+    <part name="parameters" element="tns:QueryTicketListResponse" />
+  </message>
+  <message name="QueryTicketStatus">
+    <part name="parameters" element="tns:QueryTicketStatus" />
+  </message>
+  <message name="QueryTicketStatusResponse">
+    <part name="parameters" element="tns:QueryTicketStatusResponse" />
+  </message>
+  <message name="PayTicket">
+    <part name="parameters" element="tns:PayTicket" />
+  </message>
+  <message name="PayTicketResponse">
+    <part name="parameters" element="tns:PayTicketResponse" />
+  </message>
+  <portType name="PayByPhoneOperation">
+    <operation name="QueryTicketList">
+      <input wsam:Action="http://ws.paybyphone.cc.gti.com/PayByPhoneOperation/QueryTicketListRequest" message="tns:QueryTicketList" />
+      <output wsam:Action="http://ws.paybyphone.cc.gti.com/PayByPhoneOperation/QueryTicketListResponse" message="tns:QueryTicketListResponse" />
+    </operation>
+    <operation name="QueryTicketStatus">
+      <input wsam:Action="http://ws.paybyphone.cc.gti.com/PayByPhoneOperation/QueryTicketStatusRequest" message="tns:QueryTicketStatus" />
+      <output wsam:Action="http://ws.paybyphone.cc.gti.com/PayByPhoneOperation/QueryTicketStatusResponse" message="tns:QueryTicketStatusResponse" />
+    </operation>
+    <operation name="PayTicket">
+      <input wsam:Action="http://ws.paybyphone.cc.gti.com/PayByPhoneOperation/PayTicketRequest" message="tns:PayTicket" />
+      <output wsam:Action="http://ws.paybyphone.cc.gti.com/PayByPhoneOperation/PayTicketResponse" message="tns:PayTicketResponse" />
+    </operation>
+  </portType>
+  <binding name="PayByPhoneOperationPortBinding" type="tns:PayByPhoneOperation">
+    <wsp:PolicyReference URI="#PayByPhoneOperationPortBinding_MTOM_Policy">
+    </wsp:PolicyReference>
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="QueryTicketList">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="QueryTicketStatus">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="PayTicket">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="PayByPhoneOperationService">
+    <port name="PayByPhoneOperationPort" binding="tns:PayByPhoneOperationPortBinding">
+      <soap:address location="http://demo.sales.gtechna.net/officercc-qa-ipark/ws/PayByPhoneOperation" />
+    </port>
+  </service>
+</definitions>

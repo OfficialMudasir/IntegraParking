@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://www.parkaregroup.com/PublisherService/1.0" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.parkaregroup.com/PublisherService/1.0" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://www.parkaregroup.com/PublisherService/1.0/Imports">
+      <xsd:import schemaLocation="https://217.124.242.5/PublisherService/PublisherService.svc?xsd=xsd0" namespace="http://www.parkaregroup.com/PublisherService/1.0" />
+      <xsd:import schemaLocation="https://217.124.242.5/PublisherService/PublisherService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="https://217.124.242.5/PublisherService/PublisherService.svc?xsd=xsd2" namespace="http://www.parkaregroup.com/PublisherService/1.2" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IPublishServiceV10_startSession_InputMessage">
+    <wsdl:part name="parameters" element="tns:startSession" />
+  </wsdl:message>
+  <wsdl:message name="IPublishServiceV10_startSession_OutputMessage">
+    <wsdl:part name="parameters" element="tns:startSessionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPublishServiceV10_endSession_InputMessage">
+    <wsdl:part name="parameters" element="tns:endSession" />
+  </wsdl:message>
+  <wsdl:message name="IPublishServiceV10_endSession_OutputMessage">
+    <wsdl:part name="parameters" element="tns:endSessionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPublishServiceV10_GetHistAvailableSelection_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHistAvailableSelection" />
+  </wsdl:message>
+  <wsdl:message name="IPublishServiceV10_GetHistAvailableSelection_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHistAvailableSelectionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPublishServiceV10_GetHistTransaction_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHistTransaction" />
+  </wsdl:message>
+  <wsdl:message name="IPublishServiceV10_GetHistTransaction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHistTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPublishServiceV10_GetHistDefTransactionType_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHistDefTransactionType" />
+  </wsdl:message>
+  <wsdl:message name="IPublishServiceV10_GetHistDefTransactionType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHistDefTransactionTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPublishServiceV10_GetHistDefTransactionCardType_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHistDefTransactionCardType" />
+  </wsdl:message>
+  <wsdl:message name="IPublishServiceV10_GetHistDefTransactionCardType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHistDefTransactionCardTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPublishServiceV10_GetHistCollection_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHistCollection" />
+  </wsdl:message>
+  <wsdl:message name="IPublishServiceV10_GetHistCollection_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHistCollectionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPublishServiceV10_GetHistDefCollectionCoinType_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHistDefCollectionCoinType" />
+  </wsdl:message>
+  <wsdl:message name="IPublishServiceV10_GetHistDefCollectionCoinType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHistDefCollectionCoinTypeResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IPublishServiceV10">
+    <wsdl:documentation>&lt;summary&gt;
+            Publishing service for Parkare Group Tempo Enterprise
+            &lt;/summary&gt;</wsdl:documentation>
+    <wsdl:operation name="startSession">
+      <wsdl:documentation>&lt;summary&gt;
+            Start session operation (login)
+            &lt;/summary&gt;
+            &lt;param name="userName"&gt;User name&lt;/param&gt;
+            &lt;param name="password"&gt;User plain password&lt;/param&gt;
+            &lt;param name="language"&gt;Localization language in responses (only en, es and fr supported).&lt;/param&gt;
+            &lt;returns&gt;Session object to be supplied on any subsequent communication
+            &lt;see cref="T:AuthLoginResponse" /&gt;
+            &lt;/returns&gt;</wsdl:documentation>
+      <wsdl:input wsaw:Action="http://www.parkaregroup.com/PublisherService/1.0/IAuthService/startSession" message="tns:IPublishServiceV10_startSession_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.parkaregroup.com/PublisherService/1.0/IAuthService/startSessionResponse" message="tns:IPublishServiceV10_startSession_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="endSession">
+      <wsdl:documentation>&lt;summary&gt;
+            End session operation (logout)
+            &lt;/summary&gt;
+            &lt;param name="authSession"&gt;Session object as supplied in the startSession call.
+            &lt;see cref="T:AuthSession" /&gt;
+            &lt;/param&gt;
+            &lt;returns&gt;OK if session successfully ended&lt;/returns&gt;</wsdl:documentation>
+      <wsdl:input wsaw:Action="http://www.parkaregroup.com/PublisherService/1.0/IAuthService/endSession" message="tns:IPublishServiceV10_endSession_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.parkaregroup.com/PublisherService/1.0/IAuthService/endSessionResponse" message="tns:IPublishServiceV10_endSession_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHistAvailableSelection">
+      <wsdl:documentation>&lt;summary&gt;
+             Returns a list with the system, geographical zones, cities and PD machines
+             available, according to the user credentials.
+             &lt;see cref="T:TransactionService.HistAvailableSelection" /&gt;
+             &lt;/summary&gt;
+             &lt;param name="authSession"&gt;Session object as supplied in the startSession call.
+             &lt;see cref="T:Authentication.Contracts.AuthSession" /&gt;
+             &lt;/param&gt;
+             &lt;returns&gt;Returns a list with the system, geographical zones, cities and PD machines
+             &lt;see cref="T:TransactionService.HistAvailableSelectionResponse" /&gt;
+            &lt;/returns&gt;</wsdl:documentation>
+      <wsdl:input wsaw:Action="http://www.parkaregroup.com/PublisherService/1.0/IHistTransactionService/GetHistAvailableSelection" message="tns:IPublishServiceV10_GetHistAvailableSelection_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.parkaregroup.com/PublisherService/1.0/IHistTransactionService/GetHistAvailableSelectionResponse" message="tns:IPublishServiceV10_GetHistAvailableSelection_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHistTransaction">
+      <wsdl:documentation>&lt;summary&gt;
+             Returns a list with the processed transactions according to the provided selection and include criteria
+             &lt;see cref="T:TransactionService.HistTransaction" /&gt;
+             &lt;/summary&gt;
+             &lt;param name="authSession"&gt;Session object as supplied in the startSession call.
+             &lt;see cref="T:Authentication.Contracts.AuthSession" /&gt;
+             &lt;/param&gt;
+             &lt;param name="histSelector"&gt;Selection object delimiting the filtering criteria: dates, geographical zone, city or PD machine
+             &lt;see cref="T:TransactionService.HistTransactionFilter" /&gt;
+             &lt;/param&gt;
+             &lt;param name="histInclude"&gt;Include options: card transaction details (when card transactions present)
+             &lt;/param&gt;
+             &lt;returns&gt;Returns a list with the processed transactions, localized for system, geographical zone, city and PD machine
+             &lt;see cref="T:TransactionService.HistTransactionResponse" /&gt;
+            &lt;/returns&gt;</wsdl:documentation>
+      <wsdl:input wsaw:Action="http://www.parkaregroup.com/PublisherService/1.0/IHistTransactionService/GetHistTransaction" message="tns:IPublishServiceV10_GetHistTransaction_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.parkaregroup.com/PublisherService/1.0/IHistTransactionService/GetHistTransactionResponse" message="tns:IPublishServiceV10_GetHistTransaction_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHistDefTransactionType">
+      <wsdl:documentation>&lt;summary&gt;
+            Returns a list with all the supported transaction types,
+            localized according to the language provided in the startSession call.
+            &lt;see cref="T:HistDef.HistDefTransactionType" /&gt; 
+            &lt;/summary&gt;
+            &lt;param name="authSession"&gt;Session object as supplied in the startSession call.
+            &lt;see cref="T:Authentication.Contracts.AuthSession" /&gt;
+            &lt;/param&gt;
+            &lt;returns&gt;Returns a list with all the supported transaction types
+            &lt;see cref="T:TransactionService.HistDefTransactionTypeResponse" /&gt;
+            &lt;/returns&gt;</wsdl:documentation>
+      <wsdl:input wsaw:Action="http://www.parkaregroup.com/PublisherService/1.0/IHistTransactionService/GetHistDefTransactionType" message="tns:IPublishServiceV10_GetHistDefTransactionType_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.parkaregroup.com/PublisherService/1.0/IHistTransactionService/GetHistDefTransactionTypeResponse" message="tns:IPublishServiceV10_GetHistDefTransactionType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHistDefTransactionCardType">
+      <wsdl:documentation>&lt;summary&gt;
+            Returns a list with all the supported card types (used in transaction operations)
+            &lt;see cref="T:HistDef.HistDefTransactionCardType" /&gt;
+            &lt;/summary&gt;
+            &lt;param name="authSession"&gt;Session object as supplied in the startSession call.
+            &lt;see cref="T:Authentication.Contracts.AuthSession" /&gt;
+            &lt;/param&gt;
+            &lt;returns&gt;Returns a list with all the supported card types (used in transaction operations)
+            &lt;see cref="T:TransactionService.HistDefTransactionCardTypeResponse" /&gt;
+            &lt;/returns&gt;</wsdl:documentation>
+      <wsdl:input wsaw:Action="http://www.parkaregroup.com/PublisherService/1.0/IHistTransactionService/GetHistDefTransactionCardType" message="tns:IPublishServiceV10_GetHistDefTransactionCardType_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.parkaregroup.com/PublisherService/1.0/IHistTransactionService/GetHistDefTransactionCardTypeResponse" message="tns:IPublishServiceV10_GetHistDefTransactionCardType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHistCollection">
+      <wsdl:documentation>&lt;summary&gt;
+             Returns a list of the processed collection according to the provided selection and include criteria
+             &lt;see cref="T:CollectionService.HistCollection" /&gt;
+             &lt;/summary&gt;
+             &lt;param name="authSession"&gt;Session object as supplied in the startSession call.
+             &lt;see cref="T:Authentication.Contracts.AuthSession" /&gt;
+             &lt;/param&gt;
+             &lt;param name="histSelector"&gt;Selection object delimiting the filtering criteria: dates, geographical zone, city or PD machine
+             &lt;see cref="T:CollectionService.HistCollectionFilter" /&gt;
+             &lt;/param&gt;
+             &lt;param name="histInclude"&gt;Include options: transaction, tariff and coin details
+             &lt;see cref="T:HistInclude.HistIncludeCollection" /&gt;
+             &lt;/param&gt;
+             &lt;returns&gt;Returns a list with the processed collection, localized for system, geographical zone, city and PD machine
+             &lt;see cref="T:CollectionService.HistCollectionResponse" /&gt;
+            &lt;/returns&gt;</wsdl:documentation>
+      <wsdl:input wsaw:Action="http://www.parkaregroup.com/PublisherService/1.0/IHistCollectionService/GetHistCollection" message="tns:IPublishServiceV10_GetHistCollection_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.parkaregroup.com/PublisherService/1.0/IHistCollectionService/GetHistCollectionResponse" message="tns:IPublishServiceV10_GetHistCollection_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHistDefCollectionCoinType">
+      <wsdl:documentation>&lt;summary&gt;
+            Returns a list with all the supported coin types (used in collection operations).
+            &lt;see cref="T:HistDef.HistDefCollectionCoinType" /&gt;
+            &lt;seealso cref="T:CollectionService.HistCollection" /&gt;
+            &lt;/summary&gt;
+            &lt;param name="authSession"&gt;Session object as supplied in the startSession call.
+            &lt;see cref="T:Authentication.Contracts.AuthSession" /&gt;
+            &lt;/param&gt;
+            &lt;returns&gt;Returns a list with all the supported coin types (used in collection operations).
+            &lt;see cref="T:CollectionService.HistDefCollectionCoinTypeResponse" /&gt;
+            &lt;/returns&gt;</wsdl:documentation>
+      <wsdl:input wsaw:Action="http://www.parkaregroup.com/PublisherService/1.0/IHistCollectionService/GetHistDefCollectionCoinType" message="tns:IPublishServiceV10_GetHistDefCollectionCoinType_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.parkaregroup.com/PublisherService/1.0/IHistCollectionService/GetHistDefCollectionCoinTypeResponse" message="tns:IPublishServiceV10_GetHistDefCollectionCoinType_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

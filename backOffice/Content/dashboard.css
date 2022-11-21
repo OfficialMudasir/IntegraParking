@@ -1,0 +1,234 @@
+﻿.editor-label {
+    float: left;
+    clear: both;
+    width: 5%;
+    padding: .4em 0 1em;
+    margin-left: 5px;
+    text-align: right;
+}
+
+.editor-field {
+    float: right;
+    clear: right;
+    width: 90%;
+    margin-right: 5px;
+    padding: 0 0 .6em;
+}
+
+.list-dategroups {
+    float: left;
+    width: 25%;        
+}
+
+.div-filters {
+    float: right;
+    width: 75%;
+}
+
+.list-datefilter {
+    float: left;
+    width: 10%;
+}
+
+.div-customdatefilter {
+    float: right;
+    width: 75%;
+}
+
+.editor-label-customdatefilter {
+    float: left;
+    width: 5%;    
+    padding-top: .4em;
+}
+
+.editor-field-customdatefilter {
+    float: right;
+    width: 90%;
+    margin-right: 5px;
+}
+
+.ini-datefilter {
+    float: left;
+    width: 50%;        
+}
+
+.end-datefilter {
+    float: right;
+    width: 50%;
+}
+
+.div-chartcolumns {
+    float: left;
+    width: 100%;
+    height: 95%;
+}
+.div-chartavgs {
+    float: left;
+    width: 100%;
+    height: 95%;
+}
+
+.div-chartoperationscolumns {
+    float: left;
+    width: 75%;
+    height: 95%;
+}
+.div-chartoperationspies {
+    float: right;
+    width: 25%;
+    height: 95%;
+}
+.div-chartoperationsavgs {
+    float: left;
+    width: 75%;
+    height: 95%;
+}
+.div-chartoperationsavgstotals {
+    float: left;
+    width: 25%;
+    height: 95%;
+}
+
+.openum-title-container {
+    width: 20%;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;    
+    vertical-align: middle;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #1083C7;
+    border-right: 30px solid white;
+    border-left: 30px solid white;   
+}
+
+.openum-detail-container {    
+    border-right: 30px solid white;
+    border-left: 30px solid white;
+}
+
+.openum-detail-title-container {    
+    font-size: 10px;
+    font-weight: 700;
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 5px;
+}
+
+.openum-detail-title-container-left {
+    width: 25%;
+}
+.openum-detail-title-container-middle {
+    width: 25%;
+}
+.openum-detail-title-container-right {
+    width: 50%;
+}
+
+.openum-detail-value-container {    
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    vertical-align: middle;
+    padding-right: 5px;
+}
+
+.openum-detail-value-container-left {
+    /*border-left: 10px solid white;*/
+    font-size: 13px;
+}
+.openum-detail-value-container-middle {
+    font-size: 13px;
+}
+.openum-detail-value-container-right {
+    border-right: 15px solid white;
+}
+
+openum-refresh-container {
+    width: 20px;
+}
+
+.openum-chart {
+    height: 50px; 
+    /*padding-left: 5px;*/
+    border-left: 30px solid white;
+}
+
+.higher {
+    color: #639514;
+}
+.higher-container {
+    background: transparent url(img/higher.png) no-repeat 95% 5px;
+}
+.higher-container-small {
+    background: transparent url(img/higherSmall.png) no-repeat 95% 5px;
+}
+
+.lower {
+    color: #cd151e;
+}
+.lower-container {
+    background: transparent url(img/lower.png) no-repeat 95% 5px;
+}
+.lower-container-small {
+    background: transparent url(img/lowerSmall.png) no-repeat 95% 5px;
+}
+
+.noty_buttons {
+    text-align: center !important;
+}
+
+.k-chart div
+{
+   z-index: 1000;
+}
+
+#chartOperationsToday .k-tooltip {
+    top: 20px !important;
+    left: 82px !important;    
+}
+
+#chartOperations .k-tooltip {
+    display: block;
+    top: 20px !important;
+    left: 82px !important;    
+}
+#chartOperationsTotals .k-tooltip {
+    top: 10px !important;
+    left: 10px !important;
+}
+#chartOperationsAvg .k-tooltip {    
+    top: 20px !important;
+    left: 97px !important;    
+}
+#chartOperationsAvgTotals .k-tooltip {    
+    top: 20px !important;
+    left: 97px !important;    
+}
+
+#chartRecharges .k-tooltip {    
+    top: 20px !important;
+    left: 112px !important;    
+}
+#chartRechargesAvg .k-tooltip {
+    top: 20px !important;
+    left: 90px !important;    
+}
+
+#chartInscriptions .k-tooltip {
+    top: 20px !important;
+    left: 80px !important;    
+}
+#chartInscriptionsAvg .k-tooltip {    
+    top: 20px !important;
+    left: 95px !important;    
+}
+
+#chartOperationsUser .k-tooltip {
+    top: 20px !important;
+    left: 82px !important;    
+}
+#chartOperationsUserAll .k-tooltip {
+    top: 20px !important;
+    left: 82px !important;    
+}

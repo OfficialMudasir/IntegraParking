@@ -1,0 +1,19 @@
+
+.form-control {
+  border: 0;
+  border-bottom: 1px solid #ced4da;
+  border-radius: 0;
+  &:hover {
+    border-color: var(--green);
+    cursor: pointer;
+  }
+  &.form-error {
+    border-color: var(--red);
+  }
+}
+
+.error-feedback {
+  color: var(--red);
+  margin-top: .25rem;
+  font-size: .875em;
+}

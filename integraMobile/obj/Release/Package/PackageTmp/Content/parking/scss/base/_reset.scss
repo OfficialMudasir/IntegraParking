@@ -1,0 +1,37 @@
+
+ :root {
+    --blue:       #007bff;
+    --pink:       #e83e8c;
+    --cyan:       #17a2b8;
+    --primary:    #034FC7;
+    --secondary:  #919191;
+    --green:    #05D194;
+    --info:       #38a9e2;
+    --yellow:    #eec21b;
+    --red:     #FF5252;
+    --light:      #f7f7f7;
+    --grey-light: #E2E2E2;
+    --grey-medium:#919191;
+    --grey-dark:  #676767;
+    --dark:       #343434;
+    --font-family-blinkay: "Saira", sans-serif;
+    --font-secondary-blinkay: "Europa", sans-serif;
+  }
+
+/* HTML5 display-role reset for older browsers*/
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+b, strong {
+  font-weight: 500;
+}

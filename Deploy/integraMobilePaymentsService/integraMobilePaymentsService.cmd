@@ -1,0 +1,1 @@
+integraMobilePaymentsService.exe -c

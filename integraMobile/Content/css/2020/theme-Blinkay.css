@@ -1,0 +1,102 @@
+/* Blinkay Theme :: The base theme	*/
+/*	Europa Font	*/
+@import url("https://use.typekit.net/bnx5iml.css");
+
+/* Saira Font & Montserrat (falls) 	*/
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500,700|Saira:400,500,700&display=swap');
+
+/*	Blinkay Variables: */
+:root {
+
+	/* Fonts: */
+
+	--font-stack: 'Saira', sans-serif;
+	--title-stack: 'Europa', 'Montserrat', 'Helvetica', sans-serif;
+
+	/* Blinkay Colors 	*/
+
+
+	--blue: #034fc7;
+	--blue-inactive: #B2CDF8;
+	--indigo: #6610f2;
+	--purple: #6f42c1;
+	--pink: #ff73da;
+	--red: #ff4c5a;
+	--orange: #fd7e14;
+	--yellow: #ffd343;
+	--green: #00D58D;
+	--teal: #67C2A5;
+	--cyan: #39e3ff;
+	--white: #fff;
+	--light: #F7F7F7;
+	--gray-light: #E2E2E2;
+	--gray: #979797;
+	--gray-dark: #676767;
+	--dark: #373737;
+	--black: #070707;
+	--primary: #034fc7;
+	--secondary: #00D58D;
+	--success: #00D58D;
+	--info: #39e3ff;
+	--warning: #ffd343;
+	--danger: #ff4c5a;
+
+	--paypal-cyan: #00B8F0;
+
+
+	/*****************************/
+
+	/* Customer Colors */
+	--cust-primary: #034fc7;
+	--cust-secondary: #00D58D;
+	/*	Gradiant: 	*/
+	--cust-gradient: linear-gradient(120deg, var(--cust-primary), var(--cust-secondary));
+
+
+
+	/* PAGE: */
+	--page-bg: var(--white, #eee);
+	--page-color: var(--dark, white);
+
+	/*	ELEMENTS*/
+	--title-color: var(--cust-primary, #034fc7);
+
+	/*********************************************************
+//////////////////////////////////////////
+************************************************/
+
+	/*	Shadow: 	*/
+
+	--box-shadow: 0px 6px 6px -2px rgba(64, 64, 64, 0.15);
+	--page-shadow: none
+		/*		var(--box-shadow)*/
+	;
+
+	/* 	Border Radius: */
+
+	--form-border-radius: 15px;
+
+	/*	#### 	CREDIT CARDS #### */
+
+	/* 	Credit Cards Ratios: */
+	--card-width: 2.2em;
+
+	/*	Use Visa ? none : inline-block */
+	--display-visa: inline-block;
+
+	/*	Use Mastercard ? none : inline-block */
+	--display-mastercard: inline-block;
+
+	/*	Use Amex ? none : inline-block */
+	--display-amex: inline-block;
+
+	/*	Use PayPal ? none : inline-block */
+	--display-paypal: none;
+
+	/*	Use Stripe ? none : inline-block */
+	--display-stripe: none;
+
+
+
+
+}

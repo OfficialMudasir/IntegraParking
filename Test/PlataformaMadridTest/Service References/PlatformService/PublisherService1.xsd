@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://www.parkaregroup.com/PublisherService/1.1" elementFormDefault="qualified" targetNamespace="http://www.parkaregroup.com/PublisherService/1.1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://217.124.242.5/PublisherService/PublisherService.svc?xsd=xsd0" namespace="http://www.parkaregroup.com/PublisherService/1.0" />
+  <xs:element name="GetInitialValCodeStat">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://www.parkaregroup.com/PublisherService/1.0" minOccurs="0" name="authSession" nillable="true" type="q1:AuthSession" />
+        <xs:element xmlns:q2="http://www.parkaregroup.com/PublisherService/1.0" minOccurs="0" name="Selector" nillable="true" type="q2:EntityFilterBase" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInitialValCodeStatResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetInitialValCodeStatResult" nillable="true" type="tns:ValCodeStatResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ValCodeStatResponse">
+    <xs:annotation>
+      <xs:appinfo />
+      <xs:documentation>&lt;summary&gt;
+            Response to a GetInitialValCodeStat request
+            &lt;see cref="T:ValCodeStat" /&gt;
+            &lt;/summary&gt;</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://www.parkaregroup.com/PublisherService/1.0" base="q3:PublisherResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Result" nillable="true" type="tns:ArrayOfValCodeStat">
+            <xs:annotation>
+              <xs:appinfo />
+              <xs:documentation>&lt;summary&gt;
+            List of all code status to the provided filter requirements
+            &lt;see cref="T:ValCodeStat" /&gt;
+            &lt;list type="ValCodeStat"&gt;&lt;/list&gt;
+            &lt;/summary&gt;</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="Rights" nillable="true" type="tns:ArrayOfValCodeRight">
+            <xs:annotation>
+              <xs:appinfo />
+              <xs:documentation>&lt;summary&gt;
+            List of all special parking rights
+            &lt;see cref="T:ValCodeStat" /&gt;
+            &lt;list type="ValCodeStat"&gt;&lt;/list&gt;
+            &lt;/summary&gt;</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ValCodeStatResponse" nillable="true" type="tns:ValCodeStatResponse" />
+  <xs:complexType name="ArrayOfValCodeStat">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ValCodeStat" nillable="true" type="tns:ValCodeStat" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfValCodeStat" nillable="true" type="tns:ArrayOfValCodeStat" />
+  <xs:complexType name="ValCodeStat">
+    <xs:annotation>
+      <xs:appinfo />
+      <xs:documentation>&lt;summary&gt;
+            Data associated to a single code validation status
+            &lt;seealso cref="T:ValCodeStatResponse" /&gt;
+            &lt;/summary&gt;
+            &lt;summary&gt;
+            Data associated to a single code validation status
+            &lt;seealso cref="T:ValCodeStatResponse" /&gt;
+            &lt;/summary&gt;</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Alias" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="AuthId" nillable="true" type="xs:long">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="CodCity" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            City public identifier associated to the transaction
+            &lt;remarks&gt; Usually a sequence of 2 digits (nn) &lt;/remarks&gt;
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="CodGeoZone" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Geographical zone public identifier associated to the transaction
+            &lt;remarks&gt; Usually a sequence of 2 digits (nn) &lt;/remarks&gt;
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="CodMachine" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+          <xs:documentation>&lt;summary&gt;
+            PD machine public identifier origin of the transaction
+            &lt;remarks&gt; Usually a sequence of 4 digits (nnnn) &lt;/remarks&gt;
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="CodPhyZone" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Physical zone public identifier origin of the transaction
+            &lt;remarks&gt; Usually a sequence of 2 digits (nn) &lt;/remarks&gt;
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="CodSystem" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            System public identifier associated to the transaction
+            &lt;remarks&gt; Usually a sequence of 4 digits (nnnn) &lt;/remarks&gt;
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="IdValCode" nillable="true" type="xs:long">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="LastOperationArrival" nillable="true" type="xs:dateTime">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+          <xs:documentation>&lt;summary&gt;
+            Last operation arrival operation timestamp
+            &lt;remarks&gt; In city local time &lt;/remarks&gt;
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="LastOperationEnd" nillable="true" type="xs:dateTime">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Last operation end
+            &lt;remarks&gt; In city local time &lt;/remarks&gt;
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="LastOperationPaidAmount" nillable="true" type="xs:decimal">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Total money amount spent in the last transaction operation
+            &lt;remarks&gt; Currency unit according to geographic zone currency configuration &lt;/remarks&gt;
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="LastOperationPaidTime" nillable="true" type="xs:long">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+          <xs:documentation>&lt;summary&gt;
+            Total time paid in the last transaction operation 
+            &lt;remarks&gt; In Minutes  &lt;/remarks&gt;
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="LastOperationStart" nillable="true" type="xs:dateTime">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Last operation start
+            &lt;remarks&gt; In city local time &lt;/remarks&gt;
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Tariff" type="xs:int">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Tariff state
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="TicketNum" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="UserCode" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            User Code, usually License plate
+            &lt;remarks&gt; Depens of city way of operation &lt;/remarks&gt; 
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ValCodeStat" nillable="true" type="tns:ValCodeStat" />
+  <xs:complexType name="ArrayOfValCodeRight">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ValCodeRight" nillable="true" type="tns:ValCodeRight" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfValCodeRight" nillable="true" type="tns:ArrayOfValCodeRight" />
+  <xs:complexType name="ValCodeRight">
+    <xs:annotation>
+      <xs:appinfo />
+      <xs:documentation>&lt;summary&gt;
+            Data associated to a single code rights
+            &lt;seealso cref="T:ValCodeStatResponse" /&gt;
+            &lt;/summary&gt;</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="AuthId" type="xs:long">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Authorization Id.
+            &lt;remarks&gt; defined by third party system&lt;/remarks&gt;
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="AuthState" type="xs:int">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Authorization State
+            &lt;remarks&gt; defined by third party system&lt;/remarks&gt;
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="AuthStateDesc" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Authorization State description
+            &lt;remarks&gt; defined by third party system&lt;/remarks&gt;
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="AuthType" type="xs:int">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Authorization type
+            &lt;remarks&gt; defined by third party system&lt;/remarks&gt;
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="AuthTypeDesc" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Authorization type description
+            &lt;remarks&gt; defined by third party system&lt;/remarks&gt;
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="PeriodEnd" nillable="true" type="xs:dateTime">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Right end
+            &lt;remarks&gt; U&lt;/remarks&gt;
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="PeriodStart" nillable="true" type="xs:dateTime">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Right start
+            &lt;remarks&gt;(nn) &lt;/remarks&gt;
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="PhyZoneCode" type="xs:int">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Authoritzation zone
+            &lt;remarks&gt; defined by third party system&lt;/remarks&gt;
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Plate" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Authoritzation plate
+            &lt;remarks&gt; defined by third party system&lt;/remarks&gt;
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="SignUpDate" nillable="true" type="xs:dateTime">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;
+            Sign up date
+            &lt;remarks&gt;  &lt;/remarks&gt;
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ValCodeRight" nillable="true" type="tns:ValCodeRight" />
+  <xs:element name="GetUpdateValCodeStat">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://www.parkaregroup.com/PublisherService/1.0" minOccurs="0" name="authSession" nillable="true" type="q4:AuthSession" />
+        <xs:element xmlns:q5="http://www.parkaregroup.com/PublisherService/1.0" minOccurs="0" name="Selector" nillable="true" type="q5:EntityFilterBase" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUpdateValCodeStatResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetUpdateValCodeStatResult" nillable="true" type="tns:ValCodeStatResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetValCodeHist">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://www.parkaregroup.com/PublisherService/1.0" minOccurs="0" name="authSession" nillable="true" type="q6:AuthSession" />
+        <xs:element xmlns:q7="http://www.parkaregroup.com/PublisherService/1.0" minOccurs="0" name="Selector" nillable="true" type="q7:EntityFilterBase" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetValCodeHistResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetValCodeHistResult" nillable="true" type="tns:ValCodeStatResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPlateValCodeStat">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://www.parkaregroup.com/PublisherService/1.0" minOccurs="0" name="authSession" nillable="true" type="q8:AuthSession" />
+        <xs:element xmlns:q9="http://www.parkaregroup.com/PublisherService/1.0" minOccurs="0" name="Selector" nillable="true" type="q9:EntityFilterBase" />
+        <xs:element minOccurs="0" name="Plate" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPlateValCodeStatResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetPlateValCodeStatResult" nillable="true" type="tns:ValCodeStatResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRightsList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://www.parkaregroup.com/PublisherService/1.0" minOccurs="0" name="authSession" nillable="true" type="q10:AuthSession" />
+        <xs:element xmlns:q11="http://www.parkaregroup.com/PublisherService/1.0" minOccurs="0" name="Selector" nillable="true" type="q11:EntityFilterBase" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRightsListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetRightsListResult" nillable="true" type="tns:ValRightsResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ValRightsResponse">
+    <xs:annotation>
+      <xs:appinfo />
+      <xs:documentation>&lt;summary&gt;
+            Response to a GetInitialValCodeStat request
+            &lt;see cref="T:ValCodeStat" /&gt;
+            &lt;/summary&gt;</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q12="http://www.parkaregroup.com/PublisherService/1.0" base="q12:PublisherResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="result" nillable="true" type="xs:base64Binary">
+            <xs:annotation>
+              <xs:appinfo />
+              <xs:documentation>&lt;summary&gt;
+            Data file with parking 
+            &lt;see cref="T:ValCodeStat" /&gt;
+            &lt;list type="ValCodeStat"&gt;&lt;/list&gt;
+            &lt;/summary&gt;</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ValRightsResponse" nillable="true" type="tns:ValRightsResponse" />
+  <xs:element name="GetRightsListUpdate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://www.parkaregroup.com/PublisherService/1.0" minOccurs="0" name="authSession" nillable="true" type="q13:AuthSession" />
+        <xs:element xmlns:q14="http://www.parkaregroup.com/PublisherService/1.0" minOccurs="0" name="Selector" nillable="true" type="q14:EntityFilterBase" />
+        <xs:element minOccurs="0" name="From" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRightsListUpdateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetRightsListUpdateResult" nillable="true" type="tns:ValRightsResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

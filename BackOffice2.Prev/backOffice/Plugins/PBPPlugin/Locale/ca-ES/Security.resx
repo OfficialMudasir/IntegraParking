@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Feature.BalanceTransfers.Name" xml:space="preserve">
+    <value>Transferències de Saldo</value>
+  </data>
+  <data name="Feature.CurrOperations.Name" xml:space="preserve">
+    <value>Operacions Actuals</value>
+  </data>
+  <data name="Feature.Dashboard.Name" xml:space="preserve">
+    <value>Quadre de Comandament</value>
+  </data>
+  <data name="Feature.EmailTool.Name" xml:space="preserve">
+    <value>Enviament de e-mails</value>
+  </data>
+  <data name="Feature.ExternalOperations.Name" xml:space="preserve">
+    <value>Operacions Externes</value>
+  </data>
+  <data name="Feature.FinantialReports.Bank.Name" xml:space="preserve">
+    <value>Detall Passarel·la</value>
+  </data>
+  <data name="Feature.FinantialReports.Deposits.Name" xml:space="preserve">
+    <value>Resum de Pagaments/Liquidacions</value>
+  </data>
+  <data name="Feature.FinantialReports.GeneralData.Name" xml:space="preserve">
+    <value>Dades Generals</value>
+  </data>
+  <data name="Feature.FinantialReports.GeneralDataInstallation.Name" xml:space="preserve">
+    <value>Dades Generals per Instal·lació</value>
+  </data>
+  <data name="Feature.FinantialReports.LiquidationDetail.Name" xml:space="preserve">
+    <value>Detall Liquidació</value>
+  </data>
+  <data name="Feature.FinantialReports.Name" xml:space="preserve">
+    <value>Informes Financers</value>
+  </data>
+  <data name="Feature.FinantialReports.RegisteredUsers.Name" xml:space="preserve">
+    <value>Usuaris Registrats</value>
+  </data>
+  <data name="Feature.HisOperations.Name" xml:space="preserve">
+    <value>Estacionaments</value>
+  </data>
+  <data name="Feature.HisOperationsRestricted.Name" xml:space="preserve">
+    <value>Estacionaments (Restringit)</value>
+  </data>
+  <data name="Feature.Inscriptions.Name" xml:space="preserve">
+    <value>Altes</value>
+  </data>
+  <data name="Feature.Invoices.Name" xml:space="preserve">
+    <value>Facturació</value>
+  </data>
+  <data name="Feature.Operations.Name" xml:space="preserve">
+    <value>Històric d'Operacions</value>
+  </data>
+  <data name="Feature.OperationsDelete.Name" xml:space="preserve">
+    <value>Eliminar Operacions</value>
+  </data>
+  <data name="Feature.OperationsGroup.Name" xml:space="preserve">
+    <value>Operacions</value>
+  </data>
+  <data name="Feature.OperationsNoRecharges.Name" xml:space="preserve">
+    <value>Operacions (Sense recàrregues)</value>
+  </data>
+  <data name="Feature.Production.Name" xml:space="preserve">
+    <value>Producció</value>
+  </data>
+  <data name="Feature.RechargeCoupons.Name" xml:space="preserve">
+    <value>Vals de Descompte</value>
+  </data>
+  <data name="Feature.Recharges.Name" xml:space="preserve">
+    <value>Recàrregues</value>
+  </data>
+  <data name="Feature.Reports.Name" xml:space="preserve">
+    <value>Informes</value>
+  </data>
+  <data name="Feature.SecurityOperations.Name" xml:space="preserve">
+    <value>Operacions Segures</value>
+  </data>
+  <data name="Feature.TicketPayments.Name" xml:space="preserve">
+    <value>Anul·lacions</value>
+  </data>
+  <data name="Feature.UserFriends.Name" xml:space="preserve">
+    <value>Invitacions</value>
+  </data>
+  <data name="Feature.UserPushIds.Name" xml:space="preserve">
+    <value>Dispositius</value>
+  </data>
+  <data name="Feature.Users.Name" xml:space="preserve">
+    <value>Usuaris</value>
+  </data>
+  <data name="Feature.UsersDisable.Name" xml:space="preserve">
+    <value>Desactivar Usuaris</value>
+  </data>
+  <data name="Feature.UsersGroup.Name" xml:space="preserve">
+    <value>Usuaris</value>
+  </data>
+</root>

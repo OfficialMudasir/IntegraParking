@@ -1,0 +1,127 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Kendo.master.cs" Inherits="kendoTest.Views.Shared.Kendo" %>
+<%@ Import Namespace="System.Globalization" %>
+<%@ Import Namespace="integraMobile.Domain" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title><asp:ContentPlaceHolder ID="TitleContent" runat="server" /></title>
+    <link rel="stylesheet" href="../../Content/CSS/reset1.css" type="text/css">
+    <!--<link rel="stylesheet" href="../../Content/CSS/estilotablas.css" type="text/css">-->
+
+    <link href="<%= Url.Content("~/Content/examples-offline.css") %>" rel="stylesheet" type="text/css" />
+    <link href="<%= Url.Content("~/Content/kendo/kendo.common.min.css") %>" rel="stylesheet" type="text/css" />
+    <link href="<%= Url.Content("~/Content/kendo/kendo.default.min.css") %>" rel="stylesheet" type="text/css" />    
+    <link href="<%= Url.Content("~/Content/kendo/kendo.silver.min.css") %>" rel="stylesheet" type="text/css" />
+    <script src="<%= Url.Content("~/Scripts/kendo/jquery.min.js") %>"></script>
+    <script src="<%= Url.Content("~/Scripts/kendo/kendo.web.min.js") %>"></script>
+    <script src="<%= Url.Content("~/Scripts/kendo/kendo.aspnetmvc.min.js") %>"></script>
+    <script src="<%= Url.Content("~/Scripts/kendoTest/jquery.cookie.js") %>"></script>
+
+    <%
+    var culture = System.Threading.Thread.CurrentThread.CurrentCulture.ToString();
+    %>
+    <script src="<%= Url.Content("~/Scripts/kendo/cultures/kendo.culture." + culture + ".min.js") %>"></script>
+
+    <%-- Set the current culture --%>
+    <script>
+        kendo.culture("<%= culture %>");
+    </script>
+
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server"/>	
+
+    <style>
+
+        #Menu > .k-last {
+            float: right;
+            border-left-width: 1px;
+            border-right-width: 0;
+        }
+
+    </style>
+
+    <script>
+
+        $(document).ready(function () {
+            //var menu = $("#Menu").data("kendoMenu");
+        });
+
+        function kendoMaster_OnMenuSelect(e) {
+            /*var text = $(e.item)
+                .clone()
+                .find("ul")
+                .remove()
+                .end()
+                .text();
+
+            $(e.item).parent().parent().parent().children()[0].innerText = text;*/            
+        }
+
+    </script>
+</head>
+
+<body  >
+    <div id="cuerpo">
+
+    <%
+        var culture = CurrentCultureName();
+        
+        Html.Kendo().Menu()
+          .Name("Menu")          
+          .Items(items =>
+          {
+              /*items.Add()
+                  .Text("Products")
+                  .Items(children =>
+                   {
+                       children.Add().Text("Furniture")
+                               .Items(innerChildren =>
+                               {
+                                   innerChildren.Add().Text("Tables & Chairs");
+                                   innerChildren.Add().Text("Sofas");
+                                   innerChildren.Add().Text("Occasional Furniture");
+                                   innerChildren.Add().Text("Childerns Furniture");
+                                   innerChildren.Add().Text("Beds");
+                               });
+                   });
+            */
+              items.Add()
+                  .Text(Resources.Account_Main_BttnOperations)
+                  .Items(children => 
+                  {
+                        children.Add().Text(Resources.Account_Main_BttnOperations).Action("Operations", "Kendo");
+                        children.Add().Text("OperationsExt").Action("OperationsExt", "Kendo");
+                  });                  
+              items.Add()
+                  .Text("Edit tests")
+                  .Items(children =>
+                   {
+                       children.Add().Text("Users").Action("Users", "Kendo");
+                       children.Add().Text("Countries").Action("Countries", "Kendo");
+                       children.Add().Text("Products").Action("Products", "Kendo");
+                   });                            
+              items.Add().Text("LogOff").Action("LogOff", "Home");
+              items.Add().Text("News").Enabled(false);
+              items.Add()                  
+                  .Text(culture)
+                  .Items(children =>
+                  {
+                      children.Add().Text("English").Action("ChangeCulture", "Home", new { lang = "en-US", returnUrl = this.Request.RawUrl });
+                      children.Add().Text("Español").Action("ChangeCulture", "Home", new { lang = "es-ES", returnUrl = this.Request.RawUrl });
+                  });
+          })
+          .Events(ev =>
+          {
+              ev.Select("kendoMaster_OnMenuSelect");
+          })
+          .Render();
+        %>
+	
+	    <div id="centro" class="centro">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+        </div>
+	
+    </div>
+</body>
+</html>  

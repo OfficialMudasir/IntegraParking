@@ -1,0 +1,48 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="integraMobile.ExternalWS.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="integraMobile_ExternalWS_EysaThirdPartyConfirmParkWS_Ticket" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://esixvyewb01t/parquimetrosWSVS2012/framework/ticket.asmx</Value>
+    </Setting>
+    <Setting Name="integraMobile_ExternalWS_EysaThirdPartyFineWS_Anulaciones" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://esdcvyewb02p/parquimetrosWS/framework/anulaciones.asmx</Value>
+    </Setting>
+    <Setting Name="integraMobile_ExternalWS_gTechnaThirdPartyFineWS_PayByPhoneOperationService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://demo.sales.gtechna.net/officercc-qa-ipark/ws/PayByPhoneOperation</Value>
+    </Setting>
+    <Setting Name="integraMobile_ExternalWS_gTechnaThirdPartyParkingConfirmWS_MESParkingRightsSOAPFacadeService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://192.168.3.91:8080/officercc-spaq/services/ParkingRightsListener</Value>
+    </Setting>
+    <Setting Name="integraMobile_ExternalWS_EysaThirdPartyParkWS_Tarifas" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://eysaIP.eysanet.com/parquimetrosWS/framework/tarifas.asmx</Value>
+    </Setting>
+    <Setting Name="integraMobile_ExternalWS_MeyparThirdPartyOffstreetWS_InterfazPublicaWebService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://80.28.251.76:2424/InterfazPublicaWS/InterfazPublicaWebService.asmx</Value>
+    </Setting>
+    <Setting Name="integraMobile_ExternalWS_PagateliaWS_ApiPayment" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://www.pagatelia.com/apipayments/ApiPayment.svc</Value>
+    </Setting>
+    <Setting Name="integraMobile_ExternalWS_SantBoiThirdPartyFineWS_server" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://212.36.64.88:82/zb_new/ws_anulaciones.php</Value>
+    </Setting>
+    <Setting Name="integraMobile_ExternalWS_ValorizaWS_Service1" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://mp.sacyr.com:8099/PagoxMovil/PagoPorMovil.asmx</Value>
+    </Setting>
+    <Setting Name="integraMobile_ExternalWS_MifasWS_anulaciones" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://www.gesblue.com/app/v2/webservice_anulaciones.php</Value>
+    </Setting>
+    <Setting Name="integraMobile_ExternalWS_integraMobileWS_integraMobileWS" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://ws.iparkme.com/Dev/integraMobileWS/integraMobileWS.asmx</Value>
+    </Setting>
+    <Setting Name="integraMobile_ExternalWS_PIC_WS_PIC_WS" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost/TariffComputer.WS/PIC_WS.asmx</Value>
+    </Setting>
+    <Setting Name="integraMobile_ExternalWS_StandardParkingWS_TariffComputerWS" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost/TariffComputer.WS/TariffComputer.asmx</Value>
+    </Setting>
+    <Setting Name="integraMobile_ExternalWS_BilbaoParkWsIntegraExternalService_integraExternalServices" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://ws-eur.iparkme.com/dev/bilbaoparkws/integraExternalServices.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

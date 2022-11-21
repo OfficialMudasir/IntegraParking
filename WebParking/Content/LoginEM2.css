@@ -1,0 +1,282 @@
+﻿/********************************************
+    LOGIN CSS
+*********************************************/
+
+
+
+header#login
+{
+    background-color:#009d88;
+    background-image: url('EysaMobv2/btn-shadow.png');
+    background-position: center center;
+    background-size: 100% 100%;
+
+    padding: 1.5em;
+
+
+
+    /*reset from Site.css*/
+    display: block;
+    font-size: inherit;
+    margin: 0px;
+    text-align: center;
+
+    min-height: 300px;
+    /* overflow: hidden; */
+
+}
+
+
+
+header#login img#appicon
+{
+    width: auto;
+    height: auto;
+}
+
+header#login h2
+{
+    margin:0px;
+}
+
+
+
+.login-container 
+{
+   /* margin: 10em 1.2em 0px 1.2em;*/
+
+   font-size:inherit;
+
+
+   margin: 0px;
+   margin-top: 180px;
+
+   padding: 0.5em;
+   
+   min-height:100%;
+   overflow:auto;
+}
+
+.login-label
+{
+
+}
+.login-label label
+{
+    font-size: inherit;
+    font-weight:normal;
+    color: #fafafa;
+    display:none;
+}
+
+.login-field 
+{
+
+}
+
+
+
+.login-field input,
+.login-field input:hover,
+.login-field .k-textbox,
+.login-field .k-textbox:hover,
+
+.k-header, 
+.k-dropdown .k-state-default,
+.k-dropdown .k-state-focused,
+.k-dropdown .k-state-hover,
+.k-dropdown:focus,
+.k-dropdown:hover
+{
+    background: #333 url('EysaMobv2/btn-shadow.png') no-repeat border-box;
+    background-size: 100% 100%;
+    color: #fafafa;
+    border-color: #24262b;
+
+
+
+
+    
+}
+
+.k-dropdown .k-input,
+.k-header .k-input, 
+.k-dropdown .k-state-default .k-input,
+.k-dropdown .k-state-focused .k-input,
+.k-dropdown .k-state-hover .k-input
+{
+    color: #fafafa;
+    background:none;
+
+}
+
+ .k-list 
+{
+    font-size: inherit;
+}
+
+div#CityId-list
+{
+    height: 12em !important;
+}
+
+
+
+span.k-select
+{
+    background: transparent url('EysaMobv2/darrow-ico.svg') no-repeat 50% 50%;
+    background-size: 100%;
+
+}
+span.k-icon.k-i-arrow-s {
+    display: none;
+}
+
+.login-submit
+{
+
+}
+
+
+/*
+
+.login-submit button,
+.k-button-login,
+.k-button-login:hover,
+.k-button-login:focus
+{
+
+    background-color:#26af5f;
+    background-image: url('EysaMobv2/btn-shadow.png');
+    background-position: center center;
+    background-size: 100% 100%;
+
+    color:#fafafa;
+
+    width: 100%;
+}
+
+
+.k-button:active:hover, .k-button.k-state-active:hover
+{
+    background-color: #4aba70;
+
+}
+
+
+*/
+
+
+button.k-button[type=submit]
+{
+    margin: 0px;
+    padding: 0.5em;
+    width: 100%;
+    background: #4aba70 url('EysaMobv2/btn-shadow.png') no-repeat 50% 50%;
+    background-size: 100% 100%;
+    border-color: #4b8056;
+    color: #fafafa;
+    font-weight: normal;
+    text-transform: uppercase;
+
+    /*icon position*/
+    position: relative;
+}
+
+button.k-button[type=submit]:hover,
+button.k-button[type=submit]:focus,
+button.k-button[type=submit]:active
+{
+    background: #26af5f url('EysaMobv2/btn-shadow.png') no-repeat 50% 50%;
+    background-size: 100% 100%;
+
+    color:inherit;
+
+}
+
+button.k-button[type=submit] .k-icon 
+{
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 75%;
+    width: auto;
+    height: inherit;
+    background: transparent url('EysaMobv2/ico_done.svg') no-repeat 0% 50%;
+    background-size: auto 100%;
+}
+
+.login-errors
+{
+ 
+    float: right;
+    clear:both;
+
+}
+
+.validation-summary-errors {
+    background: #e34e42 url('EysaMobv2/btn-shadow.png') no-repeat 50% 50%;
+    background-size: 100% 100%;
+    color: #fafafa;
+    font-weight: normal;
+    font-size: 0.8em;
+}
+
+.validation-summary-errors ul {
+    margin: 0px;
+    padding: 0.2em 0.5em;
+    list-style-position: inside;
+}
+
+.login-field .k-textbox,
+ .login-field .k-dropdown,
+.login-field input
+ {
+ width: 100%;
+ display: block;
+ margin: 0.5em auto;
+
+}
+
+.login-container  ul.k-list li
+{}
+
+
+
+footer nav
+{
+    display:none !important;
+}
+
+footer h1.credits
+{
+    display:block;
+}
+
+
+/********************************
+    MEDIA QUERIES
+*************************************/
+
+
+@media only screen 
+  and (orientation: landscape) {
+
+    header#login
+    {
+        height:auto;
+        margin:auto;
+        min-height:inherit;
+        max-height:inherit;
+    }
+    header#login > *
+    {
+        display: inline-block;
+        vertical-align: middle;
+       padding:initial;
+       width: auto;
+    }
+
+
+}

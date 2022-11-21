@@ -1,0 +1,132 @@
+/* Blinkay Theme :: The base theme	*/
+/*	Europa Font	*/
+@import url("https://use.typekit.net/bnx5iml.css");
+
+/* Saira Font & Montserrat (falls) 	*/
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500,700|Saira:400,500,700&display=swap');
+
+/*	Blinkay Variables: */
+:root {
+
+	/* Fonts: */
+
+	--font-stack: 'Saira', sans-serif;
+	--title-stack: 'Europa', 'Montserrat', 'Helvetica', sans-serif;
+
+	/* Blinkay Colors 	*/
+
+
+	--blue: #034fc7;
+	--blue-inactive: #B2CDF8;
+	--indigo: #6610f2;
+	--purple: #6f42c1;
+	--pink: #ff73da;
+	--red: #ff4c5a;
+	--orange: #fd7e14;
+	--yellow: #ffd343;
+	--green: #00D58D;
+	--teal: #67C2A5;
+	--cyan: #39e3ff;
+	--white: #fff;
+	--gray: #E2E2E2;
+	--gray-dark: #979797;
+	--primary: #034fc7;
+	--secondary: #00D58D;
+	--success: #00D58D;
+	--info: #39e3ff;
+	--warning: #ffd343;
+	--danger: #ff4c5a;
+	--light: #F7F7F7;
+	--dark: #373737;
+
+	--paypal-cyan: #00B8F0;
+
+
+	/************************/
+	/*	SPARK: 				*/
+	/*	http://spark-p.ca 	*/
+
+	/* Customer Colors */
+	--cust-primary: #000000;
+	--cust-secondary: #ea561e;
+	/*	Gradiant: 	*/
+	--cust-gradient: linear-gradient(120deg, var(--cust-primary), var(--cust-secondary));
+
+
+
+	/* PAGE: */
+	--background-color: var(--cust-primary, #eee);
+	--background-image:
+		none
+		/*		var(--cust-gradient)*/
+		/*		url('../img/client-bg.jpg')*/
+		/*		url("../img/Office-Ottawa.jpeg");*/
+	;
+
+
+
+	/*	Shadow: 	*/
+
+	--box-shadow: 0px 6px 6px -2px rgba(64, 64, 64, 0.15);
+	--page-shadow: none
+		/*		var(--box-shadow)*/
+	;
+
+	/* 	Border Radius: */
+
+	--form-border-radius: 0px;
+
+	/*	#### 	CREDIT CARDS #### */
+
+	/* 	Credit Cards Ratios: */
+	--card-width: 2.5em;
+
+	/*	Use Visa ? none : inline-block */
+	--display-visa: inline-block;
+
+	/*	Use Mastercard ? none : inline-block */
+	--display-mastercard: inline-block;
+
+	/*	Use PayPal ? none : inline-block */
+	--display-paypal: inline-block;
+
+	/*	Use Stripe ? none : inline-block */
+	--display-stripe: inline-block;
+
+
+	/* HEADER: */
+	--header-height: 100px;
+	--header-bgcolor: var(--cust-primary, var(--green));
+	--header-color: var(--light);
+
+	--logo-path: url('../../img/2020/client-logo-Spark.png');
+	--logo-width: 200px;
+
+	--badge-city-bgcolor: var(--cust-secondary);
+	--badge-city-color: var(--light);
+	--badge-city-display: inline-block;
+	/* def: inline-block */
+
+	--language-bgcolor: var(--cust-secondary);
+	--language-color: var(--light);
+	--language-border-radius: 20px;
+
+	/* PAGE CONTENT */
+	--page-bgcolor: var(--white);
+	--title-color: var(--cust-primary);
+
+
+	/*	FORM: */
+	--form-bgcolor: var(--white);
+	--form-radius: 0px 0px 20px 20px;
+	--step-color: var(--cust-primary);
+
+
+	/**	FOOTER: **/
+	--footer-bgcolor: var(--cust-primary);
+	--footer-color: var(--white);
+	--foorer-link: var(--cust-secondary);
+
+}
+
+/* END root: */

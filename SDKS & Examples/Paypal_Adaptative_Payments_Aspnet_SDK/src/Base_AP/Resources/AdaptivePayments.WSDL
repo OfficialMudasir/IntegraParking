@@ -1,0 +1,2141 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:types="http://svcs.paypal.com/types/ap" xmlns:common="http://svcs.paypal.com/types/common" xmlns:services="http://svcs.paypal.com/services" xmlns:ns="http://svcs.paypal.com/services" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" ns:version="1.7.0" targetNamespace="http://svcs.paypal.com/services">
+
+	<wsdl:types>
+		<xs:schema xmlns:annox="http://annox.dev.java.net" xmlns:ov="http://annox.dev.java.net/net.sf.oval.constraint" xmlns:sec="http://annox.dev.java.net/com.paypal.foundation.security.annotation" xmlns:ppv="http://annox.dev.java.net/com.paypal.foundation.validation.oval" xmlns:ppc="http://annox.dev.java.net/com.paypal.foundation.validation.oval.constraint" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://svcs.paypal.com/types/common">
+
+			<xs:complexType name="AccountIdentifier">
+				
+				<xs:sequence>
+					<xs:element name="email" type="xs:string" minOccurs="0" maxOccurs="1">
+						
+					</xs:element>
+					<xs:element name="phone" type="common:PhoneNumberType" minOccurs="0" maxOccurs="1">
+						
+					</xs:element>
+					<xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+				</xs:sequence>
+			</xs:complexType>
+
+			<xs:simpleType name="AckCode">
+				<xs:annotation>
+					<xs:documentation>
+						AckCodeType This code identifies the
+						acknowledgment code types that could be used to
+						communicate the status of processing a (request)
+						message to an application. This code would be
+						used as part of a response message that contains
+						an application level acknowledgment element.
+					</xs:documentation>
+				</xs:annotation>
+				<xs:restriction base="xs:token">
+					<xs:enumeration value="Success">
+						<xs:annotation>
+							<xs:documentation>
+								Request processing succeeded.
+							</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="Failure">
+						<xs:annotation>
+							<xs:documentation>
+								Request processing failed.
+							</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="Warning">
+						<xs:annotation>
+							<xs:documentation>
+								Request processing completed with
+								warning information being included in
+								the response message.
+							</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="SuccessWithWarning">
+						<xs:annotation>
+							<xs:documentation>
+								Request processing completed successful
+								with some with some warning information
+								that could be useful for the requesting
+								application to process and/or record.
+							</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="FailureWithWarning">
+						<xs:annotation>
+							<xs:documentation>
+								Request processing failed with some
+								error and warning information that
+								requesting application should process to
+								determine cause(s) of failure.
+							</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+				</xs:restriction>
+			</xs:simpleType>
+
+			<xs:complexType name="BaseAddress">
+				<xs:sequence maxOccurs="1" minOccurs="1">
+					<xs:element name="line1" type="xs:string" maxOccurs="1" minOccurs="1"/>
+					<xs:element name="line2" type="xs:string" maxOccurs="1" minOccurs="0"/>
+					<xs:element name="city" type="xs:string" maxOccurs="1" minOccurs="1"/>
+					<xs:element name="state" type="xs:string" maxOccurs="1" minOccurs="0"/>
+					<xs:element name="postalCode" type="xs:string" maxOccurs="1" minOccurs="0"/>
+					<xs:element name="countryCode" type="xs:string" maxOccurs="1" minOccurs="1"/>
+					<xs:element name="type" type="xs:string" minOccurs="0" maxOccurs="1"/>
+					<xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+				</xs:sequence>
+			</xs:complexType>
+
+			<xs:complexType name="ClientDetailsType">
+				<xs:annotation>
+					<xs:documentation>
+						Details about the end user of the application
+						invoking this service.
+					</xs:documentation>
+				</xs:annotation>
+				<xs:sequence>
+					<xs:element minOccurs="0" maxOccurs="1" name="ipAddress" type="xs:string"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="deviceId" type="xs:string"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="applicationId" type="xs:string"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="model" type="xs:string"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="geoLocation" type="xs:string"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="customerType" type="xs:string"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="partnerName" type="xs:string"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="customerId" type="xs:string"/>
+					<xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+				</xs:sequence>
+			</xs:complexType>
+
+			<xs:complexType name="CurrencyType">
+				<xs:sequence>
+					<xs:element minOccurs="1" maxOccurs="1" name="code" type="xs:string"/>
+					<xs:element minOccurs="1" maxOccurs="1" name="amount" type="xs:decimal"/>
+				</xs:sequence>
+			</xs:complexType>
+
+			<xs:simpleType name="DayOfWeek">
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="NO_DAY_SPECIFIED"/>
+					<xs:enumeration value="SUNDAY"/>
+					<xs:enumeration value="MONDAY"/>
+					<xs:enumeration value="TUESDAY"/>
+					<xs:enumeration value="WEDNESDAY"/>
+					<xs:enumeration value="THURSDAY"/>
+					<xs:enumeration value="FRIDAY"/>
+					<xs:enumeration value="SATURDAY"/>
+				</xs:restriction>
+			</xs:simpleType>
+
+			<xs:simpleType name="DetailLevelCode">
+				<xs:annotation>
+					<xs:documentation>
+						DetailLevelCodeType
+					</xs:documentation>
+				</xs:annotation>
+				<xs:restriction base="xs:token">
+					<xs:enumeration value="ReturnAll">
+						<xs:annotation>
+							<xs:documentation>
+								Return in response message all detail
+								levels.
+							</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+				</xs:restriction>
+			</xs:simpleType>
+
+			<xs:simpleType name="ErrorCategory">
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="System"/>
+					<xs:enumeration value="Application"/>
+					<xs:enumeration value="Request"/>
+				</xs:restriction>
+			</xs:simpleType>
+
+			<xs:complexType name="ErrorData">
+				<xs:annotation>
+					<xs:documentation>
+						This type contains the detailed error
+						information resulting from the service
+						operation.
+					</xs:documentation>
+				</xs:annotation>
+				<xs:sequence>
+					<xs:element name="errorId" type="xs:long"/>
+					<xs:element name="domain" type="xs:string"/>
+					<xs:element minOccurs="0" name="subdomain" type="xs:string"/>
+					<xs:element name="severity" type="common:ErrorSeverity"/>
+					<xs:element name="category" type="common:ErrorCategory"/>
+					<xs:element name="message" type="xs:string"/>
+					<xs:element minOccurs="0" name="exceptionId" type="xs:token"/>
+					<xs:element maxOccurs="unbounded" minOccurs="0" name="parameter" nillable="true" type="common:ErrorParameter"/>
+				</xs:sequence>
+			</xs:complexType>
+
+			<xs:complexType name="ErrorParameter">
+				<xs:simpleContent>
+					<xs:extension base="xs:string">
+						<xs:attribute name="name" type="xs:string"/>
+					</xs:extension>
+				</xs:simpleContent>
+			</xs:complexType>
+
+			<xs:simpleType name="ErrorSeverity">
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="Error"/>
+					<xs:enumeration value="Warning"/>
+				</xs:restriction>
+			</xs:simpleType>
+
+			<xs:complexType name="FaultMessage">
+				<xs:annotation>
+					<xs:documentation>
+						This specifies a fault, encapsulating error
+						data, with specific error codes.
+					</xs:documentation>
+				</xs:annotation>
+				<xs:sequence>
+					<xs:element minOccurs="1" name="responseEnvelope" type="common:ResponseEnvelope"/>
+					<xs:element maxOccurs="unbounded" minOccurs="0" name="error" nillable="true" type="common:ErrorData"/>
+				</xs:sequence>
+			</xs:complexType>
+
+			<xs:complexType name="PhoneNumberType">
+				<xs:sequence maxOccurs="1" minOccurs="1">
+					<xs:element minOccurs="1" maxOccurs="1" name="countryCode" type="xs:string">
+						
+					</xs:element>
+					<xs:element minOccurs="1" maxOccurs="1" name="phoneNumber" type="xs:string">
+						
+					</xs:element>
+					<xs:element minOccurs="0" maxOccurs="1" name="extension" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+
+			<xs:complexType name="RequestEnvelope">
+				<xs:annotation>
+					<xs:documentation>
+						This specifies the list of parameters with every
+						request to the service.
+					</xs:documentation>
+				</xs:annotation>
+				<xs:sequence>
+					<xs:element name="detailLevel" type="common:DetailLevelCode" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>
+								This specifies the required detail level
+								that is needed by a client application
+								pertaining to a particular data
+								component (e.g., Item, Transaction,
+								etc.). The detail level is specified in
+								the DetailLevelCodeType which has all
+								the enumerated values of the detail
+								level for each component.
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="errorLanguage" type="xs:string" minOccurs="1" default="en_US">
+						<xs:annotation>
+							<xs:documentation>
+								This should be the standard RFC 3066
+								language identification tag, e.g.,
+								en_US.
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+				</xs:sequence>
+			</xs:complexType>
+
+			<xs:complexType name="ResponseEnvelope">
+				<xs:annotation>
+					<xs:documentation>
+						This specifies a list of parameters with every
+						response from a service.
+					</xs:documentation>
+				</xs:annotation>
+				<xs:sequence>
+					<xs:element minOccurs="1" maxOccurs="1" name="timestamp" type="xs:dateTime"/>
+					<xs:element name="ack" minOccurs="1" type="common:AckCode">
+						<xs:annotation>
+							<xs:documentation>
+								Application level acknowledgment code.
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element minOccurs="1" maxOccurs="1" name="correlationId" type="xs:string"/>
+					<xs:element minOccurs="1" maxOccurs="1" name="build" type="xs:string"/>
+					<xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+				</xs:sequence>
+			</xs:complexType>
+
+			<xs:element name="FaultMessage" nillable="true" type="common:FaultMessage"/>
+
+		</xs:schema>
+
+		<xs:schema xmlns:ap="http://svcs.paypal.com/types/ap" xmlns:jaxb="http://java.sun.com/xml/ns/jaxb" xmlns:annox="http://annox.dev.java.net" xmlns:ov="http://annox.dev.java.net/net.sf.oval.constraint" xmlns:sec="http://annox.dev.java.net/com.paypal.foundation.security.annotation" xmlns:ppm="http://annox.dev.java.net/com.paypal.foundation.logging" xmlns:ppv="http://annox.dev.java.net/com.paypal.foundation.validation.oval" xmlns:ppvc="http://annox.dev.java.net/com.paypal.foundation.validation.oval.constraint" attributeFormDefault="unqualified" elementFormDefault="unqualified" jaxb:version="2.1" targetNamespace="http://svcs.paypal.com/types/ap">
+
+			<xs:import namespace="http://svcs.paypal.com/types/common"/>
+
+			<!-- ###################################################### -->
+			<!-- Shared payments related types definition, alphabetized -->
+			<!-- ###################################################### -->
+
+			<xs:complexType name="Address">
+				
+				<xs:sequence>
+					<xs:element name="addresseeName" type="xs:string" maxOccurs="1" minOccurs="0">
+						
+					</xs:element>
+					<xs:element name="baseAddress" type="common:BaseAddress" maxOccurs="1" minOccurs="1">
+						
+					</xs:element>
+					<xs:element name="addressId" type="xs:string" minOccurs="0" maxOccurs="1">
+						
+					</xs:element>
+					<xs:any maxOccurs="unbounded" minOccurs="0" processContents="lax" namespace="##other"/>
+				</xs:sequence>
+			</xs:complexType>
+
+			<xs:complexType name="AddressList">
+				
+				<xs:sequence>
+					<xs:element name="address" type="ap:Address" maxOccurs="unbounded" minOccurs="1">
+						
+					</xs:element>
+				</xs:sequence>
+			</xs:complexType>
+
+
+			<xs:complexType name="CurrencyCodeList">
+				<xs:annotation>
+					<xs:documentation>
+						A list of ISO currency codes.
+					</xs:documentation>
+					
+				</xs:annotation>
+				<xs:sequence>
+					<xs:element minOccurs="1" maxOccurs="unbounded" name="currencyCode" type="xs:string">
+						
+					</xs:element>
+				</xs:sequence>
+			</xs:complexType>
+
+			<xs:complexType name="CurrencyConversionList">
+				<xs:annotation>
+					<xs:documentation>
+						A list of estimated currency conversions for a
+						base currency.
+					</xs:documentation>
+					
+				</xs:annotation>
+				<xs:sequence>
+					<xs:element minOccurs="1" maxOccurs="1" name="baseAmount" type="common:CurrencyType">
+						
+					</xs:element>
+					<xs:element minOccurs="1" maxOccurs="1" name="currencyList" type="ap:CurrencyList">
+						
+					</xs:element>
+				</xs:sequence>
+			</xs:complexType>
+
+			<xs:complexType name="CurrencyConversionTable">
+				<xs:annotation>
+					<xs:documentation>
+						A table that contains a list of estimated
+						currency conversions for a base currency in each
+						row.
+					</xs:documentation>
+					
+				</xs:annotation>
+				<xs:sequence>
+					<xs:element minOccurs="1" maxOccurs="unbounded" name="currencyConversionList" type="ap:CurrencyConversionList">
+						
+					</xs:element>
+				</xs:sequence>
+			</xs:complexType>
+
+			<xs:complexType name="CurrencyList">
+				<xs:annotation>
+					<xs:documentation>
+						A list of ISO currencies.
+					</xs:documentation>
+					
+				</xs:annotation>
+				<xs:sequence>
+					<xs:element minOccurs="1" maxOccurs="unbounded" name="currency" type="common:CurrencyType">
+						
+					</xs:element>
+				</xs:sequence>
+			</xs:complexType>
+
+			<xs:complexType name="DisplayOptions">
+				<xs:annotation>
+					<xs:documentation>
+						Customizable options that a client application
+						can specify for display purposes.
+					</xs:documentation>
+					
+				</xs:annotation>
+				<xs:sequence>
+					<xs:element name="emailHeaderImageUrl" type="xs:string" maxOccurs="1" minOccurs="0">
+						
+					</xs:element>
+					<xs:element name="emailMarketingImageUrl" type="xs:string" maxOccurs="1" minOccurs="0">
+						
+					</xs:element>
+					<xs:element name="headerImageUrl" type="xs:string" maxOccurs="1" minOccurs="0">
+						
+					</xs:element>
+					<xs:element name="businessName" type="xs:string" maxOccurs="1" minOccurs="0">
+						
+					</xs:element>
+					<xs:any maxOccurs="unbounded" minOccurs="0" processContents="lax" namespace="##other"/>
+				</xs:sequence>
+			</xs:complexType>
+
+			<xs:complexType name="ErrorList">
+				
+				<xs:sequence>
+					<xs:element maxOccurs="unbounded" minOccurs="1" name="error" type="common:ErrorData">
+						
+					</xs:element>
+				</xs:sequence>
+			</xs:complexType>
+
+			<xs:complexType name="FundingConstraint">
+				
+				<xs:sequence>
+					<xs:element minOccurs="0" maxOccurs="1" name="allowedFundingType" type="ap:FundingTypeList">
+						
+					</xs:element>
+				</xs:sequence>
+			</xs:complexType>
+
+			<xs:complexType name="FundingTypeInfo">
+				<xs:annotation>
+					<xs:documentation>
+						FundingTypeInfo represents one allowed funding
+						type.
+					</xs:documentation>
+				</xs:annotation>
+				<xs:sequence>
+					<xs:element minOccurs="1" maxOccurs="1" name="fundingType" type="xs:string">
+						
+					</xs:element>
+					<xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+				</xs:sequence>
+			</xs:complexType>
+
+			<xs:complexType name="FundingTypeList">
+				
+				<xs:sequence>
+					<xs:element maxOccurs="unbounded" minOccurs="1" name="fundingTypeInfo" type="ap:FundingTypeInfo">
+						
+					</xs:element>
+				</xs:sequence>
+			</xs:complexType>
+
+			<xs:complexType name="CurrencyConversion">
+				<xs:annotation>
+					<xs:documentation>
+						Describes the conversion between 2 currencies.
+					</xs:documentation>
+					
+				</xs:annotation>
+				<xs:sequence>
+					<xs:element name="from" type="common:CurrencyType" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="to" type="common:CurrencyType" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="exchangeRate" type="xs:decimal" minOccurs="1" maxOccurs="1"/>
+					<xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+				</xs:sequence>
+			</xs:complexType>
+
+			<xs:complexType name="FundingSource">
+				<xs:annotation>
+					<xs:documentation>
+						Funding source information.
+					</xs:documentation>
+					
+				</xs:annotation>
+				<xs:sequence>
+					<xs:element name="lastFourOfAccountNumber" type="xs:string" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="type" type="xs:string" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="displayName" type="xs:string" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="fundingSourceId" type="xs:string" minOccurs="0" maxOccurs="1">
+						
+					</xs:element>
+					<xs:element name="allowed" type="xs:boolean" minOccurs="0" maxOccurs="1"/>
+
+					<xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+				</xs:sequence>
+			</xs:complexType>
+
+			<xs:complexType name="FundingPlanCharge">
+				<xs:annotation>
+					<xs:documentation>
+						Amount to be charged to a particular funding
+						source.
+					</xs:documentation>
+					
+				</xs:annotation>
+				<xs:sequence>
+					<xs:element name="charge" type="common:CurrencyType" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="fundingSource" type="ap:FundingSource" minOccurs="1" maxOccurs="1"/>
+					<xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+				</xs:sequence>
+			</xs:complexType>
+
+			<xs:complexType name="FundingPlan">
+				<xs:annotation>
+					<xs:documentation>
+						FundingPlan describes the funding sources to be
+						used for a specific payment.
+					</xs:documentation>
+					
+				</xs:annotation>
+				<xs:sequence>
+					<xs:element name="fundingPlanId" type="xs:string" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="fundingAmount" type="common:CurrencyType" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="backupFundingSource" type="ap:FundingSource" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="senderFees" type="common:CurrencyType" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="currencyConversion" type="ap:CurrencyConversion" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="charge" type="ap:FundingPlanCharge" minOccurs="1" maxOccurs="unbounded"/>
+					<xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+				</xs:sequence>
+			</xs:complexType>
+
+			<xs:complexType name="InitiatingEntity">
+				<xs:annotation>
+					<xs:documentation>
+						Details about the party that initiated this
+						payment. The API user is making this payment on
+						behalf of the initiator. The initiator can
+						simply be an institution or a customer of the
+						institution.
+					</xs:documentation>
+					
+				</xs:annotation>
+				<xs:sequence>
+					<xs:element maxOccurs="1" minOccurs="0" name="institutionCustomer" type="ap:InstitutionCustomer">
+						
+					</xs:element>
+					<xs:any maxOccurs="unbounded" minOccurs="0" processContents="lax" namespace="##other"/>
+				</xs:sequence>
+			</xs:complexType>
+
+			<xs:complexType name="InstitutionCustomer">
+				<xs:annotation>
+					<xs:documentation>
+						The customer of the initiating institution
+					</xs:documentation>
+					
+				</xs:annotation>
+				<xs:sequence>
+					<xs:element maxOccurs="1" minOccurs="1" name="institutionId" type="xs:string">
+						<xs:annotation>
+							<xs:documentation>
+								The unique identifier as assigned to the
+								institution.
+							</xs:documentation>
+							
+						</xs:annotation>
+					</xs:element>
+					<xs:element maxOccurs="1" minOccurs="1" name="firstName" type="xs:string">
+						<xs:annotation>
+							<xs:documentation>
+								The first (given) name of the end
+								consumer as known by the institution.
+							</xs:documentation>
+							
+						</xs:annotation>
+					</xs:element>
+					<xs:element maxOccurs="1" minOccurs="1" name="lastName" type="xs:string">
+						<xs:annotation>
+							<xs:documentation>
+								The last (family) name of the end
+								consumer as known by the institution.
+							</xs:documentation>
+							
+						</xs:annotation>
+					</xs:element>
+					<xs:element maxOccurs="1" minOccurs="1" name="displayName" type="xs:string">
+						<xs:annotation>
+							<xs:documentation>
+								The full name of the end consumer as
+								known by the institution.
+							</xs:documentation>
+							
+						</xs:annotation>
+					</xs:element>
+					<xs:element maxOccurs="1" minOccurs="1" name="institutionCustomerId" type="xs:string">
+						<xs:annotation>
+							<xs:documentation>
+								The unique identifier as assigned to the
+								end consumer by the institution.
+							</xs:documentation>
+							
+						</xs:annotation>
+					</xs:element>
+					<xs:element maxOccurs="1" minOccurs="1" name="countryCode" type="xs:string">
+						<xs:annotation>
+							<xs:documentation>
+								The two-character ISO country code of
+								the home country of the end consumer
+							</xs:documentation>
+							
+						</xs:annotation>
+					</xs:element>
+					<xs:element maxOccurs="1" minOccurs="0" name="email" type="xs:string">
+						
+					</xs:element>
+					<xs:any maxOccurs="unbounded" minOccurs="0" processContents="lax" namespace="##other"/>
+				</xs:sequence>
+			</xs:complexType>
+
+			<xs:complexType name="InvoiceItem">
+				<xs:annotation>
+					<xs:documentation>
+						Describes an individual item for an invoice.
+					</xs:documentation>
+					
+				</xs:annotation>
+				<xs:sequence>
+					<xs:element name="name" type="xs:string" minOccurs="0" maxOccurs="1">
+						
+					</xs:element>
+					<xs:element name="identifier" type="xs:string" minOccurs="0" maxOccurs="1">
+						
+					</xs:element>
+					<xs:element name="price" type="xs:decimal" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="itemPrice" type="xs:decimal" minOccurs="0" maxOccurs="1">
+						
+					</xs:element>
+					<xs:element name="itemCount" type="xs:int" minOccurs="0" maxOccurs="1">
+						
+					</xs:element>
+					<xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+				</xs:sequence>
+			</xs:complexType>
+
+			<xs:complexType name="InvoiceData">
+				<xs:annotation>
+					<xs:documentation>
+						Describes a payment for a particular receiver
+						(merchant), contains list of additional per item
+						details.
+					</xs:documentation>
+					
+				</xs:annotation>
+				<xs:sequence>
+					<xs:element name="item" type="ap:InvoiceItem" minOccurs="0" maxOccurs="unbounded">
+						
+					</xs:element>
+					<xs:element name="totalTax" type="xs:decimal" minOccurs="0" maxOccurs="1">
+						
+					</xs:element>
+					<xs:element name="totalShipping" type="xs:decimal" minOccurs="0" maxOccurs="1">
+						
+					</xs:element>
+					<xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+				</xs:sequence>
+			</xs:complexType>
+
+
+			<xs:complexType name="PayError">
+				<xs:annotation>
+					<xs:documentation>
+						The error that resulted from an attempt to make
+						a payment to a receiver.
+					</xs:documentation>
+				</xs:annotation>
+				<xs:sequence>
+					<xs:element minOccurs="1" maxOccurs="1" name="receiver" type="ap:Receiver">
+						
+					</xs:element>
+					<xs:element minOccurs="1" maxOccurs="1" name="error" type="common:ErrorData">
+						
+					</xs:element>
+					<xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+				</xs:sequence>
+			</xs:complexType>
+
+			<xs:complexType name="PayErrorList">
+				
+				<xs:sequence>
+					<xs:element maxOccurs="unbounded" minOccurs="1" name="payError" type="ap:PayError">
+						
+					</xs:element>
+				</xs:sequence>
+			</xs:complexType>
+
+			<xs:complexType name="PaymentInfo">
+				<xs:annotation>
+					<xs:documentation>
+						PaymentInfo represents the payment attempt made
+						to a Receiver of a PayRequest. If the execution
+						of the payment has not yet completed, there will
+						not be any transaction details.
+					</xs:documentation>
+				</xs:annotation>
+				<xs:sequence>
+					<xs:element minOccurs="0" maxOccurs="1" name="transactionId" type="xs:string"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="transactionStatus" type="xs:string"/>
+					<xs:element minOccurs="1" maxOccurs="1" name="receiver" type="ap:Receiver">
+						
+					</xs:element>
+					<xs:element minOccurs="0" maxOccurs="1" name="refundedAmount" type="xs:decimal"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="pendingRefund" type="xs:boolean"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="senderTransactionId" type="xs:string"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="senderTransactionStatus" type="xs:string"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="pendingReason" type="xs:string"/>
+					<xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+				</xs:sequence>
+			</xs:complexType>
+
+			<xs:complexType name="PaymentInfoList">
+				
+				<xs:sequence>
+					<xs:element maxOccurs="unbounded" minOccurs="1" name="paymentInfo" type="ap:PaymentInfo">
+						
+					</xs:element>
+				</xs:sequence>
+			</xs:complexType>
+
+			<xs:complexType name="Receiver">
+				<xs:annotation>
+					<xs:documentation>
+						Receiver is the party where funds are
+						transferred to. A primary receiver receives a
+						payment directly from the sender in a chained
+						split payment. A primary receiver should not be
+						specified when making a single or parallel split
+						payment.
+					</xs:documentation>
+					
+				</xs:annotation>
+				<xs:sequence>
+					<xs:element minOccurs="1" maxOccurs="1" name="amount" type="xs:decimal">
+						
+					</xs:element>
+					<xs:element minOccurs="0" maxOccurs="1" name="email" type="xs:string">
+						
+					</xs:element>
+					<xs:element minOccurs="0" maxOccurs="1" name="phone" type="common:PhoneNumberType">
+						
+					</xs:element>
+					<xs:element minOccurs="0" maxOccurs="1" name="primary" type="xs:boolean"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="invoiceId" type="xs:string">
+						
+					</xs:element>
+					<xs:element minOccurs="0" maxOccurs="1" name="paymentType" type="xs:string">
+						
+					</xs:element>
+					<xs:element minOccurs="0" maxOccurs="1" name="paymentSubType" type="xs:string">
+						
+					</xs:element>
+					<xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+				</xs:sequence>
+			</xs:complexType>
+
+			<xs:complexType name="ReceiverList">
+				
+				<xs:sequence>
+					<xs:element maxOccurs="unbounded" minOccurs="1" name="receiver" type="ap:Receiver">
+						
+					</xs:element>
+				</xs:sequence>
+			</xs:complexType>
+
+			<xs:complexType name="ReceiverIdentifier">
+				<xs:annotation>
+					<xs:documentation>
+						The sender identifier type contains information
+						to identify a PayPal account.
+					</xs:documentation>
+					
+				</xs:annotation>
+				<xs:complexContent>
+					<xs:extension base="common:AccountIdentifier">
+					</xs:extension>
+				</xs:complexContent>
+			</xs:complexType>
+
+			<xs:complexType name="ReceiverOptions">
+				<xs:annotation>
+					<xs:documentation>
+						Options that apply to the receiver of a payment,
+						allows setting additional details for payment
+						using invoice.
+					</xs:documentation>
+					
+				</xs:annotation>
+				<xs:sequence>
+					<xs:element name="description" type="xs:string" minOccurs="0" maxOccurs="1">
+						
+					</xs:element>
+					<xs:element name="customId" type="xs:string" minOccurs="0" maxOccurs="1">
+						
+					</xs:element>
+					<xs:element name="invoiceData" type="ap:InvoiceData" minOccurs="0" maxOccurs="1">
+						
+					</xs:element>
+					<xs:element name="receiver" type="ap:ReceiverIdentifier" minOccurs="1" maxOccurs="1">
+						
+					</xs:element>
+					<xs:element name="referrerCode" type="xs:string" minOccurs="0" maxOccurs="1">
+						
+					</xs:element>
+					<xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+				</xs:sequence>
+			</xs:complexType>
+
+			<xs:complexType name="RefundInfo">
+				<xs:annotation>
+					<xs:documentation>
+						RefundInfo represents the refund attempt made to
+						a Receiver of a PayRequest.
+					</xs:documentation>
+					
+				</xs:annotation>
+				<xs:sequence>
+					<xs:element maxOccurs="1" minOccurs="1" name="receiver" type="ap:Receiver">
+						
+					</xs:element>
+					<xs:element minOccurs="0" maxOccurs="1" name="refundStatus" type="xs:string"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="refundNetAmount" type="xs:decimal"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="refundFeeAmount" type="xs:decimal"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="refundGrossAmount" type="xs:decimal"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="totalOfAllRefunds" type="xs:decimal"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="refundHasBecomeFull" type="xs:boolean"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="encryptedRefundTransactionId" type="xs:string"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="refundTransactionStatus" type="xs:string"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="errorList" type="ap:ErrorList"/>
+					<xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+				</xs:sequence>
+			</xs:complexType>
+
+			<xs:complexType name="RefundInfoList">
+				
+				<xs:sequence>
+					<xs:element maxOccurs="unbounded" minOccurs="1" name="refundInfo" type="ap:RefundInfo">
+						
+					</xs:element>
+				</xs:sequence>
+			</xs:complexType>
+
+			<xs:complexType name="SenderOptions">
+				<xs:annotation>
+					<xs:documentation>
+						Options that apply to the sender of a payment.
+					</xs:documentation>
+					
+				</xs:annotation>
+				<xs:sequence>
+					<xs:element name="requireShippingAddressSelection" type="xs:boolean" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>
+								Require the user to select a shipping
+								address during the web flow.
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+				</xs:sequence>
+			</xs:complexType>
+
+			<xs:complexType name="SenderIdentifier">
+				<xs:annotation>
+					<xs:documentation>
+						The sender identifier type contains information
+						to identify a PayPal account.
+					</xs:documentation>
+					
+				</xs:annotation>
+				<xs:complexContent>
+					<xs:extension base="common:AccountIdentifier">
+						<xs:sequence>
+							<xs:element name="useCredentials" type="xs:boolean" minOccurs="0" maxOccurs="1"/>
+						</xs:sequence>
+					</xs:extension>
+				</xs:complexContent>
+			</xs:complexType>
+
+			<!-- ###################################################### -->
+			<!-- Request and Response types definition                  -->
+			<!-- ###################################################### -->
+
+			<xs:complexType name="CancelPreapprovalRequest">
+				<xs:annotation>
+					<xs:documentation>
+						The request to cancel a Preapproval.
+					</xs:documentation>
+					
+				</xs:annotation>
+				<xs:sequence>
+					<xs:element minOccurs="1" name="requestEnvelope" type="common:RequestEnvelope">
+						
+					</xs:element>
+					<xs:element minOccurs="1" maxOccurs="1" name="preapprovalKey" type="xs:string">
+						
+					</xs:element>
+					<xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+				</xs:sequence>
+			</xs:complexType>
+
+			<xs:complexType name="CancelPreapprovalResponse">
+				<xs:annotation>
+					<xs:documentation>
+						The result of the CancelPreapprovalRequest.
+					</xs:documentation>
+					
+				</xs:annotation>
+				<xs:sequence>
+					<xs:element minOccurs="1" name="responseEnvelope" type="common:ResponseEnvelope">
+						
+					</xs:element>
+					<xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+				</xs:sequence>
+			</xs:complexType>
+
+			<xs:complexType name="ConfirmPreapprovalRequest">
+				<xs:annotation>
+					<xs:documentation>
+						The request to confirm a Preapproval.
+					</xs:documentation>
+					
+				</xs:annotation>
+				<xs:sequence>
+					<xs:element minOccurs="1" name="requestEnvelope" type="common:RequestEnvelope">
+						
+					</xs:element>
+					<xs:element minOccurs="1" maxOccurs="1" name="preapprovalKey" type="xs:string">
+						
+					</xs:element>
+					<xs:element name="fundingSourceId" type="xs:string" minOccurs="0" maxOccurs="1">
+						
+					</xs:element>
+					<xs:element minOccurs="0" maxOccurs="1" name="pin" type="xs:string">
+						
+					</xs:element>
+					<xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+				</xs:sequence>
+			</xs:complexType>
+
+			<xs:complexType name="ConfirmPreapprovalResponse">
+				<xs:annotation>
+					<xs:documentation>
+						The result of the ConfirmPreapprovalRequest.
+					</xs:documentation>
+					
+				</xs:annotation>
+				<xs:sequence>
+					<xs:element minOccurs="1" name="responseEnvelope" type="common:ResponseEnvelope">
+						
+					</xs:element>
+					<xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+				</xs:sequence>
+			</xs:complexType>
+
+			<xs:complexType name="ConvertCurrencyRequest">
+				<xs:annotation>
+					<xs:documentation>
+						A request to convert one or more currencies into
+						their estimated values in other currencies.
+					</xs:documentation>
+					
+				</xs:annotation>
+				<xs:sequence>
+					<xs:element minOccurs="1" maxOccurs="1" name="requestEnvelope" type="common:RequestEnvelope">
+						
+					</xs:element>
+					<xs:element minOccurs="1" maxOccurs="1" name="baseAmountList" type="ap:CurrencyList">
+						
+					</xs:element>
+					<xs:element minOccurs="1" maxOccurs="1" name="convertToCurrencyList" type="ap:CurrencyCodeList">
+						
+					</xs:element>
+				</xs:sequence>
+			</xs:complexType>
+
+			<xs:complexType name="ConvertCurrencyResponse">
+				<xs:annotation>
+					<xs:documentation>
+						A response that contains a table of estimated
+						converted currencies based on the Convert
+						Currency Request.
+					</xs:documentation>
+					
+				</xs:annotation>
+				<xs:sequence>
+					<xs:element minOccurs="1" maxOccurs="1" name="responseEnvelope" type="common:ResponseEnvelope">
+						
+					</xs:element>
+					<xs:element minOccurs="1" maxOccurs="1" name="estimatedAmountTable" type="ap:CurrencyConversionTable">
+						
+					</xs:element>
+				</xs:sequence>
+			</xs:complexType>
+
+			<xs:complexType name="ExecutePaymentRequest">
+				<xs:annotation>
+					<xs:documentation>
+						The request to execute the payment request.
+					</xs:documentation>
+					
+				</xs:annotation>
+				<xs:sequence>
+					<xs:element minOccurs="1" name="requestEnvelope" type="common:RequestEnvelope">
+						
+					</xs:element>
+					<xs:element minOccurs="1" maxOccurs="1" name="payKey" type="xs:string">
+						
+					</xs:element>
+					<xs:element minOccurs="0" maxOccurs="1" name="actionType" type="xs:string">
+						<xs:annotation>
+							<xs:documentation>
+								Describes the action that is performed
+								by this API
+							</xs:documentation>
+							
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="fundingPlanId" type="xs:string" minOccurs="0" maxOccurs="1">
+						
+					</xs:element>
+					<xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+				</xs:sequence>
+			</xs:complexType>
+
+			<xs:complexType name="ExecutePaymentResponse">
+				<xs:annotation>
+					<xs:documentation>
+						The result of a payment execution.
+					</xs:documentation>
+					
+				</xs:annotation>
+				<xs:sequence>
+					<xs:element minOccurs="1" name="responseEnvelope" type="common:ResponseEnvelope">
+						
+					</xs:element>
+					<xs:element minOccurs="1" maxOccurs="1" name="paymentExecStatus" type="xs:string">
+						
+					</xs:element>
+					<xs:element minOccurs="0" maxOccurs="1" name="payErrorList" type="ap:PayErrorList"/>
+					<xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+				</xs:sequence>
+			</xs:complexType>
+
+			<xs:complexType name="GetAllowedFundingSourcesRequest">
+				<xs:annotation>
+					<xs:documentation>
+						The request to get the allowed funding sources
+						available for a preapproval.
+					</xs:documentation>
+					
+				</xs:annotation>
+				<xs:sequence>
+					<xs:element minOccurs="1" name="requestEnvelope" type="common:RequestEnvelope">
+						
+					</xs:element>
+					<xs:element minOccurs="1" maxOccurs="1" name="key" type="xs:string">
+						
+					</xs:element>
+					<xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+				</xs:sequence>
+			</xs:complexType>
+
+			<xs:complexType name="GetAllowedFundingSourcesResponse">
+				<xs:annotation>
+					<xs:documentation>
+						The response to get the backup funding sources
+						available for a preapproval.
+					</xs:documentation>
+					
+				</xs:annotation>
+				<xs:sequence>
+					<xs:element minOccurs="1" maxOccurs="1" name="responseEnvelope" type="common:ResponseEnvelope">
+						
+					</xs:element>
+					<xs:element name="fundingSource" type="ap:FundingSource" minOccurs="0" maxOccurs="unbounded">
+						
+					</xs:element>
+					<xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+				</xs:sequence>
+			</xs:complexType>
+
+
+			<xs:complexType name="GetPaymentOptionsRequest">
+				<xs:annotation>
+					<xs:documentation>
+						The request to get the options of a payment
+						request.
+					</xs:documentation>
+					
+				</xs:annotation>
+				<xs:sequence>
+					<xs:element minOccurs="1" name="requestEnvelope" type="common:RequestEnvelope">
+						
+					</xs:element>
+					<xs:element minOccurs="1" maxOccurs="1" name="payKey" type="xs:string">
+						
+					</xs:element>
+					<xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+				</xs:sequence>
+			</xs:complexType>
+
+			<xs:complexType name="GetPaymentOptionsResponse">
+				<xs:annotation>
+					<xs:documentation>
+						The response message for the GetPaymentOption
+						request
+					</xs:documentation>
+					
+				</xs:annotation>
+				<xs:sequence>
+					<xs:element minOccurs="1" name="responseEnvelope" type="common:ResponseEnvelope">
+						
+					</xs:element>
+					<xs:element minOccurs="0" maxOccurs="1" name="initiatingEntity" type="ap:InitiatingEntity">
+						
+					</xs:element>
+					<xs:element minOccurs="0" maxOccurs="1" name="displayOptions" type="ap:DisplayOptions">
+						
+					</xs:element>
+					<xs:element name="shippingAddressId" type="xs:string" minOccurs="0" maxOccurs="1">
+						
+					</xs:element>
+					<xs:element name="senderOptions" type="ap:SenderOptions" minOccurs="0" maxOccurs="1">
+						
+					</xs:element>
+					<xs:element name="receiverOptions" type="ap:ReceiverOptions" minOccurs="0" maxOccurs="unbounded">
+						
+					</xs:element>
+					<xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+				</xs:sequence>
+			</xs:complexType>
+
+			<xs:complexType name="PaymentDetailsRequest">
+				<xs:annotation>
+					<xs:documentation>
+						The request to look up the details of a
+						PayRequest. The PaymentDetailsRequest can be
+						made with either a payKey, trackingId, or a
+						transactionId of the PayRequest.
+					</xs:documentation>
+					
+				</xs:annotation>
+				<xs:sequence>
+					<xs:element minOccurs="1" name="requestEnvelope" type="common:RequestEnvelope">
+						
+					</xs:element>
+					<xs:element minOccurs="0" maxOccurs="1" name="payKey" type="xs:string">
+						
+					</xs:element>
+					<xs:element minOccurs="0" maxOccurs="1" name="transactionId" type="xs:string">
+						
+					</xs:element>
+					<xs:element minOccurs="0" maxOccurs="1" name="trackingId" type="xs:string">
+						
+					</xs:element>
+					<xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+				</xs:sequence>
+			</xs:complexType>
+
+			<xs:complexType name="PaymentDetailsResponse">
+				<xs:annotation>
+					<xs:documentation>
+						The details of the PayRequest as specified in
+						the Pay operation.
+					</xs:documentation>
+					
+				</xs:annotation>
+				<xs:sequence>
+					<xs:element minOccurs="1" name="responseEnvelope" type="common:ResponseEnvelope">
+						
+					</xs:element>
+					<xs:element minOccurs="1" maxOccurs="1" name="cancelUrl" type="xs:string">
+						
+					</xs:element>
+					<xs:element minOccurs="1" maxOccurs="1" name="currencyCode" type="xs:string">
+						
+					</xs:element>
+					<xs:element minOccurs="0" maxOccurs="1" name="ipnNotificationUrl" type="xs:string">
+						
+					</xs:element>
+					<xs:element minOccurs="0" maxOccurs="1" name="memo" type="xs:string">
+						
+					</xs:element>
+					<xs:element maxOccurs="1" minOccurs="1" name="paymentInfoList" type="ap:PaymentInfoList">
+						
+					</xs:element>
+					<xs:element minOccurs="1" maxOccurs="1" name="returnUrl" type="xs:string">
+						
+					</xs:element>
+					<xs:element minOccurs="0" maxOccurs="1" name="senderEmail" type="xs:string">
+						
+					</xs:element>
+					<xs:element minOccurs="1" maxOccurs="1" name="status" type="xs:string">
+						
+					</xs:element>
+					<xs:element minOccurs="0" maxOccurs="1" name="trackingId" type="xs:string">
+						
+					</xs:element>
+					<xs:element minOccurs="1" maxOccurs="1" name="payKey" type="xs:string">
+						
+					</xs:element>
+					<xs:element minOccurs="1" maxOccurs="1" name="actionType" type="xs:string">
+						
+					</xs:element>
+					<xs:element minOccurs="1" maxOccurs="1" name="feesPayer" type="xs:string">
+						
+					</xs:element>
+					<xs:element minOccurs="0" maxOccurs="1" name="reverseAllParallelPaymentsOnError" type="xs:boolean"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="preapprovalKey" type="xs:string">
+						
+					</xs:element>
+					<xs:element minOccurs="0" maxOccurs="1" name="fundingConstraint" type="ap:FundingConstraint"/>
+					<xs:element name="sender" type="ap:SenderIdentifier" minOccurs="0" maxOccurs="1">
+						
+					</xs:element>
+					<xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+				</xs:sequence>
+			</xs:complexType>
+
+			<xs:complexType name="PayRequest">
+				<xs:annotation>
+					<xs:documentation>
+						The PayRequest contains the payment instructions
+						to make from sender to receivers.
+					</xs:documentation>
+					
+				</xs:annotation>
+				<xs:sequence>
+					<xs:element minOccurs="1" name="requestEnvelope" type="common:RequestEnvelope">
+						
+					</xs:element>
+					<xs:element minOccurs="0" name="clientDetails" type="common:ClientDetailsType">
+						
+					</xs:element>
+					<xs:element minOccurs="1" maxOccurs="1" name="actionType" type="xs:string">
+						
+					</xs:element>
+					<xs:element minOccurs="1" maxOccurs="1" name="cancelUrl" type="xs:string">
+						
+					</xs:element>
+					<xs:element minOccurs="1" maxOccurs="1" name="currencyCode" type="xs:string">
+						
+					</xs:element>
+					<xs:element minOccurs="0" maxOccurs="1" name="feesPayer" type="xs:string">
+						
+					</xs:element>
+					<xs:element minOccurs="0" maxOccurs="1" name="ipnNotificationUrl" type="xs:string">
+						
+					</xs:element>
+					<xs:element minOccurs="0" maxOccurs="1" name="memo" type="xs:string">
+						
+					</xs:element>
+					<xs:element minOccurs="0" maxOccurs="1" name="pin" type="xs:string">
+						
+					</xs:element>
+					<xs:element minOccurs="0" maxOccurs="1" name="preapprovalKey" type="xs:string">
+						
+					</xs:element>
+					<xs:element maxOccurs="1" minOccurs="1" name="receiverList" type="ap:ReceiverList">
+						
+					</xs:element>
+					<xs:element minOccurs="0" maxOccurs="1" name="reverseAllParallelPaymentsOnError" type="xs:boolean"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="senderEmail" type="xs:string">
+						
+					</xs:element>
+					<xs:element minOccurs="1" maxOccurs="1" name="returnUrl" type="xs:string">
+						
+					</xs:element>
+					<xs:element minOccurs="0" maxOccurs="1" name="trackingId" type="xs:string">
+						
+					</xs:element>
+					<xs:element minOccurs="0" maxOccurs="1" name="fundingConstraint" type="ap:FundingConstraint"/>
+					<xs:element name="sender" type="ap:SenderIdentifier" minOccurs="0" maxOccurs="1">
+						
+					</xs:element>
+					<xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+				</xs:sequence>
+			</xs:complexType>
+
+			<xs:complexType name="PayResponse">
+				<xs:annotation>
+					<xs:documentation>
+						The PayResponse contains the result of the Pay
+						operation. The payKey and execution status of
+						the request should always be provided.
+					</xs:documentation>
+					
+				</xs:annotation>
+				<xs:sequence>
+					<xs:element minOccurs="1" name="responseEnvelope" type="common:ResponseEnvelope">
+						
+					</xs:element>
+					<xs:element minOccurs="1" maxOccurs="1" name="payKey" type="xs:string">
+						
+					</xs:element>
+					<xs:element minOccurs="1" maxOccurs="1" name="paymentExecStatus" type="xs:string">
+						
+					</xs:element>
+					<xs:element minOccurs="0" maxOccurs="1" name="payErrorList" type="ap:PayErrorList"/>
+					<xs:element name="defaultFundingPlan" type="ap:FundingPlan" minOccurs="0" maxOccurs="1">
+						
+					</xs:element>
+					<xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+				</xs:sequence>
+			</xs:complexType>
+
+			<xs:complexType name="PreapprovalDetailsRequest">
+				<xs:annotation>
+					<xs:documentation>
+						The request to look up the details of a
+						Preapproval.
+					</xs:documentation>
+					
+				</xs:annotation>
+				<xs:sequence>
+					<xs:element minOccurs="1" name="requestEnvelope" type="common:RequestEnvelope">
+						
+					</xs:element>
+					<xs:element minOccurs="1" maxOccurs="1" name="preapprovalKey" type="xs:string">
+						
+					</xs:element>
+					<xs:element minOccurs="0" maxOccurs="1" name="getBillingAddress" type="xs:boolean"/>
+					<xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+				</xs:sequence>
+			</xs:complexType>
+
+			<xs:complexType name="PreapprovalDetailsResponse">
+				<xs:annotation>
+					<xs:documentation>
+						The details of the Preapproval as specified in
+						the Preapproval operation.
+					</xs:documentation>
+					
+				</xs:annotation>
+				<xs:sequence>
+					<xs:element minOccurs="1" name="responseEnvelope" type="common:ResponseEnvelope">
+						
+					</xs:element>
+					<xs:element minOccurs="1" maxOccurs="1" name="approved" type="xs:boolean">
+						
+					</xs:element>
+					<xs:element minOccurs="1" maxOccurs="1" name="cancelUrl" type="xs:string">
+						
+					</xs:element>
+					<xs:element minOccurs="1" maxOccurs="1" name="curPayments" type="xs:long">
+						
+					</xs:element>
+					<xs:element minOccurs="1" maxOccurs="1" name="curPaymentsAmount" type="xs:decimal">
+						
+					</xs:element>
+					<xs:element minOccurs="0" maxOccurs="1" name="curPeriodAttempts" type="xs:long">
+						
+					</xs:element>
+					<xs:element minOccurs="0" maxOccurs="1" name="curPeriodEndingDate" type="xs:dateTime"/>
+					<xs:element minOccurs="1" maxOccurs="1" name="currencyCode" type="xs:string">
+						
+					</xs:element>
+					<xs:element minOccurs="0" maxOccurs="1" name="dateOfMonth" type="xs:int">
+						
+					</xs:element>
+					<xs:element minOccurs="0" maxOccurs="1" name="dayOfWeek" type="common:DayOfWeek"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="endingDate" type="xs:dateTime"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="maxAmountPerPayment" type="xs:decimal">
+						
+					</xs:element>
+					<xs:element minOccurs="0" maxOccurs="1" name="maxNumberOfPayments" type="xs:int">
+						
+					</xs:element>
+					<xs:element minOccurs="0" maxOccurs="1" name="maxNumberOfPaymentsPerPeriod" type="xs:int">
+						
+					</xs:element>
+					<xs:element minOccurs="0" maxOccurs="1" name="maxTotalAmountOfAllPayments" type="xs:decimal">
+						
+					</xs:element>
+					<xs:element minOccurs="0" maxOccurs="1" name="paymentPeriod" type="xs:string"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="pinType" type="xs:string"/>
+					<xs:element minOccurs="1" maxOccurs="1" name="returnUrl" type="xs:string">
+						
+					</xs:element>
+					<xs:element minOccurs="0" maxOccurs="1" name="senderEmail" type="xs:string">
+						
+					</xs:element>
+					<xs:element minOccurs="0" maxOccurs="1" name="memo" type="xs:string">
+						
+					</xs:element>
+					<xs:element minOccurs="1" maxOccurs="1" name="startingDate" type="xs:dateTime">
+						
+					</xs:element>
+					<xs:element minOccurs="1" maxOccurs="1" name="status" type="xs:string">
+						
+					</xs:element>
+					<xs:element minOccurs="0" maxOccurs="1" name="ipnNotificationUrl" type="xs:string">
+						
+					</xs:element>
+					<xs:element name="addressList" type="ap:AddressList" maxOccurs="1" minOccurs="0">
+						
+					</xs:element>
+					<xs:element minOccurs="0" maxOccurs="1" name="feesPayer" type="xs:string">
+						
+					</xs:element>
+					<xs:element minOccurs="0" maxOccurs="1" name="displayMaxTotalAmount" type="xs:boolean"/>
+					<xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+				</xs:sequence>
+			</xs:complexType>
+
+			<xs:complexType name="PreapprovalRequest">
+				<xs:annotation>
+					<xs:documentation>
+						A request to create a Preapproval. A Preapproval
+						is an agreement between a Paypal account holder
+						(the sender) and the API caller (the service
+						invoker) to make payment(s) on the the sender's
+						behalf with various limitations defined.
+					</xs:documentation>
+					
+				</xs:annotation>
+				<xs:sequence>
+					<xs:element minOccurs="1" name="requestEnvelope" type="common:RequestEnvelope">
+						
+					</xs:element>
+					<xs:element minOccurs="0" name="clientDetails" type="common:ClientDetailsType">
+						
+					</xs:element>
+					<xs:element minOccurs="1" maxOccurs="1" name="cancelUrl" type="xs:string">
+						
+					</xs:element>
+					<xs:element minOccurs="1" maxOccurs="1" name="currencyCode" type="xs:string">
+						
+					</xs:element>
+					<xs:element minOccurs="0" maxOccurs="1" name="dateOfMonth" type="xs:int">
+						
+					</xs:element>
+					<xs:element minOccurs="0" maxOccurs="1" name="dayOfWeek" type="common:DayOfWeek"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="endingDate" type="xs:dateTime"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="maxAmountPerPayment" type="xs:decimal">
+						
+					</xs:element>
+					<xs:element minOccurs="0" maxOccurs="1" name="maxNumberOfPayments" type="xs:int">
+						
+					</xs:element>
+					<xs:element minOccurs="0" maxOccurs="1" name="maxNumberOfPaymentsPerPeriod" type="xs:int">
+						
+					</xs:element>
+					<xs:element minOccurs="0" maxOccurs="1" name="maxTotalAmountOfAllPayments" type="xs:decimal">
+						
+					</xs:element>
+					<xs:element minOccurs="0" maxOccurs="1" name="paymentPeriod" type="xs:string">
+						
+					</xs:element>
+					<xs:element minOccurs="1" maxOccurs="1" name="returnUrl" type="xs:string">
+						
+					</xs:element>
+					<xs:element minOccurs="0" maxOccurs="1" name="memo" type="xs:string">
+						
+					</xs:element>
+					<xs:element minOccurs="0" maxOccurs="1" name="ipnNotificationUrl" type="xs:string">
+						
+					</xs:element>
+					<xs:element minOccurs="0" maxOccurs="1" name="senderEmail" type="xs:string">
+						
+					</xs:element>
+					<xs:element minOccurs="1" maxOccurs="1" name="startingDate" type="xs:dateTime">
+						
+					</xs:element>
+					<xs:element minOccurs="0" maxOccurs="1" name="pinType" type="xs:string">
+						
+					</xs:element>
+					<xs:element minOccurs="0" maxOccurs="1" name="feesPayer" type="xs:string">
+						
+					</xs:element>
+					<xs:element minOccurs="0" maxOccurs="1" name="displayMaxTotalAmount" type="xs:boolean"/>
+					<xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+				</xs:sequence>
+			</xs:complexType>
+
+			<xs:complexType name="PreapprovalResponse">
+				<xs:annotation>
+					<xs:documentation>
+						The result of the PreapprovalRequest is a
+						preapprovalKey.
+					</xs:documentation>
+					
+				</xs:annotation>
+				<xs:sequence>
+					<xs:element minOccurs="1" name="responseEnvelope" type="common:ResponseEnvelope">
+						
+					</xs:element>
+					<xs:element minOccurs="1" maxOccurs="1" name="preapprovalKey" type="xs:string">
+						
+					</xs:element>
+					<xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+				</xs:sequence>
+			</xs:complexType>
+
+			<xs:complexType name="RefundRequest">
+				<xs:annotation>
+					<xs:documentation>
+						A request to make a refund based on various
+						criteria. A refund can be made against the
+						entire payKey, an individual transaction
+						belonging to a payKey, a tracking id, or a
+						specific receiver of a payKey.
+					</xs:documentation>
+					
+				</xs:annotation>
+				<xs:sequence>
+					<xs:element minOccurs="1" name="requestEnvelope" type="common:RequestEnvelope">
+						
+					</xs:element>
+					<xs:element minOccurs="0" maxOccurs="1" name="currencyCode" type="xs:string">
+						
+					</xs:element>
+					<xs:element minOccurs="0" maxOccurs="1" name="payKey" type="xs:string">
+						
+					</xs:element>
+					<xs:element minOccurs="0" maxOccurs="1" name="transactionId" type="xs:string">
+						
+					</xs:element>
+					<xs:element minOccurs="0" maxOccurs="1" name="trackingId" type="xs:string">
+						
+					</xs:element>
+					<xs:element maxOccurs="1" minOccurs="0" name="receiverList" type="ap:ReceiverList">
+						
+					</xs:element>
+					<xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+				</xs:sequence>
+			</xs:complexType>
+
+			<xs:complexType name="RefundResponse">
+				<xs:annotation>
+					<xs:documentation>
+						The result of a Refund request.
+					</xs:documentation>
+					
+				</xs:annotation>
+				<xs:sequence>
+					<xs:element minOccurs="1" name="responseEnvelope" type="common:ResponseEnvelope">
+						
+					</xs:element>
+					<xs:element minOccurs="1" maxOccurs="1" name="currencyCode" type="xs:string">
+						
+					</xs:element>
+					<xs:element maxOccurs="1" minOccurs="1" name="refundInfoList" type="ap:RefundInfoList">
+						
+					</xs:element>
+					<xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+				</xs:sequence>
+			</xs:complexType>
+
+			<xs:complexType name="SetPaymentOptionsRequest">
+				<xs:annotation>
+					<xs:documentation>
+						The request to set the options of a payment
+						request.
+					</xs:documentation>
+					
+				</xs:annotation>
+				<xs:sequence>
+					<xs:element minOccurs="1" name="requestEnvelope" type="common:RequestEnvelope">
+						
+					</xs:element>
+					<xs:element minOccurs="1" maxOccurs="1" name="payKey" type="xs:string">
+						
+					</xs:element>
+					<xs:element minOccurs="0" maxOccurs="1" name="initiatingEntity" type="ap:InitiatingEntity">
+						
+					</xs:element>
+					<xs:element minOccurs="0" maxOccurs="1" name="displayOptions" type="ap:DisplayOptions">
+						
+					</xs:element>
+					<xs:element name="shippingAddressId" type="xs:string" minOccurs="0" maxOccurs="1">
+						
+					</xs:element>
+					<xs:element name="senderOptions" type="ap:SenderOptions" minOccurs="0" maxOccurs="1">
+						
+					</xs:element>
+					<xs:element name="receiverOptions" type="ap:ReceiverOptions" minOccurs="0" maxOccurs="unbounded">
+						
+					</xs:element>
+					<xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+				</xs:sequence>
+			</xs:complexType>
+
+			<xs:complexType name="SetPaymentOptionsResponse">
+				<xs:annotation>
+					<xs:documentation>
+						The response message for the SetPaymentOption
+						request
+					</xs:documentation>
+					
+				</xs:annotation>
+				<xs:sequence>
+					<xs:element minOccurs="1" name="responseEnvelope" type="common:ResponseEnvelope">
+						
+					</xs:element>
+					<xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+				</xs:sequence>
+			</xs:complexType>
+
+			<xs:complexType name="GetFundingPlansRequest">
+				<xs:annotation>
+					<xs:documentation>
+						The request to get the funding plans available
+						for a payment.
+					</xs:documentation>
+					
+				</xs:annotation>
+				<xs:sequence>
+					<xs:element minOccurs="1" name="requestEnvelope" type="common:RequestEnvelope">
+						
+					</xs:element>
+					<xs:element minOccurs="1" maxOccurs="1" name="payKey" type="xs:string">
+						
+					</xs:element>
+					<xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+				</xs:sequence>
+			</xs:complexType>
+
+			<xs:complexType name="GetFundingPlansResponse">
+				<xs:annotation>
+					<xs:documentation>
+						The response to get the funding plans available
+						for a payment.
+					</xs:documentation>
+					
+				</xs:annotation>
+				<xs:sequence>
+					<xs:element minOccurs="1" maxOccurs="1" name="responseEnvelope" type="common:ResponseEnvelope">
+						
+					</xs:element>
+					<xs:element name="fundingPlan" type="ap:FundingPlan" minOccurs="0" maxOccurs="unbounded">
+						
+					</xs:element>
+					<xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+				</xs:sequence>
+			</xs:complexType>
+
+			<xs:complexType name="GetAvailableShippingAddressesRequest">
+				<xs:annotation>
+					<xs:documentation>
+						The request to get the addresses available for a
+						payment.
+					</xs:documentation>
+					
+				</xs:annotation>
+				<xs:sequence>
+					<xs:element minOccurs="1" name="requestEnvelope" type="common:RequestEnvelope">
+						
+					</xs:element>
+					<xs:element name="key" type="xs:string" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>
+								The key for which to provide the
+								available addresses. Key can be an
+								AdaptivePayments key such as payKey or
+								preapprovalKey
+							</xs:documentation>
+							
+						</xs:annotation>
+					</xs:element>
+					<xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+				</xs:sequence>
+			</xs:complexType>
+
+			<xs:complexType name="GetAvailableShippingAddressesResponse">
+				<xs:annotation>
+					<xs:documentation>
+						The response to get the shipping addresses
+						available for a payment.
+					</xs:documentation>
+					
+				</xs:annotation>
+				<xs:sequence>
+					<xs:element minOccurs="1" maxOccurs="1" name="responseEnvelope" type="common:ResponseEnvelope">
+						
+					</xs:element>
+					<xs:element name="availableAddress" type="ap:Address" minOccurs="0" maxOccurs="unbounded">
+						
+					</xs:element>
+
+					<xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="GetShippingAddressesRequest">
+				<xs:annotation>
+					<xs:documentation>
+						The request to get the addresses available for a
+						payment.
+					</xs:documentation>
+					
+				</xs:annotation>
+				<xs:sequence>
+					<xs:element minOccurs="1" name="requestEnvelope" type="common:RequestEnvelope">
+						
+					</xs:element>
+					<xs:element name="key" type="xs:string" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>
+								The key for which to provide the
+								available addresses. Key can be an
+								AdaptivePayments key such as payKey or
+								preapprovalKey
+							</xs:documentation>
+							
+						</xs:annotation>
+					</xs:element>
+					<xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="GetShippingAddressesResponse">
+				<xs:annotation>
+					<xs:documentation>
+						The response to get the shipping addresses
+						available for a payment.
+					</xs:documentation>
+					
+				</xs:annotation>
+				<xs:sequence>
+					<xs:element minOccurs="1" maxOccurs="1" name="responseEnvelope" type="common:ResponseEnvelope">
+						
+					</xs:element>
+					<xs:element name="selectedAddress" type="ap:Address" minOccurs="0" maxOccurs="1">
+						
+					</xs:element>
+					<xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+				</xs:sequence>
+			</xs:complexType>
+
+			<xs:element name="CancelPreapprovalRequest" nillable="true" type="ap:CancelPreapprovalRequest"/>
+			<xs:element name="CancelPreapprovalResponse" nillable="true" type="ap:CancelPreapprovalResponse"/>
+			<xs:element name="ConfirmPreapprovalRequest" nillable="true" type="ap:ConfirmPreapprovalRequest"/>
+			<xs:element name="ConfirmPreapprovalResponse" nillable="true" type="ap:ConfirmPreapprovalResponse"/>
+			<xs:element name="ConvertCurrencyRequest" nillable="true" type="ap:ConvertCurrencyRequest"/>
+			<xs:element name="ConvertCurrencyResponse" nillable="true" type="ap:ConvertCurrencyResponse"/>
+			<xs:element name="ExecutePaymentRequest" nillable="true" type="ap:ExecutePaymentRequest"/>
+			<xs:element name="ExecutePaymentResponse" nillable="true" type="ap:ExecutePaymentResponse"/>
+			<xs:element name="GetAllowedFundingSourcesRequest" nillable="true" type="ap:GetAllowedFundingSourcesRequest"/>
+			<xs:element name="GetAllowedFundingSourcesResponse" nillable="true" type="ap:GetAllowedFundingSourcesResponse"/>
+			<xs:element name="GetPaymentOptionsRequest" nillable="true" type="ap:GetPaymentOptionsRequest"/>
+			<xs:element name="GetPaymentOptionsResponse" nillable="true" type="ap:GetPaymentOptionsResponse"/>
+			<xs:element name="PaymentDetailsRequest" nillable="true" type="ap:PaymentDetailsRequest"/>
+			<xs:element name="PaymentDetailsResponse" nillable="true" type="ap:PaymentDetailsResponse"/>
+			<xs:element name="PayRequest" nillable="true" type="ap:PayRequest"/>
+			<xs:element name="PayResponse" nillable="true" type="ap:PayResponse"/>
+			<xs:element name="PreapprovalDetailsRequest" nillable="true" type="ap:PreapprovalDetailsRequest"/>
+			<xs:element name="PreapprovalDetailsResponse" nillable="true" type="ap:PreapprovalDetailsResponse"/>
+			<xs:element name="PreapprovalRequest" nillable="true" type="ap:PreapprovalRequest"/>
+			<xs:element name="PreapprovalResponse" nillable="true" type="ap:PreapprovalResponse"/>
+			<xs:element name="RefundRequest" nillable="true" type="ap:RefundRequest"/>
+			<xs:element name="RefundResponse" nillable="true" type="ap:RefundResponse"/>
+			<xs:element name="SetPaymentOptionsRequest" nillable="true" type="ap:SetPaymentOptionsRequest"/>
+			<xs:element name="SetPaymentOptionsResponse" nillable="true" type="ap:SetPaymentOptionsResponse"/>
+			<xs:element name="GetFundingPlansRequest" nillable="true" type="ap:GetFundingPlansRequest"/>
+			<xs:element name="GetFundingPlansResponse" nillable="true" type="ap:GetFundingPlansResponse"/>
+
+			<xs:element name="GetAvailableShippingAddressesRequest" nillable="true" type="ap:GetAvailableShippingAddressesRequest"/>
+			<xs:element name="GetAvailableShippingAddressesResponse" nillable="true" type="ap:GetAvailableShippingAddressesResponse"/>
+			<xs:element name="GetShippingAddressesRequest" nillable="true" type="ap:GetShippingAddressesRequest"/>
+			<xs:element name="GetShippingAddressesResponse" nillable="true" type="ap:GetShippingAddressesResponse"/>
+		</xs:schema>
+	</wsdl:types>
+
+	<wsdl:message name="PPFaultMessage">
+		<wsdl:part name="body" element="common:FaultMessage"/>
+	</wsdl:message>
+	<wsdl:message name="CancelPreapprovalRequest">
+		<wsdl:part name="body" element="types:CancelPreapprovalRequest"/>
+	</wsdl:message>
+	<wsdl:message name="CancelPreapprovalResponse">
+		<wsdl:part name="body" element="types:CancelPreapprovalResponse"/>
+	</wsdl:message>
+	<wsdl:message name="ConfirmPreapprovalRequest">
+		<wsdl:part name="body" element="types:ConfirmPreapprovalRequest"/>
+	</wsdl:message>
+	<wsdl:message name="ConfirmPreapprovalResponse">
+		<wsdl:part name="body" element="types:ConfirmPreapprovalResponse"/>
+	</wsdl:message>
+	<wsdl:message name="ConvertCurrencyRequest">
+		<wsdl:part name="body" element="types:ConvertCurrencyRequest"/>
+	</wsdl:message>
+	<wsdl:message name="ConvertCurrencyResponse">
+		<wsdl:part name="body" element="types:ConvertCurrencyResponse"/>
+	</wsdl:message>
+	<wsdl:message name="ExecutePaymentRequest">
+		<wsdl:part name="body" element="types:ExecutePaymentRequest"/>
+	</wsdl:message>
+	<wsdl:message name="ExecutePaymentResponse">
+		<wsdl:part name="body" element="types:ExecutePaymentResponse"/>
+	</wsdl:message>
+	<wsdl:message name="GetAllowedFundingSourcesRequest">
+		<wsdl:part name="body" element="types:GetAllowedFundingSourcesRequest"/>
+	</wsdl:message>
+	<wsdl:message name="GetAllowedFundingSourcesResponse">
+		<wsdl:part name="body" element="types:GetAllowedFundingSourcesResponse"/>
+	</wsdl:message>
+	<wsdl:message name="GetPaymentOptionsRequest">
+		<wsdl:part name="body" element="types:GetPaymentOptionsRequest"/>
+	</wsdl:message>
+	<wsdl:message name="GetPaymentOptionsResponse">
+		<wsdl:part name="body" element="types:GetPaymentOptionsResponse"/>
+	</wsdl:message>
+	<wsdl:message name="PaymentDetailsRequest">
+		<wsdl:part name="body" element="types:PaymentDetailsRequest"/>
+	</wsdl:message>
+	<wsdl:message name="PaymentDetailsResponse">
+		<wsdl:part name="body" element="types:PaymentDetailsResponse"/>
+	</wsdl:message>
+	<wsdl:message name="PayRequest">
+		<wsdl:part name="body" element="types:PayRequest"/>
+	</wsdl:message>
+	<wsdl:message name="PayResponse">
+		<wsdl:part name="body" element="types:PayResponse"/>
+	</wsdl:message>
+	<wsdl:message name="PreapprovalDetailsRequest">
+		<wsdl:part name="body" element="types:PreapprovalDetailsRequest"/>
+	</wsdl:message>
+	<wsdl:message name="PreapprovalDetailsResponse">
+		<wsdl:part name="body" element="types:PreapprovalDetailsResponse"/>
+	</wsdl:message>
+	<wsdl:message name="PreapprovalRequest">
+		<wsdl:part name="body" element="types:PreapprovalRequest"/>
+	</wsdl:message>
+	<wsdl:message name="PreapprovalResponse">
+		<wsdl:part name="body" element="types:PreapprovalResponse"/>
+	</wsdl:message>
+	<wsdl:message name="RefundRequest">
+		<wsdl:part name="body" element="types:RefundRequest"/>
+	</wsdl:message>
+	<wsdl:message name="RefundResponse">
+		<wsdl:part name="body" element="types:RefundResponse"/>
+	</wsdl:message>
+	<wsdl:message name="SetPaymentOptionsRequest">
+		<wsdl:part name="body" element="types:SetPaymentOptionsRequest"/>
+	</wsdl:message>
+	<wsdl:message name="SetPaymentOptionsResponse">
+		<wsdl:part name="body" element="types:SetPaymentOptionsResponse"/>
+	</wsdl:message>
+	<wsdl:message name="GetFundingPlansRequest">
+		<wsdl:part name="body" element="types:GetFundingPlansRequest"/>
+	</wsdl:message>
+	<wsdl:message name="GetFundingPlansResponse">
+		<wsdl:part name="body" element="types:GetFundingPlansResponse"/>
+	</wsdl:message>
+
+
+	<wsdl:message name="GetAvailableShippingAddressesRequest">
+		<wsdl:part name="body" element="types:GetAvailableShippingAddressesRequest"/>
+	</wsdl:message>
+	<wsdl:message name="GetAvailableShippingAddressesResponse">
+		<wsdl:part name="body" element="types:GetAvailableShippingAddressesResponse"/>
+	</wsdl:message>
+	<wsdl:message name="GetShippingAddressesRequest">
+		<wsdl:part name="body" element="types:GetShippingAddressesRequest"/>
+	</wsdl:message>
+	<wsdl:message name="GetShippingAddressesResponse">
+		<wsdl:part name="body" element="types:GetShippingAddressesResponse"/>
+	</wsdl:message>
+	<wsdl:portType name="AdaptivePaymentsPortType">
+		<wsdl:operation name="CancelPreapproval">
+			<wsdl:input message="services:CancelPreapprovalRequest" name="CancelPreapprovalRequest"/>
+			<wsdl:output message="services:CancelPreapprovalResponse" name="CancelPreapprovalResponse"/>
+			<wsdl:fault message="services:PPFaultMessage" name="PPFaultMessage"/>
+		</wsdl:operation>
+
+		<wsdl:operation name="ConfirmPreapproval">
+			<wsdl:input message="services:ConfirmPreapprovalRequest" name="ConfirmPreapprovalRequest"/>
+			<wsdl:output message="services:ConfirmPreapprovalResponse" name="ConfirmPreapprovalResponse"/>
+			<wsdl:fault message="services:PPFaultMessage" name="PPFaultMessage"/>
+		</wsdl:operation>
+
+		<wsdl:operation name="ConvertCurrency">
+			<wsdl:input message="services:ConvertCurrencyRequest" name="ConvertCurrencyRequest"/>
+			<wsdl:output message="services:ConvertCurrencyResponse" name="ConvertCurrencyResponse"/>
+			<wsdl:fault message="services:PPFaultMessage" name="PPFaultMessage"/>
+		</wsdl:operation>
+
+		<wsdl:operation name="ExecutePayment">
+			<wsdl:input message="services:ExecutePaymentRequest" name="ExecutePaymentRequest"/>
+			<wsdl:output message="services:ExecutePaymentResponse" name="ExecutePaymentResponse"/>
+			<wsdl:fault message="services:PPFaultMessage" name="PPFaultMessage"/>
+		</wsdl:operation>
+
+		<wsdl:operation name="GetAllowedFundingSources">
+			<wsdl:input message="services:GetAllowedFundingSourcesRequest" name="GetAllowedFundingSourcesRequest"/>
+			<wsdl:output message="services:GetAllowedFundingSourcesResponse" name="GetAllowedFundingSourcesResponse"/>
+			<wsdl:fault message="services:PPFaultMessage" name="PPFaultMessage"/>
+		</wsdl:operation>
+
+
+		<wsdl:operation name="GetPaymentOptions">
+			<wsdl:input message="services:GetPaymentOptionsRequest" name="GetPaymentOptionsRequest"/>
+			<wsdl:output message="services:GetPaymentOptionsResponse" name="GetPaymentOptionsResponse"/>
+			<wsdl:fault message="services:PPFaultMessage" name="PPFaultMessage"/>
+		</wsdl:operation>
+
+		<wsdl:operation name="PaymentDetails">
+			<wsdl:input message="services:PaymentDetailsRequest" name="PaymentDetailsRequest"/>
+			<wsdl:output message="services:PaymentDetailsResponse" name="PaymentDetailsResponse"/>
+			<wsdl:fault message="services:PPFaultMessage" name="PPFaultMessage"/>
+		</wsdl:operation>
+
+		<wsdl:operation name="Pay">
+			<wsdl:input message="services:PayRequest" name="PayRequest"/>
+			<wsdl:output message="services:PayResponse" name="PayResponse"/>
+			<wsdl:fault message="services:PPFaultMessage" name="PPFaultMessage"/>
+		</wsdl:operation>
+
+		<wsdl:operation name="PreapprovalDetails">
+			<wsdl:input message="services:PreapprovalDetailsRequest" name="PreapprovalDetailsRequest"/>
+			<wsdl:output message="services:PreapprovalDetailsResponse" name="PreapprovalDetailsResponse"/>
+			<wsdl:fault message="services:PPFaultMessage" name="PPFaultMessage"/>
+		</wsdl:operation>
+
+		<wsdl:operation name="Preapproval">
+			<wsdl:input message="services:PreapprovalRequest" name="PreapprovalRequest"/>
+			<wsdl:output message="services:PreapprovalResponse" name="PreapprovalResponse"/>
+			<wsdl:fault message="services:PPFaultMessage" name="PPFaultMessage"/>
+		</wsdl:operation>
+
+		<wsdl:operation name="Refund">
+			<wsdl:input message="services:RefundRequest" name="RefundRequest"/>
+			<wsdl:output message="services:RefundResponse" name="RefundResponse"/>
+			<wsdl:fault message="services:PPFaultMessage" name="PPFaultMessage"/>
+		</wsdl:operation>
+
+		<wsdl:operation name="SetPaymentOptions">
+			<wsdl:input message="services:SetPaymentOptionsRequest" name="SetPaymentOptionsRequest"/>
+			<wsdl:output message="services:SetPaymentOptionsResponse" name="SetPaymentOptionsResponse"/>
+			<wsdl:fault message="services:PPFaultMessage" name="PPFaultMessage"/>
+		</wsdl:operation>
+
+		<wsdl:operation name="GetFundingPlans">
+			<wsdl:input message="services:GetFundingPlansRequest" name="GetFundingPlansRequest"/>
+			<wsdl:output message="services:GetFundingPlansResponse" name="GetFundingPlansResponse"/>
+			<wsdl:fault message="services:PPFaultMessage" name="PPFaultMessage"/>
+		</wsdl:operation>
+		<wsdl:operation name="GetAvailableShippingAddresses">
+			<wsdl:input message="services:GetAvailableShippingAddressesRequest" name="GetAvailableShippingAddressesRequest"/>
+			<wsdl:output message="services:GetAvailableShippingAddressesResponse" name="GetAvailableShippingAddressesResponse"/>
+			<wsdl:fault message="services:PPFaultMessage" name="PPFaultMessage"/>
+		</wsdl:operation>
+		<wsdl:operation name="GetShippingAddresses">
+			<wsdl:input message="services:GetShippingAddressesRequest" name="GetShippingAddressesRequest"/>
+			<wsdl:output message="services:GetShippingAddressesResponse" name="GetShippingAddressesResponse"/>
+			<wsdl:fault message="services:PPFaultMessage" name="PPFaultMessage"/>
+		</wsdl:operation>
+
+	</wsdl:portType>
+
+	<wsdl:binding name="AdaptivePaymentsSOAP11Binding" type="services:AdaptivePaymentsPortType">
+		<soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+		<wsdl:operation name="CancelPreapproval">
+			<soap:operation soapAction="urn:CancelPreapproval" style="document"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="PPFaultMessage">
+				<soap:fault use="literal" name="PPFaultMessage"/>
+			</wsdl:fault>
+		</wsdl:operation>
+
+		<wsdl:operation name="ConfirmPreapproval">
+			<soap:operation soapAction="urn:ConfirmPreapproval" style="document"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="PPFaultMessage">
+				<soap:fault use="literal" name="PPFaultMessage"/>
+			</wsdl:fault>
+		</wsdl:operation>
+
+		<wsdl:operation name="ConvertCurrency">
+			<soap:operation soapAction="urn:ConvertCurrency" style="document"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="PPFaultMessage">
+				<soap:fault use="literal" name="PPFaultMessage"/>
+			</wsdl:fault>
+		</wsdl:operation>
+
+		<wsdl:operation name="ExecutePayment">
+			<soap:operation soapAction="urn:ExecutePayment" style="document"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="PPFaultMessage">
+				<soap:fault use="literal" name="PPFaultMessage"/>
+			</wsdl:fault>
+		</wsdl:operation>
+
+		<wsdl:operation name="GetAllowedFundingSources">
+			<soap:operation soapAction="urn:GetAllowedFundingSources" style="document"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="PPFaultMessage">
+				<soap:fault use="literal" name="PPFaultMessage"/>
+			</wsdl:fault>
+		</wsdl:operation>
+
+		<wsdl:operation name="GetPaymentOptions">
+			<soap:operation soapAction="urn:GetPaymentOptions" style="document"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="PPFaultMessage">
+				<soap:fault use="literal" name="PPFaultMessage"/>
+			</wsdl:fault>
+		</wsdl:operation>
+
+		<wsdl:operation name="PaymentDetails">
+			<soap:operation soapAction="urn:PaymentDetails" style="document"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="PPFaultMessage">
+				<soap:fault use="literal" name="PPFaultMessage"/>
+			</wsdl:fault>
+		</wsdl:operation>
+
+		<wsdl:operation name="Pay">
+			<soap:operation soapAction="urn:Pay" style="document"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="PPFaultMessage">
+				<soap:fault use="literal" name="PPFaultMessage"/>
+			</wsdl:fault>
+		</wsdl:operation>
+
+		<wsdl:operation name="PreapprovalDetails">
+			<soap:operation soapAction="urn:PreapprovalDetails" style="document"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="PPFaultMessage">
+				<soap:fault use="literal" name="PPFaultMessage"/>
+			</wsdl:fault>
+		</wsdl:operation>
+
+		<wsdl:operation name="Preapproval">
+			<soap:operation soapAction="urn:Preapproval" style="document"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="PPFaultMessage">
+				<soap:fault use="literal" name="PPFaultMessage"/>
+			</wsdl:fault>
+		</wsdl:operation>
+
+		<wsdl:operation name="Refund">
+			<soap:operation soapAction="urn:Refund" style="document"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="PPFaultMessage">
+				<soap:fault use="literal" name="PPFaultMessage"/>
+			</wsdl:fault>
+		</wsdl:operation>
+
+		<wsdl:operation name="SetPaymentOptions">
+			<soap:operation soapAction="urn:SetPaymentOptions" style="document"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="PPFaultMessage">
+				<soap:fault use="literal" name="PPFaultMessage"/>
+			</wsdl:fault>
+		</wsdl:operation>
+
+		<wsdl:operation name="GetFundingPlans">
+			<soap:operation soapAction="urn:GetFundingPlans" style="document"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="PPFaultMessage">
+				<soap:fault use="literal" name="PPFaultMessage"/>
+			</wsdl:fault>
+		</wsdl:operation>
+
+
+		<wsdl:operation name="GetAvailableShippingAddresses">
+			<soap:operation soapAction="urn:GetAvailableShippingAddresses" style="document"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="PPFaultMessage">
+				<soap:fault use="literal" name="PPFaultMessage"/>
+			</wsdl:fault>
+		</wsdl:operation>
+
+		<wsdl:operation name="GetShippingAddresses">
+			<soap:operation soapAction="urn:GetShippingAddresses" style="document"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="PPFaultMessage">
+				<soap:fault use="literal" name="PPFaultMessage"/>
+			</wsdl:fault>
+		</wsdl:operation>
+	</wsdl:binding>
+
+	<wsdl:service name="AdaptivePayments">
+		<wsdl:port name="AdaptivePaymentsSOAP11_http" binding="services:AdaptivePaymentsSOAP11Binding">
+			<soap:address location="https://svcs.paypal.com/AdaptivePayments"/>
+		</wsdl:port>
+	</wsdl:service>
+
+</wsdl:definitions>

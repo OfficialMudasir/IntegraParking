@@ -1,0 +1,1680 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:types="http://svcs.paypal.com/types/aa" xmlns:common="http://svcs.paypal.com/types/common" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:services="http://svcs.paypal.com/services" xmlns:ns="http://svcs.paypal.com/services" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" ns:version="1.0.3" targetNamespace="http://svcs.paypal.com/services">
+
+	<wsdl:types>
+		<xs:schema xmlns:jaxb="http://java.sun.com/xml/ns/jaxb" xmlns:annox="http://annox.dev.java.net" xmlns:ov="http://annox.dev.java.net/net.sf.oval.constraint" xmlns:ppv="http://annox.dev.java.net/com.paypal.foundation.validation.oval" xmlns:sec="http://annox.dev.java.net/com.paypal.foundation.security.annotation" attributeFormDefault="unqualified" elementFormDefault="unqualified" jaxb:version="2.1" targetNamespace="http://svcs.paypal.com/types/common">
+
+			<xs:complexType name="ErrorData">
+				<xs:annotation>
+					<xs:documentation>
+						This type contains the detailed error
+						information resulting from the service
+						operation.
+					</xs:documentation>
+				</xs:annotation>
+
+				<xs:sequence>
+					<xs:element name="errorId" type="xs:long"/>
+					<xs:element name="domain" type="xs:string"/>
+					<xs:element minOccurs="0" name="subdomain" type="xs:string"/>
+					<xs:element name="severity" type="common:ErrorSeverity"/>
+					<xs:element name="category" type="common:ErrorCategory"/>
+					<xs:element name="message" type="xs:string"/>
+					<xs:element minOccurs="0" name="exceptionId" type="xs:token"/>
+					<xs:element maxOccurs="unbounded" minOccurs="0" name="parameter" nillable="true" type="common:ErrorParameter"/>
+				</xs:sequence>
+			</xs:complexType>
+
+			<xs:complexType name="ErrorParameter">
+				<xs:simpleContent>
+					<xs:extension base="xs:string">
+						<xs:attribute name="name" type="xs:string"/>
+					</xs:extension>
+				</xs:simpleContent>
+			</xs:complexType>
+
+			<xs:simpleType name="ErrorSeverity">
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="Error"/>
+					<xs:enumeration value="Warning"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:simpleType name="ErrorCategory">
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="System"/>
+					<xs:enumeration value="Application"/>
+					<xs:enumeration value="Request"/>
+				</xs:restriction>
+			</xs:simpleType>
+
+			<xs:complexType name="RequestEnvelope">
+				<xs:annotation>
+					<xs:documentation>
+						This specifies the list of parameters with every
+						request to the service.
+					</xs:documentation>
+				</xs:annotation>
+				<xs:sequence>
+					<xs:element name="detailLevel" type="common:DetailLevelCode" minOccurs="0" default="ReturnAll">
+						<xs:annotation>
+							<xs:documentation>
+								This specifies the required detail level
+								that is needed by a client application
+								pertaining to a particular data
+								component (e.g., Item, Transaction,
+								etc.). The detail level is specified in
+								the DetailLevelCodeType which has all
+								the enumerated values of the detail
+								level for each component.
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="errorLanguage" type="xs:string" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>
+								This should be the standard RFC 3066
+								language identification tag, e.g.,
+								en_US.
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+				</xs:sequence>
+			</xs:complexType>
+
+			<xs:complexType name="ResponseEnvelope">
+				<xs:annotation>
+					<xs:documentation>
+						This specifies a list of parameters with every
+						response from a service.
+					</xs:documentation>
+				</xs:annotation>
+				<xs:sequence>
+					<xs:element minOccurs="1" maxOccurs="1" name="timestamp" type="xs:dateTime"/>
+					<xs:element name="ack" minOccurs="1" type="common:AckCode">
+						<xs:annotation>
+							<xs:documentation>
+								Application level acknowledgement code.
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element minOccurs="1" maxOccurs="1" name="correlationId" type="xs:string"/>
+					<xs:element minOccurs="1" maxOccurs="1" name="build" type="xs:string"/>
+					<xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+				</xs:sequence>
+			</xs:complexType>
+
+			<xs:complexType name="ClientDetailsType">
+				<xs:annotation>
+					
+					<xs:documentation>
+						This elements in this type refers to the end
+						user of the application invoking this service.
+					</xs:documentation>
+				</xs:annotation>
+				<xs:sequence>
+					<xs:element minOccurs="0" maxOccurs="1" name="ipAddress" type="xs:string"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="deviceId" type="xs:string"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="applicationId" type="xs:string">
+						
+					</xs:element>
+					<xs:element minOccurs="0" maxOccurs="1" name="model" type="xs:string"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="geoLocation" type="xs:string"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="customerType" type="xs:string"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="partnerName" type="xs:string"/>
+					<xs:element minOccurs="0" maxOccurs="1" name="customerId" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+
+			<xs:complexType name="FaultMessage">
+				<xs:annotation>
+					<xs:documentation>
+						This specifies a fault, encapsulating error
+						data, with specific error codes.
+					</xs:documentation>
+				</xs:annotation>
+				<xs:sequence>
+					<xs:element minOccurs="1" name="responseEnvelope" type="common:ResponseEnvelope"/>
+					<xs:element maxOccurs="unbounded" minOccurs="0" name="error" nillable="true" type="common:ErrorData"/>
+				</xs:sequence>
+			</xs:complexType>
+
+			<xs:simpleType name="AckCode">
+				<xs:annotation>
+					<xs:documentation>
+						AckCodeType This code identifies the
+						acknowledgement code types that could be used to
+						communicate the status of processing a (request)
+						message to an application. This code would be
+						used as part of a response message that contains
+						an application level acknowledgement element.
+					</xs:documentation>
+				</xs:annotation>
+				<xs:restriction base="xs:token">
+					<xs:enumeration value="Success">
+						<xs:annotation>
+							<xs:documentation>
+								Request processing succeeded.
+							</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="Failure">
+						<xs:annotation>
+							<xs:documentation>
+								Request processing failed.
+							</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="Warning">
+						<xs:annotation>
+							<xs:documentation>
+								Request processing completed with
+								warning information being included in
+								the response message.
+							</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="SuccessWithWarning">
+						<xs:annotation>
+							<xs:documentation>
+								Request processing completed successful
+								with some with some warning information
+								that could be useful for the requesting
+								application to process and/or record.
+							</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="FailureWithWarning">
+						<xs:annotation>
+							<xs:documentation>
+								Request processing failed with some
+								error and warnining information that
+								requesting application should process to
+								determine cause(s) of failure.
+							</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+				</xs:restriction>
+			</xs:simpleType>
+
+			<xs:simpleType name="DetailLevelCode">
+				<xs:annotation>
+					<xs:documentation>
+						DetailLevelCodeType
+					</xs:documentation>
+				</xs:annotation>
+				<xs:restriction base="xs:token">
+					<xs:enumeration value="ReturnAll">
+						<xs:annotation>
+							<xs:documentation>
+								Return in response message all detail
+								levels.
+							</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="ReturnAttributes">
+						<xs:annotation>
+							<xs:documentation>
+								Return in response message all detail
+								levels.
+							</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+				</xs:restriction>
+			</xs:simpleType>
+
+			<xs:element name="FaultMessage" nillable="true" type="common:FaultMessage"/>
+		</xs:schema>
+
+		<!-- adaptive accounts types -->
+		<xs:schema xmlns:aa="http://svcs.paypal.com/types/aa" xmlns:jaxb="http://java.sun.com/xml/ns/jaxb" xmlns:annox="http://annox.dev.java.net" xmlns:ov="http://annox.dev.java.net/net.sf.oval.constraint" xmlns:ppm="http://annox.dev.java.net/com.paypal.foundation.logging" xmlns:sec="http://annox.dev.java.net/com.paypal.foundation.security.annotation" xmlns:ppv="http://annox.dev.java.net/com.paypal.foundation.validation.oval" xmlns:ppvc="http://annox.dev.java.net/com.paypal.foundation.validation.oval.constraint" attributeFormDefault="unqualified" elementFormDefault="unqualified" jaxb:version="2.1" targetNamespace="http://svcs.paypal.com/types/aa">
+
+			<!--  jaxb:extensionBindingPrefixes="annox" -->
+
+			<xs:import namespace="http://svcs.paypal.com/types/common"/>
+
+			<xs:complexType name="CreateAccountRequest">
+				
+				<xs:sequence>
+					<xs:element minOccurs="1" name="requestEnvelope" type="common:RequestEnvelope"/>
+					<xs:element minOccurs="0" name="clientDetails" type="common:ClientDetailsType">
+						
+					</xs:element>
+
+					<xs:element name="accountType" type="xs:string" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							
+							<xs:documentation>
+								Valid values are: Personal, Premier, and
+								Business. Flag="2" corresponds to
+								java.util.regex.Pattern.CASE_INSENSITIVE,
+								meaning the strings are not
+								case-sensitive
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+
+					<xs:element name="name" type="aa:NameType" minOccurs="1" maxOccurs="1">
+						
+					</xs:element>
+					<xs:element name="dateOfBirth" type="xs:date" minOccurs="0" maxOccurs="1">
+						
+					</xs:element>
+					<xs:element name="address" type="aa:AddressType" minOccurs="1" maxOccurs="1">
+						
+					</xs:element>
+					
+					<xs:element name="contactPhoneNumber" type="xs:string" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							
+							<xs:documentation>
+							Must provide at least one of contactPhoneNumber, homePhoneNumber, or mobilePhoneNumber
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="homePhoneNumber" type="xs:string" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							
+							<xs:documentation>
+							Must provide at least one of contactPhoneNumber, homePhoneNumber, or mobilePhoneNumber
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="mobilePhoneNumber" type="xs:string" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							
+							<xs:documentation>
+							Must provide at least one of contactPhoneNumber, homePhoneNumber, or mobilePhoneNumber
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					
+					<xs:element name="currencyCode" type="xs:string" minOccurs="0" maxOccurs="1">
+						
+					</xs:element>
+					<xs:element name="citizenshipCountryCode" type="xs:string" minOccurs="0" maxOccurs="1">
+						
+					</xs:element>
+					<xs:element name="preferredLanguageCode" type="xs:string" minOccurs="1" maxOccurs="1">
+						
+					</xs:element>
+
+					<xs:element minOccurs="0" maxOccurs="1" name="notificationURL" type="xs:string">
+						
+					</xs:element>
+
+					<xs:element name="emailAddress" type="xs:string" minOccurs="0" maxOccurs="1">
+						
+					</xs:element>
+
+					<xs:element name="registrationType" type="xs:string" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							
+							<xs:documentation>
+								Valid values are: Mobile and Web.
+								Mobile: Returns a key to complete the
+								registration. Web: Returns a URL to
+								complete the registration.
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+
+					<xs:element name="createAccountWebOptions" type="aa:CreateAccountWebOptionsType" minOccurs="0" maxOccurs="1">
+						
+					</xs:element>
+
+					<xs:element name="suppressWelcomeEmail" type="xs:boolean" minOccurs="0" maxOccurs="1"/>
+						
+					<xs:element name="performExtraVettingOnThisAccount" type="xs:boolean" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>
+								Set to true if you want this account to undergo extra vetting by PayPal
+								before becoming usable. 
+						</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+
+					<xs:element minOccurs="0" maxOccurs="1" name="partnerField1" type="xs:string">
+						
+					</xs:element>
+					<xs:element minOccurs="0" maxOccurs="1" name="partnerField2" type="xs:string">
+						
+					</xs:element>
+					<xs:element minOccurs="0" maxOccurs="1" name="partnerField3" type="xs:string">
+						
+					</xs:element>
+					<xs:element minOccurs="0" maxOccurs="1" name="partnerField4" type="xs:string">
+						
+					</xs:element>
+					<xs:element minOccurs="0" maxOccurs="1" name="partnerField5" type="xs:string">
+						
+					</xs:element>
+
+					<xs:element name="businessInfo" type="aa:BusinessInfoType" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							
+							<xs:documentation>
+								Required for business account creation
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+
+					<xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+				</xs:sequence>
+			</xs:complexType>
+			<!-- CreateAccountRequest -->
+
+			<xs:complexType name="CreateAccountResponse">
+				<xs:sequence>
+					<xs:element minOccurs="1" name="responseEnvelope" type="common:ResponseEnvelope"/>
+					<xs:element name="createAccountKey" type="xs:string" minOccurs="0" maxOccurs="1">
+						
+					</xs:element>
+					<xs:element name="execStatus" type="xs:string" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>
+								Valid values are: COMPLETED, 
+								COMPLETED:MERCHANT_REFERRAL_BONUS_ID_ASSOCIATION_FAILED
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="redirectURL" type="xs:string" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="accountId" type="xs:string" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>
+								Identifies a PayPal account. Only premier and business accounts have an accountId
+							</xs:documentation>
+							
+						</xs:annotation>
+					</xs:element>
+
+					<xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+				</xs:sequence>
+			</xs:complexType>
+			<!-- CreateAccountResponse -->
+
+			<xs:element name="CreateAccountRequest" nillable="true" type="aa:CreateAccountRequest"/>
+			<xs:element name="CreateAccountResponse" nillable="true" type="aa:CreateAccountResponse"/>
+
+
+			<xs:complexType name="GetUserAgreementRequest">
+				<xs:sequence minOccurs="1" maxOccurs="1">
+					<xs:element minOccurs="1" name="requestEnvelope" type="common:RequestEnvelope"/>
+					<xs:element minOccurs="0" name="createAccountKey" type="xs:string" maxOccurs="1">
+						
+					</xs:element>
+					<xs:element minOccurs="0" name="countryCode" type="xs:string" maxOccurs="1">
+						
+					</xs:element>
+					<xs:element minOccurs="0" name="languageCode" type="xs:string" maxOccurs="1">
+						
+					</xs:element>
+					<xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+				</xs:sequence>
+			</xs:complexType>
+			<!-- GetUserAgreementRequest -->
+
+			<xs:complexType name="GetUserAgreementResponse">
+				<xs:sequence minOccurs="1" maxOccurs="1">
+					<xs:element minOccurs="1" name="responseEnvelope" type="common:ResponseEnvelope"/>
+					<xs:element minOccurs="1" maxOccurs="1" name="agreement" type="xs:string"/>
+					<xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+				</xs:sequence>
+			</xs:complexType>
+			<!-- GetUserAgreementResponse -->
+
+			<xs:element name="GetUserAgreementRequest" nillable="true" type="aa:GetUserAgreementRequest"/>
+			<xs:element name="GetUserAgreementResponse" nillable="true" type="aa:GetUserAgreementResponse"/>
+
+			<xs:complexType name="GetVerifiedStatusRequest">
+				<xs:sequence minOccurs="1" maxOccurs="1">
+					<xs:element minOccurs="1" name="requestEnvelope" type="common:RequestEnvelope"/>
+					<xs:element name="emailAddress" type="xs:string" minOccurs="1" maxOccurs="1">
+						
+					</xs:element>
+					<xs:element name="matchCriteria" type="xs:string" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							
+							<xs:documentation>
+								matchCriteria determines which field(s)
+								in addition to emailAddress is used to
+								locate the account. Currently, we support 
+								matchCriteria of 'NAME' and 'NONE'.
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="firstName" type="xs:string" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>
+								Required if matchCriteria is NAME
+								Optional if matchCriteria is NONE
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="lastName" type="xs:string" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>
+								Required if matchCriteria is NAME
+								Optional if matchCriteria is NONE
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+				</xs:sequence>
+			</xs:complexType>
+			<!-- GetVerifiedStatusRequest -->
+
+			<xs:complexType name="GetVerifiedStatusResponse">
+				<xs:sequence minOccurs="1" maxOccurs="1">
+					<xs:element minOccurs="1" name="responseEnvelope" type="common:ResponseEnvelope"/>
+					<xs:element minOccurs="1" maxOccurs="1" name="accountStatus" type="xs:string">
+						<xs:annotation>
+							<xs:documentation>
+								Returned values are:
+								VERIFIED|UNVERIFIED.
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+				</xs:sequence>
+			</xs:complexType>
+			<!-- GetVerifiedStatusResponse -->
+
+			<xs:element name="GetVerifiedStatusRequest" nillable="true" type="aa:GetVerifiedStatusRequest"/>
+			<xs:element name="GetVerifiedStatusResponse" nillable="true" type="aa:GetVerifiedStatusResponse"/>
+
+			<xs:complexType name="AddBankAccountRequest">
+				<xs:sequence minOccurs="1" maxOccurs="1">
+					<xs:element name="requestEnvelope" type="common:RequestEnvelope" minOccurs="1"/>
+					<xs:element name="emailAddress" type="xs:string" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							
+							<xs:documentation>
+								Identifying the PayPal account to which this request is targetted to.
+								Caller of this API has to either provided an emailAddress or an accountId.
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="accountId" type="xs:string" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>
+								Identifying the PayPal account to which this request is targetted to.
+								Caller of this API has to either provided an emailAddress or an accountId.
+							</xs:documentation>
+							
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="createAccountKey" type="xs:string" minOccurs="0" maxOccurs="1">
+						
+					</xs:element>
+					<xs:element name="bankCountryCode" type="xs:string" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							
+							<xs:documentation>
+								Country code for the bank
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="bankName" type="xs:string" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							
+							<xs:documentation>
+								The defualt value is UNKNOWN.
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="routingNumber" type="xs:string" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							
+							<xs:documentation>
+								Bank routing or transit number
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="bankAccountType" type="aa:BankAccountType" minOccurs="0" maxOccurs="1"/>
+
+					<xs:element name="bankAccountNumber" type="xs:string" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							
+							<xs:documentation>
+								Basic Bank Account Number (BBAN)
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="iban" type="xs:string" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							
+							<xs:documentation>
+								International Bank Account Number (IBAN)
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="clabe" type="xs:string" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							
+							<xs:documentation>
+								CLABE represents the bank information for countries like Mexico
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="bsbNumber" type="xs:string" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							
+							<xs:documentation>
+								Bank/State/Branch number
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="branchLocation" type="xs:string" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							
+							<xs:documentation>
+								Branch location
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sortCode" type="xs:string" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							
+							<xs:documentation>
+								Branch sort code.
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="bankTransitNumber" type="xs:string" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							
+							<xs:documentation>
+								Bank transit number
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="institutionNumber" type="xs:string" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							
+							<xs:documentation>
+								Institution number
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="branchCode" type="xs:string" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							
+							<xs:documentation>
+								Branch code
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="agencyNumber" type="xs:string" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							
+							<xs:documentation>
+								For Brazil Agency Number
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="bankCode" type="xs:string" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							
+							<xs:documentation>
+								Bank code
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="ribKey" type="xs:string" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							
+							<xs:documentation>
+								RIB key 
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="controlDigit" type="xs:string" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							
+							<xs:documentation>
+								control digits
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="taxIdType" type="xs:string" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							
+							<xs:documentation>
+								Tax id type of CNPJ or CPF, only supported for Brazil.
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="taxIdNumber" type="xs:string" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							
+							<xs:documentation>
+								Tax id number for Brazil.
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="accountHolderDateOfBirth" type="xs:date" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							
+							<xs:documentation>
+								Date of birth of the account holder
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+
+					<xs:element name="confirmationType" type="aa:ConfirmationType" minOccurs="1" maxOccurs="1">
+						
+					</xs:element>
+
+					<xs:element name="webOptions" type="aa:WebOptionsType" minOccurs="0" maxOccurs="1">
+						
+					</xs:element>
+					<xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+				</xs:sequence>
+			</xs:complexType>
+			<!-- AddBankAccountRequest -->
+
+			<xs:complexType name="AddBankAccountResponse">
+				<xs:sequence>
+					<xs:element minOccurs="1" name="responseEnvelope" type="common:ResponseEnvelope"/>
+					<xs:element name="execStatus" type="xs:string" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>
+								Valid values are: FUNDING_SOURCE_ADDED,
+								WEB_URL_VERIFICATION_NEEDED
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<!--
+						<xs:element name="ddiReference" type="xs:string"
+						minOccurs="0" maxOccurs="1">
+						</xs:element>
+					-->
+					<xs:element name="redirectURL" type="xs:string" minOccurs="0" maxOccurs="1"/>
+
+
+					<xs:element name="fundingSourceKey" type="xs:string" minOccurs="0" maxOccurs="1">
+						
+					</xs:element>
+
+					<xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+				</xs:sequence>
+			</xs:complexType>
+			<!-- AddBankAccountResponse -->
+
+			<xs:element name="AddBankAccountRequest" nillable="true" type="aa:AddBankAccountRequest"/>
+			<xs:element name="AddBankAccountResponse" nillable="true" type="aa:AddBankAccountResponse"/>
+
+
+			<xs:complexType name="AddPaymentCardRequest">
+				<xs:sequence minOccurs="1" maxOccurs="1">
+					<xs:element name="requestEnvelope" type="common:RequestEnvelope" minOccurs="1"/>
+					<xs:element name="emailAddress" type="xs:string" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							
+							<xs:documentation>
+								Identifying the PayPal account to which this request is targetted to.
+								Caller of this API has to either provided an emailAddress or an accountId.
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="accountId" type="xs:string" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>
+								Identifying the PayPal account to which this request is targetted to.
+								Caller of this API has to either provided an emailAddress or an accountId.
+							</xs:documentation>
+							
+						</xs:annotation>
+					</xs:element>
+					<xs:element minOccurs="0" name="createAccountKey" type="xs:string" maxOccurs="1">
+						
+					</xs:element>
+                    <xs:element name="nameOnCard" type="aa:NameType" minOccurs="1" maxOccurs="1">
+                    </xs:element>
+					<xs:element name="billingAddress" type="aa:AddressType" minOccurs="1" maxOccurs="1">
+					</xs:element>
+					<xs:element name="cardOwnerDateOfBirth" type="xs:date" minOccurs="0" maxOccurs="1">
+					</xs:element>
+                    <xs:element name="cardNumber" type="xs:string" minOccurs="1" maxOccurs="1">
+                    </xs:element>
+                    <xs:element name="cardType" type="aa:CardTypeType" minOccurs="1" maxOccurs="1">
+                    </xs:element>
+                    <xs:element name="expirationDate" type="aa:CardDateType" minOccurs="0" maxOccurs="1">
+                    </xs:element>
+					<xs:element name="cardVerificationNumber" type="xs:string" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>
+								CVV2: Proivde only for requests where 
+								confirmationType is None (Direct request)
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="startDate" type="aa:CardDateType" minOccurs="0" maxOccurs="1">
+                    </xs:element>
+                    <xs:element name="issueNumber" type="xs:string" minOccurs="0" maxOccurs="1">
+                        <xs:annotation>
+                            <xs:documentation>
+                                Up to 2 digit for Switch/Maestro/Solo cards.
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+					<xs:element name="confirmationType" type="aa:ConfirmationType" minOccurs="1" maxOccurs="1">
+						
+					</xs:element>
+					<xs:element name="webOptions" type="aa:WebOptionsType" minOccurs="0" maxOccurs="1">
+						
+					</xs:element>
+					<xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+				</xs:sequence>
+			</xs:complexType>
+			<!-- AddPaymentCardRequest -->
+
+			<xs:complexType name="AddPaymentCardResponse">
+				<xs:sequence>
+					<xs:element minOccurs="1" name="responseEnvelope" type="common:ResponseEnvelope"/>
+					<xs:element name="execStatus" type="xs:string" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>
+								Valid values are: FUNDING_SOURCE_ADDED,
+								WEB_URL_VERIFICATION_NEEDED
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="redirectURL" type="xs:string" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="fundingSourceKey" type="xs:string" minOccurs="0" maxOccurs="1">
+						
+					</xs:element>
+
+					<xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+				</xs:sequence>
+			</xs:complexType>
+			<!-- AddPaymentCardResponse -->
+
+			<xs:element name="AddPaymentCardRequest" nillable="true" type="aa:AddPaymentCardRequest"/>
+			<xs:element name="AddPaymentCardResponse" nillable="true" type="aa:AddPaymentCardResponse"/>
+
+
+
+			<xs:complexType name="SetFundingSourceConfirmedRequest">
+				<xs:sequence minOccurs="1" maxOccurs="1">
+					<xs:element name="requestEnvelope" type="common:RequestEnvelope" minOccurs="1"/>
+					<xs:element name="emailAddress" type="xs:string" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							
+							<xs:documentation>
+								Identifying the PayPal account to which this request is targetted to.
+								Caller of this API has to either provided an emailAddress or an accountId.
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="accountId" type="xs:string" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>
+								Identifying the PayPal account to which this request is targetted to.
+								Caller of this API has to either provided an emailAddress or an accountId.
+							</xs:documentation>
+							
+						</xs:annotation>
+					</xs:element>
+                    <xs:element name="fundingSourceKey" type="xs:string" minOccurs="1" maxOccurs="1">
+						
+                    </xs:element>
+				</xs:sequence>
+			</xs:complexType>
+			<!-- SetFundingSourceConfirmedRequest -->
+
+			<xs:complexType name="SetFundingSourceConfirmedResponse">
+				<xs:sequence>
+					<xs:element minOccurs="1" name="responseEnvelope" type="common:ResponseEnvelope"/>
+					<xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+				</xs:sequence>
+			</xs:complexType>
+			<!-- SetFundingSourceConfirmedResponse -->
+
+			<xs:element name="SetFundingSourceConfirmedRequest" nillable="true" type="aa:SetFundingSourceConfirmedRequest"/>
+			<xs:element name="SetFundingSourceConfirmedResponse" nillable="true" type="aa:SetFundingSourceConfirmedResponse"/>
+				
+				
+				
+			<xs:complexType name="NameType">
+				
+				<xs:sequence>
+					<xs:element name="salutation" type="xs:string" minOccurs="0"/>
+
+					<xs:element name="firstName" type="xs:string" minOccurs="1" maxOccurs="1">
+						
+					</xs:element>
+					<xs:element name="middleName" type="xs:string" minOccurs="0">
+						
+					</xs:element>
+					<xs:element name="lastName" type="xs:string" minOccurs="1" maxOccurs="1">
+						
+					</xs:element>
+					<xs:element name="suffix" type="xs:string" minOccurs="0">
+						
+					</xs:element>
+				</xs:sequence>
+			</xs:complexType>
+
+			<xs:complexType name="AddressType">
+				
+				<xs:sequence minOccurs="1" maxOccurs="1">
+					<xs:element name="line1" type="xs:string" minOccurs="1" maxOccurs="1">
+						
+					</xs:element>
+					<xs:element name="line2" type="xs:string" minOccurs="0" maxOccurs="1">
+						
+					</xs:element>
+					<xs:element name="city" type="xs:string" minOccurs="0" maxOccurs="1">
+						
+					</xs:element>
+					<xs:element name="state" type="xs:string" minOccurs="0" maxOccurs="1">
+						
+					</xs:element>
+					<xs:element name="postalCode" type="xs:string" minOccurs="0" maxOccurs="1">
+						
+					</xs:element>
+					<xs:element name="countryCode" type="xs:string" minOccurs="1" maxOccurs="1">
+						
+					</xs:element>
+					<xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+				</xs:sequence>
+			</xs:complexType>
+
+			<xs:complexType name="CreateAccountWebOptionsType">
+				
+				<xs:sequence>
+					<xs:element name="returnUrl" type="xs:string" minOccurs="0" maxOccurs="1">
+						
+					</xs:element>
+					<xs:element name="showAddCreditCard" type="xs:boolean" minOccurs="0" maxOccurs="1"/>
+			    <xs:element name="showMobileConfirm" type="xs:boolean" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>
+								Ask end-user to also initiate confirmation of their mobile phone. 
+								This number must be supplied by the API caller (using mobilePhoneNumber)
+								Default=false.
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="returnUrlDescription" type="xs:string" minOccurs="0" maxOccurs="1">
+						
+					</xs:element>
+					<xs:element name="useMiniBrowser" type="xs:boolean" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>
+								If provided, end user will go through a  
+								single page sign-up flow on a Mini Browser.
+								If not provided, flow defaults to the 
+								Multi-page flow that is full size.
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>	
+				</xs:sequence>
+			</xs:complexType>
+
+			<xs:complexType name="BusinessInfoType">
+				
+				<xs:sequence>
+					<xs:element name="businessName" type="xs:string" minOccurs="1" maxOccurs="1">
+					</xs:element>
+					<xs:element name="businessAddress" type="aa:AddressType" minOccurs="1" maxOccurs="1">
+						
+					</xs:element>
+					<xs:element name="workPhone" type="xs:string" minOccurs="1" maxOccurs="1">
+					</xs:element>
+					<xs:element name="category" type="xs:integer" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>
+								PayPal Business Category. i.e., baby -
+								1004
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="subCategory" type="xs:integer" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>
+								Paypal Business subcategory. i.e.,
+								baby-clothing - 2027
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="merchantCategoryCode" type="xs:integer" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>
+								If Category and Subcategory is
+								specified, then this is optional. PayPal
+								uses the industry standard Merchant
+								Category Codes. Please refer to your
+								Association Merchant Category Code
+								documentation for a list of codes
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="doingBusinessAs" type="xs:string" minOccurs="0" maxOccurs="1">
+					</xs:element>
+					<xs:element name="customerServicePhone" type="xs:string" minOccurs="0" maxOccurs="1">
+					</xs:element>
+					<xs:element name="customerServiceEmail" type="xs:string" minOccurs="0" maxOccurs="1">
+					</xs:element>
+					<xs:element name="disputeEmail" type="xs:string" minOccurs="0" maxOccurs="1">
+					</xs:element>
+					<xs:element name="webSite" type="xs:string" minOccurs="0" maxOccurs="1">
+					</xs:element>
+					<xs:element name="companyId" type="xs:string" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							
+							<xs:documentation>
+								Company Id: tax id, acn, abn, etc.
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="dateOfEstablishment" type="xs:date" minOccurs="0" maxOccurs="1">
+						
+					</xs:element>
+					<xs:element name="businessType" type="aa:BusinessType" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="businessSubtype" type="aa:BusinessSubtypeType" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="incorporationId" type="xs:string" minOccurs="0" maxOccurs="1">
+					</xs:element>
+					<xs:element name="averagePrice" type="xs:decimal" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>
+								Average transaction value.
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="averageMonthlyVolume" type="xs:decimal" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>
+								Average monthly transaction value.
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="percentageRevenueFromOnline" type="xs:integer" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>
+								Percentage of the revenue that is from online sales (0%-100%).
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="salesVenue" type="aa:SalesVenueType" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element name="salesVenueDesc" type="xs:string" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>
+								Description of store front or place for sales.
+								Only required when "OTHER" is specified for
+								salesVenue.  
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="vatId" type="xs:string" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							
+							<xs:documentation>
+								Value Added Tax (VAT) ID number
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="vatCountryCode" type="xs:string" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>
+								Country code for country on the vat id.
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="commercialRegistrationLocation" type="xs:string" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>
+							        Official commercial registration location.
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="principalPlaceOfBusinessAddress" type="aa:AddressType" minOccurs="0" maxOccurs="1">
+					</xs:element>
+					<xs:element name="registeredOfficeAddress" type="aa:AddressType" minOccurs="0" maxOccurs="1">
+					</xs:element>
+					<xs:element name="establishmentCountryCode" type="xs:string" minOccurs="0" maxOccurs="1">
+					</xs:element>
+					<xs:element name="establishmentState" type="xs:string" minOccurs="0" maxOccurs="1">
+					</xs:element>
+					<xs:element name="businessStakeholder" type="aa:BusinessStakeholderType" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>
+								All the stakeholders of the company.  
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+
+				</xs:sequence>
+			</xs:complexType>
+
+			<xs:complexType name="AccountValidationInfoType">
+				
+				<xs:sequence>
+					<xs:element name="firstName" type="xs:string" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="lastName" type="xs:string" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="addressLine1" type="xs:string" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="postalCode" type="xs:string" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="phoneNumber" type="xs:string" minOccurs="0" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:complexType>
+
+			<xs:simpleType name="BankAccountType">
+				<xs:annotation>
+					<xs:documentation>
+						Bank account type should be CHECKING,
+						SAVINGS,BUSINESS_CHECKING,
+						BUSINESS_SAVINGS,NORMAL, or UNKNOWN.
+					</xs:documentation>
+				</xs:annotation>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="CHECKING"/>
+					<xs:enumeration value="SAVINGS"/>
+					<xs:enumeration value="BUSINESS_CHECKING"/>
+					<xs:enumeration value="BUSINESS_SAVINGS"/>
+					<xs:enumeration value="NORMAL"/>
+					<xs:enumeration value="UNKNOWN"/>
+				</xs:restriction>
+			</xs:simpleType>
+
+			<xs:simpleType name="ConfirmationType">
+				<xs:annotation>
+					<xs:documentation>
+						API confirmation type currently
+						Valid values are: NONE, MOBILE and
+						WEB. WEB: Returns a URL to complete the
+						registration.
+					</xs:documentation>
+				</xs:annotation>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="WEB"/>
+					<xs:enumeration value="MOBILE"/>
+					<xs:enumeration value="NONE"/>
+				</xs:restriction>
+			</xs:simpleType>
+
+			<xs:simpleType name="BusinessType">
+				<xs:annotation>
+					<xs:documentation>
+						Business Types
+					</xs:documentation>
+				</xs:annotation>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="ASSOCIATION"/>
+					<xs:enumeration value="CORPORATION"/>
+					<xs:enumeration value="GENERAL_PARTNERSHIP"/>
+					<xs:enumeration value="GOVERNMENT"/>
+					<xs:enumeration value="INDIVIDUAL"/>
+					<xs:enumeration value="LIMITED_LIABILITY_PARTNERSHIP"/>
+					<xs:enumeration value="LIMITED_LIABILITY_PRIVATE_CORPORATION"/>
+					<xs:enumeration value="LIMITED_LIABILITY_PROPRIETORS"/>
+					<xs:enumeration value="LIMITED_PARTNERSHIP"/>
+					<xs:enumeration value="LIMITED_PARTNERSHIP_PRIVATE_CORPORATION"/>
+					<xs:enumeration value="NONPROFIT"/>
+					<xs:enumeration value="OTHER_CORPORATE_BODY"/>
+					<xs:enumeration value="PARTNERSHIP"/>
+					<xs:enumeration value="PRIVATE_CORPORATION"/>
+					<xs:enumeration value="PRIVATE_PARTNERSHIP"/>
+					<xs:enumeration value="PROPRIETORSHIP"/>
+					<xs:enumeration value="PROPRIETORSHIP_CRAFTSMAN"/>
+					<xs:enumeration value="PROPRIETARY_COMPANY"/>
+					<xs:enumeration value="PUBLIC_COMPANY"/>
+					<xs:enumeration value="PUBLIC_CORPORATION"/>
+					<xs:enumeration value="PUBLIC_PARTNERSHIP"/>
+				</xs:restriction>
+			</xs:simpleType>
+
+			<xs:simpleType name="BusinessSubtypeType">
+				<xs:annotation>
+					<xs:documentation>
+						Subtype required only for Business Type GOVERNMENT and ASSOCIATION					
+						GOVERNMENT: ENTITY, EMANATION,ESTD_COMMONWEALTH, ESTD_UNDER_STATE_TERRITORY, 
+						ESTD_UNDER_FOREIGN_COUNTRY 
+						ASSOCIATION: INCORPORATED, NON_INCORPORATED
+					</xs:documentation>
+				</xs:annotation>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="ENTITY"/>
+					<xs:enumeration value="EMANATION"/>
+					<xs:enumeration value="ESTD_COMMONWEALTH"/>
+					<xs:enumeration value="ESTD_UNDER_STATE_TERRITORY"/>
+					<xs:enumeration value="ESTD_UNDER_FOREIGN_COUNTRY"/>
+					<xs:enumeration value="INCORPORATED"/>
+					<xs:enumeration value="NON_INCORPORATED"/>
+				</xs:restriction>
+			</xs:simpleType>
+
+			<xs:simpleType name="SalesVenueType">
+				<xs:annotation>
+					<xs:documentation>
+						Sales venue / store front type
+					</xs:documentation>
+				</xs:annotation>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="WEB"/>
+					<xs:enumeration value="EBAY"/>
+					<xs:enumeration value="OTHER_MARKETPLACE"/>
+					<xs:enumeration value="OTHER"/>
+				</xs:restriction>
+			</xs:simpleType>
+
+			<xs:simpleType name="StakeholderRoleType">
+				<xs:annotation>
+					<xs:documentation>
+					       Stake holder role 
+					</xs:documentation>
+				</xs:annotation>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="CHAIRMAN"/>
+					<xs:enumeration value="SECRETARY"/>
+					<xs:enumeration value="TREASURER"/>
+					<xs:enumeration value="BENEFICIAL_OWNER"/>
+					<xs:enumeration value="PRIMARY_CONTACT"/>
+					<xs:enumeration value="INDIVIDUAL_PARTNER"/>
+					<xs:enumeration value="NON_INDIVIDUAL_PARTNER"/>
+					<xs:enumeration value="PRIMARY_INDIVIDUAL_PARTNER"/>
+					<xs:enumeration value="DIRECTOR"/>
+					<xs:enumeration value="NO_BENEFICIAL_OWNER"/>
+				</xs:restriction>
+			</xs:simpleType>
+
+
+
+			<xs:complexType name="BusinessStakeholderType">
+				<xs:annotation>
+					<xs:documentation>
+                        Info about Stakeholders such as partner,
+						beneficial, owner, director etc. 
+					</xs:documentation>
+				</xs:annotation>
+				<xs:sequence>
+					<xs:element name="role" type="aa:StakeholderRoleType" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="name" type="aa:NameType" minOccurs="0" maxOccurs="1">
+					</xs:element>
+					<xs:element name="fullLegalName" type="xs:string" minOccurs="0" maxOccurs="1">
+					</xs:element>
+					<xs:element name="address" type="aa:AddressType" minOccurs="0" maxOccurs="1">
+					</xs:element>
+					<xs:element name="dateOfBirth" type="xs:date" minOccurs="0" maxOccurs="1">
+						
+					</xs:element>
+				</xs:sequence>
+			</xs:complexType>
+
+
+
+			<xs:complexType name="WebOptionsType">
+				
+				<xs:sequence>
+					<xs:element name="returnUrl" type="xs:string" minOccurs="0" maxOccurs="1">
+						
+					</xs:element>
+					<xs:element name="cancelUrl" type="xs:string" minOccurs="0" maxOccurs="1">
+						
+					</xs:element>
+					<xs:element name="returnUrlDescription" type="xs:string" minOccurs="0" maxOccurs="1">
+						
+					</xs:element>
+					<xs:element name="cancelUrlDescription" type="xs:string" minOccurs="0" maxOccurs="1">
+						
+					</xs:element>
+				</xs:sequence>
+			</xs:complexType>
+
+
+            <xs:simpleType name="CardTypeType">
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="Visa"/>
+					<xs:enumeration value="MasterCard"/>
+					<xs:enumeration value="AmericanExpress"/>
+					<xs:enumeration value="Discover"/>
+					<xs:enumeration value="SwitchMaestro"/>
+					<xs:enumeration value="Solo"/>
+					<xs:enumeration value="CarteAurore"/>
+                    <xs:enumeration value="CarteBleue"/>
+                    <xs:enumeration value="Cofinoga"/>
+                    <xs:enumeration value="4etoiles"/>
+                    <xs:enumeration value="CartaAura"/>
+                    <xs:enumeration value="TarjetaAurora"/>
+                    <xs:enumeration value="JCB"/>
+				</xs:restriction>
+			</xs:simpleType>
+
+            <xs:complexType name="CardDateType">
+                <xs:sequence>
+                    <xs:element name="month" type="xs:integer" minOccurs="1" maxOccurs="1">
+                        <xs:annotation>
+                            <xs:documentation>
+                                Month in integer format, between 1 and 12
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="year" type="xs:integer" minOccurs="1" maxOccurs="1">
+                        <xs:annotation>
+                            <xs:documentation>
+                                Year in four digit format- YYYY
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                </xs:sequence>
+            </xs:complexType>
+
+		</xs:schema>
+	</wsdl:types>
+
+	<!-- Adaptive Accounts operations -->
+	<wsdl:message name="CreateAccountRequest">
+		<wsdl:part name="body" element="types:CreateAccountRequest"/>
+	</wsdl:message>
+	<wsdl:message name="CreateAccountResponse">
+		<wsdl:part name="body" element="types:CreateAccountResponse"/>
+	</wsdl:message>
+
+	<wsdl:message name="GetUserAgreementRequest">
+		<wsdl:part name="body" element="types:GetUserAgreementRequest"/>
+	</wsdl:message>
+	<wsdl:message name="GetUserAgreementResponse">
+		<wsdl:part name="body" element="types:GetUserAgreementResponse"/>
+	</wsdl:message>
+
+	<wsdl:message name="GetVerifiedStatusRequest">
+		<wsdl:part name="body" element="types:GetVerifiedStatusRequest"/>
+	</wsdl:message>
+
+	<wsdl:message name="GetVerifiedStatusResponse">
+		<wsdl:part name="body" element="types:GetVerifiedStatusResponse"/>
+	</wsdl:message>
+
+	<wsdl:message name="AddBankAccountRequest">
+		<wsdl:part name="body" element="types:AddBankAccountRequest"/>
+	</wsdl:message>
+	<wsdl:message name="AddBankAccountResponse">
+		<wsdl:part name="body" element="types:AddBankAccountResponse"/>
+	</wsdl:message>
+
+	<wsdl:message name="AddPaymentCardRequest">
+		<wsdl:part name="body" element="types:AddPaymentCardRequest"/>
+	</wsdl:message>
+	<wsdl:message name="AddPaymentCardResponse">
+		<wsdl:part name="body" element="types:AddPaymentCardResponse"/>
+	</wsdl:message>
+
+	<wsdl:message name="SetFundingSourceConfirmedRequest">
+		<wsdl:part name="body" element="types:SetFundingSourceConfirmedRequest"/>
+	</wsdl:message>
+	
+	<wsdl:message name="SetFundingSourceConfirmedResponse">
+		<wsdl:part name="body" element="types:SetFundingSourceConfirmedResponse"/>
+	</wsdl:message>
+	
+	<wsdl:message name="PPFaultMessage">
+		<wsdl:part name="body" element="common:FaultMessage"/>
+	</wsdl:message>
+	<!-- End of Adaptive Accounts operations -->
+
+	<wsdl:portType name="AdaptiveAccountsPortType">
+		<wsdl:operation name="CreateAccount">
+			<wsdl:documentation>
+				Coutries Supported:
+					AU - Australia
+					CA - Canada
+					CY - Cyprus
+					CZ - Czech Republic
+					DK - Denmark
+					EE - Estonia
+					FI - Finland
+					FR - France
+					DE - Germany
+					GR - Greece
+					HU - Hungary
+					IT - Italy
+					LV - Latvia
+					LT - Lithuania
+					LU - Luxembourg
+					MT - Malta
+					NL - Netherlands
+					PL - Poland
+					PT - Portugal
+					SK - Slovak Republic
+					SI - Slovenia
+					ES - Spain
+					SE - Sweden
+					UK - United Kingdom
+					US - United States
+			</wsdl:documentation>
+			<wsdl:input message="services:CreateAccountRequest"/>
+			<wsdl:output message="services:CreateAccountResponse"/>
+			<wsdl:fault message="services:PPFaultMessage" name="PPFaultMessage"/>
+		</wsdl:operation>
+		<wsdl:operation name="GetUserAgreement">
+			<wsdl:documentation>
+				Countries Supported:
+					AU - Australia
+					AT - Austria  
+					CA - Canada
+					CZ - Czech Republic
+					EU - European Union *
+					FR - France
+					DE - Germany
+					GB - Great Britain
+					GR - Greece
+					IE - Ireland
+					IL - Israel
+					IT - Italy
+					JP - Japan
+					NL - Netherlands
+					NZ - New Zealand (Aotearoa)
+					PL - Poland
+					PT - Portugal
+					RU - Russian Federation
+					SG - Singapore
+					ZA - South Africa
+					ES - Spain
+					CH - Switzerland  
+					US - United States
+					* technically a group of countries
+			</wsdl:documentation>
+			<wsdl:input message="services:GetUserAgreementRequest"/>
+			<wsdl:output message="services:GetUserAgreementResponse"/>
+			<wsdl:fault message="services:PPFaultMessage" name="PPFaultMessage"/>
+		</wsdl:operation>
+		<wsdl:operation name="GetVerifiedStatus">
+			<wsdl:documentation>
+				All countries are supported.
+			</wsdl:documentation>
+			<wsdl:input message="services:GetVerifiedStatusRequest"/>
+			<wsdl:output message="services:GetVerifiedStatusResponse"/>
+			<wsdl:fault message="services:PPFaultMessage" name="PPFaultMessage"/>
+		</wsdl:operation>
+		<wsdl:operation name="AddBankAccount">
+			<wsdl:documentation>
+				Countries Supported:
+					AU - Australia
+					CA - Canada
+					FR - France
+					DE - Germany
+					IL - Israel
+					IT - Italy
+					NL - Netherlands
+					UK - United Kingdom
+					US - United States
+			</wsdl:documentation>
+			<wsdl:input message="services:AddBankAccountRequest"/>
+			<wsdl:output message="services:AddBankAccountResponse"/>
+			<wsdl:fault message="services:PPFaultMessage" name="PPFaultMessage"/>
+		</wsdl:operation>
+		<wsdl:operation name="AddPaymentCard">
+			<wsdl:documentation>
+				Countries Supported:
+					AU - Australia
+					AT - Austria  
+					BE - Belgium
+					BR - Brazil
+					CA - Canada
+					CZ - Czech Republic
+					FR - France
+					DE - Germany
+					GR - Greece
+					HK - Hong Kong
+					IE - Ireland
+					IT - Italy
+					JP - Japan
+					LU - Luxembourg
+					MX - Mexico
+					NL - Netherlands
+					NZ - New Zealand (Aotearoa)
+					PL - Poland
+					PT - Portugal
+					RU - Russian Federation
+					SG - Singapore
+					ZA - South Africa
+					ES - Spain
+					CH - Switzerland  
+					UK - United Kingdom
+					US - United States
+			</wsdl:documentation>
+			<wsdl:input message="services:AddPaymentCardRequest"/>
+			<wsdl:output message="services:AddPaymentCardResponse"/>
+			<wsdl:fault message="services:PPFaultMessage" name="PPFaultMessage"/>
+		</wsdl:operation>
+		<wsdl:operation name="SetFundingSourceConfirmed">
+			<wsdl:documentation>
+				To be updated.
+				Countries Supported:
+					AU - Australia
+					AT - Austria  
+					BE - Belgium
+					BR - Brazil
+					CA - Canada
+					CZ - Czech Republic
+					FR - France
+					DE - Germany
+					GR - Greece
+					HK - Hong Kong
+					IE - Ireland
+					IT - Italy
+					JP - Japan
+					LU - Luxembourg
+					MX - Mexico
+					NL - Netherlands
+					NZ - New Zealand (Aotearoa)
+					PL - Poland
+					PT - Portugal
+					RU - Russian Federation
+					SG - Singapore
+					ZA - South Africa
+					ES - Spain
+					CH - Switzerland  
+					UK - United Kingdom
+					US - United States
+			</wsdl:documentation>
+			<wsdl:input message="services:SetFundingSourceConfirmedRequest"/>
+			<wsdl:output message="services:SetFundingSourceConfirmedResponse"/>
+			<wsdl:fault message="services:PPFaultMessage" name="PPFaultMessage"/>
+		</wsdl:operation>
+	</wsdl:portType>
+
+	<wsdl:binding name="AdaptiveAccountsSOAP11Binding" type="services:AdaptiveAccountsPortType">
+		<soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+		<wsdl:operation name="CreateAccount">
+			<wsdl:documentation>
+				Latency expectations: 0.25/5.25/0.75s[min/max/avg]
+				(based on accountmanagementserv.ValidateCreateAccount
+				0.023/5.0/0.6s)
+
+				Coutries Supported:
+					AU - Australia
+					CA - Canada
+					CY - Cyprus
+					CZ - Czech Republic
+					DK - Denmark
+					EE - Estonia
+					FI - Finland
+					FR - France
+					DE - Germany
+					GR - Greece
+					HU - Hungary
+					IT - Italy
+					LV - Latvia
+					LT - Lithuania
+					LU - Luxembourg
+					MT - Malta
+					NL - Netherlands
+					PL - Poland
+					PT - Portugal
+					SK - Slovak Republic
+					SI - Slovenia
+					ES - Spain
+					SE - Sweden
+					UK - United Kingdom
+					US - United States
+			</wsdl:documentation>
+			<soap:operation soapAction="urn:CreateAccount" style="document"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="PPFaultMessage">
+				<soap:fault use="literal" name="PPFaultMessage"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="GetUserAgreement">
+			<wsdl:documentation>
+				Latency expectation: 0.1/2.0/0.25s[min/max/avg]
+
+				Countries Supported:
+					AU - Australia
+					AT - Austria  
+					CA - Canada
+					CZ - Czech Republic
+					EU - European Union *
+					FR - France
+					DE - Germany
+					GB - Great Britain
+					GR - Greece
+					IE - Ireland
+					IL - Israel
+					IT - Italy
+					JP - Japan
+					NL - Netherlands
+					NZ - New Zealand (Aotearoa)
+					PL - Poland
+					PT - Portugal
+					RU - Russian Federation
+					SG - Singapore
+					ZA - South Africa
+					ES - Spain
+					CH - Switzerland  
+					US - United States
+					* technically a group of countries
+			</wsdl:documentation>
+			<soap:operation soapAction="urn:GetUserAgreement" style="document"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="PPFaultMessage">
+				<soap:fault use="literal" name="PPFaultMessage"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="GetVerifiedStatus">
+			<wsdl:documentation>
+				Latency expectation: 0.25/1.25/0.75s[min/max/avg]
+
+				All countries are supported.
+			</wsdl:documentation>
+			<soap:operation soapAction="urn:GetVerifiedStatus" style="document"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="PPFaultMessage">
+				<soap:fault use="literal" name="PPFaultMessage"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="AddBankAccount">
+			<wsdl:documentation>
+				Latency expectation: ?
+
+				Countries Supported:
+					AU - Australia
+					CA - Canada
+					FR - France
+					DE - Germany
+					IL - Israel
+					IT - Italy
+					NL - Netherlands
+					UK - United Kingdom
+					US - United States
+			</wsdl:documentation>
+			<soap:operation soapAction="urn:AddBankAccount" style="document"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="PPFaultMessage">
+				<soap:fault use="literal" name="PPFaultMessage"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="AddPaymentCard">
+			<wsdl:documentation>
+				Latency expectation: ?
+
+				Countries Supported:
+					AU - Australia
+					AT - Austria  
+					BE - Belgium
+					BR - Brazil
+					CA - Canada
+					CZ - Czech Republic
+					FR - France
+					DE - Germany
+					GR - Greece
+					HK - Hong Kong
+					IE - Ireland
+					IT - Italy
+					JP - Japan
+					LU - Luxembourg
+					MX - Mexico
+					NL - Netherlands
+					NZ - New Zealand (Aotearoa)
+					PL - Poland
+					PT - Portugal
+					RU - Russian Federation
+					SG - Singapore
+					ZA - South Africa
+					ES - Spain
+					CH - Switzerland  
+					UK - United Kingdom
+					US - United States
+			</wsdl:documentation>
+			<soap:operation soapAction="urn:AddPaymentCard" style="document"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="PPFaultMessage">
+				<soap:fault use="literal" name="PPFaultMessage"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="SetFundingSourceConfirmed">
+			<wsdl:documentation>
+				Latency expectation: ?
+			</wsdl:documentation>
+			<soap:operation soapAction="urn:SetFundingSourceConfirmed" style="document"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="PPFaultMessage">
+				<soap:fault use="literal" name="PPFaultMessage"/>
+			</wsdl:fault>
+		</wsdl:operation>
+	</wsdl:binding>
+
+	<wsdl:service name="AdaptiveAccounts">
+		<wsdl:documentation>
+			adaptiveaccountsapiserv connects to: - asfcryptoserv: for
+			access to strong encryption - devplat: for platform-related
+			data persistence - accountmanagementserv: to validate the
+			account data - authandauthserv: for API-level access control
+			- adminauthandauthserv: for write access to
+			ValidateInternals - DXPT: for user agreement content
+		</wsdl:documentation>
+		<wsdl:port name="AdaptiveAccountsSOAP11port_http" binding="services:AdaptiveAccountsSOAP11Binding">
+			<soap:address location="https://svcs.paypal.com/AdaptiveAccounts"/>
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>

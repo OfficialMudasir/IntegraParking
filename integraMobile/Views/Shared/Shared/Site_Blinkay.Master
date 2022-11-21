@@ -1,0 +1,186 @@
+<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+
+<!doctype html>
+<html lang="<%=Session["Culture"].ToString().Substring(0,2)%>">
+
+<head>
+	<title></title>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="../Content/css/2020/bootstrap.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+	<link rel="stylesheet" href="../Content/css/2020/<%=(Session["Theme"] != null ? Session["Theme"] : "theme-Blinkay")%>.css">
+	<link rel="stylesheet" href="../Content/css/2020/styles.css">
+	<script src="../Content/js/2020/jquery-3.3.1.slim.min.js"></script>
+
+</head>
+
+<body class="theme-light">
+<!-- HEADER // -->
+	<header id="client-header" class="shadow">
+		<div class="container-lg ">
+			<!-- Header here -->header
+			<div id="header-row" class="row justify-content-center p-2 align-items-center">
+				<div id="form-win-customer" class=" col-12 col-sm-9 col-lg-10 text-left text-center text-sm-left">
+					<div class="h4 align-text-bottom">
+                        <% using (Html.BeginForm("Details", "Fine", FormMethod.Post, new { id = "BackHome" })) { %>
+                        <input type="hidden" name="submitButton" value="submitButton" />
+						<div id="customer-logo" class="logo-link" title="Blinkay Technologies" onclick="document.getElementById('BackHome').submit();">
+							<!-- CLIENT LOGO -->
+						</div>
+                        <% } %>
+                        <% if (Session["CityName"] != null && Session["CityName"] != string.Empty)
+                           { %>
+						<!-- TAG OPTIONAL // -->
+						&nbsp;
+						<span class="text-small badge badge-dark badge-sm badge-city ">
+							<!-- INSTALLATION NAME -->
+							<% =Session["CityName"] %>
+
+						</span>
+						<!-- // TAG OPTIONAL -->
+                        <% } %>
+					</div>
+				</div><!-- // #form-win-customer -->
+				<div class="col-12 col-sm-3 col-lg-2  text-sm-right  text-center ">
+
+					<!-- Small button groups (default and split) -->
+
+                    <%if ((ViewData["ShowCultureSelector"] != null ? ((bool)ViewData["ShowCultureSelector"]) : false)) {%>
+					<div class="badge-group ">
+						<button id="language-selector" class="btn btn-secondary btn-sm dropdown-toggle shadow-sm" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<i class="fas fa-globe"></i> &nbsp; <%=Resources.Account_ChangeLanguage%>
+						</button>
+						<div class="dropdown-menu">
+                            <% Html.RenderPartial("CultureChooserUserControl2020"); %>
+						</div>
+					</div>
+                    <%}%>
+				</div>
+			</div><!-- /#header-row -->
+		</div><!-- /.container-->
+	</header><!-- /#client-header -->
+	<!-- Content here -->
+
+    <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+
+    <!-- FOOTER CONTENT //-->
+	<div id="page-footer">
+		<div class="container">
+			<div id="form-win-footer" class="row justify-content-center align-items-center m-0 p-4">
+				<div class="col-12 col-lg-6 text-lg-left">
+					<p class="justify-content-center">
+						&copy; COPYRIGHT <%= DateTime.Now.Year.ToString() %> <a id="link-copyright" href="#" hreflang="<%=Session["Culture"]%>" title=""></a>
+						<span id="separator"></span> <%=Resources.Account_PoweredBy%>
+						<a id="link-integra" href="https://www.integraparking.com/">Integra Parking Solutions</a>
+					</p>
+
+				</div>
+				<div class="col-12 col-lg-6">
+					<nav class="nav justify-content-center justify-content-lg-end ">
+						<a id="link-home" class="nav-link" target="_blank" href="about:blank"><% = Resources.SiteMaster_Home %></a>
+						<a id="link-privacy" class="nav-link" target="_blank" href="about:blank"><% = Resources.SiteMaster_Privacy %></a>
+						<a id="link-contact" class="nav-link" target="_blank" href="about:blank"><% = Resources.SiteMaster_Contact %></a>
+					</nav>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<!--	//	FOOTER CONTENT	-->
+
+	<!--	MODALS & TOOLS-->
+
+	<!-- Modal :: Terms & Conditions -->
+	<div class="modal fade" id="TermsConditionsDialog" tabindex="-1" role="dialog" aria-labelledby="TermsConditionsLink" aria-hidden="true">
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="TermsConditionsLabel"><%=Resources.Account_TermsAndConditions %></h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<section class="modal-body" id="terms-body"></section>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-dark" data-dismiss="modal"><%=Resources.Button_Close%></button>
+				</div>
+			</div>
+		</div>
+	</div><!-- // #TermsConditionsDialog .modal -->
+
+
+	<!-- Modal :: Privacy Policy -->
+	<div class="modal fade" id="PrivacyPolicyDialog" tabindex="-1" role="dialog" aria-labelledby="PrivacyPolicyLink" aria-hidden="true">
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="PrivacyPolicyLabel"><% = Resources.SiteMaster_Privacy %></h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div><!-- //	.model-header -->
+				<section class="modal-body" id="privacy-body"></section>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-dark" data-dismiss="modal"><%=Resources.Button_Close%></button>
+				</div><!-- // .modal-footer -->
+			</div>
+		</div>
+	</div><!-- // #TermsConditionsDialog .modal -->
+
+	<!-- Optional JavaScript -->
+
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="../Content/js/2020/popper.min.js"></script>
+	<script src="../Content/js/2020/bootstrap.min.js"></script>
+	<script src="../Content/js/2020/<%=(Session["Theme"] != null ? Session["Theme"] : "theme-Blinkay")%>.js"></script>
+	<script type="text/javascript">
+	    $(function () {
+	        $('[data-toggle="tooltip"]').tooltip()
+	    })
+
+	    $(document).ready(function () {
+	        $("#link-home").prop("href", home["<%=Session["Culture"]%>"]); 
+	        $("#link-copyright").prop("href", home["<%=Session["Culture"]%>"]);
+	        $("#link-copyright").prop("title", copyright_home_text["<%=Session["Culture"]%>"]);
+	        $("#link-copyright").html(copyright_home_text["<%=Session["Culture"]%>"]);
+	        $("#link-privacy").prop("href", privacy["<%=Session["Culture"]%>"]); 
+	        $("#link-contact").prop("href", contact["<%=Session["Culture"]%>"]); 
+	        $("#link-integra").prop("href", integra["<%=Session["Culture"]%>"]); 
+	        $("#separator").html(separator["<%=Session["Culture"]%>"]);
+
+	        var str_privacy_body = privacy_body["<%=Session["Culture"]%>"];
+	        var str_terms_body = terms_body["<%=Session["Culture"]%>"];
+
+	        $("#privacy-body").html(str_privacy_body);
+	        $("#terms-body").html(str_terms_body);
+
+	        $("title").html(title["<%=Session["Culture"]%>"]);
+	        if ($("#CustomInfo").length > 0) {
+	            $("#CustomInfo").html(notice["<%=Session["Culture"]%>"]);
+	        }
+	        
+	        if (str_privacy_body.length == 0) {
+	            $("#PrivacyPolicyLink").prop("href", "#");
+	            $("#PrivacyPolicyLink").attr('data-target', "#");
+            }
+	        if (str_terms_body.length == 0) {
+	            $("#TermsConditionsLink").prop("href", "#");
+	            $("#TermsConditionsLink").attr('data-target', "#");
+	        }
+
+	        if ((str_privacy_body.length == 0) && (str_terms_body.length == 0)) {
+	            $("#termsAndCond").attr("required", false);
+	            $("#form-win-agree-int").hide().prop('disabled', true);
+            }
+
+	    });
+	</script>
+
+    <% Html.RenderPartial("GoogleAnalytics"); %>
+
+</body>
+</html>

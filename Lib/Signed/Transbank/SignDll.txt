@@ -1,0 +1,3 @@
+ildasm /all /out=CardEaseXMLClient.il CardEaseXMLClient.dll
+sn -k CardEaseXMLClient.snk
+ilasm /dll /key=CardEaseXMLClient.snk CardEaseXMLClient.il

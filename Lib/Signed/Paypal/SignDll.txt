@@ -1,0 +1,25 @@
+c:
+cd C:\work\svn\dbPBP\01_trunk\02_SRC\02_Server\PayByPhoneWeb\Lib\Signed\Paypal
+
+ildasm /all /out=Base_Common.il Base_Common.dll
+sn -k Base_Common.snk
+ilasm /dll /key=Base_Common.snk Base_Common.il
+
+ildasm /all /out=Base_AP.il Base_AP.dll
+sn -k Base_AP.snk
+sn -Tp Base_Common.dll
+
+.assembly extern /*23000002*/ Base_Common
+{
+  .publickeytoken = (?? ?? ?? ?? ?? ?? ?? ?? )
+  .ver 1:0:0:0
+}
+
+ilasm /dll /key=Base_AP.snk Base_AP.il
+
+
+ildasm /all /out=paypal_base.il paypal_base.dll
+sn -k paypal_base.snk
+ilasm /dll /key=paypal_base.snk paypal_base.il
+
+pause

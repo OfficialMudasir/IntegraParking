@@ -1,0 +1,334 @@
+﻿#divUser {
+    height: 400px;
+}
+
+#divGroup {
+    height: 200px;
+}
+
+.admin-icon {
+    /*width: 12px;
+    height: 12px;*/
+    background: transparent url(images/security/admin12.png) no-repeat 50% 50%;
+    overflow: hidden;
+    display: inline-block;
+    font-size: 0;
+    line-height: 0;
+    vertical-align: top;
+    margin: 0px 1px 0 1px;
+    -webkit-border-radius: 5px;
+    -mox-border-radius: 5px;
+    border-radius: 5px;
+}
+.write-icon {
+    /*width: 12px;
+    height: 12px;*/
+    background: transparent url(images/security/write12.png) no-repeat 50% 50%;
+    overflow: hidden;
+    display: inline-block;
+    font-size: 0;
+    line-height: 0;
+    vertical-align: top;
+    margin: 0px 1px 0 1px;
+    -webkit-border-radius: 5px;
+    -mox-border-radius: 5px;
+    border-radius: 5px;
+}
+.read-icon {
+    /*width: 12px;
+    height: 12px;*/
+    background: transparent url(images/security/read12.png) no-repeat 50% 50%;
+    overflow: hidden;
+    display: inline-block;
+    font-size: 0;
+    line-height: 0;
+    vertical-align: top;
+    margin: 0px 1px 0 1px;
+    -webkit-border-radius: 5px;
+    -mox-border-radius: 5px;
+    border-radius: 5px;
+}
+
+#treeRoles .k-image {
+    float: left;
+	top: 5px;
+	position: relative;
+}
+
+/*posicionem les primeres div dins de l'span*/
+#treeRoles span div:nth-child(1)  {
+	display: block;
+	float: left;
+	width: 30px;
+	top: 5px;
+	position: relative;
+}
+
+/* tots els botons dins de l'arbre de permisos */
+#treeRoles [type="button"].k-state-selected{
+  /*background:none;*/
+  border-color:#898989;
+  background-color:#898989;
+  /*padding:3px;*/
+}
+/* arbre d'opcions d'administracio*/
+#treeRoles .k-state-selected, #treeRoles .k-state-hover {
+	background:none;
+	background-color:#F7F7F7;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	color:black;
+	font-weight:bold;
+}
+/* deixem la icona dels menus en blanc OJU afecta a l'altre menu tambe a on l'ordre es diferent*/
+#treeRoles ul li ul li ul li .k-image{
+	/*display:none;*/
+} 
+#treeRoles ul li ul li ul li ul li .k-image{
+	display:block;
+} 
+.k-button:hover:active:focus {
+	background:none !important;
+	-webkit-box-shadow: none !important;
+	-moz-box-shadow: none !important;
+	box-shadow: none !important;
+	border: 1px solid #CCCCCC;
+	color:black;
+}
+.k-state-selected {
+    color: #fff;
+    background-color:none;/* #1984c8;*/
+    border-color:none; /*#1984c8;*/
+}
+
+.k-state-selected2 {
+    color: #fff;
+	background-color:#A9A9A9;
+   /* background-color: #A5B8C5;
+    border-color: #A5B8C5;*/
+}
+
+.k-state-hidden {
+    visibility: hidden;
+}
+
+.k-button.k-state-disabled2 {
+    /*background-color: #1984c8;*/
+    cursor: default;
+}
+
+.treeRolesType1-icon {
+    /*width: 12px;
+    height: 12px;
+    background: transparent url(images/security/installation16.png) no-repeat 50% 50%;
+    overflow: hidden;
+    display: inline-block;
+    font-size: 0;
+    line-height: 0;
+    vertical-align: top;
+    margin: 2px 0 0 3px;
+    -webkit-border-radius: 5px;
+    -mox-border-radius: 5px;
+    border-radius: 5px;*/
+}
+
+.treeRolesType2-icon {
+    /*width: 12px;
+    height: 12px;
+    background: transparent url(images/security/config16.png) no-repeat 50% 50%;
+    overflow: hidden;
+    display: inline-block;
+    font-size: 0;
+    line-height: 0;
+    vertical-align: top;
+    margin: 2px 0 0 3px;
+    -webkit-border-radius: 5px;
+    -mox-border-radius: 5px;
+    border-radius: 5px;*/
+}
+
+#tbrTreeRolesType.k-toolbar {
+    background-color: transparent;
+    border: none;
+}
+
+/*submenus agrupacions*/
+#treeRolesType0, #treeRolesType1 {
+    background:none !important;
+    background-image:none !important;
+    border:none !important;
+    border-radius:0 !important;
+    background-color:#999999 !important;
+    height:21px !important; 
+    margin-left:5px !important;
+	color:white;
+	line-height:17px;
+}
+
+#treeRolesType0:hover, #treeRolesType1:hover, #treeRolesType0.k-state-active, #treeRolesType1.k-state-active {
+    background-color:#73b5ca !important;
+    color:white;
+}
+#treeRolesType0 .k-sprite, #treeRolesType0 .k-tool-icon, #treeRolesType0 .treeRolesType1-icon, #treeRolesType1 .k-sprite, #treeRolesType1 .k-tool-icon, #treeRolesType1 .treeRolesType1-icon {
+background-image:none;
+width:0px;
+}
+
+/* formulari administracio usuaris*/
+html .k-info-colored {
+  color: #50607f;
+  padding:20px 0 0 0;
+  border:none;/*border-color:#CCCCCC;*/
+  background-color:#FFFFFF;
+}
+
+/*
+TABS menu superior mapa
+*/
+
+/*#tabGeneral .k-link, #tabRoles .k-link {
+    color:#FFFFFF; 
+    padding:3px 10px;
+}
+
+#tabGeneral, #tabRoles{/*#tabs li, */
+    background:none !important;
+    background-image:none !important;
+    border:none !important;
+    border-radius:0 !important;
+    background-color:#999999 !important;
+    height:20px !important; /*22*/
+    margin-left:5px !important;
+	line-height:15px; /*nou*/
+}
+#tabGeneral .k-link:hover, #tabGeneral.k-state-active, #tabRoles .k-link:hover, #tabRoles.k-state-active { /*#tabs li:hover, #tabs li.k-state-active*/
+    background-color:#355311 !important;
+    color:white;
+}*/
+#tabGeneral .k-loading, #tabRoles .k-loading{
+border:none;
+}
+
+/* botons permisos */
+.k-button .k-button-icon .k-state-selected {
+background:none;
+border:none;
+}
+
+/*botons afegir grup/usuari*/
+
+#divToolbar {
+	padding:0px;
+	margin:0px;
+	position:relative;
+	float:left;
+	top:-5px;
+}
+/*separacio botons perfils*/
+#divToolbar button {
+margin: 5px 5px 0 0;
+}
+
+.k-tabstrip .k-tabstrip-items {
+  /* padding: .3em .3em 0; */
+  position: relative;
+  /*height: 30px;*/
+}
+
+#btnNewGroup .add16-icon{
+background: transparent url(images/security/securityRoot16.png) no-repeat 50% 50%;
+  width: 16px;
+  height: 16px;
+  background-size: contain;
+  overflow: hidden;
+  display: inline-block;
+  font-size: 0;
+  line-height: 0;
+  vertical-align: top;
+  margin: 2px 3px 0 3px;
+}
+
+#btnNewUser .add16-icon{
+background: transparent url(images/security/user16.png) no-repeat 50% 50%;
+  width: 16px;
+  height: 16px;
+  background-size: contain;
+  overflow: hidden;
+  display: inline-block;
+  font-size: 0;
+  line-height: 0;
+  vertical-align: top;
+  margin: 2px 2px 0 3px;
+}
+
+#btnRemove .remove16-icon {
+  width: 16px;
+  height: 16px;
+  background: transparent url(images/security/cancel16.png) no-repeat 50% 50%;
+  background-size: contain;
+  overflow: hidden;
+  display: inline-block;
+  font-size: 0;
+  line-height: 0;
+  vertical-align: top;
+  margin: 2px 2px 0 3px;
+  -webkit-border-radius: 5px;
+  -mox-border-radius: 5px;
+  border-radius: 5px;
+}
+
+/*doble scroll del gestor permisos usuaris*/
+.k-splitter .k-scrollable {
+  overflow:hidden;
+}
+
+#divToolbar > .k-button > .save16-icon {
+  top: 3px;
+  position: relative;
+}
+
+#divToolbar > .k-button > .cancel16-icon {
+  top: 3px;
+  position: relative;
+}
+
+.treeSecurity-top {
+    height: 40px;
+    background-color: #f3f3f3;
+    border-bottom: 3px solid white;
+    border-left: 3px solid #f3f3f3;
+    border-top: 5px solid #f3f3f3;
+	padding:0px 0px 0px 10px;
+}
+
+/*estil per al camp de cerca de instalacions*/
+.treeSecurity-top .k-text-box{border-radius:none;}
+
+.treeSecurity-top h2 {
+    margin: 0px;
+    border-bottom: 3px solid #f3f3f3;
+ }
+
+.findUser {
+    width: 95%;
+}
+
+/*#divUser .editor-label {
+    width: 15% !important;
+}
+#divUser .editor-field {
+    width: 80% !important;
+}*/
+
+#divUser .editor-label.sub {
+    width: 35% !important;
+    padding: 0;
+}
+#divUser .editor-field.sub {
+    width: 90% !important;
+    padding: 0;
+}
+#divUser .editor-field.sub2 {
+    margin-right: 0px !important;
+}

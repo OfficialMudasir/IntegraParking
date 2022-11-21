@@ -1,0 +1,1 @@
+alter table customer_payment_means alter column CUSPM_CARD_SECURITY_CODE varchar(100) NULL
